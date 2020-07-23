@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="A novel multimodal interface for improving visually impaired people&#8"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="This paper introduces a novel interface designed to help blind and visually impaired people to explore and navigate on the Web. In contrast to traditionally used assistive tools, such as screen..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/9/2.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="A novel multimodal interface for improving visually impaired people&#8217;s web accessibility"/>
+
+    <meta name="dc.source" content="Virtual Reality 2005 9:2"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2005-12-13"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2005 Springer-Verlag London Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="This paper introduces a novel interface designed to help blind and visually impaired people to explore and navigate on the Web. In contrast to traditionally used assistive tools, such as screen readers and magnifiers, the new interface employs a combination of both audio and haptic features to provide spatial and navigational information to users. The haptic features are presented via a low-cost force feedback mouse allowing blind people to interact with the Web, in a similar fashion to their sighted counterparts. The audio provides navigational and textual information through the use of non-speech sounds and synthesised speech. Interacting with the multimodal interface offers a novel experience to target users, especially to those with total blindness. A series of experiments have been conducted to ascertain the usability of the interface and compare its performance to that of a traditional screen reader. Results have shown the advantages that the new multimodal interface offers blind and visually impaired people. This includes the enhanced perception of the spatial layout of Web pages, and navigation towards elements on a page. Certain issues regarding the design of the haptic and audio features raised in the evaluation are discussed and presented in terms of recommendations for future work."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2005-12-13"/>
+
+    <meta name="prism.volume" content="9"/>
+
+    <meta name="prism.number" content="2"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="133"/>
+
+    <meta name="prism.endingPage" content="148"/>
+
+    <meta name="prism.copyright" content="2005 Springer-Verlag London Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-005-0009-z"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-005-0009-z"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-005-0009-z.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-005-0009-z"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="A novel multimodal interface for improving visually impaired people&#8217;s web accessibility"/>
+
+    <meta name="citation_volume" content="9"/>
+
+    <meta name="citation_issue" content="2"/>
+
+    <meta name="citation_publication_date" content="2006/03"/>
+
+    <meta name="citation_online_date" content="2005/12/13"/>
+
+    <meta name="citation_firstpage" content="133"/>
+
+    <meta name="citation_lastpage" content="148"/>
+
+    <meta name="citation_article_type" content="Original Article"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-005-0009-z"/>
+
+    <meta name="DOI" content="10.1007/s10055-005-0009-z"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-005-0009-z"/>
+
+    <meta name="description" content="This paper introduces a novel interface designed to help blind and visually impaired people to explore and navigate on the Web. In contrast to traditionall"/>
+
+    <meta name="dc.creator" content="Wai Yu"/>
+
+    <meta name="dc.creator" content="Ravi Kuber"/>
+
+    <meta name="dc.creator" content="Emma Murphy"/>
+
+    <meta name="dc.creator" content="Philip Strain"/>
+
+    <meta name="dc.creator" content="Graham McAllister"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="The Web Access and Inclusion for Disabled People, A Formal Investigation conducted by the Disability Rights Commission. 
+                    http://www.drc-gb.org/publicationsandreports/report.asp
+                    
+                  
+                "/>
+
+    <meta name="citation_reference" content="Hakkinen M, Dewitt J (1996) WebSpeak: user interface design of an accessible web browser. White Paper, The Productivity Works Inc., NJ"/>
+
+    <meta name="citation_reference" content="Zajicek M, Powell C, Reeves C (1998) A web navigation tool for the blind. In: Proceedings of the 3rd ACM/SIGAPH on assistive technologies, pp 204&#8211;206"/>
+
+    <meta name="citation_reference" content="Donker H, Klante P, Gorny P (2002) The design of auditory user interfaces for blind users. In: Proceedings Nordichi, pp 149&#8211;156"/>
+
+    <meta name="citation_reference" content="Goose S, Moller C (1998) A 3D audio only interactive web browser: using spatialization to convey hypermedia document structure. In: Proceedings of the 7th ACM international conference on multimedia, pp 363&#8211;371"/>
+
+    <meta name="citation_reference" content="Roth P, Petrucci LS, Assimacopoulos A, Pun T (2000) Audio-haptic internet browser and associated tools for blind users and visually impaired computer users. Workshop on friendly exchanging through the net, pp 57&#8211;62"/>
+
+    <meta name="citation_reference" content="Betacom ScreenRover. 
+                    http://www.elkshelp.org/screenrover.html
+                    
+                  
+                "/>
+
+    <meta name="citation_reference" content="Ramstein C, Martial O, Dufresne A, Carignan M, Chass&#233; P, Mabilleau P (1996) Touching and hearing GUI&#8217;s: design issues for the PC-Access system. Proc Assist Technol 2&#8211;9"/>
+
+    <meta name="citation_reference" content="Brewster SA (2001) The impact of Haptic &#8216;Touching&#8217; technology on cultural applications. In: Proceedings of the electronic imaging and the visual arts, pp 1&#8211;14"/>
+
+    <meta name="citation_reference" content="Yu W, Reid D, Brewster SA (2002) Web-based multi-modal graphs for visually impaired people. In: Proceedings of the 1st Cambridge Workshop on Universal Access and Assistive Technology, pp 97&#8211;108"/>
+
+    <meta name="citation_reference" content="Parente P, Bishop G (2003) BATS: The blind audio tactile mapping system. In: Proceedings of the ACMSE, Savannah, GA"/>
+
+    <meta name="citation_reference" content="IFeelPixel: Haptics &amp; Sonification 
+                    http://www.ifeelpixel.com/faq/#whatitwill
+                    
+                  
+                "/>
+
+    <meta name="citation_reference" content="Caffrey A, McCrindle R (2004) Developing a multimodal web application. In: Proceedings of the 5th international conference disability virtual reality and associated technologies, pp 165&#8211;172"/>
+
+    <meta name="citation_reference" content="Lahav O, Mioduser D (2000) Multisensory virtual environment for supporting blind persons&#8217; acquisition of spatial cognitive mapping, orientation and mobility skills. In: Proceedings of the 3rd international conference disability virtual reality and associated technologies, pp 53&#8211;58"/>
+
+    <meta name="citation_reference" content="citation_title=Haptic identification of objects with different numbers of fingers; citation_inbook_title=Touch, blindness and neuroscience; citation_publication_date=2005; citation_id=CR15; citation_author=G Jansson; citation_author=L Monaci; citation_publisher=UNED Press"/>
+
+    <meta name="citation_reference" content="Sharmin S, Evreinov G, Raisamo R (2005) Non-visual feedback cues for pen computing. In: Proceedings of the World Haptics, pp 625&#8211;628"/>
+
+    <meta name="citation_reference" content="Internet Explorer. 
+                    http://www.microsoft.com/windows/ie
+                    
+                  
+                "/>
+
+    <meta name="citation_reference" content="Mozilla Firefox. 
+                    http://www.mozilla.org
+                    
+                  
+                "/>
+
+    <meta name="citation_reference" content="Web Content Accessibility Guidelines 1.0. 
+                    http://www.w3.org/TR/WAI-WEBCONTENT
+                    
+                  
+                "/>
+
+    <meta name="citation_reference" content="DOM: Document Object Model. 
+                    http://www.w3.org/DOM/
+                    
+                  
+                "/>
+
+    <meta name="citation_reference" content="Turner D, Oeschger I (2003) Creating XPCom components, Open Source"/>
+
+    <meta name="citation_reference" content="citation_title=Application-centered Haptic interface design; citation_inbook_title=Human and machine haptics; citation_publication_date=1999; citation_id=CR22; citation_author=K Maclean; citation_publisher=MIT Press"/>
+
+    <meta name="citation_reference" content="Representations of Visual Geo-Spatial Information. 
+                    http://cnice.utoronto.ca/guidelines/geospatial.php
+                    
+                  
+                "/>
+
+    <meta name="citation_reference" content="Microsoft Speech SDK. 
+                    http://www.microsoft.com/speech/download/sdk51
+                    
+                  
+                "/>
+
+    <meta name="citation_reference" content="Stevens RD, Edwards AN (1996) An approach to the evaluation of assistive technology. In: Proceedings of the 2nd annual ACM conference on assistive technologies, pp 64&#8211;71"/>
+
+    <meta name="citation_reference" content="Yu W, Ramloll R, Brewster S, Riedel B (2001) Exploring computer-generated line graphs through virtual touch. In: Proceedings of the 6th international symposium on signal processing and its applications, pp 72&#8211;75"/>
+
+    <meta name="citation_reference" content="Freedom Scientific JAWS 5.0 Software. 
+                    http://www.freedomscientific.com/fs_products/software_jawsinfo.asp
+                    
+                  
+                "/>
+
+    <meta name="citation_reference" content="JAWS commands help guide. Freedom Scientific Software"/>
+
+    <meta name="citation_author" content="Wai Yu"/>
+
+    <meta name="citation_author_email" content="w.yu@qub.ac.uk"/>
+
+    <meta name="citation_author_institution" content="Queen&#8217;s University of Belfast, Belfast, UK"/>
+
+    <meta name="citation_author" content="Ravi Kuber"/>
+
+    <meta name="citation_author_institution" content="Queen&#8217;s University of Belfast, Belfast, UK"/>
+
+    <meta name="citation_author" content="Emma Murphy"/>
+
+    <meta name="citation_author_institution" content="Queen&#8217;s University of Belfast, Belfast, UK"/>
+
+    <meta name="citation_author" content="Philip Strain"/>
+
+    <meta name="citation_author_institution" content="Queen&#8217;s University of Belfast, Belfast, UK"/>
+
+    <meta name="citation_author" content="Graham McAllister"/>
+
+    <meta name="citation_author_institution" content="Queen&#8217;s University of Belfast, Belfast, UK"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-005-0009-z&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2006/03/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-005-0009-z"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="A novel multimodal interface for improving visually impaired people’s web accessibility"/>
+        <meta property="og:description" content="This paper introduces a novel interface designed to help blind and visually impaired people to explore and navigate on the Web. In contrast to traditionally used assistive tools, such as screen readers and magnifiers, the new interface employs a combination of both audio and haptic features to provide spatial and navigational information to users. The haptic features are presented via a low-cost force feedback mouse allowing blind people to interact with the Web, in a similar fashion to their sighted counterparts. The audio provides navigational and textual information through the use of non-speech sounds and synthesised speech. Interacting with the multimodal interface offers a novel experience to target users, especially to those with total blindness. A series of experiments have been conducted to ascertain the usability of the interface and compare its performance to that of a traditional screen reader. Results have shown the advantages that the new multimodal interface offers blind and visually impaired people. This includes the enhanced perception of the spatial layout of Web pages, and navigation towards elements on a page. Certain issues regarding the design of the haptic and audio features raised in the evaluation are discussed and presented in terms of recommendations for future work."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>A novel multimodal interface for improving visually impaired people’s web accessibility | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-005-0009-z","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Multimodal interface, Haptics, Audio, Assistive technology, Web accessibility, Web navigation","kwrd":["Multimodal_interface","Haptics","Audio","Assistive_technology","Web_accessibility","Web_navigation"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-005-0009-z","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-005-0009-z","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=9;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-005-0009-z">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            A novel multimodal interface for improving visually impaired people’s web accessibility
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-005-0009-z.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-005-0009-z.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">Original Article</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2005-12-13" itemprop="datePublished">13 December 2005</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">A novel multimodal interface for improving visually impaired people’s web accessibility</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Wai-Yu" data-author-popup="auth-Wai-Yu" data-corresp-id="c1">Wai Yu<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Queen’s University of Belfast" /><meta itemprop="address" content="grid.4777.3, 0000000403747521, Queen’s University of Belfast, University Road, BT7 1NN, Belfast, Northern Ireland, UK" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Ravi-Kuber" data-author-popup="auth-Ravi-Kuber">Ravi Kuber</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Queen’s University of Belfast" /><meta itemprop="address" content="grid.4777.3, 0000000403747521, Queen’s University of Belfast, University Road, BT7 1NN, Belfast, Northern Ireland, UK" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Emma-Murphy" data-author-popup="auth-Emma-Murphy">Emma Murphy</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Queen’s University of Belfast" /><meta itemprop="address" content="grid.4777.3, 0000000403747521, Queen’s University of Belfast, University Road, BT7 1NN, Belfast, Northern Ireland, UK" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Philip-Strain" data-author-popup="auth-Philip-Strain">Philip Strain</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Queen’s University of Belfast" /><meta itemprop="address" content="grid.4777.3, 0000000403747521, Queen’s University of Belfast, University Road, BT7 1NN, Belfast, Northern Ireland, UK" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Graham-McAllister" data-author-popup="auth-Graham-McAllister">Graham McAllister</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Queen’s University of Belfast" /><meta itemprop="address" content="grid.4777.3, 0000000403747521, Queen’s University of Belfast, University Road, BT7 1NN, Belfast, Northern Ireland, UK" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 9</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">133</span>–<span itemprop="pageEnd">148</span>(<span data-test="article-publication-year">2006</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">676 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">23 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                    
+                        <li class="c-article-metrics-bar__item">
+                            <p class="c-article-metrics-bar__count">3 <span class="c-article-metrics-bar__label">Altmetric</span></p>
+                        </li>
+                    
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-005-0009-z/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>This paper introduces a novel interface designed to help blind and visually impaired people to explore and navigate on the Web. In contrast to traditionally used assistive tools, such as screen readers and magnifiers, the new interface employs a combination of both audio and haptic features to provide spatial and navigational information to users. The haptic features are presented via a low-cost force feedback mouse allowing blind people to interact with the Web, in a similar fashion to their sighted counterparts. The audio provides navigational and textual information through the use of non-speech sounds and synthesised speech. Interacting with the multimodal interface offers a novel experience to target users, especially to those with total blindness. A series of experiments have been conducted to ascertain the usability of the interface and compare its performance to that of a traditional screen reader. Results have shown the advantages that the new multimodal interface offers blind and visually impaired people. This includes the enhanced perception of the spatial layout of Web pages, and navigation towards elements on a page. Certain issues regarding the design of the haptic and audio features raised in the evaluation are discussed and presented in terms of recommendations for future work.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Introduction</h2><div class="c-article-section__content" id="Sec1-content"><p>Limitations of current assistive technology and inaccessible Web design prevent blind and visually impaired users from experiencing the full potential of the Internet, in comparison to their sighted counterparts. A recent survey conducted by Petrie et al. for the Disability Rights Commission reports that only 19% of 1,000 tested UK Websites’ homepage pass the priority 1 check specified in the W3C’s Web Content Accessibility Guidelines [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1" title="The Web Access and Inclusion for Disabled People, A Formal Investigation conducted by the Disability Rights Commission. &#xA;                    http://www.drc-gb.org/publicationsandreports/report.asp&#xA;                    &#xA;                  &#xA;                " href="/article/10.1007/s10055-005-0009-z#ref-CR1" id="ref-link-section-d68663e328">1</a>]. Barriers to accessibility on the Web, can be attributed to the predominantly visual nature of information presented to users via computer interfaces. The situation is further compounded by the limitations posed by assistive devices, such as screen readers and Braille displays. These assistive tools force blind users to browse the Web in a linear and time-consuming fashion, rendering graphs, animations and busy Web pages inaccessible. As key structural information is omitted, it is difficult to gain a full comprehension of the material presented. Developing an awareness of the spatial layout of objects on a Web page can also present a challenge. Thus, a need has been identified for a new approach to Web browsing for visually impaired users.</p><p>Traditional non-visual assistive tools for browsing have been designed with the aid of the auditory channel. WebSpeak [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2" title="Hakkinen M, Dewitt J (1996) WebSpeak: user interface design of an accessible web browser. White Paper, The Productivity Works Inc., NJ" href="/article/10.1007/s10055-005-0009-z#ref-CR2" id="ref-link-section-d68663e334">2</a>] and BrookesTalk [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 3" title="Zajicek M, Powell C, Reeves C (1998) A web navigation tool for the blind. In: Proceedings of the 3rd ACM/SIGAPH on assistive technologies, pp 204–206" href="/article/10.1007/s10055-005-0009-z#ref-CR3" id="ref-link-section-d68663e337">3</a>] have been developed to output text-to-speech, providing an aural overview of Web content for the user. A study by Donker et al. [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 4" title="Donker H, Klante P, Gorny P (2002) The design of auditory user interfaces for blind users. In: Proceedings Nordichi, pp 149–156" href="/article/10.1007/s10055-005-0009-z#ref-CR4" id="ref-link-section-d68663e340">4</a>] has examined the development of auditory interaction realms to represent the layout of Web pages and to support navigation. It has been demonstrated that by embedding sounds in an environment, locational awareness of objects can be improved [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 4" title="Donker H, Klante P, Gorny P (2002) The design of auditory user interfaces for blind users. In: Proceedings Nordichi, pp 149–156" href="/article/10.1007/s10055-005-0009-z#ref-CR4" id="ref-link-section-d68663e343">4</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 5" title="Goose S, Moller C (1998) A 3D audio only interactive web browser: using spatialization to convey hypermedia document structure. In: Proceedings of the 7th ACM international conference on multimedia, pp 363–371" href="/article/10.1007/s10055-005-0009-z#ref-CR5" id="ref-link-section-d68663e346">5</a>]. Roth et al. [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 6" title="Roth P, Petrucci LS, Assimacopoulos A, Pun T (2000) Audio-haptic internet browser and associated tools for blind users and visually impaired computer users. Workshop on friendly exchanging through the net, pp 57–62" href="/article/10.1007/s10055-005-0009-z#ref-CR6" id="ref-link-section-d68663e350">6</a>] have investigated adding the haptic modality to an auditory environment. In this study, sounds represent the nature of the HTML tag touched, providing increased awareness of the position and meaning of the element. Audio and haptic techniques traditionally associated with expensive virtual reality technologies have recently become more feasible for the design of desktop solutions. In this study, virtual web objects are created through audio and haptic feedback to create a realistic non-visual spatial representation of a web page.</p><p>The haptic modality has been exploited in order to improve access to interfaces. Force feedback devices have been developed in response to the lack of non-visual feedback on a graphical user interface (GUI) allowing icons, controls and menus on the screen to be tactually perceived [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 7" title="Betacom ScreenRover. &#xA;                    http://www.elkshelp.org/screenrover.html&#xA;                    &#xA;                  &#xA;                " href="/article/10.1007/s10055-005-0009-z#ref-CR7" id="ref-link-section-d68663e356">7</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 8" title="Ramstein C, Martial O, Dufresne A, Carignan M, Chassé P, Mabilleau P (1996) Touching and hearing GUI’s: design issues for the PC-Access system. Proc Assist Technol 2–9" href="/article/10.1007/s10055-005-0009-z#ref-CR8" id="ref-link-section-d68663e359">8</a>]. Previous studies have illustrated that advantage can be gained when the haptic modality is used in conjunction with the visual and auditory channels [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 9" title="Brewster SA (2001) The impact of Haptic ‘Touching’ technology on cultural applications. In: Proceedings of the electronic imaging and the visual arts, pp 1–14" href="/article/10.1007/s10055-005-0009-z#ref-CR9" id="ref-link-section-d68663e362">9</a>–<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 11" title="Parente P, Bishop G (2003) BATS: The blind audio tactile mapping system. In: Proceedings of the ACMSE, Savannah, GA" href="/article/10.1007/s10055-005-0009-z#ref-CR11" id="ref-link-section-d68663e365">11</a>]. The IFeelPixel multimodal application [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 12" title="IFeelPixel: Haptics &amp; Sonification &#xA;                    http://www.ifeelpixel.com/faq/#whatitwill&#xA;                    &#xA;                  &#xA;                " href="/article/10.1007/s10055-005-0009-z#ref-CR12" id="ref-link-section-d68663e368">12</a>] enables the user to mediate structures such as edges, lines and textures, depending on features of the pixels detected by the device. Both tactile and auditory feedback is experienced as a result. Multimodal solutions have the capacity to extend visual displays making objects more realistic, useful and engaging [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 9" title="Brewster SA (2001) The impact of Haptic ‘Touching’ technology on cultural applications. In: Proceedings of the electronic imaging and the visual arts, pp 1–14" href="/article/10.1007/s10055-005-0009-z#ref-CR9" id="ref-link-section-d68663e372">9</a>].</p><p>Multimodal interfaces also provide assistance in the mental mapping process, allowing the user to develop a greater awareness of objects contained within the environment. A clearer spatial representation created by multimodal feedback, enhances the user’s ability to orientate and navigate within their environment [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 11" title="Parente P, Bishop G (2003) BATS: The blind audio tactile mapping system. In: Proceedings of the ACMSE, Savannah, GA" href="/article/10.1007/s10055-005-0009-z#ref-CR11" id="ref-link-section-d68663e378">11</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 13" title="Caffrey A, McCrindle R (2004) Developing a multimodal web application. In: Proceedings of the 5th international conference disability virtual reality and associated technologies, pp 165–172" href="/article/10.1007/s10055-005-0009-z#ref-CR13" id="ref-link-section-d68663e381">13</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 14" title="Lahav O, Mioduser D (2000) Multisensory virtual environment for supporting blind persons’ acquisition of spatial cognitive mapping, orientation and mobility skills. In: Proceedings of the 3rd international conference disability virtual reality and associated technologies, pp 53–58" href="/article/10.1007/s10055-005-0009-z#ref-CR14" id="ref-link-section-d68663e384">14</a>]. As the majority of information required for mental mapping of an unknown space is gathered through the visual channel, it seems apparent that a multimodal assistive interface may provide a solution to reducing barriers that are currently faced by the visually impaired community.</p><p>Non-visual browsing methods have previously been examined in order to gain a complete picture of how multimodal feedback can be used to support the user in their browsing tasks. Jansson and Monaci [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 15" title="Jansson G, Monaci L (2005) Haptic identification of objects with different numbers of fingers. In: Ballesteros S, Heller MA (eds) Touch, blindness and neuroscience. UNED Press, Madrid" href="/article/10.1007/s10055-005-0009-z#ref-CR15" id="ref-link-section-d68663e391">15</a>] have found that by providing differentiated information within the contact area available with the haptic display, benefit will be derived as objects can be recognised more effectively. Similarly, by providing distinguishable icons in the auditory realm, benefit will also be brought to a non-visual environment. Auditory icons positioned strategically in the environment can contribute to the formation of a mental model, which would aid browsing [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 4" title="Donker H, Klante P, Gorny P (2002) The design of auditory user interfaces for blind users. In: Proceedings Nordichi, pp 149–156" href="/article/10.1007/s10055-005-0009-z#ref-CR4" id="ref-link-section-d68663e394">4</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 5" title="Goose S, Moller C (1998) A 3D audio only interactive web browser: using spatialization to convey hypermedia document structure. In: Proceedings of the 7th ACM international conference on multimedia, pp 363–371" href="/article/10.1007/s10055-005-0009-z#ref-CR5" id="ref-link-section-d68663e397">5</a>].</p><p>Findings from a user requirement survey conducted at Queen’s University of Belfast with 30 blind and partially sighted people have revealed that the positions of images are particularly difficult to detect on a page due to the lack of feedback given. Images provide useful context to the corresponding text contained within a page. Alternative text descriptions are helpful, but the intention that the original image is trying to convey may not be immediately obvious to the user, thus rendering some pages difficult to interpret. The position of hyperlinks on a Web page also presents a challenge to locate. Links themselves may not provide meaningful cues to the user. The URL that the link would follow may not offer a description of the intended target. By removing structural and contextual information concerning objects on a Web page, additional time and attention must be spent on a page as the user tries to derive the meaning lost through the use of assistive technologies.</p><p>Our research aims to extend previous work by focusing specifically on improving accessibility for visually impaired users when interacting with Web pages, examining the presentation of information content, access to graphics, and navigation. It is hoped that by using the multimodal interface, additional structure can be brought to a page to give it more meaning, thus adding value to the perceptual experience described by Sharmin et al. [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 16" title="Sharmin S, Evreinov G, Raisamo R (2005) Non-visual feedback cues for pen computing. In: Proceedings of the World Haptics, pp 625–628" href="/article/10.1007/s10055-005-0009-z#ref-CR16" id="ref-link-section-d68663e405">16</a>].</p></div></div></section><section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">Multimodal interface</h2><div class="c-article-section__content" id="Sec2-content"><p>A multimodal interface is currently being developed to improve blind and visually impaired people’s Web accessibility. System design focuses on three main areas: (1) navigation on the Web, (2) representation of information, and (3) access to graphical content. To achieve the objectives, Web technology combined with haptic and audio representations are used to form the multimodal interface. The system structure is shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0009-z#Fig1">1</a>.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0009-z/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0009-z/MediaObjects/10055_2005_9_Fig1_HTML.gif?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0009-z/MediaObjects/10055_2005_9_Fig1_HTML.gif" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p>Overview of the multimodal approach at QUB</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0009-z/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+            <p>In the first system prototype, a content-aware Web browser plug-in has been developed to assist Web navigation through the use of haptic and audio features. In this approach, users have an opportunity to explore a Web page’s layout through active haptic interaction. A force feedback mouse is used and its cursor position is constantly monitored by the plug-in, which detects the surrounding objects. If the plug-in finds an object nearby then it will inform the user by enabling the haptic and audio features. Depending on the user’s intention and the context of the task, appropriate prompts can be given, such as providing users with guidance to the desired destination or informing users about nearby objects. The content-aware Web browser plug-in, and the associated haptic and audio features are described in the following sections.</p></div></div></section><section aria-labelledby="Sec3"><div class="c-article-section" id="Sec3-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec3">Browser plug-in</h2><div class="c-article-section__content" id="Sec3-content"><p>The plug-in is the crucial component of the multimodal interface because it monitors the cursor movements and activates the haptic and audio features accordingly. The two main browsers currently available for the development of plug-ins are Microsoft Internet Explorer 6.0 (IE) [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 17" title="Internet Explorer. &#xA;                    http://www.microsoft.com/windows/ie&#xA;                    &#xA;                  &#xA;                " href="/article/10.1007/s10055-005-0009-z#ref-CR17" id="ref-link-section-d68663e447">17</a>] and Mozilla Firefox 1.0 [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 18" title="Mozilla Firefox. &#xA;                    http://www.mozilla.org&#xA;                    &#xA;                  &#xA;                " href="/article/10.1007/s10055-005-0009-z#ref-CR18" id="ref-link-section-d68663e450">18</a>]. Both browsers offer distinct advantages and disadvantages. As Firefox is based on the open-source Mozilla project, extensions can be readily developed, as a result of its cross platform compatibility and accessibility of source code. Mozilla also fully implements the W3C standards [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 19" title="Web Content Accessibility Guidelines 1.0. &#xA;                    http://www.w3.org/TR/WAI-WEBCONTENT&#xA;                    &#xA;                  &#xA;                " href="/article/10.1007/s10055-005-0009-z#ref-CR19" id="ref-link-section-d68663e453">19</a>].</p><h3 class="c-article__sub-heading" id="Sec4">Overview of extension architecture</h3><p>Mozilla extensions use a range of programming languages and interfaces. Javascript is the primary scripting language, and is used in conjunction with cascading style sheets (CSS) and the Document Object Model (DOM) [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 20" title="DOM: Document Object Model. &#xA;                    http://www.w3.org/DOM/&#xA;                    &#xA;                  &#xA;                " href="/article/10.1007/s10055-005-0009-z#ref-CR20" id="ref-link-section-d68663e463">20</a>] to access and manipulate HTML elements in real time.</p><p>The Javascript API can be extended by writing a Cross Platform Object Module (XPCom). XPCom is a framework, which allows large software projects to be broken up into smaller, manageable components. To achieve this, XPCom separates the implementation of a component from the interface, which is specified via the interface definition language (IDL). XPCom is similar to Microsoft COM in structure, however it is designed to be used mainly at the application level [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 21" title="Turner D, Oeschger I (2003) Creating XPCom components, Open Source" href="/article/10.1007/s10055-005-0009-z#ref-CR21" id="ref-link-section-d68663e469">21</a>]. XPConnect provides a bridge between the component and the Javascript external, allowing constructors and methods from the component to be accessed via Javascript. An overview of the architecture is shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0009-z#Fig2">2</a>. This architecture enables the rapid development and prototyping of extensions for the Firefox browser.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0009-z/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0009-z/MediaObjects/10055_2005_9_Fig2_HTML.gif?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0009-z/MediaObjects/10055_2005_9_Fig2_HTML.gif" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p>Web browser plug-in architecture</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0009-z/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>There were four main requirements for the development of the plug-in:</p><ol class="u-list-style-none">
+                    <li>
+                      <span class="u-custom-list-number">1.</span>
+                      
+                        <p>The current position of the mouse cursor is captured by adding a mousemove listener to the browser window. Javascript is used to record values for movements made using the mouse.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">2.</span>
+                      
+                        <p>The position of each HTML element on the screen is obtained by parsing the DOM via Javascript, and by retrieving the co-ordinates via the stylesheet properties for each element.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">3.</span>
+                      
+                        <p>The relative co-ordinates of the mouse pointer are calculated, if the mouse cursor is within a distance, DIST, of an HTML element. The element is divided into nine sections (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0009-z#Fig3">3</a>), where each section has a particular co-ordinate range. The height and the width of the images and hyperlinks are taken into consideration for the calculation. Dimensions of images are calculated using the element’s stylesheet properties. In the case of hyperlinks, the heights and widths are determined by the number of characters contained within the hyperlink, and the size of font used.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">4.</span>
+                      
+                        <p>Finally, relative co-ordinates are passed to an external application; the real time audio simulation environment and a haptic device. An XPCom component has been created in C++, to provide methods for sending control messages from the browser to the audio simulation environment via UDP, which is then parsed by the audio simulation application.</p>
+                      
+                    </li>
+                  </ol><p>A separate plug-in, provided by the haptic device manufacturer, is used to interface the browser with the device. Haptic effects are then accessed by the extension software discussed in this paper, allowing users to mediate elements on a Web page with force feedback.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0009-z/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0009-z/MediaObjects/10055_2005_9_Fig3_HTML.gif?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0009-z/MediaObjects/10055_2005_9_Fig3_HTML.gif" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p>Object co-ordinates</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0009-z/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <h3 class="c-article__sub-heading" id="Sec5">Haptics</h3><p>The Logitech Wingman force feedback mouse (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0009-z#Fig4">4</a>) has been selected to facilitate on-screen navigation, due to its capability to access haptic feedback and its compatibility with the Firefox browser. Moreover, the device is in the form of a computer mouse, which is a common tool used by sighted people for their day-to-day GUI-based activities. The immersion Web plug-in has been linked to the content-aware Web plug-in. Supporting software can model a small array of haptic effects including stiffness, damping, and various textures, which can then be called through the Javascript. This has facilitated the exploration of objects with additional force feedback.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0009-z/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0009-z/MediaObjects/10055_2005_9_Fig4_HTML.jpg?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0009-z/MediaObjects/10055_2005_9_Fig4_HTML.jpg" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p>Logitech wingman force feedback mouse</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0009-z/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>The main objective of the haptic feedback here is to inform users about the presence and position of images and hyperlinks on a Web page. Haptic cues in the multimodal interface were developed, adhering to recommendations from [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 10" title="Yu W, Reid D, Brewster SA (2002) Web-based multi-modal graphs for visually impaired people. In: Proceedings of the 1st Cambridge Workshop on Universal Access and Assistive Technology, pp 97–108" href="/article/10.1007/s10055-005-0009-z#ref-CR10" id="ref-link-section-d68663e593">10</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 22" title="Maclean K (1999) Application-centered Haptic interface design. In: Srinivasan M, Cutkosky M (eds) Human and machine haptics. MIT Press, MA" href="/article/10.1007/s10055-005-0009-z#ref-CR22" id="ref-link-section-d68663e596">22</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 23" title="Representations of Visual Geo-Spatial Information. &#xA;                    http://cnice.utoronto.ca/guidelines/geospatial.php&#xA;                    &#xA;                  &#xA;                " href="/article/10.1007/s10055-005-0009-z#ref-CR23" id="ref-link-section-d68663e599">23</a>]. General principles of developing distinctive sensations to aid object identification and providing constraints to facilitate navigation were taken into account for the 2D nature of a Web page. Appropriate design and mapping of haptic cues to suitable objects on a Web page would lead users to develop a clearer mental representation of spatial layout.</p><p>The following haptic primitives have been employed to develop a “roll-over” metaphor; the enclosure effect has been coupled with clipping effects bordering an image. This has given the illusion of a ridge, which needs to be mounted. Cursor clipping motion increases a user’s psychological perception of the wall’s stiffness. Upon rolling over the image, a buzz effect has been produced along with force feedback. The dual effect of audio coupled with force feedback, is intended to heighten the sense of positional awareness.</p><p>The periodic effect has been used to provide location awareness of the cursor when directly hovering over a hyperlink. This effect produces a wave that varies over time, promoting a locked sensation when directly hovering over the link. It is intended that this will promote a sense of orientation within a page for the visually impaired user.</p><h3 class="c-article__sub-heading" id="Sec6">Real-time audio</h3><p>Audio feedback for the system consists of both speech and non-speech audio. Non-speech sounds complement haptic feedback to convey navigational information. Speech output conveys textual information through a text-to-speech synthesiser.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec7">Non-speech audio</h4><p>The non-speech audio feedback for this system gives the user a sense of navigation in relation to an image or a link on the page. The audio has been designed in Max/MSP, a real-time audio programming environment. Audio is then played back using the same software. Netsend, an MSP external object is used to receive <i>x</i> and <i>y</i> location co-ordinates sent via UDP from the Web plug-in. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0009-z#Fig5">5</a> show how the element is divided up, and the range of co-ordinates that are associated with each section.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0009-z/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0009-z/MediaObjects/10055_2005_9_Fig5_HTML.gif?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0009-z/MediaObjects/10055_2005_9_Fig5_HTML.gif" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p>Object co-ordinates and audio feedback</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0009-z/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                    <p>As the user rolls over an image or a link with the force feedback mouse, an auditory icon is played to reinforce the haptic response. In this system, the sound icon that indicates an image is a short descriptive auditory clip of a camera shutter clicking, suggesting a photograph or graphic. The auditory icon used to depict a link is a short “metallic clinking” sound suggesting the sound of one link in a chain hitting off another.</p><p>Outside the image or link space the cursor location is mapped to panning and pitch-shift parameters of a continuous background sound. The <i>x</i>-value co-ordinates are mapped to a panning patch in Max/MSP so that as the user moves the cursor along the <i>x</i>-axis the audio is panned to that position. Similarly the pitch varies according to the position on the <i>y</i>-axis; as the user moves the cursor upwards, the background sound is pitch-shifted upwards to represent this movement.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec8">Speech audio</h4><p>The Microsoft Speech SDK [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 24" title="Microsoft Speech SDK. &#xA;                    http://www.microsoft.com/speech/download/sdk51&#xA;                    &#xA;                  &#xA;                " href="/article/10.1007/s10055-005-0009-z#ref-CR24" id="ref-link-section-d68663e669">24</a>] is utilised to provide speech synthesis via the Web plug-in. As the user rolls over non-link text on a page, the text is read out to the user by paragraph. The speech will stop when the user moves off the text on to another object. As the user rolls over an image, the corresponding alt text describing the significance of the image is read to the user while the auditory icon simultaneously informs the user that the object is an image. Similarly as the user rolls over a link, the speech synthesiser reads the text while the link auditory icon plays.</p><h3 class="c-article__sub-heading" id="Sec9">Evaluation</h3><p>In order to assess the usability of the multimodal interface by visually impaired people, a series of experiments have been conducted. The experiments were divided into two parts: (1) assessment with sighted people and (2) assessment with blind and visually impaired people.</p><h3 class="c-article__sub-heading" id="Sec10">Assessment with sighted people</h3><p>An experiment was designed to investigate the overall usability of the multimodal Internet browser, verifying strengths, and weaknesses of the system, over a commercial screen reader commonly accessed by visually impaired Internet users. The experiment intended to examine three main aspects: (1) spatial awareness of object layout on a Web page, (2) navigation towards these objects on a page, and (3) system usability. Therefore, the experiment was divided into three sections. The study was conducted on a group of fully sighted participants, blind-folded for all tasks. We did not use blind or visually impaired people in this section of experiment due to the difficulties in applying a controlled evaluation paradigm as a result of the variability between visually impaired users [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 25" title="Stevens RD, Edwards AN (1996) An approach to the evaluation of assistive technology. In: Proceedings of the 2nd annual ACM conference on assistive technologies, pp 64–71" href="/article/10.1007/s10055-005-0009-z#ref-CR25" id="ref-link-section-d68663e689">25</a>] and additional difficulties obtaining a large sample group of representative users. Other researchers’ work indicates that there appears to be no significant difference between blind and sighted people’s performance for tasks such as locating items when using novel haptic interfaces [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 8" title="Ramstein C, Martial O, Dufresne A, Carignan M, Chassé P, Mabilleau P (1996) Touching and hearing GUI’s: design issues for the PC-Access system. Proc Assist Technol 2–9" href="/article/10.1007/s10055-005-0009-z#ref-CR8" id="ref-link-section-d68663e692">8</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 26" title="Yu W, Ramloll R, Brewster S, Riedel B (2001) Exploring computer-generated line graphs through virtual touch. In: Proceedings of the 6th international symposium on signal processing and its applications, pp 72–75" href="/article/10.1007/s10055-005-0009-z#ref-CR26" id="ref-link-section-d68663e695">26</a>], however it is acknowledged that this may not be the case for all scenarios.</p><p>Twelve participants from Queen’s University Belfast, aged between 22 and 41 were recruited for the purposes of the experiment. Participants came from a wide range of academic backgrounds, comprising of music, engineering, and life sciences. They had no prior experience of screen readers, the multimodal interface developed for blind and visually impaired users, or a force feedback mouse. Over half the participants had minor levels of sight loss, corrected through the use of glasses. They mentioned no other auditory impairments or issues with movement or dexterity that would have hindered use of the force feedback mouse. For the purpose of the experiment, the participants were blindfolded to assimilate conditions of being visually impaired.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec11">Section 1: Spatial awareness of object layout on a Web page</h4><p>The main objective of the section of experiment is to find out whether people can use the multimodal interface to develop a mental image of the spatial layout of a Web page. A group of 12 blindfolded participants took part in the experiment and they were asked to explore two unfamiliar Web pages in 3 min. They were requested to describe the page layout and draw it on a piece of paper after the session. During the task, participants were asked to follow the think-aloud protocol, discussing any strategies that they were using for exploration, the effectiveness of multimodal cues, the size of the objects they were interacting with, and providing any general feedback as to the strengths and weaknesses of the system.</p><p>The Web pages used in the experiment are shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0009-z#Fig6">6</a>. One of the Web pages is conceptually simpler to explore due to its small number of widely-spaced elements (1 heading, 5 hyperlinks, 2 image-links, 1 image, and text); while the other one is more complex with tighter-packed elements (14 hyperlinks, 9 image-links, 1 image, and text).</p><ol class="u-list-style-none">
+                      <li>
+                        <span class="u-custom-list-number">(a)</span>
+                        
+                          <p>Simple Web page tested;</p>
+                        
+                      </li>
+                      <li>
+                        <span class="u-custom-list-number">(b)</span>
+                        
+                          <p>Complex Web page tested.</p>
+                        
+                      </li>
+                    </ol><p>Before the session, participants were given 5 min of training on a non-complex sample Website to familiarise themselves with the multimodal cues representing images, hyperlinks and text. To improve the learning process of multimodal feedback, cues were introduced uni-modally, and then in combination with other feedback. Participants were asked a series of questions during the training session, remarking on the perception and quality of the multimodal cues, and whether distinctions could be made between feedbacks of various elements. This was to ensure participants had acquired the necessary skills to use the multimodal interface.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-6"><figure><figcaption><b id="Fig6" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 6</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0009-z/figures/6" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0009-z/MediaObjects/10055_2005_9_Fig6_HTML.jpg?as=webp"></source><img aria-describedby="figure-6-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0009-z/MediaObjects/10055_2005_9_Fig6_HTML.jpg" alt="figure6" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-6-desc"><p>Web page used in experiment Sects. 1 (<b>a</b>) simple web page tested and (<b>b</b>) complex web page tested</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0009-z/figures/6" data-track-dest="link:Figure6 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                    <h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec12">Section 2: Navigation to target objects on a Web Page</h4><p>The main objective of this part of the experiment is to compare the multimodal interface with JAWS 5.0 screen reader for Windows [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 27" title="Freedom Scientific JAWS 5.0 Software. &#xA;                    http://www.freedomscientific.com/fs_products/software_jawsinfo.asp&#xA;                    &#xA;                  &#xA;                " href="/article/10.1007/s10055-005-0009-z#ref-CR27" id="ref-link-section-d68663e768">27</a>], in terms of locating interesting items on a Web page. The 12 participants were asked to explore two unfamiliar commercial Web pages in order to locate a designated object on each Web page. All participants needed to perform the task using both tools (1) JAWS with Internet Explorer 6.0 and (2) multimodal interface with Mozilla Firefox 1.0. Six participants performed the task-using tool (1) first, whilst the other six used tool (2) first, the randomisation process was performed in order to minimise the learning effect which might affect the experimental results. A maximum time limit of 5 min was imposed on the participants.</p><p>The Web pages used in the experiment are shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0009-z#Fig7">7</a>. One of the Web pages is conceptually simpler to explore due to its small number of elements (12 hyperlinks, 1 image-link, 5 images, and text); the other one is more complex with tightly packed elements (1 hyperlink; 26 image-links, 10 images, and text). Objects to locate on the Web pages included a hyperlink on the simpler Web page, and an image-link on the more complex page. Two different objects were carefully selected on each Web page to ensure that the level of difficulty would be similar for both tools.</p><ol class="u-list-style-none">
+                      <li>
+                        <span class="u-custom-list-number">(a)</span>
+                        
+                          <p>Target objects on the simpler Web page.</p>
+                        
+                      </li>
+                      <li>
+                        <span class="u-custom-list-number">(b)</span>
+                        
+                          <p>Target objects on the complex Web page.</p>
+                        
+                      </li>
+                    </ol><p>Again, a 5 min training session was given before the experiment. Participants were introduced to JAWS and the main commands [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 28" title="JAWS commands help guide. Freedom Scientific Software" href="/article/10.1007/s10055-005-0009-z#ref-CR28" id="ref-link-section-d68663e800">28</a>] that visually impaired people would use when browsing the Web. They were allowed to practice the commands during the training stage.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-7"><figure><figcaption><b id="Fig7" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 7</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0009-z/figures/7" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0009-z/MediaObjects/10055_2005_9_Fig7a_HTML.gif?as=webp"></source><img aria-describedby="figure-7-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0009-z/MediaObjects/10055_2005_9_Fig7a_HTML.gif" alt="figure7" loading="lazy" /></picture><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0009-z/MediaObjects/10055_2005_9_Fig7b_HTML.gif?as=webp"></source><img aria-describedby="figure-7-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0009-z/MediaObjects/10055_2005_9_Fig7b_HTML.gif" alt="figure7" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-7-desc"><p>Web pages used in experiment Sects. 2 (<b>a</b>) target objects on the simpler Web page (<b>b</b>) target objects on the complex Web page</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0009-z/figures/7" data-track-dest="link:Figure7 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                    <h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec13">Section 3: Usability of multimodal browser</h4><p>At the end of the experiment, participants were presented with a questionnaire probing their perceptions of multimodal interactions. Questions were adapted from usability surveys, soliciting views on the participants’ Web experiences using the multimodal interface. These included asking the user if he/she felt confident when accessing the multimodal interface and exploring with the force feedback mouse, whether the system was unduly complex to negotiate, and whether technical support would be required for future access. The second part of the questionnaire related to issues of engagement and effectiveness of auditory and haptic cues. Data was captured in quantitative format through the use of Likert scales. Range from 1 to 5, with 3 indicating a neutral response, and greater than 3 indicating a positive response. A short follow-up interview was conducted to discuss issues arising from the questionnaire.</p></div></div></section><section aria-labelledby="Sec14"><div class="c-article-section" id="Sec14-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec14">Results and discussion</h2><div class="c-article-section__content" id="Sec14-content"><h3 class="c-article__sub-heading" id="Sec15">Section 1: Spatial awareness of object layout on a Web page</h3><p>All 12 participants were able to provide a verbal account and produce a diagram of their mental model of each page. Verbal descriptions were brief yet yielded rich information concerning the number of elements on a page and their respective locations. On the simple Web page, responses detailing positional layout were generally quite accurate due to the simpler structure of the page. Participants were able to communicate effectively the position of images at the top left of the Web page, along with the position of the text towards the bottom of the page. They managed to communicate the presence of hyperlinks, mapping out the correct position on the Web page. However, participants were uncertain about the number of links on the page, stating that there were maybe two to three links. This sense of occlusion could have been attributed to the relatively small dimensions of each hyperlink, and their relatively close proximity towards one another.</p><p>Diagrammatic representations did not always reflect the richer verbal descriptions presented by participants. Representations were in sketch format detailing groups of links, images and text (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0009-z#Fig8">8</a>). Participants were not always able to align the elements on paper, when compared to their verbal descriptions. Errors in alignment could have also arisen from the amount of elements on the page, which users needed to remember. Limited workspace of the force feedback mouse might have also affected participants’ perception of object alignment.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-8"><figure><figcaption><b id="Fig8" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 8</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0009-z/figures/8" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0009-z/MediaObjects/10055_2005_9_Fig8_HTML.gif?as=webp"></source><img aria-describedby="figure-8-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0009-z/MediaObjects/10055_2005_9_Fig8_HTML.gif" alt="figure8" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-8-desc"><p>An example of diagrammatic representation of the simple Web page</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0009-z/figures/8" data-track-dest="link:Figure8 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>Participants indicated that exploring the complex Web page proved to be a challenging task. Verbal descriptions for the task were again informative, but due to the complexity of the page, some of the participants did not feel that they were given adequate time to gain a good overview. The position and number of hyperlinks was again found to be difficult for the users to describe, without providing a rough estimation. Reasons for this could have included the long descriptions arising from the speech component of the interface, detailing the rather long search term hyperlinks. Diagrammatic representations were again not as rich as the verbal descriptions (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0009-z#Fig9">9</a>). Participants were able to remember many of the components of the Web page, but alignment on paper was found to be a challenging task.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-9"><figure><figcaption><b id="Fig9" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 9</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0009-z/figures/9" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0009-z/MediaObjects/10055_2005_9_Fig9_HTML.gif?as=webp"></source><img aria-describedby="figure-9-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0009-z/MediaObjects/10055_2005_9_Fig9_HTML.gif" alt="figure9" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-9-desc"><p>An example of diagrammatic representation of the complex Web page</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0009-z/figures/9" data-track-dest="link:Figure9 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>Participants were observed moving the force feedback mouse at a quick speed, causing them to skip-over visually smaller elements in a page. Many of the fully sighted users were used to moving a mouse quickly around a GUI, in their day-to-day work. The point of confusion was caused as the physical distance moved by the mouse, did not correspond to the distance moved by the mouse cursor on the screen. Slow and controlled movements would need to be made using the force feedback mouse to gain an adequate perception of elements on the screen.</p><p>Other points of confusion were attributed to the lack of alternative text presented for larger and smaller images on the Web page. Participants could feel auditory and haptic feedback for these elements, but were unaware of their relevance on the page, without a textual description. Spacer images are often included in Web pages to maintain a standard distance between page elements when viewed through a browser, but if incorrectly labelled, would offer no benefit to a visually impaired user. Image-links were also perceived incorrectly. The participants indicated that they did not find it intuitive to perceive the haptic signals and auditory icons for an image-link. The result of further discussions revealed that participants would benefit from separate cues, distinguishing image-hyperlinks from ordinary images and hyperlinks.</p><p>Throughout the spatial awareness of object layout task, participants were encouraged to discuss strategies employed for developing a visualisation of the Web pages, whilst blindfolded. The majority of them were observed initially adopting a trial and error method, to isolate elements on a page. Often a haphazard method was adopted, with the participants randomly moving the mouse around, in the hope that they would find the target. It was obvious after more practice, they seemed to develop a strategy for exploring elements on a page to gain an overview. One music student tended to work in a clockwise motion, moving in a spiral from the outside of the browser, slowly inwards. When asked about her approach, she mentioned it was a good way to spatialise the information on a Web page. Two other science students from an engineering background adopted another methodical approach. They tended to move to the outside of the browser where an auditory icon was played, to signal the content border. They would then move to the left hand side of the page to detect a reference point, such as an image, link or text. The two participants would move slowly around the reference point to try and detect another object, drawing a map in their minds of the position of elements on the screen. They would then move outside the vicinity of the browser window, to re-orientate themselves on the screen and try to detect other objects in the vicinity. Some participants would also try to move in a vertical line to try and establish an axis in their mind and use this axis to orientate themselves on the page.</p><p>Some comments were given by the participants on how to improve the interface. One participant suggested feedback to provide awareness of the mouse cursor position on the Web page. The participant recommended that this feedback could be accessed by clicking the right mouse button, which would provide the user with the option of accessing the position, without receiving continuous feedback whilst exploring the interface. Another participant suggested a facility to re-position the mouse cursor to the top left of the Web page either by making a keystroke or placing a multimodal icon at the location in question, to give confirmation of position.</p><h3 class="c-article__sub-heading" id="Sec16">Section 2: Navigation to target objects on a Web Page</h3><p>The experiment that compared JAWS screen reader and the multimodal interface in target object navigation showed very interesting results. The main measurement was the task completion time. Observations were also made on the strategies that participants adopted in the searching process. Almost all participants were able to complete the task and locate the target objects, with the exception of two participants who failed to find the object (UCLIC link 1) on the simple Web page in 5 min using the multimodal interface. Overall, participants took less time to locate the objects using the JAWS screen reader. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0009-z#Fig10">10</a> shows the comparison of task completion time.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-10"><figure><figcaption><b id="Fig10" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 10</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0009-z/figures/10" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0009-z/MediaObjects/10055_2005_9_Fig10_HTML.gif?as=webp"></source><img aria-describedby="figure-10-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0009-z/MediaObjects/10055_2005_9_Fig10_HTML.gif" alt="figure10" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-10-desc"><p>Comparison of task completion time</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0009-z/figures/10" data-track-dest="link:Figure10 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>The task completion time in JAWS is consistently lower than in the multimodal interface. The standard deviations (STDEV) are also very low except in the condition of UCLIC link (1) in which the STDEV is 58.3 s. This exception is due to a large task completion time (163 s) required by one participant. Without taking into account of the result from this participant, the average task completion time would have been 21.1 s with STDEV 7.4 s. This is in line with the figures gained under the other experimental conditions.</p><p>The amount of task completion time in JAWS condition increases with the Tab Order value of the target object, which is usually determined by the object’s location on the Web page. This is because screen readers read the content of a Web page in a linear fashion. To browse through the objects on the page, participants needed to use the Tab key to go through them one by one. If the target object was placed further down in the page, the time needed to reach the intended object would be longer. As a result, the task completion times are low and consistent (21.1 s without the exceptional case, and 29.1 s) in the simple Web page condition where only a few items are on the page. The complex Web page, on the other hand has more items. The task completion times for the complex page, vary from 20.1 to 78.1 s based on the locations of the target objects.</p><p>Participants generally required more time to find the objects using the multimodal interface compared with the JAWS condition. There are also large variations in the task completion times. Some participants can find the target objects in a very short time, for example, 17.7 s on the simple Web page (UCLIC link 1), which is comparable to the shortest time in the JAWS condition, 12 s. On the other hand, one participant spent 148.8 s on the simple Web page (UCLIC link 1) using the multimodal browser, accounting for the larger STDEV of 105.8 s. Two participants could not complete the task on the same page (UCLIC link 2).</p><p>The large variations in targeting elements using the multimodal interface seem to be subjected to individual differences. Further study with more participants will be required to obtain conclusive results. However, a number of factors that contribute to the results can be identified in this study. The lack of a visual overview of a Web page presented major difficulties to participants. They needed to adopt a strategy to locate the objects on a page. During the course of the experiment, it was observed that not of all the strategies utilized were effective.</p><p>Participants often adhered to their perception of how a Web page should resemble when navigating. Many of them initially directed themselves to the left-hand side of the screen when searching for a hyperlink, intuitively expecting the hyperlink would be located in the vicinity. If the hyperlinks were not present there, they explored horizontally along the top of the page. When searching for images, participants tended to navigate towards the bottom right section of the page, where they believed the main content of Web pages to be. Confusion tended to arise from larger open spaces on a Web page, where participants tended to encircle the area in the hope of locating an object.</p><p>Second, besides the location of the object, the size of the object also affects the searching time. Usually, the larger the object, the easier it could be found using the multimodal interface. The results of the experiment do not quite show that participants spent less time on the bigger objects. On the simple Web page, the location of the larger-sized object (UCLIC link 2) seems to be the main reason why participants found it hard to find. The object is down at the bottom of the page and easy to miss. On the complex Web page, even though the task completion time for the smaller object (RT image 2), is shorter than the bigger object, its time variation is also smaller, 49.8 s compared with 90.6 s for the bigger object. The shortest time in the bigger object (RT image 1) is 28.3 s and the longest time is 275.6 s. Therefore, the task completion time for the bigger object is less consistent and requires more participants to give a conclusive result.</p><p>Navigating using the multimodal interface was slower due to the amount of time participants spent exploring each object on a page in order to develop a mental map of the page layout. Participants indicated that when looking for an item on a page, they were more aware of elements and their respective positions, which they could not obtain through the use of JAWS. This resulted in a greater perceptual experience, which was not experienced with screen readers.</p><p>Sighted participants did not necessarily have an advantage in the series of experiments undertaken, due to their previous knowledge of working with a mouse. It was acknowledged that just as the experience of mediating a two-dimensional interface with a mouse would be new to the visually impaired participants, the concept of using a screen reader would also be novel to fully sighted users. To account for the learning curves experienced when first interacting with each piece of software, additional training would be provided before future evaluations commence.</p><h3 class="c-article__sub-heading" id="Sec17">Section 3: Usability of system</h3><p>Participants indicated that they found the multimodal interface to be straightforward to use, after their initial period of training. The majority of participants agreed with the statement that Web pages were not difficult to negotiate using the force feedback mouse, with seven out of 12 participants agreeing that the experience had been non-complex and usable (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0009-z#Fig11">11</a>).
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-11"><figure><figcaption><b id="Fig11" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 11</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0009-z/figures/11" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0009-z/MediaObjects/10055_2005_9_Fig11_HTML.gif?as=webp"></source><img aria-describedby="figure-11-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0009-z/MediaObjects/10055_2005_9_Fig11_HTML.gif" alt="figure11" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-11-desc"><p>Feedback on the complexity of the multimodal interface</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0009-z/figures/11" data-track-dest="link:Figure11 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>Participants did indicate that they would benefit from additional training when interacting with the interface, to remind them on the meaning of various multimodal cues. They found the system to be learnable but would benefit from additional practice before performing tasks on complex pages. Once the meaning of multimodal cues were clarified in their mind, confidence levels with the interface would improve.</p><p>Participants were asked to rate the usefulness of the haptics, speech and non-speech audio in the system. For the force feedback cues, participants rated the feedback for images positively, as the ridge effect around an image seemed intuitive. They were able to develop a spatial representation of the boundary of the image, adding vital context to a page. Feedback for hyperlinks could be sharpened to ensure that participants would not skip over links or could have the option of being constrained to hyperlinks, if they so wished.</p><p>In terms of audio, the auditory icons used for indicating the presence of images and hyperlinks were thought to be meaningful. A camera click would automatically conjure the image of a camera. However, participants explained that these icons were too short in duration and easily masked by the pitch and panning. Pitch was thought to be more intuitive if the value increased moving towards an image or hyperlink, rather than reducing whilst moving towards object on a page. Participants could hear the residual noise made by the motor of the mouse and thought that this was an additional source of audio for the interface. Whereas noises from the motor did not cause confusion, participants were finding they were concentrating harder on separating the auditory icons and background sounds from the motor sounds. This could be remedied through the use of stereo headphones, which could also convey the panning in a more effective way, thereby improving spatialisation.</p><p>The quality of voice was also opened as an item of discussion, with users stating a preference for the softer tone used by the multimodal interface. Five out of the 12 users asked for improvements with the technology. Further discussions revealed a preference for a more humanised voice that did not mispronounce names and words. They speculated that listening to the synthesised voice for prolonged periods would lead to eventual overload, also attributed to the verbosity of information read out. The option of customising the amount of information that the interface could read out was also considered as a viable method of designing an inclusive system.</p><p>The majority of participants indicated that the multimodal cues worked well in conjunction with each other (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0009-z#Fig12">12</a>). On further discussion, it was revealed that accessing the Web using the multimodal system was initially slightly overloading, as they had not been practiced in processing simultaneous sounds. However, during the course of the tasks, they were able to surpass this barrier and processing feedback more effectively. This resulted in a more natural and enjoyable experience, compared to using a conventional screen reader. Participants were able to maintain engagement of all their senses, without the fear of sensory overload.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-12"><figure><figcaption><b id="Fig12" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 12</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0009-z/figures/12" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0009-z/MediaObjects/10055_2005_9_Fig12_HTML.gif?as=webp"></source><img aria-describedby="figure-12-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0009-z/MediaObjects/10055_2005_9_Fig12_HTML.gif" alt="figure12" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-12-desc"><p>Feedback on the compatibility of multimodal feedback</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0009-z/figures/12" data-track-dest="link:Figure12 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>In terms of future improvements for the system, participants suggested that a larger work space for the mouse would pose fewer constraints. By being able to navigate in a space roughly the same size as the screen, participants would have increased awareness of the mouse cursor location on the screen.</p><h3 class="c-article__sub-heading" id="Sec18">Assessment with visually impaired people</h3><p>In order to assess the overall accessibility and usability of the multimodal interface, a second experiment was conducted with visually impaired people. The experiment was divided into two sections, Sect. 1 to examine whether visually impaired users could obtain spatial awareness of positional layout and Sect. 2 to reveal whether the interface would provide an accessible and usable means to exploring a Web page.</p><p>Seven participants from the Royal National Institute for the Blind Youth Group aged between 14 and 25 were recruited for the trial. All participants identified themselves as visually impaired or blind, with sight loss ranging from being able to see larger blurred images on the screen with the help of magnification software to total occlusion. Three of the seven participants mentioned that they had a stronger level of sight in younger years. Six of the seven participants had knowledge of screen reading technology, and had Internet training in the past. Three of the six participants described themselves as beginner to intermediate level and three at a more advanced stage. Two participants had previous experience with a computer mouse in their younger years. None of the participants has experienced a force feedback mouse before.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec19">Section 1: Spatial awareness of object layout on a Web page for visually impaired users</h4><p>All participants were asked to explore two unfamiliar Web pages without the help of the evaluators (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0009-z#Fig13">13</a>). The experiment set up and procedures were similar to the one used for sighted people. Participants were given 5 min to explore on each Web page. The increased time is to accommodate participants’ unfamiliarity with the use of computer mouse in the multimodal interface. After the session, participants were given the choices of describing the Web page layout using either the pen and paper or tactile objects (Lego). A slightly different complex Web page was used (13 hyperlinks; 3 image-links; 1 image; text) as one of the visually impaired users was already familiar with the complex page in the first experiment.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-13"><figure><figcaption><b id="Fig13" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 13</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0009-z/figures/13" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0009-z/MediaObjects/10055_2005_9_Fig13_HTML.jpg?as=webp"></source><img aria-describedby="figure-13-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0009-z/MediaObjects/10055_2005_9_Fig13_HTML.jpg" alt="figure13" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-13-desc"><p>Blind user taking part in evaluation</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0009-z/figures/13" data-track-dest="link:Figure13 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                    <p>Participants were provided with 5 min of training on a non-complex sample Web site, using Mozilla Firefox 1.0, to familiarise themselves with the multimodal cues representing images, hyperlinks and text. As most of the subjects had not previously accessed a mouse, users were offered additional instruction.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec20">Section 2: Accessibility and usability of multimodal browser</h4><p>All participants were presented with a series of questions aiming to assess their perceptions of multimodal interactions with the browser. An open-ended style questionnaire was used to solicit views on the benefits and disadvantages that the multimodal interface offers in comparison to current assistive technologies. Views could be followed up during the questionnaire. Participants were encouraged to discuss their abilities to process simultaneous sources of auditory feedback, usability of the force feedback mouse and enjoyment arising from using the system. They were asked on their ability to rate the perceptual experience offered by the interface, in comparison to existing assistive solutions.</p></div></div></section><section aria-labelledby="Sec21"><div class="c-article-section" id="Sec21-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec21">Results and discussion</h2><div class="c-article-section__content" id="Sec21-content"><h3 class="c-article__sub-heading" id="Sec22">Section 1: Spatial awareness of object layout on a Web page</h3><p>Participants were able to explore the simple Web page and provide a relatively good description of the page layout, whilst five participants were not able to explore the whole complex Web page within the time limit given. Participants were presented with a choice to either align tactile objects or create a diagrammatic representation in order to recreate the location and layout of objects on the Web page. Two users chose to draw the location of objects. Diagrammatic representations produced by participants were found to contain minor inconsistencies with the sizing and positioning of objects (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0009-z#Fig14">14</a>). This could have also been attributed to the fact that both users were unfamiliar with drawing skills and could not mark points on the diagram, which they could later use for reference.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-14"><figure><figcaption><b id="Fig14" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 14</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0009-z/figures/14" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0009-z/MediaObjects/10055_2005_9_Fig14_HTML.gif?as=webp"></source><img aria-describedby="figure-14-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0009-z/MediaObjects/10055_2005_9_Fig14_HTML.gif" alt="figure14" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-14-desc"><p>An example of diagrammatic representation of the simple Web page</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0009-z/figures/14" data-track-dest="link:Figure14 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>Using tactile objects, participants were able to align artefacts representing images and hyperlinks in a given order. Tactile artefact representation varied from participant to participant; some similar to the visual layout of the page, some radically different. Alignment of hyperlinks and images using the tactile objects was often poorer, particularly for the “busier” Web page. Many of the participants described the process of visualising a Web page the way that fully sighted people would visualise a page, quite difficult. Individual differences, including experience with tactile arrangements and age could have also been grounding factors.</p><p>Observations were made on the methods adopted by participants, to explore the Web pages. After initial cautiousness using the mouse, many of the participants spent most of the time period, navigating vertically, orientating themselves towards the left-hand side of the Web page. Further discussion with participants revealed that participants expected the pages to resemble a vertical list of text and links. This model had been formed, due to the sequential format offered by screen readers. Exploration patterns also appeared to be more strategic for visually impaired people. Many of the participants remarked on being able to find a large reference point on a Web page, such as an image, and trying to move slowly around it to find another reference point. This way, they could draw a virtual map in their mind. When asked to verbalise a description of the Web page, the participants were able to provide a fairly clear representation.</p><h3 class="c-article__sub-heading" id="Sec23">Section 2: Accessibility and usability of multimodal browser</h3><p>Analysis of post-task questionnaires revealed that interface functionality was not found to be unduly complex or fatiguing for the participants who stated that the system provided benefits for visualisation, and they expressed confidence in being able to use the system in the future, unaided. Multimodal cues were found to complement each other, providing a novel, engaging experience for the participants when interacting with the Web.</p><p>Initially, most blind participants found the mouse difficult to control. One stated that he could not visualise the speed of the mouse, suggesting that he would like a sense of how fast the cursor was moving. Three participants suggested that the base of the force feedback mouse should be larger, almost the size of the actual screen so that physical movements could be closer to cursor on the screen.</p><p>Visually impaired participants found the process of hovering over hyperlinks and clicking the mouse to select the hyperlink quite difficult. This could be due partly to inexperience working with a mouse and difficulties visualise the physical position of the mouse cursor over the narrow hyperlink body. Reduced vibration force feedback over the hyperlink could improve the situation, stopping the user from moving off. Generally blind participants indicated that they would like haptic effects to constrain their cursor movements within the page. The concept of a haptic groove for a link or a list of links that would make hovering on a link easier was considered to be beneficial. One participant felt that constraining the cursor could be confusing for some visually impaired users, therefore this should be an optional feature.</p><p>Visually impaired participants generally appeared more confident than their sighted counterparts at processing sounds simultaneously. Most of them could perceive changes in pitch, panning and could make use of auditory icons. They were able to identify the sound of the camera click and metallic chains, as representing images and links on a Web page. They considered the metaphors to be appropriate in that they understood the fact that the camera noise implied that they were about to enter an image, even though some of them had never experienced a visual image. The locational earcon was considered useful to identify the proximity of a link or image although participants felt that this should be developed further to convey more information about the cursor position in relation to the image or link. One participant suggested the use of more descriptive auditory icons to provide information on the direction of cursor movements. For example auditory icons could be designed specifically to evoke upwards and downwards and sideways movements.</p><p>In terms of future development, participants suggested that other parts of a page should be rendered to offer additional feedback as feedback of moving in and out of the browser was not found to be effective enough. Additional auditory icons to mark direction and position on the page, would offer clues to rectifying moving away from the main body of the page in error. A haptic barrier may act as one method of preventing users from leaving the browser, until they wanted to transfer to another application.</p><p>The text-to-speech synthesiser used in the plug-in, was found to produce a more pleasant experience than other conventional screen readers. Participants considered it to have a softer, more human-like tone. This is an important feature for visually impaired Internet users when listening to synthesised speech for prolonged lengths of time. Participants found it difficult to compare the multimodal interface with JAWS screen reader in terms of navigation as the two systems were so different. Experienced visually impaired screen reader users felt that they could navigate links faster using JAWS but could not compare the interfaces in terms of spatial awareness as this is not a feature of JAWS or any other screen reader. Participants said that they would need more experience with the multimodal browser for a realistic comparison to the screen reading technology that they were familiar with in terms of speed of navigation. However, participants stated that spatial information conveyed by the multimodal interface provided a much richer navigation experience than that possible with a conventional screen reader.</p><p>In the current prototype, text is read by paragraph. In future systems, participants would like to have more control over synthesised speech for non-link text on a Web page in terms of speed, volume and duration.</p><p>The multimodal interface has not taken into account the issue of scrolling through a Web page. Information would need to be conveyed about the existence of elements currently occluded from view, and allow for participants to orientate their position when scrolling within the page. A future version of the prototype may examine the adoption of this feature, which could help visually impaired participants to navigate through a page.</p><p>Further discussion of the prototype yielded suggestions of additional multimodal feedback for (1) determining whether a user is inside the Web page or on the browser toolbar, (2) additional haptic constraints using the force feedback mouse, (3) a summary of page attributes, and (4) spatial positioning to be presented when the user arrives on a Web page. These would culminate in greater levels of usability as less time would be wasted when moving from page to page. No effects of sensory overload were reported in the trials. According to our user requirement capture, many visually impaired Internet users interact with the Web for periods of 3–4 h at a time. Future evaluation would need to focus on whether extended use with the multimodal interface would lead to sensory overload effects or increase levels of cognitive workload on the user, and examine ways to minimise the potential risk.</p><p>For the purpose of conducting evaluations on future prototypes, we would like for both sighted and visually impaired participants to follow the same conditions within experiments. However, the variability inherent in blind and visually impaired users may make this a complex process. Factors include the length of time since the onset of blindness, differences in the levels of education and technical skills, physical and cognitive disabilities, acknowledged by Stevens and Edwards [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 25" title="Stevens RD, Edwards AN (1996) An approach to the evaluation of assistive technology. In: Proceedings of the 2nd annual ACM conference on assistive technologies, pp 64–71" href="/article/10.1007/s10055-005-0009-z#ref-CR25" id="ref-link-section-d68663e1133">25</a>]. The authors have subsequently recommended using a method of co-operative evaluation as an alternative to the strict controlled experiment paradigm to evaluate assistive technologies, which may help to overcome the issue of variability discussed, which could be implemented in our future studies.</p></div></div></section><section aria-labelledby="Sec24"><div class="c-article-section" id="Sec24-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec24">Conclusion</h2><div class="c-article-section__content" id="Sec24-content"><p>This paper has described a novel technique, which can determine when a user’s cursor is in close proximity to a region of interest on a Web page, e.g. a hyperlink or image. By rendering the spatial visual information via the multimodal interface, visually impaired people are not only informed of these regions of interest, but are also guided to them by the audio and haptics. The evaluation of the multimodal interface has shown that it can assist users in the construction of a mental map of the Web page layout, which is impossible with the current screen-reading software. The experimental results have also revealed that using the multimodal interface is slower to search and locate an object on a Web page compared to the screen reader. However, after experiencing the multimodal interface, the visually impaired users in our study, showed their appreciation for the sense of spatial awareness and navigational information provided by the haptic and audio features. They have provided valuable feedback on the advantages and limitations of the multimodal interface, which will be taken into consideration for future implementations.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="The Web Access and Inclusion for Disabled People, A Formal Investigation conducted by the Disability Rights Co" /><span class="c-article-references__counter">1.</span><p class="c-article-references__text" id="ref-CR1">The Web Access and Inclusion for Disabled People, A Formal Investigation conducted by the Disability Rights Commission. <a href="http://www.drc-gb.org/publicationsandreports/report.asp">http://www.drc-gb.org/publicationsandreports/report.asp</a>
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Hakkinen M, Dewitt J (1996) WebSpeak: user interface design of an accessible web browser. White Paper, The Pro" /><span class="c-article-references__counter">2.</span><p class="c-article-references__text" id="ref-CR2">Hakkinen M, Dewitt J (1996) WebSpeak: user interface design of an accessible web browser. White Paper, The Productivity Works Inc., NJ</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Zajicek M, Powell C, Reeves C (1998) A web navigation tool for the blind. In: Proceedings of the 3rd ACM/SIGAP" /><span class="c-article-references__counter">3.</span><p class="c-article-references__text" id="ref-CR3">Zajicek M, Powell C, Reeves C (1998) A web navigation tool for the blind. In: Proceedings of the 3rd ACM/SIGAPH on assistive technologies, pp 204–206</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Donker H, Klante P, Gorny P (2002) The design of auditory user interfaces for blind users. In: Proceedings Nor" /><span class="c-article-references__counter">4.</span><p class="c-article-references__text" id="ref-CR4">Donker H, Klante P, Gorny P (2002) The design of auditory user interfaces for blind users. In: Proceedings Nordichi, pp 149–156</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Goose S, Moller C (1998) A 3D audio only interactive web browser: using spatialization to convey hypermedia do" /><span class="c-article-references__counter">5.</span><p class="c-article-references__text" id="ref-CR5">Goose S, Moller C (1998) A 3D audio only interactive web browser: using spatialization to convey hypermedia document structure. In: Proceedings of the 7th ACM international conference on multimedia, pp 363–371</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Roth P, Petrucci LS, Assimacopoulos A, Pun T (2000) Audio-haptic internet browser and associated tools for bli" /><span class="c-article-references__counter">6.</span><p class="c-article-references__text" id="ref-CR6">Roth P, Petrucci LS, Assimacopoulos A, Pun T (2000) Audio-haptic internet browser and associated tools for blind users and visually impaired computer users. Workshop on friendly exchanging through the net, pp 57–62</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Betacom ScreenRover. http://www.elkshelp.org/screenrover.html&#xA;                " /><span class="c-article-references__counter">7.</span><p class="c-article-references__text" id="ref-CR7">Betacom ScreenRover. <a href="http://www.elkshelp.org/screenrover.html">http://www.elkshelp.org/screenrover.html</a>
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Ramstein C, Martial O, Dufresne A, Carignan M, Chassé P, Mabilleau P (1996) Touching and hearing GUI’s: design" /><span class="c-article-references__counter">8.</span><p class="c-article-references__text" id="ref-CR8">Ramstein C, Martial O, Dufresne A, Carignan M, Chassé P, Mabilleau P (1996) Touching and hearing GUI’s: design issues for the PC-Access system. Proc Assist Technol 2–9</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Brewster SA (2001) The impact of Haptic ‘Touching’ technology on cultural applications. In: Proceedings of the" /><span class="c-article-references__counter">9.</span><p class="c-article-references__text" id="ref-CR9">Brewster SA (2001) The impact of Haptic ‘Touching’ technology on cultural applications. In: Proceedings of the electronic imaging and the visual arts, pp 1–14</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Yu W, Reid D, Brewster SA (2002) Web-based multi-modal graphs for visually impaired people. In: Proceedings of" /><span class="c-article-references__counter">10.</span><p class="c-article-references__text" id="ref-CR10">Yu W, Reid D, Brewster SA (2002) Web-based multi-modal graphs for visually impaired people. In: Proceedings of the 1st Cambridge Workshop on Universal Access and Assistive Technology, pp 97–108</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Parente P, Bishop G (2003) BATS: The blind audio tactile mapping system. In: Proceedings of the ACMSE, Savanna" /><span class="c-article-references__counter">11.</span><p class="c-article-references__text" id="ref-CR11">Parente P, Bishop G (2003) BATS: The blind audio tactile mapping system. In: Proceedings of the ACMSE, Savannah, GA</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="IFeelPixel: Haptics &amp; Sonification http://www.ifeelpixel.com/faq/#whatitwill&#xA;                " /><span class="c-article-references__counter">12.</span><p class="c-article-references__text" id="ref-CR12">IFeelPixel: Haptics &amp; Sonification <a href="http://www.ifeelpixel.com/faq/#whatitwill">http://www.ifeelpixel.com/faq/#whatitwill</a>
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Caffrey A, McCrindle R (2004) Developing a multimodal web application. In: Proceedings of the 5th internationa" /><span class="c-article-references__counter">13.</span><p class="c-article-references__text" id="ref-CR13">Caffrey A, McCrindle R (2004) Developing a multimodal web application. In: Proceedings of the 5th international conference disability virtual reality and associated technologies, pp 165–172</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Lahav O, Mioduser D (2000) Multisensory virtual environment for supporting blind persons’ acquisition of spati" /><span class="c-article-references__counter">14.</span><p class="c-article-references__text" id="ref-CR14">Lahav O, Mioduser D (2000) Multisensory virtual environment for supporting blind persons’ acquisition of spatial cognitive mapping, orientation and mobility skills. In: Proceedings of the 3rd international conference disability virtual reality and associated technologies, pp 53–58</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="G. Jansson, L. Monaci, " /><meta itemprop="datePublished" content="2005" /><meta itemprop="headline" content="Jansson G, Monaci L (2005) Haptic identification of objects with different numbers of fingers. In: Ballesteros" /><span class="c-article-references__counter">15.</span><p class="c-article-references__text" id="ref-CR15">Jansson G, Monaci L (2005) Haptic identification of objects with different numbers of fingers. In: Ballesteros S, Heller MA (eds) Touch, blindness and neuroscience. UNED Press, Madrid</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 15 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Touch%2C%20blindness%20and%20neuroscience&amp;publication_year=2005&amp;author=Jansson%2CG&amp;author=Monaci%2CL">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Sharmin S, Evreinov G, Raisamo R (2005) Non-visual feedback cues for pen computing. In: Proceedings of the Wor" /><span class="c-article-references__counter">16.</span><p class="c-article-references__text" id="ref-CR16">Sharmin S, Evreinov G, Raisamo R (2005) Non-visual feedback cues for pen computing. In: Proceedings of the World Haptics, pp 625–628</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Internet Explorer. http://www.microsoft.com/windows/ie&#xA;                " /><span class="c-article-references__counter">17.</span><p class="c-article-references__text" id="ref-CR17">Internet Explorer. <a href="http://www.microsoft.com/windows/ie">http://www.microsoft.com/windows/ie</a>
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Mozilla Firefox. http://www.mozilla.org&#xA;                " /><span class="c-article-references__counter">18.</span><p class="c-article-references__text" id="ref-CR18">Mozilla Firefox. <a href="http://www.mozilla.org">http://www.mozilla.org</a>
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Web Content Accessibility Guidelines 1.0. http://www.w3.org/TR/WAI-WEBCONTENT&#xA;                " /><span class="c-article-references__counter">19.</span><p class="c-article-references__text" id="ref-CR19">Web Content Accessibility Guidelines 1.0. <a href="http://www.w3.org/TR/WAI-WEBCONTENT">http://www.w3.org/TR/WAI-WEBCONTENT</a>
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="DOM: Document Object Model. http://www.w3.org/DOM/&#xA;                " /><span class="c-article-references__counter">20.</span><p class="c-article-references__text" id="ref-CR20">DOM: Document Object Model. <a href="http://www.w3.org/DOM/">http://www.w3.org/DOM/</a>
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Turner D, Oeschger I (2003) Creating XPCom components, Open Source" /><span class="c-article-references__counter">21.</span><p class="c-article-references__text" id="ref-CR21">Turner D, Oeschger I (2003) Creating XPCom components, Open Source</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="K. Maclean, " /><meta itemprop="datePublished" content="1999" /><meta itemprop="headline" content="Maclean K (1999) Application-centered Haptic interface design. In: Srinivasan M, Cutkosky M (eds) Human and ma" /><span class="c-article-references__counter">22.</span><p class="c-article-references__text" id="ref-CR22">Maclean K (1999) Application-centered Haptic interface design. In: Srinivasan M, Cutkosky M (eds) Human and machine haptics. MIT Press, MA</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 22 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Human%20and%20machine%20haptics&amp;publication_year=1999&amp;author=Maclean%2CK">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Representations of Visual Geo-Spatial Information. http://cnice.utoronto.ca/guidelines/geospatial.php&#xA;        " /><span class="c-article-references__counter">23.</span><p class="c-article-references__text" id="ref-CR23">Representations of Visual Geo-Spatial Information. <a href="http://cnice.utoronto.ca/guidelines/geospatial.php">http://cnice.utoronto.ca/guidelines/geospatial.php</a>
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Microsoft Speech SDK. http://www.microsoft.com/speech/download/sdk51&#xA;                " /><span class="c-article-references__counter">24.</span><p class="c-article-references__text" id="ref-CR24">Microsoft Speech SDK. <a href="http://www.microsoft.com/speech/download/sdk51">http://www.microsoft.com/speech/download/sdk51</a>
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Stevens RD, Edwards AN (1996) An approach to the evaluation of assistive technology. In: Proceedings of the 2n" /><span class="c-article-references__counter">25.</span><p class="c-article-references__text" id="ref-CR25">Stevens RD, Edwards AN (1996) An approach to the evaluation of assistive technology. In: Proceedings of the 2nd annual ACM conference on assistive technologies, pp 64–71</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Yu W, Ramloll R, Brewster S, Riedel B (2001) Exploring computer-generated line graphs through virtual touch. I" /><span class="c-article-references__counter">26.</span><p class="c-article-references__text" id="ref-CR26">Yu W, Ramloll R, Brewster S, Riedel B (2001) Exploring computer-generated line graphs through virtual touch. In: Proceedings of the 6th international symposium on signal processing and its applications, pp 72–75</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Freedom Scientific JAWS 5.0 Software. http://www.freedomscientific.com/fs_products/software_jawsinfo.asp&#xA;     " /><span class="c-article-references__counter">27.</span><p class="c-article-references__text" id="ref-CR27">Freedom Scientific JAWS 5.0 Software. <a href="http://www.freedomscientific.com/fs_products/software_jawsinfo.asp">http://www.freedomscientific.com/fs_products/software_jawsinfo.asp</a>
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="JAWS commands help guide. Freedom Scientific Software" /><span class="c-article-references__counter">28.</span><p class="c-article-references__text" id="ref-CR28">JAWS commands help guide. Freedom Scientific Software</p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-005-0009-z-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><div class="c-article-section__content" id="Ack1-content"></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">Queen’s University of Belfast, University Road, BT7 1NN, Belfast, Northern Ireland, UK</p><p class="c-article-author-affiliation__authors-list">Wai Yu, Ravi Kuber, Emma Murphy, Philip Strain &amp; Graham McAllister</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Wai-Yu"><span class="c-article-authors-search__title u-h3 js-search-name">Wai Yu</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Wai+Yu&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Wai+Yu" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Wai+Yu%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Ravi-Kuber"><span class="c-article-authors-search__title u-h3 js-search-name">Ravi Kuber</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Ravi+Kuber&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Ravi+Kuber" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Ravi+Kuber%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Emma-Murphy"><span class="c-article-authors-search__title u-h3 js-search-name">Emma Murphy</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Emma+Murphy&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Emma+Murphy" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Emma+Murphy%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Philip-Strain"><span class="c-article-authors-search__title u-h3 js-search-name">Philip Strain</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Philip+Strain&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Philip+Strain" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Philip+Strain%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Graham-McAllister"><span class="c-article-authors-search__title u-h3 js-search-name">Graham McAllister</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Graham+McAllister&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Graham+McAllister" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Graham+McAllister%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-005-0009-z/email/correspondent/c1/new">Wai Yu</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=A%20novel%20multimodal%20interface%20for%20improving%20visually%20impaired%20people%E2%80%99s%20web%20accessibility&amp;author=Wai%20Yu%20et%20al&amp;contentID=10.1007%2Fs10055-005-0009-z&amp;publication=1359-4338&amp;publicationDate=2005-12-13&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Yu, W., Kuber, R., Murphy, E. <i>et al.</i> A novel multimodal interface for improving visually impaired people’s web accessibility.
+                    <i>Virtual Reality</i> <b>9, </b>133–148 (2006). https://doi.org/10.1007/s10055-005-0009-z</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-005-0009-z.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2005-07-29">29 July 2005</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2005-10-07">07 October 2005</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2005-12-13">13 December 2005</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2006-03">March 2006</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-005-0009-z" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-005-0009-z</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Multimodal interface</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Haptics</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Audio</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Assistive technology</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Web accessibility</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Web navigation</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-005-0009-z.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=9;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

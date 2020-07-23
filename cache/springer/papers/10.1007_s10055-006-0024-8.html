@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="Evaluation of on-line analytic and numeric inverse kinematics approach"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="Despite its central role in the constitution of a truly enactive interface, 3D interaction through human full body movement has been hindered by a number of technological and algorithmic factors...."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/10/1.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="Evaluation of on-line analytic and numeric inverse kinematics approaches driven by partial vision input"/>
+
+    <meta name="dc.source" content="Virtual Reality 2006 10:1"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2006-04-21"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2006 Springer-Verlag London Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="Despite its central role in the constitution of a truly enactive interface, 3D interaction through human full body movement has been hindered by a number of technological and algorithmic factors. Let us mention the cumbersome magnetic equipments, or the underdetermined data set provided by less invasive video-based approaches. In the present paper, we explore the recovery of the full body posture of a standing subject in front of a stereo camera system. The 3D position of the hands, the head and the center of the trunk segment are extracted in real-time and provided to the body posture recovery algorithmic layer. We focus on the comparison between numeric and analytic inverse kinematics approaches in terms of performances and overall quality of the reconstructed body posture. Algorithmic issues arise from the very partial and noisy input and the singularity of the human standing posture. Despite stability concerns, results confirm the pertinence of this approach in this demanding context."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2006-04-21"/>
+
+    <meta name="prism.volume" content="10"/>
+
+    <meta name="prism.number" content="1"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="48"/>
+
+    <meta name="prism.endingPage" content="61"/>
+
+    <meta name="prism.copyright" content="2006 Springer-Verlag London Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-006-0024-8"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-006-0024-8"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-006-0024-8.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-006-0024-8"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="Evaluation of on-line analytic and numeric inverse kinematics approaches driven by partial vision input"/>
+
+    <meta name="citation_volume" content="10"/>
+
+    <meta name="citation_issue" content="1"/>
+
+    <meta name="citation_publication_date" content="2006/05"/>
+
+    <meta name="citation_online_date" content="2006/04/21"/>
+
+    <meta name="citation_firstpage" content="48"/>
+
+    <meta name="citation_lastpage" content="61"/>
+
+    <meta name="citation_article_type" content="Original Article"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-006-0024-8"/>
+
+    <meta name="DOI" content="10.1007/s10055-006-0024-8"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-006-0024-8"/>
+
+    <meta name="description" content="Despite its central role in the constitution of a truly enactive interface, 3D interaction through human full body movement has been hindered by a number o"/>
+
+    <meta name="dc.creator" content="Ronan Boulic"/>
+
+    <meta name="dc.creator" content="Javier Varona"/>
+
+    <meta name="dc.creator" content="Luis Unzueta"/>
+
+    <meta name="dc.creator" content="Manuel Peinado"/>
+
+    <meta name="dc.creator" content="Angel Suescun"/>
+
+    <meta name="dc.creator" content="Francisco Perales"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="Badler NI, Hollick MJ, Granieri JP (1993) Real-time control of a virtual human using minimal sensors. In: Presence 2(1), MIT Press, Cambridge, pp 82&#8211;86. ISSN 1054-7460 "/>
+
+    <meta name="citation_reference" content="citation_journal_title=Visual Comput; citation_title=An inverse kinematic architecture enforcing an arbitrary number of strict priority levels; citation_author=P Baerlocher, R Boulic; citation_volume=20; citation_issue=6; citation_publication_date=2004; citation_pages=402-417; citation_doi=10.1007/s00371-004-0244-4; citation_id=CR2"/>
+
+    <meta name="citation_reference" content="Bodenheimer R, Rose C, Rosenthal S, Pella J (1997) The process of motion capture: dealing with the data. In: Proceedings of computer animation and simulation. Eurographics Association, pp 3&#8211;18"/>
+
+    <meta name="citation_reference" content="citation_journal_title=J Comput Graph; citation_title=A robust approach for the center of mass position control with inverse kinetics; citation_author=R Boulic, R Mas, D Thalmann; citation_volume=20; citation_issue=5; citation_publication_date=1996; citation_pages=693-701; citation_doi=10.1016/S0097-8493(96)00043-X; citation_id=CR4"/>
+
+    <meta name="citation_reference" content="Boulic R, Baerlocher P, Rodr&#237;guez I, Peinado M, Meziat D (2004) Virtual worker reachable space evaluation with prioritized inverse kinematics. In: Proceedings of the 35th international symposium on robotics, Paris, March 2004"/>
+
+    <meta name="citation_reference" content="Boulic R, Peinado M, Le Callennec B (2005) Challenges in exploiting prioritized inverse kinematics for motion capture and postural control. Lecture notes in artificial intelligence, Springer, Berlin Heidelberg New York"/>
+
+    <meta name="citation_reference" content="Bradski GR, Pisarevsky V (2000) Intel&#8217;s computer vision library. In: Proceedings of the IEEE conference on computer vision and pattern recognition, CVPR00, vol 2, pp 796&#8211;797"/>
+
+    <meta name="citation_reference" content="citation_journal_title=ACM Trans Graph; citation_title=Performance animation from low-dimensional control signals; citation_author=J Chai, JK Hodgins; citation_volume=24; citation_issue=3; citation_publication_date=2005; citation_pages=686-696; citation_doi=10.1145/1073204.1073248; citation_id=CR8"/>
+
+    <meta name="citation_reference" content="citation_journal_title=ACM Trans Graph; citation_title=Style-based inverse kinematics; citation_author=K Grochow, SL Martin, A Hertzmann, Z Popovic; citation_volume=23; citation_issue=3; citation_publication_date=2004; citation_pages=522-531; citation_doi=10.1145/1015706.1015755; citation_id=CR9"/>
+
+    <meta name="citation_reference" content="Horain P, Bomb M (2002) 3D model based gesture acquisition using a single camera. In: Proceedings of the sixth IEEE workshop on applications of computer vision, WACV02, pp 158&#8211;162"/>
+
+    <meta name="citation_reference" content="Jojic N, Turk M, Huang TS (1999) Tracking self-occluding articulated objects in dense disparity maps. In: Proceedings of the IEEE international conference on computer vision, ICCV99, vol 1, pp 123&#8211;130"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Comput Graph Appl; citation_title=Dealing with the ill-conditioned equations of motion for articulated figures; citation_author=AA Maciejewski; citation_volume=10; citation_issue=3; citation_publication_date=1990; citation_pages=63-71; citation_doi=10.1109/38.55154; citation_id=CR12"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comput Vis Image Underst; citation_title=A survey of computer vision-based human motion capture; citation_author=TB Moeslund, E Granum; citation_volume=81; citation_issue=3; citation_publication_date=2001; citation_pages=231-268; citation_doi=10.1006/cviu.2000.0897; citation_id=CR13"/>
+
+    <meta name="citation_reference" content="citation_journal_title=EEE Trans Rob Autom; citation_title=An architecture for immersive evaluation of complex human tasks; citation_author=T Molet, R Boulic, S Rezzonico, D Thalmann; citation_volume=15; citation_issue=3; citation_publication_date=1999; citation_pages=475-485; citation_doi=10.1109/70.768180; citation_id=CR14"/>
+
+    <meta name="citation_reference" content="O&#8217;Brien J, BodenHeimer RE, Brostow GJ, Hodgins JK (2000) Automatic joint parameter estimation from magnetic motion capture data. In: Proceedings of Graphics Interface, Morgan Kaufmann Publishers, Mosby, St. Louis, pp 53&#8211;60. ISBN 0-9695338-9-6"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Comput Graph Appl; citation_title=Computer puppetry; citation_author=D Sturman; citation_volume=18; citation_issue=1; citation_publication_date=1998; citation_pages=38-45; citation_doi=10.1109/38.637269; citation_id=CR16"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Graph Models; citation_title=Real-time inverse kinematics techniques for anthropomorphic limbs; citation_author=D Tolani, A Goswami, NI Badler; citation_volume=62; citation_issue=5; citation_publication_date=2000; citation_pages=353-388; citation_doi=10.1006/gmod.2000.0528; citation_id=CR17"/>
+
+    <meta name="citation_reference" content="Unzueta L, Berselli G, Caz&#243;n A, Lozano A, Suescun &#193; (2005) Genetic algorithms application to the reconstruction of the human motion using a non-invasive motion capture. In: Multibody dynamics, ECCOMAS thematic conference, Madrid, Spain, 21&#8211;24 June 2005"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comput Graph; citation_title=Hands and face tracking for VR applications; citation_author=J Varona, JM Buades, FJ Perales; citation_volume=29; citation_issue=2; citation_publication_date=2005; citation_pages=179-187; citation_doi=10.1016/j.cag.2004.12.002; citation_id=CR19"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Pattern Recognit; citation_title=Recent developments in human motion analysis; citation_author=L Wang, W Hu, T Tan; citation_volume=36; citation_issue=3; citation_publication_date=2003; citation_pages=585-601; citation_doi=10.1016/S0031-3203(02)00100-0; citation_id=CR20"/>
+
+    <meta name="citation_reference" content="Wren CR, Clarkson BP, Pentland AP (2000) Understanding purposeful human motion. In: Proceedings of the fourth IEEE international conference on automatic face and gesture recognition. IEEE Computer Society, Grenoble, pp 378&#8211;383. ISBN 0-7695-0580-5"/>
+
+    <meta name="citation_author" content="Ronan Boulic"/>
+
+    <meta name="citation_author_email" content="Ronan.Boulic@epfl.ch"/>
+
+    <meta name="citation_author_institution" content="Virtual Reality Laboratory, Ecole Polytechnique F&#233;d&#233;rale de Lausanne, Lausanne, Switzerland"/>
+
+    <meta name="citation_author" content="Javier Varona"/>
+
+    <meta name="citation_author_email" content="vdmijvg4@uib.es"/>
+
+    <meta name="citation_author_institution" content="Dept Mat. i Informatica, Universitat de les Illes Balears (UIB), Balears, Spain"/>
+
+    <meta name="citation_author" content="Luis Unzueta"/>
+
+    <meta name="citation_author_email" content="lunzueta@ceit.es"/>
+
+    <meta name="citation_author_institution" content="CEIT and Tecnun (University of Navarra), San Sebastian, Spain"/>
+
+    <meta name="citation_author" content="Manuel Peinado"/>
+
+    <meta name="citation_author_email" content="manupg@aut.uah.es"/>
+
+    <meta name="citation_author_institution" content="Escuela Polit&#233;cnica University of Alcal&#225;, Alcal&#225;, Spain"/>
+
+    <meta name="citation_author" content="Angel Suescun"/>
+
+    <meta name="citation_author_email" content="asuescun@ceit.es"/>
+
+    <meta name="citation_author_institution" content="CEIT and Tecnun (University of Navarra), San Sebastian, Spain"/>
+
+    <meta name="citation_author" content="Francisco Perales"/>
+
+    <meta name="citation_author_email" content="Paco.Perales@uib.es"/>
+
+    <meta name="citation_author_institution" content="Dept Mat. i Informatica, Universitat de les Illes Balears (UIB), Balears, Spain"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-006-0024-8&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2006/05/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-006-0024-8"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="Evaluation of on-line analytic and numeric inverse kinematics approaches driven by partial vision input"/>
+        <meta property="og:description" content="Despite its central role in the constitution of a truly enactive interface, 3D interaction through human full body movement has been hindered by a number of technological and algorithmic factors. Let us mention the cumbersome magnetic equipments, or the underdetermined data set provided by less invasive video-based approaches. In the present paper, we explore the recovery of the full body posture of a standing subject in front of a stereo camera system. The 3D position of the hands, the head and the center of the trunk segment are extracted in real-time and provided to the body posture recovery algorithmic layer. We focus on the comparison between numeric and analytic inverse kinematics approaches in terms of performances and overall quality of the reconstructed body posture. Algorithmic issues arise from the very partial and noisy input and the singularity of the human standing posture. Despite stability concerns, results confirm the pertinence of this approach in this demanding context."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>Evaluation of on-line analytic and numeric inverse kinematics approaches driven by partial vision input | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-006-0024-8","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Inverse kinematics, Motion capture, On-line image analysis","kwrd":["Inverse_kinematics","Motion_capture","On-line_image_analysis"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-006-0024-8","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-006-0024-8","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=24;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-006-0024-8">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            Evaluation of on-line analytic and numeric inverse kinematics approaches driven by partial vision input
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-006-0024-8.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-006-0024-8.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">Original Article</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2006-04-21" itemprop="datePublished">21 April 2006</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">Evaluation of on-line analytic and numeric inverse kinematics approaches driven by partial vision input</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Ronan-Boulic" data-author-popup="auth-Ronan-Boulic" data-corresp-id="c1">Ronan Boulic<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Ecole Polytechnique Fédérale de Lausanne" /><meta itemprop="address" content="grid.5333.6, 0000000121839049, Virtual Reality Laboratory, Ecole Polytechnique Fédérale de Lausanne, Station 14, 1015, Lausanne, Switzerland" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Javier-Varona" data-author-popup="auth-Javier-Varona">Javier Varona</a></span><sup class="u-js-hide"><a href="#Aff2">2</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Universitat de les Illes Balears (UIB)" /><meta itemprop="address" content="grid.9563.9, 0000000118418788, Dept Mat. i Informatica, Universitat de les Illes Balears (UIB), Balears, Spain" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Luis-Unzueta" data-author-popup="auth-Luis-Unzueta">Luis Unzueta</a></span><sup class="u-js-hide"><a href="#Aff3">3</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="CEIT and Tecnun (University of Navarra)" /><meta itemprop="address" content="grid.5924.a, 0000000419370271, CEIT and Tecnun (University of Navarra), San Sebastian, Spain" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Manuel-Peinado" data-author-popup="auth-Manuel-Peinado">Manuel Peinado</a></span><sup class="u-js-hide"><a href="#Aff4">4</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Escuela Politécnica University of Alcalá" /><meta itemprop="address" content="Escuela Politécnica University of Alcalá, Alcalá, Spain" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Angel-Suescun" data-author-popup="auth-Angel-Suescun">Angel Suescun</a></span><sup class="u-js-hide"><a href="#Aff3">3</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="CEIT and Tecnun (University of Navarra)" /><meta itemprop="address" content="grid.5924.a, 0000000419370271, CEIT and Tecnun (University of Navarra), San Sebastian, Spain" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Francisco-Perales" data-author-popup="auth-Francisco-Perales">Francisco Perales</a></span><sup class="u-js-hide"><a href="#Aff2">2</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Universitat de les Illes Balears (UIB)" /><meta itemprop="address" content="grid.9563.9, 0000000118418788, Dept Mat. i Informatica, Universitat de les Illes Balears (UIB), Balears, Spain" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 10</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">48</span>–<span itemprop="pageEnd">61</span>(<span data-test="article-publication-year">2006</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">160 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">15 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                    
+                        <li class="c-article-metrics-bar__item">
+                            <p class="c-article-metrics-bar__count">0 <span class="c-article-metrics-bar__label">Altmetric</span></p>
+                        </li>
+                    
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-006-0024-8/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>Despite its central role in the constitution of a truly enactive interface, 3D interaction through human full body movement has been hindered by a number of technological and algorithmic factors. Let us mention the cumbersome magnetic equipments, or the underdetermined data set provided by less invasive video-based approaches. In the present paper, we explore the recovery of the full body posture of a standing subject in front of a stereo camera system. The 3D position of the hands, the head and the center of the trunk segment are extracted in real-time and provided to the body posture recovery algorithmic layer. We focus on the comparison between numeric and analytic inverse kinematics approaches in terms of performances and overall quality of the reconstructed body posture. Algorithmic issues arise from the very partial and noisy input and the singularity of the human standing posture. Despite stability concerns, results confirm the pertinence of this approach in this demanding context.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Introduction</h2><div class="c-article-section__content" id="Sec1-content"><p>The sense of movement has been under-exploited until now in classical interfaces. Integrating the kinaesthetic sense at a larger scale than desktop manipulations is fundamental for building effective enactive interfaces where our dexterity and full body postural knowledge can be exploited. Exploiting the sole 3D location of one or two hands is indeed not sufficient for the evaluation of complex tasks in virtual environments. For example, very often a new product to assess is part of a cluttered environment hence raising accessibility issues for the human operator in charge of using or maintaining it. Therefore, it is crucial to be able to easily specify the full body posture of a virtual mannequin for conducting such evaluations on the virtual prototype as early as possible in the conception process. The present paper targets such objective with the long-term aim of offering a real-time non-invasive technology for the intuitive specification of human full body postures while interacting with complex virtual environments. Until now, the exploitation of real-time motion capture of full body human movements has been limited to niche applications such as the expressive animation of a virtual character in a live show (Sturman <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1998" title="Sturman D (1998) Computer puppetry. IEEE Comput Graph Appl 18(1):38–45" href="/article/10.1007/s10055-006-0024-8#ref-CR16" id="ref-link-section-d17e448">1998</a>). Multiple factors hinder a wider adoption of full body movement as a popular 3D user interface. Among others, we can cite: the invasiveness of the sensor system, the limited acquisition space and sensor precision, the spatial distortions, the high dimension of the posture space, and the modeling approximations in the mechanical model of the human body. These sources of errors accumulate and result in an approximate posture. It can be sufficient for performance animation where expression counts the most. However, if precise spatial control is desired, this channel may not suited for evaluating complex interaction with virtual objects.</p><p>The factor we want to improve in the present study is the comfort of the user through a non-invasive vision-based acquisition technology. By means of vision-based inputs, we recover the user’s full body posture while he/she interacts in front of a workbench. From the images of two standard color cameras, we automatically locate the 3D positions of the hands and the head. In addition to these 3D positions, we can also exploit an estimate of the center of the trunk segment when necessary. Then, we compare the performances of two inverse kinematics (IK) algorithms for the posture recovery of the full body. It should be noted that this context is very challenging, as the problem is highly under-determined and the standing human posture is often close to the well-known postural singularity with fully extended arms and legs. The comparison focuses on the computing cost, as we want to ensure proper integration of the user in the interaction loop. A slightly less important criterion is the quality of the spatial correspondence between the real hands and the virtual hands resulting from IK reconstructed postures. It has been visually assessed while performing various reach movements. Conversely, we strongly feel that whenever possible, it is important to ensure that the reconstructed posture is naturally balanced. For this reason, we enforce a balance constraint with the numeric prioritized inverse kinematics (PIK) approach. The correctness of the resulting balance behavior is confirmed with a small on the fly collision detection experiment.</p><p>The paper is organized as follows. Section 2 recalls the background in real-time full-body motion capture, especially for 3D interactions. In the remainder of the paper, we first provide an overview of the system prior to detail its vision and movement recovery components (Sects. 3–6). Test cases comparing the two IK approaches follow in Sect. 7 and we conclude in Sect. 8.</p></div></div></section><section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">Background</h2><div class="c-article-section__content" id="Sec2-content"><p>Real-time full-body motion capture has a long history in performance animation (Sturman <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1998" title="Sturman D (1998) Computer puppetry. IEEE Comput Graph Appl 18(1):38–45" href="/article/10.1007/s10055-006-0024-8#ref-CR16" id="ref-link-section-d17e463">1998</a>). The very limited user-friendliness of the exoskeleton technology used at that time has prevented its wider adoption. The magnetic sensor technology has started to be used in the 1990s by Badler, who investigated the use of four magnetic sensors (waist, head and both hands) for driving the posture of a human model with IK (Badler et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1993" title="Badler NI, Hollick MJ, Granieri JP (1993) Real-time control of a virtual human using minimal sensors. In: Presence 2(1), MIT Press, Cambridge, pp 82–86. ISSN 1054-7460 " href="/article/10.1007/s10055-006-0024-8#ref-CR1" id="ref-link-section-d17e466">1993</a>). The goal is to recreate human postures while minimally encumbering the end user with sensor attachments. However, the uncontrolled degrees of freedom (dofs), like the swivel angle of the arms, can lead over time to important differences between the end user and the virtual human model. Molet has described an approach suppressing this ambiguity by using more sensors (Molet et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Molet T, Boulic R, Rezzonico S, Thalmann D (1999) An architecture for immersive evaluation of complex human tasks. IEEE Trans Rob Autom 15(3):475–485" href="/article/10.1007/s10055-006-0024-8#ref-CR14" id="ref-link-section-d17e469">1999</a>). Other approaches, identifying also the skeleton structure and segment lengths, were proposed by Bodenheimer et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="Bodenheimer R, Rose C, Rosenthal S, Pella J (1997) The process of motion capture: dealing with the data. In: Proceedings of computer animation and simulation. Eurographics Association, pp 3–18" href="/article/10.1007/s10055-006-0024-8#ref-CR3" id="ref-link-section-d17e472">1997</a>) and O’Brien et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="O’Brien J, BodenHeimer RE, Brostow GJ, Hodgins JK (2000) Automatic joint parameter estimation from magnetic motion capture data. In: Proceedings of Graphics Interface, Morgan Kaufmann Publishers, Mosby, St. Louis, pp 53–60. ISBN 0-9695338-9-6" href="/article/10.1007/s10055-006-0024-8#ref-CR15" id="ref-link-section-d17e475">2000</a>). Recent works show a renewed interest to propose less invasive approach exploiting a reduced number of sensors (Grochow et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Grochow K, Martin SL, Hertzmann A, Popovic Z (2004) Style-based inverse kinematics. ACM Trans Graph 23(3):522–531" href="/article/10.1007/s10055-006-0024-8#ref-CR9" id="ref-link-section-d17e479">2004</a>; Chai and Hodgins <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Chai J, Hodgins JK (2005) Performance animation from low-dimensional control signals. ACM Trans Graph 24(3):686–696" href="/article/10.1007/s10055-006-0024-8#ref-CR8" id="ref-link-section-d17e482">2005</a>). These approaches first learn local models of human motions from a predefined motion capture database. Then, using these local models, the vision inputs from retro-reflective markers guide the motion recovery. However, presently these techniques are not used for 3D interaction, mainly due to the fact that user’s motions are restricted to the previously learned movements. Another possibility is to compensate the missing information through constraints. The possibility to associate a strict priority to a constraint is a key aspect for the success of such an approach, as highlighted in the context of interactive posture optimization (Baerlocher and Boulic <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Baerlocher P, Boulic R (2004) An inverse kinematic architecture enforcing an arbitrary number of strict priority levels. Visual Comput 20(6):402–417" href="/article/10.1007/s10055-006-0024-8#ref-CR2" id="ref-link-section-d17e485">2004</a>). Alternatively, analytic IK approach is generally more efficient in terms of computing cost but it does not allow assigning priority levels to the constraints (Tolani et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Tolani D, Goswami A, Badler NI (2000) Real-time inverse kinematics techniques for anthropomorphic limbs. Graph Models 62(5):353–388" href="/article/10.1007/s10055-006-0024-8#ref-CR17" id="ref-link-section-d17e488">2000</a>).</p><p>Reconstructing the human motion from video image analysis has received a great attention in Computer Vision (Wang et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Wang L, Hu W, Tan T (2003) Recent developments in human motion analysis. Pattern Recognit 36(3):585–601" href="/article/10.1007/s10055-006-0024-8#ref-CR20" id="ref-link-section-d17e494">2003</a>; Moeslund and Granum <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Moeslund TB, Granum E (2001) A survey of computer vision-based human motion capture. Comput Vis Image Underst 81(3):231–268" href="/article/10.1007/s10055-006-0024-8#ref-CR13" id="ref-link-section-d17e497">2001</a>). However, most of the current approaches are not real-time, hence making difficult the comparison of our approach with non-real-time ones (Horain and Bomb <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Horain P, Bomb M (2002) 3D model based gesture acquisition using a single camera. In: Proceedings of the sixth IEEE workshop on applications of computer vision, WACV02, pp 158–162" href="/article/10.1007/s10055-006-0024-8#ref-CR10" id="ref-link-section-d17e500">2002</a>). For our objective, the real-time constraint is very important due to our goal of using the captured postures as an input for a perceptual user interface in virtual environments. An interesting prior work in real-time is the one of Wren et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Wren CR, Clarkson BP, Pentland AP (2000) Understanding purposeful human motion. In: Proceedings of the fourth IEEE international conference on automatic face and gesture recognition. IEEE Computer Society, Grenoble, pp 378–383. ISBN 0-7695-0580-5" href="/article/10.1007/s10055-006-0024-8#ref-CR21" id="ref-link-section-d17e503">2000</a>) at the M.I.T. MediaLab. In this work, the authors present a system for the 3D tracking of the upper human body in front of a virtual reality device. No performance evaluation of their system is given, however. Moreover, the possible gestures are restricted to a set of predefined movements learnt previously. This approximation reduces the searchable space of human motions by learning-from-example. Our system isn’t restricted to a set of predefined movements and the delay between the user’s movement and the system response is not noticeable by the user. Finally, we wish to point out that our work includes the trunk joints compared to other work dedicated to upper body tracking (Jojic et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Jojic N, Turk M, Huang TS (1999) Tracking self-occluding articulated objects in dense disparity maps. In: Proceedings of the IEEE international conference on computer vision, ICCV99, vol 1, pp 123–130" href="/article/10.1007/s10055-006-0024-8#ref-CR11" id="ref-link-section-d17e506">1999</a>). This allows us to include a balance constraint in our system to ensure the static equilibrium of the user’s skeleton posture.</p></div></div></section><section aria-labelledby="Sec3"><div class="c-article-section" id="Sec3-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec3">System architecture</h2><div class="c-article-section__content" id="Sec3-content"><p>For recovering body movements, the user is located in an interactive space that consists of a workbench with two projection screens. This space is instrumented with a stereo camera pair. The stereo pair is used to capture the motions of certain parts of the user’s body. The choice of which parts of the body depends on the particular body posture recovery algorithm. This configuration allows the user to view virtual environments while standing in front of the workbench. Gesture and manipulation occur in the workspace defined by the screens and the user (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig1">1</a>). The workspace requirements are:</p><ul class="u-list-style-bullet">
+                  <li>
+                    <p>The background wall covered with chroma-key material. The system may work without chroma-key background; however, using it ensures a real-time response.</p>
+                  </li>
+                  <li>
+                    <p>Only one person shall be present in the space.</p>
+                  </li>
+                  <li>
+                    <p>The color of the user’s clothes should not be similar to skin color.</p>
+                  </li>
+                  <li>
+                    <p>The skin colored body parts, other than the hands and face, shall not be visible. For example, the user should not roll up his sleeves.</p>
+                  </li>
+                </ul><p>The images from the two synchronized color cameras will be the inputs of the system, if the above requirements are met. Usually, locating all the user body joints in order to recover the posture is not possible with computer vision algorithms only. This is mainly due to the fact that most of the joints are occluded by clothes. IK approaches can solve the body posture from their 3D position if we can clearly locate visible body parts such as face and hands. We propose a scheme where these visible body parts (hereafter referred to as <i>end-effectors</i>) are automatically located in real-time and fed into an IK module, which in turn can provide a 3D feedback to the vision system (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig2">2</a>). Two types of IK algorithms, one analytic and one numeric, have been integrated in the system for the purpose of comparing their relative performance for real-time body posture recovery.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig1_HTML.gif?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig1_HTML.gif" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p>Vision system layout</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig2_HTML.gif?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig2_HTML.gif" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p>General architecture of the system</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     </div></div></section><section aria-labelledby="Sec4"><div class="c-article-section" id="Sec4-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec4">The vision system</h2><div class="c-article-section__content" id="Sec4-content"><p>We apply chroma-keying, skin-color segmentation and 2D-tracking algorithms for each image of the stereo pair to locate the user’s end-effectors in the scene. Then, we combine this result in a 3D-tracking algorithm to robustly estimate their 3D positions in the scene. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig3">3</a> shows this process schematically.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig3_HTML.gif?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig3_HTML.gif" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p>Vision process</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>First, a mask is built with the image pixels belonging to the user by applying chroma-keying techniques to the original images in the Human Segmentation process. This mask is used to constraint the skin-color segmentation algorithm to those pixels belonging to the user’s silhouette. Our skin-color detection algorithm finds in real-time the skin-color pixels present in the image. The results of this skin-color detection are skin-color blobs, which are the inputs of our 2D-tracking algorithm. This algorithm labels the blobs pixels using a hypothesis set from previous frames (Varona et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Varona J, Buades JM, Perales FJ (2005) Hands and face tracking for VR applications. Comput Graph 29(2):179–187" href="/article/10.1007/s10055-006-0024-8#ref-CR19" id="ref-link-section-d17e618">2005</a>). The 2D-tracking results are feed to the 3D-tracking algorithm to robustly obtain an estimation of the end-effectors 3D positions.</p><p>The 3D-tracking algorithm uses a Kalman filter to estimate the end-effector 3D position from the image measurements obtained by the 2D-tracking algorithm. The use of a Kalman filter ensures a robust estimate for the end-effectors and smoothens the estimations between consecutive frames for minimizing the end-effectors positional jitter that may cause wobbles on the full posture estimation. Besides, we use the predictions from the Kalman filter to establish the correct correspondence between each end-effectors 2D position. In order to do this, we first triangulate all possible combinations of 2D measurements from the two images to obtain the 3D position candidates of each end-effector. Then, for each end-effector, we select the candidate nearest to the position predicted by the estimation filter. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig4">4</a> shows the results of this process by back projecting the corrected associate end-effectors 3D position in the 2D images of the stereo pair.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig4_HTML.jpg?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig4_HTML.jpg" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p>Hands and face tracking</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>As explained before, the data required by the IK algorithms are the end-effectors’ goal position. In our case, the end-effectors are the 3D positions of the wrists joints. In order to locate the wrists from the hands positions, we use the 2D ellipses found by the 2D-tracking algorithm, the 3D hand positions from the 3D-tracking algorithm, and the previous 3D positions of elbows estimated by the IK algorithm. This is done by searching in the image for the intersection between a 2D line, as defined by the back projection of the corresponding elbow and 3D hand positions, and the 2D ellipse. Then, from the 2D wrist positions, we compute their 3D coordinates by triangulation. Two examples of wrist location determined in this way can be seen in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig5">5</a>.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig5_HTML.jpg?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig5_HTML.jpg" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p>3D position of the hands end-effectors</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>In addition, an optional algorithm can estimate the location of the user’s center of mass as indicated in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig3">3</a>. This algorithm computes the image moments up to order 1 of the user’s binary silhouette: </p><div id="Equ1" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">
+$$ m_{{ij}} = {\sum\limits_x {{\sum\limits_y {x^{i} y^{j} I(x,y),} }} } $$</span></div><div class="c-article-equation__number">
+                    (1)
+                </div></div><p> where <i>I</i>(<i>x</i>,<i>y</i>) is the pixel value at the (<i>x</i>,<i>y</i>) location (1 if the pixel belongs to the binary silhouette or 0, if not). These values are used to find the center of gravity of the human shape in the image: </p><div id="Equ2" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">
+$$ c_{x} = \frac{{m_{{10}} }} {{m_{{00}} }},\quad c_{y} = \frac{{m_{{01}} }} {{m_{{00}} }}. $$</span></div><div class="c-article-equation__number">
+                    (2)
+                </div></div><p> We triangulate both centers of gravity to obtain an approximation of the user’s 3D center of gravity. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig6">6</a> displays two typical support configurations where the weight distribution on both feet is either equal (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig6">6</a>a) or privileges one foot (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig6">6</a>b). In both cases, the 3D estimation resulting from the two silhouettes’ center of gravity consistently projects over the support area.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-6"><figure><figcaption><b id="Fig6" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 6</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/6" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig6_HTML.jpg?as=webp"></source><img aria-describedby="figure-6-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig6_HTML.jpg" alt="figure6" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-6-desc"><p>Two stereo pairs highlighting the center of the silhouettes used for the estimation of the human center of gravity; <b>a</b> with equal weight distribution, <b>b</b> one foot supports more weight than the other</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/6" data-track-dest="link:Figure6 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>The body segments’ length is identified through the manual annotation of six joint centers, namely the shoulders, the elbows and the wrists, on both images from the stereo pair. This is made only once at the calibration stage for which the user adopts a symmetric standing-up posture with the arms resting along the body. The joints’ 3D position is deduced by triangulation. They are subsequently exploited in both IK approaches to initialize their respective simplified skeletons, as detailed in the next sections.</p></div></div></section><section aria-labelledby="Sec5"><div class="c-article-section" id="Sec5-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec5">Analytic inverse kinematics</h2><div class="c-article-section__content" id="Sec5-content"><p>The analytic IK first controls the global position and orientation of a trunk segment and, in a second stage, the joint state of two arms where each arm is composed of a shoulder (3 dofs) and an elbow (1 dof). The controlled effectors being the wrist joint centers, the local mobility of these joints is not exploited in the present study.</p><h3 class="c-article__sub-heading" id="Sec6">Trunk control</h3><p>The trunk control is necessary even if the user is interacting only through arms gestures. Indeed the trunk contributes both to reach actions and to preserve the balance of the whole body by bending and twisting. For this reason, the algorithm first estimates the main axes of the trunk from information delivered by the vision system (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig7">7</a>a):
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-7"><figure><figcaption><b id="Fig7" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 7</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/7" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig7_HTML.gif?as=webp"></source><img aria-describedby="figure-7-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig7_HTML.gif" alt="figure7" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-7-desc"><p>The three stages of the arm posture control bringing the wrist C on the goal position C′ (stages 1 and 2) followed by the swivel angle optimization (stage 3)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/7" data-track-dest="link:Figure7 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        
+                  <h3 class="c-article__sub-heading">Longitudinal axis L</h3>
+                  <p>normalized vector difference between the position of the head and the one of the vision-based estimated center of gravity.</p>
+                
+                  <h3 class="c-article__sub-heading">Transversal axis T</h3>
+                  <p>first we compute the vector linking the hands and we retain its horizontal component, noted H. The heuristic of computing a weighted mean between H and the body lateral axis is proven to give good results for the tests that were conducted in the present study.</p>
+                <p>The trunk orienting and positioning proceeds as shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig7">7</a>b. First, the trunk longitudinal axis is aligned with the axis <i>L</i> by acting on the “humanoid root” rotation (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig7">7</a>b, left). Second, the trunk is rotated along its longitudinal axis so that the trunk lateral axis is aligned with the axis <i>T</i> (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig7">7</a>b, middle). Third, the whole body is translated so that the head center is brought on the 3D position identified by the vision system (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig7">7</a>b, right).</p><h3 class="c-article__sub-heading" id="Sec7">Arm posture determination</h3><p>The second stage of the analytic IK algorithm is to determine the arms’ posture from the updated position of the shoulder joints and the 3D wrist positions obtained with the vision analysis. This is organized in three stages as illustrated for one arm in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig8">8</a>:</p><ul class="u-list-style-bullet">
+                    <li>
+                      <p>First, the vector linking the shoulder center, noted A, to the wrist center, noted C, is aligned with the vector AD where D is the goal location for the wrist (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig8">8</a>a, left).</p>
+                    </li>
+                    <li>
+                      <p>Second, both the shoulder and the elbow are adjusted so that C slides toward D along AD (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig8">8</a>a, right).</p>
+                    </li>
+                    <li>
+                      <p>Third, the remaining dof is called the swivel angle (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig8">8</a>b). The retained value for the present study minimizes an additional cost function that attracts the shoulder Euler angles toward their mid-range value. The cost function is evaluated for sampled values of the swivel angle, first every 0.1 rd, then, for the best candidate angle <i>S</i> a finer sampling of 0.01 rd is used to make the final selection of the swivel angle within [<i>S</i>−0.1 rd, <i>S </i>+ 0.1 rd]. This simple approach is much faster than a previous approach based on genetic algorithm (Unzueta et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Unzueta L, Berselli G, Cazón A, Lozano A, Suescun Á (2005) Genetic algorithms application to the reconstruction of the human motion using a non-invasive motion capture. In: Multibody dynamics, ECCOMAS thematic conference, Madrid, Spain, 21–24 June 2005" href="/article/10.1007/s10055-006-0024-8#ref-CR18" id="ref-link-section-d17e863">2005</a>).</p>
+                    </li>
+                  </ul>
+                           <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-8"><figure><figcaption><b id="Fig8" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 8</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/8" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig8_HTML.gif?as=webp"></source><img aria-describedby="figure-8-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig8_HTML.gif" alt="figure8" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-8-desc"><p>Definition of the longitudinal and the transversal axes from the estimation of the silhouette center of gravity (<i>white</i>) and the head position</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/8" data-track-dest="link:Figure8 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        </div></div></section><section aria-labelledby="Sec8"><div class="c-article-section" id="Sec8-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec8">Numeric prioritized inverse kinematics</h2><div class="c-article-section__content" id="Sec8-content"><p>The major difference with an analytic approach is the dependency on a first order approximation requiring to perform small variations to converge toward the goal positions; this is achieved usually in more than one iteration. In addition, the order of complexity of numeric PIK is both quadratic with the number of dofs and linear with the constraints dimension. A clever analysis of the computing cost, together with the exploitation of an algorithm enforcing strict priority levels among constraints, help to reduce its impact (Baerlocher and Boulic <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Baerlocher P, Boulic R (2004) An inverse kinematic architecture enforcing an arbitrary number of strict priority levels. Visual Comput 20(6):402–417" href="/article/10.1007/s10055-006-0024-8#ref-CR2" id="ref-link-section-d17e901">2004</a>). However, these factors are still determinant when designing an articulated model and its associated set of prioritized constraints for real-time use.</p><h3 class="c-article__sub-heading" id="Sec9">The simplified articulated body model</h3><p>The present study exploits an articulated body model with 15 dofs distributed as follow (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig9">9</a>):
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-9"><figure><figcaption><b id="Fig9" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 9</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/9" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig9_HTML.gif?as=webp"></source><img aria-describedby="figure-9-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig9_HTML.gif" alt="figure9" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-9-desc"><p>Simplified body model exploited by the numeric inverse kinematics. The kinematic chain involved in controlling the left wrist end-effector is highlighted in <i>black</i>. The leg and trunk joints are also used by the right wrist</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/9" data-track-dest="link:Figure9 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        
+                  <h3 class="c-article__sub-heading">Virtual foot (2 dofs)</h3>
+                  <p>roots the body to the floor with frontal and lateral axes of rotation.</p>
+                
+                  <h3 class="c-article__sub-heading">Back (2 dofs)</h3>
+                  <p>corresponds to the beginning of the spine with frontal and lateral axes of rotation.</p>
+                
+                  <h3 class="c-article__sub-heading">Thorax (3 dofs)</h3>
+                  <p>all rotation axes.</p>
+                
+                  <h3 class="c-article__sub-heading">Shoulders (2 × 3 dofs)</h3>
+                  <p>all rotation axes.</p>
+                
+                  <h3 class="c-article__sub-heading">Elbows (2 × 1 dof)</h3>
+                  <p>only the flexion-extension.</p>
+                <p>We use the initial joint positions of the shoulders, the elbows and the wrists for computing the segments’ lengths that remain constant for the rest of the session. We can derive the location of the other joints as the relative proportion of the lower body segment and the back segment are considered constant (see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig9">9</a>).</p><p>The wrists are end-effectors controlled by the PIK algorithm. Each of them exploits the mobility of the three joints modeling the leg and the trunk. Besides, joints are assigned some joint limits to prevent unnatural posture to appear; in particular the shoulder and elbow joint limits are critical to prevent self-collision or the fully flexed singular posture to occur. The key motivation for modeling the simplified leg and trunk is to associate an approximate mass distribution so that the PIK algorithm can simultaneously ensure the balance of the body by controlling the position of its center of mass (Boulic et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1996" title="Boulic R, Mas R, Thalmann D (1996) A robust approach for the center of mass position control with inverse kinetics. J Comput Graph 20(5):693–701" href="/article/10.1007/s10055-006-0024-8#ref-CR4" id="ref-link-section-d17e981">1996</a>). More precisely, only the two horizontal dimensions are constrained to keep their initial value computed at the calibration stage (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig9">9</a>). As a consequence, the center of mass is free to move up and down but only on the vertical line passing through the foot. This constraint is given a high priority, as it its enforcement is important for the plausibility of the resulting posture. Assigning the highest priority to this constraint means that it is enforced before the others within only a very small number of convergence steps. Therefore, this choice guarantees that most of the time the posture is balanced while converging to enforce the low priority constraints. For the present study, the mass is distributed as follows: 50% is attached to the virtual foot joint roughly at the height of the mid-thigh, 25% is attached to the back joint at mid-distance to the thorax joint, the final 25% is attached to the thorax joint at mid-shoulders distance.</p><h3 class="c-article__sub-heading" id="Sec10">Overview of the prioritized inverse kinematics</h3><p>The multiple priority IK (also called prioritized IK, or PIK) is exploited for reconstructing an anatomically correct posture of the user (i.e., its joint state, <i>θ</i>) from the 3D location of selected end-effectors (noted <i>x</i>) measured with the vision system and used to constrain the posture. We give here a general overview of the method while Sect. 6.4 describe the specific set of constraints and priorities exploited in this study.</p><p>Our general architecture is based on the linearization of the set of equations expressing Cartesian constraints <i>x</i> as functions of the joints’ dofs <i>θ</i>. We denote <b><i>J</i></b> the Jacobian matrix gathering the partial derivatives d<i>x</i>/d<i>θ</i>. We use its pseudo-inverse, noted <b><i>J</i></b>
+                           <sup><b><i>+</i></b></sup>, to build the projection operators on the kernel of <b><i>J</i></b>, noted <i>N</i> (<b><i>J</i></b>). Our approach relies on an efficient computation of projection operators allowing to split the constraints set into multiple constraint subsets associated with an individual strict priority level (Baerlocher and Boulic <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Baerlocher P, Boulic R (2004) An inverse kinematic architecture enforcing an arbitrary number of strict priority levels. Visual Comput 20(6):402–417" href="/article/10.1007/s10055-006-0024-8#ref-CR2" id="ref-link-section-d17e1036">2004</a>). The provided solution guarantees that a constraint associated with a high priority is achieved as much as possible while a low priority constraint is optimized only on the reduced solution space that does not disturb all higher priority constraints. For example, such architecture is particularly suited for the off-line evaluation of reachable space by a virtual worker; in such a context the balance constraint is given the highest priority while gaze and reach constraints have lower priority levels (Boulic et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Boulic R, Baerlocher P, Rodríguez I, Peinado M, Meziat D (2004) Virtual worker reachable space evaluation with prioritized inverse kinematics. In: Proceedings of the 35th international symposium on robotics, Paris, March 2004" href="/article/10.1007/s10055-006-0024-8#ref-CR5" id="ref-link-section-d17e1040">2004</a>).</p><p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig10">10</a> provides an overview of our PIK control. The outer convergence loop is necessary as the linearization is valid only within the neighborhood of the current state; such a small validity domain requires to limit the norm of any desired constraint variation <i>Δx</i> toward their respective goal to a maximum value and to iterate the computation of the prioritized solution <i>Δθ</i> until the constraints are met or until the sum of the errors reaches a constant value. The present study exploits the PIK algorithm with various maximum numbers of convergence steps per vision-based data sample. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig10">10</a> also highlights the clamping loop handling the inequality constraints associated to the mechanical joint limits. Basically, we check whether the computed prioritized solution <i>Δθ</i> leads to violate one or more joint limits. If it is the case, equality constraints are inserted to clamp the flagged joints on their limit and a new prioritized solution is searched in the reduced joint space (Baerlocher and Boulic <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Baerlocher P, Boulic R (2004) An inverse kinematic architecture enforcing an arbitrary number of strict priority levels. Visual Comput 20(6):402–417" href="/article/10.1007/s10055-006-0024-8#ref-CR2" id="ref-link-section-d17e1062">2004</a>; Boulic et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Boulic R, Peinado M, Le Callennec B (2005) Challenges in exploiting prioritized inverse kinematics for motion capture and postural control. Lecture notes in artificial intelligence, Springer, Berlin Heidelberg New York" href="/article/10.1007/s10055-006-0024-8#ref-CR6" id="ref-link-section-d17e1065">2005</a>).
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-10"><figure><figcaption><b id="Fig10" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 10</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/10" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig10_HTML.gif?as=webp"></source><img aria-describedby="figure-10-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig10_HTML.gif" alt="figure10" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-10-desc"><p>The outer loop iterates the construction of the first order solution with priorities (inner loop) and joint limit enforcement (clamping loop)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/10" data-track-dest="link:Figure10 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h3 class="c-article__sub-heading" id="Sec11">Specific issues in the vision-driven real-time context</h3><p>The classical stability-robustness tradeoff in inverse problems finds a clear illustration with our vision-driven IK case study. We have to deal with multiple sources of instability while trying to ensure that end-effectors reach their assigned goals sufficiently quickly. Let us review the key sources of potential instability or slow-down factors and how we can handle them in our PIK framework:</p>
+                  <h3 class="c-article__sub-heading">Noisy input</h3>
+                  <p>the low image resolution and the combination of various uncertainties result in jitters at the level of the 3D location of the position of the wrists’ goal. To avoid this instability to be transmitted to the articulated structure, the vision module can filter the goals’ location, or the IK module can increase the damping factor exploited to handle the singularities of the posture (Maciejewski <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1990" title="Maciejewski AA (1990) Dealing with the ill-conditioned equations of motion for articulated figures. IEEE Comput Graph Appl 10(3):63–71" href="/article/10.1007/s10055-006-0024-8#ref-CR12" id="ref-link-section-d17e1100">1990</a>). In both scenarios, there is a risk of introducing a lag when the wrists move rapidly over large distances. We have experimented successfully a combination of filtering and damping.</p>
+                
+                  <h3 class="c-article__sub-heading">Approximate skeleton</h3>
+                  <p>the skeleton is built in the initial calibration posture (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig9">9</a>) where the approximate location of the back, shoulders, elbows, and wrists are provided by manually pointing on the stereo pair images. These 3D vectors are then provided to the skeleton initialization function, which infer the location of the virtual foot joint and the thorax joint from the distance between the back and the mid-shoulder location. This phase may introduce some errors in the arm segment lengths, which prevent the exact matching of the real skeleton with the model in other postures. Special care is required in the calibration phase.</p>
+                
+                  <h3 class="c-article__sub-heading">Singular postures</h3>
+                  <p>a posture is singular for a numeric IK algorithm when no solution can be computed for the desired goals. For example, when the wrist goal is too far and unreachable. More surprisingly, a fully extended arm is singular when the wrist goal is exactly on the line linking the wrist to the shoulder (Boulic et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Boulic R, Peinado M, Le Callennec B (2005) Challenges in exploiting prioritized inverse kinematics for motion capture and postural control. Lecture notes in artificial intelligence, Springer, Berlin Heidelberg New York" href="/article/10.1007/s10055-006-0024-8#ref-CR6" id="ref-link-section-d17e1122">2005</a>; Maciejewski <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1990" title="Maciejewski AA (1990) Dealing with the ill-conditioned equations of motion for articulated figures. IEEE Comput Graph Appl 10(3):63–71" href="/article/10.1007/s10055-006-0024-8#ref-CR12" id="ref-link-section-d17e1125">1990</a>). This is due to the first order approximation of the PIK algorithm. When a posture is precisely in a singular configuration, the homogeneous solution provided by the pseudo-inverse <b><i>J</i></b>
+                              <sup><b>+</b></sup> has a null norm. A stability problem appears in the neighborhood of a singular posture, as the associated Jacobian matrix <b><i>J</i></b> becomes ill-conditioned. This induces its pseudo-inverse to provide a solution, which norm can be extremely high. It can produce strong instabilities. The solution to this problem is to adopt a damped least square inverse (Maciejewski <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1990" title="Maciejewski AA (1990) Dealing with the ill-conditioned equations of motion for articulated figures. IEEE Comput Graph Appl 10(3):63–71" href="/article/10.1007/s10055-006-0024-8#ref-CR12" id="ref-link-section-d17e1139">1990</a>; Baerlocher and Boulic <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Baerlocher P, Boulic R (2004) An inverse kinematic architecture enforcing an arbitrary number of strict priority levels. Visual Comput 20(6):402–417" href="/article/10.1007/s10055-006-0024-8#ref-CR2" id="ref-link-section-d17e1142">2004</a>) and to tune the damping factor to a value removing the instability without introducing a lag. The fully flexed arm singular posture is prevented owing to the elbow flexion joint limit.</p>
+                
+                  <h3 class="c-article__sub-heading">The fully extended arm posture</h3>
+                  <p>this posture deserves a special mention in terms of source of troubles. The previous point has described how to remove the instability due to this singularity. It works fine when the wrist goal is too far. However, it tends to prevent the arm from flexing when the goal is on the line linking the wrist to the shoulder. As a consequence, it may slow down the convergence or worse result in other joints taking on the task of moving the wrist to its goal location. It is needless to say that the resulting posture, while possible, may not be very plausible. The problem is that the fully extended arm is a very naturally adopted posture; it is even in the calibration posture. We have analyzed this problem and proposed a solution through the concept of observers (Boulic et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Boulic R, Peinado M, Le Callennec B (2005) Challenges in exploiting prioritized inverse kinematics for motion capture and postural control. Lecture notes in artificial intelligence, Springer, Berlin Heidelberg New York" href="/article/10.1007/s10055-006-0024-8#ref-CR6" id="ref-link-section-d17e1154">2005</a>). Basically, we detect the conjunction of the fully extended arm posture together with the occurrence of a wrist goal in the shoulder direction (within a tolerance). When this condition is met, we activate an elbow flexion increment within the low-level optimization task (cf. Sect. 6.4). This temporarily forces the arm to flex and speeds up the convergence.</p>
+                
+                  <h3 class="c-article__sub-heading">First order approximation and conflicting constraints</h3>
+                  <p>the PIK architecture theoretically ensures that conflicting constraints can exploit the same joints. However, this is valid only in the neighborhood of the current state, hence requesting the definition of this validity domain through thresholds enforced on the desired <i>Δx</i>. Improper threshold values is a common source of instability that requires some tuning.</p>
+                
+                  <h3 class="c-article__sub-heading">Performances</h3>
+                  <p>this work has demonstrated the feasibility of integrating a numeric PIK algorithm within a real-time motion capture loop. The present system has been implemented in Visual C++ using the OpenCV libraries (Bradski and Pisarevsky <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Bradski GR, Pisarevsky V (2000) Intel’s computer vision library. In: Proceedings of the IEEE conference on computer vision and pattern recognition, CVPR00, vol 2, pp 796–797" href="/article/10.1007/s10055-006-0024-8#ref-CR7" id="ref-link-section-d17e1176">2000</a>) and it has been tested in a real-time interaction context on an AMD Athlon 2800 +  2.083 GHz under Windows XP. The images have been captured using two DFW-500 Sony cameras with an IEEE1394 connection. The cameras provide 320 × 240 images at a capture rate of 30 frames per second (more details are given in Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-006-0024-8#Tab2">2</a>; Sect. 8).</p>
+                <h3 class="c-article__sub-heading" id="Sec12">Constraints hierarchy</h3><p>The approach presented in the present paper relies on four levels of priorities ensuring not only the user-defined goals (wrist position) but also general property of the posture space such as the balance. Due to its great importance in the overall quality of the posture, the constraint enforcing the body balance is given the highest priority. This means that all other constraints of lower priority are found in the sub-space of the balanced postures. Therefore, it ensures that the intermediate postures show at least this quality before achieving all constraints. Such a channeling of the convergence has two positive consequences: first, this removes some class of local minima that would have otherwise occurred in an approach without priorities, and second, the intermediate postures, being balanced, are better accepted by the viewer even if all constraints are not met. This is important in a real-time context, as our time budget may allow for one or a few IK convergence steps only per vision-based input data.</p><p>The second rank constraint is the one attracting the wrist end-effectors toward their vision-driven goal position. For each wrist, all the joints from the elbow to the virtual foot root contribute to the achievement of the constraint. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig11">11</a> highlights how the two constraints balance and reach lead to a natural configuration of the whole chain. The third rank constraint is the one attracting the shoulders center of rotation toward their initial location in the calibration standing posture. Finally, at the lowest priority level, we add an optimization vector expressed directly in the joint variation space [see Baerlocher and Boulic (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Baerlocher P, Boulic R (2004) An inverse kinematic architecture enforcing an arbitrary number of strict priority levels. Visual Comput 20(6):402–417" href="/article/10.1007/s10055-006-0024-8#ref-CR2" id="ref-link-section-d17e1197">2004</a>) for details]. This vector is composed of two distinct components:
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-11"><figure><figcaption><b id="Fig11" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 11</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/11" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig11_HTML.jpg?as=webp"></source><img aria-describedby="figure-11-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig11_HTML.jpg" alt="figure11" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-11-desc"><p>The constraint associated with the center of mass ensures the balance of the whole model (numeric inverse kinematics solution)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/11" data-track-dest="link:Figure11 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        
+                  <h3 class="c-article__sub-heading">Minimization of the joint amplitude</h3>
+                  <p>this corresponds to an attraction toward the initial standing posture. It resolves the ambiguity of the swivel angle by attracting the elbow along the trunk.</p>
+                
+                  <h3 class="c-article__sub-heading">“Full extension” avoidance term for the elbow</h3>
+                  <p>in case the condition described in Sect. 6.3 is met, a flexion term replaces the value proposed by the joint minimization for the elbow.</p>
+                <p>Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-006-0024-8#Tab1">1</a> summarizes the hierarchy of four priorities levels.
+</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-1"><figure><figcaption class="c-article-table__figcaption"><b id="Tab1" data-test="table-caption">Table 1 Hierarchy of prioritized constraints</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-006-0024-8/tables/1"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        </div></div></section><section aria-labelledby="Sec13"><div class="c-article-section" id="Sec13-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec13">Results</h2><div class="c-article-section__content" id="Sec13-content"><p>We have first evaluated the PIK architecture on a simple test case: first, flexing the arm to the maximum flexion and extending back to the full extension, and second, raising one arm laterally up to the horizontal level and then trying to reach the furthest possible point. Despite its simplicity, the first test case highlighted the issues linked to the correct initialization of the segments’ length and to the arm singularity described in Sect. 6.3. The observer concept proves to be well-adapted in the present real-time context as it correctly helps the arm to flex when the first order approximation is numerically “blind” to this second order solution. The second test case is illustrated more in detail in the following subsections. Performances are discussed in Sect. 8.</p><h3 class="c-article__sub-heading" id="Sec14">Far lateral reach with prioritized inverse kinematics</h3><p>This test case underlines the interest of the center of mass control to maintain the balance of the body. Indeed, when the arm moves sideward to reach a distant point in space, the lower body moves in the opposite direction so that the center of mass still projects over the virtual foot (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig11">11</a>). As indicated in Sect. 6.1 the location of the simplified body center of mass can be computed from the knowledge of its current posture and of the (constant) mass distribution. The goal of the center of mass position constraint is invariant, as it is always attracted toward the vertical line passing through its initial position (the performer is not moving the feet in the present study). For these reasons, the numeric PIK does not need the estimated center of the silhouette, hence sparing some computing time.</p><h3 class="c-article__sub-heading" id="Sec15">Importance of the trunk postural control</h3><p>This comparison highlights the interest of controlling the trunk posture even if the user is standing in front of the workbench. The left column of Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig12">12</a> displays both the numeric and the analytic IK solutions. The latter is computed without trunk control, which prevents the left wrist from reaching its goal in the bottom image (chain highlighted with the white squares and dotted lines). The numeric solution better reflects the user posture owing to the center of mass control that induces the natural counter-balanced posture. Figure 12 right column illustrates the complete analytic solution including the trunk orientation. The recovered movement is much more realistic, as the shoulder joints are now correctly located in space.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-12"><figure><figcaption><b id="Fig12" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 12</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/12" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig12_HTML.jpg?as=webp"></source><img aria-describedby="figure-12-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig12_HTML.jpg" alt="figure12" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-12-desc"><p>Analytic inverse kinematics solution (<i>chain with squares</i>). <i>Left</i>—only hand attraction. <i>Right</i>—exploiting the head and the center of mass information</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/12" data-track-dest="link:Figure12 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h3 class="c-article__sub-heading" id="Sec16">Handling an imaginary box</h3><p>In this case study, the user acts as if he is carrying an imaginary box from side to side. The movement involves a complex deformation of the trunk (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig13">13</a>). Both approaches successfully recover the shoulder locations through their respective trunk postural control. On the other hand, the elbow location, determined by the swivel angle optimization, reflects the specific and somewhat arbitrary choice made by each approach.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-13"><figure><figcaption><b id="Fig13" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 13</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/13" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig13_HTML.jpg?as=webp"></source><img aria-describedby="figure-13-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig13_HTML.jpg" alt="figure13" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-13-desc"><p>Moving an imaginary box (real-time duration, 5.5 s). <i>Squares</i>—analytic solution, <i>circles</i>—numeric solution</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/13" data-track-dest="link:Figure13 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>We measured the average and the standard deviation of the position error on both wrists for this movement (Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-006-0024-8#Tab2">2</a>). More precisely, we computed the norm of the position error between the current wrist position as determined with an IK method and the desired goal position determined by the vision system (considered as the ground truth data for the IK methods evaluation). The average error due to the analytic IK is 2.2 mm with a standard deviation of 10 mm (most of the time the error is very small except for a small number of distant goal positions). The error due to the PIK strongly depends on the number of convergence steps. For this reason, it has been run multiple times on the same vision-based input but with an increasing number of convergence steps: 1, 5, 10, 20. The average error norm is around 100 mm for a unique convergence step but decreases rapidly (5 mm for five convergence steps) until a similar minimum of about 2.5 mm for 20 steps. The best compromise still compatible with real-time interaction is to run the PIK with five convergence steps per vision-based input data (see also Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-006-0024-8#Tab3">3</a>).</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-2"><figure><figcaption class="c-article-table__figcaption"><b id="Tab2" data-test="table-caption">Table 2 Average position error and standard deviation on both wrist positions and for both inverse kinematics (IK) approaches for the movement illustrated in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig13">13</a>
+                                    </b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-006-0024-8/tables/2"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-3"><figure><figcaption class="c-article-table__figcaption"><b id="Tab3" data-test="table-caption">Table 3 Evaluation criteria for the comparison of the two inverse kinematics (IK) approaches</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-006-0024-8/tables/3"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h3 class="c-article__sub-heading" id="Sec17">Collision detection</h3><p>One key interest of identifying the user body posture is the possibility to check whether the body enters in collision with elements from the virtual environment. Many collisions cannot be inferred from the sole information of the hand position or by exploiting only the user silhouette. To demonstrate the feasibility of this class of application, we have placed a virtual cubic object at a small distance behind the user. Then we asked the user to reach a location <i>in front of</i> him/her. Despite the opposite direction of the reach movement with respect to the obstacle location, a collision does occur generally, as the user moves the lower body backward to counter-balance the forward movement of the upper body (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig14">14</a>). This collision is detected on-the-fly and reported as a highlighted graphical representation of the virtual obstacle in the field of view of the user. This information tells the user that such forward reach is not possible due to the collision.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-14"><figure><figcaption><b id="Fig14" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 14</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/14" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig14_HTML.jpg?as=webp"></source><img aria-describedby="figure-14-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig14_HTML.jpg" alt="figure14" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-14-desc"><p>Collision detection induced by the backward movement of the lower body when reaching a target in the forward direction</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/14" data-track-dest="link:Figure14 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>A second example illustrates a user performing a hand movement in the horizontal plane that induces a collision between the elbow and a virtual box located on the side of the user (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig15">15</a>). The highlighted feedback is determinant for the awareness of the collision, as other clues such as the silhouette are useless in that context (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig16">16</a>). One potential application is to explore and characterize the reachable space of the user by tagging each sampled position of the hand trajectory as either <i>reachable</i> or <i>unreachable</i> when a collision occurs. The gathered feedback can be stored in a cloud of 3D points that can be analyzed later on more in details for the evaluation of the virtual environment.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-15"><figure><figcaption><b id="Fig15" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 15</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/15" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig15_HTML.gif?as=webp"></source><img aria-describedby="figure-15-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig15_HTML.gif" alt="figure15" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-15-desc"><p>Collision detection between the elbow and an obstacle located on the side of the user</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/15" data-track-dest="link:Figure15 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-16"><figure><figcaption><b id="Fig16" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 16</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/16" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig16_HTML.jpg?as=webp"></source><img aria-describedby="figure-16-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0024-8/MediaObjects/10055_2006_24_Fig16_HTML.jpg" alt="figure16" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-16-desc"><p>Collision-free posture (<i>left</i>) and posture causing a collision between the elbow and the obstacle (<i>right</i>); the obstacle changes color to indicate the occurrence of the collision</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-006-0024-8/figures/16" data-track-dest="link:Figure16 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        </div></div></section><section aria-labelledby="Sec18"><div class="c-article-section" id="Sec18-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec18">Discussion and conclusion</h2><div class="c-article-section__content" id="Sec18-content"><p>It can be seen from the examples presented in Sect. 7 that both the analytic and the numeric IK can recover plausible postures from the partial information provided by the vision system. In addition, although we have limited the precision evaluation to the movement performed in Sect. 7.3 (Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-006-0024-8#Tab2">2</a>), the average error norm can be considered as sufficiently small to permit real-time user interaction (for the PIK, we run five convergence steps for all examples). For us, it is more important to provide a globally satisfying posture that can be easily adjusted on the fly, rather than a highly precised one at a bigger computing cost, which would result in a slower frame rate and increased user’s stress. Furthermore, the test from Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig14">14</a> demonstrates that the reconstructed posture is coherent with the natural balance enforcement mechanism where the lower body moves in the opposite direction of the upper body to ensure that the center of mass always projects over the feet supporting area. The resulting feedback is important, as it tells the user about a limitation in a given reach direction due to an obstacle in the opposite direction.</p><p>The fact that no information was available to locate the elbow forced each IK approach to make a somewhat arbitrary decision about what was the optimal swivel angle for the arm. In the present study, the analytic solution reflects an attraction toward the shoulder mid-range posture while the numeric solution retains an attraction of the upper arm along the body. This can lead to visible difference between the user and the recovered posture. This difference depends on the nature of the movement; at the time being we think there is no shoulder posture that can serve as optimal attractor for all classes of movements. It remains to be evaluated whether the user could be annoyed by this postural difference during real-time interaction. Our guess is, it will depend on the intended application; for example, if the user wishes to pilot the posture of a virtual mannequin moving in a cluttered environment, it is important to offer a finer postural control including the elbow location too. In performance animation contexts where only the hand location is important, both the analytic and the numeric IK solution successfully provide a plausible posture, even when the numeric IK is allowed only very few iterations to converge. In some other contexts where the elbow location conveys some semantic or stylistic clues (e.g., rap singer), it is necessary to integrate additional constraints to recover the user swivel angles too. One solution could be to control the hand orientation so that it matches a target orientation estimated from the vision input. Another possibility to explore would be to constrain elbow effectors to lie inside the body silhouette.</p><p>Apart from the plausibility criterion, Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-006-0024-8#Tab3">3</a> gathers the other criteria used to compare the two IK techniques. Regarding the sensitivity to the noisy vision-based input, the analytic solution is more robust for the torso control as it only exploits the orientation resulting from the center of mass and the head locations, whereas the hand instabilities transfer completely on the arm postures. Conversely, hands position variations have an impact on the whole body posture for the numeric IK approach; they are nevertheless partly smoothed out by the high priority constraint on the center of mass and by the damping factor used to handle the singularities (Maciejewski <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1990" title="Maciejewski AA (1990) Dealing with the ill-conditioned equations of motion for articulated figures. IEEE Comput Graph Appl 10(3):63–71" href="/article/10.1007/s10055-006-0024-8#ref-CR12" id="ref-link-section-d17e1927">1990</a>). The computing cost criterion shows similar performances for both approaches in the present study (on an AMD Athlon 2800 +  2.083 GHz under Windows XP). The performance of the analytic IK is 0.65 ms on average but, compared to the numeric IK, it requires the additional computation of the image center of mass which adds a supplementary cost of 7 ms. On the other hand, one single convergence iteration of the numeric IK costs 1.7 ms, for 15 dofs and 14 constrained dimensions distributed in the three top priority levels (Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-006-0024-8#Tab1">1</a>). It is important to remember that even if a small number of convergence steps is not sufficient for enforcing all constraints, by construction the PIK approach enforces first the highest priority constraints (Baerlocher and Boulic <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Baerlocher P, Boulic R (2004) An inverse kinematic architecture enforcing an arbitrary number of strict priority levels. Visual Comput 20(6):402–417" href="/article/10.1007/s10055-006-0024-8#ref-CR2" id="ref-link-section-d17e1933">2004</a>). In the present study, we have chosen to give the highest priority to the center of mass constraint hence favoring the enforcement of the static balance of reconstructed postures; this is important for ensuring the plausibility of the posture. Adding more convergence steps gradually ensures that lower priority constraints are also achieved. As a consequence, the spatial error on the wrist position rapidly decreases (Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-006-0024-8#Tab2">2</a>). Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-006-0024-8#Tab3">3</a> also reports the frame rates achieved when running one or the other IK approach. All in all, five numeric IK convergence iterations per frame cost roughly the same as one analytic solution update, leading to a refresh rate around 20 fps. This is sufficient for real-time interactions.</p><p>We foresee that the following directions have a good potential for improving this technology of full body tracking for real-time interactions:</p><ul class="u-list-style-bullet">
+                  <li>
+                    <p>First, exploit the body silhouette for inferring a constraint on the elbow location, as this body part has a direct influence on the plausibility of the resulting posture and on the quality of the wrist position tracking (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0024-8#Fig5">5</a>).</p>
+                  </li>
+                  <li>
+                    <p>Second, a better user skeleton is needed both in terms of correspondence with the real skeleton sizes and also in terms of anatomic mobility by including the clavicles, both legs and more vertebrae in the spine.</p>
+                  </li>
+                  <li>
+                    <p>Third, in a more general context where the user can move the feet, it will become critical to know which foot is in contact with the floor to adjust the constrain on the center of mass.</p>
+                  </li>
+                  <li>
+                    <p>Finally, it can also be desirable to have a parameterized mass distribution model to match a wider population of subjects.</p>
+                  </li>
+                </ul><p>In the longer term, we wish to investigate the problem of controlling the posture of a virtual human that has a different size and body proportions than oneself. This is clearly important for applications evaluating a product for a large population of potential users. Providing an answer to this question will really empower the user through ones full body motion.</p><p>To conclude, both the analytic and the numeric IK techniques have the capacity to handle the posture recovery in real-time. The analytic approach strong point is its low computing cost that will scale well for handling more complex skeleton models. The numeric approach strength is its flexibility that ensures a good plausibility of recovered postures by ranking the constraints using strict priority levels.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="abbreviations"><div class="c-article-section" id="abbreviations-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="abbreviations">Abbreviations</h2><div class="c-article-section__content" id="abbreviations-content"><dl class="c-abbreviation_list"><dt class="c-abbreviation_list__term"><dfn>IK:</dfn></dt><dd class="c-abbreviation_list__description">
+                    <p>Inverse kinematics</p>
+                  </dd><dt class="c-abbreviation_list__term"><dfn>PIK:</dfn></dt><dd class="c-abbreviation_list__description">
+                    <p>Prioritized inverse kinematics</p>
+                  </dd><dt class="c-abbreviation_list__term"><dfn>dof:</dfn></dt><dd class="c-abbreviation_list__description">
+                    <p>Degree of freedom</p>
+                  </dd></dl></div></div></section><section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Badler NI, Hollick MJ, Granieri JP (1993) Real-time control of a virtual human using minimal sensors. In: Pres" /><p class="c-article-references__text" id="ref-CR1">Badler NI, Hollick MJ, Granieri JP (1993) Real-time control of a virtual human using minimal sensors. In: Presence 2(1), MIT Press, Cambridge, pp 82–86. ISSN 1054-7460 </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="P. Baerlocher, R. Boulic, " /><meta itemprop="datePublished" content="2004" /><meta itemprop="headline" content="Baerlocher P, Boulic R (2004) An inverse kinematic architecture enforcing an arbitrary number of strict priori" /><p class="c-article-references__text" id="ref-CR2">Baerlocher P, Boulic R (2004) An inverse kinematic architecture enforcing an arbitrary number of strict priority levels. Visual Comput 20(6):402–417</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1007%2Fs00371-004-0244-4" aria-label="View reference 2">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 2 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=An%20inverse%20kinematic%20architecture%20enforcing%20an%20arbitrary%20number%20of%20strict%20priority%20levels&amp;journal=Visual%20Comput&amp;volume=20&amp;issue=6&amp;pages=402-417&amp;publication_year=2004&amp;author=Baerlocher%2CP&amp;author=Boulic%2CR">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bodenheimer R, Rose C, Rosenthal S, Pella J (1997) The process of motion capture: dealing with the data. In: P" /><p class="c-article-references__text" id="ref-CR3">Bodenheimer R, Rose C, Rosenthal S, Pella J (1997) The process of motion capture: dealing with the data. In: Proceedings of computer animation and simulation. Eurographics Association, pp 3–18</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="R. Boulic, R. Mas, D. Thalmann, " /><meta itemprop="datePublished" content="1996" /><meta itemprop="headline" content="Boulic R, Mas R, Thalmann D (1996) A robust approach for the center of mass position control with inverse kine" /><p class="c-article-references__text" id="ref-CR4">Boulic R, Mas R, Thalmann D (1996) A robust approach for the center of mass position control with inverse kinetics. J Comput Graph 20(5):693–701</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1016%2FS0097-8493%2896%2900043-X" aria-label="View reference 4">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 4 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=A%20robust%20approach%20for%20the%20center%20of%20mass%20position%20control%20with%20inverse%20kinetics&amp;journal=J%20Comput%20Graph&amp;volume=20&amp;issue=5&amp;pages=693-701&amp;publication_year=1996&amp;author=Boulic%2CR&amp;author=Mas%2CR&amp;author=Thalmann%2CD">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Boulic R, Baerlocher P, Rodríguez I, Peinado M, Meziat D (2004) Virtual worker reachable space evaluation with" /><p class="c-article-references__text" id="ref-CR5">Boulic R, Baerlocher P, Rodríguez I, Peinado M, Meziat D (2004) Virtual worker reachable space evaluation with prioritized inverse kinematics. In: Proceedings of the 35th international symposium on robotics, Paris, March 2004</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Boulic R, Peinado M, Le Callennec B (2005) Challenges in exploiting prioritized inverse kinematics for motion " /><p class="c-article-references__text" id="ref-CR6">Boulic R, Peinado M, Le Callennec B (2005) Challenges in exploiting prioritized inverse kinematics for motion capture and postural control. Lecture notes in artificial intelligence, Springer, Berlin Heidelberg New York</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bradski GR, Pisarevsky V (2000) Intel’s computer vision library. In: Proceedings of the IEEE conference on com" /><p class="c-article-references__text" id="ref-CR7">Bradski GR, Pisarevsky V (2000) Intel’s computer vision library. In: Proceedings of the IEEE conference on computer vision and pattern recognition, CVPR00, vol 2, pp 796–797</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="J. Chai, JK. Hodgins, " /><meta itemprop="datePublished" content="2005" /><meta itemprop="headline" content="Chai J, Hodgins JK (2005) Performance animation from low-dimensional control signals. ACM Trans Graph 24(3):68" /><p class="c-article-references__text" id="ref-CR8">Chai J, Hodgins JK (2005) Performance animation from low-dimensional control signals. ACM Trans Graph 24(3):686–696</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1145%2F1073204.1073248" aria-label="View reference 8">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 8 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Performance%20animation%20from%20low-dimensional%20control%20signals&amp;journal=ACM%20Trans%20Graph&amp;volume=24&amp;issue=3&amp;pages=686-696&amp;publication_year=2005&amp;author=Chai%2CJ&amp;author=Hodgins%2CJK">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="K. Grochow, SL. Martin, A. Hertzmann, Z. Popovic, " /><meta itemprop="datePublished" content="2004" /><meta itemprop="headline" content="Grochow K, Martin SL, Hertzmann A, Popovic Z (2004) Style-based inverse kinematics. ACM Trans Graph 23(3):522–" /><p class="c-article-references__text" id="ref-CR9">Grochow K, Martin SL, Hertzmann A, Popovic Z (2004) Style-based inverse kinematics. ACM Trans Graph 23(3):522–531</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1145%2F1015706.1015755" aria-label="View reference 9">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 9 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Style-based%20inverse%20kinematics&amp;journal=ACM%20Trans%20Graph&amp;volume=23&amp;issue=3&amp;pages=522-531&amp;publication_year=2004&amp;author=Grochow%2CK&amp;author=Martin%2CSL&amp;author=Hertzmann%2CA&amp;author=Popovic%2CZ">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Horain P, Bomb M (2002) 3D model based gesture acquisition using a single camera. In: Proceedings of the sixth" /><p class="c-article-references__text" id="ref-CR10">Horain P, Bomb M (2002) 3D model based gesture acquisition using a single camera. In: Proceedings of the sixth IEEE workshop on applications of computer vision, WACV02, pp 158–162</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Jojic N, Turk M, Huang TS (1999) Tracking self-occluding articulated objects in dense disparity maps. In: Proc" /><p class="c-article-references__text" id="ref-CR11">Jojic N, Turk M, Huang TS (1999) Tracking self-occluding articulated objects in dense disparity maps. In: Proceedings of the IEEE international conference on computer vision, ICCV99, vol 1, pp 123–130</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="AA. Maciejewski, " /><meta itemprop="datePublished" content="1990" /><meta itemprop="headline" content="Maciejewski AA (1990) Dealing with the ill-conditioned equations of motion for articulated figures. IEEE Compu" /><p class="c-article-references__text" id="ref-CR12">Maciejewski AA (1990) Dealing with the ill-conditioned equations of motion for articulated figures. IEEE Comput Graph Appl 10(3):63–71</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2F38.55154" aria-label="View reference 12">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 12 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Dealing%20with%20the%20ill-conditioned%20equations%20of%20motion%20for%20articulated%20figures&amp;journal=IEEE%20Comput%20Graph%20Appl&amp;volume=10&amp;issue=3&amp;pages=63-71&amp;publication_year=1990&amp;author=Maciejewski%2CAA">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="TB. Moeslund, E. Granum, " /><meta itemprop="datePublished" content="2001" /><meta itemprop="headline" content="Moeslund TB, Granum E (2001) A survey of computer vision-based human motion capture. Comput Vis Image Underst " /><p class="c-article-references__text" id="ref-CR13">Moeslund TB, Granum E (2001) A survey of computer vision-based human motion capture. Comput Vis Image Underst 81(3):231–268</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1006%2Fcviu.2000.0897" aria-label="View reference 13">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" href="http://www.emis.de/MATH-item?1011.68548" aria-label="View reference 13 on MATH">MATH</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 13 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=A%20survey%20of%20computer%20vision-based%20human%20motion%20capture&amp;journal=Comput%20Vis%20Image%20Underst&amp;volume=81&amp;issue=3&amp;pages=231-268&amp;publication_year=2001&amp;author=Moeslund%2CTB&amp;author=Granum%2CE">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="T. Molet, R. Boulic, S. Rezzonico, D. Thalmann, " /><meta itemprop="datePublished" content="1999" /><meta itemprop="headline" content="Molet T, Boulic R, Rezzonico S, Thalmann D (1999) An architecture for immersive evaluation of complex human ta" /><p class="c-article-references__text" id="ref-CR14">Molet T, Boulic R, Rezzonico S, Thalmann D (1999) An architecture for immersive evaluation of complex human tasks. IEEE Trans Rob Autom 15(3):475–485</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2F70.768180" aria-label="View reference 14">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 14 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=An%20architecture%20for%20immersive%20evaluation%20of%20complex%20human%20tasks&amp;journal=EEE%20Trans%20Rob%20Autom&amp;volume=15&amp;issue=3&amp;pages=475-485&amp;publication_year=1999&amp;author=Molet%2CT&amp;author=Boulic%2CR&amp;author=Rezzonico%2CS&amp;author=Thalmann%2CD">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="O’Brien J, BodenHeimer RE, Brostow GJ, Hodgins JK (2000) Automatic joint parameter estimation from magnetic mo" /><p class="c-article-references__text" id="ref-CR15">O’Brien J, BodenHeimer RE, Brostow GJ, Hodgins JK (2000) Automatic joint parameter estimation from magnetic motion capture data. In: Proceedings of Graphics Interface, Morgan Kaufmann Publishers, Mosby, St. Louis, pp 53–60. ISBN 0-9695338-9-6</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="D. Sturman, " /><meta itemprop="datePublished" content="1998" /><meta itemprop="headline" content="Sturman D (1998) Computer puppetry. IEEE Comput Graph Appl 18(1):38–45" /><p class="c-article-references__text" id="ref-CR16">Sturman D (1998) Computer puppetry. IEEE Comput Graph Appl 18(1):38–45</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2F38.637269" aria-label="View reference 16">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 16 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Computer%20puppetry&amp;journal=IEEE%20Comput%20Graph%20Appl&amp;volume=18&amp;issue=1&amp;pages=38-45&amp;publication_year=1998&amp;author=Sturman%2CD">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="D. Tolani, A. Goswami, NI. Badler, " /><meta itemprop="datePublished" content="2000" /><meta itemprop="headline" content="Tolani D, Goswami A, Badler NI (2000) Real-time inverse kinematics techniques for anthropomorphic limbs. Graph" /><p class="c-article-references__text" id="ref-CR17">Tolani D, Goswami A, Badler NI (2000) Real-time inverse kinematics techniques for anthropomorphic limbs. Graph Models 62(5):353–388</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1006%2Fgmod.2000.0528" aria-label="View reference 17">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=12143897" aria-label="View reference 17 on PubMed" rel="nofollow">PubMed</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" href="http://www.emis.de/MATH-item?1010.68655" aria-label="View reference 17 on MATH">MATH</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 17 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Real-time%20inverse%20kinematics%20techniques%20for%20anthropomorphic%20limbs&amp;journal=Graph%20Models&amp;volume=62&amp;issue=5&amp;pages=353-388&amp;publication_year=2000&amp;author=Tolani%2CD&amp;author=Goswami%2CA&amp;author=Badler%2CNI">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Unzueta L, Berselli G, Cazón A, Lozano A, Suescun Á (2005) Genetic algorithms application to the reconstructio" /><p class="c-article-references__text" id="ref-CR18">Unzueta L, Berselli G, Cazón A, Lozano A, Suescun Á (2005) Genetic algorithms application to the reconstruction of the human motion using a non-invasive motion capture. In: Multibody dynamics, ECCOMAS thematic conference, Madrid, Spain, 21–24 June 2005</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="J. Varona, JM. Buades, FJ. Perales, " /><meta itemprop="datePublished" content="2005" /><meta itemprop="headline" content="Varona J, Buades JM, Perales FJ (2005) Hands and face tracking for VR applications. Comput Graph 29(2):179–187" /><p class="c-article-references__text" id="ref-CR19">Varona J, Buades JM, Perales FJ (2005) Hands and face tracking for VR applications. Comput Graph 29(2):179–187</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1016%2Fj.cag.2004.12.002" aria-label="View reference 19">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 19 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Hands%20and%20face%20tracking%20for%20VR%20applications&amp;journal=Comput%20Graph&amp;volume=29&amp;issue=2&amp;pages=179-187&amp;publication_year=2005&amp;author=Varona%2CJ&amp;author=Buades%2CJM&amp;author=Perales%2CFJ">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="L. Wang, W. Hu, T. Tan, " /><meta itemprop="datePublished" content="2003" /><meta itemprop="headline" content="Wang L, Hu W, Tan T (2003) Recent developments in human motion analysis. Pattern Recognit 36(3):585–601" /><p class="c-article-references__text" id="ref-CR20">Wang L, Hu W, Tan T (2003) Recent developments in human motion analysis. Pattern Recognit 36(3):585–601</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1016%2FS0031-3203%2802%2900100-0" aria-label="View reference 20">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 20 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Recent%20developments%20in%20human%20motion%20analysis&amp;journal=Pattern%20Recognit&amp;volume=36&amp;issue=3&amp;pages=585-601&amp;publication_year=2003&amp;author=Wang%2CL&amp;author=Hu%2CW&amp;author=Tan%2CT">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Wren CR, Clarkson BP, Pentland AP (2000) Understanding purposeful human motion. In: Proceedings of the fourth " /><p class="c-article-references__text" id="ref-CR21">Wren CR, Clarkson BP, Pentland AP (2000) Understanding purposeful human motion. In: Proceedings of the fourth IEEE international conference on automatic face and gesture recognition. IEEE Computer Society, Grenoble, pp 378–383. ISBN 0-7695-0580-5</p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-006-0024-8-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Ack1">Acknowledgments</h2><div class="c-article-section__content" id="Ack1-content"><p>We thank the reviewers for their constructive feedback. This work was partly supported by the European Union through the Networks of Excellence ENACTIVE and INTUITION. The project TIN2004-07926 of Spanish Government and the European Project HUMODAN 2001-32202 from UE V Program-IST have subsidized part of this work. J. Varona acknowledges the support of a Ramon y Cajal fellowship from the Spanish MEC.</p></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">Virtual Reality Laboratory, Ecole Polytechnique Fédérale de Lausanne, Station 14, 1015, Lausanne, Switzerland</p><p class="c-article-author-affiliation__authors-list">Ronan Boulic</p></li><li id="Aff2"><p class="c-article-author-affiliation__address">Dept Mat. i Informatica, Universitat de les Illes Balears (UIB), Balears, Spain</p><p class="c-article-author-affiliation__authors-list">Javier Varona &amp; Francisco Perales</p></li><li id="Aff3"><p class="c-article-author-affiliation__address">CEIT and Tecnun (University of Navarra), San Sebastian, Spain</p><p class="c-article-author-affiliation__authors-list">Luis Unzueta &amp; Angel Suescun</p></li><li id="Aff4"><p class="c-article-author-affiliation__address">Escuela Politécnica University of Alcalá, Alcalá, Spain</p><p class="c-article-author-affiliation__authors-list">Manuel Peinado</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Ronan-Boulic"><span class="c-article-authors-search__title u-h3 js-search-name">Ronan Boulic</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Ronan+Boulic&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Ronan+Boulic" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Ronan+Boulic%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Javier-Varona"><span class="c-article-authors-search__title u-h3 js-search-name">Javier Varona</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Javier+Varona&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Javier+Varona" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Javier+Varona%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Luis-Unzueta"><span class="c-article-authors-search__title u-h3 js-search-name">Luis Unzueta</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Luis+Unzueta&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Luis+Unzueta" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Luis+Unzueta%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Manuel-Peinado"><span class="c-article-authors-search__title u-h3 js-search-name">Manuel Peinado</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Manuel+Peinado&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Manuel+Peinado" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Manuel+Peinado%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Angel-Suescun"><span class="c-article-authors-search__title u-h3 js-search-name">Angel Suescun</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Angel+Suescun&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Angel+Suescun" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Angel+Suescun%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Francisco-Perales"><span class="c-article-authors-search__title u-h3 js-search-name">Francisco Perales</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Francisco+Perales&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Francisco+Perales" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Francisco+Perales%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-006-0024-8/email/correspondent/c1/new">Ronan Boulic</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=Evaluation%20of%20on-line%20analytic%20and%20numeric%20inverse%20kinematics%20approaches%20driven%20by%20partial%20vision%20input&amp;author=Ronan%20Boulic%20et%20al&amp;contentID=10.1007%2Fs10055-006-0024-8&amp;publication=1359-4338&amp;publicationDate=2006-04-21&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Boulic, R., Varona, J., Unzueta, L. <i>et al.</i> Evaluation of on-line analytic and numeric inverse kinematics approaches driven by partial vision input.
+                    <i>Virtual Reality</i> <b>10, </b>48–61 (2006). https://doi.org/10.1007/s10055-006-0024-8</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-006-0024-8.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2005-12-20">20 December 2005</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2006-03-31">31 March 2006</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2006-04-21">21 April 2006</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2006-05">May 2006</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-006-0024-8" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-006-0024-8</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Inverse kinematics</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Motion capture</span></li><li class="c-article-subject-list__subject"><span itemprop="about">On-line image analysis</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-006-0024-8.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=24;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

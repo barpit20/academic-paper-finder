@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="Evaluating design guidelines for reducing user disorientation in a des"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="Navigation in virtual environments can be difficult. One contributing factor is user disorientation. Two major causes of this are the lack of navigation cues in the environment and problems with..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/8/1.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="Evaluating design guidelines for reducing user disorientation in a desktop virtual environment"/>
+
+    <meta name="dc.source" content="Virtual Reality 2004 8:1"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2004-07-08"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2004 Springer-Verlag London Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="Navigation in virtual environments can be difficult. One contributing factor is user disorientation. Two major causes of this are the lack of navigation cues in the environment and problems with navigating too close to or through virtual world objects. Previous work has developed guidelines, informed by cinematography conventions, for the construction of virtual environments to aid user comprehension of virtual space to reduce user disorientation. To validate these guidelines, two user studies have been performed where users of a desktop virtual environment are to complete a navigation task in a virtual maze. In an initial study [12], collision detection with the maze walls was not enabled and the results indicated that the guidelines were effective for reducing disorientation but not for developing the user&#8217;s awareness of the environment space. A second study has been performed where collision detection was enabled. Results suggest that the use of the guidelines can help reduce the incidences of user disorientation and aid navigation tasks. However, the guidelines have little impact on users&#8217; ability to construct cognitive maps of the desktop virtual environment."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2004-07-08"/>
+
+    <meta name="prism.volume" content="8"/>
+
+    <meta name="prism.number" content="1"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="55"/>
+
+    <meta name="prism.endingPage" content="62"/>
+
+    <meta name="prism.copyright" content="2004 Springer-Verlag London Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-004-0137-x"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-004-0137-x"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-004-0137-x.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-004-0137-x"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="Evaluating design guidelines for reducing user disorientation in a desktop virtual environment"/>
+
+    <meta name="citation_volume" content="8"/>
+
+    <meta name="citation_issue" content="1"/>
+
+    <meta name="citation_publication_date" content="2004/03"/>
+
+    <meta name="citation_online_date" content="2004/07/08"/>
+
+    <meta name="citation_firstpage" content="55"/>
+
+    <meta name="citation_lastpage" content="62"/>
+
+    <meta name="citation_article_type" content="Original Article"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-004-0137-x"/>
+
+    <meta name="DOI" content="10.1007/s10055-004-0137-x"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-004-0137-x"/>
+
+    <meta name="description" content="Navigation in virtual environments can be difficult. One contributing factor is user disorientation. Two major causes of this are the lack of navigation cu"/>
+
+    <meta name="dc.creator" content="Shamus P. Smith"/>
+
+    <meta name="dc.creator" content="Tim Marsh"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="Baudisch P, Rosenholtz R (2003) Halo: A technique for visualizing off-screen locations. In: Proceedings of CHI 2003. ACM Press, New York, pp 481&#8211;488"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Presence; citation_author=null Bowman; citation_volume=8; citation_publication_date=1999; citation_pages=618; citation_doi=10.1162/105474699566521; citation_id=CR2"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Presence; citation_author=null Bowman; citation_volume=8; citation_publication_date=1999; citation_pages=317; citation_doi=10.1162/105474699566251; citation_id=CR3"/>
+
+    <meta name="citation_reference" content="Bowman DA, Koller D, Hodges LF (1997) Travel in immersive virtual environments: an evaluation of viewpoint motion control techniques. In: Proceedings of the virtual reality annual international symposium (VRAIS&#8217;97). IEEE Press, New York, pp 45&#8211;52"/>
+
+    <meta name="citation_reference" content="Darken RP, Sibert JL (1996) Wayfinding strategies and behaviours in large virtual worlds. In: Proceedings of CHI 96: human factors in computing systems. ACM Press, New York, pp 142&#8211;149"/>
+
+    <meta name="citation_reference" content="Kaur Deol K, Sutcliffe AG, Maiden NAM (1999) Towards a better understanding of usability problems with virtual environments. In: Sasse MA, Johnson C (eds) Proceedings of human-computer interaction (INTERACT&#8217;99). IFIP/IOS Press, Amsterdam, pp 527&#8211;535"/>
+
+    <meta name="citation_reference" content="DIRC&#8212;Interdisciplinary Research Collaboration on Dependability of Computer-Based Systems (2001)
+                    http://www.dirc.org.uk
+                    
+                  . Cited on 6 May 2004"/>
+
+    <meta name="citation_reference" content="INQUISITIVE Project (1998)
+                    http://www.cs.york.ac.uk/hci/inquisitive/
+                    
+                  . Cited on 6 May 2004"/>
+
+    <meta name="citation_reference" content="Kaur K (1997) Designing virtual environments for usability. In: Howard S, Hammond J, Lindgaard G (eds) Proceedings of human-computer interaction (INTERACT&#8217;97). Chapman &amp; Hall, London, pp 636&#8211;639"/>
+
+    <meta name="citation_reference" content="Kaur K, Sutcliffe A, Maiden N (1998) Improving interaction with virtual environments. In: Leevers DFA, Benest ID (eds) Proceedings of the 3D interface for the information worker. IEE Press, London, pp 4/1&#8211;4/4"/>
+
+    <meta name="citation_reference" content="Marsh T (2003) Staying there: an activity-based approach to narrative design and evaluation as an antidote to virtual corpsing. In: Riva G, Davide F, Ijsselsteijn WA (eds) Being there: concepts, effects and measurement of user presence in synthetic environments. IOS Press, Amsterdam, pp 85&#8211;96"/>
+
+    <meta name="citation_reference" content="Marsh T, Smith SP (2001) Guiding user navigation in virtual environments using awareness of virtual off-screen space. In: Paelke V, Volbracht S (eds) Proceedings of the workshop on guiding users through interactive experiences&#8212;usability centred design and evaluation of virtual 3D environments: User guidance in virtual environments. Shaker, Aachen, pp 149&#8211;154"/>
+
+    <meta name="citation_reference" content="Marsh T, Wright P (1999) Co-operative evaluation of a desktop virtual reality system. In: Harrison M, Smith S (eds) Proceedings of the workshop on user centered design and implementation of virtual environments. University of York, UK, pp 99&#8211;108"/>
+
+    <meta name="citation_reference" content="Marsh T, Wright P (2000) Using cinematography conventions to inform guidelines for the design and evaluation of virtual off-screen space. In: Butz A, Kr&#252;ger A, Olivier P (eds) Proceedings of the AAAI 2000 spring symposium series &#8220;Smart Graphics&#8221;. AAAI Press, Menlo Park, CA, pp 123&#8211;127"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Cyberpsychol Behav; citation_author=null Marsh; citation_volume=4; citation_publication_date=2001; citation_pages=225; citation_doi=10.1089/109493101300117910; citation_id=CR15"/>
+
+    <meta name="citation_reference" content="GNU MAVERIK&#8212;Manchester Virtual Environment Interface Kernel (1999) AIG Group, University of Manchester, UK.
+                    http://aig.cs.man.ac.uk/maverik/
+                    
+                  . Cited on 6 May 2004"/>
+
+    <meta name="citation_reference" content="Neale DC (1997) Factors influencing spatial awareness and orientation in desktop virtual environments. In: Proceedings of the Human Factors and Ergonomics Society 41st annual meeting. Human Factors and Ergonomic Society, Albuquerque, NM, pp 1278&#8211;1282"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Int J Hum Comput Stud; citation_author=null Nichols; citation_volume=52; citation_publication_date=2000; citation_pages=471; citation_doi=10.1006/ijhc.1999.0343; citation_id=CR18"/>
+
+    <meta name="citation_reference" content="Persson P (1998) A comparative study of digital and cinematic space with special focus on navigation. In: Hollnagel E (ed) Proceedings of the 9th European conference on cognitive ergonomics EACE&#8212;ECCE98. University of Limerick, Limerick, UK, pp 67&#8211;72"/>
+
+    <meta name="citation_reference" content="Roberson G, Czerwinski M, van Dantzich M (1997) Immersion in desktop virtual reality. In: Proceedings of the 10th annual ACM symposium on user interface software and technology (UIST&#8217;97). ACM Press, New York, pp 11&#8211;19"/>
+
+    <meta name="citation_reference" content="Smith S, Duke D, Wright P (1999) Using the resources model in virtual environment design. In: Harrison M, Smith S (eds) Proceedings of the workshop on user centered design and implementation of virtual environments. University of York, UK, pp 57&#8211;72"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Int J Hum Comput Stud; citation_author=null Spence; citation_volume=51; citation_publication_date=1999; citation_pages=919; citation_doi=10.1006/ijhc.1999.0265; citation_id=CR22"/>
+
+    <meta name="citation_reference" content="Volbracht S, Domik G (2000) Developing effective navigation techniques in virtual 3D environments. In: Mulder JD, van Liere R (eds) Virtual Environments 2000. Springer, Berlin Heidelberg New York, pp 55&#8211;64"/>
+
+    <meta name="citation_reference" content="Wickens CD, Baker P (1995) Cognitive issues in virtual reality. In: Barfield W, Furness TA III (eds) Virtual environments and advanced interface design. Oxford University Press, Oxford, UK, pp 514&#8211;541"/>
+
+    <meta name="citation_reference" content="Xiao D, Hubbold R (1998) Navigation guided by artificial force fields. In: Karat C-M, Lundi A, Coutaz J, Karat J (eds) Proceedings of CHI&#8217;98: human factors in computing systems. ACM Press, New York, pp 179&#8211;186"/>
+
+    <meta name="citation_author" content="Shamus P. Smith"/>
+
+    <meta name="citation_author_email" content="shamus.smith@durham.ac.uk"/>
+
+    <meta name="citation_author_institution" content="Department of Computer Science, University of York, York YO10 5DD, UK"/>
+
+    <meta name="citation_author_institution" content="Department of Computer Science, University of Durham, Durham DH1 3LE, UK"/>
+
+    <meta name="citation_author" content="Tim Marsh"/>
+
+    <meta name="citation_author_email" content="marsh@imsc.usc.edu"/>
+
+    <meta name="citation_author_institution" content="Department of Industrial Design, Eindhoven University of Technology, Eindhoven, The Netherlands"/>
+
+    <meta name="citation_author_institution" content="Integrated Media Systems Center, University of Southern California, Los Angeles, USA"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-004-0137-x&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2004/03/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-004-0137-x"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="Evaluating design guidelines for reducing user disorientation in a desktop virtual environment"/>
+        <meta property="og:description" content="Navigation in virtual environments can be difficult. One contributing factor is user disorientation. Two major causes of this are the lack of navigation cues in the environment and problems with navigating too close to or through virtual world objects. Previous work has developed guidelines, informed by cinematography conventions, for the construction of virtual environments to aid user comprehension of virtual space to reduce user disorientation. To validate these guidelines, two user studies have been performed where users of a desktop virtual environment are to complete a navigation task in a virtual maze. In an initial study [12], collision detection with the maze walls was not enabled and the results indicated that the guidelines were effective for reducing disorientation but not for developing the user’s awareness of the environment space. A second study has been performed where collision detection was enabled. Results suggest that the use of the guidelines can help reduce the incidences of user disorientation and aid navigation tasks. However, the guidelines have little impact on users’ ability to construct cognitive maps of the desktop virtual environment."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>Evaluating design guidelines for reducing user disorientation in a desktop virtual environment | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-004-0137-x","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Navigation, Virtual environment, User disorientation, Design guidelines, Evaluation study","kwrd":["Navigation","Virtual_environment","User_disorientation","Design_guidelines","Evaluation_study"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-004-0137-x","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-004-0137-x","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=137;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-004-0137-x">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            Evaluating design guidelines for reducing user disorientation in a desktop virtual environment
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-004-0137-x.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-004-0137-x.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">Original Article</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2004-07-08" itemprop="datePublished">08 July 2004</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">Evaluating design guidelines for reducing user disorientation in a desktop virtual environment</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Shamus_P_-Smith" data-author-popup="auth-Shamus_P_-Smith" data-corresp-id="c1">Shamus P. Smith<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of York" /><meta itemprop="address" content="grid.5685.e, 0000000419369668, Department of Computer Science, University of York, York YO10 5DD, UK" /></span><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden" data-present-affiliation="true"><meta itemprop="name" content="University of Durham" /><meta itemprop="address" content="grid.8250.f, 0000000087000572, Department of Computer Science, University of Durham, Durham DH1 3LE, UK" /></span></sup><sup class="u-js-hide"> <a href="#nAff3">nAff3</a></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Tim-Marsh" data-author-popup="auth-Tim-Marsh">Tim Marsh</a></span><sup class="u-js-hide"><a href="#Aff2">2</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Eindhoven University of Technology" /><meta itemprop="address" content="grid.6852.9, 0000000403988763, Department of Industrial Design, Eindhoven University of Technology, 5600 MB, Eindhoven, The Netherlands" /></span><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden" data-present-affiliation="true"><meta itemprop="name" content="University of Southern California" /><meta itemprop="address" content="grid.42505.36, 0000000121566853, Integrated Media Systems Center, University of Southern California, Los Angeles, CA 90089, USA" /></span></sup><sup class="u-js-hide"> <a href="#nAff4">nAff4</a></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 8</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">55</span>–<span itemprop="pageEnd">62</span>(<span data-test="article-publication-year">2004</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">218 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">8 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-004-0137-x/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>Navigation in virtual environments can be difficult. One contributing factor is user disorientation. Two major causes of this are the lack of navigation cues in the environment and problems with navigating too close to or through virtual world objects. Previous work has developed guidelines, informed by cinematography conventions, for the construction of virtual environments to aid user comprehension of virtual space to reduce user disorientation. To validate these guidelines, two user studies have been performed where users of a desktop virtual environment are to complete a navigation task in a virtual maze. In an initial study [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 12" title="Marsh T, Smith SP (2001) Guiding user navigation in virtual environments using awareness of virtual off-screen space. In: Paelke V, Volbracht S (eds) Proceedings of the workshop on guiding users through interactive experiences—usability centred design and evaluation of virtual 3D environments: User guidance in virtual environments. Shaker, Aachen, pp 149–154" href="/article/10.1007/s10055-004-0137-x#ref-CR12" id="ref-link-section-d15691e326">12</a>], collision detection with the maze walls was not enabled and the results indicated that the guidelines were effective for reducing disorientation but not for developing the user’s awareness of the environment space. A second study has been performed where collision detection was enabled. Results suggest that the use of the guidelines can help reduce the incidences of user disorientation and aid navigation tasks. However, the guidelines have little impact on users’ ability to construct cognitive maps of the desktop virtual environment.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">Introduction</h2><div class="c-article-section__content" id="Sec2-content"><p>Usability problems associated with navigation and exploration of virtual environments are attributable to many causes. These include: the lack of navigation or wayfinding cues to guide users around the environment [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 5" title="Darken RP, Sibert JL (1996) Wayfinding strategies and behaviours in large virtual worlds. In: Proceedings of CHI 96: human factors in computing systems. ACM Press, New York, pp 142–149" href="/article/10.1007/s10055-004-0137-x#ref-CR5" id="ref-link-section-d15691e356">5</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 23" title="Volbracht S, Domik G (2000) Developing effective navigation techniques in virtual 3D environments. In: Mulder JD, van Liere R (eds) Virtual Environments 2000. Springer, Berlin Heidelberg New York, pp 55–64" href="/article/10.1007/s10055-004-0137-x#ref-CR23" id="ref-link-section-d15691e359">23</a>], problems when the whole display screen is reduced to one colour or texture whilst navigating too close to or through virtual objects [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 10" title="Kaur K, Sutcliffe A, Maiden N (1998) Improving interaction with virtual environments. In: Leevers DFA, Benest ID (eds) Proceedings of the 3D interface for the information worker. IEE Press, London, pp 4/1–4/4" href="/article/10.1007/s10055-004-0137-x#ref-CR10" id="ref-link-section-d15691e362">10</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 13" title="Marsh T, Wright P (1999) Co-operative evaluation of a desktop virtual reality system. In: Harrison M, Smith S (eds) Proceedings of the workshop on user centered design and implementation of virtual environments. University of York, UK, pp 99–108" href="/article/10.1007/s10055-004-0137-x#ref-CR13" id="ref-link-section-d15691e365">13</a>], the cognitive load that is placed on the user [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 21" title="Smith S, Duke D, Wright P (1999) Using the resources model in virtual environment design. In: Harrison M, Smith S (eds) Proceedings of the workshop on user centered design and implementation of virtual environments. University of York, UK, pp 57–72" href="/article/10.1007/s10055-004-0137-x#ref-CR21" id="ref-link-section-d15691e368">21</a>], the choice of motion control technique [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 4" title="Bowman DA, Koller D, Hodges LF (1997) Travel in immersive virtual environments: an evaluation of viewpoint motion control techniques. In: Proceedings of the virtual reality annual international symposium (VRAIS’97). IEEE Press, New York, pp 45–52" href="/article/10.1007/s10055-004-0137-x#ref-CR4" id="ref-link-section-d15691e372">4</a>] and the restricted field of view seen through the display screen [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 17" title="Neale DC (1997) Factors influencing spatial awareness and orientation in desktop virtual environments. In: Proceedings of the Human Factors and Ergonomics Society 41st annual meeting. Human Factors and Ergonomic Society, Albuquerque, NM, pp 1278–1282" href="/article/10.1007/s10055-004-0137-x#ref-CR17" id="ref-link-section-d15691e375">17</a>]. Any one or a combination of these may result in user disorientation. This is problematic as navigation is a basic requirement in navigable virtual environments [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 6" title="Kaur Deol K, Sutcliffe AG, Maiden NAM (1999) Towards a better understanding of usability problems with virtual environments. In: Sasse MA, Johnson C (eds) Proceedings of human-computer interaction (INTERACT’99). IFIP/IOS Press, Amsterdam, pp 527–535" href="/article/10.1007/s10055-004-0137-x#ref-CR6" id="ref-link-section-d15691e378">6</a>] and a fundamental cornerstone in a growing number of human-computer interfaces [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 19" title="Persson P (1998) A comparative study of digital and cinematic space with special focus on navigation. In: Hollnagel E (ed) Proceedings of the 9th European conference on cognitive ergonomics EACE—ECCE98. University of Limerick, Limerick, UK, pp 67–72" href="/article/10.1007/s10055-004-0137-x#ref-CR19" id="ref-link-section-d15691e381">19</a>].</p><p>As a usability problem, user disorientation can be present in both immersive and desktop virtual environments. For immersive systems it is typical to find reports of disorientation due to motion sickness [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 18" title="Nichols S, Haldane C, Wilson JR (2000) Measurement of presence and its consequences in virtual environments. Int J Hum Comput Stud 52(3):471–491" href="/article/10.1007/s10055-004-0137-x#ref-CR18" id="ref-link-section-d15691e387">18</a>] and the encapsulation of the visual, and audio, senses within the virtual environment. In contrast, a common criticism of desktop systems is the lack of peripheral vision afforded by the desktop display, reducing users’ awareness of their surroundings or of their location in the virtual space [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 20" title="Roberson G, Czerwinski M, van Dantzich M (1997) Immersion in desktop virtual reality. In: Proceedings of the 10th annual ACM symposium on user interface software and technology (UIST’97). ACM Press, New York, pp 11–19" href="/article/10.1007/s10055-004-0137-x#ref-CR20" id="ref-link-section-d15691e390">20</a>]. Awareness of a user’s surroundings and the implications for successful navigation in a virtual environment are central to the work described here.</p><p>This paper presents an exploratory study to evaluate design guidelines to aid user navigation. The focus of the design guidelines [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 14" title="Marsh T, Wright P (2000) Using cinematography conventions to inform guidelines for the design and evaluation of virtual off-screen space. In: Butz A, Krüger A, Olivier P (eds) Proceedings of the AAAI 2000 spring symposium series “Smart Graphics”. AAAI Press, Menlo Park, CA, pp 123–127" href="/article/10.1007/s10055-004-0137-x#ref-CR14" id="ref-link-section-d15691e396">14</a>] is to promote user-centred navigation. This work was carried out as part of the INQUISITIVE project [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 8" title="INQUISITIVE Project (1998)&#xA;                    http://www.cs.york.ac.uk/hci/inquisitive/&#xA;                    &#xA;                  . Cited on 6 May 2004" href="/article/10.1007/s10055-004-0137-x#ref-CR8" id="ref-link-section-d15691e399">8</a>], a 3-year research project funded by the UK EPSRC between groups at the University of York and the CLRC Rutherford Appleton Laboratory (RAL). The aim of the project was to develop methods and principles that could be used to improve the design of interfaces for virtual environments. The work described in this paper focuses on one common usability problem in the navigation and exploration of virtual environments—user disorientation.</p><p>The remainder of this paper is organised as follows. In Sect. 2 background material on the design guidelines that are to be evaluated in the study are described. Next, Sect. 3 presents an overview of the study itself, followed in Sect. 4 by a brief review of the subjects and the method used. In Sect. 5 the raw results are presented. Finally, Sects. 6 and 7 present the discussion and a summary of conclusions.</p></div></div></section><section aria-labelledby="Sec3"><div class="c-article-section" id="Sec3-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec3">Background</h2><div class="c-article-section__content" id="Sec3-content"><p>Navigation in virtual environments can be difficult. One contributing factor is disorientation associated with the restricted field of view that users are provided with via display technologies, e.g. head-mounted displays (HMDs) and desktop monitors. Such displays only provide a viewport into the 3D space that makes up a virtual environment. Virtual environments do not in general provide the same rich set of cues for distance, motion and direction found in physical environments [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2" title="Bowman DA, Davies ET, Hodges LF, Badre AN (1999) Maintaining spatial orientation during travel in an immersive virtual environment. Presence 8(6):618–631" href="/article/10.1007/s10055-004-0137-x#ref-CR2" id="ref-link-section-d15691e412">2</a>]. However, it is possible to increase the user’s awareness about the surrounding space that is outside the current viewport. This space is called<i> virtual off-screen space</i>. Visualising off-screen locations and the associated space is a problem for interfaces that provide a limited view of the entire environment [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1" title="Baudisch P, Rosenholtz R (2003) Halo: A technique for visualizing off-screen locations. In: Proceedings of CHI 2003. ACM Press, New York, pp 481–488" href="/article/10.1007/s10055-004-0137-x#ref-CR1" id="ref-link-section-d15691e418">1</a>].</p><p>Marsh and Wright [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 14" title="Marsh T, Wright P (2000) Using cinematography conventions to inform guidelines for the design and evaluation of virtual off-screen space. In: Butz A, Krüger A, Olivier P (eds) Proceedings of the AAAI 2000 spring symposium series “Smart Graphics”. AAAI Press, Menlo Park, CA, pp 123–127" href="/article/10.1007/s10055-004-0137-x#ref-CR14" id="ref-link-section-d15691e424">14</a>] propose the use of design guidelines, informed by cinematography conventions, for the construction of virtual environments. A user’s comprehension of virtual off-screen space can be increased in order to reduce user disorientation. It is anticipated that the application of the design guidelines will provide users with visual cues to unconsciously predict the contents and/or shape of the immediate surrounding space in addition to that seen within the display screen’s restricted field of view. That is, the space that is seen on-screen, within the display screen, implies additional space that is not seen through the current viewport and is in off-screen space. Hence, users are provided with a greater knowledge of their immediately surrounding virtual space, and it is proposed that this will aid the navigation of virtual environments.</p><p>Two guidelines defined by Marsh and Wright [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 14" title="Marsh T, Wright P (2000) Using cinematography conventions to inform guidelines for the design and evaluation of virtual off-screen space. In: Butz A, Krüger A, Olivier P (eds) Proceedings of the AAAI 2000 spring symposium series “Smart Graphics”. AAAI Press, Menlo Park, CA, pp 123–127" href="/article/10.1007/s10055-004-0137-x#ref-CR14" id="ref-link-section-d15691e430">14</a>] involve the cinematography conventions for<i> exit and entry points</i> and<i> partially out of the frame</i>. In the context of virtual environments, Marsh and Wright identify<i> exit and entry points</i> as doors, paths, roads etc. that lead out of the screen and<i> partially out of the frame</i> as familiar objects shown partly in the current view frame. The proposed guidelines for these two conventions are:</p><ul class="u-list-style-dash">
+                  <li>
+                    <p><i>exit and entry points</i>: wherever possible, it must be clear to the user that there exists the option to exit the area contained within the confines of the display screen;</p>
+                  </li>
+                  <li>
+                    <p><i>partially out of the frame</i>: the placement of objects in the virtual environment should be such that there is always more than one object partially in the user’s field of view. The partially displayed objects will provide cues to the user that there exists, currently hidden, space outside the field of view.</p>
+                  </li>
+                </ul><p>An exploratory study to investigate these design guidelines was performed [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 12" title="Marsh T, Smith SP (2001) Guiding user navigation in virtual environments using awareness of virtual off-screen space. In: Paelke V, Volbracht S (eds) Proceedings of the workshop on guiding users through interactive experiences—usability centred design and evaluation of virtual 3D environments: User guidance in virtual environments. Shaker, Aachen, pp 149–154" href="/article/10.1007/s10055-004-0137-x#ref-CR12" id="ref-link-section-d15691e467">12</a>]. The study focused on the<i> partially out of the frame</i> guideline and, to a lesser extent, the<i> exit and entry points</i> guideline. That is, the guideline<i> partially out of the frame</i> was manipulated. It was anticipated that the guidelines would appear natural and transparent and support user navigation by reducing the number of disorientation-based usability problems (e.g. walking through virtual objects and object collisions [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 24" title="Wickens CD, Baker P (1995) Cognitive issues in virtual reality. In: Barfield W, Furness TA III (eds) Virtual environments and advanced interface design. Oxford University Press, Oxford, UK, pp 514–541" href="/article/10.1007/s10055-004-0137-x#ref-CR24" id="ref-link-section-d15691e479">24</a>]).</p><p>As the focus of the study was to investigate user disorientation it was important to provide a test environment where an extreme form of user disorientation was possible, for example allowing the user to move through walls, a commonly documented navigation problem for virtual environments without collision detection. Thus users are able to move through walls and even stop the viewpoint within wall structures.</p><p>However, it is possible that the absence of collision detection would have a biasing effect on the way users navigated the environment, independent of the implemented representations of the design guidelines. Bowman et al. [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 3" title="Bowman DA, Hodges LF, Allison D, Wineman J (1999) The educational value of an information-rich virtual environment. Presence 8(3):317–331" href="/article/10.1007/s10055-004-0137-x#ref-CR3" id="ref-link-section-d15691e488">3</a>] observe that keeping a user within an environment with simple collision detection can prevent some disorientation. Therefore a follow-on study (the focus of this paper) was conducted within the same test environment but with collision detection enabled.</p></div></div></section><section aria-labelledby="Sec4"><div class="c-article-section" id="Sec4-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec4">Study outline</h2><div class="c-article-section__content" id="Sec4-content"><p>Both studies were developed to test the effectiveness of Marsh and Wright’s design guidelines [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 14" title="Marsh T, Wright P (2000) Using cinematography conventions to inform guidelines for the design and evaluation of virtual off-screen space. In: Butz A, Krüger A, Olivier P (eds) Proceedings of the AAAI 2000 spring symposium series “Smart Graphics”. AAAI Press, Menlo Park, CA, pp 123–127" href="/article/10.1007/s10055-004-0137-x#ref-CR14" id="ref-link-section-d15691e499">14</a>] to reduce usability problems associated with navigation and exploration within virtual environments, and in particular to reduce user disorientation. Each study consisted of two subject groups. Both subject groups were required to carry out a navigation task in a desktop virtual environment; one with the design guidelines implemented and the other in the same virtual environment without the design guidelines implemented. The test desktop-based virtual environment used was a “virtual corridor” or maze implemented in the Windows version of GNU MAVERIK<sup><a href="#Fn1"><span class="u-visually-hidden">Footnote </span>1</a></sup> [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 16" title="GNU MAVERIK—Manchester Virtual Environment Interface Kernel (1999) AIG Group, University of Manchester, UK.&#xA;                    http://aig.cs.man.ac.uk/maverik/&#xA;                    &#xA;                  . Cited on 6 May 2004" href="/article/10.1007/s10055-004-0137-x#ref-CR16" id="ref-link-section-d15691e515">16</a>]. The walls of the maze were coloured with random alternating colours so that the maze without implemented guidelines<sup><a href="#Fn2"><span class="u-visually-hidden">Footnote </span>2</a></sup> would provide necessary perspective cues for subjects. In a pre-study evaluation, a single-colour maze, without implemented guidelines, was noted to be extremely difficult to navigate as corners at a distance blended into the background walls.</p><p>In both studies the implemented guidelines were represented by pictures<sup><a href="#Fn3"><span class="u-visually-hidden">Footnote </span>3</a></sup>, picture frames, wall panels and dado rails, mounted along the walls of the virtual corridors. Their placement was in accordance with the design guideline for<i> partially out of the frame</i>. The maze had neither windows nor doors and had one entrance, one exit and a corridor or pathway connecting them; these are the<i> exit and entry points</i> according to the design guidelines. As the<i> exit and entry points</i> were the same for each maze, any future reference to the design guidelines will therefore apply to those<i> partially out of the frame</i>. An example of a typical point of view with and without the implemented guidelines is shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-004-0137-x#Fig1">1</a>.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-004-0137-x/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0137-x/MediaObjects/s10055-004-0137-xfhb1.jpg?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0137-x/MediaObjects/s10055-004-0137-xfhb1.jpg" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p> A portion of the virtual corridor/maze with and without the implemented guidelines</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-004-0137-x/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div><p>The studies attempted to answer the following questions—do the implemented guidelines:</p><ul class="u-list-style-dash">
+                  <li>
+                    <p>appear natural and transparent, that is, are not identified as a product of the design guidelines?</p>
+                  </li>
+                  <li>
+                    <p>provide visual cues to help guide participants through virtual space?</p>
+                  </li>
+                  <li>
+                    <p>imply to users the existence of space other than that which is seen within the confines of the restricted field of view, that is, imply virtual off-screen space?</p>
+                  </li>
+                </ul><p>The focus of both studies was to investigate user disorientation and whether the implemented guidelines had an effect on reducing this disorientation. However, measuring user disorientation is a non-trivial matter as it is a subjective cognitive condition closely associated with virtual environment issues of immersion, presence and the sense of “being in” the illusion created by 3D virtual space [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 15" title="Marsh T, Wright P, Smith S (2001) Evaluation for the design of experience in virtual environments: modelling breakdown in interaction and illusion. Cyberpsychol Behav 4(2):225–238" href="/article/10.1007/s10055-004-0137-x#ref-CR15" id="ref-link-section-d15691e597">15</a>]. Two methods were used to gauge user disorientation through the studies. Firstly, an explicit question about whether the user felt disoriented during the session was in a post-study questionnaire (see Appendix A). The responses to this question were also augmented with audio/video footage captured during the session. Secondly, possible disorientating situations were isolated from recorded session logs tracking user movement in the virtual environment. In the first study, with no collision detection, the number of times that the user moved/walked through a maze wall was measured. However, it is not assumed that every time a user walks through a wall they<i> are</i> disoriented, for example the user may have meant to try walking through the wall to better understand the environment layout [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2" title="Bowman DA, Davies ET, Hodges LF, Badre AN (1999) Maintaining spatial orientation during travel in an immersive virtual environment. Presence 8(6):618–631" href="/article/10.1007/s10055-004-0137-x#ref-CR2" id="ref-link-section-d15691e603">2</a>], but that disorientation is more likely to happen in such a situation. Therefore, it was proposed that the implemented guidelines would reduce this type of behaviour.</p><p>A similar but less extreme form of disorientation can happen if a user moves very close to an object in a virtual environment. If the object fills the user’s field of view, e.g. “nose against the wall” [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 9" title="Kaur K (1997) Designing virtual environments for usability. In: Howard S, Hammond J, Lindgaard G (eds) Proceedings of human-computer interaction (INTERACT’97). Chapman &amp; Hall, London, pp 636–639" href="/article/10.1007/s10055-004-0137-x#ref-CR9" id="ref-link-section-d15691e610">9</a>], the viewpoint turns to one colour/texture and the user is without visual cues to allow them to determine their next navigation action. This form of user disorientation is commonly found in environments with collision detection as users get stuck on objects/walls they are close to [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 25" title="Xiao D, Hubbold R (1998) Navigation guided by artificial force fields. In: Karat C-M, Lundi A, Coutaz J, Karat J (eds) Proceedings of CHI’98: human factors in computing systems. ACM Press, New York, pp 179–186" href="/article/10.1007/s10055-004-0137-x#ref-CR25" id="ref-link-section-d15691e613">25</a>]. This was used as a potential user-disorientation measure for the second study. However, this was not as easy to determine as the walked-through-walls measure, which could be easily determined via the movement logs of each session. Therefore, recorded traces of user movements through the maze, both from first person and plan, or bird’s-eye, views, were reviewed manually by the authors. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-004-0137-x#Fig2">2</a> shows two example traces from the second study with the potential disorientating situations marked. Potential disorientating situations were identified from examples in the traces where the whole field of view was present in one colour and the user obviously hesitated before resuming travel in the environment.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-004-0137-x/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0137-x/MediaObjects/s10055-004-0137-xfhb2.jpg?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0137-x/MediaObjects/s10055-004-0137-xfhb2.jpg" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p> Example disorientation situations identified in the second study traces</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-004-0137-x/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div></div></div></section><section aria-labelledby="Sec5"><div class="c-article-section" id="Sec5-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec5">Subjects and method</h2><div class="c-article-section__content" id="Sec5-content"><p>The 18 paid volunteers who took part in the collision-detection-on study were recruited through a university web site, notice board advertisements in university colleges and participants at a university open day. They consisted of 4 females and 14 males with ages ranging between 16 and 32. A mix of subject sex and age were evenly spread between the two groups. All had previous experience of computer games, describing themselves as novices (9), experienced users (7) and expert players (2). Four subjects had previous virtual reality technology experience, two with desktop virtual environments, one with HMD virtual environments and one with both.</p><p>Subjects were allocated study time slots and alternately placed in one of the two groups, with and without implemented guidelines. From a first-person perspective, with the field of view as if one was in the environment, subjects were asked to move through the “corridors” of a virtual building. The experiment was run on a standard desktop personal computer environment consisting of a 433-MHz Pentium processor, Windows 98 operating system, 17-in. colour monitor and a standard keyboard. The test subjects were located in an isolated office, with one instructor/observer and a tripod-mounted video camera to record the session. The subjects’ movements were logged, via a background computer process, through the session and collisions with the walls noted. The logged movements were used to re-run the user’s travel through the test environment in post-study analysis.</p><p>Immediately after completing the navigation task, subjects were asked to identify a 2D plan, or bird’s-eye view, of the “virtual maze” from three different maps to determine if they had constructed an accurate mental model of the environment. The concept of an internal (mental) model or “cognitive map” is an important part of the navigation process [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 22" title="Spence R (1999) A framework for navigation. Int J Hum Comput Stud 51(5):919–945" href="/article/10.1007/s10055-004-0137-x#ref-CR22" id="ref-link-section-d15691e648">22</a>]. The three maps can be seen in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-004-0137-x#Fig3">3</a>; map B is a plan view of the actual environment used in the session. Subjects also completed a questionnaire (Appendix A) after the session.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-004-0137-x/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0137-x/MediaObjects/s10055-004-0137-xfhb3.jpg?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0137-x/MediaObjects/s10055-004-0137-xfhb3.jpg" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p> 2D plan views of corridors (maze) within the virtual building.<b> a</b> Simple maze.<b> b</b> Actual maze.<b> c</b> Complex maze</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-004-0137-x/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div></div></div></section><section aria-labelledby="Sec6"><div class="c-article-section" id="Sec6-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec6">Results</h2><div class="c-article-section__content" id="Sec6-content"><p>A summary of the results from the study can be seen in Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-004-0137-x#Tab1">1</a>. In this study, every subject collided with at least one wall. In the first navigation study [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 12" title="Marsh T, Smith SP (2001) Guiding user navigation in virtual environments using awareness of virtual off-screen space. In: Paelke V, Volbracht S (eds) Proceedings of the workshop on guiding users through interactive experiences—usability centred design and evaluation of virtual 3D environments: User guidance in virtual environments. Shaker, Aachen, pp 149–154" href="/article/10.1007/s10055-004-0137-x#ref-CR12" id="ref-link-section-d15691e692">12</a>], a measure of possible user disorientation was the number of times that a user walked through the walls of the maze. The actual number of wall collisions in a session was not deemed to be an accurate measure as the experiment environment collected collision data on every movement frame. Hence when users were disoriented and moving within walls, multiple collision events were collected that did not necessarily represent the degree of disorientation. However, this is not possible to measure with collision detection enabled. Thus the measure for possible disorientation used in this study was whether users entered into potentially disorienting situations while navigating the maze. The wall collision data in themselves were deemed to be an inaccurate measure of disorientation as some users who were not disoriented used the walls to navigate by sliding down them, thus generating multiple collision events. Disorientation situations were identified by expert judgement after reviewing captured footage of the sessions (for examples see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-004-0137-x#Fig2">2</a>). As shown in Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-004-0137-x#Tab1">1</a>, three subjects with the implemented guidelines and six subjects without the implemented guidelines moved into such situations.</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-1"><figure><figcaption class="c-article-table__figcaption"><b id="Tab1" data-test="table-caption">Table 1  Summary of results</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-004-0137-x/tables/1"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div><p>From the questionnaire answers, the majority of subjects had no problems with the arrow key controls, with 15 finding the arrow keys effective and 12 being happy with the speed of movement. Five subjects in each group chose the correct map, while no subjects selected map A. Of those that chose map C, four were without the implemented guidelines and four were with the implemented guidelines.</p><p>In total, seven of the subjects felt disoriented during the navigation task—two with the implemented guidelines and five without. Of those without the implemented guidelines four noted their proximity to the walls as the cause of their disorientation. For example, two responses were “If I went too close to a wall and [sic] just hit a blank space of colour” and “Display only one colour and could not tell is [sic] moving or not.” Another subject found the changing colours on the different wall partitions disorienting. Of the subjects with the implemented guidelines, one subject thought that the pictures played a part in successfully navigating the maze and another subject was concerned about what their orientation was in the maze. Four subjects, three with implemented guidelines, experienced an awareness of activity external to the navigation task. Activities cited included the noises made by people outside the test room, the hum of the computer, the video camera and the supervision, of being watched and notes being taken. The five subjects with implemented guidelines who noted breaks in their attention all noted the pictures on the walls as the cause, with one also noting the colours of the walls. One subject without implemented guidelines also noted the colours of the walls as a distracting feature.</p></div></div></section><section aria-labelledby="Sec7"><div class="c-article-section" id="Sec7-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec7">Discussion</h2><div class="c-article-section__content" id="Sec7-content"><p>The main aim of this study was to determine whether the implemented guidelines, informed by the design guidelines, were effective in reducing user disorientation while navigating in a desktop virtual environment with collision detection enabled. The study considered four discrete measures of user disorientation:</p><ul class="u-list-style-dash">
+                  <li>
+                    <p>number of wall collisions,</p>
+                  </li>
+                  <li>
+                    <p>disorientation responses in the post-study questionnaire (Appendix A),</p>
+                  </li>
+                  <li>
+                    <p>number of identified potential disorientating situations,</p>
+                  </li>
+                  <li>
+                    <p>awareness of the space, via the map selection process and involvement in the task.</p>
+                  </li>
+                </ul><p>In this study every user collided with a wall at least once. Also the number of times that each subject hit the walls was approximately the same across those with the implemented guidelines and those without (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-004-0137-x#Fig4">4</a>).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-004-0137-x/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0137-x/MediaObjects/s10055-004-0137-xfhb4.jpg?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0137-x/MediaObjects/s10055-004-0137-xfhb4.jpg" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p> Comparing number of wall collisions with use of implemented guidelines</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-004-0137-x/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div><p>A similar result was found in the first study. One reason for this is that the only penalty for a wall collision was if the user got stuck on the wall and movement was halted. This, however, would not be a problem if the subject were sliding forwards or backwards along a wall, although this would generate a wall collision event in the monitoring software. Also in the first study, as collision detection was disabled, subjects would be unaware that they had collided with a wall in certain circumstances, for example if cutting a corner while navigating. Therefore this is not an accurate measure of user disorientation.</p><p>A total of seven subjects self-reported in the post-study questionnaire that they felt disoriented while navigating in the environment. Of those, two had the implemented guidelines and five were without. This result indicates that the implemented guidelines played a part in reducing user disorientation. Next, how the subjects performed in terms of the identified disorientation situations and whether this was also related to subjects’ overall feelings of disorientation was examined. From the traces of the subjects’ movements (for examples see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-004-0137-x#Fig2">2</a>), nine subjects encountered potential disorientation situations, with three having the implemented guidelines and six not having them. This indicates that the implemented guidelines had a positive effect on reducing the subjects’ navigation into disorientating situations. A similar result was found in the first study [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 12" title="Marsh T, Smith SP (2001) Guiding user navigation in virtual environments using awareness of virtual off-screen space. In: Paelke V, Volbracht S (eds) Proceedings of the workshop on guiding users through interactive experiences—usability centred design and evaluation of virtual 3D environments: User guidance in virtual environments. Shaker, Aachen, pp 149–154" href="/article/10.1007/s10055-004-0137-x#ref-CR12" id="ref-link-section-d15691e957">12</a>], where the implemented guidelines were shown to reduce the number of times that users walked through the maze walls.</p><p>However, from Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-004-0137-x#Tab1">1</a> it is not obvious that those subjects who were disoriented are the same subjects who entered the disorientating situations. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-004-0137-x#Fig5">5</a> shows a comparison of the subjects’ results in terms of the implemented guidelines, disorientation indicated by questionnaire answers and expert-identified disorientation situations. It can be seen that only subjects without implemented guidelines (subjects 10 and 11 in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-004-0137-x#Fig5">5</a>) found themselves in disorienting situations more than once. Also, of the subjects who were both disoriented and placed in disorientation situations, only one (subject 1 in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-004-0137-x#Fig5">5</a>) had implemented guidelines, while the other three subjects (10, 11 and 13 in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-004-0137-x#Fig5">5</a>) were without implemented guidelines. One conclusion from this study is that the implemented guidelines not only reduced the subjects’ perceived disorientation but helped subjects to avoid situations where they would become disoriented.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-004-0137-x/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0137-x/MediaObjects/s10055-004-0137-xfhb5.jpg?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0137-x/MediaObjects/s10055-004-0137-xfhb5.jpg" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p> Comparing implemented guidelines with subject disorientation and disorienting situations</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-004-0137-x/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div><p>The final measure of subject disorientation in the study environment was the subjects’ awareness of their surroundings. In the two-dimensional (2D) maze recognition test (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-004-0137-x#Fig3">3</a>), an equal number of subjects chose correct and incorrect maps. This was evenly distributed over subjects with or without the implemented guidelines. In the first study, subjects with the implemented guidelines scored lower than those without and, specifically, more subjects with implemented guidelines chose the more complex map (map C). Marsh and Smith [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 12" title="Marsh T, Smith SP (2001) Guiding user navigation in virtual environments using awareness of virtual off-screen space. In: Paelke V, Volbracht S (eds) Proceedings of the workshop on guiding users through interactive experiences—usability centred design and evaluation of virtual 3D environments: User guidance in virtual environments. Shaker, Aachen, pp 149–154" href="/article/10.1007/s10055-004-0137-x#ref-CR12" id="ref-link-section-d15691e1003">12</a>] suggested that the use of implemented guidelines added a complexity to the environment that the subjects then associated with the more complex map. This was not the case in the current study. However, as collision detection was not enabled in the first study, the subjects could walk through the maze walls, and this may have distorted their view of the environment. In summary, the implemented guidelines did not significantly help or hinder the construction of user awareness of the spatial layout to the environment.</p><p>Six subjects acknowledged that the implemented guidelines had momentarily caused them to break their attention from the navigation task to admire the pictures on the walls. That is, the pictures evoked interest and/or curiosity in the subjects. Although it seems reasonable to suggest that the subjects’ concentration was momentarily broken from the navigation task, the subjects did remain attached to the illusion created within the virtual environment, the inducement of experience as reflected by “staying there” [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 11" title="Marsh T (2003) Staying there: an activity-based approach to narrative design and evaluation as an antidote to virtual corpsing. In: Riva G, Davide F, Ijsselsteijn WA (eds) Being there: concepts, effects and measurement of user presence in synthetic environments. IOS Press, Amsterdam, pp 85–96" href="/article/10.1007/s10055-004-0137-x#ref-CR11" id="ref-link-section-d15691e1009">11</a>]. Only one subject noted the pictures as a cause of disorientation, and this was a confusion about the navigation task, not the placement or quality of the pictures. This suggests that the implemented guidelines appeared transparent to most subjects and blended naturally with the study virtual environment. A similar result with the implemented guidelines was found in the first study.</p><p>Finally, three subjects with implemented guidelines acknowledged being aware of activity external to the navigation task compared to one subject without implemented guidelines. In all four cases, general noises outside the study room and the supervision of the session, the supervisor being present and the video camera were stated as the causes of the external awareness. These four cases seem to be the personal preferences of the subjects, and overall the presence or absence of the guidelines seemed to have little effect on those subjects who could be distracted. A similar result was found in the first study.</p></div></div></section><section aria-labelledby="Sec8"><div class="c-article-section" id="Sec8-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec8">Conclusions</h2><div class="c-article-section__content" id="Sec8-content"><p>In general, the subjects in the study performed positively. The implemented guidelines did provide noticeable aid for subjects when navigating the virtual maze. In terms of user disorientation, over both studies the difference between the environments with collision detection enabled or not were not significant. With regard to the benefit afforded by the implemented guidelines, results of the spatial test were less convincing, which may be attributed to the difficulty of transforming a mental model formed in a 3D environment into a 2D plan view. This may be a problem for subjects regardless of guideline implementation.</p><p>Unfortunately, the strength of the positive results must be tempered with the obvious limitations of the studies. In both studies, only a limited number of users, 18 in each, were tested and many of the users’ backgrounds and experience in virtual environments varied. Also, measurement of actual user disorientation was difficult due to the subjective nature of the condition. However, both studies were preliminary investigations into the potential for design guidelines to aid user navigation and advance our understanding of techniques to reduce user disorientation. The study reported in this paper was conducted in a desktop virtual environment, and, due to the nature of the design guidelines, it is likely that they could also benefit navigation in more immersive virtual environments. This is a topic for future research.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="notes"><div class="c-article-section" id="notes-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="notes">Notes</h2><div class="c-article-section__content" id="notes-content"><ol class="c-article-footnote c-article-footnote--listed"><li class="c-article-footnote--listed__item" id="Fn1"><span class="c-article-footnote--listed__index">1.</span><div class="c-article-footnote--listed__content"><p>MAVERIK is a publicly available virtual reality system developed by the Advanced Interfaces Group at the University of Manchester (see <a href="http://aig.cs.man.ac.uk/maverik/">http://aig.cs.man.ac.uk/maverik/</a>; cited 6 May 2004).</p></div></li><li class="c-article-footnote--listed__item" id="Fn2"><span class="c-article-footnote--listed__index">2.</span><div class="c-article-footnote--listed__content"><p>Hereafter, the<i> design guidelines</i> will refer to the proposed design guidelines developed by Marsh and Wright [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 14" title="Marsh T, Wright P (2000) Using cinematography conventions to inform guidelines for the design and evaluation of virtual off-screen space. In: Butz A, Krüger A, Olivier P (eds) Proceedings of the AAAI 2000 spring symposium series “Smart Graphics”. AAAI Press, Menlo Park, CA, pp 123–127" href="/article/10.1007/s10055-004-0137-x#ref-CR14" id="ref-link-section-d15691e525">14</a>], while the<i> implemented guidelines</i> will refer to the physical representation of these guidelines applied to the test virtual environment.</p></div></li><li class="c-article-footnote--listed__item" id="Fn3"><span class="c-article-footnote--listed__index">3.</span><div class="c-article-footnote--listed__content"><p>Pictures on the maze walls included works of art by Picasso, Monet and Matisse.</p></div></li></ol></div></div></section><section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Baudisch P, Rosenholtz R (2003) Halo: A technique for visualizing off-screen locations. In: Proceedings of CHI" /><span class="c-article-references__counter">1.</span><p class="c-article-references__text" id="ref-CR1">Baudisch P, Rosenholtz R (2003) Halo: A technique for visualizing off-screen locations. In: Proceedings of CHI 2003. ACM Press, New York, pp 481–488</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content=". Bowman, " /><meta itemprop="datePublished" content="1999" /><meta itemprop="headline" content="Bowman DA, Davies ET, Hodges LF, Badre AN (1999) Maintaining spatial orientation during travel in an immersive" /><span class="c-article-references__counter">2.</span><p class="c-article-references__text" id="ref-CR2">Bowman DA, Davies ET, Hodges LF, Badre AN (1999) Maintaining spatial orientation during travel in an immersive virtual environment. Presence 8(6):618–631</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1162%2F105474699566521" aria-label="View reference 2">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 2 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=&amp;journal=Presence&amp;volume=8&amp;publication_year=1999&amp;author=Bowman%2C">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content=". Bowman, " /><meta itemprop="datePublished" content="1999" /><meta itemprop="headline" content="Bowman DA, Hodges LF, Allison D, Wineman J (1999) The educational value of an information-rich virtual environ" /><span class="c-article-references__counter">3.</span><p class="c-article-references__text" id="ref-CR3">Bowman DA, Hodges LF, Allison D, Wineman J (1999) The educational value of an information-rich virtual environment. Presence 8(3):317–331</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1162%2F105474699566251" aria-label="View reference 3">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 3 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=&amp;journal=Presence&amp;volume=8&amp;publication_year=1999&amp;author=Bowman%2C">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bowman DA, Koller D, Hodges LF (1997) Travel in immersive virtual environments: an evaluation of viewpoint mot" /><span class="c-article-references__counter">4.</span><p class="c-article-references__text" id="ref-CR4">Bowman DA, Koller D, Hodges LF (1997) Travel in immersive virtual environments: an evaluation of viewpoint motion control techniques. In: Proceedings of the virtual reality annual international symposium (VRAIS’97). IEEE Press, New York, pp 45–52</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Darken RP, Sibert JL (1996) Wayfinding strategies and behaviours in large virtual worlds. In: Proceedings of C" /><span class="c-article-references__counter">5.</span><p class="c-article-references__text" id="ref-CR5">Darken RP, Sibert JL (1996) Wayfinding strategies and behaviours in large virtual worlds. In: Proceedings of CHI 96: human factors in computing systems. ACM Press, New York, pp 142–149</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Kaur Deol K, Sutcliffe AG, Maiden NAM (1999) Towards a better understanding of usability problems with virtual" /><span class="c-article-references__counter">6.</span><p class="c-article-references__text" id="ref-CR6">Kaur Deol K, Sutcliffe AG, Maiden NAM (1999) Towards a better understanding of usability problems with virtual environments. In: Sasse MA, Johnson C (eds) Proceedings of human-computer interaction (INTERACT’99). IFIP/IOS Press, Amsterdam, pp 527–535</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="DIRC—Interdisciplinary Research Collaboration on Dependability of Computer-Based Systems (2001)http://www.dirc" /><span class="c-article-references__counter">7.</span><p class="c-article-references__text" id="ref-CR7">DIRC—Interdisciplinary Research Collaboration on Dependability of Computer-Based Systems (2001)<a href="http://www.dirc.org.uk">http://www.dirc.org.uk</a>. Cited on 6 May 2004</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="INQUISITIVE Project (1998)http://www.cs.york.ac.uk/hci/inquisitive/. Cited on 6 May 2004" /><span class="c-article-references__counter">8.</span><p class="c-article-references__text" id="ref-CR8">INQUISITIVE Project (1998)<a href="http://www.cs.york.ac.uk/hci/inquisitive/">http://www.cs.york.ac.uk/hci/inquisitive/</a>. Cited on 6 May 2004</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Kaur K (1997) Designing virtual environments for usability. In: Howard S, Hammond J, Lindgaard G (eds) Proceed" /><span class="c-article-references__counter">9.</span><p class="c-article-references__text" id="ref-CR9">Kaur K (1997) Designing virtual environments for usability. In: Howard S, Hammond J, Lindgaard G (eds) Proceedings of human-computer interaction (INTERACT’97). Chapman &amp; Hall, London, pp 636–639</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Kaur K, Sutcliffe A, Maiden N (1998) Improving interaction with virtual environments. In: Leevers DFA, Benest " /><span class="c-article-references__counter">10.</span><p class="c-article-references__text" id="ref-CR10">Kaur K, Sutcliffe A, Maiden N (1998) Improving interaction with virtual environments. In: Leevers DFA, Benest ID (eds) Proceedings of the 3D interface for the information worker. IEE Press, London, pp 4/1–4/4</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Marsh T (2003) Staying there: an activity-based approach to narrative design and evaluation as an antidote to " /><span class="c-article-references__counter">11.</span><p class="c-article-references__text" id="ref-CR11">Marsh T (2003) Staying there: an activity-based approach to narrative design and evaluation as an antidote to virtual corpsing. In: Riva G, Davide F, Ijsselsteijn WA (eds) Being there: concepts, effects and measurement of user presence in synthetic environments. IOS Press, Amsterdam, pp 85–96</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Marsh T, Smith SP (2001) Guiding user navigation in virtual environments using awareness of virtual off-screen" /><span class="c-article-references__counter">12.</span><p class="c-article-references__text" id="ref-CR12">Marsh T, Smith SP (2001) Guiding user navigation in virtual environments using awareness of virtual off-screen space. In: Paelke V, Volbracht S (eds) Proceedings of the workshop on guiding users through interactive experiences—usability centred design and evaluation of virtual 3D environments: User guidance in virtual environments. Shaker, Aachen, pp 149–154</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Marsh T, Wright P (1999) Co-operative evaluation of a desktop virtual reality system. In: Harrison M, Smith S " /><span class="c-article-references__counter">13.</span><p class="c-article-references__text" id="ref-CR13">Marsh T, Wright P (1999) Co-operative evaluation of a desktop virtual reality system. In: Harrison M, Smith S (eds) Proceedings of the workshop on user centered design and implementation of virtual environments. University of York, UK, pp 99–108</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Marsh T, Wright P (2000) Using cinematography conventions to inform guidelines for the design and evaluation o" /><span class="c-article-references__counter">14.</span><p class="c-article-references__text" id="ref-CR14">Marsh T, Wright P (2000) Using cinematography conventions to inform guidelines for the design and evaluation of virtual off-screen space. In: Butz A, Krüger A, Olivier P (eds) Proceedings of the AAAI 2000 spring symposium series “Smart Graphics”<i>.</i> AAAI Press, Menlo Park, CA, pp 123–127</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content=". Marsh, " /><meta itemprop="datePublished" content="2001" /><meta itemprop="headline" content="Marsh T, Wright P, Smith S (2001) Evaluation for the design of experience in virtual environments: modelling b" /><span class="c-article-references__counter">15.</span><p class="c-article-references__text" id="ref-CR15">Marsh T, Wright P, Smith S (2001) Evaluation for the design of experience in virtual environments: modelling breakdown in interaction and illusion. Cyberpsychol Behav 4(2):225–238</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1089%2F109493101300117910" aria-label="View reference 15">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 15 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=&amp;journal=Cyberpsychol%20Behav&amp;volume=4&amp;publication_year=2001&amp;author=Marsh%2C">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="GNU MAVERIK—Manchester Virtual Environment Interface Kernel (1999) AIG Group, University of Manchester, UK.htt" /><span class="c-article-references__counter">16.</span><p class="c-article-references__text" id="ref-CR16">GNU MAVERIK—Manchester Virtual Environment Interface Kernel (1999) AIG Group, University of Manchester, UK.<a href="http://aig.cs.man.ac.uk/maverik/">http://aig.cs.man.ac.uk/maverik/</a>. Cited on 6 May 2004</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Neale DC (1997) Factors influencing spatial awareness and orientation in desktop virtual environments. In: Pro" /><span class="c-article-references__counter">17.</span><p class="c-article-references__text" id="ref-CR17">Neale DC (1997) Factors influencing spatial awareness and orientation in desktop virtual environments. In: Proceedings of the Human Factors and Ergonomics Society 41st annual meeting. Human Factors and Ergonomic Society, Albuquerque, NM, pp 1278–1282</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content=". Nichols, " /><meta itemprop="datePublished" content="2000" /><meta itemprop="headline" content="Nichols S, Haldane C, Wilson JR (2000) Measurement of presence and its consequences in virtual environments. I" /><span class="c-article-references__counter">18.</span><p class="c-article-references__text" id="ref-CR18">Nichols S, Haldane C, Wilson JR (2000) Measurement of presence and its consequences in virtual environments. Int J Hum Comput Stud 52(3):471–491</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1006%2Fijhc.1999.0343" aria-label="View reference 18">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 18 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=&amp;journal=Int%20J%20Hum%20Comput%20Stud&amp;volume=52&amp;publication_year=2000&amp;author=Nichols%2C">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Persson P (1998) A comparative study of digital and cinematic space with special focus on navigation. In: Holl" /><span class="c-article-references__counter">19.</span><p class="c-article-references__text" id="ref-CR19">Persson P (1998) A comparative study of digital and cinematic space with special focus on navigation. In: Hollnagel E (ed) Proceedings of the 9th European conference on cognitive ergonomics EACE—ECCE98. University of Limerick, Limerick, UK, pp 67–72</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Roberson G, Czerwinski M, van Dantzich M (1997) Immersion in desktop virtual reality. In: Proceedings of the 1" /><span class="c-article-references__counter">20.</span><p class="c-article-references__text" id="ref-CR20">Roberson G, Czerwinski M, van Dantzich M (1997) Immersion in desktop virtual reality. In: Proceedings of the 10th annual ACM symposium on user interface software and technology (UIST’97). ACM Press, New York, pp 11–19</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Smith S, Duke D, Wright P (1999) Using the resources model in virtual environment design. In: Harrison M, Smit" /><span class="c-article-references__counter">21.</span><p class="c-article-references__text" id="ref-CR21">Smith S, Duke D, Wright P (1999) Using the resources model in virtual environment design. In: Harrison M, Smith S (eds) Proceedings of the workshop on user centered design and implementation of virtual environments. University of York, UK, pp 57–72</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content=". Spence, " /><meta itemprop="datePublished" content="1999" /><meta itemprop="headline" content="Spence R (1999) A framework for navigation. Int J Hum Comput Stud 51(5):919–945" /><span class="c-article-references__counter">22.</span><p class="c-article-references__text" id="ref-CR22">Spence R (1999) A framework for navigation. Int J Hum Comput Stud 51(5):919–945</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1006%2Fijhc.1999.0265" aria-label="View reference 22">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 22 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=&amp;journal=Int%20J%20Hum%20Comput%20Stud&amp;volume=51&amp;publication_year=1999&amp;author=Spence%2C">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Volbracht S, Domik G (2000) Developing effective navigation techniques in virtual 3D environments. In: Mulder " /><span class="c-article-references__counter">23.</span><p class="c-article-references__text" id="ref-CR23">Volbracht S, Domik G (2000) Developing effective navigation techniques in virtual 3D environments. In: Mulder JD, van Liere R (eds) Virtual Environments 2000. Springer, Berlin Heidelberg New York, pp 55–64</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Wickens CD, Baker P (1995) Cognitive issues in virtual reality. In: Barfield W, Furness TA III (eds) Virtual e" /><span class="c-article-references__counter">24.</span><p class="c-article-references__text" id="ref-CR24">Wickens CD, Baker P (1995) Cognitive issues in virtual reality. In: Barfield W, Furness TA III (eds) Virtual environments and advanced interface design. Oxford University Press, Oxford, UK, pp 514–541</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Xiao D, Hubbold R (1998) Navigation guided by artificial force fields. In: Karat C-M, Lundi A, Coutaz J, Karat" /><span class="c-article-references__counter">25.</span><p class="c-article-references__text" id="ref-CR25">Xiao D, Hubbold R (1998) Navigation guided by artificial force fields. In: Karat C-M, Lundi A, Coutaz J, Karat J (eds) Proceedings of CHI’98: human factors in computing systems. ACM Press, New York, pp 179–186</p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-004-0137-x-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Ack1">Acknowledgements</h2><div class="c-article-section__content" id="Ack1-content"><p>This work was supported in part by the UK EPSRC INQUISITIVE project [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 8" title="INQUISITIVE Project (1998)&#xA;                    http://www.cs.york.ac.uk/hci/inquisitive/&#xA;                    &#xA;                  . Cited on 6 May 2004" href="/article/10.1007/s10055-004-0137-x#ref-CR8" id="ref-link-section-d15691e1034">8</a>], Grant GR/L53199, and the UK EPSRC DIRC project [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 7" title="DIRC—Interdisciplinary Research Collaboration on Dependability of Computer-Based Systems (2001)&#xA;                    http://www.dirc.org.uk&#xA;                    &#xA;                  . Cited on 6 May 2004" href="/article/10.1007/s10055-004-0137-x#ref-CR7" id="ref-link-section-d15691e1037">7</a>], Grant GR/N13999. The authors would like to thank the subjects who participated in the study, Alistair Edwards for comments on an earlier draft of this paper and the journal reviewers for their constructive comments.</p></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><span class="c-article-author-information__subtitle u-visually-hidden" id="author-notes">Author notes</span><ol class="c-article-author-information__list"><li class="c-article-author-information__item" id="nAff3"><p class="c-article-author-information__authors-list">Shamus P. Smith</p><p class="js-present-address">Present address: Department of Computer Science, University of Durham, Durham DH1 3LE, UK</p></li><li class="c-article-author-information__item" id="nAff4"><p class="c-article-author-information__authors-list">Tim Marsh</p><p class="js-present-address">Present address: Integrated Media Systems Center, University of Southern California, Los Angeles, CA 90089, USA</p></li></ol><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">Department of Computer Science, University of York, York YO10 5DD, UK</p><p class="c-article-author-affiliation__authors-list">Shamus P. Smith</p></li><li id="Aff2"><p class="c-article-author-affiliation__address">Department of Industrial Design, Eindhoven University of Technology, 5600 MB, Eindhoven, The Netherlands</p><p class="c-article-author-affiliation__authors-list">Tim Marsh</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Shamus_P_-Smith"><span class="c-article-authors-search__title u-h3 js-search-name">Shamus P. Smith</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Shamus P.+Smith&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Shamus P.+Smith" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Shamus P.+Smith%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Tim-Marsh"><span class="c-article-authors-search__title u-h3 js-search-name">Tim Marsh</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Tim+Marsh&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Tim+Marsh" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Tim+Marsh%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-004-0137-x/email/correspondent/c1/new">Shamus P. Smith</a>.</p></div></div></section><section aria-labelledby="appendices"><div class="c-article-section" id="appendices-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="appendices">Appendix A: Post-study questionnaire</h2><div class="c-article-section__content" id="appendices-content"><h3 class="c-article__sub-heading u-visually-hidden" id="App1">Appendix A: Post-study questionnaire</h3>
+                  <div class="c-article-table-container"><div class="c-article-table-border c-table-scroll-wrapper"><div class="c-table-scroll-wrapper__content" data-component-scroll-wrapper=""><table class="data last-table"><tbody><tr><td colspan="3">
+                            [<sup>*</sup>Delete as appropriate]
+                          </td><td> </td></tr><tr><td>
+                            1.
+                          </td><td colspan="3">
+                            age group <sup>*</sup>:<b> 18–25, 26–32, 33–39, 40–46, 47–52, over 52</b>
+                          </td></tr><tr><td>
+                            2.
+                          </td><td colspan="2">
+                            
+                              <b>female/ male</b>
+                              <sup>*</sup>
+                            
+                          </td><td> </td></tr><tr><td>
+                            3.
+                          </td><td colspan="2">
+                            have you any experience of the following:
+                          </td><td> </td></tr><tr><td> </td><td>
+                            i.
+                          </td><td>
+                            computer games?
+                          </td><td>
+                            <b>y/n</b>* (if no, go to ii.)
+                          </td></tr><tr><td> </td><td> </td><td>
+                            how would you rate your skill level:
+                          </td><td>
+                            
+                              <b>novice, experienced, expert</b>
+                              <sup>*</sup>
+                            
+                          </td></tr><tr><td> </td><td>
+                            ii.
+                          </td><td>
+                            virtual reality?
+                          </td><td>
+                            <b>y/n</b>* (if no, go to 4.)<b></b>
+                          </td></tr><tr><td> </td><td> </td><td>
+                            using: Head Mounted Displays (HMD)?
+                          </td><td>
+                            <b>y/n</b>*<b></b>
+                          </td></tr><tr><td> </td><td> </td><td>
+                            using: desktop computer
+                          </td><td>
+                            <b>y/n</b>*<b></b>
+                          </td></tr><tr><td> </td><td> </td><td>
+                            which of the following best applies to the virtual reality products for which you have had experience?
+                          </td><td>
+                            
+                              <b></b>
+                            
+                          </td></tr><tr><td> </td><td> </td><td>
+                            Educational
+                          </td><td>
+                            <b>y/n</b>*<b></b>
+                          </td></tr><tr><td> </td><td> </td><td>
+                            Entertainment
+                          </td><td>
+                            <b>y/n</b>*<b></b>
+                          </td></tr><tr><td> </td><td> </td><td>
+                            other, please specify ____________________________
+                          </td><td>
+                            
+                              <b></b>
+                            
+                          </td></tr><tr><td>
+                            4.
+                          </td><td colspan="3">
+                            where did you hear about the study? _______________________<b></b>
+                          </td></tr><tr><td>
+                            5.<br />
+                             
+                          </td><td colspan="3">
+                            please rate the level of difficulty/effectiveness of using the cursor keys -<i>arrow keys</i>- to move around the corridors?
+                          </td></tr><tr><td> </td><td colspan="3">
+                            <b>difficult</b> 1 2 3 4 5 6 7<b> effective</b>
+                          </td></tr><tr><td> </td><td colspan="3">
+                            
+                              <i>please comment:</i>
+                            
+                          </td></tr><tr><td>
+                            6.
+                          </td><td colspan="3">
+                            please rate the speed of movement through the corridors?
+                          </td></tr><tr><td> </td><td colspan="3">
+                            <b>too slow</b> 1 2 3 4 5 6 7<b>
+too fast</b>
+                          </td></tr><tr><td> </td><td colspan="3">
+                            
+                              <i>please comment:</i>
+                            
+                          </td></tr><tr><td>
+                            7.
+                          </td><td colspan="2">
+                            did you feel disorientated at any time?
+                          </td><td>
+                            <b>y/n</b>*
+                          </td></tr><tr><td> </td><td colspan="2">
+                            
+                              <i>if yes, please comment on the cause of this disorientation:</i>
+                            
+                          </td><td>
+                            
+                              <b></b>
+                            
+                          </td></tr><tr><td>
+                            8.
+                          </td><td colspan="2">
+                            how attentive/focused did you feel in the task of moving through the corridors?<b></b>
+                          </td><td>
+                            
+                              <b></b>
+                            
+                          </td></tr><tr><td> </td><td colspan="2">
+                            <b>not focused</b> 1 2 3 4 5 6 7<b>
+totally focused</b>
+                          </td><td>
+                            
+                              <b></b>
+                            
+                          </td></tr><tr><td>
+                            9. 
+                          </td><td colspan="2">
+                            when moving through the corridors, were you aware of activities external to your task?
+                          </td><td>
+                            <b>y/n</b>*<b></b>
+                          </td></tr><tr><td> </td><td colspan="2">
+                            
+                              <i>if yes, what things were you aware of:</i>
+                            
+                          </td><td>
+                            
+                              <b></b>
+                            
+                          </td></tr><tr><td>
+                            10.
+                          </td><td colspan="2">
+                            when moving through the corridors, did anything break your attention from your task to activities external to your task?
+                          </td><td>
+                            <b>y/n</b>*<b></b>
+                          </td></tr><tr><td> </td><td colspan="2">
+                            
+                              <i>if yes, what things were you aware of:</i>
+                            
+                          </td><td>
+                            
+                              <b></b>
+                            
+                          </td></tr><tr><td>
+                            11.
+                          </td><td colspan="2">
+                            how much of the route through the corridors can you remember?<b></b>
+                          </td><td>
+                            
+                              <b></b>
+                            
+                          </td></tr><tr><td> </td><td colspan="2">
+                            <b>none at all</b> 1 2 3 4 5 6 7<b>
+all the route</b>
+                          </td><td>
+                            
+                              <b></b>
+                            
+                          </td></tr><tr><td>
+                            12.
+                          </td><td colspan="3">
+                            please describe as much of the route through the corridors as possible:<b></b>
+                          </td></tr><tr><td>
+                            13.
+                          </td><td colspan="3">
+                            if you wish to learn more about the study please write your email below:<b></b>
+                          </td></tr></tbody></table></div></div></div>
+                </div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=Evaluating%20design%20guidelines%20for%20reducing%20user%20disorientation%20in%20a%20desktop%20virtual%20environment&amp;author=Shamus%20P.%20Smith%20et%20al&amp;contentID=10.1007%2Fs10055-004-0137-x&amp;publication=1359-4338&amp;publicationDate=2004-07-08&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Smith, S.P., Marsh, T. Evaluating design guidelines for reducing user disorientation in a desktop virtual environment.
+                    <i>Virtual Reality</i> <b>8, </b>55–62 (2004). https://doi.org/10.1007/s10055-004-0137-x</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-004-0137-x.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2003-12-12">12 December 2003</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2004-04-30">30 April 2004</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2004-07-08">08 July 2004</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2004-03">March 2004</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-004-0137-x" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-004-0137-x</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Navigation</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Virtual environment</span></li><li class="c-article-subject-list__subject"><span itemprop="about">User disorientation</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Design guidelines</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Evaluation study</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-004-0137-x.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=137;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="SubSafe : a games-based training system for submarine safety and spati"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="Recent advances in hardware and software technologies for computer games have proved to be more than capable of delivering quite detailed virtual environments on PC platforms and gaming consoles..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/13/1.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="SubSafe : a games-based training system for submarine safety and spatial awareness (Part 1)"/>
+
+    <meta name="dc.source" content="Virtual Reality 2008 13:1"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2008-11-28"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2008 Springer-Verlag London Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="Recent advances in hardware and software technologies for computer games have proved to be more than capable of delivering quite detailed virtual environments on PC platforms and gaming consoles for so-called &#8220;serious&#8221; applications, at a fraction of the cost than was the case 8&#160;years ago. SubSafe is a recent example of what can be achieved in part-task naval training applications using gaming technologies, exploiting freely available, freely distributable software. SubSafe is a proof-of-concept demonstrator that presents end users with an interactive, real-time three-dimensional model of part of a Trafalgar Class submarine. This &#8220;Part 1&#8221; paper presents the background to the SubSafe project and outlines the experimental design for a pilot study being conducted between August 2008 and January 2009, in conjunction with the Royal Navy&#8217;s Submarine School in Devonport. The study is investigating knowledge transfer from the classroom to a real submarine environment (during week&#160;7 of the students&#8217; &#8220;Submarine Qualification Dry&#8221; course), together with general usability and interactivity assessments. Part 2 of the paper (to be completed in early 2009) will present the results of these trials and consider future extensions of the research into other submarine training domains, including periscope ranging and look-interval assessment skills, survival systems deployment training and the planning and rehearsal of submersible rescue operations."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2008-11-28"/>
+
+    <meta name="prism.volume" content="13"/>
+
+    <meta name="prism.number" content="1"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="3"/>
+
+    <meta name="prism.endingPage" content="12"/>
+
+    <meta name="prism.copyright" content="2008 Springer-Verlag London Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-008-0110-1"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-008-0110-1"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-008-0110-1.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-008-0110-1"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="SubSafe : a games-based training system for submarine safety and spatial awareness (Part 1)"/>
+
+    <meta name="citation_volume" content="13"/>
+
+    <meta name="citation_issue" content="1"/>
+
+    <meta name="citation_publication_date" content="2009/03"/>
+
+    <meta name="citation_online_date" content="2008/11/28"/>
+
+    <meta name="citation_firstpage" content="3"/>
+
+    <meta name="citation_lastpage" content="12"/>
+
+    <meta name="citation_article_type" content="SI: Serious Gaming"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-008-0110-1"/>
+
+    <meta name="DOI" content="10.1007/s10055-008-0110-1"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-008-0110-1"/>
+
+    <meta name="description" content="Recent advances in hardware and software technologies for computer games have proved to be more than capable of delivering quite detailed virtual environme"/>
+
+    <meta name="dc.creator" content="Robert Stone"/>
+
+    <meta name="dc.creator" content="Antoinette Caird-Daley"/>
+
+    <meta name="dc.creator" content="Kevin Bessell"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Johns Hopkins APL Tech Dig; citation_title=Development of a personal computer simulation-based multimedia ship control training program; citation_author=PE Biegel, SP Brown, TC Mason, DD Poland; citation_volume=19; citation_issue=4; citation_publication_date=1998; citation_pages=470-481; citation_id=CR2"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Trans Syst Man Cybern C Appl Rev; citation_title=Human performance issues and user interface design for teleoperated robots; citation_author=JYC Chen, EC Haas, MJ Barnes; citation_volume=37; citation_issue=6; citation_publication_date=2007; citation_pages=1231; citation_doi=10.1109/TSMCC.2007.905819; citation_id=CR3"/>
+
+    <meta name="citation_reference" content="Darken RP, Sibert JL (1993) A toolset for navigation in virtual environments. In: Proceedings of the ACM symposium on user interface software and technology. Atlanta, pp 157&#8211;165"/>
+
+    <meta name="citation_reference" content="Edwards M, Nilsson U (2000) Virtual reality and simulation based design&#8211;&#8211;fact or fiction in submarine platform design. In: Proceedings of UDT Pacific 2000"/>
+
+    <meta name="citation_reference" content="Gallagher JM, Reid DK (2002) The learning theory of Piaget and Inhedler. iUniverse Inc"/>
+
+    <meta name="citation_reference" content="Garrett M (2007) Sub space: enhancing the spatial awareness of trainee submariners using 3D simulation environments. Unpublished undergraduate project report. Edith Cowan University, Perth"/>
+
+    <meta name="citation_reference" content="Golledge R (1988) Integrating spatial knowledge. In: Proceedings of the international geographical congress, Sydney"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comput Graph World; citation_title=Tornado watchers; citation_author=K Moltenbrey; citation_volume=23; citation_issue=9; citation_publication_date=2000; citation_pages=24-28; citation_id=CR9"/>
+
+    <meta name="citation_reference" content="Peuquet DJ (2002) Representations of space and time. Guilford Press, New York"/>
+
+    <meta name="citation_reference" content="citation_journal_title=J Commun; citation_title=Virtual reality: an instructional medium for visual-spatial tasks; citation_author=JW Regian, WL Shebiske; citation_volume=42; citation_issue=4; citation_publication_date=1990; citation_pages=136-149; citation_doi=10.1111/j.1460-2466.1992.tb00815.x; citation_id=CR11"/>
+
+    <meta name="citation_reference" content="Sebrechts MM (2000) Using virtual environments for training of spatial navigation. Human Syst Inform Anal Centre Gateway Mag 11(2):1&#8211;4. 
+                    http://www.dtic.mil/dticasd/docs-gw/gateway.html
+                    
+                   as of 18 October, 2008"/>
+
+    <meta name="citation_reference" content="Seamon AG, Bradley SK, Hays RT, Vincenzi, DA (1999) VESUB technology demonstration: project summary. Naval air warfare center training systems division (Orlando), report no. A565263"/>
+
+    <meta name="citation_reference" content="citation_title=The development of spatial representations of large-scale environments; citation_inbook_title=Advances in child development and behavior, chap 10; citation_publication_date=1975; citation_pages=9-55; citation_id=CR14; citation_author=AW Siegel; citation_author=SH White; citation_publisher=Academic Press"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Geogr Anal; citation_title=Computational process modelling spatial cognition and behavior; citation_author=TR Smith, L Pellegrino, R Golledge; citation_volume=14; citation_publication_date=1982; citation_pages=305-325; citation_id=CR15"/>
+
+    <meta name="citation_reference" content="Shemyakin F (1962) General problems of orientation in space and space representations. In Ananyev BG (ed) Psychological science in the USSR. US office of technical reports, NTIS, no. TF62-11083"/>
+
+    <meta name="citation_reference" content="Stone RJ (2002a) Interactive 3D and is role in synthetic environment-based equipment acquisition (SeBA). Unpublished report prepared under MoD contract RD018-05103 for the director of integrated Systems, Dstl, Farnborough"/>
+
+    <meta name="citation_reference" content="Stone RJ (2002b) Applications of virtual environment technologies to human factors in nautical training. In: Proceedings of human factors in ship design and operation. Royal Institution of Naval Architects (RINA), London"/>
+
+    <meta name="citation_reference" content="Stone RJ (2004) Rapid assessment of tasks and context (RATaC) for technology-based training. In: Proceedings of I/ITSEC 2004 (I/ITSEC; Orlando, Florida), 6&#8211;9 December, 2004"/>
+
+    <meta name="citation_reference" content="Stone RJ (2005) Serious gaming&#8211;&#8211;virtual reality&#8217;s saviour? In: Proceedings of virtual systems and multi-media conference, Ghent, pp 773&#8211;786"/>
+
+    <meta name="citation_reference" content="Stone RJ (2008) Human factors guidelines for interactive 3D and games-based training systems design. Human factors integration defence technology centre document. Available from 
+                    http://www.hfidtc.com
+                    
+                   as of 18 October, 2008"/>
+
+    <meta name="citation_reference" content="Stone RJ, Connell AP (1999) Virtual reality and SMQ training. An initial investigation and recommendations. Unpublished VR Solutions Ltd. internal report prepared for Flag Officer Submarines (FOSM)"/>
+
+    <meta name="citation_reference" content="Whyte J (2004) Virtual reality and the built environment. Architectural Press"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Comput Graph Appl; citation_title=Using virtual environments to train firefighters; citation_author=DL Tate, L Sibert, T King; citation_volume=17; citation_issue=6; citation_publication_date=1997; citation_pages=23-29; citation_doi=10.1109/38.626965; citation_id=CR24"/>
+
+    <meta name="citation_reference" content="Wikipedia (2008) Major submarine incidents since 2000. 
+                    http://en.wikipedia.org/wiki/Major_submarine_incidents_since_2000
+                    
+                   as of 18 October, 2008"/>
+
+    <meta name="citation_author" content="Robert Stone"/>
+
+    <meta name="citation_author_email" content="r.j.stone@bham.ac.uk"/>
+
+    <meta name="citation_author_institution" content="Human Interface Technologies Team, School of Electronic, Electrical and Computer Engineering, University of Birmingham, Birmingham, UK"/>
+
+    <meta name="citation_author" content="Antoinette Caird-Daley"/>
+
+    <meta name="citation_author_email" content="a.caird-daley@cranfield.ac.uk"/>
+
+    <meta name="citation_author_institution" content="Department of Systems Engineering and Human Factors, Cranfield University, Bedford, UK"/>
+
+    <meta name="citation_author" content="Kevin Bessell"/>
+
+    <meta name="citation_author_email" content="Kevin.A.Bessell@baesystems.com"/>
+
+    <meta name="citation_author_institution" content="Aerosystems International, Yeovil, UK"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-008-0110-1&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2009/03/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-008-0110-1"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="SubSafe : a games-based training system for submarine safety and spatial awareness (Part 1)"/>
+        <meta property="og:description" content="Recent advances in hardware and software technologies for computer games have proved to be more than capable of delivering quite detailed virtual environments on PC platforms and gaming consoles for so-called “serious” applications, at a fraction of the cost than was the case 8&amp;nbsp;years ago. SubSafe is a recent example of what can be achieved in part-task naval training applications using gaming technologies, exploiting freely available, freely distributable software. SubSafe is a proof-of-concept demonstrator that presents end users with an interactive, real-time three-dimensional model of part of a Trafalgar Class submarine. This “Part 1” paper presents the background to the SubSafe project and outlines the experimental design for a pilot study being conducted between August 2008 and January 2009, in conjunction with the Royal Navy’s Submarine School in Devonport. The study is investigating knowledge transfer from the classroom to a real submarine environment (during week&amp;nbsp;7 of the students’ “Submarine Qualification Dry” course), together with general usability and interactivity assessments. Part 2 of the paper (to be completed in early 2009) will present the results of these trials and consider future extensions of the research into other submarine training domains, including periscope ranging and look-interval assessment skills, survival systems deployment training and the planning and rehearsal of submersible rescue operations."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>SubSafe : a games-based training system for submarine safety and spatial awareness (Part 1) | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-008-0110-1","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Serious games, Games-based training, Submarine safety, Virtual environments, Defence simulation","kwrd":["Serious_games","Games-based_training","Submarine_safety","Virtual_environments","Defence_simulation"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-008-0110-1","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-008-0110-1","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=110;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-008-0110-1">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            
+                     <i>SubSafe</i>: a games-based training system for submarine safety and spatial awareness (Part 1)
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-008-0110-1.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-008-0110-1.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">SI: Serious Gaming</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2008-11-28" itemprop="datePublished">28 November 2008</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">
+                     <i>SubSafe</i>: a games-based training system for submarine safety and spatial awareness (Part 1)</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Robert-Stone" data-author-popup="auth-Robert-Stone" data-corresp-id="c1">Robert Stone<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of Birmingham" /><meta itemprop="address" content="grid.6572.6, 0000000419367486, Human Interface Technologies Team, School of Electronic, Electrical and Computer Engineering, University of Birmingham, Edgbaston, Birmingham, B15 2TT, UK" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Antoinette-Caird_Daley" data-author-popup="auth-Antoinette-Caird_Daley">Antoinette Caird-Daley</a></span><sup class="u-js-hide"><a href="#Aff2">2</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Cranfield University" /><meta itemprop="address" content="grid.12026.37, 0000000106792190, Department of Systems Engineering and Human Factors, Cranfield University, Bedford, UK" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Kevin-Bessell" data-author-popup="auth-Kevin-Bessell">Kevin Bessell</a></span><sup class="u-js-hide"><a href="#Aff3">3</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Aerosystems International" /><meta itemprop="address" content="Aerosystems International, Yeovil, UK" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 13</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">3</span>–<span itemprop="pageEnd">12</span>(<span data-test="article-publication-year">2009</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">390 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">16 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                    
+                        <li class="c-article-metrics-bar__item">
+                            <p class="c-article-metrics-bar__count">0 <span class="c-article-metrics-bar__label">Altmetric</span></p>
+                        </li>
+                    
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-008-0110-1/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>Recent advances in hardware and software technologies for computer games have proved to be more than capable of delivering quite detailed virtual environments on PC platforms and gaming consoles for so-called “serious” applications, at a fraction of the cost than was the case 8 years ago. <i>SubSafe</i> is a recent example of what can be achieved in part-task naval training applications using gaming technologies, exploiting freely available, freely distributable software. <i>SubSafe</i> is a proof-of-concept demonstrator that presents end users with an interactive, real-time three-dimensional model of part of a <i>Trafalgar</i> Class submarine. This “Part 1” paper presents the background to the <i>SubSafe</i> project and outlines the experimental design for a pilot study being conducted between August 2008 and January 2009, in conjunction with the Royal Navy’s Submarine School in Devonport. The study is investigating knowledge transfer from the classroom to a real submarine environment (during week 7 of the students’ “Submarine Qualification Dry” course), together with general usability and interactivity assessments. Part 2 of the paper (to be completed in early 2009) will present the results of these trials and consider future extensions of the research into other submarine training domains, including periscope ranging and look-interval assessment skills, survival systems deployment training and the planning and rehearsal of submersible rescue operations.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Introduc<b>t</b>ion</h2><div class="c-article-section__content" id="Sec1-content"><p>In many countries, submarines––be they conventional diesel or nuclear “hunter-killer” boats (SSKs and SSNs), or strategic missile platforms (SSBNs)––help maintain a level of deterrence in increasingly fragile socio-political situations. Once described in the early 1900s by Vice Admiral Arthur Wilson as “underhand, unfair, and damned un-English”, submarine fleets are, today, routinely deployed in support of a range of duties, from coastal protection and patrol to the support of scientific research in some of the most inhospitable places on the planet. Of course, with such a range of hostile natural and conflict-ridden environments, danger is inevitable and, since the year 2000, there have been a number of incidents involving submarines from some of the world’s major sea powers (e.g. Wikipedia <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Wikipedia (2008) Major submarine incidents since 2000. &#xA;                    http://en.wikipedia.org/wiki/Major_submarine_incidents_since_2000&#xA;                    &#xA;                   as of 18 October, 2008" href="/article/10.1007/s10055-008-0110-1#ref-CR25" id="ref-link-section-d82346e369">2008</a>).</p><p>Two incidents in particular, both involving submarines of British origin, drove the motivation to reassess the way in which present-day submariners are trained, particularly with regard to their spatial knowledge relating to the layout of safety-critical systems and items of life-saving equipment. The first occurred onboard Her Majesty’s Canadian Submarine HMCS <i>Chicoutimi</i> (an ex-UK <i>Upholder</i> Class SSK). On October 5, 2004 the <i>Chicoutimi</i> was running on the surface through heavy seas to the northwest of Ireland. The submarine was struck by a large wave and some 2,000 L of water entered the vessel through open fin hatches. The water caused electrical shorting in the vicinity of the captain’s cabin and the ensuing fire disabled nine members of the crew as a result of smoke inhalation. Unfortunately one of the crew later died.</p><p>The second incident occurred onboard HMS <i>Tireless</i> (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0110-1#Fig1">1</a>) in March 2007. <i>Tireless</i> was taking part in under-ice exercises north of Alaska, together with a US submarine. During what should have been a routine lighting of a self-contained oxygen generator (SCOG)––part of the survival equipment in the submarine’s Forward Escape Compartment––the generator exploded, killing two crewmembers and seriously injuring a third. The submarine’s crew managed to manoeuvre the vessel to thin ice, some 2 miles away, at which point she was able to surface safely and implement ventilation procedures.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0110-1/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0110-1/MediaObjects/10055_2008_110_Fig1_HTML.jpg?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0110-1/MediaObjects/10055_2008_110_Fig1_HTML.jpg" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p>HMS <i>Tireless</i>––a British SSN, taking part in an Arctic scientific survey (ICEX 2007; Source: HMS <i>Tireless</i>/Royal Navy Website)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0110-1/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>It should be stressed here that there is absolutely no evidence to suggest that deficiencies in current basic submarine qualification (SMQ) training contributed to the outcomes of these incidents. Indeed, in both cases, the actions of the submarine crews were highly praised by the Boards of Inquiry. However, there is anecdotal evidence to suggest that these two incidents have prompted both the Canadian and Royal Navies (and, indeed, the Royal Australian Navy) to review submarine safety training in general, particularly for naval personnel joining vessels for the first time (or after a long period of detachment). Part of these reviews involves an assessment of current forms of classroom-based [or “Submarine Qualification (Dry)”––SMQ(D)] training media and the potential benefits offered by more interactive digital systems, including interactive 3D (i3D) and games-based simulaton.</p><p>This paper addresses one such interactive media review being conducted by the UK’s Human Factors Integration Defence Technology Centre (<a href="http://www.hfidtc.com">http://www.hfidtc.com</a>), in conjunction with instructor and student submariners from the Royal Navy. In particular, the paper describes a pilot study evaluating a prototype i3D product called <i>SubSafe</i>––a Virtual Reality (VR) simulator based on contemporary video games technologies and designed to enhance spatial awareness training during SMQ(D) classroom exercises.</p></div></div></section><section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">Spatial awareness training</h2><div class="c-article-section__content" id="Sec2-content"><p>Spatial awareness is a cognitive ability that enables one to be aware of one’s location in space, both statically (e.g. the relationship between one’s own body and objects in a given space) and dynamically––sometimes referred to as <i>navigational</i> awareness (e.g. moving between objects, revising or updating one’s immediate awareness). The term spatial awareness can be applied to the immediate environment in which one exists or to a remote environment in which an extension of oneself has been deployed, such as a remotely operated vehicle or manipulator, or a virtual environment (e.g. Regian and Shebiske <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1990" title="Regian JW, Shebiske WL (1990) Virtual reality: an instructional medium for visual-spatial tasks. J Commun 42(4):136–149" href="/article/10.1007/s10055-008-0110-1#ref-CR11" id="ref-link-section-d82346e448">1990</a>; Darken and Sibert <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1993" title="Darken RP, Sibert JL (1993) A toolset for navigation in virtual environments. In: Proceedings of the ACM symposium on user interface software and technology. Atlanta, pp 157–165" href="/article/10.1007/s10055-008-0110-1#ref-CR4" id="ref-link-section-d82346e451">1993</a>; Chen et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Chen JYC, Haas EC, Barnes MJ (2007) Human performance issues and user interface design for teleoperated robots. IEEE Trans Syst Man Cybern C Appl Rev 37(6):1231" href="/article/10.1007/s10055-008-0110-1#ref-CR3" id="ref-link-section-d82346e454">2007</a>).</p><p>Building on the 1950s learning research of developmental psychologists Piaget and Inhelder (e.g. Gallagher and Reid <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Gallagher JM, Reid DK (2002) The learning theory of Piaget and Inhedler. iUniverse Inc" href="/article/10.1007/s10055-008-0110-1#ref-CR6" id="ref-link-section-d82346e460">2002</a>; Siegel and White <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1975" title="Siegel AW, White SH (1975) The development of spatial representations of large-scale environments. In: Reese HW (ed) Advances in child development and behavior, chap 10. Academic Press, New York, pp 9–55" href="/article/10.1007/s10055-008-0110-1#ref-CR14" id="ref-link-section-d82346e463">1975</a>) proposed a hierarchical development of spatial awareness or cognition consisting of three distinct elements––“landmark” knowledge, “route” (or procedural) knowledge and “survey” knowledge (Shemyakin <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1962" title="Shemyakin F (1962) General problems of orientation in space and space representations. In Ananyev BG (ed) Psychological science in the USSR. US office of technical reports, NTIS, no. TF62-11083" href="/article/10.1007/s10055-008-0110-1#ref-CR16" id="ref-link-section-d82346e466">1962</a>; also referred to as “configurational” knowledge Peuquet <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Peuquet DJ (2002) Representations of space and time. Guilford Press, New York" href="/article/10.1007/s10055-008-0110-1#ref-CR10" id="ref-link-section-d82346e469">2002</a>; Whyte <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Whyte J (2004) Virtual reality and the built environment. Architectural Press" href="/article/10.1007/s10055-008-0110-1#ref-CR23" id="ref-link-section-d82346e472">2004</a>).</p><p>Landmark knowledge relates to the presence of dominant single objects or even groups of objects (Smith et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1982" title="Smith TR, Pellegrino L, Golledge R (1982) Computational process modelling spatial cognition and behavior. Geogr Anal 14:305–325" href="/article/10.1007/s10055-008-0110-1#ref-CR15" id="ref-link-section-d82346e478">1982</a>) in any given environment and how these objects are memorised and organised to provide cognitive “anchor points” (Peuquet <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Peuquet DJ (2002) Representations of space and time. Guilford Press, New York" href="/article/10.1007/s10055-008-0110-1#ref-CR10" id="ref-link-section-d82346e481">2002</a>) supporting navigation through natural or man-made environments.</p><p>Route knowledge refers to the development of a familiarity with specific paths or routes between known landmarks. There may be more than one route between different landmarks, but knowledge about the relationship between these routes (facilitating “short-cuts”, for example) has not developed at this stage (Whyte <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Whyte J (2004) Virtual reality and the built environment. Architectural Press" href="/article/10.1007/s10055-008-0110-1#ref-CR23" id="ref-link-section-d82346e487">2004</a>). Golledge (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1988" title="Golledge R (1988) Integrating spatial knowledge. In: Proceedings of the international geographical congress, Sydney" href="/article/10.1007/s10055-008-0110-1#ref-CR8" id="ref-link-section-d82346e490">1988</a>) also points out that such knowledge of specific paths between landmarks will help in the advance planning of routes and their alternatives.</p><p>Finally, survey or <i>configurational</i> knowledge, as described by Whyte (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Whyte J (2004) Virtual reality and the built environment. Architectural Press" href="/article/10.1007/s10055-008-0110-1#ref-CR23" id="ref-link-section-d82346e500">2004</a>), is an <i>integration</i> of landmark and route knowledge (Shemyakin <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1962" title="Shemyakin F (1962) General problems of orientation in space and space representations. In Ananyev BG (ed) Psychological science in the USSR. US office of technical reports, NTIS, no. TF62-11083" href="/article/10.1007/s10055-008-0110-1#ref-CR16" id="ref-link-section-d82346e506">1962</a>) to such an extent that one can compile reasonably accurate maps of an environment or can describe object locations and distances with considerable accuracy.</p><p>It should be stressed here that Siegel and White’s research (and many of the others quoted above) concentrated on the development of spatial awareness in children. Application of the landmark-route-survey taxonomy does not have any clear-cut support when attempting to identify similar cognitive processes in adults confronted with navigating new and unfamiliar environments. As Whyte (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Whyte J (2004) Virtual reality and the built environment. Architectural Press" href="/article/10.1007/s10055-008-0110-1#ref-CR23" id="ref-link-section-d82346e512">2004</a>) points out, adults already possess significant spatial skills and may be able to attain a level of survey knowledge without progressing through the landmark and route stages. She goes on to suggest that the early theories also do not account for adults’ ability to form and apply survey knowledge via abstract information, such as maps or other representations of space. This is supported by Peuquet (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Peuquet DJ (2002) Representations of space and time. Guilford Press, New York" href="/article/10.1007/s10055-008-0110-1#ref-CR10" id="ref-link-section-d82346e515">2002</a>), who points out that the early Piagetian perspective adopted by Siegel and others emphasises the development of spatial awareness through direct, real-world, sensorimotor experience and does not account for the acquisition of knowledge via maps, photographs, television, verbal descriptions, scale models and so on.</p><p>Nevertheless the landmark-route-survey hierarchy is recognised by many as a useful means of categorising spatial knowledge for research and experimentation and has been used by researchers addressing the use of i3D and VR techniques to support spatial navigation of built environments.</p><h3 class="c-article__sub-heading" id="Sec3">Spatial awareness and virtual environments</h3><p>In 1995 a US Navy i3D study was undertaken using the decommissioned Landing Ship Dock USS <i>Shadwell</i>, a test facility in Alabama used for full-scale fire research investigations into damage control and ship survivability (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0110-1#Fig2">2</a>, left image; Tate et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="Tate DL, Sibert L, King T (1997) Using virtual environments to train firefighters. IEEE Comput Graph Appl 17(6):23–29" href="/article/10.1007/s10055-008-0110-1#ref-CR24" id="ref-link-section-d82346e533">1997</a>). <i>Shadwell</i> was internally modified to represent a variety of ships and also possessed several deck levels representative of a submarine. In the 1995 study, 12 enlisted naval fire-fighters (eight male, four female) took part in the <i>Shadwell</i> study, split into two groups––“traditional training” and “VR training”. Following conventional task briefings, the traditional group performed their allotted task onboard the <i>Shadwell</i>, and performance measurements (e.g. time, route-finding errors, etc.) were taken. The VR group used “immersive” (head-mounted display-based) technologies to familiarise themselves with the landmarks and layout of the ship and to rehearse their assigned tasks with and without simulated smoke and fire (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0110-1#Fig2">2</a>, right image). They then performed their tasks onboard the <i>Shadwell</i>, and the same performance measurements were taken.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0110-1/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0110-1/MediaObjects/10055_2008_110_Fig2_HTML.jpg?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0110-1/MediaObjects/10055_2008_110_Fig2_HTML.jpg" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p>USS <i>Shadwell</i> training facility––real (<i>left image</i>) and virtual (<i>right image</i>). Sources, <a href="http://www.uss-shadwell.0catch.com/">http://www.uss-shadwell.0catch.com/</a> as of 18/10/2008, and Tate et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="Tate DL, Sibert L, King T (1997) Using virtual environments to train firefighters. IEEE Comput Graph Appl 17(6):23–29" href="/article/10.1007/s10055-008-0110-1#ref-CR24" id="ref-link-section-d82346e578">1997</a>)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0110-1/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>Results showed that there was a measurable improvement in the performance of firefighters that used VR training over firefighters without VR training in route-finding and firefighting tasks. In route-finding, the VR group was, on average, 30 s faster than the traditional group over a 2-min trial. All members of the traditional group made at least one wrong turn, while only one VR group member made any wrong turns. In the firefighting tasks, the majority of the participants in the traditional group made wrong turns. Not one of the VR group did so. In addition to the quantitative results obtained during the tasks, participants expressed their increased confidence in performing their tasks because of the spatial familiarisation and enhanced situational awareness that they received through using VR. Most members of the VR group used VR to investigate the scene and to plan strategies, so that during the fire they were able to concentrate on fighting the fire instead of finding their way through unfamiliar spaces.</p><p>In another example, and describing research at the Cognition and Virtual Reality Laboratory at the Catholic University of America, Sebrechts (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Sebrechts MM (2000) Using virtual environments for training of spatial navigation. Human Syst Inform Anal Centre Gateway Mag 11(2):1–4. &#xA;                    http://www.dtic.mil/dticasd/docs-gw/gateway.html&#xA;                    &#xA;                   as of 18 October, 2008" href="/article/10.1007/s10055-008-0110-1#ref-CR12" id="ref-link-section-d82346e595">2000</a>) evaluated the potential of VR to foster route and survey knowledge of unfamiliar places (specifically the School of Architecture building on the University campus). When asked to trace out a route in the Architecture building, those participants trained using an “immersive” VR system performed comparably to those trained using maps or exposed to the actual building. However, by reversing the route they had to trace in the building, the researchers found that the VR-trained participants did not perform as well as the other groups. This suggested that i3D models of built environments may only be appropriate for specific routes in a specific direction––extrapolating knowledge to other, similar routes appeared to be more difficult after VR training than in map-reading or real-world conditions.</p><p>Sebrechts and his colleagues also provided their VR-condition participants with an opportunity to explore the entire virtual Architectural building, enhanced with simple spherical objects that they had to locate (these would “emit” an auditory cue and change colour when located). Subsequent testing with photographs and a map of the building showed that those in the VR group performed markedly better at recalling object locations than those provided only with a map. In a final experiment, those trained in a VR condition where the building walls and floors were rendered opaque were able to draw more accurate floor plan representations than those provided with maps and access to the real building. The researchers concluded that survey knowledge may be acquired more quickly when virtual representations of environments are exploited (together with selective transparency effects), as opposed to exposure to the real-world equivalent.</p><h3 class="c-article__sub-heading" id="Sec4">Spatial awareness and submarine familiarisation</h3><p>How do these findings translate to the domain of submarine layout spatial awareness? A small number of historical studies have been conducted to address the application of VR to the design and operation of submarines, although not all of these have yielded any experimental data, due to a variety of project constraints.</p><p>Space does not permit a thorough coverage of all related submarine design and operation studies, such as the VESUB submarine handling and piloting system (e.g. Seamon et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Seamon AG, Bradley SK, Hays RT, Vincenzi, DA (1999) VESUB technology demonstration: project summary. Naval air warfare center training systems division (Orlando), report no. A565263" href="/article/10.1007/s10055-008-0110-1#ref-CR13" id="ref-link-section-d82346e610">1999</a>) and other UK, US and Australian simulation-based design activities (e.g. Biegel et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1998" title="Biegel PE, Brown SP, Mason TC, Poland DD (1998) Development of a personal computer simulation-based multimedia ship control training program. Johns Hopkins APL Tech Dig 19(4):470–481" href="/article/10.1007/s10055-008-0110-1#ref-CR2" id="ref-link-section-d82346e613">1998</a>; Edwards and Nilsson <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Edwards M, Nilsson U (2000) Virtual reality and simulation based design––fact or fiction in submarine platform design. In: Proceedings of UDT Pacific 2000" href="/article/10.1007/s10055-008-0110-1#ref-CR5" id="ref-link-section-d82346e616">2000</a>; Stone <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002a" title="Stone RJ (2002a) Interactive 3D and is role in synthetic environment-based equipment acquisition (SeBA). Unpublished report prepared under MoD contract RD018-05103 for the director of integrated Systems, Dstl, Farnborough" href="/article/10.1007/s10055-008-0110-1#ref-CR17" id="ref-link-section-d82346e619">2002a</a>). Instead, the paper concentrates on some of the early UK developments in exploiting interactive media for vessel design, together with more recent and relevant developments in i3D spatial awareness training for submariners.</p><p>Working collaboratively with Rolls-Royce and Rolls-Royce &amp; Associates (RR&amp;A), Vickers Shipbuilding and Engineering Limited (VSEL, now part of BAE Systems) began their venture into VR in 1993 with the ambitious goal of modelling complete submarine environments. At VSEL in Barrow-in-Furness, a huge one-fifth scale model of a nuclear submarine was housed within a dedicated storage facility (one small part of which is shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0110-1#Fig3">3</a>, left image). Model human figures (such as the popular “Action Man” or “GI Joe” dolls) were used for basic ergonomics evaluations. The financial and manpower resources required to build and maintain models of this complexity over the entire life of, for example, the <i>Vanguard</i> class of submarine was huge, not to mention the insurance implications of protecting such a facility. VSEL saw the potential of VR to eradicate these physical models in the life cycle of a submarine, thereby not only bringing major commercial benefits to the company’s design, evaluation and concurrent engineering activities, but also enhancing the project review, evaluation and training requirements of the Royal Navy and Ministry of Defence. Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0110-1#Fig3">3</a> (right image) is of a generic submarine machinery space developed for VSEL as a proof of concept, using their in-house computer-aided design (CAD) database. Today, BAE Systems at Barrow uses dedicated real-time visualisation facilities in support of the <i>Astute</i> Class submarine programme and have demonstrated significant time-to-market savings.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0110-1/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0110-1/MediaObjects/10055_2008_110_Fig3_HTML.jpg?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0110-1/MediaObjects/10055_2008_110_Fig3_HTML.jpg" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p>One-fifth scale model of a submarine operations room (<i>left image</i>); virtual representation of a generic submarine machinery space (<i>right image</i>). Source: author (Stone’s) archives</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0110-1/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>Also in the mid-1990s, the Human Factors team at RR&amp;A conducted two short studies with the University of Nottingham and VR Solutions Ltd. of Salford to evaluate the potential of VR for resolving submarine maintenance engineering problems, thereby reducing time spent within hazardous operational environments. A “desktop” VR demonstrator based on Superscape’s Virtual Reality Toolkit (VRT) simulated submarine spaces and included key landmark features such as ladders, piping, electrical generation machinery and switchboards. Viewpoints could be created that simulated the viewpoints of different sizes of engineers’ virtual “bodies” whilst standing, kneeling and lying prone. Additional research addressed the design of a virtual “toolbox”, in order to simplify the process of dismantling, repairing and refitting of equipment.</p><p>The second RR&amp;A project utilised another VRT model, this time of a representative and simplified submarine reactor plant comprising major landmark features such as vessels, ladders, machinery components and large-bore piping. Underpinning the 3D model were fictitious dose-rate contours of the reactor plant, based on information generated from a health physics database. As the end user moved throughout the VR model, accumulated and instantaneous radiation doses were on a simple windowed interface surrounding the 3D view, together with a plan view and virtual coordinates of the user’s position, together with elapsed time (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0110-1#Fig4">4</a>). The plan for this system (which was never realised) was to evaluate how such an i3D trainer could optimise task performance by investigating the effect on dosage level of different access routes, working positions, shielding or plant states.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0110-1/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0110-1/MediaObjects/10055_2008_110_Fig4_HTML.jpg?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0110-1/MediaObjects/10055_2008_110_Fig4_HTML.jpg" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p>Interactive “Desktop VR” 3D model of highly simplified submarine reactor plant. Source: author (Stone’s) archives</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0110-1/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>Despite these early developments, it is only very recently that attention has focused on the use of i3D technologies to help the real end users of these designs––the submariners themselves––to become familiar with the layout of vessels before they actually embark on operational duties. In particular, research and development projects in the UK and Australia are under way to address the use of affordable and accessible training products that not only replace legacy training media in the classroom [e.g. whiteboards, TABs (Training Aid Booklets), posters and PowerPoint presentations], but can also be used by students for revision or rehearsal outside of scheduled training periods. In particular, low-cost hardware and software technologies made available from the computer or video games industry are revolutionising the i3D community (Stone <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Stone RJ (2005) Serious gaming––virtual reality’s saviour? In: Proceedings of virtual systems and multi-media conference, Ghent, pp 773–786" href="/article/10.1007/s10055-008-0110-1#ref-CR20" id="ref-link-section-d82346e692">2005</a>), not only in defence sectors but also in aerospace, medicine, cultural heritage and education, to mention but a few.</p><h3 class="c-article__sub-heading" id="Sec5">Virtual reality and submarine spatial awareness (UK; 1997)</h3><p>Following the withdrawal of funding in 1996 for a “Multi-Level Machine-Based Trainer” (MLMBT) project for SSBN (<i>Vanguard</i> Class) submarine familiarisation, a 2-year study was conducted by VR Solutions Ltd. with the support of Flag Officer Submarines (FOSM) to assess the future relevance and potential of VR technologies for SMQ(D) training. FOSM’s main concern was the diminishing access on the part of submarine students to key physical assets for the purpose of familiarisation training, evacuation procedures, safety equipment location and incident muster procedures. Such assets need to be at their maximum operational efficiency for obvious defence and commercial reasons. Even when they are available at the dockside, during refit for instance, they are not the most ideal of training environments, courtesy of the presence of a maintenance workforce, external services, piping and temporary testing systems. Indeed, many compartments will bear no resemblance to the at-sea condition of the submarine.</p><p>The final study report to FOSM (Stone and Connell <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Stone RJ, Connell AP (1999) Virtual reality and SMQ training. An initial investigation and recommendations. Unpublished VR Solutions Ltd. internal report prepared for Flag Officer Submarines (FOSM)" href="/article/10.1007/s10055-008-0110-1#ref-CR22" id="ref-link-section-d82346e709">1999</a>) described a solution based on combining simple 3D models of the main submarine decks and compartments with digital panoramas (as supported by such interactive 360° products as QuickTime VR or Ipix). In addition, a limited proof-of-concept demonstrator was developed. Digital panoramas were chosen to overcome the huge financial and computational costs of implementing every pipe, cable, valve and other object or system evident onboard vessels of this class. By navigating around and through the simple VR representations of internal submarine spaces and landmark features, end users could launch variable-transparency panoramas from specific node points, thereby being able to appreciate the visual complexity of each compartment (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0110-1#Fig5">5</a>).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0110-1/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0110-1/MediaObjects/10055_2008_110_Fig5_HTML.jpg?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0110-1/MediaObjects/10055_2008_110_Fig5_HTML.jpg" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p>“Fading” digital panoramas designed to bring contextual detail to a simplified i3D SSN forward escape compartment model. <i>Lower image</i> shows an animated “cutaway” model of an emergency control blow valve and the result of its actuation on the submarine. Source: author (Stone’s) archives</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0110-1/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>“Hot spots” within the panoramas and 3D scenes were linked to additional 3D objects, containing recognisable models of important and safety-critical equipment. In the case of the 3D objects, once the hot spot had been interrogated (via a single mouse click), the object appeared, complete only with those features and labels relevant to its identification and operation (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0110-1#Fig5">5</a>, lower image). The end user was then able to initiate any animated or interactive features (including sound effects) to demonstrate important procedures and processes.</p><p>Although these features were only ever implemented within a 3D representation of the Forward Escape Compartment (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0110-1#Fig5">5</a>), the demonstrator confirmed the potential of exploiting interactive 3D media for SMQ(D) virtual walkthrough training (Stone <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002b" title="Stone RJ (2002b) Applications of virtual environment technologies to human factors in nautical training. In: Proceedings of human factors in ship design and operation. Royal Institution of Naval Architects (RINA), London" href="/article/10.1007/s10055-008-0110-1#ref-CR18" id="ref-link-section-d82346e749">2002b</a>).</p><h3 class="c-article__sub-heading" id="Sec6">Australian location and scenario training system (LASTS)</h3><p>The location and scenario training system (LASTS) was developed by the Royal Australian Navy to evaluate the exploitation of computer games technologies in the training of submariners joining <i>Collins</i> Class submarines. LASTS currently takes the form of a 3D reconstruction of the <i>Collins</i> Class main generator room (MGR) and is powered by the <i>Unreal Tournament</i> games engine.</p><p>An experimental project designed and conducted by a student at Perth’s Edith Cowan University presented participants with a simplified exercise requiring the location of items relevant to a 12-point Safety Round performed inside the MGR (Garrett <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Garrett M (2007) Sub space: enhancing the spatial awareness of trainee submariners using 3D simulation environments. Unpublished undergraduate project report. Edith Cowan University, Perth" href="/article/10.1007/s10055-008-0110-1#ref-CR7" id="ref-link-section-d82346e773">2007</a>). Five student submariners were exposed to LASTS and were then required to conduct the same exercise on-board a Collins class submarine. This mode of learning was compared to traditional non-immersive classroom teaching involving five additional student submariners who were also required to complete the same exercise inside the MGR. A mixture of qualitative and quantitative approaches to data collection and analysis was used to ascertain the effectiveness of LASTS as well as the contributing factors to this and learners’ perception of the value of the environment. The research is ongoing, but preliminary results suggest that training within LASTS was at least, if not more effective than traditional non-immersive training methods. There is also some evidence to suggest that the LASTS students possessed a better overall spatial representation of the MGR compared to those who received traditional classroom-based training.</p></div></div></section><section aria-labelledby="Sec7"><div class="c-article-section" id="Sec7-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec7">The <i>SubSafe</i> training i3D prototype</h2><div class="c-article-section__content" id="Sec7-content"><p>Nearly 7 years after the original FOSM study described above had been completed, the UK’s Human Factors Integration Defence Technology Centre (HFI DTC) was approached by representatives of the MoD’s Submarine Integrated Project Team (IPT). Having read the FOSM report and been made aware of other games-based and i3D simulation projects, sufficient interest had been generated within the MoD to enable the SMQ(D) project to be revisited. Working in conjunction with a small Shaftesbury-based company, Incredible Box, and instructor personnel at SMQ (South), part of the Royal Navy’s Submarine School based at HMS Drake in Devonport, the HFI DTC delivered the <i>SubSafe</i> i3D prototype in 2007.</p><p>
+                        <i>SubSafe</i> consists of a 3D model of a British <i>Trafalgar</i> Class SSN, moored at a virtual reconstruction of part of HM Naval Base in Devonport (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0110-1#Fig6">6</a>). The computer-generated boat can be explored by student submariners in a “first-person” game style––navigating decks and compartments (e.g. Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0110-1#Fig7">7</a>) simply by using a PC or laptop mouse and the arrow keys of a conventional keyboard. All decks forward of bulkhead 59 (aft of the control room) have been modelled with landmark features in mind, as have key items of safety-critical and life-saving equipment [e.g. fire extinguishers and hose units, high-pressure air valves, emergency breathing system (EBS) masks, etc.]. Whilst it has not been possible to include every valve, pipe and subsystem, the virtual submarine model consists of some 30 compartments and 500 different objects. The software development toolkit underpinning the <i>SubSafe</i> tool, <i>Ogre3D</i>, can be downloaded from the Web, distributed completely free of charge and can be hosted on a laptop costing less than £500 (approximately $870).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-6"><figure><figcaption><b id="Fig6" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 6</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0110-1/figures/6" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0110-1/MediaObjects/10055_2008_110_Fig6_HTML.jpg?as=webp"></source><img aria-describedby="figure-6-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0110-1/MediaObjects/10055_2008_110_Fig6_HTML.jpg" alt="figure6" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-6-desc"><p>External view of the virtual SSN in <i>SubSafe</i>. Source: Author (Stone’s) archives</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0110-1/figures/6" data-track-dest="link:Figure6 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-7"><figure><figcaption><b id="Fig7" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 7</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0110-1/figures/7" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0110-1/MediaObjects/10055_2008_110_Fig7_HTML.jpg?as=webp"></source><img aria-describedby="figure-7-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0110-1/MediaObjects/10055_2008_110_Fig7_HTML.jpg" alt="figure7" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-7-desc"><p>
+                                    <i>SubSafe</i> SSN interior view of virtual operations room. Source: Author (Stone’s) archives</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0110-1/figures/7" data-track-dest="link:Figure7 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>Although the ability to interact with specific items of equipment throughout the submarine was not a formal requirement imposed on the first version of <i>SubSafe</i>, it was decided to demonstrate “best practice” in virtual interactivity (see also Stone <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Stone RJ (2008) Human factors guidelines for interactive 3D and games-based training systems design. Human factors integration defence technology centre document. Available from &#xA;                    http://www.hfidtc.com&#xA;                    &#xA;                   as of 18 October, 2008" href="/article/10.1007/s10055-008-0110-1#ref-CR21" id="ref-link-section-d82346e864">2008</a>) by allowing users to select and manipulate a range of objects throughout the 3D submarine model. The interactive style was based on that designed for a virtual <i>Tornado</i> avionics training facility (ATF), delivered to RAF Marham in the late 1990s (Moltenbrey <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Moltenbrey K (2000) Tornado watchers. Comput Graph World 23(9):24–28" href="/article/10.1007/s10055-008-0110-1#ref-CR9" id="ref-link-section-d82346e870">2000</a>; Stone <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Stone RJ (2004) Rapid assessment of tasks and context (RATaC) for technology-based training. In: Proceedings of I/ITSEC 2004 (I/ITSEC; Orlando, Florida), 6–9 December, 2004" href="/article/10.1007/s10055-008-0110-1#ref-CR19" id="ref-link-section-d82346e873">2004</a>). The ATF was designed to train avionics engineers to isolate (pre-programmed) faults in line replaceable units (LRUs), either by inspecting individual virtual LRUs, or by applying appropriate virtual test equipment at various points in the avionics systems network. In keeping with the ATF system design, objects such as valves, items of safety equipment, hatches, doors and panels can be selected, “extracted” and manipulated using simple “point-and-click” mouse inputs.</p><p>The key objective of the <i>SubSafe</i> evaluation trials is to evaluate the effectiveness of this games-based spatial awareness trainer as a supplement to current SMQ(D) classroom-based training. Specifically, it is hypothesised that real-time, i3D training afforded by <i>SubSafe</i> will enhance students’ abilities to locate safety-critical items of equipment on board an actual <i>Trafalgar</i> Class submarine in week 7 of their SMQ(D) course. The evaluation study also seeks to capture the reactions of the student participants and the SMQ Instructors to <i>SubSafe</i> as a training device.</p><h3 class="c-article__sub-heading" id="Sec8">
+                           <i>SubSafe</i> evaluation trials</h3><p>Since <i>SubSafe</i> has been designed specifically for the SMQ(D) course, the evaluation protocol has been developed by the HFI DTC in close consultation with SMQ Instructors. Particular consideration has been given to the logistics of integrating the study into the SMQ(D) course format to minimise any disruption to training, to limit the number of personnel involved and to make optimum use of the resources required (e.g. submarine access). Ethics approval was also required from the Ministry of Defence Research Ethics Committee (MoDREC) prior to the collection of trial data, and this was forthcoming in July 2008, enabling the evaluation trials to begin the following month.</p><h3 class="c-article__sub-heading" id="Sec9">Pilot study design</h3><p>An independent-groups experimental design is being employed. There is one independent variable (IV), namely the method of presentation of <i>SubSafe</i>. The IV has three levels (i.e. three different presentational modes) and, as a consequence, three experimental groups. These are:</p><ul class="u-list-style-bullet">
+                    <li>
+                      <p>a control group, members of which are not given access to the <i>SubSafe</i> system;</p>
+                    </li>
+                    <li>
+                      <p>a “passive presentation” group who receive a video presentation of <i>SubSafe</i> delivered by SMQ Instructors to illustrate the layout of the boat and the location of specific safety critical items of equipment;</p>
+                    </li>
+                    <li>
+                      <p>a “free roam” group who are afforded hands-on access to <i>SubSafe</i> and are required to navigate the virtual submarine model in real time, undertaking search-and-locate tasks for the same specific items of safety-critical equipment as were presented to the passive presentation group.</p>
+                    </li>
+                  </ul>
+                        <p>One dependent variable is being measured: accuracy in locating and identifying safety-critical items of equipment whilst undertaking a short walkthrough test on board a <i>Trafalgar</i> Class submarine during week 7 of the SMQ(D) course. Participants’ ratings of the effectiveness of <i>SubSafe</i> as a training device are also being captured by means of a post-trial questionnaire. The questionnaire is administered to all participants, including the control group (who will be given hands-on access to <i>SubSafe</i> after their week 7 walkthrough).</p><p>Each of the trials in the study will be replicated over a 6-month period (from August 2008 to January 2009), thereby doubling the number of participants in each group and increasing the explanatory power of the statistical treatment of the data.</p><p>Twenty-six items of submarine equipment have been selected for inclusion in the walkthrough test on the basis that they were safety critical items with which all submariners are required to be familiar prior to joining a boat for the first time. Each item of equipment exists in the form of a 3D object onboard the virtual submarine. For each of the 26 equipment items included in the test, the questions require a verbal response from participants (e.g. ‘how do you operate <i>item x</i>?’), followed by a “seek-and-find” component, requiring each participant to locate the actual item on the submarine. The week 7 walkthrough test has been developed in conjunction with the SMQ Instructors.</p><p>Indeed, the walkthrough test has been designed to be administered by the SMQ Instructors and integrated with their own week 7 walkthrough question schedule. Space constraints onboard SSNs means that it is impossible for one of the HFI DTC researchers to accompany an SMQ Instructor without compromising the execution of the walkthrough. A response recording sheet has been prepared to record whether the response/location components of the test were delivered (a) correctly with no prompting, (b) correctly with prompting, or (c) incorrectly (despite prompting). This categorical recording approach was devised to accord with an established protocol of providing limited prompting during week 7 walkthrough tests. Finally the trial items were checked against <i>SubSafe</i> to ensure they were accurately rendered and labelled within the synthetic environment.</p><p>An 8-item questionnaire has been developed to gauge the reaction of the student participants to <i>SubSafe</i> as a training device. This questionnaire is administered after the week 7 walkthrough test. Two forms of the questionnaire have been developed, one for use with the passive and free-roam groups, and one for use with the control group to accommodate their delayed access to <i>SubSafe</i>. Participants respond using a 5-point rating scale, from “strongly disagree” to “strongly agree”, and they are also asked to provide qualitative responses to support their ratings.</p><p>Prior to participating in the trials, students are given a pre-trial briefing and a detailed participant information sheet. They are also required to read and sign an informed consent form. Participants also complete a short background information questionnaire to capture their age, intended area of specialisation on completion of their SMQ course, and their experience of playing computer or video games.</p><p>Participants in the passive and free-roam groups are then given access to <i>SubSafe.</i> The participants in the passive group receive <i>SubSafe</i> as a video presentation during week 6 of their SMQ(D) course. Week 6 is normally reserved for revision activities––the SMQ Instructors felt that <i>SubSafe</i> would be well suited to being presented at this time, with minimal disruption to the rest of the course. Participants in the free-roam group are given individual access to <i>SubSafe</i>, again in week 6 of the SMQ(D) course. In week 7 of the course, participants in all three conditions undertake the walkthrough test onboard an actual <i>Trafalgar</i> Class submarine. The test is administered by SMQ Instructors as they accompany individual student participants around the boat.</p><p>Following the week 7 walkthrough, participants in the control group are given hands-on access to <i>SubSafe</i>, undertaking the same task as was set for the free-roam group. Participants in all conditions then complete the post trial questionnaire. All participants are then debriefed by means of a comprehensive debriefing sheet.</p></div></div></section><section aria-labelledby="Sec10"><div class="c-article-section" id="Sec10-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec10">Early feedback and lessons learned</h2><div class="c-article-section__content" id="Sec10-content"><p>Following the completion of the experimental trials in January 2009, part 2 of this paper will summarise the experimental design above in more detail and will present the results of the knowledge transfer trials and usability assessments. However, to date, the <i>SubSafe</i> prototype has been demonstrated to a number of Royal Navy personnel and has, without exception, received favourable initial feedback. The system has even been demonstrated to Senior Ratings onboard the SSN HMS <i>Tireless</i> whilst at sea in the English Channel in December 2007. Managing expectations has been problematic in some cases, as younger users expect more of the simulation than it currently delivers. These users have to be reminded regularly that <i>SubSafe</i> is a games-based training application, not a first-person action game! More formalised feedback will be obtained once the evaluation trials are under way.</p><p>In addition to the experimental trials, the design and development experiences with the <i>SubSafe</i> project have been collated and used as evidence in support of a recently published Human Factors Guidelines document for i3D and games-based training (Stone <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Stone RJ (2008) Human factors guidelines for interactive 3D and games-based training systems design. Human factors integration defence technology centre document. Available from &#xA;                    http://www.hfidtc.com&#xA;                    &#xA;                   as of 18 October, 2008" href="/article/10.1007/s10055-008-0110-1#ref-CR21" id="ref-link-section-d82346e1033">2008</a>). This document has been designed to inform Human Factors specialists, simulation and games developers and potential procurers of future interactive 3D systems for education and training. The main message of the document is that, no matter how “good” the pedagogy, the capability of an interactive 3D or games-based learning system to educate and train can be completely destroyed if content, fidelity and interactive technologies are implemented inappropriately and without a sound Human Factors underpinning. The contents draw on case study material from the past 10–12 years, illustrating the application of human-centred design processes in projects as diverse as close-range weapons simulation, surgical skills and knowledge training and explosive ordnance disposal operations. The results of the current experimental evaluation of <i>SubSafe</i> will contribute to subsequent editions of these guidelines.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="PE. Biegel, SP. Brown, TC. Mason, DD. Poland, " /><meta itemprop="datePublished" content="1998" /><meta itemprop="headline" content="Biegel PE, Brown SP, Mason TC, Poland DD (1998) Development of a personal computer simulation-based multimedia" /><p class="c-article-references__text" id="ref-CR2">Biegel PE, Brown SP, Mason TC, Poland DD (1998) Development of a personal computer simulation-based multimedia ship control training program. Johns Hopkins APL Tech Dig 19(4):470–481</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 1 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Development%20of%20a%20personal%20computer%20simulation-based%20multimedia%20ship%20control%20training%20program&amp;journal=Johns%20Hopkins%20APL%20Tech%20Dig&amp;volume=19&amp;issue=4&amp;pages=470-481&amp;publication_year=1998&amp;author=Biegel%2CPE&amp;author=Brown%2CSP&amp;author=Mason%2CTC&amp;author=Poland%2CDD">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="JYC. Chen, EC. Haas, MJ. Barnes, " /><meta itemprop="datePublished" content="2007" /><meta itemprop="headline" content="Chen JYC, Haas EC, Barnes MJ (2007) Human performance issues and user interface design for teleoperated robots" /><p class="c-article-references__text" id="ref-CR3">Chen JYC, Haas EC, Barnes MJ (2007) Human performance issues and user interface design for teleoperated robots. IEEE Trans Syst Man Cybern C Appl Rev 37(6):1231</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2FTSMCC.2007.905819" aria-label="View reference 2">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 2 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Human%20performance%20issues%20and%20user%20interface%20design%20for%20teleoperated%20robots&amp;journal=IEEE%20Trans%20Syst%20Man%20Cybern%20C%20Appl%20Rev&amp;volume=37&amp;issue=6&amp;publication_year=2007&amp;author=Chen%2CJYC&amp;author=Haas%2CEC&amp;author=Barnes%2CMJ">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Darken RP, Sibert JL (1993) A toolset for navigation in virtual environments. In: Proceedings of the ACM sympo" /><p class="c-article-references__text" id="ref-CR4">Darken RP, Sibert JL (1993) A toolset for navigation in virtual environments. In: Proceedings of the ACM symposium on user interface software and technology. Atlanta, pp 157–165</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Edwards M, Nilsson U (2000) Virtual reality and simulation based design––fact or fiction in submarine platform" /><p class="c-article-references__text" id="ref-CR5">Edwards M, Nilsson U (2000) Virtual reality and simulation based design––fact or fiction in submarine platform design. In: Proceedings of UDT Pacific 2000</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Gallagher JM, Reid DK (2002) The learning theory of Piaget and Inhedler. iUniverse Inc" /><p class="c-article-references__text" id="ref-CR6">Gallagher JM, Reid DK (2002) The learning theory of Piaget and Inhedler. iUniverse Inc</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Garrett M (2007) Sub space: enhancing the spatial awareness of trainee submariners using 3D simulation environ" /><p class="c-article-references__text" id="ref-CR7">Garrett M (2007) Sub space: enhancing the spatial awareness of trainee submariners using 3D simulation environments. Unpublished undergraduate project report. Edith Cowan University, Perth</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Golledge R (1988) Integrating spatial knowledge. In: Proceedings of the international geographical congress, S" /><p class="c-article-references__text" id="ref-CR8">Golledge R (1988) Integrating spatial knowledge. In: Proceedings of the international geographical congress, Sydney</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="K. Moltenbrey, " /><meta itemprop="datePublished" content="2000" /><meta itemprop="headline" content="Moltenbrey K (2000) Tornado watchers. Comput Graph World 23(9):24–28" /><p class="c-article-references__text" id="ref-CR9">Moltenbrey K (2000) Tornado watchers. Comput Graph World 23(9):24–28</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 8 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Tornado%20watchers&amp;journal=Comput%20Graph%20World&amp;volume=23&amp;issue=9&amp;pages=24-28&amp;publication_year=2000&amp;author=Moltenbrey%2CK">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Peuquet DJ (2002) Representations of space and time. Guilford Press, New York" /><p class="c-article-references__text" id="ref-CR10">Peuquet DJ (2002) Representations of space and time. Guilford Press, New York</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="JW. Regian, WL. Shebiske, " /><meta itemprop="datePublished" content="1990" /><meta itemprop="headline" content="Regian JW, Shebiske WL (1990) Virtual reality: an instructional medium for visual-spatial tasks. J Commun 42(4" /><p class="c-article-references__text" id="ref-CR11">Regian JW, Shebiske WL (1990) Virtual reality: an instructional medium for visual-spatial tasks. J Commun 42(4):136–149</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1111%2Fj.1460-2466.1992.tb00815.x" aria-label="View reference 10">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 10 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Virtual%20reality%3A%20an%20instructional%20medium%20for%20visual-spatial%20tasks&amp;journal=J%20Commun&amp;volume=42&amp;issue=4&amp;pages=136-149&amp;publication_year=1990&amp;author=Regian%2CJW&amp;author=Shebiske%2CWL">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Sebrechts MM (2000) Using virtual environments for training of spatial navigation. Human Syst Inform Anal Cent" /><p class="c-article-references__text" id="ref-CR12">Sebrechts MM (2000) Using virtual environments for training of spatial navigation. Human Syst Inform Anal Centre Gateway Mag 11(2):1–4. <a href="http://www.dtic.mil/dticasd/docs-gw/gateway.html">http://www.dtic.mil/dticasd/docs-gw/gateway.html</a> as of 18 October, 2008</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Seamon AG, Bradley SK, Hays RT, Vincenzi, DA (1999) VESUB technology demonstration: project summary. Naval air" /><p class="c-article-references__text" id="ref-CR13">Seamon AG, Bradley SK, Hays RT, Vincenzi, DA (1999) VESUB technology demonstration: project summary. Naval air warfare center training systems division (Orlando), report no. A565263</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="AW. Siegel, SH. White, " /><meta itemprop="datePublished" content="1975" /><meta itemprop="headline" content="Siegel AW, White SH (1975) The development of spatial representations of large-scale environments. In: Reese H" /><p class="c-article-references__text" id="ref-CR14">Siegel AW, White SH (1975) The development of spatial representations of large-scale environments. In: Reese HW (ed) Advances in child development and behavior, chap 10. Academic Press, New York, pp 9–55</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 13 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Advances%20in%20child%20development%20and%20behavior%2C%20chap%2010&amp;pages=9-55&amp;publication_year=1975&amp;author=Siegel%2CAW&amp;author=White%2CSH">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="TR. Smith, L. Pellegrino, R. Golledge, " /><meta itemprop="datePublished" content="1982" /><meta itemprop="headline" content="Smith TR, Pellegrino L, Golledge R (1982) Computational process modelling spatial cognition and behavior. Geog" /><p class="c-article-references__text" id="ref-CR15">Smith TR, Pellegrino L, Golledge R (1982) Computational process modelling spatial cognition and behavior. Geogr Anal 14:305–325</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 14 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Computational%20process%20modelling%20spatial%20cognition%20and%20behavior&amp;journal=Geogr%20Anal&amp;volume=14&amp;pages=305-325&amp;publication_year=1982&amp;author=Smith%2CTR&amp;author=Pellegrino%2CL&amp;author=Golledge%2CR">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Shemyakin F (1962) General problems of orientation in space and space representations. In Ananyev BG (ed) Psyc" /><p class="c-article-references__text" id="ref-CR16">Shemyakin F (1962) General problems of orientation in space and space representations. In Ananyev BG (ed) Psychological science in the USSR<i>.</i> US office of technical reports, NTIS, no. TF62-11083</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Stone RJ (2002a) Interactive 3D and is role in synthetic environment-based equipment acquisition (SeBA). Unpub" /><p class="c-article-references__text" id="ref-CR17">Stone RJ (2002a) Interactive 3D and is role in synthetic environment-based equipment acquisition (SeBA). Unpublished report prepared under MoD contract RD018-05103 for the director of integrated Systems, Dstl, Farnborough</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Stone RJ (2002b) Applications of virtual environment technologies to human factors in nautical training. In: P" /><p class="c-article-references__text" id="ref-CR18">Stone RJ (2002b) Applications of virtual environment technologies to human factors in nautical training. In: Proceedings of human factors in ship design and operation. Royal Institution of Naval Architects (RINA), London</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Stone RJ (2004) Rapid assessment of tasks and context (RATaC) for technology-based training. In: Proceedings o" /><p class="c-article-references__text" id="ref-CR19">Stone RJ (2004) Rapid assessment of tasks and context (RATaC) for technology-based training. In: Proceedings of I/ITSEC 2004 (I/ITSEC; Orlando, Florida), 6–9 December, 2004</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Stone RJ (2005) Serious gaming––virtual reality’s saviour? In: Proceedings of virtual systems and multi-media " /><p class="c-article-references__text" id="ref-CR20">Stone RJ (2005) Serious gaming––virtual reality’s saviour? In: Proceedings of virtual systems and multi-media conference, Ghent, pp 773–786</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Stone RJ (2008) Human factors guidelines for interactive 3D and games-based training systems design. Human fac" /><p class="c-article-references__text" id="ref-CR21">Stone RJ (2008) Human factors guidelines for interactive 3D and games-based training systems design. Human factors integration defence technology centre document. Available from <a href="http://www.hfidtc.com">http://www.hfidtc.com</a> as of 18 October, 2008</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Stone RJ, Connell AP (1999) Virtual reality and SMQ training. An initial investigation and recommendations. Un" /><p class="c-article-references__text" id="ref-CR22">Stone RJ, Connell AP (1999) Virtual reality and SMQ training. An initial investigation and recommendations. Unpublished VR Solutions Ltd. internal report prepared for Flag Officer Submarines (FOSM)</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Whyte J (2004) Virtual reality and the built environment. Architectural Press" /><p class="c-article-references__text" id="ref-CR23">Whyte J (2004) Virtual reality and the built environment. Architectural Press</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="DL. Tate, L. Sibert, T. King, " /><meta itemprop="datePublished" content="1997" /><meta itemprop="headline" content="Tate DL, Sibert L, King T (1997) Using virtual environments to train firefighters. IEEE Comput Graph Appl 17(6" /><p class="c-article-references__text" id="ref-CR24">Tate DL, Sibert L, King T (1997) Using virtual environments to train firefighters. IEEE Comput Graph Appl 17(6):23–29</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2F38.626965" aria-label="View reference 23">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 23 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Using%20virtual%20environments%20to%20train%20firefighters&amp;journal=IEEE%20Comput%20Graph%20Appl&amp;volume=17&amp;issue=6&amp;pages=23-29&amp;publication_year=1997&amp;author=Tate%2CDL&amp;author=Sibert%2CL&amp;author=King%2CT">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Wikipedia (2008) Major submarine incidents since 2000. http://en.wikipedia.org/wiki/Major_submarine_incidents_" /><p class="c-article-references__text" id="ref-CR25">Wikipedia (2008) Major submarine incidents since 2000. <a href="http://en.wikipedia.org/wiki/Major_submarine_incidents_since_2000">http://en.wikipedia.org/wiki/Major_submarine_incidents_since_2000</a> as of 18 October, 2008</p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-008-0110-1-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Ack1">Acknowledgments</h2><div class="c-article-section__content" id="Ack1-content"><p>The work reported here is part-funded by the Human Capability Domain of the UK Ministry of Defence Scientific Research Programme, and was initiated by the MoD Research Director, Human Capability. The authors would like to acknowledge the invaluable contribution and specialist support provided by the SMQ (South) Instructor Team at HM Naval Base in Devonport––WO (Coxn) Dermot Roberts, CPOMEA Steve McGowan and PO (WSM) “Harry” Harris––and the crews of Her Majesty’s Submarines <i>Tireless</i>, <i>Trenchant</i> and <i>Trafalgar</i>. Without their contribution, hospitality and tolerance, this project would not have been possible.</p></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">Human Interface Technologies Team, School of Electronic, Electrical and Computer Engineering, University of Birmingham, Edgbaston, Birmingham, B15 2TT, UK</p><p class="c-article-author-affiliation__authors-list">Robert Stone</p></li><li id="Aff2"><p class="c-article-author-affiliation__address">Department of Systems Engineering and Human Factors, Cranfield University, Bedford, UK</p><p class="c-article-author-affiliation__authors-list">Antoinette Caird-Daley</p></li><li id="Aff3"><p class="c-article-author-affiliation__address">Aerosystems International, Yeovil, UK</p><p class="c-article-author-affiliation__authors-list">Kevin Bessell</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Robert-Stone"><span class="c-article-authors-search__title u-h3 js-search-name">Robert Stone</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Robert+Stone&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Robert+Stone" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Robert+Stone%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Antoinette-Caird_Daley"><span class="c-article-authors-search__title u-h3 js-search-name">Antoinette Caird-Daley</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Antoinette+Caird-Daley&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Antoinette+Caird-Daley" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Antoinette+Caird-Daley%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Kevin-Bessell"><span class="c-article-authors-search__title u-h3 js-search-name">Kevin Bessell</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Kevin+Bessell&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Kevin+Bessell" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Kevin+Bessell%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-008-0110-1/email/correspondent/c1/new">Robert Stone</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=SubSafe%3A%20a%20games-based%20training%20system%20for%20submarine%20safety%20and%20spatial%20awareness%20%28Part%201%29&amp;author=Robert%20Stone%20et%20al&amp;contentID=10.1007%2Fs10055-008-0110-1&amp;publication=1359-4338&amp;publicationDate=2008-11-28&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Stone, R., Caird-Daley, A. &amp; Bessell, K. 
+                     <i>SubSafe</i>: a games-based training system for submarine safety and spatial awareness (Part 1).
+                    <i>Virtual Reality</i> <b>13, </b>3–12 (2009). https://doi.org/10.1007/s10055-008-0110-1</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-008-0110-1.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2008-11-01">01 November 2008</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2008-11-05">05 November 2008</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2008-11-28">28 November 2008</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2009-03">March 2009</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-008-0110-1" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-008-0110-1</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Serious games</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Games-based training</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Submarine safety</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Virtual environments</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Defence simulation</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-008-0110-1.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=110;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

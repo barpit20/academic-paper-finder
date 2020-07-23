@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="A CAVE-like environment as a tool for full-size train design"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="Simulations of models, in all different areas, is an expanding, attractive line of work. More and more applications are taking advantage of the improvements in technology and knowledge in this..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/7/2.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="A CAVE-like environment as a tool for full-size train design"/>
+
+    <meta name="dc.source" content="Virtual Reality 2004 7:2"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2004-02-05"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2004 Springer-Verlag London Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="Simulations of models, in all different areas, is an expanding, attractive line of work. More and more applications are taking advantage of the improvements in technology and knowledge in this field, thus achieving results that would have been impossible to achieve with a real model, or foreseeing facts that otherwise would have been encountered too late in the production process. The rail industry is one possible beneficiary of this approach. Usually, before commencing the fabrication process of a new train, the construction of a full-size model is mandatory. Instead of building this full-size real model, which leaves little room for later, last-minute modifications, a virtual model can be built in the digital realm, thus offering a new platform for easier interaction with it. In this article, a simulation of a train is presented in order to tackle visual, aesthetic and ergonomic issues. The simulation runs on a PC-based CAVE-like architecture, offering a certain degree of interaction to the user, and combines static and dynamic computer-generated imagery, both with and without stereoscopy for 3D visualisation, as well as augmented virtuality techniques for the integration of the train with its environment."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2004-02-05"/>
+
+    <meta name="prism.volume" content="7"/>
+
+    <meta name="prism.number" content="2"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="82"/>
+
+    <meta name="prism.endingPage" content="93"/>
+
+    <meta name="prism.copyright" content="2004 Springer-Verlag London Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-003-0117-6"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-003-0117-6"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-003-0117-6.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-003-0117-6"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="A CAVE-like environment as a tool for full-size train design"/>
+
+    <meta name="citation_volume" content="7"/>
+
+    <meta name="citation_issue" content="2"/>
+
+    <meta name="citation_publication_date" content="2004/04"/>
+
+    <meta name="citation_online_date" content="2004/02/05"/>
+
+    <meta name="citation_firstpage" content="82"/>
+
+    <meta name="citation_lastpage" content="93"/>
+
+    <meta name="citation_article_type" content="Original Article"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-003-0117-6"/>
+
+    <meta name="DOI" content="10.1007/s10055-003-0117-6"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-003-0117-6"/>
+
+    <meta name="description" content="Simulations of models, in all different areas, is an expanding, attractive line of work. More and more applications are taking advantage of the improvement"/>
+
+    <meta name="dc.creator" content="Francisco J. Seron"/>
+
+    <meta name="dc.creator" content="Diego Gutierrez"/>
+
+    <meta name="dc.creator" content="Juan A. Magallon"/>
+
+    <meta name="dc.creator" content="Emilio J. Sobreviela"/>
+
+    <meta name="dc.creator" content="Jose A. Gutierrez"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="Hollands R (1996) The virtual reality home brewer&#8217;s handbook. Wiley, New York"/>
+
+    <meta name="citation_reference" content="Burdea G (1996) Force and touch feedback for virtual reality. Wiley, New York"/>
+
+    <meta name="citation_reference" content="Kalawsky R (1993) The science of virtual reality and virtual environments. Addison-Wesley, New York"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Digital; citation_author=null Clark; citation_volume=illusion; citation_publication_date=1998; citation_pages=entertaining; citation_id=CR4"/>
+
+    <meta name="citation_reference" content="Research driving simulators (2003) http://www.inrets.fr/ur/sara/Pg_simus_e.html. Cited 24 November 2003"/>
+
+    <meta name="citation_reference" content="DaimlerChrysler Corporation (2004) http://www.daimler-benz.com. Cited 2003"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comm ACM; citation_author=null Cruz-Neira; citation_volume=35; citation_publication_date=1992; citation_pages=64; citation_doi=10.1145/129888.129892; citation_id=CR7"/>
+
+    <meta name="citation_reference" content="Cruz-Neira C, Sandin DJ and DeFanti TA (1993) Surround-screen projection-based virtual reality: the design and implementation of the CAVE. In: Proceedings of SIGGRAPH&#8217;93, Anaheim, CA, 1&#8211;6 August 1993"/>
+
+    <meta name="citation_reference" content="von Laszewski G, Insley JA, Foster I, Bresnahan J, Kesselman C, Su M, Thiebaux M, Rivers ML, Wang S, Tieman B and McNulty I (1999) Real-time analysis, visualization, and steering of microtomography experiments at photon sources. In: Proceedings of the Ninth SIAM Conference on Parallel Processing for Scientific Computing, San Antonio, TX, 22&#8211;24 March 1999"/>
+
+    <meta name="citation_reference" content="Spoelder H, Renambot L, Germans D, Bal H and Groen F (2000) Real-time interaction in VR with a distributed multi-agent system. Vrije Universiteit Amsterdam, Faculty of Sciences, April 2000"/>
+
+    <meta name="citation_reference" content="Renambot L, Bal H, Germans D and Spoelder H (2000) CAVEStudy: an Infrastructure for computational steering in virtual reality environments. In: Proceedings of the Ninth IEEE International Symposium on High Performance Distributed Computing, Pittsburgh, PA, 1&#8211;4 August 2000"/>
+
+    <meta name="citation_reference" content="Germans D, Spoelder H, Renambot L, Bal H (2001) VIRPI: a high-level toolkit for interactive scientific visualization in virtual reality. In: Proceedings of the Immersive Projection Technology/Eurographics Virtual Environments Workshop (IPT/EGVE), Stuttgart, Germany, 16&#8211;18 May 2001"/>
+
+    <meta name="citation_reference" content="Maletic JI, Leigh J and Marcus A (2001) Visualizing software in an immersive virtual reality environment. In: Proceeedings of ICSE&#8217;01, the Workshop on Software Visualization, Toronto, Canada, 12&#8211;13 May 2001"/>
+
+    <meta name="citation_reference" content="Hudson R, Gunn C, Francis G, Sandin DJ and DeFanti TA (1995) Mathenautics: using VR to visit 3-D manifolds. In: Proceedings of the Symposium on Interactive 3D Graphics, Monterey, CA, April 1995"/>
+
+    <meta name="citation_reference" content="Leigh J, DeSchutter E, Lee M, Bower JM and DeFanti TA (1993) Realistic modeling of brain structures with remote interaction between simulations of an inferior olivary neuron and a cerebellar purkinje cell. In: Proceedings of the Simulation Multiconference on the High Performance Computing Symposium, The Society for Computer Simulation, Phoenix, AZ, April 1993"/>
+
+    <meta name="citation_reference" content="citation_journal_title=The kids; citation_author=null Bobick; citation_volume=room; citation_publication_date=1996; citation_pages=a; citation_id=CR16"/>
+
+    <meta name="citation_reference" content="Roy TM, Cruz-Neira C and DeFanti TA (1995) Cosmic worm in the CAVE: steering a high performance computing application from a virtual environment. PRESENCE: Teleop Virt Environ 4(2):121&#8211;131"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Sight and; citation_author=null Kaufman; citation_volume=mind; citation_publication_date=1974; citation_pages=an; citation_id=CR18"/>
+
+    <meta name="citation_reference" content="Lipton L (1991) CrystalEyes handbook. StereoGraphics Corporation, San Rafael, CA"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Sig Proc Imag Commun; citation_author=null Pastoor; citation_volume=4; citation_publication_date=1991; citation_pages=21; citation_doi=10.1016/0923-5965(91)90057-9; citation_id=CR20"/>
+
+    <meta name="citation_reference" content="Woods A, Docherty T and Koch R (1993) Image distortions in stereoscopic systems. In: SPIE, Vol. 1915, Stereoscopic Display and Applications IV, February 1993"/>
+
+    <meta name="citation_reference" content="Stereographics developers&#8217; handbook. StereoGraphics Corporation, San Rafael, CA"/>
+
+    <meta name="citation_reference" content="Brooks FP (1986) Walkthrough&#8212;a dynamic graphics system for simulating virtual buildings. In: Proceedings of the Workshop on Interactive 3D Graphics, Chapel Hill, NC, 22&#8211;24 October 1986"/>
+
+    <meta name="citation_reference" content="Airey JM, Rohlf JH and Brooks FP (1990) Towards image realism with interactive update rates in complex virtual building environments. In: Proceedings of the Symposium on Interactive 3D Graphics and the Symposium on the Virtual Reality Modeling Language (VRML&#8217;95), ACM Press, San Diego, CA"/>
+
+    <meta name="citation_reference" content="Ellis G (1996) They&#8217;re not making &#8216;em like they used to: virtual reality saves time and money in manufacturing and construction. Iris Universe, Summer 1996"/>
+
+    <meta name="citation_reference" content="Greenfield D (1996) Virtual prototyping at Rolls-Royce. MIT Press, Cambridge, MA"/>
+
+    <meta name="citation_reference" content="McNeely W (1996) Boeing&#8217;s high performance visualization software: Flythru. In: Proceedings of the CERN Computing Seminar, Geneva, Switzerland, June 1996"/>
+
+    <meta name="citation_reference" content="Balet O, Luga H, Duthen Y and Caubert R (1997) PROVIS: a platform for virtual prototyping and maintenance test. In: Proceedings of Computer Animation &#8216;97, Geneva, Switzerland, June 1997"/>
+
+    <meta name="citation_reference" content="Balaguer JF and Gobbetti E (1995) i3D: a high-speed 3D Web browser. In: Proceedings of the VRML&#8217;95 Symposium, San Diego, CA, December 1995"/>
+
+    <meta name="citation_reference" content="Gobbetti E, Balaguer, JF (1995) i3D: an interactive system for exploring annotated 3D environments. In: Proceedings of Scientific Visualization&#8217;95, World Scientific Publishing Co, New York"/>
+
+    <meta name="citation_reference" content="Jasnoch U, Klement E, Kress K and Schiffer N (1996) Towards collaborative virtual prototyping in a world market. In: Proceedings of FAIM, Atlanta, GA, May 1996"/>
+
+    <meta name="citation_reference" content="citation_journal_title=SPIE; citation_title=Augmented reality: a class of displays on the reality-virtuality continuum; citation_author=P Milgram, H Takemura, A Utsumi, F Kishino; citation_volume=2351; citation_publication_date=19949; citation_pages=282-292; citation_id=CR32"/>
+
+    <meta name="citation_reference" content="Renfe Corporation (2004). http://www.renfe.es. Cited 2004"/>
+
+    <meta name="citation_reference" content="SGI (2004) http://www.sgi.com/products/appsdirectory.dir/apps/app_number859393.html. Cited 2004"/>
+
+    <meta name="citation_reference" content="McAllister D (1993) Stereo computer graphics and other true 3D technologies. Princeton University Press, Princeton, NJ"/>
+
+    <meta name="citation_reference" content="Woo M, Neider J, Davis T and Schreiner D (1996) OpenGL programming guide. Addison-Wesley Developers Press, Reading, MA"/>
+
+    <meta name="citation_reference" content="Kempf R, Frazier C (1997) OpenGL reference manual. Addison-Wesley, Reading, MA"/>
+
+    <meta name="citation_reference" content="citation_journal_title=The ALEPH; citation_author=null Ser&#243;n; citation_volume=project; citation_publication_date=1995; citation_pages=image; citation_id=CR38"/>
+
+    <meta name="citation_reference" content="Wann Jensen H (2001) Realistic image synthesis using photon mapping. AK Peters, Natick MA"/>
+
+    <meta name="citation_reference" content="CAF (2004) http://www.caf.es. Cited 2004"/>
+
+    <meta name="citation_author" content="Francisco J. Seron"/>
+
+    <meta name="citation_author_email" content="seron@unizar.es"/>
+
+    <meta name="citation_author_institution" content="Engineering Research Institute of Aragon, University of Zaragoza, 1 50018 - Zaragoza, Spain"/>
+
+    <meta name="citation_author" content="Diego Gutierrez"/>
+
+    <meta name="citation_author_institution" content="Engineering Research Institute of Aragon, University of Zaragoza, 1 50018 - Zaragoza, Spain"/>
+
+    <meta name="citation_author" content="Juan A. Magallon"/>
+
+    <meta name="citation_author_institution" content="Engineering Research Institute of Aragon, University of Zaragoza, 1 50018 - Zaragoza, Spain"/>
+
+    <meta name="citation_author" content="Emilio J. Sobreviela"/>
+
+    <meta name="citation_author_institution" content="Engineering Research Institute of Aragon, University of Zaragoza, 1 50018 - Zaragoza, Spain"/>
+
+    <meta name="citation_author" content="Jose A. Gutierrez"/>
+
+    <meta name="citation_author_institution" content="Engineering Research Institute of Aragon, University of Zaragoza, 1 50018 - Zaragoza, Spain"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-003-0117-6&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2004/04/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-003-0117-6"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="A CAVE-like environment as a tool for full-size train design"/>
+        <meta property="og:description" content="Simulations of models, in all different areas, is an expanding, attractive line of work. More and more applications are taking advantage of the improvements in technology and knowledge in this field, thus achieving results that would have been impossible to achieve with a real model, or foreseeing facts that otherwise would have been encountered too late in the production process. The rail industry is one possible beneficiary of this approach. Usually, before commencing the fabrication process of a new train, the construction of a full-size model is mandatory. Instead of building this full-size real model, which leaves little room for later, last-minute modifications, a virtual model can be built in the digital realm, thus offering a new platform for easier interaction with it. In this article, a simulation of a train is presented in order to tackle visual, aesthetic and ergonomic issues. The simulation runs on a PC-based CAVE-like architecture, offering a certain degree of interaction to the user, and combines static and dynamic computer-generated imagery, both with and without stereoscopy for 3D visualisation, as well as augmented virtuality techniques for the integration of the train with its environment."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>A CAVE-like environment as a tool for full-size train design | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-003-0117-6","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"CAVE, Industrial design, Simulator, Stereoscopy, Virtual prototyping","kwrd":["CAVE","Industrial_design","Simulator","Stereoscopy","Virtual_prototyping"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-003-0117-6","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-003-0117-6","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=117;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-003-0117-6">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            A CAVE-like environment as a tool for full-size train design
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-003-0117-6.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-003-0117-6.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">Original Article</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2004-02-05" itemprop="datePublished">05 February 2004</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">A CAVE-like environment as a tool for full-size train design</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Francisco_J_-Seron" data-author-popup="auth-Francisco_J_-Seron" data-corresp-id="c1">Francisco J. Seron<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of Zaragoza" /><meta itemprop="address" content="grid.11205.37, 0000000121528769, Engineering Research Institute of Aragon, University of Zaragoza, C/ María de Luna, 1 50018 - Zaragoza, Spain" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Diego-Gutierrez" data-author-popup="auth-Diego-Gutierrez">Diego Gutierrez</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of Zaragoza" /><meta itemprop="address" content="grid.11205.37, 0000000121528769, Engineering Research Institute of Aragon, University of Zaragoza, C/ María de Luna, 1 50018 - Zaragoza, Spain" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Juan_A_-Magallon" data-author-popup="auth-Juan_A_-Magallon">Juan A. Magallon</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of Zaragoza" /><meta itemprop="address" content="grid.11205.37, 0000000121528769, Engineering Research Institute of Aragon, University of Zaragoza, C/ María de Luna, 1 50018 - Zaragoza, Spain" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Emilio_J_-Sobreviela" data-author-popup="auth-Emilio_J_-Sobreviela">Emilio J. Sobreviela</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of Zaragoza" /><meta itemprop="address" content="grid.11205.37, 0000000121528769, Engineering Research Institute of Aragon, University of Zaragoza, C/ María de Luna, 1 50018 - Zaragoza, Spain" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Jose_A_-Gutierrez" data-author-popup="auth-Jose_A_-Gutierrez">Jose A. Gutierrez</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of Zaragoza" /><meta itemprop="address" content="grid.11205.37, 0000000121528769, Engineering Research Institute of Aragon, University of Zaragoza, C/ María de Luna, 1 50018 - Zaragoza, Spain" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 7</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">82</span>–<span itemprop="pageEnd">93</span>(<span data-test="article-publication-year">2004</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">170 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">10 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-003-0117-6/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>Simulations of models, in all different areas, is an expanding, attractive line of work. More and more applications are taking advantage of the improvements in technology and knowledge in this field, thus achieving results that would have been impossible to achieve with a real model, or foreseeing facts that otherwise would have been encountered too late in the production process. The rail industry is one possible beneficiary of this approach. Usually, before commencing the fabrication process of a new train, the construction of a full-size model is mandatory. Instead of building this full-size real model, which leaves little room for later, last-minute modifications, a virtual model can be built in the digital realm, thus offering a new platform for easier interaction with it. In this article, a simulation of a train is presented in order to tackle visual, aesthetic and ergonomic issues. The simulation runs on a PC-based CAVE-like architecture, offering a certain degree of interaction to the user, and combines static and dynamic computer-generated imagery, both with and without stereoscopy for 3D visualisation, as well as augmented virtuality techniques for the integration of the train with its environment.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">Introduction</h2><div class="c-article-section__content" id="Sec2-content"><p>Simulation is a procedure that allows us to study a physical system by substituting it for another one which is more suitable for observation or measuring.</p><p>Different interests can be addressed by means of simulation. An astronaut can learn to pilot a space shuttle, a government can predict the evolution of the population in its country, a meteorologist can predict storms or a car company can preview its brand new model before it is actually built. These different approaches require different layers of complexity in the simulation: the astronaut trainer, for instance, will most likely need to be able to simulate the dynamics of the system to a certain degree. On the other hand, the car company might not need such realism if only the visual appearance is to be discussed by means of the simulation. But once the general shape is approved, it might then need to undergo a simulated wind tunnel test, which will require a new layer of complexity in the simulation. Thus, motivation guides the simulation itself.</p><p>Several simulations will work better by using virtual reality techniques [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1" title="Hollands R (1996) The virtual reality home brewer’s handbook. Wiley, New York" href="/article/10.1007/s10055-003-0117-6#ref-CR1" id="ref-link-section-d47904e329">1</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2" title="Burdea G (1996) Force and touch feedback for virtual reality. Wiley, New York" href="/article/10.1007/s10055-003-0117-6#ref-CR2" id="ref-link-section-d47904e332">2</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 3" title="Kalawsky R (1993) The science of virtual reality and virtual environments. Addison-Wesley, New York" href="/article/10.1007/s10055-003-0117-6#ref-CR3" id="ref-link-section-d47904e335">3</a>]. These techniques create immersive environments that make the interaction between man and simulator as indistinguishable from reality as possible. Most of the time this implies the concept of real time, although, as we have seen, its necessity will be driven by the goal of the simulation. Fields where simulators are used more often include industry, civilian, military and entertainment [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 4" title="Clark Dodsworth Jr. (1998) Digital illusion: entertaining the future with high technology. ACM, New York" href="/article/10.1007/s10055-003-0117-6#ref-CR4" id="ref-link-section-d47904e338">4</a>], whilst several Internet addresses that offer information on some of the best simulators can be found at [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 5" title="Research driving simulators (2003) http://www.inrets.fr/ur/sara/Pg_simus_e.html. Cited 24 November 2003" href="/article/10.1007/s10055-003-0117-6#ref-CR5" id="ref-link-section-d47904e341">5</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 6" title="DaimlerChrysler Corporation (2004) http://www.daimler-benz.com. Cited 2003" href="/article/10.1007/s10055-003-0117-6#ref-CR6" id="ref-link-section-d47904e345">6</a>].</p><p>Amongst all the different approaches to create an immersive environment, the CAVE system is one of the most popular [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 7" title="Cruz-Neira C, Sandin DJ, DeFanti TA, Kenyon R and Hart J (1992) The CAVE: audio visual experience automatic virtual environment. Comm ACM 35(6):64–72" href="/article/10.1007/s10055-003-0117-6#ref-CR7" id="ref-link-section-d47904e351">7</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 8" title="Cruz-Neira C, Sandin DJ and DeFanti TA (1993) Surround-screen projection-based virtual reality: the design and implementation of the CAVE. In: Proceedings of SIGGRAPH’93, Anaheim, CA, 1–6 August 1993" href="/article/10.1007/s10055-003-0117-6#ref-CR8" id="ref-link-section-d47904e354">8</a>]. A great amount of literature exists on the subject, including [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 9" title="von Laszewski G, Insley JA, Foster I, Bresnahan J, Kesselman C, Su M, Thiebaux M, Rivers ML, Wang S, Tieman B and McNulty I (1999) Real-time analysis, visualization, and steering of microtomography experiments at photon sources. In: Proceedings of the Ninth SIAM Conference on Parallel Processing for Scientific Computing, San Antonio, TX, 22–24 March 1999" href="/article/10.1007/s10055-003-0117-6#ref-CR9" id="ref-link-section-d47904e357">9</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 10" title="Spoelder H, Renambot L, Germans D, Bal H and Groen F (2000) Real-time interaction in VR with a distributed multi-agent system. Vrije Universiteit Amsterdam, Faculty of Sciences, April 2000" href="/article/10.1007/s10055-003-0117-6#ref-CR10" id="ref-link-section-d47904e360">10</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 11" title="Renambot L, Bal H, Germans D and Spoelder H (2000) CAVEStudy: an Infrastructure for computational steering in virtual reality environments. In: Proceedings of the Ninth IEEE International Symposium on High Performance Distributed Computing, Pittsburgh, PA, 1–4 August 2000" href="/article/10.1007/s10055-003-0117-6#ref-CR11" id="ref-link-section-d47904e363">11</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 12" title="Germans D, Spoelder H, Renambot L, Bal H (2001) VIRPI: a high-level toolkit for interactive scientific visualization in virtual reality. In: Proceedings of the Immersive Projection Technology/Eurographics Virtual Environments Workshop (IPT/EGVE), Stuttgart, Germany, 16–18 May 2001" href="/article/10.1007/s10055-003-0117-6#ref-CR12" id="ref-link-section-d47904e367">12</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 13" title="Maletic JI, Leigh J and Marcus A (2001) Visualizing software in an immersive virtual reality environment. In: Proceeedings of ICSE’01, the Workshop on Software Visualization, Toronto, Canada, 12–13 May 2001" href="/article/10.1007/s10055-003-0117-6#ref-CR13" id="ref-link-section-d47904e370">13</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 14" title="Hudson R, Gunn C, Francis G, Sandin DJ and DeFanti TA (1995) Mathenautics: using VR to visit 3-D manifolds. In: Proceedings of the Symposium on Interactive 3D Graphics, Monterey, CA, April 1995" href="/article/10.1007/s10055-003-0117-6#ref-CR14" id="ref-link-section-d47904e373">14</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 15" title="Leigh J, DeSchutter E, Lee M, Bower JM and DeFanti TA (1993) Realistic modeling of brain structures with remote interaction between simulations of an inferior olivary neuron and a cerebellar purkinje cell. In: Proceedings of the Simulation Multiconference on the High Performance Computing Symposium, The Society for Computer Simulation, Phoenix, AZ, April 1993" href="/article/10.1007/s10055-003-0117-6#ref-CR15" id="ref-link-section-d47904e376">15</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 16" title="Bobick AF, Intille SS, Davis JW, Baird F, Pinhanez CS, Campbell LW, Ivanov YA, Schütte A and Wilson A (1996) The kids room: a perceptually-based interactive and immersive story environment. MIT Media Laboratory Perceptual Computing Section Technical Report No. 398, 1996" href="/article/10.1007/s10055-003-0117-6#ref-CR16" id="ref-link-section-d47904e379">16</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 17" title="Roy TM, Cruz-Neira C and DeFanti TA (1995) Cosmic worm in the CAVE: steering a high performance computing application from a virtual environment. PRESENCE: Teleop Virt Environ 4(2):121–131" href="/article/10.1007/s10055-003-0117-6#ref-CR17" id="ref-link-section-d47904e382">17</a>]. It is important to mention that the terms “CAVE” or “cave” cannot be used to refer to generic technology, since the University of Illinois Board of Trustees registered the trademark, and subsequently licensed it to Fakespace Systems exclusively. Given this legal situation, we will refer to our system as “a CAVE-like system”, or CLS, understanding the system as a design tool made up of not only the hardware, but the control, design and presentation software that we describe here as well.</p><p>Different applications greatly differ in requirements for data accuracy and visualisation quality. Even when using state-of-the-art hardware and algorithms, it is not possible for a virtual reality system to support all the different visualisation demands at the same time. A user might just want to see detailed shape information for a given object, with accurate illumination or final material appearance being secondary. In that case, the information can most likely be presented based on real-time graphics. Other times the latter might be precisely what the user needs, and rendering accurate illumination or realistic materials is a task for which real time is not prepared, at least not yet. This balance between real-time and render quality is one of the main issues when designing a virtual reality system. In our case, the virtual reality system must help railway engineers to deal with different problems: the evaluation of the exterior design, the evaluation of the interior design, adequate lighting inside the train, ergonomics, etc. In each case, the most important aspect is the photorealistic quality of the imagery presented in the CLS system, making use of stereoscopy to accentuate the immersion [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 18" title="Kaufman L (1974) Sight and mind: an introduction to visual perception. Oxford University Press, New York" href="/article/10.1007/s10055-003-0117-6#ref-CR18" id="ref-link-section-d47904e389">18</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 19" title="Lipton L (1991) CrystalEyes handbook. StereoGraphics Corporation, San Rafael, CA" href="/article/10.1007/s10055-003-0117-6#ref-CR19" id="ref-link-section-d47904e392">19</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 20" title="Pastoor S (1991) 3D television: a survey of recent research results on subjective requirements. Sig Proc Imag Commun 4:21–32" href="/article/10.1007/s10055-003-0117-6#ref-CR20" id="ref-link-section-d47904e395">20</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 21" title="Woods A, Docherty T and Koch R (1993) Image distortions in stereoscopic systems. In: SPIE, Vol. 1915, Stereoscopic Display and Applications IV, February 1993" href="/article/10.1007/s10055-003-0117-6#ref-CR21" id="ref-link-section-d47904e398">21</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 22" title="Stereographics developers’ handbook. StereoGraphics Corporation, San Rafael, CA" href="/article/10.1007/s10055-003-0117-6#ref-CR22" id="ref-link-section-d47904e401">22</a>]. This in turn rules out the notion of real-time graphics.</p><p>One of the fields that can largely benefit from the combination of simulation and virtual reality is what is known as virtual prototyping. Decisions made during the design phase of large scale engineering projects are often the most delicate ones, because of their possible dramatic effect on the final results, timing and costs. Mock-ups are routinely used for applications such as testing equipment integration, accessibility and space requirements in domains ranging from aerospace and automotive manufacturing to architecture [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 23" title="Brooks FP (1986) Walkthrough—a dynamic graphics system for simulating virtual buildings. In: Proceedings of the Workshop on Interactive 3D Graphics, Chapel Hill, NC, 22–24 October 1986" href="/article/10.1007/s10055-003-0117-6#ref-CR23" id="ref-link-section-d47904e407">23</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 24" title="Airey JM, Rohlf JH and Brooks FP (1990) Towards image realism with interactive update rates in complex virtual building environments. In: Proceedings of the Symposium on Interactive 3D Graphics and the Symposium on the Virtual Reality Modeling Language (VRML’95), ACM Press, San Diego, CA" href="/article/10.1007/s10055-003-0117-6#ref-CR24" id="ref-link-section-d47904e410">24</a>]. Virtual prototyping allows designers to test and improve their designs as if using physical mock-ups, but at an earlier stage, in a more versatile way and with greater opportunities for multi-site collaboration.</p><p>Natural interaction with digital models is very important, especially for testing purposes. In an attempt to overcome CAD systems’ interactivity and concurrent design limitations, large engineering projects have often been accompanied by the development of various kinds of specialised virtual prototyping tools [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 25" title="Ellis G (1996) They’re not making ‘em like they used to: virtual reality saves time and money in manufacturing and construction. Iris Universe, Summer 1996" href="/article/10.1007/s10055-003-0117-6#ref-CR25" id="ref-link-section-d47904e416">25</a>]. Examples include the ISS VR Demonstrator used by Rolls-Royce to make an assessment of how easy it would be to build an engine and maintain it [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 26" title="Greenfield D (1996) Virtual prototyping at Rolls-Royce. MIT Press, Cambridge, MA" href="/article/10.1007/s10055-003-0117-6#ref-CR26" id="ref-link-section-d47904e419">26</a>] and Boeing’s high-performance engineering visualisation system used during the design of the 777 [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 27" title="McNeely W (1996) Boeing’s high performance visualization software: Flythru. In: Proceedings of the CERN Computing Seminar, Geneva, Switzerland, June 1996" href="/article/10.1007/s10055-003-0117-6#ref-CR27" id="ref-link-section-d47904e422">27</a>]. Moreover, the French Space Agency (CNES) and CISI have jointly launched the PROVIS [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 28" title="Balet O, Luga H, Duthen Y and Caubert R (1997) PROVIS: a platform for virtual prototyping and maintenance test. In: Proceedings of Computer Animation ‘97, Geneva, Switzerland, June 1997" href="/article/10.1007/s10055-003-0117-6#ref-CR28" id="ref-link-section-d47904e425">28</a>] research project in 1995 for developing solutions for satellite designers to create, manipulate and study their models using digital mock-ups, while CRS4 and CERN have jointly developed the i3d system for supporting the design of CERN’s Large Hadron Collider [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 29" title="Balaguer JF and Gobbetti E (1995) i3D: a high-speed 3D Web browser. In: Proceedings of the VRML’95 Symposium, San Diego, CA, December 1995" href="/article/10.1007/s10055-003-0117-6#ref-CR29" id="ref-link-section-d47904e428">29</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 30" title="Gobbetti E, Balaguer, JF (1995) i3D: an interactive system for exploring annotated 3D environments. In: Proceedings of Scientific Visualization’95, World Scientific Publishing Co, New York" href="/article/10.1007/s10055-003-0117-6#ref-CR30" id="ref-link-section-d47904e432">30</a>]. These efforts show the interest of interactive virtual prototyping for early testing of designs.</p><p>Recently, research and development efforts for building virtual prototyping systems have been initiated independently from the needs of a specific project. Ongoing research at the Fraunhofer Center for Research in Computer Graphics involves studying how to integrate existing tools to provide virtual prototyping capabilities for existing CAD systems [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 31" title="Jasnoch U, Klement E, Kress K and Schiffer N (1996) Towards collaborative virtual prototyping in a world market. In: Proceedings of FAIM, Atlanta, GA, May 1996" href="/article/10.1007/s10055-003-0117-6#ref-CR31" id="ref-link-section-d47904e438">31</a>]. Some recent CAD add-on products such as PTC Pro/Fly-Through, Mechanical Dynamics ADAMS, Matra Datavision’s Megavision, Prosolvia Clarus Real-Time Link and the EDS Unigraphics Modelling module follow the same direction, providing real-time visualisation capabilities for engineering designs. Systems such as Division’s dV/Mock-up and dV/Reality, only available for PCs and SGI, have started to add limited interaction capabilities to high-performance rendering and, more importantly, a certain degree of support for concurrent model design. Working Model 3D, a windows/NT product by the American company Knowledge Revolution, which concentrates more on motion simulation than on real-time interaction, has been selected by readers of NASA Tech Brief as the most significant new product introduced to the engineering community in 1996. The ongoing ESPRIT project CAVALCALDE aims to advance the current state of the art by supporting and enhancing concurrent engineering practices, thanks to a distributed architecture enabling teams based in geographically dispersed locations to collaboratively design, test, validate and document a shared model.</p></div></div></section><section aria-labelledby="Sec3"><div class="c-article-section" id="Sec3-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec3">Definition of the problem</h2><div class="c-article-section__content" id="Sec3-content"><p>Train manufacturing companies usually face two problems with regards to the design: reaching an agreement with the contractor on the final design of the unit (which involves the intelligent combining of both aesthetic and engineering aspects) and showing their design to other companies, people or the media in general. We will discuss these two topics in the following paragraphs.</p><p>The process of building a train is by no means simple. Usually, the contractor makes a call for tenders and, based on engineering aspects, awards the project to one of the proposers. Once the project is signed, the phase of designing the train begins. This might include a third party, concentrating only on this task. The process involves a lot of work, including conceptual designs, colour palettes, sketches, etc. The information goes back and forth between the parties involved, until the contractor is satisfied with the results.</p><p>This design process is very important; in fact, engineering considerations aside, the visual aspect plays a key role. How the public will accept the train depends of course on functionality issues such as speed or accessibility, but also on considerations relating comfort (are the seats too packed together? are the corridors wide enough? is the lighting correct?), ergonomics (is the monitor visible from this specific place? is the luggage area accessible?) and pure aesthetics (does this colour scheme work? do the shapes seem to belong to one unified design?). Currently, this design process is dealt with by building real full-size mock-ups, in which all these aspects can be studied.</p><p>To address most of these not-so-technical issues, the contract includes the construction of a full-size model of only one of the cars that make up the train (usually the most representative, due to budget limitations) as a requirement. More often than not, the contractor finds out that what worked as a sketch on paper does not work when built full-size in 3D, but changing it is costly in terms of time and money. Even though this full-size model approach allows a person to actually get into the car, walk through it, sit down to test the seats, etc., it imposes serious restrictions: </p><ul class="u-list-style-dash">
+                  <li>
+                    <p>Size and mobility. The full-size model is obviously hard to transport from one place to another, thus limiting the physical space where it can be shown. Only one car is built, and it is a fixed model with no movement capabilities at all.</p>
+                  </li>
+                  <li>
+                    <p>Versatility. After examining the full-size model, changes in shapes, lighting or appearance can only be performed by rebuilding whatever parts are involved in the changes, then reinstalling them. This is not only expensive, but involves heavy time delays as well. Consider the trouble it takes to change a critical element such as a seat, for instance, or a change in the colour of the floor which would involve installing a new carpet in the whole car.</p>
+                  </li>
+                  <li>
+                    <p>Economy. These full-size models tend to be very expensive, which affects the number of changes that can be made within a reasonable budget.</p>
+                  </li>
+                  <li>
+                    <p>Life. Once used and approved, the full-size model is usually destroyed for storage reasons.</p>
+                  </li>
+                </ul>
+                     <p>After the real size model is built and the design has been agreed on, the company usually wants to show this design to the media or other partners. With the traditional way of building a real train car, the only way to do this is taking people to the physical location of the model. This again implies many of the same aforementioned restrictions.</p><p>As an alternative to this classical approach, the authors proposed the construction of a CAVE-like System (CLS). The CLS has been designed to overcome all these shortcomings and change the methodology of the design process, turning it into a cheaper and more flexible one. Specifically, by building a digital model, the abovementioned restrictions are done away with, while the following extra features are added: </p><ul class="u-list-style-dash">
+                  <li>
+                    <p>Mobility. The proposed CLS can be dismantled and shipped for exhibition in different places or cities or in different scenarios (fairs, congresses, train stations, etc.) which helps the dissemination of the product. Also, scaled-down versions can be given away in CD or DVD formats for deeper and wider dissemination.</p>
+                  </li>
+                  <li>
+                    <p>Versatility. All kinds of changes in shapes, lighting or appearance are feasible with the digital model, and much less costly in terms of time and money. Pre-planned changes and different options are only a mouse click away. For instance, the user can compare five different colour schemes, three types of seats and six floors to see which combination works best, add people, change from natural daylight to artificial night lighting, etc. On top of that, the digital model can simulate movement through rendered animations.</p>
+                  </li>
+                  <li>
+                    <p>Economy. Once the initial hardware investment has been made, the digital approach is one order of magnitude cheaper than building the physical model. The first model, including the hardware investment reusable for subsequent models, has roughly the same cost as one full-size model.</p>
+                  </li>
+                  <li>
+                    <p>Life. Digital information lasts virtually forever.</p>
+                  </li>
+                  <li>
+                    <p>Extension. Using augmented virtuality techniques [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 32" title="Milgram P, Takemura H, Utsumi A and Kishino F (19949 Augmented reality: a class of displays on the reality-virtuality continuum. SPIE 2351.282–292" href="/article/10.1007/s10055-003-0117-6#ref-CR32" id="ref-link-section-d47904e510">32</a>], the model can be inserted in real environments, or ergonomics can be studied by placing people and objects in the desired places, providing a greater sense of realism to the viewer at the same time.</p>
+                  </li>
+                  <li>
+                    <p>Quality. The digital model is a good medium for presentations. In addition to this, the spectacular nature and innovative side of this approach is remarkable, which represents an added value for commercial and publicity issues.</p>
+                  </li>
+                  <li>
+                    <p>Dissemination ease. Almost the same information that is displayed in the CLS (or a slightly modified or adapted version) can be stored in digital media like CD or DVD and widely distributed.</p>
+                  </li>
+                </ul>
+                     <p>Considering all the pros and cons of the digital, virtual model approach, it makes sense to think it is worth the effort. The decision to build the digital model was made by Construcciones y Auxiliar de Ferrocarriles (CAF), Renfe Cercanías [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 33" title="Renfe Corporation (2004). http://www.renfe.es. Cited 2004" href="/article/10.1007/s10055-003-0117-6#ref-CR33" id="ref-link-section-d47904e530">33</a>] and the Grupo de Informática Gráfica Avanzada (GIGA; Advanced Computer Graphics Group) of the University of Zaragoza. The proposed methodology changes the old full-size model paradigm, providing the CLS as a working system from the early stages of the design. The parties involved can propose a design, see it in a full-size stereoscopic display, change it or tweak it if necessary, go back to the CLS to test it and so on, until the cycle converges into the final design. Needless to say, all the changes done in the digital realm are a lot cheaper and can be done faster than with the real model. In addition to this, the digital model can be seen under different daylight conditions, at night, inside a tunnel, integrated with different real environments, with real people, etc. Computer generated imagery has therefore been generated, both static and animated, for regular and stereoscopic viewing. Our CAVE-like system is designed, in addition, as a medium to present the finished designs. These presentations might be aimed at a broad range of audiences, from the press to potential new contractors. With this in mind, the authors also generated the PreCAVE software, which allows any non-computer science expert to prepare presentations in a simple, fast way, choosing amongst all the different elements and formats that can be used, such as static imagery, videos stereoscopy or audio.</p><p>The following paragraphs describe the system specification as well as certain decisions taken during the implementation.</p></div></div></section><section aria-labelledby="Sec4"><div class="c-article-section" id="Sec4-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec4">The system specification</h2><div class="c-article-section__content" id="Sec4-content"><p>A low-cost CLS has been chosen as the output format [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 34" title="SGI (2004) http://www.sgi.com/products/appsdirectory.dir/apps/app_number859393.html. Cited 2004" href="/article/10.1007/s10055-003-0117-6#ref-CR34" id="ref-link-section-d47904e543">34</a>]. Four to six people can fit in comfortably, although there is only one ideal point of view from which perspective and stereoscopy appear to be perfect, since it is the point of view for which both have been calculated [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 35" title="McAllister D (1993) Stereo computer graphics and other true 3D technologies. Princeton University Press, Princeton, NJ" href="/article/10.1007/s10055-003-0117-6#ref-CR35" id="ref-link-section-d47904e546">35</a>].</p><p>Given the nature of the project, the notion of real time has been turned down in favour of high quality imagery. That means that the images have all been prerendered, instead of using some graphic library such as OpenGL [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 36" title="Woo M, Neider J, Davis T and Schreiner D (1996) OpenGL programming guide. Addison-Wesley Developers Press, Reading, MA" href="/article/10.1007/s10055-003-0117-6#ref-CR36" id="ref-link-section-d47904e552">36</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 37" title="Kempf R, Frazier C (1997) OpenGL reference manual. Addison-Wesley, Reading, MA" href="/article/10.1007/s10055-003-0117-6#ref-CR37" id="ref-link-section-d47904e555">37</a>] to calculate and display them in real time. A commercial modelling and animation package was used to produce the geometry, shaders and camera paths. The chosen rendering algorithm is based on ray tracing, using the in-house ALEPH software [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 38" title="Serón FJ, Magallón JA, Meléndez E and Latorre P (1995) The ALEPH project: image synthesis using illusion and physical based rendering. Visualization and Intelligent Design in Engineering and Architecture; Ed. Computational Mechanics Publication, 1995" href="/article/10.1007/s10055-003-0117-6#ref-CR38" id="ref-link-section-d47904e558">38</a>]. Ray tracing was favoured over more advanced global illumination methods such as photon mapping [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 39" title="Wann Jensen H (2001) Realistic image synthesis using photon mapping. AK Peters, Natick MA" href="/article/10.1007/s10055-003-0117-6#ref-CR39" id="ref-link-section-d47904e561">39</a>] due to the lesser time needed to generate one frame with the former approach. Global illumination effects such as soft shadows or colour bleeds are altered for a softer, more natural look than off-the-shelf straight ray tracing usually offers, by using simplifications such as shadow maps, the use of selective lights, or replacing real area lights with simpler, equivalent models. This also helps keep rendering times within reasonable limits.</p><p>The system is also able to play a continuous, predefined sequence of video and dynamic presentations of static imagery, so it can be used in an unattended way, suitable for presentations to the masses.</p><h3 class="c-article__sub-heading" id="Sec5">Hardware</h3><p>Hardware-wise, the system is made up of the following elements: </p><ul class="u-list-style-dash">
+                    <li>
+                      <p>Three flat panel screens for rear projection (two screens measuring 4 × 3 m, one measuring 3 × 3 m) assembled with a wedge frame, t-bars and light baffles. Additional characteristics are gained through 180 degrees of viewing angles. The washable, flame retardant screens do not depolarise the light projected on them to allow for stereoscopic images.</p>
+                    </li>
+                    <li>
+                      <p>Six LCD projectors (XGA panel, 1800 ANSI lumen, 1024 × 768 native panel resolution) to project images and videos onto the screens.</p>
+                    </li>
+                    <li>
+                      <p>Six fixed short focus lenses with a throw ratio of 0.9:1. They are used to reduce the distance between the projector and the screen, instead of folding the projectors’ optics using heavy and fragile mirrors.</p>
+                    </li>
+                    <li>
+                      <p>Polarising filters placed in front of the projector lenses and polarizing glasses for the audience for stereoscopic views.</p>
+                    </li>
+                    <li>
+                      <p>Two mid-sized PCs (P-III @ 800 Mhz, 256 MB RAM) running W2000. One is equipped with two MPEG-2 decoder cards, each one offering four channels of simultaneous MPEG-2 decoding. The two cards combined assure that the six videos projected during certain moments of the presentation (two for each eye times three screens) run in sync, preserving both the stereoscopic effect and the continuity between them. The other one will send static SVGA imagery, so it must have six SVGA output channels (different combinations of regular SVGA cards assure that).</p>
+                    </li>
+                  </ul>
+                        <p>The screens are supported by a frame made up of four beams assembled together, forming a rigid rectangle; the cantilevering wedge screen framing system allows each image to be rear projected completely to the outer edge of the seam—which minimises the apparent gap between all adjacent images. The screens material is flexible, thus allowing for easy transportation by just rolling them up carefully. To assemble them, the screens are unrolled over the frame, fastened to it and tightened with a towrope. Once the screens are completely assembled, their frames are fixed to one another in their final position, so that no additional structure is needed for the screens to stand in the upright position.</p><h3 class="c-article__sub-heading" id="Sec6">Viewer-centred perspective</h3><p>Our aim is to have the users see exactly the same things at a scale of 1:1 that they would see if they were standing inside the real train. We had to make the projection planes in our perspective match the real CLS walls, with the projection focus exactly at the viewers’ position. Since our CLS renders offline in order to achieve the required photorealism in the images using low-end hardware, we had to choose an “ideal user” fixed viewer position inside it. The obvious choice is to have this ideal user standing at the centre of the floor, and looking at a point located at the centre of the front screen, at the same height as the viewer’s eyes (which are also fixed to a mean standard value of 1.65 m).</p><p>The viewer’s orientation is important for correct stereo projection, so we had to use the same orientation for all screens. Otherwise, we will end up with: </p><ul class="u-list-style-dash">
+                    <li>
+                      <p>Inconsistencies at the edges of the CLS walls, since at least one eye has moved from one projection to another.</p>
+                    </li>
+                    <li>
+                      <p>Incorrect views for two of the CLS walls for a given viewer orientation.</p>
+                    </li>
+                  </ul>
+                        <p>This means our CLS ideal user has to be looking at the front wall, while the side walls are used to fill the field of view, i.e., to be seen through the corner of the eye; if the user rotates his head to look directly to, say, the left wall, he will not see a real stereo view. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0117-6#Fig1">1</a> shows this viewer-centred perspective. </p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1.</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-003-0117-6/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0117-6/MediaObjects/s10055-003-0117-6flb1.gif?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0117-6/MediaObjects/s10055-003-0117-6flb1.gif" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p> Viewer-centred perspective</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-003-0117-6/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>This off-axis projection must be achieved by using the standard perspective available in most rendering software, which allows just a symmetric projection around the viewing axis (the usual “camera view”). An easy way to get the desired asymmetric projection (remember we have to render both eyes’ views, so they will be displaced a bit from the ideal user’s centre) is to render at the minimum resolution which will cover the full projection plane, then crop to the final wall coordinates. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0117-6#Fig2">2</a> represents this for a left eye projection. </p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2.</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-003-0117-6/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0117-6/MediaObjects/s10055-003-0117-6flb2.gif?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0117-6/MediaObjects/s10055-003-0117-6flb2.gif" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p> Asymmetric perspective. s: distance from central axis, w: width of projection plane</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-003-0117-6/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>As we can see in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0117-6#Fig2">2</a>, the symmetric standard perspective which covers the desired projection plane, centred at the viewer’s position, is obtained by increasing the resolution in a quantity equal to two times the distance between the viewer’s eye and the perpendicular axis to the centre of the plane(s). This operation should be done both for width (when the viewer is not exactly at the centre of the CLS, or for stereo views when the viewer is located at the centre, where we have to use the eye-separation value, estimated as 57 mm) and height (in order to take into account the fact that the viewer’s eyes are locate above the centre of the wall).</p><p>From this theoretical resolution, measured in “real” units, we will have to crop off the region which lies outside the wall, which obviously will match the increment used (2 s) and will be located at the closest edge to the viewer. Then both the final resolution and the crop window have to be translated to pixel units using the projection device resolution (720 × 576 for MPEG-2 PAL output and 1024 × 768 for SVGA).</p><p>This process needs to be performed six times (three screens times two eyes). We used a simple program, designed as a plug-in for the rendering software, which would take the input data shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0117-6#Fig3">3</a> and would define the six cameras necessary for correct stereoscopy. </p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3.</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-003-0117-6/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0117-6/MediaObjects/s10055-003-0117-6flb3.gif?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0117-6/MediaObjects/s10055-003-0117-6flb3.gif" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p> Input data. w: width of CLS, h: height of CLS, y: viewer’s distance to the front wall, z: height of viewer’s eyes, 2 s: inter-eye distance</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-003-0117-6/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h3 class="c-article__sub-heading" id="Sec7">The video display and the slide show</h3><p>We face two main issues in the process of designing the video display subsystem: </p><ul class="u-list-style-dash">
+                    <li>
+                      <p>The ability to deliver six (three stereo pairs) video streams in real time from a single computer.</p>
+                    </li>
+                    <li>
+                      <p>The need to synchronise their playing at frame level.</p>
+                    </li>
+                  </ul>
+                        <p>The first point above led us to require special hardware to accomplish the goals. The solution adopted consists of using some specific add-on cards to play the six MPEG2 streams synchronised. Each of these cards offers 4 MPEG2 hardware decoders, and are able to read input data directly from a UltraSCSI disk, bypassing the PCI bus and accessing the storage device directly. With a modern drive with performance capabilities near the 30-40 MB/s range for data throughput, we are able to feed each decoder with a stream rated at about 5-10 Mbits/s, reaching and surpassing the quality of commercial DVD movies. The cards are managed by a custom written program, based on the available SDK. This SDK offers a very low-level API for programming the cards, giving some basic functionality as initialising the cards, setting input device configuration (PCI bus, direct SCSI), querying their state (play, pause, error...), launching stream playback and some simple synchronisation functionality (sync on frame or time basis). We had to implement the high-level flow logic of the system, the error recovery and reliability control (to detect frame drops or stream errors and restart streams on desired points), and a friendly user interface on top of that. GUI programming was done with the GTK+2.0 for Windows library, that offers both an efficient and complete toolkit.</p><p>The dynamic slide show program has a very clear purpose: it takes six images and displays them on six monitors. The main problems come from the state of the technology in commodity-off-the-shelf (COTS) hardware in PCs.</p><p>Because of hardware restrictions, only six slides plus the transition to the next set can be stored in memory, so the rest of the slides that made up the presentation must be loaded in real time. For this purpose we designed a prefetching and cacheing system that loads from disk the next frame the user is going to see after displaying the current one. This renders the computer unusable while heavily reading from disk (and perhaps decompressing JPEG or other format), but this time is spent by the users either discussing what is on screen at that moment or just paying attention to the specific details shown in the picture. We also wanted the presentation to include some nice effects, such as fading between slides. This effect is barely used when the CLS system is used during the design phase (people working and discussing the details want to jump quickly between slides), but offers a very interesting enhancement when the system is used for shows or presentations, since in this type of situation a smooth fade is usually more pleasant to the eye than a straight cut.</p><p>Hardware acceleration for graphics is, at best, defective under Windows in multimonitor conditions (remember you only have one AGP slot, so all of the additional cards were plugged into a shared 33 MHz PCI bus). Just the process of dumping raw images to the cards works roughly at 5 fps. In addition we needed to generate the intermediate frames for the transitions in real time, and an operation like weight-averaging two frames for a simple fade is very time consuming. This process was also added in the prefetching code.</p><p>The system is designed to be controlled from inside the CAVE, so the remote control has to be radio-based (i.e., non optical). These kind of controls are usually mice or small trackballs with two or three buttons, and are not very comfortable to use (try turning the trackball with the thumb while you press a button), so intuitive interactive operations were designed: step forward and backwards, and the possibility of adding a popup menu of basic functions (rewind, fast-forward) on the third button. This kind of interaction, though, proved to be more than enough for the desired type of presentations.</p><p>Before the presentation, the audience is given polarised glasses. During the presentation, they are prompted (by means of a static virtual actor) to put them on or take them off, depending on whether the images are stereoscopic or not.</p><p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0117-6#Fig4">4</a> gives a rough description of the dimensions of the system. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0117-6#Fig5">5</a> shows a few pictures of the actual CLS that was built. For simplicity, it was decided not to have a floor or a ceiling, at least in this first prototype. The ceiling, though, has been covered with a black canvas, so as not to let any light out. Similarly, the room the CLS is in has been painted in matte black to absorb any light filtering in or bouncing off the screens. </p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4.</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-003-0117-6/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0117-6/MediaObjects/s10055-003-0117-6flb4.gif?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0117-6/MediaObjects/s10055-003-0117-6flb4.gif" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p> Dimensions of the system in centimeters</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-003-0117-6/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5a–d</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-003-0117-6/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0117-6/MediaObjects/s10055-003-0117-6fhb5.jpg?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0117-6/MediaObjects/s10055-003-0117-6fhb5.jpg" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p> The CLS system</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-003-0117-6/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        </div></div></section><section aria-labelledby="Sec8"><div class="c-article-section" id="Sec8-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec8">Results</h2><div class="c-article-section__content" id="Sec8-content"><p>The simulation was asked for by CAF (Construcciones y Auxiliar de Ferrocarriles [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 40" title="CAF (2004) http://www.caf.es. Cited 2004" href="/article/10.1007/s10055-003-0117-6#ref-CR40" id="ref-link-section-d47904e796">40</a>]), with Renfe [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 33" title="Renfe Corporation (2004). http://www.renfe.es. Cited 2004" href="/article/10.1007/s10055-003-0117-6#ref-CR33" id="ref-link-section-d47904e799">33</a>], the most important train company in Spain, as the final client. More than twenty minutes of computer generated imagery made the cut for the final version of the simulation. As already stated, this imagery included both static images and animation, with and without stereoscopy. In addition to pure synthetic images, augmented virtuality techniques [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 32" title="Milgram P, Takemura H, Utsumi A and Kishino F (19949 Augmented reality: a class of displays on the reality-virtuality continuum. SPIE 2351.282–292" href="/article/10.1007/s10055-003-0117-6#ref-CR32" id="ref-link-section-d47904e802">32</a>] were also used, for instance, to have the train come to a stop in a real train station, which was carefully photographed in advance for that purpose. The images were sent to the projectors either in SVGA format or S-Video format. SVGA was used for static imagery, with transitions and fades calculated in real time by one of the PCs. Those images were rendered at a resolution of 1024 × 768. Images were limited to that resolution by the projectors’ native panel. Animations were sent in S-Video, at a resolution of 720 × 576. This time, the limitation was imposed by the graphic cards used to decode six MPEG-2 channels simultaneously. Perfect synchronisation of those cards was required in order to preserve continuity in the images projected onto the different screens, and to maintain the stereoscopy. This was achieved by coding another program, that would use the software libraries of the own cards.</p><p>The simulation was controlled by one script in the case of dynamic presentations of static imagery. A wireless mouse was used to advance or retreat. An automatic version of the script that required no mouse interaction was also written but this was only used to drive the automatic mode presentations, not in the design phase. The animations were run by the graphic cards’ software, since little interaction was required.</p><p>After initial tests, it was decided to start the presentation with the S-Video animations, including the train coming to a stop in the real station and the surrounding stereoscopic walks inside the train. Then we would turn to SVGA, thus presenting higher-resolution images. Doing it the other way around would have meant a decline in quality, which initial tests proved to be unpleasant.</p><p>In order to inform the audience and help them with orientation issues (whether they are looking from the cabin or to the cabin, for instance), a virtual stewardess is introduced; this synthetic hostess guides the users throughout the presentation, explaining what parts are going to be seen, and prompting them to put on the stereoscopic glasses or take them off; images of this virtual stewardess were generated in different positions, while a brief text next to her fulfilled the task. An audio version of the information was ruled out after initial tests proved it more disturbing than written text. Nevertheless, the system does have 3D sound effects and background music, which can be toggled on and off. A small map of the train is also shown on one of the side screens when necessary.</p><p>Animations were rendered on a render farm made of six double-processor stations with 1 GB of RAM, running Windows 2000. Eight additional machines were used to generate static imagery whenever the user would log off.</p><p>Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-003-0117-6#Tab1">1</a> shows some of the most relevant statistics of this simulation. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0117-6#Fig6">6</a> shows the simulation running on the CLS, as well as several of the images produced. </p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-1"><figure><figcaption class="c-article-table__figcaption"><b id="Tab1" data-test="table-caption">Table 1.  Statistics of the simulation</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-003-0117-6/tables/1"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-6"><figure><figcaption><b id="Fig6" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 6a–h</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-003-0117-6/figures/6" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0117-6/MediaObjects/s10055-003-0117-6fhb6.jpg?as=webp"></source><img aria-describedby="figure-6-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0117-6/MediaObjects/s10055-003-0117-6fhb6.jpg" alt="figure6" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-6-desc"><p> A simulation running on the CLS and several of the images produced</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-003-0117-6/figures/6" data-track-dest="link:Figure6 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>We would also like to mention the fact that the legal patent process for the system has already been initiated by the authors.</p></div></div></section><section aria-labelledby="Sec9"><div class="c-article-section" id="Sec9-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec9">User feedback</h2><div class="c-article-section__content" id="Sec9-content"><p>Approximately 600 people have seen the presentation in the CLS, distributed in more than one hundred sessions. The feedback from them has always, without exception, been extremely positive and enthusiastic.</p><p>Everybody could see the stereoscopic images in 3D, which was a big concern in the beginning. As warned by the existing literature, stereoscopy is a subjective matter. To begin with, it has been calculated for an ideal observer placed on an ideal spot. It is safe to assure that none of the estimated 300-plus people exactly matched all the measures and distances involved in the calculation. The accommodation-convergence issue was also a source of worries, but again everybody was able to see the stereoscopy without much effort. The stereoscopic images are lengthy enough to provide the observers with plenty of time to adapt, in case they cannot see the stereoscopy right away.</p><p>People with a certain degree of knowledge of the technology involved did perceive the loss of quality in the MPEG-2 animations when compared to the S-VGA static imagery, but understood the causes and were willing to ignore it during the presentation. People with no knowledge of the technology considered the initial MPEG-2 animations as being high quality already, only to have their expectations surpassed even further when the following, higher-resolution S-VGA images were projected.</p><p>Nobody felt any motion sickness at all, which was another major point of concern for the CLS design team. The system has no floor projection, so during animations the three surrounding walls are “moving” while the floor remains static. That, plus the logical absence of inertia, were factors for potential motion sickness. The effects were minimised from the beginning by not panning the camera around, limiting the movement to straight trajectories inside the train and painting the floor black. Short animations and an appropriate walking speed did the rest of the job of keeping motion sickness away.</p><p>From the point of view of the train companies (CAF and Renfe), the presentation was also a complete success: Renfe came to the conclusion that this digital approach is a better alternative to the conventional full-size model, and will demand it as part of future contracts with CAF. On the other hand, Renfe and CAF have plans under way to move the CLS to Madrid and Valencia, respectively, for public exhibition, presenting it as a revolutionary and innovative approach to the train design process.</p><p>In the last few weeks, almost 300 computer engineering students from the University of Zaragoza have viewed the presentation in the CLS. Their assignment afterwards was to answer a questionnaire, providing the authors with some extensive user feedback and hopefully new ideas to improve and to expand the system. The answers were overwhelmingly positive, reassuring the authors the accomplishment of the intended goals in this project. Some of them were also asked to prepare their own individualised presentations using the PreCAVE software. Again, the feedback obtained was positive in terms of ease of use and versatility.</p></div></div></section><section aria-labelledby="Sec10"><div class="c-article-section" id="Sec10-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec10">Conclusions</h2><div class="c-article-section__content" id="Sec10-content"><p>A train simulator entirely developed by the Grupo de Informática Gráfica Avanzada of the University of Zaragoza has been presented. The simulator, based on a low-cost CLS architecture, is fully functional, and has already been used in several simulations with CAF and Renfe staff with satisfactory results.</p><p>The possibility of not using a real model for the design process of a train has been proven. Many variations can be presented sharing a common design in a cheap, fast way. Images with different illuminations, floors, seats, doors, windows or colour schemes can be rendered to be viewed and compared full-size, even side to side if necessary. Elements can be hidden or shown in isolation, and either in a full-size or blown-up full screen for better study.</p><p>By adding people to the images, the real perception of the train can be visualised. An empty train interior tends to look dull, since usually the colour schemes used are meant that way. As the Renfe management puts it, “<i>people are the colour of the train</i>”. This fact was proved by showing empty images first, then adding different configurations of people sitting, staring out the window, walking down the corridors, etc.</p><p>Many changes in the design of the train were induced by the images produced. The seats, for instance, the design of which had been approved based on their orthographic views, were found not to look so good from a natural, passenger’s point of view, and so they were sent back to the drafting table. Also, a slightly darker hue was chosen when early rendering tests showed poor contrasts with the train walls and ceiling. Displays on the outside were made bigger for better reading, after the augmented virtuality test of the train coming to a stop in a real station showed poor readability. Monitors were raised a little bit higher, after visibility tests were conducted placing virtual people standing up next to them. Several seats were removed after animatics showed they took up too much space. The original colour chosen for the floor carpet was changed after illumination tests, where waste baskets were redesigned, and speakers made a bit smaller. These are just some of the changes that could be easily done in the digital realm, but would have cost a lot more to implement with a real model. Not only were they faster this way, but the flexibility of the system allowed CAF and Renfe to explore more creative paths than they usually would have, coming up with a far better product from an aesthetic and ergonomic point of view.</p><p>Finally, the feedback obtained from the users regarding the presentations inside the CLS has been enthusiastic and very positive.</p><p>Running the simulation with people inside the CLS allowed us to come up with two important conclusions as well. The first one is the fact that, even though there is only one ideal point of view from which perspective and stereoscopy have been calculated, any mismatches or discontinuities perceived by people not standing exactly on the ideal point are subconsciously assumed, not causing any discomfort while viewing the images. The second conclusion involves the tendency of people to look up front to the central screen. Unless the focal point of the image lies intentionally on one of the side screens, people use them just for peripheral vision, enough so they can feel the sense of immersion. This fact helps in the stereoscopic views, since they are calculated supposing that the person is looking straight down the central screen.</p></div></div></section><section aria-labelledby="Sec11"><div class="c-article-section" id="Sec11-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec11">Future work</h2><div class="c-article-section__content" id="Sec11-content"><p>The most obvious future focus of work is to include real-time imagery in the system, with head-tracking devices that would receive the position of the head as input and would calculate the corresponding perspective and stereoscopy accordingly. This would necessarily impose a reduction in the quality of the images that could be generated, in keeping with the PC-based, low cost approach of the CLS. Instead of pre-rendered, high quality imagery, the images would have to settle for a more basic OpenGL-shaded look, with pre-lit, fine textures. Therefore, a hybrid approach that would mix between real time and high quality seems the most favourable combination.</p><p>A second focus of future work could be to add another level of interaction to the system, by capturing input from the user during animations and having the user react accordingly. This would, for instance, enable the user to choose between different precalculated animation paths at specific points, all done in real time and without any perceptible discontinuities in the animations.</p><p>The addition to the CLS of a floor with projected images is one of the issues that could be addressed in a future version. It would be necessary to achieve a greater sense of immersion, especially during animations. However, the current setup would become increasingly more complicated and expensive, verging on overkill for the intended simulation.</p><p>Another field open for future work is the substitution of the S-Video channel for another option that imposes less restrictions on the output resolution, as well as hopefully less compression. One option would be to change the PC with the MPEG-2 decoding cards for seven PCs under a master-slave architecture, and synchronise them so that each one sends one SVGA video. Another option would mean converting the animations to digital video and showing them in progressive DVD format.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Hollands R (1996) The virtual reality home brewer’s handbook. Wiley, New York" /><span class="c-article-references__counter">1.</span><p class="c-article-references__text" id="ref-CR1">Hollands R (1996) The virtual reality home brewer’s handbook. Wiley, New York</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Burdea G (1996) Force and touch feedback for virtual reality. Wiley, New York" /><span class="c-article-references__counter">2.</span><p class="c-article-references__text" id="ref-CR2">Burdea G (1996) Force and touch feedback for virtual reality. Wiley, New York</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Kalawsky R (1993) The science of virtual reality and virtual environments. Addison-Wesley, New York" /><span class="c-article-references__counter">3.</span><p class="c-article-references__text" id="ref-CR3">Kalawsky R (1993) The science of virtual reality and virtual environments. Addison-Wesley, New York</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content=". Clark, " /><meta itemprop="datePublished" content="1998" /><meta itemprop="headline" content="Clark Dodsworth Jr. (1998) Digital illusion: entertaining the future with high technology. ACM, New York" /><span class="c-article-references__counter">4.</span><p class="c-article-references__text" id="ref-CR4">Clark Dodsworth Jr. (1998) Digital illusion: entertaining the future with high technology. ACM, New York</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 4 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=&amp;journal=Digital&amp;volume=illusion&amp;publication_year=1998&amp;author=Clark%2C">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Research driving simulators (2003) http://www.inrets.fr/ur/sara/Pg_simus_e.html. Cited 24 November 2003" /><span class="c-article-references__counter">5.</span><p class="c-article-references__text" id="ref-CR5">Research driving simulators (2003) http://www.inrets.fr/ur/sara/Pg_simus_e.html. Cited 24 November 2003</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="DaimlerChrysler Corporation (2004) http://www.daimler-benz.com. Cited 2003" /><span class="c-article-references__counter">6.</span><p class="c-article-references__text" id="ref-CR6">DaimlerChrysler Corporation (2004) http://www.daimler-benz.com. Cited 2003</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content=". Cruz-Neira, " /><meta itemprop="datePublished" content="1992" /><meta itemprop="headline" content="Cruz-Neira C, Sandin DJ, DeFanti TA, Kenyon R and Hart J (1992) The CAVE: audio visual experience automatic vi" /><span class="c-article-references__counter">7.</span><p class="c-article-references__text" id="ref-CR7">Cruz-Neira C, Sandin DJ, DeFanti TA, Kenyon R and Hart J (1992) The CAVE: audio visual experience automatic virtual environment. Comm ACM 35(6):64–72</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1145%2F129888.129892" aria-label="View reference 7">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 7 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=&amp;journal=Comm%20ACM&amp;volume=35&amp;publication_year=1992&amp;author=Cruz-Neira%2C">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Cruz-Neira C, Sandin DJ and DeFanti TA (1993) Surround-screen projection-based virtual reality: the design and" /><span class="c-article-references__counter">8.</span><p class="c-article-references__text" id="ref-CR8">Cruz-Neira C, Sandin DJ and DeFanti TA (1993) Surround-screen projection-based virtual reality: the design and implementation of the CAVE. In: Proceedings of SIGGRAPH’93, Anaheim, CA, 1–6 August 1993</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="von Laszewski G, Insley JA, Foster I, Bresnahan J, Kesselman C, Su M, Thiebaux M, Rivers ML, Wang S, Tieman B " /><span class="c-article-references__counter">9.</span><p class="c-article-references__text" id="ref-CR9">von Laszewski G, Insley JA, Foster I, Bresnahan J, Kesselman C, Su M, Thiebaux M, Rivers ML, Wang S, Tieman B and McNulty I (1999) Real-time analysis, visualization, and steering of microtomography experiments at photon sources. In: Proceedings of the Ninth SIAM Conference on Parallel Processing for Scientific Computing, San Antonio, TX, 22–24 March 1999</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Spoelder H, Renambot L, Germans D, Bal H and Groen F (2000) Real-time interaction in VR with a distributed mul" /><span class="c-article-references__counter">10.</span><p class="c-article-references__text" id="ref-CR10">Spoelder H, Renambot L, Germans D, Bal H and Groen F (2000) Real-time interaction in VR with a distributed multi-agent system. Vrije Universiteit Amsterdam, Faculty of Sciences, April 2000</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Renambot L, Bal H, Germans D and Spoelder H (2000) CAVEStudy: an Infrastructure for computational steering in " /><span class="c-article-references__counter">11.</span><p class="c-article-references__text" id="ref-CR11">Renambot L, Bal H, Germans D and Spoelder H (2000) CAVEStudy: an Infrastructure for computational steering in virtual reality environments. In: Proceedings of the Ninth IEEE International Symposium on High Performance Distributed Computing, Pittsburgh, PA, 1–4 August 2000</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Germans D, Spoelder H, Renambot L, Bal H (2001) VIRPI: a high-level toolkit for interactive scientific visuali" /><span class="c-article-references__counter">12.</span><p class="c-article-references__text" id="ref-CR12">Germans D, Spoelder H, Renambot L, Bal H (2001) VIRPI: a high-level toolkit for interactive scientific visualization in virtual reality. In: Proceedings of the Immersive Projection Technology/Eurographics Virtual Environments Workshop (IPT/EGVE), Stuttgart, Germany, 16–18 May 2001</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Maletic JI, Leigh J and Marcus A (2001) Visualizing software in an immersive virtual reality environment. In: " /><span class="c-article-references__counter">13.</span><p class="c-article-references__text" id="ref-CR13">Maletic JI, Leigh J and Marcus A (2001) Visualizing software in an immersive virtual reality environment. In: Proceeedings of ICSE’01, the Workshop on Software Visualization, Toronto, Canada, 12–13 May 2001</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Hudson R, Gunn C, Francis G, Sandin DJ and DeFanti TA (1995) Mathenautics: using VR to visit 3-D manifolds. In" /><span class="c-article-references__counter">14.</span><p class="c-article-references__text" id="ref-CR14">Hudson R, Gunn C, Francis G, Sandin DJ and DeFanti TA (1995) Mathenautics: using VR to visit 3-D manifolds. In: Proceedings of the Symposium on Interactive 3D Graphics, Monterey, CA, April 1995</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Leigh J, DeSchutter E, Lee M, Bower JM and DeFanti TA (1993) Realistic modeling of brain structures with remot" /><span class="c-article-references__counter">15.</span><p class="c-article-references__text" id="ref-CR15">Leigh J, DeSchutter E, Lee M, Bower JM and DeFanti TA (1993) Realistic modeling of brain structures with remote interaction between simulations of an inferior olivary neuron and a cerebellar purkinje cell. In: Proceedings of the Simulation Multiconference on the High Performance Computing Symposium, The Society for Computer Simulation, Phoenix, AZ, April 1993</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content=". Bobick, " /><meta itemprop="datePublished" content="1996" /><meta itemprop="headline" content="Bobick AF, Intille SS, Davis JW, Baird F, Pinhanez CS, Campbell LW, Ivanov YA, Schütte A and Wilson A (1996) T" /><span class="c-article-references__counter">16.</span><p class="c-article-references__text" id="ref-CR16">Bobick AF, Intille SS, Davis JW, Baird F, Pinhanez CS, Campbell LW, Ivanov YA, Schütte A and Wilson A (1996) The kids room: a perceptually-based interactive and immersive story environment. MIT Media Laboratory Perceptual Computing Section Technical Report No. 398, 1996</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 16 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=&amp;journal=The%20kids&amp;volume=room&amp;publication_year=1996&amp;author=Bobick%2C">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Roy TM, Cruz-Neira C and DeFanti TA (1995) Cosmic worm in the CAVE: steering a high performance computing appl" /><span class="c-article-references__counter">17.</span><p class="c-article-references__text" id="ref-CR17">Roy TM, Cruz-Neira C and DeFanti TA (1995) Cosmic worm in the CAVE: steering a high performance computing application from a virtual environment. PRESENCE: Teleop Virt Environ 4(2):121–131</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content=". Kaufman, " /><meta itemprop="datePublished" content="1974" /><meta itemprop="headline" content="Kaufman L (1974) Sight and mind: an introduction to visual perception. Oxford University Press, New York" /><span class="c-article-references__counter">18.</span><p class="c-article-references__text" id="ref-CR18">Kaufman L (1974) Sight and mind: an introduction to visual perception. Oxford University Press, New York</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 18 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=&amp;journal=Sight%20and&amp;volume=mind&amp;publication_year=1974&amp;author=Kaufman%2C">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Lipton L (1991) CrystalEyes handbook. StereoGraphics Corporation, San Rafael, CA" /><span class="c-article-references__counter">19.</span><p class="c-article-references__text" id="ref-CR19">Lipton L (1991) CrystalEyes handbook. StereoGraphics Corporation, San Rafael, CA</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content=". Pastoor, " /><meta itemprop="datePublished" content="1991" /><meta itemprop="headline" content="Pastoor S (1991) 3D television: a survey of recent research results on subjective requirements. Sig Proc Imag " /><span class="c-article-references__counter">20.</span><p class="c-article-references__text" id="ref-CR20">Pastoor S (1991) 3D television: a survey of recent research results on subjective requirements. Sig Proc Imag Commun 4:21–32</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1016%2F0923-5965%2891%2990057-9" aria-label="View reference 20">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 20 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=&amp;journal=Sig%20Proc%20Imag%20Commun&amp;volume=4&amp;publication_year=1991&amp;author=Pastoor%2C">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Woods A, Docherty T and Koch R (1993) Image distortions in stereoscopic systems. In: SPIE, Vol. 1915, Stereosc" /><span class="c-article-references__counter">21.</span><p class="c-article-references__text" id="ref-CR21">Woods A, Docherty T and Koch R (1993) Image distortions in stereoscopic systems. In: SPIE, Vol. 1915, Stereoscopic Display and Applications IV, February 1993</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Stereographics developers’ handbook. StereoGraphics Corporation, San Rafael, CA" /><span class="c-article-references__counter">22.</span><p class="c-article-references__text" id="ref-CR22">Stereographics developers’ handbook. StereoGraphics Corporation, San Rafael, CA</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Brooks FP (1986) Walkthrough—a dynamic graphics system for simulating virtual buildings. In: Proceedings of th" /><span class="c-article-references__counter">23.</span><p class="c-article-references__text" id="ref-CR23">Brooks FP (1986) Walkthrough—a dynamic graphics system for simulating virtual buildings. In: Proceedings of the Workshop on Interactive 3D Graphics, Chapel Hill, NC, 22–24 October 1986</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Airey JM, Rohlf JH and Brooks FP (1990) Towards image realism with interactive update rates in complex virtual" /><span class="c-article-references__counter">24.</span><p class="c-article-references__text" id="ref-CR24">Airey JM, Rohlf JH and Brooks FP (1990) Towards image realism with interactive update rates in complex virtual building environments. In: Proceedings of the Symposium on Interactive 3D Graphics and the Symposium on the Virtual Reality Modeling Language (VRML’95), ACM Press, San Diego, CA</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Ellis G (1996) They’re not making ‘em like they used to: virtual reality saves time and money in manufacturing" /><span class="c-article-references__counter">25.</span><p class="c-article-references__text" id="ref-CR25">Ellis G (1996) They’re not making ‘em like they used to: virtual reality saves time and money in manufacturing and construction. Iris Universe, Summer 1996</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Greenfield D (1996) Virtual prototyping at Rolls-Royce. MIT Press, Cambridge, MA" /><span class="c-article-references__counter">26.</span><p class="c-article-references__text" id="ref-CR26">Greenfield D (1996) Virtual prototyping at Rolls-Royce. MIT Press, Cambridge, MA</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="McNeely W (1996) Boeing’s high performance visualization software: Flythru. In: Proceedings of the CERN Comput" /><span class="c-article-references__counter">27.</span><p class="c-article-references__text" id="ref-CR27">McNeely W (1996) Boeing’s high performance visualization software: Flythru. In: Proceedings of the CERN Computing Seminar, Geneva, Switzerland, June 1996</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Balet O, Luga H, Duthen Y and Caubert R (1997) PROVIS: a platform for virtual prototyping and maintenance test" /><span class="c-article-references__counter">28.</span><p class="c-article-references__text" id="ref-CR28">Balet O, Luga H, Duthen Y and Caubert R (1997) PROVIS: a platform for virtual prototyping and maintenance test. In: Proceedings of Computer Animation ‘97, Geneva, Switzerland, June 1997</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Balaguer JF and Gobbetti E (1995) i3D: a high-speed 3D Web browser. In: Proceedings of the VRML’95 Symposium, " /><span class="c-article-references__counter">29.</span><p class="c-article-references__text" id="ref-CR29">Balaguer JF and Gobbetti E (1995) i3D: a high-speed 3D Web browser. In: Proceedings of the VRML’95 Symposium, San Diego, CA, December 1995</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Gobbetti E, Balaguer, JF (1995) i3D: an interactive system for exploring annotated 3D environments. In: Procee" /><span class="c-article-references__counter">30.</span><p class="c-article-references__text" id="ref-CR30">Gobbetti E, Balaguer, JF (1995) i3D: an interactive system for exploring annotated 3D environments. In: Proceedings of Scientific Visualization’95, World Scientific Publishing Co, New York</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Jasnoch U, Klement E, Kress K and Schiffer N (1996) Towards collaborative virtual prototyping in a world marke" /><span class="c-article-references__counter">31.</span><p class="c-article-references__text" id="ref-CR31">Jasnoch U, Klement E, Kress K and Schiffer N (1996) Towards collaborative virtual prototyping in a world market. In: Proceedings of FAIM, Atlanta, GA, May 1996</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="P. Milgram, H. Takemura, A. Utsumi, F. Kishino, " /><meta itemprop="datePublished" content="19949" /><meta itemprop="headline" content="Milgram P, Takemura H, Utsumi A and Kishino F (19949 Augmented reality: a class of displays on the reality-vir" /><span class="c-article-references__counter">32.</span><p class="c-article-references__text" id="ref-CR32">Milgram P, Takemura H, Utsumi A and Kishino F (19949 Augmented reality: a class of displays on the reality-virtuality continuum. SPIE 2351.282–292</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 32 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Augmented%20reality%3A%20a%20class%20of%20displays%20on%20the%20reality-virtuality%20continuum&amp;journal=SPIE&amp;volume=2351&amp;pages=282-292&amp;publication_year=19949&amp;author=Milgram%2CP&amp;author=Takemura%2CH&amp;author=Utsumi%2CA&amp;author=Kishino%2CF">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Renfe Corporation (2004). http://www.renfe.es. Cited 2004" /><span class="c-article-references__counter">33.</span><p class="c-article-references__text" id="ref-CR33">Renfe Corporation (2004). http://www.renfe.es. Cited 2004</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="SGI (2004) http://www.sgi.com/products/appsdirectory.dir/apps/app_number859393.html. Cited 2004" /><span class="c-article-references__counter">34.</span><p class="c-article-references__text" id="ref-CR34">SGI (2004) http://www.sgi.com/products/appsdirectory.dir/apps/app_number859393.html. Cited 2004</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="McAllister D (1993) Stereo computer graphics and other true 3D technologies. Princeton University Press, Princ" /><span class="c-article-references__counter">35.</span><p class="c-article-references__text" id="ref-CR35">McAllister D (1993) Stereo computer graphics and other true 3D technologies. Princeton University Press, Princeton, NJ</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Woo M, Neider J, Davis T and Schreiner D (1996) OpenGL programming guide. Addison-Wesley Developers Press, Rea" /><span class="c-article-references__counter">36.</span><p class="c-article-references__text" id="ref-CR36">Woo M, Neider J, Davis T and Schreiner D (1996) OpenGL programming guide. Addison-Wesley Developers Press, Reading, MA</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Kempf R, Frazier C (1997) OpenGL reference manual. Addison-Wesley, Reading, MA" /><span class="c-article-references__counter">37.</span><p class="c-article-references__text" id="ref-CR37">Kempf R, Frazier C (1997) OpenGL reference manual. Addison-Wesley, Reading, MA</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content=". Serón, " /><meta itemprop="datePublished" content="1995" /><meta itemprop="headline" content="Serón FJ, Magallón JA, Meléndez E and Latorre P (1995) The ALEPH project: image synthesis using illusion and p" /><span class="c-article-references__counter">38.</span><p class="c-article-references__text" id="ref-CR38">Serón FJ, Magallón JA, Meléndez E and Latorre P (1995) The ALEPH project: image synthesis using illusion and physical based rendering. Visualization and Intelligent Design in Engineering and Architecture; Ed. Computational Mechanics Publication, 1995</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 38 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=&amp;journal=The%20ALEPH&amp;volume=project&amp;publication_year=1995&amp;author=Ser%C3%B3n%2C">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Wann Jensen H (2001) Realistic image synthesis using photon mapping. AK Peters, Natick MA" /><span class="c-article-references__counter">39.</span><p class="c-article-references__text" id="ref-CR39">Wann Jensen H (2001) Realistic image synthesis using photon mapping. AK Peters, Natick MA</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="CAF (2004) http://www.caf.es. Cited 2004" /><span class="c-article-references__counter">40.</span><p class="c-article-references__text" id="ref-CR40">CAF (2004) http://www.caf.es. Cited 2004</p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-003-0117-6-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Ack1">Acknowledgements</h2><div class="c-article-section__content" id="Ack1-content"><p>The authors would like to thank Abel Hernández, Jorge del Pico, David Román and Virginia Remiro for their continuous work throughout the whole project, and Carmelo López and Jorge López for their valuable contributions. This research was partially done under the sponsorship of the Comisión Interministerial de Ciencia y Tecnología (CICYT), projects TIC 2000-0426-P4-02 and TIC 2001-2392-C03-02.</p></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">Engineering Research Institute of Aragon, University of Zaragoza, C/ María de Luna, 1 50018 - Zaragoza, Spain</p><p class="c-article-author-affiliation__authors-list">Francisco J. Seron, Diego Gutierrez, Juan A. Magallon, Emilio J. Sobreviela &amp; Jose A. Gutierrez</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Francisco_J_-Seron"><span class="c-article-authors-search__title u-h3 js-search-name">Francisco J. Seron</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Francisco J.+Seron&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Francisco J.+Seron" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Francisco J.+Seron%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Diego-Gutierrez"><span class="c-article-authors-search__title u-h3 js-search-name">Diego Gutierrez</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Diego+Gutierrez&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Diego+Gutierrez" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Diego+Gutierrez%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Juan_A_-Magallon"><span class="c-article-authors-search__title u-h3 js-search-name">Juan A. Magallon</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Juan A.+Magallon&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Juan A.+Magallon" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Juan A.+Magallon%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Emilio_J_-Sobreviela"><span class="c-article-authors-search__title u-h3 js-search-name">Emilio J. Sobreviela</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Emilio J.+Sobreviela&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Emilio J.+Sobreviela" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Emilio J.+Sobreviela%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Jose_A_-Gutierrez"><span class="c-article-authors-search__title u-h3 js-search-name">Jose A. Gutierrez</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Jose A.+Gutierrez&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Jose A.+Gutierrez" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Jose A.+Gutierrez%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-003-0117-6/email/correspondent/c1/new">Francisco J. Seron</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=A%20CAVE-like%20environment%20as%20a%20tool%20for%20full-size%20train%20design&amp;author=Francisco%20J.%20Seron%20et%20al&amp;contentID=10.1007%2Fs10055-003-0117-6&amp;publication=1359-4338&amp;publicationDate=2004-02-05&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Seron, F.J., Gutierrez, D., Magallon, J.A. <i>et al.</i> A CAVE-like environment as a tool for full-size train design.
+                    <i>Virtual Reality</i> <b>7, </b>82–93 (2004). https://doi.org/10.1007/s10055-003-0117-6</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-003-0117-6.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2002-04-16">16 April 2002</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2003-10-02">02 October 2003</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2004-02-05">05 February 2004</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2004-04">April 2004</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-003-0117-6" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-003-0117-6</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">CAVE</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Industrial design</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Simulator</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Stereoscopy</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Virtual prototyping</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-003-0117-6.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=117;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

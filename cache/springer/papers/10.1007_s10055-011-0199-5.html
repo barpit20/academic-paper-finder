@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="A methodology for optimal voxel size computation in collision detectio"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="Real-time Virtual Reality applications require accuracy but are also time dependent; therefore, in these environments, the time consumption is particularly important. For that reason, when facing..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/16/3.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="A methodology for optimal voxel size computation in collision detection algorithms for virtual reality"/>
+
+    <meta name="dc.source" content="Virtual Reality 2011 16:3"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2011-10-02"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2011 Springer-Verlag London Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="Real-time Virtual Reality applications require accuracy but are also time dependent; therefore, in these environments, the time consumption is particularly important. For that reason, when facing the problem of Collision Detection for a Virtual Reality application, we firstly focus our attention on optimizing time performance for collisions among objects. Spatial Partitioning algorithms have been broadly used in Collision Detection. In particular, voxel-based methods are simple and quick, but finding the optimum voxel size is not trivial. We propose a methodology to easily determine the optimal voxel size for Collision Detection algorithms. Using an algorithm which represents volumetric objects with tetrahedra as an example, a performance cost function is defined in order to analytically bound the voxel size that gives the best computation times. This is made by inferring and estimating all the parameters involved. Thus, the cost function is delimited to depend only on geometric data. By doing so, it is possible to determine the optimal voxelization for any algorithm and scenario. Several solutions have been researched and compared. Experimental results with theoretical and real 3D models have validated the methodology. The reliability of our research has also been compared with traditional experimental solutions given by previous works."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2011-10-02"/>
+
+    <meta name="prism.volume" content="16"/>
+
+    <meta name="prism.number" content="3"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="205"/>
+
+    <meta name="prism.endingPage" content="213"/>
+
+    <meta name="prism.copyright" content="2011 Springer-Verlag London Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-011-0199-5"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-011-0199-5"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-011-0199-5.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-011-0199-5"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="A methodology for optimal voxel size computation in collision detection algorithms for virtual reality"/>
+
+    <meta name="citation_volume" content="16"/>
+
+    <meta name="citation_issue" content="3"/>
+
+    <meta name="citation_publication_date" content="2012/09"/>
+
+    <meta name="citation_online_date" content="2011/10/02"/>
+
+    <meta name="citation_firstpage" content="205"/>
+
+    <meta name="citation_lastpage" content="213"/>
+
+    <meta name="citation_article_type" content="Original Article"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-011-0199-5"/>
+
+    <meta name="DOI" content="10.1007/s10055-011-0199-5"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-011-0199-5"/>
+
+    <meta name="description" content="Real-time Virtual Reality applications require accuracy but are also time dependent; therefore, in these environments, the time consumption is particularly"/>
+
+    <meta name="dc.creator" content="G. Echegaray"/>
+
+    <meta name="dc.creator" content="D. Borro"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="Biesel D, Gross M (2000) Interactive simulation of surgical cuts. In: Proceedings of the 8th pacific conference on computer graphics and applications, PG &#8217;00. IEEE Computer Society, Washington, DC, USA, pp 116&#8211;125"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comput Graph Forum; citation_title=Approximation of optimal voxel size for collision detection in maintainability simulations within massive virtual environments; citation_author=D Borro, A Garc&#237;a-Alonso, L Matey; citation_volume=23; citation_publication_date=2004; citation_pages=13-24; citation_id=CR2"/>
+
+    <meta name="citation_reference" content="Bradshaw G, O&#8217;Sullivan C (2002) Sphere-tree construction using dynamic medial axis approximation. In: 2002 ACM SIGGRAPH/Eurographics symposium on computer animation, SCA &#8217;02. ACM, New York, NY, USA, pp 33&#8211;40"/>
+
+    <meta name="citation_reference" content="citation_journal_title=ACM Trans Graph; citation_title=Solid representation and operation using extended octrees; citation_author=P Brunet, I Navazo; citation_volume=9; citation_issue=2; citation_publication_date=1990; citation_pages=170-197; citation_doi=10.1145/78956.78959; citation_id=CR4"/>
+
+    <meta name="citation_reference" content="F&#252;nfzig C, Fellner DW (2003) Easy realignment of k-dop bounding volumes. In: Graphics Interface. A K Peters, Halifax, Nova Scotia, pp 257&#8211;264"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Comput Graph Appl; citation_title=Solving the collision detection problem; citation_author=A Garcia-Alonso, N Serrano, J Flaquer; citation_volume=14; citation_publication_date=1994; citation_pages=36-43; citation_doi=10.1109/38.279041; citation_id=CR6"/>
+
+    <meta name="citation_reference" content="Gissler M, Dornhege C, Nebel B, Teschner M (2009a) Deformable proximity queries and their application in mobile manipulation planning. In: Proceedings of the 5th international symposium on advances in visual computing: Part I, ISVC &#8217;09. Springer, Heidelberg, pp 79&#8211;88"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Compu Animat Virtual Worlds; citation_title=Time-critical collision handling for deformable modeling; citation_author=M Gissler, R Schmedding, M Teschner; citation_volume=20; citation_issue=2&#8211;3; citation_publication_date=2009b; citation_pages=355-364; citation_id=CR8"/>
+
+    <meta name="citation_reference" content="Gottschalk S, Lin MC, Manocha D (1996) Obbtree: a hierarchical structure for rapid interference detection. In: ACM Siggraph., volume 30. University of North Carolina, NC, pp 171&#8211;180"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comput Geom; citation_title=Fast and accurate collision detection for haptic interaction using a three degree-of-freedom force-feedback device; citation_author=A Gregory, MC Lin, S Gottschalk, R Taylor; citation_volume=15; citation_publication_date=2000; citation_pages=69-89; citation_doi=10.1016/S0925-7721(99)00041-3; citation_id=CR10"/>
+
+    <meta name="citation_reference" content="Heidelberger B, Teschner M, Gross M (2003) Real-time volumetric intersections of deforming objects. In: VMV&#8217;03. Akademische Verlagsgesellschaft Aka GmbH, M&#252;nchen, Germany, 461&#8211;468"/>
+
+    <meta name="citation_reference" content="Heidelberger B, Teschner M, Keiser R, M&#252;ller M, Gross M (2004) Consistent penetration depth estimation for deformable collision response. In VMV&#8217;04. Akademische Verlagsgesellschaft Aka, Stanford, USA"/>
+
+    <meta name="citation_reference" content="Hubbard P (1993) Interactive collision detection. In: IEEE 1993 symposium on research frontiers in virtual reality, pp 24&#8211;31"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Trans Vis Comput Graph; citation_title=Efficient collision detection using bounding volume hierarchies of k-dops; citation_author=JT Klosowski, M Held, JSB Mitchell, H Sowizral, K Zikan; citation_volume=4; citation_issue=1; citation_publication_date=1998; citation_pages=21-36; citation_doi=10.1109/2945.675649; citation_id=CR14"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Neurosurgery; citation_title=Virtual temporal bone: an interactive 3-dimensional learning aid for cranial base surgery; citation_author=R Kockro, P Hwang; citation_volume=64; citation_issue=5 Suppl 2; citation_publication_date=2009; citation_pages=216-229; citation_id=CR15"/>
+
+    <meta name="citation_reference" content="Kockro RA, Stadie A, Schwandt E, Reisch R, Charalampaki C, Ng I, Yeo TT, Hwang P, Serra L, Perneczky A (2007) A collaborative virtual reality environment for neurosurgical planning and training. Neurosurgery, 61(5 Suppl 2):379&#8211;91; discussion 391"/>
+
+    <meta name="citation_reference" content="Larsson T, Akenine-M&#246;ller T (2001) Collision detection for continuously deforming bodies. In: Eurographics 2001, short presentations. Eurographics Association, Blackwell Publishing, pp 325&#8211;333"/>
+
+    <meta name="citation_reference" content="Lin MC, Gottschalk S (1998) Collision detection between geometric models: A survey. In: Proceedings of IMA conference on mathematics of surfaces, pp 37&#8211;56"/>
+
+    <meta name="citation_reference" content="Madera FA, Laycock SD, Day AM (2010) Detecting self-collisions using a hybrid bounding volume algorithm. In: Proceedings of the 2010 third international conference on advances in computer-human interactions, ACHI &#8217;10. IEEE Computer Society, Washington, DC, USA, pp 107&#8211;112"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Neurosurgery; citation_title=Simulation in neurosurgery: a review of computer-based simulation environments and their surgical applications; citation_author=HR Malone, ON Syed, MS Downes, AL D&#8217;Ambrosio, DO Quest, MG Kaiser; citation_volume=67; citation_issue=4; citation_publication_date=2010; citation_pages=1105-1116; citation_doi=10.1227/NEU.0b013e3181ee46d0; citation_id=CR20"/>
+
+    <meta name="citation_reference" content="McNeely WA, Puterbaugh KD, Troy JJ (1999) Six degree-of-freedom haptic rendering using voxel sampling. In: 26th annual conference on computer graphics and interactive techniques, SIGGRAPH &#8217;99. ACM Press/Addison-Wesley Publishing Co, New York, NY, USA, pp 401&#8211;408"/>
+
+    <meta name="citation_reference" content="Melax S (2000) Dynamic plane shifting bsp traversal. In: Graphics Interface. Lawrence Erlbaum Associates, pp 213&#8211;220"/>
+
+    <meta name="citation_reference" content="Pascal Volino NMT (2000) Implementing fast cloth simulation with collision response. In: International conference on computer graphics, CGI &#8217;00. IEEE Computer Society, Washington, DC, USA, p 257"/>
+
+    <meta name="citation_reference" content="citation_journal_title=J Grap GPU, and Game Tools; citation_title=Cab: Fast update of obb trees for collision detection between articulated bodies; citation_author=H Schmidl, N Walker, MC Lin; citation_volume=9; citation_issue=2; citation_publication_date=2004; citation_pages=1-9; citation_id=CR24"/>
+
+    <meta name="citation_reference" content="Smith A, Kitamura Y, Takemura H, Kishino F (1995) A simple and efficient method for accurate collision detection among deformable polyhedral objects in arbitrary motion. In: Proceedings of the virtual reality annual international symposium (VRAIS&#8217;95), VRAIS &#8217;95. IEEE Computer Society, Washington, DC, USA, p 136"/>
+
+    <meta name="citation_reference" content="Teschner M, Heidelberger B, Mueller M, Pomeranets D, Gross M (2003) Optimized spatial hashing for collision detection of deformable objects. In: VMV (vision, modeling and visualization). Aka GmbH, Munich, Germany, pp 47&#8211;54"/>
+
+    <meta name="citation_reference" content="Teschner M, Kimmerle S, Heidelberger B, Zachmann G, Raghupathi L, Fuhrmann A, Cani M-P, Faure F, Magnenat-Thalmann N, Strasser W, Volino P (2004) Collision detection for deformable objects. In: EUROGRAPHICS, vol 23. pp 119&#8211;139"/>
+
+    <meta name="citation_reference" content="citation_journal_title=J Graph Tools; citation_title=Efficient collision detection of complex deformable models using aabb trees; citation_author=G Bergen; citation_volume=2; citation_issue=4; citation_publication_date=1997; citation_pages=1-13; citation_doi=10.1080/10867651.1997.10487480; citation_id=CR28"/>
+
+    <meta name="citation_reference" content="van den Bergen G (2004) Collision Detection in Interactive 3D Environments. Morgan Kaufmann, Los Altos, CA"/>
+
+    <meta name="citation_reference" content="Zachmann G (1998) Rapid collision detection by dynamically aligned dop-trees. In: Proceedings of the virtual reality annual international symposium, VRAIS &#8217;98. IEEE computer society, Washington, DC, USA, p 90"/>
+
+    <meta name="citation_author" content="G. Echegaray"/>
+
+    <meta name="citation_author_email" content="gechegaray@ceit.es"/>
+
+    <meta name="citation_author_institution" content="Department of Applied Mechanics, CEIT and Tecnun (University of Navarra), Pamplona, Spain"/>
+
+    <meta name="citation_author" content="D. Borro"/>
+
+    <meta name="citation_author_email" content="dborro@ceit.es"/>
+
+    <meta name="citation_author_institution" content="Department of Applied Mechanics, CEIT and Tecnun (University of Navarra), Pamplona, Spain"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-011-0199-5&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2012/09/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-011-0199-5"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="A methodology for optimal voxel size computation in collision detection algorithms for virtual reality"/>
+        <meta property="og:description" content="Real-time Virtual Reality applications require accuracy but are also time dependent; therefore, in these environments, the time consumption is particularly important. For that reason, when facing the problem of Collision Detection for a Virtual Reality application, we firstly focus our attention on optimizing time performance for collisions among objects. Spatial Partitioning algorithms have been broadly used in Collision Detection. In particular, voxel-based methods are simple and quick, but finding the optimum voxel size is not trivial. We propose a methodology to easily determine the optimal voxel size for Collision Detection algorithms. Using an algorithm which represents volumetric objects with tetrahedra as an example, a performance cost function is defined in order to analytically bound the voxel size that gives the best computation times. This is made by inferring and estimating all the parameters involved. Thus, the cost function is delimited to depend only on geometric data. By doing so, it is possible to determine the optimal voxelization for any algorithm and scenario. Several solutions have been researched and compared. Experimental results with theoretical and real 3D models have validated the methodology. The reliability of our research has also been compared with traditional experimental solutions given by previous works."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>A methodology for optimal voxel size computation in collision detection algorithms for virtual reality | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-011-0199-5","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Collision detection, Voxel size, Uniform spatial partitioning, Optimization","kwrd":["Collision_detection","Voxel_size","Uniform_spatial_partitioning","Optimization"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-011-0199-5","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-011-0199-5","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=199;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-011-0199-5">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            A methodology for optimal voxel size computation in collision detection algorithms for virtual reality
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-011-0199-5.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-011-0199-5.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">Original Article</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2011-10-02" itemprop="datePublished">02 October 2011</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">A methodology for optimal voxel size computation in collision detection algorithms for virtual reality</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-G_-Echegaray" data-author-popup="auth-G_-Echegaray" data-corresp-id="c1">G. Echegaray<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="CEIT and Tecnun (University of Navarra)" /><meta itemprop="address" content="grid.5924.a, 0000000419370271, Department of Applied Mechanics, CEIT and Tecnun (University of Navarra), Pamplona, Navarra, Spain" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-D_-Borro" data-author-popup="auth-D_-Borro">D. Borro</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="CEIT and Tecnun (University of Navarra)" /><meta itemprop="address" content="grid.5924.a, 0000000419370271, Department of Applied Mechanics, CEIT and Tecnun (University of Navarra), Pamplona, Navarra, Spain" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 16</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">205</span>–<span itemprop="pageEnd">213</span>(<span data-test="article-publication-year">2012</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">529 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">4 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                    
+                        <li class="c-article-metrics-bar__item">
+                            <p class="c-article-metrics-bar__count">0 <span class="c-article-metrics-bar__label">Altmetric</span></p>
+                        </li>
+                    
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-011-0199-5/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>Real-time Virtual Reality applications require accuracy but are also time dependent; therefore, in these environments, the time consumption is particularly important. For that reason, when facing the problem of Collision Detection for a Virtual Reality application, we firstly focus our attention on optimizing time performance for collisions among objects. Spatial Partitioning algorithms have been broadly used in Collision Detection. In particular, voxel-based methods are simple and quick, but finding the optimum voxel size is not trivial. We propose a methodology to easily determine the optimal voxel size for Collision Detection algorithms. Using an algorithm which represents volumetric objects with tetrahedra as an example, a performance cost function is defined in order to analytically bound the voxel size that gives the best computation times. This is made by inferring and estimating all the parameters involved. Thus, the cost function is delimited to depend only on geometric data. By doing so, it is possible to determine the optimal voxelization for any algorithm and scenario. Several solutions have been researched and compared. Experimental results with theoretical and real 3D models have validated the methodology. The reliability of our research has also been compared with traditional experimental solutions given by previous works.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Introduction</h2><div class="c-article-section__content" id="Sec1-content"><p>Computer graphics offer the possibility of exploring three-dimensional environments interactively. In many applications such as games and simulators, these environments can be represented with physical behavior. Simulating the real world as precisely as possible is particularly interesting for some applications, the ones which are called <i>virtual reality</i> (VR) applications.</p><p>One of the aspects that influences the behavioral reality of an environment is the way in which two objects interfere with each other. In the real world, two material objects cannot share a point in space at the same time. Therefore constraints need to be defined in virtual environments to restrict such movements. That is why it is important to detect configurations of interpenetrating objects which are called <i>collisions</i>.</p><p>Collision detection and response is a commonly investigated topic in computer graphics, due to its relevance in applications such as robotics, computational biology, games, surgery simulation, or cloth simulation. Even if the problem of detecting collisions seems purely mathematical, there are some issues which complicate matters considerably. For example, it is necessary to use the limited processing power as efficiently as possible in order to perform the queries within a concrete time frame. Moreover, points in space are represented by floats, which cause rounding errors that can result in a completely different environment behavior. Additionally, the memory consumption of these detection methods must also be considered.</p><p>We have focused our attention on optimizing time performance for the computation of collisions. VR applications require accuracy but are also time dependent; therefore, in these environments, the time consumption is particularly important.</p><p>One of the common techniques used in collision detection is based on Uniform Spatial Partitioning. These types of methods always have the problem of determining the voxel size which, being a user-defined parameter, can considerably change the performance of the method. If the number of voxels per axis is not optimized, the detection could result in execution times that are too long to use in real time.</p><p>We propose a methodology (a sequence of steps) to calculate the optimal voxel size for algorithms based on Uniform Spatial Partitioning. The main contribution of this work is a sequence of steps to infer an analytical method that automatically determines the optimal voxel size based only on the geometry of the scene. This will conclude in an easy and rapid method for improving algorithm time-rates. A previous work (Borro et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Borro D, García-Alonso A, Matey L (2004) Approximation of optimal voxel size for collision detection in maintainability simulations within massive virtual environments. Comput Graph Forum 23:13–24" href="/article/10.1007/s10055-011-0199-5#ref-CR2" id="ref-link-section-d34681e321">2004</a>) validated the followed method with objects represented by triangle meshes. Our proposal extends that work to other types of object representations (tetrahedral meshes) and offers a general methodology for any kind of collision detection algorithm based on voxels.</p><p>Furthermore, the paper provides a set of experimental results obtained from various 3D models. The input models have been chosen varying geometry and complexity. They have been used to validate the methodology and compare our results with others proposed in the bibliography.</p><p>The remainder of the paper is organized as follows. Section <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-011-0199-5#Sec2">2</a> gives a short description of the state-of-the-art in collision detection, as well as some previous works on finding the optimal voxel size for the Spatial Subdivision method. Section <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-011-0199-5#Sec3">3</a> describes a collision detection algorithm based on tetrahedral meshes, which is later used to infer the formula and carry out experiments. Section <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-011-0199-5#Sec4">4</a> introduces the optimal voxel size problem and describes the proposed solution. In Section <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-011-0199-5#Sec7">5</a>, experimental results are shown, followed by the conclusions in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-011-0199-5#Sec8">6.</a>
+              </p></div></div></section><section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">Related work</h2><div class="c-article-section__content" id="Sec2-content"><p>This section introduces previous research conclusions on Collision Detection Techniques for VR applications, as well as some methods used in the bibliography to deal with our concrete problem.</p><p>One of the most common applications for deformable object collision detection is the so-called <i>cloth simulation</i> (Pascal Volino <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Pascal Volino NMT (2000) Implementing fast cloth simulation with collision response. In: International conference on computer graphics, CGI ’00. IEEE Computer Society, Washington, DC, USA, p 257" href="/article/10.1007/s10055-011-0199-5#ref-CR23" id="ref-link-section-d34681e357">2000</a>). It is necessary to have an efficient algorithm to handle self-collisions in order to get a dynamic cloth deformation. Another interesting application is the <i>surgery simulation</i> (Malone et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2010" title="Malone HR, Syed ON, Downes MS, D’Ambrosio AL, Quest DO, Kaiser MG (2010) Simulation in neurosurgery: a review of computer-based simulation environments and their surgical applications. Neurosurg Clin N Am 67(4):1105–1116" href="/article/10.1007/s10055-011-0199-5#ref-CR20" id="ref-link-section-d34681e363">2010</a>; Kockro et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Kockro RA, Stadie A, Schwandt E, Reisch R, Charalampaki C, Ng I, Yeo TT, Hwang P, Serra L, Perneczky A (2007) A collaborative virtual reality environment for neurosurgical planning and training. Neurosurgery, 61(5 Suppl 2):379–91; discussion 391" href="/article/10.1007/s10055-011-0199-5#ref-CR16" id="ref-link-section-d34681e366">2007</a>; Kockro and Hwang <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Kockro R, Hwang P (2009) Virtual temporal bone: an interactive 3-dimensional learning aid for cranial base surgery. Neurosurg Clin N Am 64(5 Suppl 2):216–229" href="/article/10.1007/s10055-011-0199-5#ref-CR15" id="ref-link-section-d34681e370">2009</a>). In these environments, efficient collision detection is extremely necessary, because of their interactive behavior. Collisions for deformable organs and rigid surgical tools need to be solved, as well as tissues self-collisions in the case of topological changes as a result of cutting.</p><p>Collisions for dynamically deforming objects can be solved with different techniques, and some of them can also be used for rigid bodies. A lot of research has been done on this topic. Some surveys (Lin and Gottschalk <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1998" title="Lin MC, Gottschalk S (1998) Collision detection between geometric models: A survey. In: Proceedings of IMA conference on mathematics of surfaces, pp 37–56" href="/article/10.1007/s10055-011-0199-5#ref-CR18" id="ref-link-section-d34681e376">1998</a>; Teschner et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Teschner M, Kimmerle S, Heidelberger B, Zachmann G, Raghupathi L, Fuhrmann A, Cani M-P, Faure F, Magnenat-Thalmann N, Strasser W, Volino P (2004) Collision detection for deformable objects. In: EUROGRAPHICS, vol 23. pp 119–139" href="/article/10.1007/s10055-011-0199-5#ref-CR27" id="ref-link-section-d34681e379">2004</a>) and books (van den Bergen <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="van den Bergen G (2004) Collision Detection in Interactive 3D Environments. Morgan Kaufmann, Los Altos, CA" href="/article/10.1007/s10055-011-0199-5#ref-CR29" id="ref-link-section-d34681e382">2004</a>) also address the problem of collisions due to its extension.</p><p>The most common methods are based on Bounding Volume Hierarchies (Biesel and Gross <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Biesel D, Gross M (2000) Interactive simulation of surgical cuts. In: Proceedings of the 8th pacific conference on computer graphics and applications, PG ’00. IEEE Computer Society, Washington, DC, USA, pp 116–125" href="/article/10.1007/s10055-011-0199-5#ref-CR1" id="ref-link-section-d34681e388">2000</a>; Madera et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2010" title="Madera FA, Laycock SD, Day AM (2010) Detecting self-collisions using a hybrid bounding volume algorithm. In: Proceedings of the 2010 third international conference on advances in computer-human interactions, ACHI ’10. IEEE Computer Society, Washington, DC, USA, pp 107–112" href="/article/10.1007/s10055-011-0199-5#ref-CR19" id="ref-link-section-d34681e391">2010</a>) and Spatial Subdivision (Gissler et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009b" title="Gissler M, Schmedding R, Teschner M (2009b) Time-critical collision handling for deformable modeling. Compu Animat Virtual Worlds 20(2–3):355–364" href="/article/10.1007/s10055-011-0199-5#ref-CR8" id="ref-link-section-d34681e394">2009b</a>). However, many other approaches like image-space techniques (Heidelberger et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Heidelberger B, Teschner M, Gross M (2003) Real-time volumetric intersections of deforming objects. In: VMV’03. Akademische Verlagsgesellschaft Aka GmbH, München, Germany, 461–468" href="/article/10.1007/s10055-011-0199-5#ref-CR11" id="ref-link-section-d34681e397">2003</a>), stochastic methods (Teschner et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Teschner M, Kimmerle S, Heidelberger B, Zachmann G, Raghupathi L, Fuhrmann A, Cani M-P, Faure F, Magnenat-Thalmann N, Strasser W, Volino P (2004) Collision detection for deformable objects. In: EUROGRAPHICS, vol 23. pp 119–139" href="/article/10.1007/s10055-011-0199-5#ref-CR27" id="ref-link-section-d34681e400">2004</a>), or distance fields (Gissler et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009a" title="Gissler M, Dornhege C, Nebel B, Teschner M (2009a) Deformable proximity queries and their application in mobile manipulation planning. In: Proceedings of the 5th international symposium on advances in visual computing: Part I, ISVC ’09. Springer, Heidelberg, pp 79–88" href="/article/10.1007/s10055-011-0199-5#ref-CR7" id="ref-link-section-d34681e404">2009a</a>) can be found in the bibliography. The latter is not too appropriate to use in real time for geometrically complex objects.</p><p>Bounding volume hierarchies subdivide objects into simpler geometries. Trees of bounding volumes are built using <i>Spheres</i> (Hubbard <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1993" title="Hubbard P (1993) Interactive collision detection. In: IEEE 1993 symposium on research frontiers in virtual reality, pp 24–31" href="/article/10.1007/s10055-011-0199-5#ref-CR13" id="ref-link-section-d34681e414">1993</a>; Bradshaw and O’Sullivan <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Bradshaw G, O’Sullivan C (2002) Sphere-tree construction using dynamic medial axis approximation. In: 2002 ACM SIGGRAPH/Eurographics symposium on computer animation, SCA ’02. ACM, New York, NY, USA, pp 33–40" href="/article/10.1007/s10055-011-0199-5#ref-CR3" id="ref-link-section-d34681e417">2002</a>), <i>Axis-Aligned Bounding Boxes</i> (van den Bergen <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="van den Bergen G (1997) Efficient collision detection of complex deformable models using aabb trees. J Graph Tools 2(4):1–13" href="/article/10.1007/s10055-011-0199-5#ref-CR28" id="ref-link-section-d34681e423">1997</a>; Larsson and Akenine-Mller <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Larsson T, Akenine-Möller T (2001) Collision detection for continuously deforming bodies. In: Eurographics 2001, short presentations. Eurographics Association, Blackwell Publishing, pp 325–333" href="/article/10.1007/s10055-011-0199-5#ref-CR17" id="ref-link-section-d34681e427">2001</a>), <i>Oriented Bounding Boxes</i> (Gottschalk et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1996" title="Gottschalk S, Lin MC, Manocha D (1996) Obbtree: a hierarchical structure for rapid interference detection. In: ACM Siggraph., volume 30. University of North Carolina, NC, pp 171–180" href="/article/10.1007/s10055-011-0199-5#ref-CR9" id="ref-link-section-d34681e433">1996</a>; Schmidl et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Schmidl H, Walker N, Lin MC (2004) Cab: Fast update of obb trees for collision detection between articulated bodies. J Grap GPU, and Game Tools 9(2):1–9" href="/article/10.1007/s10055-011-0199-5#ref-CR24" id="ref-link-section-d34681e436">2004</a>), or <i>Discrete-Oriented Polytopes</i> (Zachmann <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1998" title="Zachmann G (1998) Rapid collision detection by dynamically aligned dop-trees. In: Proceedings of the virtual reality annual international symposium, VRAIS ’98. IEEE computer society, Washington, DC, USA, p 90" href="/article/10.1007/s10055-011-0199-5#ref-CR30" id="ref-link-section-d34681e442">1998</a>; Fnfzig and Fellner <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Fünfzig C, Fellner DW (2003) Easy realignment of k-dop bounding volumes. In: Graphics Interface. A K Peters, Halifax, Nova Scotia, pp 257–264" href="/article/10.1007/s10055-011-0199-5#ref-CR5" id="ref-link-section-d34681e446">2003</a>). In the case of deformable bodies, the constructed hierarchy must be updated at runtime, which leads to greater time consumption. These techniques have been optimized in recent years, giving better time-rates in creating and updating the tree.</p><p>The Spatial Subdivision technique divides space instead of objects. There are many structures to be used, such as <i>Voxel Grids</i> (Gissler et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009b" title="Gissler M, Schmedding R, Teschner M (2009b) Time-critical collision handling for deformable modeling. Compu Animat Virtual Worlds 20(2–3):355–364" href="/article/10.1007/s10055-011-0199-5#ref-CR8" id="ref-link-section-d34681e455">2009b</a>), <i>Octrees</i> (Smith et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1995" title="Smith A, Kitamura Y, Takemura H, Kishino F (1995) A simple and efficient method for accurate collision detection among deformable polyhedral objects in arbitrary motion. In: Proceedings of the virtual reality annual international symposium (VRAIS’95), VRAIS ’95. IEEE Computer Society, Washington, DC, USA, p 136" href="/article/10.1007/s10055-011-0199-5#ref-CR25" id="ref-link-section-d34681e461">1995</a>; Brunet and Navazo <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1990" title="Brunet P, Navazo I (1990) Solid representation and operation using extended octrees. ACM Trans Graph 9(2):170–197" href="/article/10.1007/s10055-011-0199-5#ref-CR4" id="ref-link-section-d34681e464">1990</a>), <i>K-d Trees</i> (Klosowski et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1998" title="Klosowski JT, Held M, Mitchell JSB, Sowizral H, Zikan K (1998) Efficient collision detection using bounding volume hierarchies of k-dops. IEEE Trans Vis Comput Graph 4(1):21–36" href="/article/10.1007/s10055-011-0199-5#ref-CR14" id="ref-link-section-d34681e471">1998</a>), or <i>Binary Space Partitioning Trees</i> (BSP Trees) (Melax <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Melax S (2000) Dynamic plane shifting bsp traversal. In: Graphics Interface. Lawrence Erlbaum Associates, pp 213–220" href="/article/10.1007/s10055-011-0199-5#ref-CR22" id="ref-link-section-d34681e477">2000</a>). Voxel grids offer quick access and update times in the case of objects of more or less equal size which are evenly distributed, but they have considerable storage costs. Octrees, K-d Trees, and BSP Trees are adaptive to local distribution of the objects. However, they present poor performance when objects straddle cell boundaries.</p><p>Voxel-based techniques have the problem of choosing the best voxel size to optimize the performance in terms of time consumption. The best idea would be finding a method which automatically calculates the optimal size of the voxel for any scenario. Unfortunately, such a value depends on too many factors and finding an analytical method is a difficult task. That is why most of the works that use voxel-based algorithms have solutions inferred from experimental results. For instance, García-Alonso et al. (Garcia-Alonso et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1994" title="Garcia-Alonso A, Serrano N, Flaquer J (1994) Solving the collision detection problem. IEEE Comput Graph Appl 14:36–43" href="/article/10.1007/s10055-011-0199-5#ref-CR6" id="ref-link-section-d34681e483">1994</a>) use OBBs subdivided into voxels and have experimentally found that the optimal case is defining 512 voxels per object. Other research cases (McNeely et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="McNeely WA, Puterbaugh KD, Troy JJ (1999) Six degree-of-freedom haptic rendering using voxel sampling. In: 26th annual conference on computer graphics and interactive techniques, SIGGRAPH ’99. ACM Press/Addison-Wesley Publishing Co, New York, NY, USA, pp 401–408" href="/article/10.1007/s10055-011-0199-5#ref-CR21" id="ref-link-section-d34681e486">1999</a>) determine the discretization depending on the resolution they want to obtain. On the other hand, according to Gregory et al. (Gregory et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Gregory A, Lin MC, Gottschalk S, Taylor R (2000) Fast and accurate collision detection for haptic interaction using a three degree-of-freedom force-feedback device. Comput Geom 15:69–89" href="/article/10.1007/s10055-011-0199-5#ref-CR10" id="ref-link-section-d34681e489">2000</a>), the voxel size is set by multiplying the average edge length by a constant.</p><p>Our previous work (Borro et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Borro D, García-Alonso A, Matey L (2004) Approximation of optimal voxel size for collision detection in maintainability simulations within massive virtual environments. Comput Graph Forum 23:13–24" href="/article/10.1007/s10055-011-0199-5#ref-CR2" id="ref-link-section-d34681e495">2004</a>) finds an analytical expression of the optimal voxel size for voxel grids; nevertheless, it is focused on the collision detection problem with triangle meshes. Other research (Teschner et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Teschner M, Heidelberger B, Mueller M, Pomeranets D, Gross M (2003) Optimized spatial hashing for collision detection of deformable objects. In: VMV (vision, modeling and visualization). Aka GmbH, Munich, Germany, pp 47–54" href="/article/10.1007/s10055-011-0199-5#ref-CR26" id="ref-link-section-d34681e498">2003</a>) has determined that optimal performance is achieved when a grid cell has the same size as the average edge length of all tetrahedra. We will compare our solution with this assertion.</p></div></div></section><section aria-labelledby="Sec3"><div class="c-article-section" id="Sec3-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec3">Description of the collision detection algorithm</h2><div class="c-article-section__content" id="Sec3-content"><p>The collision detection algorithm we have used to infer the method is a particular case where objects are represented by tetrahedral meshes. In this approach, the collision problem is solved using a uniform spatial subdivision. This technique subdivides space into <i>cells</i>, which are introduced into a vector depending on their position in the world (Teschner et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Teschner M, Heidelberger B, Mueller M, Pomeranets D, Gross M (2003) Optimized spatial hashing for collision detection of deformable objects. In: VMV (vision, modeling and visualization). Aka GmbH, Munich, Germany, pp 47–54" href="/article/10.1007/s10055-011-0199-5#ref-CR26" id="ref-link-section-d34681e512">2003</a>). Using voxels, cell access is fast, since the calculation of the cell is made in constant time:
+</p><div id="Equa" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ cell = floor \left(\frac{p + world}{cell\_size}\right) $$</span></div></div><p>where <i>p</i> is a point and <i>world</i> comprises the size of the scenario in the three axes.</p><p>Once we have the indices for each cell, we just need to use a simple function to locate them in a vector:
+</p><div id="Equb" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ id = k \cdot numCellsX \cdot numCellsY + j \cdot numCellsX + i $$</span></div></div>
+              <p>Most works based on voxels use hashing techniques in order to reduce memory consumption. The chosen hashing function can change the performance of the method. Values given by this function should be uniformly distributed to achieve quality performance. The hash table size also influences, as the use of big tables reduces the possibility of placing several different cells to the same position. Therefore, the algorithm usually works faster. On the other hand, the memory consumption is higher. Some studies have been done on this topic (Teschner et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Teschner M, Heidelberger B, Mueller M, Pomeranets D, Gross M (2003) Optimized spatial hashing for collision detection of deformable objects. In: VMV (vision, modeling and visualization). Aka GmbH, Munich, Germany, pp 47–54" href="/article/10.1007/s10055-011-0199-5#ref-CR26" id="ref-link-section-d34681e549">2003</a>), which have found that if the hash table is significantly larger than the number of primitives, the risk of hash collisions is minimal. Besides, hash functions work most efficiently if the hash table size is a prime number.</p><p>Using a voxel grid has the benefits of low storage usage (using hashing) and fast cell access. However, the biggest drawback of this structure is the fact that performance depends on the chosen voxel size. We propose an analytical method to compute the voxel size that minimizes the processing time of the algorithm. This topic will be discussed in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-011-0199-5#Sec4">4</a>. The diagram in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-011-0199-5#Fig1">1</a> describes the collision detection algorithm we have used.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-011-0199-5/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0199-5/MediaObjects/10055_2011_199_Fig1_HTML.gif?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0199-5/MediaObjects/10055_2011_199_Fig1_HTML.gif" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p>General design of the algorithm</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-011-0199-5/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+              <p>In a pre-process block, the space is subdivided according to the chosen cell size. Afterwards at runtime, this grid is used to determine colliding voxels as well as checking primitives for intersection. These two steps are known as <i>broad phase</i> and <i>narrow phase</i>, respectively, according to the nomenclature of Hubbard (Hubbard <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1993" title="Hubbard P (1993) Interactive collision detection. In: IEEE 1993 symposium on research frontiers in virtual reality, pp 24–31" href="/article/10.1007/s10055-011-0199-5#ref-CR13" id="ref-link-section-d34681e589">1993</a>). Once collisions have been detected, a collision response is performed. This provides models with the convenient deformations which are calculated using a specific integration model.</p><p>The objects in the scene are represented by vertices (particles) and tetrahedra. From now on, we will use <i>particle</i> and <i>vertex</i> without distinction. Once the voxel grid has been created, all the particles of a tetramesh are classified with respect to the cell in which they are placed. Afterward, each cell has a list of references to particles contained in that cell. These lists will be modified in every single frame due to the mobility of the objects.</p><p>As mentioned before, the runtime block can be divided into two phases: the broad phase and the narrow phase.</p><p>In a first pass, all the particles in the scene are classified once again in the voxel grid. At the same time, the bounding boxes of the tetrahedra are recomputed based on their current deformed state.</p><p>In a second pass, the algorithm of (Teschner et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Teschner M, Heidelberger B, Mueller M, Pomeranets D, Gross M (2003) Optimized spatial hashing for collision detection of deformable objects. In: VMV (vision, modeling and visualization). Aka GmbH, Munich, Germany, pp 47–54" href="/article/10.1007/s10055-011-0199-5#ref-CR26" id="ref-link-section-d34681e608">2003</a>) is executed.
+</p><ul class="u-list-style-bullet">
+                  <li>
+                    <p>
+                      <i>Broad Phase</i>: For each tetrahedra <i>t</i> of one input object, we get its bounding box <i>AABB</i>
+                      <sub>
+                        <i>t</i>
+                      </sub>. Then, we identify the set voxels in the scene where <i>AABB</i>
+                      <sub>
+                        <i>t</i>
+                      </sub> lies. These voxels are called <i>objective voxels</i> (<i>v</i>
+                      <sub>o</sub>). This allows the delimitation of the whole problem to a smaller set of data. For each voxel in <i>v</i>
+                      <sub>o</sub>, the particles belonging to the second object which lie inside it are analyzed. Each one of them is checked for intersection with <i>AABB</i>
+                      <sub>
+                        <i>t</i>
+                      </sub>. When a particle <i>p</i> is inside <i>AABB</i>
+                      <sub>
+                        <i>t</i>
+                      </sub>, the second step (narrow phase) is performed.</p>
+                  </li>
+                  <li>
+                    <p>
+                      <i>Narrow Phase</i>: This step checks whether <i>p</i> intersects <i>t</i> or not. This is done using the barycentric coordinates of the vertex <i>p</i> with respect to the tetrahedron (Teschner et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Teschner M, Heidelberger B, Mueller M, Pomeranets D, Gross M (2003) Optimized spatial hashing for collision detection of deformable objects. In: VMV (vision, modeling and visualization). Aka GmbH, Munich, Germany, pp 47–54" href="/article/10.1007/s10055-011-0199-5#ref-CR26" id="ref-link-section-d34681e695">2003</a>).</p>
+                  </li>
+                </ul>
+              <p>The lists of the particles occurring in a cell need to be updated for every single object transformation. As has been shown before, using this structure, there are a lot of primitives and particle pairs which can be rejected from intersection testing.</p><p>After detecting collisions between primitives, the collision response is performed. For this task, we have used the penalty method based on the penetration depth of intersecting objects. Even if there are many methods to estimate the penetration depth, the one used here computes a consistent penetration depth (Heidelberger et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Heidelberger B, Teschner M, Keiser R, Müller M, Gross M (2004) Consistent penetration depth estimation for deformable collision response. In VMV’04. Akademische Verlagsgesellschaft Aka, Stanford, USA" href="/article/10.1007/s10055-011-0199-5#ref-CR12" id="ref-link-section-d34681e707">2004</a>), which reduces collision response artifacts inherent to existing approaches. Moreover, a propagation scheme is introduced (Heidelberger et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Heidelberger B, Teschner M, Keiser R, Müller M, Gross M (2004) Consistent penetration depth estimation for deformable collision response. In VMV’04. Akademische Verlagsgesellschaft Aka, Stanford, USA" href="/article/10.1007/s10055-011-0199-5#ref-CR12" id="ref-link-section-d34681e710">2004</a>) to approximate the penetration depth and direction for vertices with deep penetrations. This procedure will not be described in detail as the goal of this paper is optimizing the detection algorithm (next Section), not the response.</p></div></div></section><section aria-labelledby="Sec4"><div class="c-article-section" id="Sec4-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec4">Analytical computation of the optimal voxel size</h2><div class="c-article-section__content" id="Sec4-content"><p>The idea of the Spatial Subdivision is to divide the space into convex regions called <i>cells</i>. These are determined by an identifier (calculated according to the coordinates of the cell) and are placed into a vector, in order to classify the interacting objects and determine relations between them.</p><p>The use of spatial partitioning techniques involves a basic initial problem: the 3D space is discretized with respect to a user-defined cell size, and the choice of that value can significantly change the efficiency of the algorithm. If the number of cells per axis is not optimal, the detection process may be too long to use in real time. Of course, this value changes depending on the scenario.</p><p>The optimal voxel size is the one which enables minimal calculation time cost in the collision detection algorithm. This will be delimited by these two events: </p><ol class="u-list-style-none">
+                  <li>
+                    <span class="u-custom-list-number">1.</span>
+                    
+                      <p>If cells are very large compared with the size of the model’s tetrahedra, the number of primitives per cell increases, which involves a large amount of point-tetrahedron tests.</p>
+                    
+                  </li>
+                  <li>
+                    <span class="u-custom-list-number">2.</span>
+                    
+                      <p>On the other hand, small cells cause a spreading of primitives to more cells. This will result in a lot of voxel-tetrahedron intersection tests.</p>
+                    
+                  </li>
+                </ol>
+              <p>What has been done is to extend our previous experience in this topic to generalize a methodology valid not only for scenes of triangle meshes but also for scenes with other types of object representations.</p><p>In the next section, the parameters which are supposed to affect the collision detection time in an instant are identified. Then, we will show how to refine this definition of parameters.</p><h3 class="c-article__sub-heading" id="Sec5">Methodology to infer the cost function</h3><p>This section describes the methodology to obtain an analytical solution for optimizing the voxelization.</p><p>The <i>cost function</i> of the algorithm is the mathematical expression that describes its behavior, namely, it predicts the time it will take to solve a collision problem in a determined scenario.</p><p>The factors that could be involved a priori in the analytical formula are the following: the number of polygons in the scene, the average of their areas, the average length of the edges, and the average volume of the tetrahedra. Location of the objects and the contact volume could also affect the cost function of the algorithm.</p><p>If the cost function is constructed dependent on the voxel size, it is enough to find the value of this variable which makes the function minimum. What we present is an adaptation of the approach we used in our previous work (Borro et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Borro D, García-Alonso A, Matey L (2004) Approximation of optimal voxel size for collision detection in maintainability simulations within massive virtual environments. Comput Graph Forum 23:13–24" href="/article/10.1007/s10055-011-0199-5#ref-CR2" id="ref-link-section-d34681e774">2004</a>) for the new algorithm presented in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-011-0199-5#Sec3">3</a>, proving that the methodology might be extended to other collision detection algorithms where objects are not represented by triangles. We will take the collision detection algorithm, infer the cost function of its behavior, and estimate all the parameters of the cost function using only geometrical data from the scenario.</p><p>As shown in a previous section, the collision detection algorithm has two levels of precision: voxels and tetrahedra. Each tetrahedron of the object goes through both levels in case of collision. So if <i>t</i>
+                  <sub>o</sub> is the number of tetrahedra of one object, <i>v</i>
+                  <sub>o</sub> (objective voxels) is the average number of voxels covered by the bounding box of a tetrahedron, and <i>p</i>
+                  <sub>v</sub> is the average number of affected particles per voxel, the algorithm behavior could be expressed as in formula (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-011-0199-5#Equ1">1</a>) (remember that the algorithm has three loops: one works through each tetrahedron of the object, another one through the objective voxels of each tetrahedron, and the last one through the particles of each objective voxel):
+</p><div id="Equ1" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ z = t_{{\rm o}} \cdot v_{{\rm o}} \cdot p_{{\rm v}} $$</span></div><div class="c-article-equation__number">
+                    (1)
+                </div></div>
+                <p>This formula only considers the worst case: when one whole object is colliding with another. In a normal case, this does not happen, as the collision response algorithm does not let the objects penetrate each other to such a degree. A typical simulation does not have collisions, or at most a few tetrahedra intersect. That is why <i>z</i> should be separated into two cases:
+</p><div id="Equ2" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ z = t_{{\rm o}} \cdot p_{{\rm nc}} \cdot v_{{\rm o}} + t_{{\rm o}} \cdot (1 - p_{{\rm nc}}) \cdot v_{{\rm o}} \cdot p_{{\rm v}} $$</span></div><div class="c-article-equation__number">
+                    (2)
+                </div></div><p>where <i>p</i>
+                  <sub>nc</sub> is the probability of no collision for each tetrahedron. Experiments made with different scenarios and objects have shown that this probability can always be bounded between 0.98 and 0.99 when the physically based collision response algorithm is implemented (our experiments have used <i>p</i>
+                  <sub>nc</sub> = 0.99). This means that the first term of (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-011-0199-5#Equ2">2</a>) will have much more weight than the second one, as happens in a real simulation where only a few tetrahedra are in collision.</p><p>Even if the formula in (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-011-0199-5#Equ2">2</a>) gives the same weight to the parameters <i>v</i>
+                  <sub>o</sub> and <i>p</i>
+                  <sub>v</sub>, this could be refined. The time it takes to determine whether a voxel is empty of particles (<i>t</i>
+                  <sub>v</sub>) is much lower than checking whether a particle collides with a tetrahedron or not (<i>t</i>
+                  <sub>p</sub>). For that reason, we have defined a <i>ratio</i>
+                  <i>r</i>
+                  <sub>t</sub> between particle and voxel times. It is defined as <i>r</i>
+                  <sub>t</sub> = <i>t</i>
+                  <sub>v</sub>/<i>t</i>
+                  <sub>p</sub>. According to our experiments, checking particles for intersection is 5 times more expensive than the voxels time.</p><p>Apart from that, <i>t</i>
+                  <sub>o</sub> is a constant value (it does not depend on the voxel size) and we do not need it to compute the minimum of z. So our <i>z</i> can be written as follows:
+</p><div id="Equ3" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ z = p_{{\rm nc}} \cdot v_{{\rm o}} + (1 - p_{{\rm nc}}) \cdot v_{{\rm o}} \cdot p_{{\rm v}} \cdot r_{{\rm t}} $$</span></div><div class="c-article-equation__number">
+                    (3)
+                </div></div>
+                <p>Once the behavior of the algorithm is established via the cost function, an expression of the parameters <i>v</i>
+                  <sub>o</sub> and <i>p</i>
+                  <sub>v</sub> needs to be found in order to associate them with the voxel size (the variable we want to solve) and the geometry of the scene (the only data we have).</p><h3 class="c-article__sub-heading" id="Sec6">Cost function parameters</h3><p>This section presents an expression of the cost function which obtains a voxel size (δ) that minimizes the function value.</p><p>For a specific voxelization and a scene, <i>v</i>
+                  <sub>o</sub> and <i>p</i>
+                  <sub>v</sub> can be directly measured. Nevertheless, if we want to replace them in the expression of the cost function, they need to be approximated as a function of δ and the geometry data. Basically, we modify the derived expressions of Borro et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Borro D, García-Alonso A, Matey L (2004) Approximation of optimal voxel size for collision detection in maintainability simulations within massive virtual environments. Comput Graph Forum 23:13–24" href="/article/10.1007/s10055-011-0199-5#ref-CR2" id="ref-link-section-d34681e958">2004</a>) to work with tetrahedra, instead of triangle meshes.</p><p>We will deduce the expressions for both parameters in the next lines:
+</p><ul class="u-list-style-bullet">
+                    <li>
+                      <p>
+                        <i>v</i>
+                        <sub>o</sub>: As previously stipulated, this is the average number of voxels contained within the bounding box of a tetrahedron <i>t</i>, specifically the ones intersected by its AABB. So in order to express <i>v</i>
+                        <sub>o</sub>, we first need to estimate the dimensions of the bounding box. In a simpler case, a way of constructing a box that always covers a triangle is by choosing the one in which the side is equal to the largest side of the triangle. So in our case, as the tetrahedra can be in any space orientation, in the worst case the AABB involving a tetrahedron will be a cube in which the side, <i>s</i>
+                        <sub>
+                          <i>AABB</i>
+                        </sub>, is the largest edge of the tetrahedron.</p>
+                    </li>
+                  </ul>
+                <p>Once we have the dimensions of the AABB, and based on the voxel size, it is possible to predict the number of voxels intersected by the bounding box in the worst case.
+</p><div id="Equ4" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ v_{{\rm o}} = \left\lfloor\left(\frac{s_{AABB}}{\delta} + 2\right)\right\rfloor^{3} $$</span></div><div class="c-article-equation__number">
+                    (4)
+                </div></div>
+                  <ul class="u-list-style-bullet">
+                    <li>
+                      <p>
+                        <i>p</i>
+                        <sub>v</sub>: The number of particles inside a voxel can be approximated finding the average number of triangles contained in the voxel. This could be done with different methods. We use the area of the tetrahedra facets (triangles) to approximate the maximum number of facets per voxel. As we use triangle areas, we can take the same approach of (Borro et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Borro D, García-Alonso A, Matey L (2004) Approximation of optimal voxel size for collision detection in maintainability simulations within massive virtual environments. Comput Graph Forum 23:13–24" href="/article/10.1007/s10055-011-0199-5#ref-CR2" id="ref-link-section-d34681e1023">2004</a>) to compute this parameter. Taking into account that the biggest triangle a voxel can contain is the one shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-011-0199-5#Fig2">2</a>.</p>
+                    </li>
+                  </ul>
+                  <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-011-0199-5/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0199-5/MediaObjects/10055_2011_199_Fig2_HTML.gif?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0199-5/MediaObjects/10055_2011_199_Fig2_HTML.gif" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p>Largest triangle contained in a voxel</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-011-0199-5/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>The area of that triangle (<i>A</i>
+                  <sub>vox</sub>) is
+</p><div id="Equ5" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ A_{{\rm vox}} = \frac{\delta^{2}\sqrt{3}}{2} $$</span></div><div class="c-article-equation__number">
+                    (5)
+                </div></div><p>Being <i>A</i>
+                  <sub>t</sub> the real average area of the scene triangles, the number of facets per voxel (<i>f</i>
+                  <sub>v</sub>) can be easily predicted:
+</p><div id="Equ6" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ f_{{\rm v}} = \frac{A_{{\rm vox}}}{A_{{\rm t}}} = \frac{\delta^{2}\sqrt{3}}{2A_{{\rm t}}} $$</span></div><div class="c-article-equation__number">
+                    (6)
+                </div></div><p>Once we estimate the number of triangles contained in a voxel and if each triangle joins three particles, the number of particles per voxel is:
+</p><div id="Equ7" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ p_{{\rm v}} = 3 \cdot \frac{\delta^{2}\sqrt{3}}{2A_{{\rm t}}} $$</span></div><div class="c-article-equation__number">
+                    (7)
+                </div></div>
+                <p>We already have all we need to get the optimal value of the cost function seen in (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-011-0199-5#Equ3">3</a>): <i>v</i>
+                  <sub>o</sub> and <i>p</i>
+                  <sub>v</sub> have been predicted in this section, and <i>p</i>
+                  <sub>nc</sub> and <i>r</i>
+                  <sub>t</sub> are constant numbers. Then, the cost function <i>z</i> only depends on the voxel size δ. Therefore, we will obtain the optimal voxel size by minimizing the function. This optimal value will be calculated in the pre-process stage and the time consumption for that work is obviously not significant. This can be done by solving the following equation:
+</p><div id="Equ8" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ \frac{dz}{d\delta} = 0 $$</span></div><div class="c-article-equation__number">
+                    (8)
+                </div></div>
+                </div></div></section><section aria-labelledby="Sec7"><div class="c-article-section" id="Sec7-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec7">Experimental results</h2><div class="c-article-section__content" id="Sec7-content"><p>Using a software that runs a set of simulations with different voxelizations, it is possible to do several experiments in order to get their execution times and determine the optimal zone experimentally. That will be useful to validate our analytical solution. Approximating the times obtained in the set of simulations with a polynomial function <i>f</i>(<i>x</i>) will allow us to experimentally determine the optimal value and the <i>optimal zone</i>. We understand as <i>optimal zone</i> the range of voxel sizes that give the smallest computation times for the algorithm: smaller or larger levels of voxelization than the ones in the optimal zone lead to greater frame rates.</p><p>The minimum of the polynomial function used for the approximation is considered the experimental optimal value. The optimal zone involves the values close to the optimal value, which have been delimited as the ones which do not raise the optimal value more than 1 millisecond.</p><p>We have performed two types of experiments: tests with simple and theoretical objects and tests using some standard 3D models. The primitive used in the simple tests is the sphere. Although in real simulations complex models are always going to be used, these first experiments can gather information about the method behavior. Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-011-0199-5#Tab1">1</a> shows the number of tetrahedra of the simple models used to carry out the experiments.</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-1"><figure><figcaption class="c-article-table__figcaption"><b id="Tab1" data-test="table-caption">Table 1 Description of the models</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-011-0199-5/tables/1"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+              <p>The next lines list some criteria used throughout the entire experiment.
+</p><ul class="u-list-style-bullet">
+                  <li>
+                    <p>The developed software automatically runs an analysis for different voxel sizes. For each voxelization level, the same procedure is applied: two identical objects are placed into a position where they collide with each other. Then, necessary forces are applied to the objects (collision response, gravitational forces and so forth) and the simulation runs for 10 frames. Times for those 10 frames are used to calculate the average computation time.</p>
+                  </li>
+                  <li>
+                    <p>Analyzed positions have not been chosen randomly. They have been selected in order to have an average number of 1% of the tetrahedra of the scene in collision. As the implemented collision response algorithm does not let the objects penetrate significantly into each other, positions in which more than the 1% of the tetrahedra are in collision will never happen. This value has been chosen after performing some experiments with real models in order to check the average number of colliding tetrahedra.</p>
+                  </li>
+                </ul>
+              <p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-011-0199-5#Fig3">3</a> shows the results following the steps in the experiments. This one concretely belongs to a scene with two Sphere01 objects. It shows the average times of the experiments carried out with these two objects when using different voxel sizes. Although the cost function of the previous section depends on the voxel size (δ), in graphs and tables the number of voxels per axis (derived from δ) is used, considering that this value is easier to evaluate for the reader. For that reason, the given <i>x</i> values are the number of voxels per axis. The size of the scenario is 4 × 4 × 4. The curve has been approximated with the polynomial function that best fits it. An <i>optimal zone</i> [δ<sub>min</sub>, δ<sub>max</sub>] is defined by taking an interval around the <i>optimal value</i> δ<sub>opt</sub>.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-011-0199-5/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0199-5/MediaObjects/10055_2011_199_Fig3_HTML.gif?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0199-5/MediaObjects/10055_2011_199_Fig3_HTML.gif" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p>Experimental average times and approximation of the curve for two Sphere01 models colliding</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-011-0199-5/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+              <p>Each experiment (δ<sub>min</sub>, δ<sub>opt</sub>, δ<sub>max</sub>) is compared with two values: the first one is the voxel size guessed by our analytical formulation (δ<sub>a</sub>). The result is also compared with one traditional solution (δ<sub>trad</sub>) based on the average length of the edges (Teschner et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Teschner M, Heidelberger B, Mueller M, Pomeranets D, Gross M (2003) Optimized spatial hashing for collision detection of deformable objects. In: VMV (vision, modeling and visualization). Aka GmbH, Munich, Germany, pp 47–54" href="/article/10.1007/s10055-011-0199-5#ref-CR26" id="ref-link-section-d34681e1356">2003</a>). Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-011-0199-5#Tab2">2</a> gives the results of experiments with different objects.</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-2"><figure><figcaption class="c-article-table__figcaption"><b id="Tab2" data-test="table-caption">Table 2 Optimal experimental, our analytical and traditional values for each object</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-011-0199-5/tables/2"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+              <p>Note that the optimal value according to our formula lies inside the minimum and maximum experimental values. On the other hand, values given by other solutions differ considerably from the real experimental optimum. On some occasions, they do not even lie within the optimal zone.</p><p>In order to make it easier to see the difference between experimental and traditional solutions as well as the analytical ones derived from our research, a relative error <span class="mathjax-tex">\(\epsilon_{\delta}\)</span> has been used as in (Borro et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Borro D, García-Alonso A, Matey L (2004) Approximation of optimal voxel size for collision detection in maintainability simulations within massive virtual environments. Comput Graph Forum 23:13–24" href="/article/10.1007/s10055-011-0199-5#ref-CR2" id="ref-link-section-d34681e1632">2004</a>).</p><div id="Equ9" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ \epsilon_{\delta} = \frac{|\delta_{{\rm opt}} - \delta| \cdot \left(\left\lfloor \frac{\delta_{{\rm opt}}}{\delta}\right\rfloor + \left\lfloor\frac{\delta}{\delta_{{\rm opt}}}\right\rfloor\right)}{(\delta_{{\rm opt}} - \delta_{{\rm min}}) \cdot \left\lfloor \frac{\delta_{{\rm opt}}}{\delta} \right\rfloor + (\delta_{{\rm max}} - \delta_{{\rm opt}}) \cdot \left\lfloor \frac{\delta}{\delta_{{\rm opt}}} \right\rfloor} $$</span></div><div class="c-article-equation__number">
+                    (9)
+                </div></div><p>If the error is zero, it means that δ matches the optimal size found experimentally (δ<sub>opt</sub>). If <span class="mathjax-tex">\(0 &lt; \epsilon_{\delta} \leq 1, \delta\)</span> is not exactly the optimum but it lies inside the optimal zone so we consider it as a good approximation.</p><p>Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-011-0199-5#Tab3">3</a> shows the relative errors for two cases: the first column is the error of the approximation made by our formula (based on the average area of the triangles that are part of the tetrahedra), respect to the optimal value obtained experimentally. The second column is the error for the voxel sizes used in traditional solutions (based on the average length of the edges), with respect to the optimal experimental value as well.</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-3"><figure><figcaption class="c-article-table__figcaption"><b id="Tab3" data-test="table-caption">Table 3 Error <span class="mathjax-tex">\(\epsilon_\delta\)</span> for both our analytical value (δ<sub>a</sub>) and values given by traditional believes (δ<sub>trad</sub>)</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-011-0199-5/tables/3"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+              <p>As it can be seen, our values are all inside the optimal zone (<span class="mathjax-tex">\(0 &lt; \epsilon_{\delta_{\rm a}} \leq 1\)</span>), very close to the experimental optimal voxelization levels. On the other hand, other solutions differ widely from the optimum and in some cases are even outside the optimal zone. This could result in an important increase of the computation time. We have also made approximations based on other geometrical data like the average volume of the tetrahedra. Nevertheless we have not included the results in this paper since the results based on areas are much more accurate.</p><p>Once experiments with theoretical models have been shown, results obtained for real models are given in the following figures and tables. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-011-0199-5#Fig4">4</a>, Tables <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-011-0199-5#Tab4">4</a>, and <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-011-0199-5#Tab5">5</a> show the complexity of the real models, optimal values, and computed <span class="mathjax-tex">\(\epsilon_\delta, \)</span> respectively.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-011-0199-5/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0199-5/MediaObjects/10055_2011_199_Fig4_HTML.gif?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0199-5/MediaObjects/10055_2011_199_Fig4_HTML.gif" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p>3D Models used in the experiments: <b>a</b> Bunny (20462 tetrahedra), <b>b</b> Cow (50380 tetrahedra), <b>c</b> Armadillo (16377 tetrahedra)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-011-0199-5/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-4"><figure><figcaption class="c-article-table__figcaption"><b id="Tab4" data-test="table-caption">Table 4 Optimal experimental, analytical, and traditional values for each object</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-011-0199-5/tables/4"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-5"><figure><figcaption class="c-article-table__figcaption"><b id="Tab5" data-test="table-caption">Table 5 Error <span class="mathjax-tex">\(\epsilon_\delta\)</span> for both our analytical value (δ<sub>a</sub>) and values given by traditional methods (δ<sub>trad</sub>)</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-011-0199-5/tables/5"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+              <p>Once again, the optimal cell size calculated by our method lies inside the optimal zone obtained experimentally. Nonetheless, solutions given by traditional methods are close but do not always belong to the optimal zone. Even if these previous methods give an approximation of the optimal voxel size and may be valid for some types of applications, our new approach gets much closer to the exact optimal value.</p></div></div></section><section aria-labelledby="Sec8"><div class="c-article-section" id="Sec8-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec8">Conclusions</h2><div class="c-article-section__content" id="Sec8-content"><p>VR refers to computer-generated environments that can simulate physical conditions. One particularly important aspect that influences the realism of VR is the problem of real-time interactive Collision Detection. Time consumption is particularly important in such environments. For that reason, we have presented the concrete problem of optimizing collision detection algorithms based on Uniform Spatial Subdivision. This is made by determining the optimal voxel size. We have studied the difficulties of the approach and proposed a methodology to optimize the selection of the best voxel size. Thus, starting from a Spatial Partitioning collision detection algorithm, we describe the steps to follow, in order to easily estimate the most appropriate cell size to optimize the behavior of the algorithm in any scenario.</p><p>The voxel size chosen in the past was usually selected experimentally. Some studies give an approximation of the best voxelization by carrying out experiments, which lead to a method for delimiting a suitable voxel size based on the geometry of the scene. These solutions, however, came quite close to the optimum, but were not always as accurate as some applications demanded. Our proposal gives a general methodology to infer an analytical solution based on a cost function and approximates the optimal size satisfactorily. It has also been validated experimentally and compared with other approaches.</p><p>We have presented a particular case to validate the methodology with objects represented by tetrahedra. As said before, our previous work validated the method for triangle meshes, so with these two studies we involve most of the representations used in VR applications. Even if the particular solution presented here is dependent on a concrete algorithm, the cost function can be easily obtained from other algorithms in the same way so the same method can be applied to any algorithm.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Biesel D, Gross M (2000) Interactive simulation of surgical cuts. In: Proceedings of the 8th pacific conferenc" /><p class="c-article-references__text" id="ref-CR1">Biesel D, Gross M (2000) Interactive simulation of surgical cuts. In: Proceedings of the 8th pacific conference on computer graphics and applications, PG ’00. IEEE Computer Society, Washington, DC, USA, pp 116–125</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="D. Borro, A. García-Alonso, L. Matey, " /><meta itemprop="datePublished" content="2004" /><meta itemprop="headline" content="Borro D, García-Alonso A, Matey L (2004) Approximation of optimal voxel size for collision detection in mainta" /><p class="c-article-references__text" id="ref-CR2">Borro D, García-Alonso A, Matey L (2004) Approximation of optimal voxel size for collision detection in maintainability simulations within massive virtual environments. Comput Graph Forum 23:13–24</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 2 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Approximation%20of%20optimal%20voxel%20size%20for%20collision%20detection%20in%20maintainability%20simulations%20within%20massive%20virtual%20environments&amp;journal=Comput%20Graph%20Forum&amp;volume=23&amp;pages=13-24&amp;publication_year=2004&amp;author=Borro%2CD&amp;author=Garc%C3%ADa-Alonso%2CA&amp;author=Matey%2CL">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bradshaw G, O’Sullivan C (2002) Sphere-tree construction using dynamic medial axis approximation. In: 2002 ACM" /><p class="c-article-references__text" id="ref-CR3">Bradshaw G, O’Sullivan C (2002) Sphere-tree construction using dynamic medial axis approximation. In: 2002 ACM SIGGRAPH/Eurographics symposium on computer animation, SCA ’02. ACM, New York, NY, USA, pp 33–40</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="P. Brunet, I. Navazo, " /><meta itemprop="datePublished" content="1990" /><meta itemprop="headline" content="Brunet P, Navazo I (1990) Solid representation and operation using extended octrees. ACM Trans Graph 9(2):170–" /><p class="c-article-references__text" id="ref-CR4">Brunet P, Navazo I (1990) Solid representation and operation using extended octrees. ACM Trans Graph 9(2):170–197</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="http://www.emis.de/MATH-item?0726.68074" aria-label="View reference 4 on MATH">MATH</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1145%2F78956.78959" aria-label="View reference 4">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 4 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Solid%20representation%20and%20operation%20using%20extended%20octrees&amp;journal=ACM%20Trans%20Graph&amp;volume=9&amp;issue=2&amp;pages=170-197&amp;publication_year=1990&amp;author=Brunet%2CP&amp;author=Navazo%2CI">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Fünfzig C, Fellner DW (2003) Easy realignment of k-dop bounding volumes. In: Graphics Interface. A K Peters, H" /><p class="c-article-references__text" id="ref-CR5">Fünfzig C, Fellner DW (2003) Easy realignment of k-dop bounding volumes. In: Graphics Interface. A K Peters, Halifax, Nova Scotia, pp 257–264</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="A. Garcia-Alonso, N. Serrano, J. Flaquer, " /><meta itemprop="datePublished" content="1994" /><meta itemprop="headline" content="Garcia-Alonso A, Serrano N, Flaquer J (1994) Solving the collision detection problem. IEEE Comput Graph Appl 1" /><p class="c-article-references__text" id="ref-CR6">Garcia-Alonso A, Serrano N, Flaquer J (1994) Solving the collision detection problem. IEEE Comput Graph Appl 14:36–43</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2F38.279041" aria-label="View reference 6">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 6 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Solving%20the%20collision%20detection%20problem&amp;journal=IEEE%20Comput%20Graph%20Appl&amp;volume=14&amp;pages=36-43&amp;publication_year=1994&amp;author=Garcia-Alonso%2CA&amp;author=Serrano%2CN&amp;author=Flaquer%2CJ">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Gissler M, Dornhege C, Nebel B, Teschner M (2009a) Deformable proximity queries and their application in mobil" /><p class="c-article-references__text" id="ref-CR7">Gissler M, Dornhege C, Nebel B, Teschner M (2009a) Deformable proximity queries and their application in mobile manipulation planning. In: Proceedings of the 5th international symposium on advances in visual computing: Part I, ISVC ’09. Springer, Heidelberg, pp 79–88</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="M. Gissler, R. Schmedding, M. Teschner, " /><meta itemprop="datePublished" content="2009b" /><meta itemprop="headline" content="Gissler M, Schmedding R, Teschner M (2009b) Time-critical collision handling for deformable modeling. Compu An" /><p class="c-article-references__text" id="ref-CR8">Gissler M, Schmedding R, Teschner M (2009b) Time-critical collision handling for deformable modeling. Compu Animat Virtual Worlds 20(2–3):355–364</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 8 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Time-critical%20collision%20handling%20for%20deformable%20modeling&amp;journal=Compu%20Animat%20Virtual%20Worlds&amp;volume=20&amp;issue=2%E2%80%933&amp;pages=355-364&amp;publication_year=2009b&amp;author=Gissler%2CM&amp;author=Schmedding%2CR&amp;author=Teschner%2CM">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Gottschalk S, Lin MC, Manocha D (1996) Obbtree: a hierarchical structure for rapid interference detection. In:" /><p class="c-article-references__text" id="ref-CR9">Gottschalk S, Lin MC, Manocha D (1996) Obbtree: a hierarchical structure for rapid interference detection. In: ACM Siggraph., volume 30. University of North Carolina, NC, pp 171–180</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="A. Gregory, MC. Lin, S. Gottschalk, R. Taylor, " /><meta itemprop="datePublished" content="2000" /><meta itemprop="headline" content="Gregory A, Lin MC, Gottschalk S, Taylor R (2000) Fast and accurate collision detection for haptic interaction " /><p class="c-article-references__text" id="ref-CR10">Gregory A, Lin MC, Gottschalk S, Taylor R (2000) Fast and accurate collision detection for haptic interaction using a three degree-of-freedom force-feedback device. Comput Geom 15:69–89</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1016%2FS0925-7721%2899%2900041-3" aria-label="View reference 10">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 10 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Fast%20and%20accurate%20collision%20detection%20for%20haptic%20interaction%20using%20a%20three%20degree-of-freedom%20force-feedback%20device&amp;journal=Comput%20Geom&amp;volume=15&amp;pages=69-89&amp;publication_year=2000&amp;author=Gregory%2CA&amp;author=Lin%2CMC&amp;author=Gottschalk%2CS&amp;author=Taylor%2CR">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Heidelberger B, Teschner M, Gross M (2003) Real-time volumetric intersections of deforming objects. In: VMV’03" /><p class="c-article-references__text" id="ref-CR11">Heidelberger B, Teschner M, Gross M (2003) Real-time volumetric intersections of deforming objects. In: VMV’03. Akademische Verlagsgesellschaft Aka GmbH, München, Germany, 461–468</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Heidelberger B, Teschner M, Keiser R, Müller M, Gross M (2004) Consistent penetration depth estimation for def" /><p class="c-article-references__text" id="ref-CR12">Heidelberger B, Teschner M, Keiser R, Müller M, Gross M (2004) Consistent penetration depth estimation for deformable collision response. In VMV’04. Akademische Verlagsgesellschaft Aka, Stanford, USA</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Hubbard P (1993) Interactive collision detection. In: IEEE 1993 symposium on research frontiers in virtual rea" /><p class="c-article-references__text" id="ref-CR13">Hubbard P (1993) Interactive collision detection. In: IEEE 1993 symposium on research frontiers in virtual reality, pp 24–31</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="JT. Klosowski, M. Held, JSB. Mitchell, H. Sowizral, K. Zikan, " /><meta itemprop="datePublished" content="1998" /><meta itemprop="headline" content="Klosowski JT, Held M, Mitchell JSB, Sowizral H, Zikan K (1998) Efficient collision detection using bounding vo" /><p class="c-article-references__text" id="ref-CR14">Klosowski JT, Held M, Mitchell JSB, Sowizral H, Zikan K (1998) Efficient collision detection using bounding volume hierarchies of k-dops. IEEE Trans Vis Comput Graph 4(1):21–36</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2F2945.675649" aria-label="View reference 14">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 14 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Efficient%20collision%20detection%20using%20bounding%20volume%20hierarchies%20of%20k-dops&amp;journal=IEEE%20Trans%20Vis%20Comput%20Graph&amp;volume=4&amp;issue=1&amp;pages=21-36&amp;publication_year=1998&amp;author=Klosowski%2CJT&amp;author=Held%2CM&amp;author=Mitchell%2CJSB&amp;author=Sowizral%2CH&amp;author=Zikan%2CK">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="R. Kockro, P. Hwang, " /><meta itemprop="datePublished" content="2009" /><meta itemprop="headline" content="Kockro R, Hwang P (2009) Virtual temporal bone: an interactive 3-dimensional learning aid for cranial base sur" /><p class="c-article-references__text" id="ref-CR15">Kockro R, Hwang P (2009) Virtual temporal bone: an interactive 3-dimensional learning aid for cranial base surgery. Neurosurg Clin N Am 64(5 Suppl 2):216–229</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 15 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Virtual%20temporal%20bone%3A%20an%20interactive%203-dimensional%20learning%20aid%20for%20cranial%20base%20surgery&amp;journal=Neurosurgery&amp;volume=64&amp;issue=5%20Suppl%202&amp;pages=216-229&amp;publication_year=2009&amp;author=Kockro%2CR&amp;author=Hwang%2CP">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Kockro RA, Stadie A, Schwandt E, Reisch R, Charalampaki C, Ng I, Yeo TT, Hwang P, Serra L, Perneczky A (2007) " /><p class="c-article-references__text" id="ref-CR16">Kockro RA, Stadie A, Schwandt E, Reisch R, Charalampaki C, Ng I, Yeo TT, Hwang P, Serra L, Perneczky A (2007) A collaborative virtual reality environment for neurosurgical planning and training. Neurosurgery, 61(5 Suppl 2):379–91; discussion 391</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Larsson T, Akenine-Möller T (2001) Collision detection for continuously deforming bodies. In: Eurographics 200" /><p class="c-article-references__text" id="ref-CR17">Larsson T, Akenine-Möller T (2001) Collision detection for continuously deforming bodies. In: Eurographics 2001, short presentations. Eurographics Association, Blackwell Publishing, pp 325–333</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Lin MC, Gottschalk S (1998) Collision detection between geometric models: A survey. In: Proceedings of IMA con" /><p class="c-article-references__text" id="ref-CR18">Lin MC, Gottschalk S (1998) Collision detection between geometric models: A survey. In: Proceedings of IMA conference on mathematics of surfaces, pp 37–56</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Madera FA, Laycock SD, Day AM (2010) Detecting self-collisions using a hybrid bounding volume algorithm. In: P" /><p class="c-article-references__text" id="ref-CR19">Madera FA, Laycock SD, Day AM (2010) Detecting self-collisions using a hybrid bounding volume algorithm. In: Proceedings of the 2010 third international conference on advances in computer-human interactions, ACHI ’10. IEEE Computer Society, Washington, DC, USA, pp 107–112</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="HR. Malone, ON. Syed, MS. Downes, AL. D’Ambrosio, DO. Quest, MG. Kaiser, " /><meta itemprop="datePublished" content="2010" /><meta itemprop="headline" content="Malone HR, Syed ON, Downes MS, D’Ambrosio AL, Quest DO, Kaiser MG (2010) Simulation in neurosurgery: a review " /><p class="c-article-references__text" id="ref-CR20">Malone HR, Syed ON, Downes MS, D’Ambrosio AL, Quest DO, Kaiser MG (2010) Simulation in neurosurgery: a review of computer-based simulation environments and their surgical applications. Neurosurg Clin N Am 67(4):1105–1116</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1227%2FNEU.0b013e3181ee46d0" aria-label="View reference 20">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 20 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Simulation%20in%20neurosurgery%3A%20a%20review%20of%20computer-based%20simulation%20environments%20and%20their%20surgical%20applications&amp;journal=Neurosurgery&amp;volume=67&amp;issue=4&amp;pages=1105-1116&amp;publication_year=2010&amp;author=Malone%2CHR&amp;author=Syed%2CON&amp;author=Downes%2CMS&amp;author=D%E2%80%99Ambrosio%2CAL&amp;author=Quest%2CDO&amp;author=Kaiser%2CMG">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="McNeely WA, Puterbaugh KD, Troy JJ (1999) Six degree-of-freedom haptic rendering using voxel sampling. In: 26t" /><p class="c-article-references__text" id="ref-CR21">McNeely WA, Puterbaugh KD, Troy JJ (1999) Six degree-of-freedom haptic rendering using voxel sampling. In: 26th annual conference on computer graphics and interactive techniques, SIGGRAPH ’99. ACM Press/Addison-Wesley Publishing Co, New York, NY, USA, pp 401–408</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Melax S (2000) Dynamic plane shifting bsp traversal. In: Graphics Interface. Lawrence Erlbaum Associates, pp 2" /><p class="c-article-references__text" id="ref-CR22">Melax S (2000) Dynamic plane shifting bsp traversal. In: Graphics Interface. Lawrence Erlbaum Associates, pp 213–220</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Pascal Volino NMT (2000) Implementing fast cloth simulation with collision response. In: International confere" /><p class="c-article-references__text" id="ref-CR23">Pascal Volino NMT (2000) Implementing fast cloth simulation with collision response. In: International conference on computer graphics, CGI ’00. IEEE Computer Society, Washington, DC, USA, p 257</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="H. Schmidl, N. Walker, MC. Lin, " /><meta itemprop="datePublished" content="2004" /><meta itemprop="headline" content="Schmidl H, Walker N, Lin MC (2004) Cab: Fast update of obb trees for collision detection between articulated b" /><p class="c-article-references__text" id="ref-CR24">Schmidl H, Walker N, Lin MC (2004) Cab: Fast update of obb trees for collision detection between articulated bodies. J Grap GPU, and Game Tools 9(2):1–9</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 24 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Cab%3A%20Fast%20update%20of%20obb%20trees%20for%20collision%20detection%20between%20articulated%20bodies&amp;journal=J%20Grap%20GPU%2C%20and%20Game%20Tools&amp;volume=9&amp;issue=2&amp;pages=1-9&amp;publication_year=2004&amp;author=Schmidl%2CH&amp;author=Walker%2CN&amp;author=Lin%2CMC">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Smith A, Kitamura Y, Takemura H, Kishino F (1995) A simple and efficient method for accurate collision detecti" /><p class="c-article-references__text" id="ref-CR25">Smith A, Kitamura Y, Takemura H, Kishino F (1995) A simple and efficient method for accurate collision detection among deformable polyhedral objects in arbitrary motion. In: Proceedings of the virtual reality annual international symposium (VRAIS’95), VRAIS ’95. IEEE Computer Society, Washington, DC, USA, p 136</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Teschner M, Heidelberger B, Mueller M, Pomeranets D, Gross M (2003) Optimized spatial hashing for collision de" /><p class="c-article-references__text" id="ref-CR26">Teschner M, Heidelberger B, Mueller M, Pomeranets D, Gross M (2003) Optimized spatial hashing for collision detection of deformable objects. In: VMV (vision, modeling and visualization). Aka GmbH, Munich, Germany, pp 47–54</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Teschner M, Kimmerle S, Heidelberger B, Zachmann G, Raghupathi L, Fuhrmann A, Cani M-P, Faure F, Magnenat-Thal" /><p class="c-article-references__text" id="ref-CR27">Teschner M, Kimmerle S, Heidelberger B, Zachmann G, Raghupathi L, Fuhrmann A, Cani M-P, Faure F, Magnenat-Thalmann N, Strasser W, Volino P (2004) Collision detection for deformable objects. In: EUROGRAPHICS, vol 23. pp 119–139</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="G. Bergen, " /><meta itemprop="datePublished" content="1997" /><meta itemprop="headline" content="van den Bergen G (1997) Efficient collision detection of complex deformable models using aabb trees. J Graph T" /><p class="c-article-references__text" id="ref-CR28">van den Bergen G (1997) Efficient collision detection of complex deformable models using aabb trees. J Graph Tools 2(4):1–13</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="http://www.emis.de/MATH-item?0927.68100" aria-label="View reference 28 on MATH">MATH</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1080%2F10867651.1997.10487480" aria-label="View reference 28">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 28 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Efficient%20collision%20detection%20of%20complex%20deformable%20models%20using%20aabb%20trees&amp;journal=J%20Graph%20Tools&amp;volume=2&amp;issue=4&amp;pages=1-13&amp;publication_year=1997&amp;author=Bergen%2CG">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="van den Bergen G (2004) Collision Detection in Interactive 3D Environments. Morgan Kaufmann, Los Altos, CA" /><p class="c-article-references__text" id="ref-CR29">van den Bergen G (2004) Collision Detection in Interactive 3D Environments. Morgan Kaufmann, Los Altos, CA</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Zachmann G (1998) Rapid collision detection by dynamically aligned dop-trees. In: Proceedings of the virtual r" /><p class="c-article-references__text" id="ref-CR30">Zachmann G (1998) Rapid collision detection by dynamically aligned dop-trees. In: Proceedings of the virtual reality annual international symposium, VRAIS ’98. IEEE computer society, Washington, DC, USA, p 90</p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-011-0199-5-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Ack1">Acknowledgments</h2><div class="c-article-section__content" id="Ack1-content"><p>This work has been partially funded by the Government of Navarra within the <i>Plan de Formacion y de Investigacion y Desarrollo</i> program that belongs to the <i>Education</i> department. The authors are also grateful to Prof. Dr. Matthias Teschner (Computer Graphics Laboratory, University of Freiburg, Germany) for his support to carry out the collision detection algorithm, as well as his suggestions and comments on the subsequent study.</p></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">Department of Applied Mechanics, CEIT and Tecnun (University of Navarra), Pamplona, Navarra, Spain</p><p class="c-article-author-affiliation__authors-list">G. Echegaray &amp; D. Borro</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-G_-Echegaray"><span class="c-article-authors-search__title u-h3 js-search-name">G. Echegaray</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;G.+Echegaray&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=G.+Echegaray" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22G.+Echegaray%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-D_-Borro"><span class="c-article-authors-search__title u-h3 js-search-name">D. Borro</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;D.+Borro&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=D.+Borro" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22D.+Borro%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-011-0199-5/email/correspondent/c1/new">G. Echegaray</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=A%20methodology%20for%20optimal%20voxel%20size%20computation%20in%20collision%20detection%20algorithms%20for%20virtual%20reality&amp;author=G.%20Echegaray%20et%20al&amp;contentID=10.1007%2Fs10055-011-0199-5&amp;publication=1359-4338&amp;publicationDate=2011-10-02&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Echegaray, G., Borro, D. A methodology for optimal voxel size computation in collision detection algorithms for virtual reality.
+                    <i>Virtual Reality</i> <b>16, </b>205–213 (2012). https://doi.org/10.1007/s10055-011-0199-5</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-011-0199-5.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2011-01-10">10 January 2011</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2011-09-12">12 September 2011</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2011-10-02">02 October 2011</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2012-09">September 2012</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-011-0199-5" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-011-0199-5</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Collision detection</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Voxel size</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Uniform spatial partitioning</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Optimization</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-011-0199-5.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=199;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

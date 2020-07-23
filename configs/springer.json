@@ -1,0 +1,78 @@
+{
+    "name": "springer",
+    "urls": {
+        "list": {
+            "_url": "http://localhost:8000/springer",
+            "url": "https://link.springer.com/search/page/{page}",
+            "per-page": 20,
+            "start-page": 1
+        },
+        "paper": {
+            "_url": "http://localhost:8000/springer/{identifier}",
+            "url": "https://link.springer.com/article/{identifier}"
+        },
+        "pdf": "https://link.springer.com/content/pdf/{identifier}.pdf"
+    },
+    "sleep_between_requests": 0.1,
+    "postprocessing": {
+        "paper": [
+            {
+                "type": "query",
+                "query": {
+                    "should": [
+                        { 
+                            "must": [
+                                {
+                                    "should": [
+                                        {"match": { "title": "select*" }},
+                                        {"match": { "title": "manipulat*" }}
+                                    ]
+                                },
+                                {
+                                    "should": [
+                                        {"match": { "title": "virtual" }},
+                                        {"match": { "title": "VR" }}
+                                    ]
+                                }
+                            ]
+                        },
+                        { 
+                            "must": [
+                                {
+                                    "should": [
+                                        {"match": { "abstract": "select*" }},
+                                        {"match": { "abstract": "manipulat*" }}
+                                    ]
+                                },
+                                {
+                                    "should": [
+                                        {"match": { "abstract": "virtual" }},
+                                        {"match": { "abstract": "VR" }}
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "regex": {
+        "list": {
+            "identifiers": "<a class=\"title\" href=\"\/article\/([^\"]+)\">",
+            "total_number_of_results": "<h1 id=\"number-of-search-results-and-search-terms\">\\s+<strong>(\\d+)<\/strong>"
+        },
+        "paper": {
+            "authors": "<a data-test=\"author-name\" data-track=\"click\" data-track-action=\"open author\" data-track-label=\"link\" href=\"[^\"]+\" data-author-popup=\"[^\"]+\"\\s*[data\\-corresp\\-id=\"c1\"]*>([^<]+)<",
+            "title": "<h1 class=\"c-article-title\" data-test=\"article-title\" data-article-title=\"\" itemprop=\"name headline\">([^<]+)<\/h1>",
+            "abstract": "<div class=\"c-article-section__content\" id=\"Abs1-content\"><p>([\\s\\S]+?)<\/p><\/div>",
+            "publication_date": "<time datetime=\"[^\"]+\" itemprop=\"datePublished\">([^<]+)<\/time>",
+            "published_in": "<a data-test=\"journal-link\" href=\"[^\"]+\"><i data-test=\"journal-title\">([^<]+)<\/i><\/a>",
+            "doi": "<a href=\"https:\/\/doi\\.org\/([^\"]+)\" data-track=\"click\" data-track-action=\"view doi\" data-track-label=\"link\" itemprop=\"sameAs\">",
+            "citations": "",
+            "isbn": "",
+            
+            "keywords": "<li class=\"c-article-subject-list__subject\"><span itemprop=\"about\">([^<]+)<\/span><\/li>"
+        }
+    }
+}

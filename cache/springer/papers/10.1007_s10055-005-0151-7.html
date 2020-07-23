@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="Beyond user experimentation: notational-based systematic evaluation of"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="Despite the increasing number of interaction devices for virtual reality (VR) applications (e.g. data-gloves, space balls, data-suits and so on), surprisingly very little attention has been given..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/8/2.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="Beyond user experimentation: notational-based systematic evaluation of interaction techniques in virtual reality environments"/>
+
+    <meta name="dc.source" content="Virtual Reality 2005 8:2"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2005-02-23"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2005 Springer-Verlag London Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="Despite the increasing number of interaction devices for virtual reality (VR) applications (e.g. data-gloves, space balls, data-suits and so on), surprisingly very little attention has been given to the evaluation of VR interaction techniques or more generally to the usability of virtual reality environments (VRE). The main reasons for these limited efforts are probably that empirical user testing with VREs is difficult and time-consuming and ergonomic rules or criteria and traditional HCI tools and methods are not well suited for VRE. Alternatively, the specification of interaction based on a formal method or notation provides a precise and unambiguous description that can be used to reason the user&#8217;s actions while interacting with a VRE. In this paper, we propose a new approach to design interaction techniques in VRE, based on the use of a formal specification language: the ASUR notation. In the early stages of system design, time and effort are reduced by assisting the designers in considering alternative solutions and anticipating usability issues. To better explain the proposed methodology, we report an evaluation of selection and manipulation techniques in a virtual environment based on a chess game. The evaluation has been carried out in two ways: predictively, with the help of the ASUR notation, and empirically via user experiments. We present the outcomes of the empirical studies and demonstrate that the reasoning with the ASUR notation leads to similar but also results complementary to those obtained with the experiments."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2005-02-23"/>
+
+    <meta name="prism.volume" content="8"/>
+
+    <meta name="prism.number" content="2"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="118"/>
+
+    <meta name="prism.endingPage" content="128"/>
+
+    <meta name="prism.copyright" content="2005 Springer-Verlag London Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-005-0151-7"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-005-0151-7"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-005-0151-7.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-005-0151-7"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="Beyond user experimentation: notational-based systematic evaluation of interaction techniques in virtual reality environments"/>
+
+    <meta name="citation_volume" content="8"/>
+
+    <meta name="citation_issue" content="2"/>
+
+    <meta name="citation_publication_date" content="2004/06"/>
+
+    <meta name="citation_online_date" content="2005/02/23"/>
+
+    <meta name="citation_firstpage" content="118"/>
+
+    <meta name="citation_lastpage" content="128"/>
+
+    <meta name="citation_article_type" content="Original Article"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-005-0151-7"/>
+
+    <meta name="DOI" content="10.1007/s10055-005-0151-7"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-005-0151-7"/>
+
+    <meta name="description" content="Despite the increasing number of interaction devices for virtual reality (VR) applications (e.g. data-gloves, space balls, data-suits and so on), surprisin"/>
+
+    <meta name="dc.creator" content="Emmanuel Dubois"/>
+
+    <meta name="dc.creator" content="Luciana P. Nedel"/>
+
+    <meta name="dc.creator" content="Carla M. Dal Sasso. Freitas"/>
+
+    <meta name="dc.creator" content="Liliane Jacon"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="Bowman D, Hodges L (1997) An evaluation of techniques for grabbing and manipulating remote objects in immersive virtual environments. In: Proceedings of interactive 3D-graphics symposium, pp 35&#8211;38"/>
+
+    <meta name="citation_reference" content="Bowman D, Johnson DB, Hodges LF (1999) Testbed evaluation of virtual environments interaction techniques. In: Proceedings of VRST symposium, pp 26&#8211;33"/>
+
+    <meta name="citation_reference" content="Dubois E, Nigay L, Troccaz J (2002) Assessing continuity and compatibility in augmented reality systems. UAIS Journal, Special Issue on Continuous Interaction in Future Computing Systems 1(4):263&#8211;273"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IWC Journal, Special Issue on Mobile HCI; citation_title=ASUR++: a design notation for mobile mixed systems; citation_author=E Dubois, PD Gray, L Nigay; citation_volume=15; citation_issue=4; citation_publication_date=2003; citation_pages=497-520; citation_id=CR4"/>
+
+    <meta name="citation_reference" content="citation_title=Input devices and interaction techniques for advanced computing; citation_inbook_title=Virtual environments and advanced interface design; citation_publication_date=1995; citation_pages=437-470; citation_id=CR5; citation_author=I MacKenzie; citation_publisher=Oxford University Press"/>
+
+    <meta name="citation_reference" content="Markopoulos P, Marijnissen P (2000) UML as a representation for interaction designs. In: Proceedings of OZCHI 2000, pp 240&#8211;249"/>
+
+    <meta name="citation_reference" content="Nedel LP, Freitas CMDS, Jacob LJ, Pimenta MS (2003) Testing the use of egocentric interactive techniques in immersive virtual environments. In: Proceedings of interact 2003, pp 471&#8211;478"/>
+
+    <meta name="citation_reference" content="Nielsen J (1993) Usability engineering. Academic Press/AP Professional, Cambridge, ISBN 0125184069"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Interact Comput; citation_title=Synergistic modelling of tasks, users and systems using formal specification techniques; citation_author=P Palanque, R Bastide; citation_volume=9; citation_issue=2; citation_publication_date=1997; citation_pages=129-153; citation_id=CR9"/>
+
+    <meta name="citation_reference" content="Paterno F, Mancini, Meniconi (1997) ConcuTask Tree: a diagrammatic notation for specifying task models. In: Proceedings of interact&#8217;97, pp 362&#8211;369"/>
+
+    <meta name="citation_reference" content="Poupyrev I, Weghorst S, Billinghurst M, Ichikawa T (1997) A framework and testbed for studying manipulation techniques for immersive VR. In: Proceedings of VRST symposium, pp 21&#8211;28"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Computer Graphics Forum, Eurographics&#8217;98 issue; citation_title=Egocentric object manipulation in virtual environments: empirical evaluation of interaction techniques; citation_author=I Poupyrev, S Weghorst, M Billinghurst, T Ichikawa; citation_volume=17; citation_issue=3; citation_publication_date=1998; citation_pages=41-52; citation_id=CR12"/>
+
+    <meta name="citation_author" content="Emmanuel Dubois"/>
+
+    <meta name="citation_author_email" content="Emmanuel.Dubois@irit.fr"/>
+
+    <meta name="citation_author_institution" content="IRIT &#8211; LIIHS, TOULOUSE Cedex 4, France"/>
+
+    <meta name="citation_author" content="Luciana P. Nedel"/>
+
+    <meta name="citation_author_email" content="nedel@inf.ufrgs.br"/>
+
+    <meta name="citation_author_institution" content="Computer Science Institute, Federal University of Rio Grande do Sul (UFRGS), Porto Alegre, Brazil"/>
+
+    <meta name="citation_author" content="Carla M. Dal Sasso. Freitas"/>
+
+    <meta name="citation_author_email" content="carla@inf.ufrgs.br"/>
+
+    <meta name="citation_author_institution" content="Computer Science Institute, Federal University of Rio Grande do Sul (UFRGS), Porto Alegre, Brazil"/>
+
+    <meta name="citation_author" content="Liliane Jacon"/>
+
+    <meta name="citation_author_email" content="liliane@apecnt.unoeste.br"/>
+
+    <meta name="citation_author_institution" content="Computer Science Institute, Federal University of Rio Grande do Sul (UFRGS), Porto Alegre, Brazil"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-005-0151-7&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2004/06/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-005-0151-7"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="Beyond user experimentation: notational-based systematic evaluation of interaction techniques in virtual reality environments"/>
+        <meta property="og:description" content="Despite the increasing number of interaction devices for virtual reality (VR) applications (e.g. data-gloves, space balls, data-suits and so on), surprisingly very little attention has been given to the evaluation of VR interaction techniques or more generally to the usability of virtual reality environments (VRE). The main reasons for these limited efforts are probably that empirical user testing with VREs is difficult and time-consuming and ergonomic rules or criteria and traditional HCI tools and methods are not well suited for VRE. Alternatively, the specification of interaction based on a formal method or notation provides a precise and unambiguous description that can be used to reason the user’s actions while interacting with a VRE. In this paper, we propose a new approach to design interaction techniques in VRE, based on the use of a formal specification language: the ASUR notation. In the early stages of system design, time and effort are reduced by assisting the designers in considering alternative solutions and anticipating usability issues. To better explain the proposed methodology, we report an evaluation of selection and manipulation techniques in a virtual environment based on a chess game. The evaluation has been carried out in two ways: predictively, with the help of the ASUR notation, and empirically via user experiments. We present the outcomes of the empirical studies and demonstrate that the reasoning with the ASUR notation leads to similar but also results complementary to those obtained with the experiments."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>Beyond user experimentation: notational-based systematic evaluation of interaction techniques in virtual reality environments | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-005-0151-7","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Mixed reality, Virtual reality, 3D interaction, Interaction design notation, User experimentation","kwrd":["Mixed_reality","Virtual_reality","3D_interaction","Interaction_design_notation","User_experimentation"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-005-0151-7","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-005-0151-7","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=151;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-005-0151-7">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            Beyond user experimentation: notational-based systematic evaluation of interaction techniques in virtual reality environments
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-005-0151-7.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-005-0151-7.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">Original Article</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2005-02-23" itemprop="datePublished">23 February 2005</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">Beyond user experimentation: notational-based systematic evaluation of interaction techniques in virtual reality environments</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Emmanuel-Dubois" data-author-popup="auth-Emmanuel-Dubois" data-corresp-id="c1">Emmanuel Dubois<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="IRIT – LIIHS" /><meta itemprop="address" content="IRIT – LIIHS, 118, route de Narbonne, 31062, TOULOUSE Cedex 4, France" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Luciana_P_-Nedel" data-author-popup="auth-Luciana_P_-Nedel">Luciana P. Nedel</a></span><sup class="u-js-hide"><a href="#Aff2">2</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Federal University of Rio Grande do Sul (UFRGS)" /><meta itemprop="address" content="grid.8532.c, 0000000122007498, Computer Science Institute, Federal University of Rio Grande do Sul (UFRGS), Caixa Postal 15064 CEP, 91501-970, Porto Alegre, RS, Brazil" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Carla_M__Dal_Sasso_-Freitas" data-author-popup="auth-Carla_M__Dal_Sasso_-Freitas">Carla M. Dal Sasso. Freitas</a></span><sup class="u-js-hide"><a href="#Aff2">2</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Federal University of Rio Grande do Sul (UFRGS)" /><meta itemprop="address" content="grid.8532.c, 0000000122007498, Computer Science Institute, Federal University of Rio Grande do Sul (UFRGS), Caixa Postal 15064 CEP, 91501-970, Porto Alegre, RS, Brazil" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Liliane-Jacon" data-author-popup="auth-Liliane-Jacon">Liliane Jacon</a></span><sup class="u-js-hide"><a href="#Aff2">2</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Federal University of Rio Grande do Sul (UFRGS)" /><meta itemprop="address" content="grid.8532.c, 0000000122007498, Computer Science Institute, Federal University of Rio Grande do Sul (UFRGS), Caixa Postal 15064 CEP, 91501-970, Porto Alegre, RS, Brazil" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 8</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">118</span>–<span itemprop="pageEnd">128</span>(<span data-test="article-publication-year">2004</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">158 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">6 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                    
+                        <li class="c-article-metrics-bar__item">
+                            <p class="c-article-metrics-bar__count">3 <span class="c-article-metrics-bar__label">Altmetric</span></p>
+                        </li>
+                    
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-005-0151-7/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>Despite the increasing number of interaction devices for virtual reality (VR) applications (e.g. data-gloves, space balls, data-suits and so on), surprisingly very little attention has been given to the evaluation of VR interaction techniques or more generally to the usability of virtual reality environments (VRE). The main reasons for these limited efforts are probably that empirical user testing with VREs is difficult and time-consuming and ergonomic rules or criteria and traditional HCI tools and methods are not well suited for VRE. Alternatively, the specification of interaction based on a formal method or notation provides a precise and unambiguous description that can be used to reason the user’s actions while interacting with a VRE. In this paper, we propose a new approach to design interaction techniques in VRE, based on the use of a formal specification language: the ASUR notation. In the early stages of system design, time and effort are reduced by assisting the designers in considering alternative solutions and anticipating usability issues. To better explain the proposed methodology, we report an evaluation of selection and manipulation techniques in a virtual environment based on a chess game. The evaluation has been carried out in two ways: predictively, with the help of the ASUR notation, and empirically via user experiments. We present the outcomes of the empirical studies and demonstrate that the reasoning with the ASUR notation leads to similar but also results complementary to those obtained with the experiments.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Introduction</h2><div class="c-article-section__content" id="Sec1-content"><p>Interaction in virtual reality environments (VREs) is based on the responsive capability to detect and react to each user action executed with interaction techniques, using some kind of special (data gloves, H3D glasses) or conventional (mouse, keyboard, screen) device. Interaction techniques support different kinds of user actions such as: executing commands and entering data to select virtual objects; manipulating them; specifying actions and navigating in the environment.</p><p>There are several possible interaction techniques which we may choose, to provide good support for users acting in a VRE. Obviously, some techniques are more appropriate for a specific kind of action than others: for example, a 3D mouse to manipulate an object into a 3D space is probably more suitable than a 2D mouse used in association with keyboard keys. With the increasing number of available VR tools and applications, more and more studies reporting the evaluation of VR interaction techniques or, more generally, usability studies of VREs [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1" title="Bowman D, Hodges L (1997) An evaluation of techniques for grabbing and manipulating remote objects in immersive virtual environments. In: Proceedings of interactive 3D-graphics symposium, pp 35–38" href="/article/10.1007/s10055-005-0151-7#ref-CR1" id="ref-link-section-d34144e350">1</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2" title="Bowman D, Johnson DB, Hodges LF (1999) Testbed evaluation of virtual environments interaction techniques. In: Proceedings of VRST symposium, pp 26–33" href="/article/10.1007/s10055-005-0151-7#ref-CR2" id="ref-link-section-d34144e353">2</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 11" title="Poupyrev I, Weghorst S, Billinghurst M, Ichikawa T (1997) A framework and testbed for studying manipulation techniques for immersive VR. In: Proceedings of VRST symposium, pp 21–28" href="/article/10.1007/s10055-005-0151-7#ref-CR11" id="ref-link-section-d34144e356">11</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 12" title="Poupyrev I, Weghorst S, Billinghurst M, Ichikawa T (1998) Egocentric object manipulation in virtual environments: empirical evaluation of interaction techniques. Computer Graphics Forum, Eurographics’98 issue, 17(3):41–52" href="/article/10.1007/s10055-005-0151-7#ref-CR12" id="ref-link-section-d34144e359">12</a>] have been developed. However, most of the work in this field is limited to empirical user tests with VREs, which are difficult, imprecise and time-consuming. Ergonomic rules or criteria and traditional HCI evaluation tools and methods should also be useful in the evaluation process, but need to be adapted to VREs. Indeed, user interaction in VRE is based on specificities and devices that are unusual to traditional HCI approaches.</p><p>In the same way, the specification of interaction based on a formal method can be used by the interaction designer to reason the user’s actions while interacting with a VRE. But existing HCI methods that model user interaction appear to be limited in modelling user interaction in virtual and augmented environments. For example, task analysis approaches based on Petri Nets [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 9" title="Palanque P, Bastide R (1997) Synergistic modelling of tasks, users and systems using formal specification techniques. Interact Comput 9(2):129–153" href="/article/10.1007/s10055-005-0151-7#ref-CR9" id="ref-link-section-d34144e365">9</a>] or CTT [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 10" title="Paterno F, Mancini, Meniconi (1997) ConcuTask Tree: a diagrammatic notation for specifying task models. In: Proceedings of interact’97, pp 362–369" href="/article/10.1007/s10055-005-0151-7#ref-CR10" id="ref-link-section-d34144e368">10</a>] do not offer a systematic way to explore and represent properties of physical entities. Prototyping [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 8" title="Nielsen J (1993) Usability engineering. Academic Press/AP Professional, Cambridge, ISBN 0125184069" href="/article/10.1007/s10055-005-0151-7#ref-CR8" id="ref-link-section-d34144e371">8</a>] perfectly takes into account the presence of physical entities but does not promote the reusability of parts of such systems. Another traditional modelling approach is based on software modelling using UML. Nevertheless, modelling HCI with UML has been proven difficult [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 6" title="Markopoulos P, Marijnissen P (2000) UML as a representation for interaction designs. In: Proceedings of OZCHI 2000, pp 240–249" href="/article/10.1007/s10055-005-0151-7#ref-CR6" id="ref-link-section-d34144e374">6</a>].</p><p>The insufficiency of existing methods leads to the development of the ASUR notation [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 4" title="Dubois E, Gray PD, Nigay L (2003) ASUR++: a design notation for mobile mixed systems. IWC Journal, Special Issue on Mobile HCI 15(4):497–520" href="/article/10.1007/s10055-005-0151-7#ref-CR4" id="ref-link-section-d34144e380">4</a>]. The ASUR notation aims to help reason how to combine the physical and digital worlds by identifying: (1) the physical and digital objects involved in the system to be designed; (2) the boundaries between the two worlds; and (3) the characteristics of objects and boundaries. Initially developed to describe user’s interaction in augmented reality (AR) systems, the ASUR notation also supports the design process by providing the design team with a common vocabulary to communicate all along the design process. It also supports the systematic exploration of the design space, and allows the analysis of characteristics that might have an impact on the usability of such systems. Given the similarities between AR and VRE and, the objectives of the ASUR notation, we believe that this notation is also helpful during the design of VRE.</p><p>This work aims to compare the analysis of 3D interaction described using the ASUR notation with the results of user experiments reproducing the same situations. The goal is to compare notational-based predictive results in terms of usability, obtained before the development of a prototype, with empirical results, obtained through user experiments and thus necessarily after the development of a prototype. We specifically report the evaluation of selection and manipulation techniques in a VRE based on a chess game. In Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-005-0151-7#Sec2">2</a> we introduce the ASUR notation. In Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-005-0151-7#Sec3">3</a> we describe our testbed VRE in terms of interaction techniques implemented, devices used and visualization options. The design phase of the user experiments is presented in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-005-0151-7#Sec6">4</a>. Section <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-005-0151-7#Sec16">5</a> presents the ASUR study of the interaction techniques, i.e. the ASUR modeling and analysis. Section <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-005-0151-7#Sec21">6</a> correlates the statistical results to the ASUR conclusions drawn prior to the user experiments. The last section draws conclusions regarding the use of ASUR for interaction design and usability evaluation in VREs.</p></div></div></section><section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">ASUR notation</h2><div class="c-article-section__content" id="Sec2-content"><p>In the following paragraphs, we briefly present the basic aspects of ASUR through a simple but realistic scenario. A more detailed presentation is given in [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 4" title="Dubois E, Gray PD, Nigay L (2003) ASUR++: a design notation for mobile mixed systems. IWC Journal, Special Issue on Mobile HCI 15(4):497–520" href="/article/10.1007/s10055-005-0151-7#ref-CR4" id="ref-link-section-d34144e410">4</a>].</p><p>Let us consider a scenario of a museum. The design system must provide the visitors with information about the item in front of which the user is standing and, information about the visiting path to follow. All the information is stored in a database. The visitor is already registered into the system and has already chosen his visiting-path. Locators are able to detect the position of items and visitors in real-time, while information is displayed in a hand-held device.</p><p>In terms of ASUR, the first step consists of identifying the different ASUR components involved in this scenario. There are four kinds of components: </p><ul class="u-list-style-dash">
+                  <li>
+                    <p>A component designates an adaptor, that is, an entity bridging the gap between the digital and the physical worlds. Input adapters convey data from the physical world to the digital world: in our scenario there are two locators. Output adapters carry data from the digital to the physical world: here it consists of any device that could render information related to the items or the path to follow;</p>
+                  </li>
+                  <li>
+                    <p>S component denotes the computer system (digital world) with the database;</p>
+                  </li>
+                  <li>
+                    <p>U component represents the visitor (part of the physical world);</p>
+                  </li>
+                  <li>
+                    <p>R component stands for any physical object (part of the physical world) involved in a task as a tool (R<sub>tool</sub>) (none in the scenario) or as an object that constitutes the main focus of the task (R<sub>object</sub>): each item in the exhibition.</p>
+                  </li>
+                </ul><p>These components are not autonomous and need to communicate during the user’s task. Communication is expressed by the ASUR relations that can exist between two ASUR components. There are three kinds of relationships: </p><ul class="u-list-style-dash">
+                  <li>
+                    <p>Data exchange: an arrowed line (A→B) from the emitter component (A) to the receptor component (B) represents a transfer of data between two components;</p>
+                  </li>
+                  <li>
+                    <p>Physical activity triggering an action: a double-line arrow (A⇒B) denotes that when component A satisfies a given spatial constraint with respect to component B, data will be exchanged between two ASUR components ©, D) along a specific relationship (C→D);</p>
+                  </li>
+                  <li>
+                    <p>Physical collocation: graphically represented by a non-directed double line (A=B), it refers to a persistent physical proximity of two components.</p>
+                  </li>
+                </ul><p>In this scenario, visitors are carrying the output adapter (A<sub>out</sub>=U) on which they perceive information about the path and the item (A<sub>out</sub>path→U, A<sub>out</sub>exhib→U). The visitor is also able to observe the item (R<sub>object</sub>→U). Visitor and item are respectively located by an input adaptor (U→A<sub>in</sub>1, R<sub>object</sub>→A<sub>in</sub>2); each of them forward the location data to the computer system (A<sub>in</sub>1→S, A<sub>in</sub>2→S) which is then able to update the data rendered through the output adaptor (S→A<sub>out</sub>). Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0151-7#Fig1">1</a> gives a diagrammatic representation of this ASUR description.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0151-7/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0151-7/MediaObjects/s10055-005-0151-7fhb1.jpg?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0151-7/MediaObjects/s10055-005-0151-7fhb1.jpg" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p>ASUR description of the museum scenario</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0151-7/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div><p>So far, no technical solutions have been selected. A see-through HMD or a PDA would satisfy the description. Nevertheless the user’s interaction with these two devices is quite different. In order to provide a support to the comparison, ASUR also includes a set of characteristics for components as well as for relations. For example, information could be expressed orally or visually. The human sense required as well as the exact point where the user has to focus to perceive or provide data are two ASUR components characteristics.</p><p>In addition, ASUR relations carry representation of the data that have to be exchanged between two components. Path indications could be text or 2D/3D graphics. In this case, the representation could adopt an arbitrary point of view or a point of view linked to the visitor. Language and reference frame are two ASUR relation characteristics.</p><p>Based on these characteristics, the continuity of the interaction can be studied at two levels: cognitive and perceptual. As stated by Dubois et al. [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 3" title="Dubois E, Nigay L, Troccaz J (2002) Assessing continuity and compatibility in augmented reality systems. UAIS Journal, Special Issue on Continuous Interaction in Future Computing Systems 1(4):263–273" href="/article/10.1007/s10055-005-0151-7#ref-CR3" id="ref-link-section-d34144e518">3</a>], continuity at the perceptual level is verified if the user perceives the different representations of a given concept, directly and smoothly, i.e. the pair of ASUR component characteristics (<i>location</i>, <i>sense</i>) must be the same for every component linked to the user via an ASUR relation. On the other hand, continuity at the cognitive level is verified if the cognitive processes that are involved in the interpretation of the different perceived representations lead to a unique interpretation of the concept. The pair of ASUR relation characteristics (<i>reference frame</i>, <i>language</i>) must be the same for every relation carrying data related to a given concept and linked to the user.</p><p>The ASUR notation has been proven powerful enough to describe and differentiate between design solutions. ASUR can thus be used in the design phase to explore the potential design solutions. In Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-005-0151-7#Sec16">5</a>, we present a different use of ASUR: the ASUR descriptions have been built after the development of the prototype, as if the design team was in a re-design phase of the system described in the next section.</p></div></div></section><section aria-labelledby="Sec3"><div class="c-article-section" id="Sec3-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec3">Testbed virtual reality environment</h2><div class="c-article-section__content" id="Sec3-content"><p>In order to support experimental and notation-based evaluation of selection and manipulation of 3D objects in VREs, we adopted a testbed application inspired by a virtual chess game but without caring the game rules, i.e. using only the movement of pieces as the basic user actions. Our objective while choosing the chess game environment as a case study was to present to the user a simple and well known environment. Even if the user is not a chess player, he/she is introduced to such environment and the gestures one uses to change pieces’ positions on the chessboard. By assuming this previous knowledge, it is easier to verify which interactive option is the best for each specific task. In this section we briefly describe the application. Next section overviews the user’s experiments, more precisely reported by Nedel et al. [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 7" title="Nedel LP, Freitas CMDS, Jacob LJ, Pimenta MS (2003) Testing the use of egocentric interactive techniques in immersive virtual environments. In: Proceedings of interact 2003, pp 471–478" href="/article/10.1007/s10055-005-0151-7#ref-CR7" id="ref-link-section-d34144e547">7</a>].</p><h3 class="c-article__sub-heading" id="Sec4">The VR chess game</h3><p>The virtual environment is composed by a chessboard with 64 squares containing, initially, 32 chessmen. Beige and grey pieces available for each player are: a king, a queen, two bishops, two knights, two rooks and eight pawns. The chessboard can be displayed in two different ways. In the perspective mode, we try to simulate approximately the view angle of a player when in a real chess game, as shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0151-7#Fig2">2</a>. The bird-eye mode gives us a top view of the chessboard, simulating, in some way, a 2D interface (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0151-7#Fig3">3</a>).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0151-7/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0151-7/MediaObjects/s10055-005-0151-7fhb2.jpg?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0151-7/MediaObjects/s10055-005-0151-7fhb2.jpg" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p>Selection, movement and release of chessman using <b>a</b> the virtual hand and <b>b</b> the ray-casting technique, both with the perspective view and visual feedback</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0151-7/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0151-7/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0151-7/MediaObjects/s10055-005-0151-7fhb3.jpg?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0151-7/MediaObjects/s10055-005-0151-7fhb3.jpg" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p>Interaction using <b>a</b> the virtual hand and <b>b</b> the ray-casting technique, both with the bird-eye view</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0151-7/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div><p>In a real chess game, the movement of the pieces on the chessboard is performed with the hand. This can induce us to consider the virtual hand as the most intuitive technique for the egocentric metaphor to manipulate the chessmen in our testbed application. For this reason, we choose to implement and evaluate the virtual hand interaction technique (Figs. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0151-7#Fig2">2</a>a, <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0151-7#Fig3">3</a>a). However, compared to others, this technique was not considered a good choice in earlier experiments (Poupyrev et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 11" title="Poupyrev I, Weghorst S, Billinghurst M, Ichikawa T (1997) A framework and testbed for studying manipulation techniques for immersive VR. In: Proceedings of VRST symposium, pp 21–28" href="/article/10.1007/s10055-005-0151-7#ref-CR11" id="ref-link-section-d34144e620">11</a>). For this reason, we also implemented and evaluated the ray-casting technique (Figs.<a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0151-7#Fig2"> 2</a>b, <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0151-7#Fig3">3</a>b). As a result, we can compare the performance of the two techniques for manipulating objects located near the user.</p><p>Concerning the visual feedback when selecting and manipulating the chessmen, we have designed two different situations for evaluation: with and without visual feedback. With visual feedback, when a piece is selected, its colour changes and is automatically lifted, projecting shadow on the chessboard. The goal is to allow easy identification of the selected chessman. Figures <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0151-7#Fig2">2</a>b and <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0151-7#Fig3">3</a>b illustrate game situations with visual feedback.</p><p>As our purposes involve the analysis of user performance during the interaction tasks in VRE, the immersion sense is an important issue to be considered. We implemented stereoscopic view when using the perspective view mode. On the other hand, in the bird-eye view mode, the user has the impression he is playing a computer chess game (usually provided with 2D interface). In this case, the notion of distance of the player from the pieces is less important and the use of stereoscopy not relevant.</p><h3 class="c-article__sub-heading" id="Sec5">Settings of the application</h3><p>The features of the input and output devices used in an application affect user performance during the execution of a task [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 5" title="MacKenzie I (1995) Input devices and interaction techniques for advanced computing. In: Barfield W, Furness TA III (eds) Virtual environments and advanced interface design. Oxford University Press, New York, pp 437–470" href="/article/10.1007/s10055-005-0151-7#ref-CR5" id="ref-link-section-d34144e648">5</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 11" title="Poupyrev I, Weghorst S, Billinghurst M, Ichikawa T (1997) A framework and testbed for studying manipulation techniques for immersive VR. In: Proceedings of VRST symposium, pp 21–28" href="/article/10.1007/s10055-005-0151-7#ref-CR11" id="ref-link-section-d34144e651">11</a>]. Attributes like degrees of freedom, resolution, field of vision and maximum supported depth should be considered when comparing users’ performance.</p><p>Regarding the input devices used in the experiments, we chose a mouse for the selection and manipulation tasks of the chessmen, guiding a virtual hand. We used also a data glove that allows the recognition of user gesture from a combination of finger flexions. In the virtual chess, the data glove was used to perform tasks involving objects selection and manipulation, either combined with the virtual hand or ray-casting technique. Closing the hand is recognized as the action of selecting an object. After a well-succeeded selection, the piece is moved in the VRE while the real hand (still closed) moves, until the release in the determined position of the chessboard, which was implemented from the opening hand gesture recognition.</p><p>As this equipment does not support translation, we used the data glove combined with a magnetic motion captor device (Ascension Technology Co.), with one sensor attached to the data glove on the user wrist.</p><p>Finally, for the visualisation of chessboard in perspective view mode, we used stereoscopic glasses.</p></div></div></section><section aria-labelledby="Sec6"><div class="c-article-section" id="Sec6-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec6">Studying interaction techniques through user experiments</h2><div class="c-article-section__content" id="Sec6-content"><p>The experiments were based on: </p><ul class="u-list-style-dash">
+                  <li>
+                    <p>Five hypotheses, involving usability issues as well as user performance;</p>
+                  </li>
+                  <li>
+                    <p>A set of independent variables, that are changed to generate different conditions to compare and test the hypotheses;</p>
+                  </li>
+                  <li>
+                    <p>The dependent variables, that are objective or subjective measures taken as performance indicative or level of acceptance of the technique by the users.</p>
+                  </li>
+                </ul><h3 class="c-article__sub-heading" id="Sec7">Hypotheses and variables</h3><p>The conceived hypotheses, measured by means of objective metrics.</p>
+                  <h3 class="c-article__sub-heading">H1: the user prefers to work with a bird-eye view of the chessboard and will have difficulties to work with a perspective view</h3>
+                  <p>This hypothesis tests, in fact, if the user awareness regarding 2D interfaces will drive the option to this kind of interfaces in defeat of 3D interfaces.</p>
+                
+                  <h3 class="c-article__sub-heading">H2: the visual feedback would positively affect subjects’ performance both in selection and manipulation tasks</h3>
+                  <p>Poupyrev et al. [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 12" title="Poupyrev I, Weghorst S, Billinghurst M, Ichikawa T (1998) Egocentric object manipulation in virtual environments: empirical evaluation of interaction techniques. Computer Graphics Forum, Eurographics’98 issue, 17(3):41–52" href="/article/10.1007/s10055-005-0151-7#ref-CR12" id="ref-link-section-d34144e706">12</a>] affirmed that visual feedback does not induce user performance. The hypothesis to be tested is that with a large number of objects, as in a chess game, the visual feedback will help to distinguish and move the pieces.</p>
+                
+                  <h3 class="c-article__sub-heading">H3: the virtual hand will be the favourite interaction technique when using a data glove</h3>
+                  <p>Despite ray-casting is a good technique to “grab objects”, it presents a poor performance to move pieces in-depth. In operations where the distance between user and objects changes [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1" title="Bowman D, Hodges L (1997) An evaluation of techniques for grabbing and manipulating remote objects in immersive virtual environments. In: Proceedings of interactive 3D-graphics symposium, pp 35–38" href="/article/10.1007/s10055-005-0151-7#ref-CR1" id="ref-link-section-d34144e717">1</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 12" title="Poupyrev I, Weghorst S, Billinghurst M, Ichikawa T (1998) Egocentric object manipulation in virtual environments: empirical evaluation of interaction techniques. Computer Graphics Forum, Eurographics’98 issue, 17(3):41–52" href="/article/10.1007/s10055-005-0151-7#ref-CR12" id="ref-link-section-d34144e720">12</a>], ray-casting is not satisfactory. For this reason and because it is analogous to the interaction in real world, the virtual hand will be considered as the best option.</p>
+                
+                  <h3 class="c-article__sub-heading">H4: the mouse will be the preferred input device</h3>
+                  <p>This hypothesis evaluates the association between the user experience with the mouse to select and manipulate objects in VRE, and the preference for the mouse. We suppose that users familiarized with computers will prefer to select and manipulate the pieces on the chessboard using the mouse.</p>
+                
+                  <h3 class="c-article__sub-heading">H5: the user will have a better performance when using the ray-casting technique with the bird-eye view</h3>
+                  <p>The ray-casting technique is considered a 2D technique and the hypothesis is that the user has always a better performance when using this technique with the top view.</p>
+                <p>Regarding the variables, we considered the following independent variables to test the hypotheses: chessboard view (bird-eye or perspective view); visual feedback (indicates the use or not of the visual feedback in piece selection); device in use (mouse or data glove); interaction technique associated with the data glove (virtual hand or ray-casting).</p><p>The dependent variables used in our experiment were: interaction technique efficiency, measured by the time to perform each task; usability of the interaction technique, related to the effortless use of the technique; comfort/discomfort of the device in use (data glove or mouse), measured in relation to the arm and hand weight, dizziness and sickness; and user personal opinion about the technique and the device tested.</p><h3 class="c-article__sub-heading" id="Sec13">The experiment</h3><p>We designed a within-subjects experiment, where 29 subjects volunteered for all the tasks. Twenty-seven people stated being unfamiliar with VR equipments, like stereo glasses, data gloves or motion captors. A previous knowledge of playing chess was not required.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec14">Methodology</h4><p>Before starting the tasks, the subjects had from 5–10 min of training time. During this phase they could select and manipulate pieces on their own, using the two interaction techniques considered (virtual hand and ray-casting). The instructor explained to each user the tasks to be accomplished, the importance of the evaluation and what kind of things should be noticed during the trials: selection and manipulation with and without visual feedback; ray-casting and virtual hand techniques; the two visualization modes; and the device used. The tasks began only after the user was clearly able to identify the bishop, the rook and the knight, because motion tasks were only performed with these chessmen. Neither moving the pieces outside the chessboard nor the selection of two pieces at the same time was allowed.</p><p>The experiment consisted of pre-determined tasks. Each task involved the selection of a specific piece and its translation to another pre-defined position. Translation could be side motion (moving a piece in a horizontal way) or in-depth motion. Each subject was invited to accomplish a set of 24 tasks: 12 in-depth motion tasks and 12 side motion tasks. From these 24 tasks, 8 were performed with the mouse and 16 with the data glove. In the tasks performed with the data glove, we balanced the two interaction techniques: virtual hand and ray-casting. In 12 tasks, the chess game provided visual feedback, while in other 12, it did not. Twelve tasks were performed with a perspective view and 12 with a bird-eye view of the chessboard.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec15">Procedure, data collection and analysis</h4><p>The task order was sorted out by the computer and showed to the user through the exhibition of an instruction message on the screen, indicating the device to be used, which piece should be selected as well as which movement should be performed. The message disappeared with a mouse click or with a hand closing movement (when using the data glove). The application recorded the time to complete the selection sub-task from the moment the message disappeared. The selection sub-task ending signaled the beginning of the manipulation sub-task, resetting the time counter. After moving the piece to the correct position, the subject should release it, which stopped the manipulation time computation.</p><p>A log file recorded all the computed times, performed by subject and containing: subject name, piece selection time, manipulation time, number of clicks on escape areas (in the mouse case, when trying to select a piece), pieces wrongly selected and the number of wrong manipulations performed (leaving a piece in a position other than the one indicated in the message).</p><p>From the log files, selection mean times, manipulation mean times and errors in each case were computed. Although the cases with large standard deviation occurred because of few users, we decided not to exclude them from the samples. To verify the five hypotheses, selection and manipulation times recorded in the log files were used as input for analysis of variance (ANOVA) test. Subjective analysis was also performed with the users after the experiments.</p></div></div></section><section aria-labelledby="Sec16"><div class="c-article-section" id="Sec16-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec16">Studying the interaction techniques through a notational support</h2><div class="c-article-section__content" id="Sec16-content"><h3 class="c-article__sub-heading" id="Sec17">ASUR description of the VR-chess-game</h3><p>An ASUR description is intended to depict the user interaction with an interactive system for a given task and setting. As a consequence, one ASUR diagram is required for each setting using a different set of devices (two ASUR diagrams in our case: mouse, data-glove). In addition, choosing a different representation will generate a new set of ASUR characteristics (four situations in our case: two possible points of view and two possible feedback representations).</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec18">Components and relations</h4><p>In our settings, a user (U component) sits in front of a computer screen (A<sub>out</sub> component) and a computer system (S component) runs the application.</p><p>To move, pick and drop chessmen, the user employs either a data-glove or a mouse (A<sub>in</sub> components). As the mouse is horizontally moved on a table, the table constitutes a R<sub>tool</sub> component.</p><p>In terms of relations, the user acts on the data-glove or the mouse to move (U→A<sub>in</sub>(m)) a pointer in the VR-chess-game, pick or drop a chess-piece (U→A<sub>in</sub>(s)).</p><p>The mouse or the data-glove sends data related to a position or an action to the computer system (A<sub>in</sub>→S). The computer system calculates the data and the new information to be displayed on the screen (S→A<sub>out</sub>).</p><p>Information displayed on the screen is perceived by the user (A<sub>out</sub>→U) and is related to three main concepts: representation of the chess-pieces (A<sub>out</sub>→U(p)), representation of feedback during actions (A<sub>out</sub>→U(f)), representation of the device used to interact with the VR-chess-game (A<sub>out</sub>→U(I)).</p><p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0151-7#Fig4">4</a> shows that the main difference between the two versions is that: </p><ul class="u-list-style-dash">
+                      <li>
+                        <p>The user hand is directly within the data-glove (U=A<sub>in(glove)</sub>) and freely moving in 3D;</p>
+                      </li>
+                      <li>
+                        <p>The hand in contact with the mouse (U=A<sub>in(mouse)</sub>) is also in contact with the table (U=R<sub>tool</sub>) and the mouse lies on the table (A<sub>in(mouse)</sub>=R<sub>tool</sub>).</p>
+                      </li>
+                    </ul> <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0151-7/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0151-7/MediaObjects/s10055-005-0151-7flb4.gif?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0151-7/MediaObjects/s10055-005-0151-7flb4.gif" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p>ASUR description of the VR-chess-game settings using a data-glove (<i>left</i>) and a mouse (<i>right</i>)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0151-7/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div><p>To obtain a full ASUR description of every interaction technique developed for the VR-chess-game, ASUR characteristics of the components and relations have to be considered.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec19">Components and relations characteristics</h4><p>The first component to consider is the adaptor for output: the vision is the human sense required to perceive the information displayed; the place where the user perceives the information is the vertical screen-monitor.</p><p>The second component to consider is the input adaptor, either a data-glove or a mouse. In both cases, the human sense required to act on this device is the tactile sense and the place where the action is accomplished is the desk horizontal plane in front of the monitor.</p><p>In every setting, there are five ASUR relations that comprise the interaction: A<sub>out</sub>→U(p), A<sub>out</sub>→U(f), A<sub>out</sub>→U(I), U→A<sub>in</sub>(m), U→A<sub>in</sub>(s). All these relations represent a transfer of data and Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-005-0151-7#Tab1">1</a> summarises the characteristics explained hereafter: </p><ul class="u-list-style-dash">
+                      <li>
+                        <p>The language used to represent the relation between the screen (A<sub>out</sub>) and the user (U) is a 3D graphical representation in perspective mode and a 2D graphical representation in bird-eye mode;</p>
+                      </li>
+                      <li>
+                        <p>The reference frame to present data is always a user point of view with the perspective mode and a bird-eye point of view with the other mode;</p>
+                      </li>
+                      <li>
+                        <p>The concepts related to the relations A<sub>out</sub>→U(p) and A<sub>out</sub>→U(f) are always the chessmen and its selection, respectively;</p>
+                      </li>
+                      <li>
+                        <p>When the virtual-hand (resp. ray-casting) setting is used, the concept related to the relation A<sub>out</sub>→U(I) is always a virtual-hand (resp. ray);</p>
+                      </li>
+                      <li>
+                        <p>The language of the relation U→A<sub>in</sub>(m) is a 3D (resp. 2D) movement when using the data-glove (resp. mouse). Movements are executed in a reference frame linked to the user and the concept related to this relation is the interaction device representation;</p>
+                      </li>
+                      <li>
+                        <p>The language of the relation U→A<sub>in</sub>(s) is always a gesture, executed in a reference frame linked to the user and the concept related to this relation is the interactive device representation.</p>
+                      </li>
+                    </ul> <div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-1"><figure><figcaption class="c-article-table__figcaption"><b id="Tab1" data-test="table-caption">Table 1 Summary of ASUR relations characteristics (language, reference frame, concept) in every setting</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-005-0151-7/tables/1"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div><h3 class="c-article__sub-heading" id="Sec20">ASUR-based study of the interaction techniques</h3><p>The ASUR description of the situations (Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-005-0151-7#Sec17">5.1.1</a>) together with the characterisation of the ASUR components (Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-005-0151-7#Sec18">5.1.2</a>) leads us to a first conclusion: <i>perceptual discontinuity exists in every setting studied</i>. As shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0151-7#Fig5">5</a>, the places where the user acts (horizontal plane in front of her) and perceives information (screen vertical plane in front of her) are different.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0151-7/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0151-7/MediaObjects/s10055-005-0151-7fhb5.jpg?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0151-7/MediaObjects/s10055-005-0151-7fhb5.jpg" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p>User operating the VR chess game with a data-glove</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0151-7/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div><p>Characterising the ASUR relations (Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-005-0151-7#Sec18">5.1.2</a>) highlights several cognitive discontinuities (cf. Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0151-7#Fig6">6</a>). First, when the data-glove is used in a bird-eye view mode, the hand movements are executed in 3D in a user-centred reference frame, while their representation are limited to a 2D graphics represented with a bird-eye view. Cognitive discontinuity due to the use of different reference frames and different dimensions exists in every setting combining the data-glove and the bird-eye mode.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-6"><figure><figcaption><b id="Fig6" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 6</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0151-7/figures/6" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0151-7/MediaObjects/s10055-005-0151-7fhb6.jpg?as=webp"></source><img aria-describedby="figure-6-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0151-7/MediaObjects/s10055-005-0151-7fhb6.jpg" alt="figure6" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-6-desc"><p>Summary of the cognitive discontinuities occurring within the different settings</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0151-7/figures/6" data-track-dest="link:Figure6 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div><p>Secondly, when the mouse and the virtual hand representation are combined, the movements of the mouse are executed in 2D while their representation in the perspective mode is 3D. In the bird-eye mode, movements of the mouse are executed in a user-centred reference frame, while their representation is linked to the bird-eye view. While using the mouse together with the virtual hand, cognitive discontinuity exists in the perspective-view because of the use of different dimensions and in the bird-eye view, because of the use of different reference frame.</p><p>It is important to note that the elicitation of the perceptual or cognitive discontinuities does not predict any results in favour or disfavour of one or the other setting. Nevertheless, these might be helpful for a designer to plan user experiments or to interpret experimental results, as discussed in next section.</p></div></div></section><section aria-labelledby="Sec21"><div class="c-article-section" id="Sec21-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec21">Correlating notation-based analysis and experimental results</h2><div class="c-article-section__content" id="Sec21-content"><p>In this section, we draw a parallel between the results inferred empirically with the notation-based approach (ASUR) and the results obtained with the user experiments. According to our knowledge, no other attempts have been made so far to relate the results of notational and empirical approaches used to design and evaluate interactive techniques in VREs.</p><h3 class="c-article__sub-heading" id="Sec22">Outcome of the verification of the 1st hypothesis</h3><p>The first hypothesis assumed that the bird-eye view would be preferred and that user will have difficulties to work with the perspective view.</p><p>We observed that although 76% of the users expressed their preference for a chessboard displayed in perspective view, there is no significant difference between the two conditions for a selection involving side movement (Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-005-0151-7#Tab2">2</a>). However, for selection involving in-depth movement, the mean times with the chessboard in bird-eye view were significantly smaller (<i>F</i>=39.790; <i>p</i>&lt;0.0001) than those with the perspective view chessboard. With respect to manipulation, results are different: users showed a better performance with side movements using the perspective view (<i>F</i>=8.494; <i>p</i>&lt;0.003), while there is no significant difference for in-depth movement (see also Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-005-0151-7#Tab2">2</a>).</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-2"><figure><figcaption class="c-article-table__figcaption"><b id="Tab2" data-test="table-caption">Table 2 Significant <i>F</i>-values found for the differences in measured completion times related to the tasks performed to test hypotheses 3–5</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-005-0151-7/tables/2"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div><p>The ASUR analysis shows that with each view, discontinuities exist whether using the ray-casting interaction technique, the virtual-hand or both. Consequently, whatever could be the impact of a discontinuity in this setting; no link can be established with the results of the user experiment.</p><p>However, considering the user’s subjective evaluation, we conclude that cognitive discontinuity has negative impact on user’s preference. Furthermore, ASUR highlights that in-depth movements are better performed when there is cognitive discontinuity due to dimension and reference frame, while side movements are better performed when this discontinuity disappear. Further experimental settings could focus on the causes of these discontinuities and try to separate them in order to better differentiate performances obtained with a bird-eye or a perspective view.</p><h3 class="c-article__sub-heading" id="Sec23">Outcome of the verification of the 2nd hypothesis</h3><p>The second hypothesis aimed at verifying that visual feedback would positively affect user’s performance.</p><p>Despite the fact that the majority of users mentioned the benefits of visual feedback for improving performance, analysis of time data from the experiments indicated that there are no significant statistical differences during tasks with and without feedback. It should be noticed that times for this analysis were computed considering only this independent variable, i.e. disregarding different chessboard orientations or different devices or interaction techniques.</p><p>The ASUR analysis does not provide any complementary information. The presence of feedback should be represented by an ASUR relation in the diagrams, only when a chessman is selected. But no dynamicity is expressed with the ASUR notation. Consequently, it is not possible to differentiate between ASUR description settings with and without selection feedback.</p><h3 class="c-article__sub-heading" id="Sec24">Outcome of the verification of the 3rd hypothesis</h3><p>This hypothesis asserted that the virtual hand is the most suitable interaction technique when using the data-glove.</p><p>Statistically, this hypothesis was confirmed for in-depth movement both in selection and manipulation (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0151-7#Fig7">7</a>, Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-005-0151-7#Tab3">3</a>) agreeing with previous results reported by [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 12" title="Poupyrev I, Weghorst S, Billinghurst M, Ichikawa T (1998) Egocentric object manipulation in virtual environments: empirical evaluation of interaction techniques. Computer Graphics Forum, Eurographics’98 issue, 17(3):41–52" href="/article/10.1007/s10055-005-0151-7#ref-CR12" id="ref-link-section-d34144e1672">12</a>]. In our experiments, selection with the virtual hand is better than with ray-casting both for in-depth (<i>F</i>=17.774; <i>p</i>&lt;0.0001) and side movements (<i>F</i>=7.195; <i>p</i>&lt;0.007). Regarding manipulation, only in the tasks with in-depth movements, users had a better performance with virtual hand than with ray-casting (<i>F</i>=7.207; <i>p</i>&lt;0.007). This preference is also evident in the subjective analysis: more than 80% of the users classified the virtual hand as efficient or very efficient.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-7"><figure><figcaption><b id="Fig7" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 7</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0151-7/figures/7" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0151-7/MediaObjects/s10055-005-0151-7fhb7.jpg?as=webp"></source><img aria-describedby="figure-7-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0151-7/MediaObjects/s10055-005-0151-7fhb7.jpg" alt="figure7" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-7-desc"><p>Task completion times for selection (<i>1</i> side movements and <i>2</i> in-depth movements) and manipulation tasks (<i>4</i> side movements and <i>5</i> in-depth movements)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0151-7/figures/7" data-track-dest="link:Figure7 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-3"><figure><figcaption class="c-article-table__figcaption"><b id="Tab3" data-test="table-caption">Table 3 Performance (in seconds) for selecting and manipulation tasks completion</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-005-0151-7/tables/3"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div><p>For this specific hypothesis, ASUR does not provide more information than the experimental results because the data-glove used in conjunction with the ray-casting or the virtual hand leads to exactly the same discontinuities with either of the view modes.</p><h3 class="c-article__sub-heading" id="Sec25">Outcome of the verification of the 4th hypothesis</h3><p>This hypothesis stated that the mouse would be the preferred device.</p><p>Statistically, this hypothesis has been confirmed, both in the subjective evaluation and in the performance results (see Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-005-0151-7#Tab3">3</a>). The selection completion times (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0151-7#Fig8">8</a>) using the mouse were significantly smaller than those recorded with the data glove both for in-depth (<i>F</i>=106.622; <i>p</i>&lt;0.00001) and side movements (<i>F</i>=29.051; <i>p</i>&lt;0.00001). Similar results were obtained for manipulation completion times for in-depth (<i>F</i>=49.601; <i>p</i>&lt;0.00001) and side movements (<i>F</i>=16.378; <i>p</i>&lt;0.00001).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-8"><figure><figcaption><b id="Fig8" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 8</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0151-7/figures/8" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0151-7/MediaObjects/s10055-005-0151-7fhb8.jpg?as=webp"></source><img aria-describedby="figure-8-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0151-7/MediaObjects/s10055-005-0151-7fhb8.jpg" alt="figure8" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-8-desc"><p>Task completion times for selection (<i>1</i> and <i>2</i>) and manipulation (<i>4</i> and <i>5</i>)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0151-7/figures/8" data-track-dest="link:Figure8 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div><p>With the data-glove, cognitive discontinuity due to the presence of different dimensions and reference frames is present in two settings. With the mouse, cognitive discontinuity also exists but is due either to the presence of different dimensions or different reference frame. Reasons for cognitive discontinuities are not present at the same time when the mouse is used. When correlating the ASUR analysis with the experimental results, it appears that augmenting the number of simultaneous discontinuity factors has a negative impact on the usability.</p><p>On top of this conclusion, the ASUR description of the two settings highlights the presence of physical constraints when the mouse is used (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0151-7#Fig4">4</a>). The absence of physical constraints seems to be another potential cause for reducing the usability.</p><h3 class="c-article__sub-heading" id="Sec26">Outcome of the verification of the 5th hypothesis</h3><p>The last hypothesis considered that the ray-casting technique would lead to better results when used in conjunction with the bird-eye view. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0151-7#Fig9">9</a> shows the time results.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-9"><figure><figcaption><b id="Fig9" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 9</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0151-7/figures/9" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0151-7/MediaObjects/s10055-005-0151-7fhb9.jpg?as=webp"></source><img aria-describedby="figure-9-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0151-7/MediaObjects/s10055-005-0151-7fhb9.jpg" alt="figure9" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-9-desc"><p>Task completion times for selection (<i>1</i>and <i>2</i>) and manipulation (<i>4</i> and <i>5</i>) performed with ray-casting</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0151-7/figures/9" data-track-dest="link:Figure9 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div><p>Statistically, this hypothesis has been confirmed in all selection tasks (see Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-005-0151-7#Tab3">3</a>), the mean times with the bird-eye view being significantly smaller than those with the perspective view of the chessboard (<i>F</i>=31.352, <i>p</i>&lt;0.00001, for in-depth movements; <i>F</i>=7.718, <i>p</i>&lt;0.006, for side movements). However, when we observe the results of manipulation tasks, only the side movements show significant differences favouring the perspective view chessboard (<i>F</i>=4.754; <i>p</i>&lt;0.03), i.e. there are no differences between the two conditions when tasks involve in-depth movements. It should be noticed that these results do not disagree with those for the third hypothesis, because in the bird-eye view chessboard in-depth movements are obtained with vertical movements of the virtual cursor, and not really with movements along a <i>z</i>-axis.</p><p>The ASUR analysis of the settings using the ray-casting leads to the identification of discontinuities only with the bird-eye view. Comparing the ASUR analysis with the experimental results shows that, in this particular case, the presence of cognitive discontinuity might be a potential cause of usability problem. This was already the case of in-depth movements performed in a bird-eye mode (hypothesis 1).</p><h3 class="c-article__sub-heading" id="Sec27">Complementary ASUR analysis</h3><p>As explained in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-005-0151-7#Sec20">5.2</a>, perceptual discontinuity exists in every setting tested during the experimentation. Projecting the data on the desk or mapping the motion plane of the data-glove to the display plane would address this discontinuity at a perceptual level. In one of these new environments, only cognitive discontinuity would remain. Clearer links between the ASUR-based and the statistical analyses and more accurate impacts of the different independent variables onto the usability of the system might be highlighted.</p></div></div></section><section aria-labelledby="Sec28"><div class="c-article-section" id="Sec28-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec28">Conclusions and perspectives</h2><div class="c-article-section__content" id="Sec28-content"><p>In this paper, we compared the results of user experiments with the analysis of the ASUR description of six different interaction settings and showed that the use of a notation provides insights into the usability of the system and helps to design better user experiments.</p><p>The ASUR notation was introduced recently [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 4" title="Dubois E, Gray PD, Nigay L (2003) ASUR++: a design notation for mobile mixed systems. IWC Journal, Special Issue on Mobile HCI 15(4):497–520" href="/article/10.1007/s10055-005-0151-7#ref-CR4" id="ref-link-section-d34144e2058">4</a>] and, in this work, the ASUR analysis has been conducted after users experiment. Nevertheless, the results presented herein are encouraging: parallels can be drawn between several significant statistical differences and differences identified with the ASUR analysis; potential usability issues are raised and may help in the defining new experimental settings. Despite some lack regarding the expression of different interaction aspects with ASUR, this work let us envision the possibility to use this notation as a support for the design and predictive usability study of VREs, by helping the designer to choose a more appropriate solution as well as the usability specialist to identify relevant hypotheses. As a consequence, the use of ASUR-based approach when designing and evaluating a VRE is beneficial to reduce the amount of costly user experiments, which are usually required to reach an appropriate interaction technique solution.</p><p>Exploration and structuring of the space of interaction techniques used in VRE is required to pinpoint relevant characteristics of the interaction in these environments. As a result, more expressiveness will be given to the ASUR notation, especially the S component, which is currently representing the whole computer system. Indeed, the aggregation of all the digital entities in a unique component does not allow any differentiation between the application kernel and the digital interaction elements. In addition, developing a systematic approach is required to help designers to methodologically consider alternative solutions in the early stages of system design. Finally, in order to help the designer, ASUR-based design patterns of interaction techniques have to be specified: a designer would thus have a methodology to explore every possible solution and would use patterns as a set of heuristics to choose among them the best solution according to the interaction situation being planned.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bowman D, Hodges L (1997) An evaluation of techniques for grabbing and manipulating remote objects in immersiv" /><span class="c-article-references__counter">1.</span><p class="c-article-references__text" id="ref-CR1">Bowman D, Hodges L (1997) An evaluation of techniques for grabbing and manipulating remote objects in immersive virtual environments. In: Proceedings of interactive 3D-graphics symposium, pp 35–38</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bowman D, Johnson DB, Hodges LF (1999) Testbed evaluation of virtual environments interaction techniques. In: " /><span class="c-article-references__counter">2.</span><p class="c-article-references__text" id="ref-CR2">Bowman D, Johnson DB, Hodges LF (1999) Testbed evaluation of virtual environments interaction techniques. In: Proceedings of VRST symposium, pp 26–33</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Dubois E, Nigay L, Troccaz J (2002) Assessing continuity and compatibility in augmented reality systems. UAIS " /><span class="c-article-references__counter">3.</span><p class="c-article-references__text" id="ref-CR3">Dubois E, Nigay L, Troccaz J (2002) Assessing continuity and compatibility in augmented reality systems. UAIS Journal, Special Issue on Continuous Interaction in Future Computing Systems 1(4):263–273</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="E. Dubois, PD. Gray, L. Nigay, " /><meta itemprop="datePublished" content="2003" /><meta itemprop="headline" content="Dubois E, Gray PD, Nigay L (2003) ASUR++: a design notation for mobile mixed systems. IWC Journal, Special Iss" /><span class="c-article-references__counter">4.</span><p class="c-article-references__text" id="ref-CR4">Dubois E, Gray PD, Nigay L (2003) ASUR++: a design notation for mobile mixed systems. IWC Journal, Special Issue on Mobile HCI 15(4):497–520</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 4 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=ASUR%2B%2B%3A%20a%20design%20notation%20for%20mobile%20mixed%20systems&amp;journal=IWC%20Journal%2C%20Special%20Issue%20on%20Mobile%20HCI&amp;volume=15&amp;issue=4&amp;pages=497-520&amp;publication_year=2003&amp;author=Dubois%2CE&amp;author=Gray%2CPD&amp;author=Nigay%2CL">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="I. MacKenzie, " /><meta itemprop="datePublished" content="1995" /><meta itemprop="headline" content="MacKenzie I (1995) Input devices and interaction techniques for advanced computing. In: Barfield W, Furness TA" /><span class="c-article-references__counter">5.</span><p class="c-article-references__text" id="ref-CR5">MacKenzie I (1995) Input devices and interaction techniques for advanced computing. In: Barfield W, Furness TA III (eds) Virtual environments and advanced interface design. Oxford University Press, New York, pp 437–470</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 5 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Virtual%20environments%20and%20advanced%20interface%20design&amp;pages=437-470&amp;publication_year=1995&amp;author=MacKenzie%2CI">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Markopoulos P, Marijnissen P (2000) UML as a representation for interaction designs. In: Proceedings of OZCHI " /><span class="c-article-references__counter">6.</span><p class="c-article-references__text" id="ref-CR6">Markopoulos P, Marijnissen P (2000) UML as a representation for interaction designs. In: Proceedings of OZCHI 2000, pp 240–249</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Nedel LP, Freitas CMDS, Jacob LJ, Pimenta MS (2003) Testing the use of egocentric interactive techniques in im" /><span class="c-article-references__counter">7.</span><p class="c-article-references__text" id="ref-CR7">Nedel LP, Freitas CMDS, Jacob LJ, Pimenta MS (2003) Testing the use of egocentric interactive techniques in immersive virtual environments. In: Proceedings of interact 2003, pp 471–478</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Nielsen J (1993) Usability engineering. Academic Press/AP Professional, Cambridge, ISBN 0125184069" /><span class="c-article-references__counter">8.</span><p class="c-article-references__text" id="ref-CR8">Nielsen J (1993) Usability engineering. Academic Press/AP Professional, Cambridge, ISBN 0125184069</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="P. Palanque, R. Bastide, " /><meta itemprop="datePublished" content="1997" /><meta itemprop="headline" content="Palanque P, Bastide R (1997) Synergistic modelling of tasks, users and systems using formal specification tech" /><span class="c-article-references__counter">9.</span><p class="c-article-references__text" id="ref-CR9">Palanque P, Bastide R (1997) Synergistic modelling of tasks, users and systems using formal specification techniques. Interact Comput 9(2):129–153</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 9 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Synergistic%20modelling%20of%20tasks%2C%20users%20and%20systems%20using%20formal%20specification%20techniques&amp;journal=Interact%20Comput&amp;volume=9&amp;issue=2&amp;pages=129-153&amp;publication_year=1997&amp;author=Palanque%2CP&amp;author=Bastide%2CR">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Paterno F, Mancini, Meniconi (1997) ConcuTask Tree: a diagrammatic notation for specifying task models. In: Pr" /><span class="c-article-references__counter">10.</span><p class="c-article-references__text" id="ref-CR10">Paterno F, Mancini, Meniconi (1997) ConcuTask Tree: a diagrammatic notation for specifying task models. In: Proceedings of interact’97, pp 362–369</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Poupyrev I, Weghorst S, Billinghurst M, Ichikawa T (1997) A framework and testbed for studying manipulation te" /><span class="c-article-references__counter">11.</span><p class="c-article-references__text" id="ref-CR11">Poupyrev I, Weghorst S, Billinghurst M, Ichikawa T (1997) A framework and testbed for studying manipulation techniques for immersive VR. In: Proceedings of VRST symposium, pp 21–28</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="I. Poupyrev, S. Weghorst, M. Billinghurst, T. Ichikawa, " /><meta itemprop="datePublished" content="1998" /><meta itemprop="headline" content="Poupyrev I, Weghorst S, Billinghurst M, Ichikawa T (1998) Egocentric object manipulation in virtual environmen" /><span class="c-article-references__counter">12.</span><p class="c-article-references__text" id="ref-CR12">Poupyrev I, Weghorst S, Billinghurst M, Ichikawa T (1998) Egocentric object manipulation in virtual environments: empirical evaluation of interaction techniques. Computer Graphics Forum, Eurographics’98 issue, 17(3):41–52</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 12 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Egocentric%20object%20manipulation%20in%20virtual%20environments%3A%20empirical%20evaluation%20of%20interaction%20techniques&amp;journal=Computer%20Graphics%20Forum%2C%20Eurographics%E2%80%9998%20issue&amp;volume=17&amp;issue=3&amp;pages=41-52&amp;publication_year=1998&amp;author=Poupyrev%2CI&amp;author=Weghorst%2CS&amp;author=Billinghurst%2CM&amp;author=Ichikawa%2CT">
+                    Google Scholar</a> 
+                </p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-005-0151-7-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Ack1">Acknowledgments</h2><div class="c-article-section__content" id="Ack1-content"><p>We thank the participation of II-UFRGS members as subjects in our experiments and Caroline Oliva, for the implementation. We also acknowledge CAPES/COFECUB (project number 399/02), CNPq (Brazilian Council for Research and Development) and SESU-MEC (Brazilian Ministry of Education) for the financial support.</p></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">IRIT – LIIHS, 118, route de Narbonne, 31062, TOULOUSE Cedex 4, France</p><p class="c-article-author-affiliation__authors-list">Emmanuel Dubois</p></li><li id="Aff2"><p class="c-article-author-affiliation__address">Computer Science Institute, Federal University of Rio Grande do Sul (UFRGS), Caixa Postal 15064 CEP, 91501-970, Porto Alegre, RS, Brazil</p><p class="c-article-author-affiliation__authors-list">Luciana P. Nedel, Carla M. Dal Sasso. Freitas &amp; Liliane Jacon</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Emmanuel-Dubois"><span class="c-article-authors-search__title u-h3 js-search-name">Emmanuel Dubois</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Emmanuel+Dubois&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Emmanuel+Dubois" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Emmanuel+Dubois%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Luciana_P_-Nedel"><span class="c-article-authors-search__title u-h3 js-search-name">Luciana P. Nedel</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Luciana P.+Nedel&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Luciana P.+Nedel" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Luciana P.+Nedel%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Carla_M__Dal_Sasso_-Freitas"><span class="c-article-authors-search__title u-h3 js-search-name">Carla M. Dal Sasso. Freitas</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Carla M. Dal Sasso.+Freitas&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Carla M. Dal Sasso.+Freitas" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Carla M. Dal Sasso.+Freitas%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Liliane-Jacon"><span class="c-article-authors-search__title u-h3 js-search-name">Liliane Jacon</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Liliane+Jacon&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Liliane+Jacon" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Liliane+Jacon%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-005-0151-7/email/correspondent/c1/new">Emmanuel Dubois</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=Beyond%20user%20experimentation%3A%20notational-based%20systematic%20evaluation%20of%20interaction%20techniques%20in%20virtual%20reality%20environments&amp;author=Emmanuel%20Dubois%20et%20al&amp;contentID=10.1007%2Fs10055-005-0151-7&amp;publication=1359-4338&amp;publicationDate=2005-02-23&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Dubois, E., Nedel, L.P., Freitas, C.M.D.S. <i>et al.</i> Beyond user experimentation: notational-based systematic evaluation of interaction techniques in virtual reality environments.
+                    <i>Virtual Reality</i> <b>8, </b>118–128 (2004). https://doi.org/10.1007/s10055-005-0151-7</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-005-0151-7.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2003-12-12">12 December 2003</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2004-12-21">21 December 2004</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2005-02-23">23 February 2005</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2004-06">June 2004</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-005-0151-7" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-005-0151-7</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Mixed reality</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Virtual reality</span></li><li class="c-article-subject-list__subject"><span itemprop="about">3D interaction</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Interaction design notation</span></li><li class="c-article-subject-list__subject"><span itemprop="about">User experimentation</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-005-0151-7.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=151;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

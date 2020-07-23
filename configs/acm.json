@@ -1,0 +1,37 @@
+{
+    "name": "acm",
+    "urls": {
+        "list": {
+            "_url": "http://localhost:8000/acm",
+            "url": "https://dl.acm.org/action/doSearch",
+            "per-page": 500,
+            "params": {
+                "page": "startPage",
+                "per-page": "pageSize"
+            }
+        },
+        "paper": {
+            "_url": "http://localhost:8000/acm/{identifier}",
+            "url": "https://dl.acm.org/doi/{identifier}"
+        },
+        "pdf": "https://dl.acm.org/doi/pdf/{identifier}"
+    },
+    "sleep_between_requests": 0.1,
+    "regex": {
+        "list": {
+            "identifiers": "<span class=\"hlFld-Title\"><a href=\"\/doi\/([^\"]+)\">",
+            "total_number_of_results": "<span class=\"result__count\">([^\\s]+) Results</span>"
+        },
+        "paper": {
+            "authors": "<div class=\"author-data\">[\\s\\S]+?<\/div>",
+            "keywords": "<li><a href=\"\/keyword\/[^\"]+\" title=\"[^\"]+\" class=\"badge-type\">([^<]+)<\/a><\/li>",
+            "title": "<h1 class=\"citation__title\">([^<]+)<\/h1>",
+            "abstract": "<div class=\"abstractSection abstractInFull\"><p>[\\s\\S]+?<\/p><\/div>",
+            "publication_date": "<div class=\"section__separator\"><h3 class=\"left-bordered-title\">Publication History<\/h3><div class=\"section__content\"><ul class=\"rlist\"><li>Published: ([^<]+)<\/li><\/ul><\/div><\/div>",
+            "published_in": "<div class=\"book-meta\">([^<]+)<\/div>",
+            "citations": "<span class=\"citation\"><i class=\"icon-quote\"><\/i><span>(\\d+)<\/span>",
+            "isbn": "<div class=\"flex-container\"><span class=\"bold\">ISBN:<\/span><span class=\"space\">([^<]+)<\/span><\/div>",
+            "doi": "<div class=\"flex-container\"><span class=\"bold\">DOI:<\/span><span class=\"space\">([^<]+)<\/span><\/div>"
+        }
+    }
+}

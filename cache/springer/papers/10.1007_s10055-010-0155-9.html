@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="Prototyping flexible touch screen devices using collocated haptic-grap"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="Rapid advances in flexible display technologies and the benefits that they provide are promising enough to consider them for futuristic mobile devices. Current prototyping methods lack facilities..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/16/1.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="Prototyping flexible touch screen devices using collocated haptic-graphic elastic-object deformation on the GPU"/>
+
+    <meta name="dc.source" content="Virtual Reality 2010 16:1"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2010-02-20"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2010 Springer-Verlag London Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="Rapid advances in flexible display technologies and the benefits that they provide are promising enough to consider them for futuristic mobile devices. Current prototyping methods lack facilities to simulate such flexible touch screen displays and the interaction with them. In this paper, we present a technique that provides product developers a tool to interactively simulate products featuring flexible displays, using Augmented Reality and Haptics. This GPU-based algorithm is computationally inexpensive and efficient to deform a polygonal mesh in real time while maintaining an acceptable haptic feedback. The implementation of the algorithm has been found to be successful when applied to a variety of product simulations. This simulation tool can enhance or even replace traditional prototyping and facilitate testing of the prototype at various stages of the design cycle."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2010-02-20"/>
+
+    <meta name="prism.volume" content="16"/>
+
+    <meta name="prism.number" content="1"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="33"/>
+
+    <meta name="prism.endingPage" content="43"/>
+
+    <meta name="prism.copyright" content="2010 Springer-Verlag London Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-010-0155-9"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-010-0155-9"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-010-0155-9.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-010-0155-9"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="Prototyping flexible touch screen devices using collocated haptic-graphic elastic-object deformation on the GPU"/>
+
+    <meta name="citation_volume" content="16"/>
+
+    <meta name="citation_issue" content="1"/>
+
+    <meta name="citation_publication_date" content="2012/03"/>
+
+    <meta name="citation_online_date" content="2010/02/20"/>
+
+    <meta name="citation_firstpage" content="33"/>
+
+    <meta name="citation_lastpage" content="43"/>
+
+    <meta name="citation_article_type" content="Original Article"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-010-0155-9"/>
+
+    <meta name="DOI" content="10.1007/s10055-010-0155-9"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-010-0155-9"/>
+
+    <meta name="description" content="Rapid advances in flexible display technologies and the benefits that they provide are promising enough to consider them for futuristic mobile devices. Cur"/>
+
+    <meta name="dc.creator" content="Arun Rakesh Yoganandan"/>
+
+    <meta name="dc.creator" content="P. Pat Banerjee"/>
+
+    <meta name="dc.creator" content="Cristian J. Luciano"/>
+
+    <meta name="dc.creator" content="Silvio H. R. Rizzi"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comput Ind; citation_title=Rapid product development&#8211;an overview; citation_author=HJ Bullinger, J Warschat, D Fischer; citation_volume=42; citation_issue=2&#8211;3; citation_publication_date=2000; citation_pages=99-108; citation_doi=10.1016/S0166-3615(99)00064-0; citation_id=CR1"/>
+
+    <meta name="citation_reference" content="De Pascale M, De Pascale G, Prattichizzo D, Barbagli F (2004) A GPU-friendly method for haptic and graphic rendering of deformable objects. In: Proceedings of Eurohaptics, pp 44&#8211;51"/>
+
+    <meta name="citation_reference" content="De Pascale M, Sarcuni G, Prattichizzo D (2005) Real-time soft-finger grasping of physically based quasi-rigid objects. In: Proceedings of world haptics conference, pp 545&#8211;546"/>
+
+    <meta name="citation_reference" content="Eink (2005) October press release 
+                    http://www.eink.com/press/releases/pr87.html
+                    
+                  
+                "/>
+
+    <meta name="citation_reference" content="Faeth AJ (2009) Expressive cutting, deforming, and painting of three-dimensional digital shapes through asymmetric bimanual haptic manipulation. MS thesis, Iowa State University"/>
+
+    <meta name="citation_reference" content="Fujitsu (2005) July press release, 
+                    http://www.fujitsu.com/global/news/pr/archives/month/2005/20050713-01.html
+                    
+                  
+                "/>
+
+    <meta name="citation_reference" content="Georgii J, Westermann R (2005) Interactive simulation and rendering of heterogeneous deformable bodies. In: Proceedings of VMV"/>
+
+    <meta name="citation_reference" content="Jo D, Yang U, Son W (2007) Design evaluation using virtual reality based prototypes: towards realistic visualization and operations. In: ACM international conference proceeding series, vol 309, proceedings of the 9th international conference on Human computer interaction with mobile devices and services"/>
+
+    <meta name="citation_reference" content="Kerttula M, Salmela M, Heikkinen M (1997) Virtual reality prototyping&#8212;&#8220;a framework for the development of electronics and telecommunication products&#8221;. In: Proceedings of the 8th international workshop on rapid system prototyping (RSP&#8216;97) shortening the path from specification to prototype, p 2, June 1997"/>
+
+    <meta name="citation_reference" content="Krause FL, Neumann J (2001) Haptic interaction with non-rigid materials for assembly and dissassembly in product development. Institute for Machine Tools and Factory Management IWF, Technical University Berlin, Germany, CIRP annals&#8212;manufacturing technology, 50(1):81&#8211;84"/>
+
+    <meta name="citation_reference" content="Krau&#223; M, Krannich D (2006) Ripcord: rapid interface prototyping for cordless devices. In: ACM international conference proceeding series, vol 159, proceedings of the 8th conference on human-computer interaction with mobile devices and services"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comput Graph Forum; citation_title=Soft object modelling with generalised chainmail&#8212;extending the boundaries of web-based graphics; citation_author=Y Li, K Brodlie; citation_volume=22; citation_issue=4; citation_publication_date=2003; citation_pages=717-727; citation_doi=10.1111/j.1467-8659.2003.00719.x; citation_id=CR12"/>
+
+    <meta name="citation_reference" content="Liukkunen K, Etel&#228;per&#228; M, Oivo M, Soininen J, Pellikka M (2008) Virtual prototypes in developing mobile software applications and devices. Product-Focused Software Process Improvement. Springer, Berlin, pp 174&#8211;188"/>
+
+    <meta name="citation_reference" content="Luciano C, Banerjee P, Florea L, Dawe G (2005) Design of the Immersivetouch&#8482;: a high-performance haptic augmented virtual reality system. In: 11th international conference on human-computer interaction, Las Vegas, NV"/>
+
+    <meta name="citation_reference" content="Luciano CJ, Banerjee PP, Rizzi SHR (2007) GPU-based elastic-object deformation for enhancement of existing haptic applications, Automation Science and Engineering. CASE 2007. IEEE international conference on vol, Issue, 22&#8211;25 September 2007, pp 146&#8211;151"/>
+
+    <meta name="citation_reference" content="Mosegaard J, S&#248;rensen TS (2005) GPU accelerated surgical simulators for complex morphology. In: Proceedings of IEEE virtual reality, pp 147&#8211;153"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Interactions; citation_title=Interaction design prototyping of communicator devices: towards meeting the hardware&#8211;software challenge; citation_author=C Pering; citation_volume=9; citation_issue=6; citation_publication_date=2002; citation_pages=36-46; citation_doi=10.1145/581951.581952; citation_id=CR17"/>
+
+    <meta name="citation_reference" content="S&#225; M, Carri&#231;o L (2006) Low-fi prototyping for mobile devices, CHI &#8216;06 extended abstracts on Human factors in computing systems, April 2006"/>
+
+    <meta name="citation_reference" content="citation_journal_title=LNCS; citation_title=Biomechanical simulation of the vitreous humor in the eye using an Enhanced ChainMail Algorithm; citation_author=MA Schill, SFF Gibson, HJ Bender, R Manner; citation_volume=1496; citation_publication_date=1998; citation_pages=679-687; citation_id=CR19"/>
+
+    <meta name="citation_reference" content="Schwesig C, Poupyrev I, Mori E (2003) Gummi: user interface for deformable computers. In: Conference on human factors in computing systems, CHI &#8216;03 extended abstracts on Human factors in computing systems, Ft. Lauderdale, Florida, USA, pp 954&#8211;955"/>
+
+    <meta name="citation_reference" content="S&#248;rensen TS, Mosegaard J (2006) Haptic feedback for the GPU-based surgical simulator. In: Proceedings of medicine meets virtual reality 14, pp 523&#8211;528"/>
+
+    <meta name="citation_reference" content="TOSHIBA (2002) Press release 
+                    http://www.toshiba.co.jp/about/press/2002_05/pr2101.htm
+                    
+                  
+                "/>
+
+    <meta name="citation_reference" content="citation_journal_title=J Comput Inf Sci Eng; citation_title=Definition and review of virtual prototyping, transactions of the ASME; citation_author=G Wang; citation_volume=2; citation_issue=3; citation_publication_date=2002; citation_pages=232-236; citation_doi=10.1115/1.1526508; citation_id=CR23"/>
+
+    <meta name="citation_reference" content="Ye J, Badiyani S, Raja V, Schlegel T (2007) Applications of virtual reality in product design evaluation. Human-Computer Interaction. HCI applications and services. Springer, Berlin, vol 4553/2007, August 2007, pp 1190&#8211;1199"/>
+
+    <meta name="citation_reference" content="Yoganandan AR, Banerjee PP, Luciano CJ (2009) Applying augmented reality and haptics to evaluate dynamic prototypes of mobile devices. Workshop on cloud-mobile convergence for virtual reality (CMCVR&#8216;09), March 2009"/>
+
+    <meta name="citation_author" content="Arun Rakesh Yoganandan"/>
+
+    <meta name="citation_author_institution" content="Industrial Virtual Reality Institute, The Department of Mechanical and Industrial Engineering, University of Illinois at Chicago, Chicago, USA"/>
+
+    <meta name="citation_author" content="P. Pat Banerjee"/>
+
+    <meta name="citation_author_email" content="banerjee@uic.edu"/>
+
+    <meta name="citation_author_institution" content="Industrial Virtual Reality Institute, The Department of Mechanical and Industrial Engineering, University of Illinois at Chicago, Chicago, USA"/>
+
+    <meta name="citation_author" content="Cristian J. Luciano"/>
+
+    <meta name="citation_author_institution" content="Industrial Virtual Reality Institute, The Department of Mechanical and Industrial Engineering, University of Illinois at Chicago, Chicago, USA"/>
+
+    <meta name="citation_author" content="Silvio H. R. Rizzi"/>
+
+    <meta name="citation_author_institution" content="Industrial Virtual Reality Institute, The Department of Mechanical and Industrial Engineering, University of Illinois at Chicago, Chicago, USA"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-010-0155-9&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2012/03/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-010-0155-9"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="Prototyping flexible touch screen devices using collocated haptic-graphic elastic-object deformation on the GPU"/>
+        <meta property="og:description" content="Rapid advances in flexible display technologies and the benefits that they provide are promising enough to consider them for futuristic mobile devices. Current prototyping methods lack facilities to simulate such flexible touch screen displays and the interaction with them. In this paper, we present a technique that provides product developers a tool to interactively simulate products featuring flexible displays, using Augmented Reality and Haptics. This GPU-based algorithm is computationally inexpensive and efficient to deform a polygonal mesh in real time while maintaining an acceptable haptic feedback. The implementation of the algorithm has been found to be successful when applied to a variety of product simulations. This simulation tool can enhance or even replace traditional prototyping and facilitate testing of the prototype at various stages of the design cycle."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>Prototyping flexible touch screen devices using collocated haptic-graphic elastic-object deformation on the GPU | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-010-0155-9","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Virtual reality prototyping, Flexible displays, Product simulation, Haptics","kwrd":["Virtual_reality_prototyping","Flexible_displays","Product_simulation","Haptics"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-010-0155-9","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-010-0155-9","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=155;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-010-0155-9">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            Prototyping flexible touch screen devices using collocated haptic-graphic elastic-object deformation on the GPU
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-010-0155-9.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-010-0155-9.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">Original Article</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2010-02-20" itemprop="datePublished">20 February 2010</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">Prototyping flexible touch screen devices using collocated haptic-graphic elastic-object deformation on the GPU</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Arun_Rakesh-Yoganandan" data-author-popup="auth-Arun_Rakesh-Yoganandan">Arun Rakesh Yoganandan</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of Illinois at Chicago" /><meta itemprop="address" content="grid.185648.6, 0000000121750319, Industrial Virtual Reality Institute, The Department of Mechanical and Industrial Engineering, University of Illinois at Chicago, Chicago, IL, USA" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-P_-Pat_Banerjee" data-author-popup="auth-P_-Pat_Banerjee" data-corresp-id="c1">P. Pat Banerjee<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of Illinois at Chicago" /><meta itemprop="address" content="grid.185648.6, 0000000121750319, Industrial Virtual Reality Institute, The Department of Mechanical and Industrial Engineering, University of Illinois at Chicago, Chicago, IL, USA" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Cristian_J_-Luciano" data-author-popup="auth-Cristian_J_-Luciano">Cristian J. Luciano</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of Illinois at Chicago" /><meta itemprop="address" content="grid.185648.6, 0000000121750319, Industrial Virtual Reality Institute, The Department of Mechanical and Industrial Engineering, University of Illinois at Chicago, Chicago, IL, USA" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Silvio_H__R_-Rizzi" data-author-popup="auth-Silvio_H__R_-Rizzi">Silvio H. R. Rizzi</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of Illinois at Chicago" /><meta itemprop="address" content="grid.185648.6, 0000000121750319, Industrial Virtual Reality Institute, The Department of Mechanical and Industrial Engineering, University of Illinois at Chicago, Chicago, IL, USA" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 16</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">33</span>–<span itemprop="pageEnd">43</span>(<span data-test="article-publication-year">2012</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">352 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">1 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                    
+                        <li class="c-article-metrics-bar__item">
+                            <p class="c-article-metrics-bar__count">0 <span class="c-article-metrics-bar__label">Altmetric</span></p>
+                        </li>
+                    
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-010-0155-9/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>Rapid advances in flexible display technologies and the benefits that they provide are promising enough to consider them for futuristic mobile devices. Current prototyping methods lack facilities to simulate such flexible touch screen displays and the interaction with them. In this paper, we present a technique that provides product developers a tool to interactively simulate products featuring flexible displays, using Augmented Reality and Haptics. This GPU-based algorithm is computationally inexpensive and efficient to deform a polygonal mesh in real time while maintaining an acceptable haptic feedback. The implementation of the algorithm has been found to be successful when applied to a variety of product simulations. This simulation tool can enhance or even replace traditional prototyping and facilitate testing of the prototype at various stages of the design cycle.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Introduction</h2><div class="c-article-section__content" id="Sec1-content"><p>Mobile device manufacturers have for long been fantasizing flexible displays in their products. Especially, the wearable computing industry has shown more interest in this than anyone else. Science fiction has also played its role in making this idea trendy and very attractive. With materials and fabrication techniques becoming more advanced and cheaper, we are getting closer to this dream day by day. Current research on flexible displays has initiated many possibilities of such a new technology.</p><p>Toshiba has already announced its large flexible active-matrix TFT LCD (Toshiba <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="TOSHIBA (2002) Press release &#xA;                    http://www.toshiba.co.jp/about/press/2002_05/pr2101.htm&#xA;                    &#xA;                  &#xA;                " href="/article/10.1007/s10055-010-0155-9#ref-CR22" id="ref-link-section-d26886e359">2002</a>, press release). Yet another set of companies like Xerox and LG Phillips have invested in the electronic paper and E-ink technology to build prototypes of flexible displays (E-ink <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Eink (2005) October press release &#xA;                    http://www.eink.com/press/releases/pr87.html&#xA;                    &#xA;                  &#xA;                " href="/article/10.1007/s10055-010-0155-9#ref-CR4" id="ref-link-section-d26886e362">2005</a>, press release). Sony’s prototype of a flexible OLED display has also been exhibited. Fujitsu has built a working prototype of a laptop PC, which features flexible displays (Fujitsu <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Fujitsu (2005) July press release, &#xA;                    http://www.fujitsu.com/global/news/pr/archives/month/2005/20050713-01.html&#xA;                    &#xA;                  &#xA;                " href="/article/10.1007/s10055-010-0155-9#ref-CR6" id="ref-link-section-d26886e365">2005</a>, press release; Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0155-9#Fig1">1</a>). Readius has taken it to the next level with its eReaders featuring rollable displays. In fact, Schwesig et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Schwesig C, Poupyrev I, Mori E (2003) Gummi: user interface for deformable computers. In: Conference on human factors in computing systems, CHI ‘03 extended abstracts on Human factors in computing systems, Ft. Lauderdale, Florida, USA, pp 954–955" href="/article/10.1007/s10055-010-0155-9#ref-CR20" id="ref-link-section-d26886e371">2003</a>) have already started studying and developing interaction techniques like bending and folding at corners, for this new input system.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0155-9/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0155-9/MediaObjects/10055_2010_155_Fig1_HTML.jpg?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0155-9/MediaObjects/10055_2010_155_Fig1_HTML.jpg" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p>Flexible electronic display by Fujitsu (Tokyo, Japan)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0155-9/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+              <p>Availability of flexible displays provides a number of opportunities to product designers in not just the mobile device realm, but also in a multitude of devices and areas. A good example is the fashion design industry, which has adapted the flexible display concept to clothing. These displays do not break easily and they are lighter and thinner than traditional LCD displays, making them the choice for future devices.</p><p>Physical prototypes of these products would add considerable cost to the product development process and delay the time to market. With the advent of concepts such as Rapid Product Development (RPD), there is greater demand to develop products efficiently and within a very short period of time (Bullinger et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Bullinger HJ, Warschat J, Fischer D (2000) Rapid product development–an overview. Comput Ind 42(2–3):99–108" href="/article/10.1007/s10055-010-0155-9#ref-CR1" id="ref-link-section-d26886e398">2000</a>). Current product prototyping methods lack facility for simulating interactions with such flexible displays and their behavior.</p><p>Of all the elements that go into a product, the one that will be most influenced by introduction of flexible displays is the User Interface (UI). Foam, cardboard, rapid prototypes, and other kinds of traditional solid prototyping methods are totally deprived of any kind of interactive UI simulation. Easily machinable materials like wood, foam, etc. are preferred for these solid prototypes, and hence do not reflect material properties of such flexible displays. Furthermore, such solid prototypes limit the opportunities of studying or experimenting with various material choices due to machining time and resource constraints. Computer-Aided Engineering (CAE) methods and other kinds of solid modeling provide the designer an opportunity to explore the product from different perspectives, but lack any facility for UI simulation and cannot mimic final-user interactions. Though these CAE methods allow designers to simulate material properties, they do not allow designers to study the effect of such materials on human interactions.</p><p>Since these displays would potentially introduce new forms of interactions, they would also affect the way the software or mobile applications are handled. Software developers are currently forced to test their new applications on computers (via emulators), existing mobile devices or custom-made devices with bulky attachments. Though these systems provide some insight into how the application functions, they fail to provide realistic experiences as using the actual final hardware. Further, interaction styles are completely ignored while using these alternatives.</p><p>Tactile experiences are not limited to just force feedback but also on how objects physically and visually react to user manipulation (Krause and Neumann <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Krause FL, Neumann J (2001) Haptic interaction with non-rigid materials for assembly and dissassembly in product development. Institute for Machine Tools and Factory Management IWF, Technical University Berlin, Germany, CIRP annals—manufacturing technology, 50(1):81–84" href="/article/10.1007/s10055-010-0155-9#ref-CR10" id="ref-link-section-d26886e409">2001</a>). The ease of interactions with touch screen devices heavily depends on screen properties such as stiffness, surface friction, deformability, reflectivity, etc. Stiffness and deformability of the surface determines the speed of interactions or the time taken between touchdown and retraction. Once touched, the surface friction of the display affects the speed of movement of the stylus or finger on the surface of the display. Reflectivity of surfaces is also an important criterion to avoid unwanted glare. None of the currently used methods account for simulating such characteristics and their effects. Additionally, the physical form of mobile devices have also become complex over time when compared to the soap-box style earlier versions. Good examples are phones released for kids in the shape of comic characters. Such special purpose physical prototypes would be substantially expensive for designers to produce and experiment with, making simulations a necessity.</p></div></div></section><section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">Current challenges of real-time deformation</h2><div class="c-article-section__content" id="Sec2-content"><p>It is well known that realistic simulation of physically based deformation of elastic objects is very challenging because of the complexity of the computation to be performed in real time. However, a simple spring-damper model can be adequate for achieving a relatively realistic deformation for real-time interactions. Haptic interaction along with elastic object deformation has been used in many surgical procedure simulations. It is beneficial to borrow the knowledge developed in this field and appropriately make use of similar techniques for deformation in product simulations.</p><p>Current haptics libraries such as Sensable’s Open Haptics implement a spring-damper model to allow a point-based force–feedback interaction with 3-DOF haptic devices such as the PHANToM Desktop, Omni, and Premium 1.0 (Sensable Technologies, Woburn, MA). Even though the spring-damper model implemented by the haptic library allows the user to feel the object resistance at the contact point, there is no explicit deformation of the object geometry. Therefore, the graphics rendering does not show any object deformation at all.</p><p>The goal of this project is to provide product developers, a tool to interactively simulate and iteratively test designs of such products or devices featuring flexible touch screens, using natural tactile interactions in virtual environments (VE). We aim at visually and haptically simulating the material choices by rendering a coherent graphics deformation of the virtual objects colliding with the haptic probe, without compromising 1-KHz haptic frame rate and thereby provide a rich user experience.</p><p>The paper focuses in the application of a Graphics Processing Unit (GPU)-based parallel deformation algorithm (Luciano et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Luciano CJ, Banerjee PP, Rizzi SHR (2007) GPU-based elastic-object deformation for enhancement of existing haptic applications, Automation Science and Engineering. CASE 2007. IEEE international conference on vol, Issue, 22–25 September 2007, pp 146–151" href="/article/10.1007/s10055-010-0155-9#ref-CR15" id="ref-link-section-d26886e426">2007</a>) to deform polygonal meshes that represent flexible touch screen devices for real-time virtual prototyping (Yoganandan et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Yoganandan AR, Banerjee PP, Luciano CJ (2009) Applying augmented reality and haptics to evaluate dynamic prototypes of mobile devices. Workshop on cloud-mobile convergence for virtual reality (CMCVR‘09), March 2009" href="/article/10.1007/s10055-010-0155-9#ref-CR25" id="ref-link-section-d26886e429">2009</a>).</p></div></div></section><section aria-labelledby="Sec3"><div class="c-article-section" id="Sec3-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec3">Related work</h2><div class="c-article-section__content" id="Sec3-content"><h3 class="c-article__sub-heading" id="Sec4">User interface prototyping</h3><p>The quest for better UI has driven some research into using alternative methods and development of many techniques. Various techniques have been tried such as using wooden frames with UI card slots (Sá and Carriço <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Sá M, Carriço L (2006) Low-fi prototyping for mobile devices, CHI ‘06 extended abstracts on Human factors in computing systems, April 2006" href="/article/10.1007/s10055-010-0155-9#ref-CR18" id="ref-link-section-d26886e444">2006</a>), HTML pages on existing devices (Krauß and Krannich <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Krauß M, Krannich D (2006) Ripcord: rapid interface prototyping for cordless devices. In: ACM international conference proceeding series, vol 159, proceedings of the 8th conference on human-computer interaction with mobile devices and services" href="/article/10.1007/s10055-010-0155-9#ref-CR11" id="ref-link-section-d26886e447">2006</a>) and custom built testing devices (Pering <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Pering C (2002) Interaction design prototyping of communicator devices: towards meeting the hardware–software challenge. Interactions 9(6):36–46" href="/article/10.1007/s10055-010-0155-9#ref-CR17" id="ref-link-section-d26886e450">2002</a>). These systems neither faithfully replicate the interactions in the final product, nor the form factor of the design.</p><h3 class="c-article__sub-heading" id="Sec5">Virtual reality prototyping</h3><p>Virtual reality prototyping (VRP) is an active field of research where computer graphics and virtual reality are used to experience a non-existent product for design evaluation or discussion purposes. At this stage, we would like to make a clear distinction between virtual prototypes (VP) and VRP, the latter being our subject of concern. Wang (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Wang G (2002) Definition and review of virtual prototyping, transactions of the ASME. J Comput Inf Sci Eng 2(3):232–236" href="/article/10.1007/s10055-010-0155-9#ref-CR23" id="ref-link-section-d26886e461">2002</a>) describes a virtual prototype (or digital mock-up) as “a computer simulation of a physical product that can be presented, analyzed, and tested from concerned product life-cycle aspects such as design/engineering, manufacturing, service, and recycling as if on a real physical model”. It should be noted that a VP does not necessarily have a visual representation or graphical simulation, while VRP works completely on the basis of virtual reality (VR) technology. Thanks to its rapidity and highly inexpensive nature compared to physical prototypes, VRP is a preferred technique in the design of complex products. Though not a new field, recently VRP techniques have been extensively used for mechanical product development in fields such as automotive and aircraft design with a focus on physical and structural design evaluation. In the past two decades, multiple research groups around the world have been working on using VRP technologies to simulate both behaviors and functions of portable electronic devices.</p><h3 class="c-article__sub-heading" id="Sec6">Behavioral simulation</h3><p>Ye et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Ye J, Badiyani S, Raja V, Schlegel T (2007) Applications of virtual reality in product design evaluation. Human-Computer Interaction. HCI applications and services. Springer, Berlin, vol 4553/2007, August 2007, pp 1190–1199" href="/article/10.1007/s10055-010-0155-9#ref-CR24" id="ref-link-section-d26886e472">2007</a>) first successfully demonstrated an implementation of a VRP of mobile devices using haptic feedback and stereoscopic displays. However, this implementation did not feature simulations of the wireless device UI. Jo et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Jo D, Yang U, Son W (2007) Design evaluation using virtual reality based prototypes: towards realistic visualization and operations. In: ACM international conference proceeding series, vol 309, proceedings of the 9th international conference on Human computer interaction with mobile devices and services" href="/article/10.1007/s10055-010-0155-9#ref-CR8" id="ref-link-section-d26886e475">2007</a>) implemented a method to simulate user interfaces in virtual environments using Adobe Flash animations. Even though these previous works were successful in putting forth the idea of applying VRP to development of mobile devices, they either did not support dynamic simulations of the UI or lacked natural interactions with it. There is a real need for the user to touch the virtual prototype and manipulate it in a realistic manner as they would do with the real product.</p><h3 class="c-article__sub-heading" id="Sec7">Functional simulation</h3><p>Virtual prototype of a pen-like phone model with a simple UI was modeled by Kerttula et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="Kerttula M, Salmela M, Heikkinen M (1997) Virtual reality prototyping—“a framework for the development of electronics and telecommunication products”. In: Proceedings of the 8th international workshop on rapid system prototyping (RSP‘97) shortening the path from specification to prototype, p 2, June 1997" href="/article/10.1007/s10055-010-0155-9#ref-CR9" id="ref-link-section-d26886e486">1997</a>). The system featured stereoscopic displays along with haptic feedback and some basic logic of interactions implemented using Java and OMI/TOOLS to simulate the target OS and processor functioning. Due to its lack of graphics/haptics collocation, the system provides reduced immersion to the user and thereby limits their experience to unrealistic interactions. Furthermore, the system is too complex requiring a lot of time and resources in developing such applications. Some methods require the whole logical model to be built from scratch. In a fast paced product development approach, this does not work out to be a feasible option and sometimes becomes redundant. Additionally, once the logical models are built, they cannot be directly used in the final implementation, limiting their use to just the prototyping stage. Liukkunen et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Liukkunen K, Eteläperä M, Oivo M, Soininen J, Pellikka M (2008) Virtual prototypes in developing mobile software applications and devices. Product-Focused Software Process Improvement. Springer, Berlin, pp 174–188" href="/article/10.1007/s10055-010-0155-9#ref-CR13" id="ref-link-section-d26886e489">2008</a>) successfully combined UI and mobile application testing into a single environment using a SystemC-based approach for emulating target operating systems and hardware. That research does not take into account the physical model and purely focuses on mobile application simulation. It does not feature any 3D visualization and users get to interact with 2D menus and interfaces on a computer with traditional input methods. An integrated system combining both the behavioral and functional system was demonstrated by Yoganandan et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Yoganandan AR, Banerjee PP, Luciano CJ (2009) Applying augmented reality and haptics to evaluate dynamic prototypes of mobile devices. Workshop on cloud-mobile convergence for virtual reality (CMCVR‘09), March 2009" href="/article/10.1007/s10055-010-0155-9#ref-CR25" id="ref-link-section-d26886e492">2009</a>).</p></div></div></section><section aria-labelledby="Sec8"><div class="c-article-section" id="Sec8-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec8">New design cycle</h2><div class="c-article-section__content" id="Sec8-content"><p>The VRP presented in this paper can be used in two stages of the product development cycle (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0155-9#Fig2">2</a>). First, the VRP acts as a Behavioral Virtual Reality Prototype (B-VRP) with the embedded browser, providing a light application that only simulates behavior of the UI making it an easy tool for UI testing. By combining the CAD (hardware) and UI (software) concepts at a very early stage of the design cycle, the VP can facilitate the testing and discussions on the physical design, the Human Machine Interface (HMI), the UI, their interactions, and interdependencies with other team members or users for valuable feedback. During this stage, designers can gain insight into alternative design models, features, materials, or modes of interactions. This is also a crucial stage where teams down the design path can raise concern over certain design decisions or issues and get them resolved. Based on the obtained feedback, the CAD and UI designers could make necessary revisions to the current design and test them again until the optimum result is obtained. Suitable inclusion of 3D models of electronic components for the mobile device’s interiors is also done to study fit and analyze space conflicts.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0155-9/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0155-9/MediaObjects/10055_2010_155_Fig2_HTML.gif?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0155-9/MediaObjects/10055_2010_155_Fig2_HTML.gif" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p>New design process</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0155-9/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+              <p>Secondly, the VRP could also be used as a Functional Virtual Reality Prototype (F-VRP). At this stage, the purpose of the VRP is to evaluate functionality of a developed mobile application along with the users’ interactions before the actual hardware is ready to deploy these applications. The F-VRP helps study relationships between mobile applications and the physical device or the HMI. Application developers can now simulate and test their designs with the F-VRP, optimizing the application to better suit issues of interaction and dependency on physical design. Once finalized, the software design could be passed on for hardware–software integration and production. The material characteristics could be studied on both the B-VRP and the F-VRP stages.</p></div></div></section><section aria-labelledby="Sec9"><div class="c-article-section" id="Sec9-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec9">Rationale</h2><div class="c-article-section__content" id="Sec9-content"><p>As shown in (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0155-9#Fig3">3</a>), the proposed system could be broken down into 3 different parts: the ImmersiveTouch (Luciano et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Luciano C, Banerjee P, Florea L, Dawe G (2005) Design of the Immersivetouch™: a high-performance haptic augmented virtual reality system. In: 11th international conference on human-computer interaction, Las Vegas, NV" href="/article/10.1007/s10055-010-0155-9#ref-CR14" id="ref-link-section-d26886e538">2005</a>), external applications, and the VRP. The ImmersiveTouch simulation system integrates the haptic devices, active stereo display, head tracking, hand tracking, and speakers.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0155-9/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0155-9/MediaObjects/10055_2010_155_Fig3_HTML.gif?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0155-9/MediaObjects/10055_2010_155_Fig3_HTML.gif" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p>System used for VRP</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0155-9/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+              <p>The external applications are the content engine and a CAD modeler for generating 3D models in the development or pre-processing stage. The content engine is usually an application that provides the content or data to be rendered in the VRP. In case of the B-VRP, the content engine is an embedded web browser. For the F-VRP, it is a software/hardware emulator for a Mobile Operating System. The content engine creates the image of the virtual device screen and passes on this data to the graphics library as a texture in memory. This texture is then mapped onto the virtual screen of the 3D model. The 3D model of the mobile device is generated in a CAD modeling package and imported into the VE. Information about the model’s geometry is passed to the haptics and graphics libraries to perform both renderings.</p><p>The haptic device continuously provides information about the stylus’ position and orientation. The haptics library detects the contact point between the virtual stylus and the virtual device, as the user moves the haptic stylus over the device and automatically updates the penetration depth and deformation shader (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0155-9#Fig4">4</a>). Additionally, based on the part of the VRP collided with, the application decides further actions. If the colliding part is the screen of the VRP, the 2D coordinates of the contact point is sent to the content engine to update the image. Alternatively, if the key of the VRP is being touched, the system sends a reset message to the content engine to switch to the home screen. Based on the shape and position of the 3D model and its interaction with the stylus, the haptics library generates force feedback, so different haptic materials (enclosure, buttons, screen, etc.) can be simulated and tested. The haptic materials are mathematically defined by four coefficients in a spring-damper model: stiffness, viscosity, static friction, and dynamic friction.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0155-9/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0155-9/MediaObjects/10055_2010_155_Fig4_HTML.gif?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0155-9/MediaObjects/10055_2010_155_Fig4_HTML.gif" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p>Deformation activity flow chart</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0155-9/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+              </div></div></section><section aria-labelledby="Sec10"><div class="c-article-section" id="Sec10-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec10">Previous approaches of real-time deformation</h2><div class="c-article-section__content" id="Sec10-content"><p>Historically, a large number of CPU-based deformation approaches without haptics have been designed, e.g. variants of finite-element methods such as long elements; ChainMail approaches (Schill et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1998" title="Schill MA, Gibson SFF, Bender HJ, Manner R (1998) Biomechanical simulation of the vitreous humor in the eye using an Enhanced ChainMail Algorithm. LNCS 1496:679–687" href="/article/10.1007/s10055-010-0155-9#ref-CR19" id="ref-link-section-d26886e594">1998</a>; Li and Brodlie <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Li Y, Brodlie K (2003) Soft object modelling with generalised chainmail—extending the boundaries of web-based graphics. Comput Graph Forum 22(4):717–727" href="/article/10.1007/s10055-010-0155-9#ref-CR12" id="ref-link-section-d26886e597">2003</a>). Since the focus of our approach is to exploit the parallelization potential of GPU, we review the previous approaches from this standpoint.</p><h3 class="c-article__sub-heading" id="Sec11">CPU-based deformation with haptics</h3><p>Popular models such as mass-spring grids and physically based simulation have been used in the past to simulate deformation with haptics using the CPU. These previous works cannot be extended to complex geometry without affecting the haptics performance, because the CPU power must be shared between the haptics rendering and the graphics deformation. Krause and Neumann (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Krause FL, Neumann J (2001) Haptic interaction with non-rigid materials for assembly and dissassembly in product development. Institute for Machine Tools and Factory Management IWF, Technical University Berlin, Germany, CIRP annals—manufacturing technology, 50(1):81–84" href="/article/10.1007/s10055-010-0155-9#ref-CR10" id="ref-link-section-d26886e607">2001</a>) implemented a system for haptic support of handling simulations of flexible parts using modes such as touching, pressing, etc., by incorporating spring-damper models. It did not make use of GPU capabilities, but optimized performance by distributing load over numerous computers using server technology. Most of previous work in interactive material deformations has been in the area of surgical simulations. Faeth (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Faeth AJ (2009) Expressive cutting, deforming, and painting of three-dimensional digital shapes through asymmetric bimanual haptic manipulation. MS thesis, Iowa State University" href="/article/10.1007/s10055-010-0155-9#ref-CR5" id="ref-link-section-d26886e610">2009</a>) concentrate on various manifestations of plastic deformation, such as mesh-cutting applications combining ChainMail algorithm with haptics. Their approach focuses on the deformation of simple polygonal meshes. Since ChainMail is a serial algorithm, it is inappropriate for GPU implementation.</p><h3 class="c-article__sub-heading" id="Sec12">GPU-based deformation without haptics</h3><p>GPU has proven to be an effective solution to general purpose problems. Spring-mass systems have been used to model deformation on complex geometries taking advantage of the parallel processing of the GPU (Mosegaard and Sørensen <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Mosegaard J, Sørensen TS (2005) GPU accelerated surgical simulators for complex morphology. In: Proceedings of IEEE virtual reality, pp 147–153" href="/article/10.1007/s10055-010-0155-9#ref-CR16" id="ref-link-section-d26886e621">2005</a>). Since the simulation is done exclusively on the GPU, the CPU is not fully utilized, causing an unbalanced load between CPU and GPU. Georgii and Westermann (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Georgii J, Westermann R (2005) Interactive simulation and rendering of heterogeneous deformable bodies. In: Proceedings of VMV" href="/article/10.1007/s10055-010-0155-9#ref-CR7" id="ref-link-section-d26886e624">2005</a>) implemented a hybrid algorithm for physics-based deformations that combine a CPU simulation engine with a GPU render engine, achieving a more balanced load. However, these GPU-based deformation methods cannot be seamlessly integrated with existing polygonal-based haptic applications.</p><h3 class="c-article__sub-heading" id="Sec13">GPU-based deformation with haptics</h3><p>Sørensen and Mosegaard (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Sørensen TS, Mosegaard J (2006) Haptic feedback for the GPU-based surgical simulator. In: Proceedings of medicine meets virtual reality 14, pp 523–528" href="/article/10.1007/s10055-010-0155-9#ref-CR21" id="ref-link-section-d26886e635">2006</a>) modified their GPU-based implementation to incorporate force feedback, achieving a haptic frame rate of 450 Hz deforming 3D meshes of up to 91,000 vertices. Unfortunately, that frame rate is not high enough to minimize haptic discontinuities and instabilities. De Pascale et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="De Pascale M, De Pascale G, Prattichizzo D, Barbagli F (2004) A GPU-friendly method for haptic and graphic rendering of deformable objects. In: Proceedings of Eurohaptics, pp 44–51" href="/article/10.1007/s10055-010-0155-9#ref-CR2" id="ref-link-section-d26886e638">2004</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="De Pascale M, Sarcuni G, Prattichizzo D (2005) Real-time soft-finger grasping of physically based quasi-rigid objects. In: Proceedings of world haptics conference, pp 545–546" href="/article/10.1007/s10055-010-0155-9#ref-CR3" id="ref-link-section-d26886e641">2005</a>) presented a GPU-based deformation method to achieve both haptics and graphics rendering, implementing a single degrees of freedom (DOF) mass-spring-damper system at the contact point and using shape-functions to distribute the deformation of the closest vertices. Previously implemented algorithms are very useful to incorporate certain haptic feedback to existing graphics applications with deformation. However, since the primary focus of the applications is the graphics performance, they resulted in realistic graphic deformation at the expense of poor haptic performance.</p></div></div></section><section aria-labelledby="Sec14"><div class="c-article-section" id="Sec14-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec14">Presented deformation algorithm</h2><div class="c-article-section__content" id="Sec14-content"><p>In most CPU-based haptic applications, a common polygonal geometry is processed by both the CPU (for the haptics rendering) and the GPU (for the graphics rendering). Haptics rendering includes collision detection, computation of forces, and bidirectional communication with the haptic device. Due to the complexity and sequential nature of the haptics rendering, as well as the GPU parallel and vector processing power, the haptics rendering takes longer than the graphics rendering. Therefore, the GPU is underutilized most of the time. If deformation is to be incorporated to the haptic application, it is more efficient to let the CPU deal with the haptics rendering, while the GPU computes deformation for the graphics rendering in parallel.</p><p>The real-time deformation algorithm consists of three processes executed by the GPU shaders:</p><ol class="u-list-style-none">
+                  <li>
+                    <span class="u-custom-list-number">a.</span>
+                    
+                      <p>vertex displacement</p>
+                    
+                  </li>
+                  <li>
+                    <span class="u-custom-list-number">b.</span>
+                    
+                      <p>normal calculation</p>
+                    
+                  </li>
+                  <li>
+                    <span class="u-custom-list-number">c.</span>
+                    
+                      <p>texture perturbation</p>
+                    
+                  </li>
+                </ol>
+              <h3 class="c-article__sub-heading" id="Sec15">Vertex displacement</h3><p>Open Haptics implements a 1-DOF spring-damper model, along the normals of the object surface, to let the user feel the resistance of the object as the probe makes contact with the object and then pushes against its surface. Similarly, it is possible to render the object deformation by displacing the vertices along its normals. In the case of point-based haptics rendering, the force feedback calculation is done only at the contact point. However, for graphics rendering, we need to compute not only the deformation at the contact point, but also at its neighborhood. In order to do that, we can take advantage of the vertex shader to displace each vertex in parallel. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0155-9#Fig5">5</a> shows how the vertices are displaced along its normals to deform the object surface. The maximum displacement is found at the contact point. Then the displacement decreases nonlinearly as the vertices are located farther away from the contact point.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0155-9/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0155-9/MediaObjects/10055_2010_155_Fig5_HTML.gif?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0155-9/MediaObjects/10055_2010_155_Fig5_HTML.gif" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p>Vertex displacements along its normals <i>N</i>
+                          <sub>
+                            <i>i</i>
+                          </sub> done by the vertex shader</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0155-9/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>The position of the displaced vertex <span class="mathjax-tex">\( V_{i}^{\prime } \)</span> can be simply computed by the vertex shader as:</p><div id="Equ1" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ V_{i}^{\prime } = V_{i} - N_{i} \times G(d_{i} ) $$</span></div><div class="c-article-equation__number">
+                    (1)
+                </div></div><p>where <i>V</i>
+                  <sub>
+                    <i>i</i>
+                  </sub> = position of original vertex, <i>N</i>
+                  <sub>
+                    <i>i</i>
+                  </sub> = normal vector of vertex <i>V</i>
+                  <sub>
+                    <i>i</i>,</sub>
+                  <i>G</i>(<i>d</i>
+                  <sub>
+                    <i>i</i>
+                  </sub>) = distribution function.</p><p>The distribution function <i>G</i>(<i>d</i>
+                  <sub>
+                    <i>i</i>
+                  </sub>) defines the amount of displacement of the neighbor vertices. It consists of a Gaussian function with mean of zero and variance σ<sup>2</sup> (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0155-9#Fig6">6</a>), which is computed as follows:</p><div id="Equ2" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ G(d_{i} ) = p \times e^{{\left( {{\frac{{d_{i}^{2} }}{{2\sigma^{2} }}}} \right)}} $$</span></div><div class="c-article-equation__number">
+                    (2)
+                </div></div><p>where <i>d</i>
+                  <sub>
+                    <i>i</i>
+                  </sub> = Euclidean distance from the contact point to the vertex <i>V</i>
+                  <sub>
+                    <i>i</i>
+                  </sub>, <i>p</i> = penetration depth <span class="mathjax-tex">\( = \left| {{\text{HIP}} - {\text{SCP}}} \right| \)</span>, HIP = haptic interaction point, SCP = surface contact point.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-6"><figure><figcaption><b id="Fig6" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 6</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0155-9/figures/6" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0155-9/MediaObjects/10055_2010_155_Fig6_HTML.gif?as=webp"></source><img aria-describedby="figure-6-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0155-9/MediaObjects/10055_2010_155_Fig6_HTML.gif" alt="figure6" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-6-desc"><p>Gaussian distribution defines locality of deformation</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0155-9/figures/6" data-track-dest="link:Figure6 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>Each vertex shader computes the Euclidean distance from its vertex to the contact point. When that distance is zero, the Gaussian function returns the penetration depth previously computed by Open Haptics. As we move away from the contact point, the displacement tends to zero, producing a realistic “inverted-bell shape” at the vicinity of the contact point.</p><p>The variance σ<sup>2</sup> of the Gaussian function controls the distribution of the deformation. A small variance creates a very local deformation affecting only the closest vertices of the contact point, while a large variance produces a more global deformation around a larger area, allowing us to simulate the behavior of different materials. For example, silly putty (a class of silicone polymers) would have highly localized deformation (variance = 0.5), whereas a highly viscous gel would have less localized deformation (variance = 3.0).</p><h3 class="c-article__sub-heading" id="Sec16">Normal calculation</h3><p>In order to achieve a realistic rendering of the deformation, it is necessary not only to deform the surface displacing the vertices, but also to re-compute the normals of the deformed surface. This is a crucial step since lighting depends on the surface normals. A naïve approach would be to send all new vertices back to the CPU, letting it compute the new normals, and then send all new normals back to the GPU. However, this would lead to a performance bottleneck due to the slow communication from the GPU to the CPU. Hence, this computation needs to be done entirely on the GPU.</p><p>The new normals could be computed per vertex on the vertex shader. The fragment shader would then take the new computed normals at the vertices of each triangle and it would interpolate them to obtain the normals at each fragment inside the polygon. However, since we are dealing with polygonal meshes of non-homogenous triangle size, there are flat areas in which their vertex density is too low. Therefore, we get smoother shading performing the normal calculation per fragment on the fragment shader.</p><p>On the CPU, the normals at each vertex are computed considering the vertices of the neighboring polygons. Unfortunately, the GPU cannot follow the same approach because the fragment shader lacks that information. Therefore, a different approach needs to be followed. Instead of re-computing the normals, the GPU can slightly perturb the old normals to reflect the changes of the deformed surface. The idea is to rotate the original normal <i>N</i>
+                  <sub>0</sub> at the vertex <i>v</i> towards the contact point <i>c</i> by a certain angle θ about a rotation axis <i>W</i> (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0155-9#Fig7">7</a>).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-7"><figure><figcaption><b id="Fig7" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 7</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0155-9/figures/7" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0155-9/MediaObjects/10055_2010_155_Fig7_HTML.gif?as=webp"></source><img aria-describedby="figure-7-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0155-9/MediaObjects/10055_2010_155_Fig7_HTML.gif" alt="figure7" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-7-desc"><p>Normal calculation done by the fragment shader</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0155-9/figures/7" data-track-dest="link:Figure7 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>Vector VC is computed from the new vertex <i>v</i> (displaced by the vertex shader) to the contact point <i>c</i>. The rotation axis <i>W</i> (going inside the plane of the page) is defined by the vector perpendicular to the plane formed by the vectors <i>N</i>
+                  <sub>
+                    <i>0</i>
+                  </sub> and VC and is computed with the cross product function as:</p><div id="Equ3" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ W = N_{o} \times {\text{VC}} $$</span></div><div class="c-article-equation__number">
+                    (3)
+                </div></div>
+                <p>The rotation angle <i>θ</i> depends on the slope of the deformed surface at each vertex <i>v</i>, or even more precisely at each fragment since the normal calculation is performed by the fragment shader. Since the deformed geometry follows a Gaussian function around the contact point, the surface slope at each fragment can be computed as the first derivative of the Gaussian function:</p><div id="Equ4" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ G(d_{i} ) = p \times \left( { - {\frac{{d_{1} }}{{\sigma^{2} }}} \times e^{{\left( {{\frac{{d_{i}^{2} }}{{2\sigma^{2} }}}} \right)}} } \right) $$</span></div><div class="c-article-equation__number">
+                    (4)
+                </div></div><p>Now the rotation angle <i>θ</i> is simply defined as:</p><div id="Equa" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ \theta = \arctan ( - G^{\prime } (d_{i} )) $$</span></div></div>
+                <p>The original normal vector <i>N</i>
+                  <sub>
+                    <i>0</i>
+                  </sub> is rotated an angle <i>θ</i> about the axis <i>W</i>. Using the Rodrigues’ rotation formula (e.g. see <a href="http://mathworld.wolfram.com/RotationFormula.html">http://mathworld.wolfram.com/RotationFormula.html</a>) the new perturbed normal <i>N</i>
+                  <sub>
+                    <i>1</i>
+                  </sub> can be computed as follows:</p><div id="Equ5" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ N_{1} = T + (N_{0} - T) \times \cos (\theta ) + (N_{0} \times W) \times \sin (\theta ) $$</span></div><div class="c-article-equation__number">
+                    (5)
+                </div></div><p>where </p><div id="Equb" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ T = W \times (N_{0} \cdot W) $$</span></div></div><p>Since <i>W</i> is orthogonal to <i>N</i>
+                  <sub>
+                    <i>0</i>
+                  </sub> (because of <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-010-0155-9#Equ3">3</a>), <i>T</i> is a zero vector and then (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-010-0155-9#Equ5">5</a>) is simply reduced to:</p><div id="Equ6" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ N_{1} = N_{0} \times \cos (\theta ) + (N_{0} \times W) \times \sin (\theta ) $$</span></div><div class="c-article-equation__number">
+                    (6)
+                </div></div><p>It is important to mention that since the geometry deformation and the normal computation need to be consistent, both the vertex and the fragment shaders must compute the Euclidean distance from the vertex to the contact point in eye-coordinate system.</p><h3 class="c-article__sub-heading" id="Sec17">Texture perturbation</h3><p>For a convincing simulation of the deformation, it is important that the texture attached to the 3D-model is also perturbed suitably. Since it is assumed here that the deformation happens radially inwards around a contact point, we make use of the unit vector VC. The projection of this unit vector on the surface of the object provides the direction in which the texture fragment needs to be perturbed. Similar to the (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-010-0155-9#Equ1">1</a>), in which we move each vertex along its normal certain amount according to the distance to the contact point, the texture perturbation moves the pixels that are mapped onto the 3D polygons along the projection of VC on the texture plane.</p><p>For each pixel in the triangle, the fragment shader computes the texture perturbation as:</p><div id="Equ7" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ F_{i}^{\prime } = F_{i} - {\text{vec}}2({\text{VC}}_{i} ) \times G(d_{i} ) $$</span></div><div class="c-article-equation__number">
+                    (7)
+                </div></div><p>where<i>F</i>
+                  <sub>
+                    <i>i</i>
+                  </sub> = position of original fragment, <span class="mathjax-tex">\( F_{i}^{\prime } \)</span> = position of new fragment, VC<sub>
+                    <i>i</i>
+                  </sub> = VC of fragment <i>F</i>
+                  <sub>
+                    <i>i</i>
+                  </sub>
+                  <i>, G(d</i>
+                  <sub>
+                    <i>i</i>
+                  </sub>
+                  <i>)</i> = distribution function, vec<i>2</i>(VC<sub>
+                    <i>i</i>
+                  </sub>) = projection of the vector VC<sub>
+                    <i>i</i>
+                  </sub> onto the texture plane (XY).</p><p>Since we use the same distribution function as that of the mesh, the perturbation of the texture is synchronous with the deformation of the mesh (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0155-9#Fig8">8</a>).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-8"><figure><figcaption><b id="Fig8" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 8</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0155-9/figures/8" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0155-9/MediaObjects/10055_2010_155_Fig8_HTML.jpg?as=webp"></source><img aria-describedby="figure-8-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0155-9/MediaObjects/10055_2010_155_Fig8_HTML.jpg" alt="figure8" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-8-desc"><p>Details of the texture perturbation</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0155-9/figures/8" data-track-dest="link:Figure8 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                </div></div></section><section aria-labelledby="Sec18"><div class="c-article-section" id="Sec18-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec18">Implementation</h2><div class="c-article-section__content" id="Sec18-content"><p>The haptic device is a SensAble Phantom Desktop. The haptics rendering and communication with the haptic device is done by Open Haptics. Two different VRPs were developed to simulate a Windows Mobile PDA and the iPhone (Apple Inc., CA), respectively. Pro/Engineer was used to model the PDA. In case of the iPhone, the 3D model and UI textures were downloaded from the internet. Once the virtual mobile device is designed and modeled in Pro/E, the model is converted to VRML format, so it can be loaded by the application. The internal parts of the device, which are not visible or accessible by the final user, are removed from the model. This “clean-up” process reduces the number of polygons and helps to maintain an acceptable haptic frame rate (1 kHz).</p><h3 class="c-article__sub-heading" id="Sec19">B-VRP</h3><p>The UI is developed as a set of State Flow Diagrams (SFD) and then implemented as interlinked offline web pages using Adobe’s Dreamweaver. Menus and icons in each page were also connected with other pages correspondingly based on the SFD. LLmozlib, the embedded browser engine developed by Callum based on Mozilla, was integrated into the application. This browser serves as the display of the virtual mobile device to create a 2D image to be mapped to the 3D screen. The embedded browser is also capable of rendering WebPages from the Internet, thereby providing designers an opportunity to test UI’s applicability and interactions with net-based applications such as maps, streaming videos, and email clients.</p><h3 class="c-article__sub-heading" id="Sec20">F-VRP</h3><p>The content for the F-VRP is extracted from Windows CE—OS emulator (Microsoft Corporation, Redmond, WA) embedded in the VE. This emulator facilitates programming and testing functionality of a newly developed mobile application by emulating the hardware of the targeted mobile device. A virtual PDA is shown in (Figs. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0155-9#Fig8">8</a>, <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0155-9#Fig9">9</a>) Windows CE emulator equips us with unique capabilities since any application that runs on the emulator would also run on the actual device. This means that the software developer could just port the application tested on the F-VRP directly onto the final device. This is one major advantage when compared to previous attempts at simulating functionality, since it avoids duplication of work and reduces the need for testing at later stages.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-9"><figure><figcaption><b id="Fig9" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 9</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0155-9/figures/9" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0155-9/MediaObjects/10055_2010_155_Fig9_HTML.jpg?as=webp"></source><img aria-describedby="figure-9-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0155-9/MediaObjects/10055_2010_155_Fig9_HTML.jpg" alt="figure9" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-9-desc"><p>A user interacting with the functional virtual reality prototype of a PDA in the ImmersiveTouch</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0155-9/figures/9" data-track-dest="link:Figure9 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>Using Open Haptics for haptic interactions, we programmed the touch and untouch callback functions to send mouse button down and up the messages to the content engine along with the 2D coordinates of the contact point. Therefore, the haptic device essentially behaves as a mouse for the content engine. Other functions of the mouse such as motion, drag, and drop are also simulated with the haptic device. Since the virtual display content is generated in real time by either a web browser or an OS Emulator, a wide variety of interactions like dragging, selection, etc., with a stylus become possible. Additionally, dynamic content can be built into the web pages via Flash to provide a detailed and completely functional UI. Minor level logic could also be built into the web pages for functionality such as calculations, dialing, etc., using JavaScript. Buttons or keys on the 3D model could also be connected to the web pages and provided with some functionality, thereby completely simulating the HMI of the device. The Emulator on the other hand has all the logic and functionality built in providing dynamic effects and pages automatically. The haptic device, in addition to touching the virtual prototype, is also used for rotating and maneuvering the prototype inside the virtual environment.</p><p>Graphics scene-graph is created by Coin3D (Systems in Motion, Stockholm, Sweden) to perform the graphics rendering. Coin3D is a multi-platform high level 3D library that uses OpenGL for accelerated rendering, facilitating faster development of 3D applications. Coin3D also serves as the communication link between the CPU and the GPU. Open Haptics and Coin3D run in two separate threads at different speeds (1 kHz and 60 Hz, respectively). Open Haptics traverses the haptic scene-graph, detects the collision between the end-effector of the haptic stylus and the 3D models, and computes the reaction forces to be sent to the haptic device. Concurrently, Coin3D traverses the graphic scene-graph and sends the content engine and GPU information such as position of the contact point, the penetration depth, and the distribution of the deformation.</p><p>Fast Light Tool Kit (FLTK) is used for managing the environment variables. The sliders in the menus (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0155-9#Fig10">10</a>) provided by FLTK are used to access and interactively change the variables associated with the graphic and haptic rendering. Designers could vary the red, green, blue and transparency values using sliders and identify suitable color combinations. Depending on the needs of the designers, other parameters such as reflectivity could also be added to the menu. Furthermore, the haptic properties of the material such as stiffness, static friction, etc., which affect the ease of interaction could also be varied to identify the optimum combinations of the same. We consider this to be one of the most important features of this application, since it makes material selection an intuitive process in addition to immediately providing such specific data about the materials.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-10"><figure><figcaption><b id="Fig10" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 10</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0155-9/figures/10" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0155-9/MediaObjects/10055_2010_155_Fig10_HTML.gif?as=webp"></source><img aria-describedby="figure-10-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0155-9/MediaObjects/10055_2010_155_Fig10_HTML.gif" alt="figure10" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-10-desc"><p>VRP environment management</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0155-9/figures/10" data-track-dest="link:Figure10 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                </div></div></section><section aria-labelledby="Sec21"><div class="c-article-section" id="Sec21-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec21">Conclusions and future research</h2><div class="c-article-section__content" id="Sec21-content"><p>In a world where product development cycles are getting shorter and there is growing pressure from the market to introduce drastically different and innovative products within a short period of time, it becomes crucial to have flexible prototyping abilities that can quickly and accurately evaluate usability of product concepts. To stay in competition and produce devices with comfortable user interfaces, it is important to repeatedly revise and test prototypes.</p><p>This application enables designers and mobile application developers to experiment with their concepts, and interactions with products featuring flexible displays, at a minimal development cost. It also successfully bridges the gap between physical design, UI and software development, thus, avoiding future confusions due to their interdependencies. Additionally, it makes possible for staff from various teams or divisions in the organization to visualize and participate even in the early stages of design and foresee upcoming problems.</p><p>An efficient real-time deformation of flexible objects has been implemented using OpenGL Shading Language. While the CPU performs the haptic rendering allowing the user to feel the haptic deformation at the contact point, visual deformation of the area around the contact point is computed on the GPU. One of the main contributions of this paper is the fact that existing point-based haptic applications using a spring-damper model can be easily enhanced showing real-time deformation by programming an underutilized GPU to enhance user perception without affecting the original haptic performance.</p><p>One of the limitations of the algorithm is due to the simple Euclidean distance used to define the amount of deformation at a particular vertex and fragment. The algorithm presents some undesired side effects when deforming areas close to the contact point (in a straight line) but disconnected from the affected area. A better approach would be to compute the geodesic distance. Unfortunately, the geodesic distance cannot be easily computed on the GPU because it lacks global information about the object topology. However, the deformation achieved by the algorithm has shown to be realistic for most phone models used in the simulator.</p><p>The current system best simulates touch screen devices operated with a stylus, thanks to the similarities with a haptic stylus. However, future development includes user interactions with multiple haptic devices to simulate multi-touch devices requiring tactile input with fingers. The deformation algorithm implemented here considers a single contact point because the goal is to enhance an existing haptic application that currently works with a point-based collision detection library. However, the same approach can easily be extended to multiple haptic systems.</p><p>The presented haptics-based augmented reality application cannot be used to simulate specific interactions such as folding or rolling the flexible displays. However, the algorithm presented here could be easily extended to simulate these kinds of interactions.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="HJ. Bullinger, J. Warschat, D. Fischer, " /><meta itemprop="datePublished" content="2000" /><meta itemprop="headline" content="Bullinger HJ, Warschat J, Fischer D (2000) Rapid product development–an overview. Comput Ind 42(2–3):99–108" /><p class="c-article-references__text" id="ref-CR1">Bullinger HJ, Warschat J, Fischer D (2000) Rapid product development–an overview. Comput Ind 42(2–3):99–108</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1016%2FS0166-3615%2899%2900064-0" aria-label="View reference 1">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 1 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Rapid%20product%20development%E2%80%93an%20overview&amp;journal=Comput%20Ind&amp;volume=42&amp;issue=2%E2%80%933&amp;pages=99-108&amp;publication_year=2000&amp;author=Bullinger%2CHJ&amp;author=Warschat%2CJ&amp;author=Fischer%2CD">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="De Pascale M, De Pascale G, Prattichizzo D, Barbagli F (2004) A GPU-friendly method for haptic and graphic ren" /><p class="c-article-references__text" id="ref-CR2">De Pascale M, De Pascale G, Prattichizzo D, Barbagli F (2004) A GPU-friendly method for haptic and graphic rendering of deformable objects. In: Proceedings of Eurohaptics, pp 44–51</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="De Pascale M, Sarcuni G, Prattichizzo D (2005) Real-time soft-finger grasping of physically based quasi-rigid " /><p class="c-article-references__text" id="ref-CR3">De Pascale M, Sarcuni G, Prattichizzo D (2005) Real-time soft-finger grasping of physically based quasi-rigid objects. In: Proceedings of world haptics conference, pp 545–546</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Eink (2005) October press release http://www.eink.com/press/releases/pr87.html&#xA;                " /><p class="c-article-references__text" id="ref-CR4">Eink (2005) October press release <a href="http://www.eink.com/press/releases/pr87.html">http://www.eink.com/press/releases/pr87.html</a>
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Faeth AJ (2009) Expressive cutting, deforming, and painting of three-dimensional digital shapes through asymme" /><p class="c-article-references__text" id="ref-CR5">Faeth AJ (2009) Expressive cutting, deforming, and painting of three-dimensional digital shapes through asymmetric bimanual haptic manipulation. MS thesis, Iowa State University</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Fujitsu (2005) July press release, http://www.fujitsu.com/global/news/pr/archives/month/2005/20050713-01.html&#xA;" /><p class="c-article-references__text" id="ref-CR6">Fujitsu (2005) July press release, <a href="http://www.fujitsu.com/global/news/pr/archives/month/2005/20050713-01.html">http://www.fujitsu.com/global/news/pr/archives/month/2005/20050713-01.html</a>
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Georgii J, Westermann R (2005) Interactive simulation and rendering of heterogeneous deformable bodies. In: Pr" /><p class="c-article-references__text" id="ref-CR7">Georgii J, Westermann R (2005) Interactive simulation and rendering of heterogeneous deformable bodies. In: Proceedings of VMV</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Jo D, Yang U, Son W (2007) Design evaluation using virtual reality based prototypes: towards realistic visuali" /><p class="c-article-references__text" id="ref-CR8">Jo D, Yang U, Son W (2007) Design evaluation using virtual reality based prototypes: towards realistic visualization and operations. In: ACM international conference proceeding series, vol 309, proceedings of the 9th international conference on Human computer interaction with mobile devices and services</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Kerttula M, Salmela M, Heikkinen M (1997) Virtual reality prototyping—“a framework for the development of elec" /><p class="c-article-references__text" id="ref-CR9">Kerttula M, Salmela M, Heikkinen M (1997) Virtual reality prototyping—“a framework for the development of electronics and telecommunication products”. In: Proceedings of the 8th international workshop on rapid system prototyping (RSP‘97) shortening the path from specification to prototype, p 2, June 1997</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Krause FL, Neumann J (2001) Haptic interaction with non-rigid materials for assembly and dissassembly in produ" /><p class="c-article-references__text" id="ref-CR10">Krause FL, Neumann J (2001) Haptic interaction with non-rigid materials for assembly and dissassembly in product development. Institute for Machine Tools and Factory Management IWF, Technical University Berlin, Germany, CIRP annals—manufacturing technology, 50(1):81–84</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Krauß M, Krannich D (2006) Ripcord: rapid interface prototyping for cordless devices. In: ACM international co" /><p class="c-article-references__text" id="ref-CR11">Krauß M, Krannich D (2006) Ripcord: rapid interface prototyping for cordless devices. In: ACM international conference proceeding series, vol 159, proceedings of the 8th conference on human-computer interaction with mobile devices and services</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="Y. Li, K. Brodlie, " /><meta itemprop="datePublished" content="2003" /><meta itemprop="headline" content="Li Y, Brodlie K (2003) Soft object modelling with generalised chainmail—extending the boundaries of web-based " /><p class="c-article-references__text" id="ref-CR12">Li Y, Brodlie K (2003) Soft object modelling with generalised chainmail—extending the boundaries of web-based graphics. Comput Graph Forum 22(4):717–727</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1111%2Fj.1467-8659.2003.00719.x" aria-label="View reference 12">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 12 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Soft%20object%20modelling%20with%20generalised%20chainmail%E2%80%94extending%20the%20boundaries%20of%20web-based%20graphics&amp;journal=Comput%20Graph%20Forum&amp;volume=22&amp;issue=4&amp;pages=717-727&amp;publication_year=2003&amp;author=Li%2CY&amp;author=Brodlie%2CK">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Liukkunen K, Eteläperä M, Oivo M, Soininen J, Pellikka M (2008) Virtual prototypes in developing mobile softwa" /><p class="c-article-references__text" id="ref-CR13">Liukkunen K, Eteläperä M, Oivo M, Soininen J, Pellikka M (2008) Virtual prototypes in developing mobile software applications and devices. Product-Focused Software Process Improvement. Springer, Berlin, pp 174–188</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Luciano C, Banerjee P, Florea L, Dawe G (2005) Design of the Immersivetouch™: a high-performance haptic augmen" /><p class="c-article-references__text" id="ref-CR14">Luciano C, Banerjee P, Florea L, Dawe G (2005) Design of the Immersivetouch™: a high-performance haptic augmented virtual reality system. In: 11th international conference on human-computer interaction, Las Vegas, NV</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Luciano CJ, Banerjee PP, Rizzi SHR (2007) GPU-based elastic-object deformation for enhancement of existing hap" /><p class="c-article-references__text" id="ref-CR15">Luciano CJ, Banerjee PP, Rizzi SHR (2007) GPU-based elastic-object deformation for enhancement of existing haptic applications, Automation Science and Engineering. CASE 2007. IEEE international conference on vol, Issue, 22–25 September 2007, pp 146–151</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Mosegaard J, Sørensen TS (2005) GPU accelerated surgical simulators for complex morphology. In: Proceedings of" /><p class="c-article-references__text" id="ref-CR16">Mosegaard J, Sørensen TS (2005) GPU accelerated surgical simulators for complex morphology. In: Proceedings of IEEE virtual reality, pp 147–153</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="C. Pering, " /><meta itemprop="datePublished" content="2002" /><meta itemprop="headline" content="Pering C (2002) Interaction design prototyping of communicator devices: towards meeting the hardware–software " /><p class="c-article-references__text" id="ref-CR17">Pering C (2002) Interaction design prototyping of communicator devices: towards meeting the hardware–software challenge. Interactions 9(6):36–46</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1145%2F581951.581952" aria-label="View reference 17">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 17 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Interaction%20design%20prototyping%20of%20communicator%20devices%3A%20towards%20meeting%20the%20hardware%E2%80%93software%20challenge&amp;journal=Interactions&amp;volume=9&amp;issue=6&amp;pages=36-46&amp;publication_year=2002&amp;author=Pering%2CC">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Sá M, Carriço L (2006) Low-fi prototyping for mobile devices, CHI ‘06 extended abstracts on Human factors in c" /><p class="c-article-references__text" id="ref-CR18">Sá M, Carriço L (2006) Low-fi prototyping for mobile devices, CHI ‘06 extended abstracts on Human factors in computing systems, April 2006</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="MA. Schill, SFF. Gibson, HJ. Bender, R. Manner, " /><meta itemprop="datePublished" content="1998" /><meta itemprop="headline" content="Schill MA, Gibson SFF, Bender HJ, Manner R (1998) Biomechanical simulation of the vitreous humor in the eye us" /><p class="c-article-references__text" id="ref-CR19">Schill MA, Gibson SFF, Bender HJ, Manner R (1998) Biomechanical simulation of the vitreous humor in the eye using an Enhanced ChainMail Algorithm. LNCS 1496:679–687</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 19 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Biomechanical%20simulation%20of%20the%20vitreous%20humor%20in%20the%20eye%20using%20an%20Enhanced%20ChainMail%20Algorithm&amp;journal=LNCS&amp;volume=1496&amp;pages=679-687&amp;publication_year=1998&amp;author=Schill%2CMA&amp;author=Gibson%2CSFF&amp;author=Bender%2CHJ&amp;author=Manner%2CR">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Schwesig C, Poupyrev I, Mori E (2003) Gummi: user interface for deformable computers. In: Conference on human " /><p class="c-article-references__text" id="ref-CR20">Schwesig C, Poupyrev I, Mori E (2003) Gummi: user interface for deformable computers. In: Conference on human factors in computing systems, CHI ‘03 extended abstracts on Human factors in computing systems, Ft. Lauderdale, Florida, USA, pp 954–955</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Sørensen TS, Mosegaard J (2006) Haptic feedback for the GPU-based surgical simulator. In: Proceedings of medic" /><p class="c-article-references__text" id="ref-CR21">Sørensen TS, Mosegaard J (2006) Haptic feedback for the GPU-based surgical simulator. In: Proceedings of medicine meets virtual reality 14, pp 523–528</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="TOSHIBA (2002) Press release http://www.toshiba.co.jp/about/press/2002_05/pr2101.htm&#xA;                " /><p class="c-article-references__text" id="ref-CR22">TOSHIBA (2002) Press release <a href="http://www.toshiba.co.jp/about/press/2002_05/pr2101.htm">http://www.toshiba.co.jp/about/press/2002_05/pr2101.htm</a>
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="G. Wang, " /><meta itemprop="datePublished" content="2002" /><meta itemprop="headline" content="Wang G (2002) Definition and review of virtual prototyping, transactions of the ASME. J Comput Inf Sci Eng 2(3" /><p class="c-article-references__text" id="ref-CR23">Wang G (2002) Definition and review of virtual prototyping, transactions of the ASME. J Comput Inf Sci Eng 2(3):232–236</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1115%2F1.1526508" aria-label="View reference 23">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 23 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Definition%20and%20review%20of%20virtual%20prototyping%2C%20transactions%20of%20the%20ASME&amp;journal=J%20Comput%20Inf%20Sci%20Eng&amp;volume=2&amp;issue=3&amp;pages=232-236&amp;publication_year=2002&amp;author=Wang%2CG">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Ye J, Badiyani S, Raja V, Schlegel T (2007) Applications of virtual reality in product design evaluation. Huma" /><p class="c-article-references__text" id="ref-CR24">Ye J, Badiyani S, Raja V, Schlegel T (2007) Applications of virtual reality in product design evaluation. Human-Computer Interaction. HCI applications and services. Springer, Berlin, vol 4553/2007, August 2007, pp 1190–1199</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Yoganandan AR, Banerjee PP, Luciano CJ (2009) Applying augmented reality and haptics to evaluate dynamic proto" /><p class="c-article-references__text" id="ref-CR25">Yoganandan AR, Banerjee PP, Luciano CJ (2009) Applying augmented reality and haptics to evaluate dynamic prototypes of mobile devices. Workshop on cloud-mobile convergence for virtual reality (CMCVR‘09), March 2009</p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-010-0155-9-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><div class="c-article-section__content" id="Ack1-content"></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">Industrial Virtual Reality Institute, The Department of Mechanical and Industrial Engineering, University of Illinois at Chicago, Chicago, IL, USA</p><p class="c-article-author-affiliation__authors-list">Arun Rakesh Yoganandan, P. Pat Banerjee, Cristian J. Luciano &amp; Silvio H. R. Rizzi</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Arun_Rakesh-Yoganandan"><span class="c-article-authors-search__title u-h3 js-search-name">Arun Rakesh Yoganandan</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Arun Rakesh+Yoganandan&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Arun Rakesh+Yoganandan" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Arun Rakesh+Yoganandan%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-P_-Pat_Banerjee"><span class="c-article-authors-search__title u-h3 js-search-name">P. Pat Banerjee</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;P.+Pat Banerjee&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=P.+Pat Banerjee" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22P.+Pat Banerjee%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Cristian_J_-Luciano"><span class="c-article-authors-search__title u-h3 js-search-name">Cristian J. Luciano</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Cristian J.+Luciano&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Cristian J.+Luciano" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Cristian J.+Luciano%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Silvio_H__R_-Rizzi"><span class="c-article-authors-search__title u-h3 js-search-name">Silvio H. R. Rizzi</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Silvio H. R.+Rizzi&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Silvio H. R.+Rizzi" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Silvio H. R.+Rizzi%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-010-0155-9/email/correspondent/c1/new">P. Pat Banerjee</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=Prototyping%20flexible%20touch%20screen%20devices%20using%20collocated%20haptic-graphic%20elastic-object%20deformation%20on%20the%20GPU&amp;author=Arun%20Rakesh%20Yoganandan%20et%20al&amp;contentID=10.1007%2Fs10055-010-0155-9&amp;publication=1359-4338&amp;publicationDate=2010-02-20&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Yoganandan, A.R., Pat Banerjee, P., Luciano, C.J. <i>et al.</i> Prototyping flexible touch screen devices using collocated haptic-graphic elastic-object deformation on the GPU.
+                    <i>Virtual Reality</i> <b>16, </b>33–43 (2012). https://doi.org/10.1007/s10055-010-0155-9</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-010-0155-9.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2009-05-13">13 May 2009</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2010-01-28">28 January 2010</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2010-02-20">20 February 2010</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2012-03">March 2012</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-010-0155-9" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-010-0155-9</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Virtual reality prototyping</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Flexible displays</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Product simulation</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Haptics</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-010-0155-9.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=155;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

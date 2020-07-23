@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="Computer-automated ergonomic analysis based on motion capture and asse"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="This paper describes a method of simulating an assembly operation in a fully immersive virtual environment in order to analyze the postures of workers as they perform assembly operations in..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/19/2.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="Computer-automated ergonomic analysis based on motion capture and assembly simulation"/>
+
+    <meta name="dc.source" content="Virtual Reality 2015 19:2"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2015-03-06"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2015 Springer-Verlag London"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="This paper describes a method of simulating an assembly operation in a fully immersive virtual environment in order to analyze the postures of workers as they perform assembly operations in aerospace manufacturing. The challenges involved in capturing the movements of humans performing an assembly operation in a real work environment were overcome by developing a marker-based motion capture system and using it in a cave automatic virtual environment (CAVE). The development of the system focuses on real-time human motion capture and automated simulation for ergonomic analysis. Human movements were tracked in a CAVE, with infrared (IR) LEDs mounted on a human body. The captured motion data were used to generate a simulation in real-time and perform an ergonomic analysis in Jack software. The simulation also included the use of Microsoft Kinect as a marker-less human body capture system for the purpose of scaling the digital human model in Jack. The developed system has been demonstrated for human motion capture and ergonomic analysis for the fastening operation of an aircraft fuselage."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2015-03-06"/>
+
+    <meta name="prism.volume" content="19"/>
+
+    <meta name="prism.number" content="2"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="119"/>
+
+    <meta name="prism.endingPage" content="128"/>
+
+    <meta name="prism.copyright" content="2015 Springer-Verlag London"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-015-0261-9"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-015-0261-9"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-015-0261-9.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-015-0261-9"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer London"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="Computer-automated ergonomic analysis based on motion capture and assembly simulation"/>
+
+    <meta name="citation_volume" content="19"/>
+
+    <meta name="citation_issue" content="2"/>
+
+    <meta name="citation_publication_date" content="2015/06"/>
+
+    <meta name="citation_online_date" content="2015/03/06"/>
+
+    <meta name="citation_firstpage" content="119"/>
+
+    <meta name="citation_lastpage" content="128"/>
+
+    <meta name="citation_article_type" content="Original Article"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-015-0261-9"/>
+
+    <meta name="DOI" content="10.1007/s10055-015-0261-9"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-015-0261-9"/>
+
+    <meta name="description" content="This paper describes a method of simulating an assembly operation in a fully immersive virtual environment in order to analyze the postures of workers as t"/>
+
+    <meta name="dc.creator" content="Sajeev C. Puthenveetil"/>
+
+    <meta name="dc.creator" content="Chinmay P. Daphalapurkar"/>
+
+    <meta name="dc.creator" content="Wenjuan Zhu"/>
+
+    <meta name="dc.creator" content="Ming C. Leu"/>
+
+    <meta name="dc.creator" content="Xiaoqing F. Liu"/>
+
+    <meta name="dc.creator" content="Julie K. Gilpin-Mcminn"/>
+
+    <meta name="dc.creator" content="Scott D. Snodgrass"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="AForge.NET: Computer vision, artificial intelligence, robotics (2012). 
+                    http://www.aforgenet.com/framework/
+                    
+                  
+                "/>
+
+    <meta name="citation_reference" content="citation_title=Simulating humans: computer graphics, animation and control; citation_publication_date=1999; citation_id=CR2; citation_author=N Badler; citation_author=CB Phillips; citation_author=BL Webber; citation_publisher=University of Pennsylvania, Oxford University Press"/>
+
+    <meta name="citation_reference" content="Bouguet JY, Camera calibration toolbox for Matlab (2012). 
+                    http://www.vision.caltech.edu/bouguetj/calib_doc/index.html
+                    
+                  
+                "/>
+
+    <meta name="citation_reference" content="Bureau of Labor Statistics (2007). 
+                    http://www.bls.gov/opub/ted/2008/dec/wk1/art02.htm
+                    
+                  
+                "/>
+
+    <meta name="citation_reference" content="Chadda A, Zhu W, Leu MC, Liu X (2011) Design, implementation and evaluation of optical low-cost motion capture system. In: proceedings of the ASME international design engineering technical conferences and computers and information in engineering conference (IDETC/CIE), August 29&#8211;31, Washington, DC, USA"/>
+
+    <meta name="citation_reference" content="Fernando T, Marcelino L, Wimalaratne P, Tan K (2000) Interactive assembly modeling within a CAVE environment. In: proceedings of Eurographics-Portuguese Chapter, p 43&#8211;49"/>
+
+    <meta name="citation_reference" content="Frati V, Prattichizzo D (2011) Using Kinect for hand tracking and rendering in wearable haptics. In: proceedings of IEEE world haptics conference, June 21&#8211;24, Istanbul, Turkey, p 317&#8211;321"/>
+
+    <meta name="citation_reference" content="Gaonkar R, Madhavan V, Zhao W (2006) Virtual assembly operations with grasp and verbal interaction. In: proceedings of the ACM international conference on virtual reality continuum and its applications, June 14&#8211;17, Chinese University of Hong Kong, Hong Kong, p 245&#8211;254"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comput Vis Image Underst; citation_title=Triangulation; citation_author=RI Hartley, P Sturm; citation_volume=68; citation_issue=2; citation_publication_date=1997; citation_pages=146-157; citation_doi=10.1006/cviu.1997.0547; citation_id=CR9"/>
+
+    <meta name="citation_reference" content="Joshi AS, Leu MC, Murray S (2008) Ergonomic impact of fastening operation. In: proceedings of 2nd CIRP conference on assembly technologies and systems, September 21&#8211;23, Toronto, ON, Canada"/>
+
+    <meta name="citation_reference" content="Kinect for Windows SDK (2012). 
+                    http://www.microsoft.com/en-us/kinectforwindows/
+                    
+                  
+                "/>
+
+    <meta name="citation_reference" content="Kinect Xbox (2012). 
+                    http://www.xbox.com/en-US/KINECT
+                    
+                  
+                "/>
+
+    <meta name="citation_reference" content="Kurihara K, Hoshino S, Yamane K, Nakamura Y (2002) Optical motion capture system with pan-tilt camera tracking and real-time data processing. In: proceedings of the IEEE International conference on robotics and automation, May 11&#8211;15, Washington, DC, USA, p 1241&#8211;1248"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Appl Ergon; citation_title=RULA: a survey method for the investigation of world-related upper limb disorders; citation_author=L McAtamney, EN Corlet; citation_volume=24; citation_issue=2; citation_publication_date=1993; citation_pages=91-99; citation_doi=10.1016/0003-6870(93)90080-S; citation_id=CR15"/>
+
+    <meta name="citation_reference" content="Phasespace Motion Capture (2012). 
+                    http://www.phasespace.com/
+                    
+                  
+                "/>
+
+    <meta name="citation_reference" content="Point Grey Research (2012). 
+                    http://www.ptgrey.com/
+                    
+                  
+                "/>
+
+    <meta name="citation_reference" content="Stowers J, Hayes M, Bainbridge-Smith A (2011) Altitude control of a quadrotor helicopter using depth map from Microsoft Kinect sensor. In: proceedings of the IEEE international conference on mechatronics, April 13&#8211;15, Istanbul, Turkey, p 358&#8211;362"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Trans Patt Mach Intell; citation_title=A flexible new technique for camera calibration; citation_author=Z Zhang; citation_volume=22; citation_issue=11; citation_publication_date=2000; citation_pages=1330-1334; citation_doi=10.1109/34.888718; citation_id=CR19"/>
+
+    <meta name="citation_author" content="Sajeev C. Puthenveetil"/>
+
+    <meta name="citation_author_email" content="sajeev_ekmin@yahoo.co.in"/>
+
+    <meta name="citation_author_institution" content="Codeware Inc., Sarasota, USA"/>
+
+    <meta name="citation_author" content="Chinmay P. Daphalapurkar"/>
+
+    <meta name="citation_author_institution" content="ESI Group, Farmington Hills, USA"/>
+
+    <meta name="citation_author" content="Wenjuan Zhu"/>
+
+    <meta name="citation_author_institution" content="Missouri University of Science and Technology, Rolla, USA"/>
+
+    <meta name="citation_author" content="Ming C. Leu"/>
+
+    <meta name="citation_author_institution" content="Missouri University of Science and Technology, Rolla, USA"/>
+
+    <meta name="citation_author" content="Xiaoqing F. Liu"/>
+
+    <meta name="citation_author_institution" content="Missouri University of Science and Technology, Rolla, USA"/>
+
+    <meta name="citation_author" content="Julie K. Gilpin-Mcminn"/>
+
+    <meta name="citation_author_institution" content="Spirit AeroSystems, Wichita, USA"/>
+
+    <meta name="citation_author" content="Scott D. Snodgrass"/>
+
+    <meta name="citation_author_institution" content="Spirit AeroSystems, Wichita, USA"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-015-0261-9&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2015/06/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-015-0261-9"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="Computer-automated ergonomic analysis based on motion capture and assembly simulation"/>
+        <meta property="og:description" content="This paper describes a method of simulating an assembly operation in a fully immersive virtual environment in order to analyze the postures of workers as they perform assembly operations in aerospace manufacturing. The challenges involved in capturing the movements of humans performing an assembly operation in a real work environment were overcome by developing a marker-based motion capture system and using it in a cave automatic virtual environment (CAVE). The development of the system focuses on real-time human motion capture and automated simulation for ergonomic analysis. Human movements were tracked in a CAVE, with infrared (IR) LEDs mounted on a human body. The captured motion data were used to generate a simulation in real-time and perform an ergonomic analysis in Jack software. The simulation also included the use of Microsoft Kinect as a marker-less human body capture system for the purpose of scaling the digital human model in Jack. The developed system has been demonstrated for human motion capture and ergonomic analysis for the fastening operation of an aircraft fuselage."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>Computer-automated ergonomic analysis based on motion capture and assembly simulation | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-015-0261-9","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Assembly simulation, CAVE, Ergonomic analysis, Firefly, Kinect, Motion capture, Virtual fastening","kwrd":["Assembly_simulation","CAVE","Ergonomic_analysis","Firefly","Kinect","Motion_capture","Virtual_fastening"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-015-0261-9","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-015-0261-9","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=261;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-015-0261-9">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            Computer-automated ergonomic analysis based on motion capture and assembly simulation
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-015-0261-9.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-015-0261-9.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">Original Article</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2015-03-06" itemprop="datePublished">06 March 2015</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">Computer-automated ergonomic analysis based on motion capture and assembly simulation</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Sajeev_C_-Puthenveetil" data-author-popup="auth-Sajeev_C_-Puthenveetil" data-corresp-id="c1">Sajeev C. Puthenveetil<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Codeware Inc." /><meta itemprop="address" content="Codeware Inc., 5224 Station Way, Sarasota, FL, 34233, USA" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Chinmay_P_-Daphalapurkar" data-author-popup="auth-Chinmay_P_-Daphalapurkar">Chinmay P. Daphalapurkar</a></span><sup class="u-js-hide"><a href="#Aff2">2</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="ESI Group" /><meta itemprop="address" content="grid.450729.d, ESI Group, 32605 West 12 Mile Road, Suite 350, Farmington Hills, MI, 48334, USA" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Wenjuan-Zhu" data-author-popup="auth-Wenjuan-Zhu">Wenjuan Zhu</a></span><sup class="u-js-hide"><a href="#Aff3">3</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Missouri University of Science and Technology" /><meta itemprop="address" content="grid.260128.f, 0000000093646281, Missouri University of Science and Technology, Rolla, MO, 65409, USA" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Ming_C_-Leu" data-author-popup="auth-Ming_C_-Leu">Ming C. Leu</a></span><sup class="u-js-hide"><a href="#Aff3">3</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Missouri University of Science and Technology" /><meta itemprop="address" content="grid.260128.f, 0000000093646281, Missouri University of Science and Technology, Rolla, MO, 65409, USA" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Xiaoqing_F_-Liu" data-author-popup="auth-Xiaoqing_F_-Liu">Xiaoqing F. Liu</a></span><sup class="u-js-hide"><a href="#Aff3">3</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Missouri University of Science and Technology" /><meta itemprop="address" content="grid.260128.f, 0000000093646281, Missouri University of Science and Technology, Rolla, MO, 65409, USA" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Julie_K_-Gilpin_Mcminn" data-author-popup="auth-Julie_K_-Gilpin_Mcminn">Julie K. Gilpin-Mcminn</a></span><sup class="u-js-hide"><a href="#Aff4">4</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Spirit AeroSystems" /><meta itemprop="address" content="grid.467592.b, 0000000406477205, Spirit AeroSystems, Wichita, KS, 67278, USA" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Scott_D_-Snodgrass" data-author-popup="auth-Scott_D_-Snodgrass">Scott D. Snodgrass</a></span><sup class="u-js-hide"><a href="#Aff4">4</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Spirit AeroSystems" /><meta itemprop="address" content="grid.467592.b, 0000000406477205, Spirit AeroSystems, Wichita, KS, 67278, USA" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 19</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">119</span>–<span itemprop="pageEnd">128</span>(<span data-test="article-publication-year">2015</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">913 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">16 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-015-0261-9/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>This paper describes a method of simulating an assembly operation in a fully immersive virtual environment in order to analyze the postures of workers as they perform assembly operations in aerospace manufacturing. The challenges involved in capturing the movements of humans performing an assembly operation in a real work environment were overcome by developing a marker-based motion capture system and using it in a cave automatic virtual environment (CAVE). The development of the system focuses on real-time human motion capture and automated simulation for ergonomic analysis. Human movements were tracked in a CAVE, with infrared (IR) LEDs mounted on a human body. The captured motion data were used to generate a simulation in real-time and perform an ergonomic analysis in Jack software. The simulation also included the use of Microsoft Kinect as a marker-less human body capture system for the purpose of scaling the digital human model in Jack. The developed system has been demonstrated for human motion capture and ergonomic analysis for the fastening operation of an aircraft fuselage.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Introduction</h2><div class="c-article-section__content" id="Sec1-content"><p>Manufacturing and assembly processes usually involve a number of manual operations performed by human operators working on the shop floor. For example, fastening is one of the major operations performed at aircraft assembly plants. During the installation of the belly skin of an aircraft fuselage, approximately 2,000 fasteners are installed. The mechanic performing the fastening operation at awkward postures may risk ergonomic injuries (Joshi et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Joshi AS, Leu MC, Murray S (2008) Ergonomic impact of fastening operation. In: proceedings of 2nd CIRP conference on assembly technologies and systems, September 21–23, Toronto, ON, Canada" href="/article/10.1007/s10055-015-0261-9#ref-CR10" id="ref-link-section-d3321e427">2008</a>). Nearly one-third of workplace injuries are ergonomically related injuries (Bureau of Labor Statistics <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Bureau of Labor Statistics (2007). &#xA;                    http://www.bls.gov/opub/ted/2008/dec/wk1/art02.htm&#xA;                    &#xA;                  &#xA;                " href="/article/10.1007/s10055-015-0261-9#ref-CR4" id="ref-link-section-d3321e430">2007</a>). To design safe workplaces, the probable causes of injuries must be identified by simulating the work conditions and quantifying the risk factors. Jack (Badler et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Badler N, Phillips CB, Webber BL (1999) Simulating humans: computer graphics, animation and control. University of Pennsylvania, Oxford University Press, Department of Computer and Information Science" href="/article/10.1007/s10055-015-0261-9#ref-CR2" id="ref-link-section-d3321e433">1999</a>) is one of the digital human modeling software tools that can be used to develop simulations to perform ergonomic analysis. Developing animations using the key frame method in Jack is time consuming and depends on the skills of the person using the simulation software. This issue can be addressed by using motion capture technology to track the movements of an operator and drive the digital human model in a simulation using the captured data. There are various challenges involved in capturing human motions in a real work environment. In this paper, we describe a methodology of using a low-cost motion capture system to track the assembly operation in an immersive virtual environment, use the captured motion data for ergonomic analysis, and demonstrate the application of this system for the fastening operation in the aerospace industry.</p><p>Capturing motion data in a real work environment is a challenging task. Assembly line workstations on factory floors operate in narrow time windows within limited spaces. Setting up a motion capture system on the shop floor is a time-consuming process that may affect the productivity of the worker whose movements have to be captured for ergonomic analysis. Infrared (IR) markers attached to the body of the worker may limit body movements while performing assembly tasks. Highly reflective surfaces in a work environment also affect the tracking capabilities of IR-based motion capture systems. Environmental variables such as machinery vibrations can cause the cameras to move from their calibrated position. Moreover, security restrictions in a work environment often prohibit the use of cameras. These limitations can be addressed by using a virtual environment to perform virtual assembly operations. Operator movements within a virtual environment can be tracked using motion capture systems, and the motion data can be used for ergonomic analysis without compromising productivity on the shop floor.</p><p>A CAVE has been used previously to study various assembly operations. Fernando et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Fernando T, Marcelino L, Wimalaratne P, Tan K (2000) Interactive assembly modeling within a CAVE environment. In: proceedings of Eurographics-Portuguese Chapter, p 43–49" href="/article/10.1007/s10055-015-0261-9#ref-CR6" id="ref-link-section-d3321e441">2000</a>) designed and implemented a virtual environment using a CAVE to simulate interactive assembly and maintenance tasks in which CAD models of assembly parts were loaded into the CAVE for performing virtual assembly operations. In the study described in the present paper, the worker performs a fastening operation on the belly section of an aircraft fuselage in a 3 m × 3 m × 3 m four-walled CAVE environment. The layout of the system included three rear-projected walls and a front-projected floor using CRT projectors. The projections on the walls of the CAVE were rendered by four synchronized computers. Virtual reality toolkits including VR Juggler and OpenGL were used to create a virtual 3D environment in the CAVE. The motion data captured during the virtual fastening operation was used for real-time simulation and ergonomic analysis.</p><p>In an optical tracking system, the targets are generally configurations of either active or passive markers. We used active markers as targets in our motion tracking system. While passive markers are easier to maintain, they require more expensive hardware in the form of a high-intensity IR light source, whose illumination must be synchronized with the camera shutter. The cost of building a synchronization circuit increases the cost of the system and restricts the system due to its requirement of special cameras whose shutters can be controlled. Our system was built using two Firefly MV cameras from Point Grey Research (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2012" title="Point Grey Research (2012). &#xA;                    http://www.ptgrey.com/&#xA;                    &#xA;                  &#xA;                " href="/article/10.1007/s10055-015-0261-9#ref-CR17" id="ref-link-section-d3321e447">2012</a>), one Kinect (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2012" title="Kinect Xbox (2012). &#xA;                    http://www.xbox.com/en-US/KINECT&#xA;                    &#xA;                  &#xA;                " href="/article/10.1007/s10055-015-0261-9#ref-CR12" id="ref-link-section-d3321e450">2012</a>), and other off-the-shelf components. The total cost of the developed system was about $1200. The Firefly camera system costs $700, the Kinect device costs $150, and the costs of the rest of the system were associated with the IR LEDs, calibration plate, camera mounts, connecting cables, body suit, and marker mounts. This system was used to track the head, elbow, and wrist of the person performing an assembly operation.</p><p>Jack software can be used to simulate the fastening operation from the recorded motion data of the head, elbow, and wrist segments. To increase reproduction accuracy of postures during simulation, all segments of the digital human model in Jack should be scaled to match the lengths of subject’s body segments (Gaonkar et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Gaonkar R, Madhavan V, Zhao W (2006) Virtual assembly operations with grasp and verbal interaction. In: proceedings of the ACM international conference on virtual reality continuum and its applications, June 14–17, Chinese University of Hong Kong, Hong Kong, p 245–254" href="/article/10.1007/s10055-015-0261-9#ref-CR8" id="ref-link-section-d3321e457">2006</a>). Manually measuring the length of each body segment is tedious and time consuming. Our low-cost motion capture system with two cameras can track only three body segments, so it cannot provide sufficient information for scaling the human model. Hence, we utilized the skeleton-tracking capability of Kinect to develop the digital human model in Jack.</p><p>Kinect was developed by Microsoft for the Xbox 360 gaming system and introduced in November 2010. The marker-less motion tracking capability of Kinect has caught the attention of numerous software professionals and hobbyists seeking to develop applications other than gaming. Frati and Prattichizzo (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2011" title="Frati V, Prattichizzo D (2011) Using Kinect for hand tracking and rendering in wearable haptics. In: proceedings of IEEE world haptics conference, June 21–24, Istanbul, Turkey, p 317–321" href="/article/10.1007/s10055-015-0261-9#ref-CR7" id="ref-link-section-d3321e463">2011</a>) developed a hand-tracking algorithm to propose a solution using Kinect to compensate for the lack of position sensing in wearable haptics. The depth data from the Kinect sensor were used to control the altitude of a quadrotor helicopter (Stowers et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2011" title="Stowers J, Hayes M, Bainbridge-Smith A (2011) Altitude control of a quadrotor helicopter using depth map from Microsoft Kinect sensor. In: proceedings of the IEEE international conference on mechatronics, April 13–15, Istanbul, Turkey, p 358–362" href="/article/10.1007/s10055-015-0261-9#ref-CR18" id="ref-link-section-d3321e466">2011</a>). The open natural interaction (OpenNI) framework and the Kinect for Windows are software development kits (SDKs) available for developing applications with the Kinect. In our research, the Kinect device and the Microsoft Kinect SDK were used to develop an application for digital human auto-scaling in Jack software, which to our knowledge is the first use of Kinect for scaling a digital human model.</p><p>This paper provides a comprehensive description of developing a CAVE-based virtual environment in which to perform a virtual fastening operation that uses a low-cost human motion capture system for real-time simulation of assembly operations and ergonomic analysis. We developed the system using two Firefly MV cameras, one Kinect, and other off-the-shelf components. We describe a method for digitally scaling a human model for simulation using Kinect. We developed a human body segment identification algorithm capable of tracking three human body segments simultaneously during a virtual fastening operation. The captured motion data from the Firefly camera system were used to simulate the digital human model and perform a rapid upper limb assessment (RULA) analysis at different postures.</p></div></div></section><section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">Human motion capture system development</h2><div class="c-article-section__content" id="Sec2-content"><p>Optical motion capture systems can be marker based or marker less. An active marker-based system to track IR LEDs was utilized in this study. The resources required to acquire human motion data involve a camera system that is sensitive to IR LEDs, a body suit with a designed marker model for the system, calibration setup for the camera system, an image processing algorithm for extracting the image points, and a robust body segment identification algorithm. In the motion capture system, image grabbing was kept independent of the rest of the processing steps to ensure that the system ran at the desired frame rate of 60 fps. The average system latency was 14.3 ms per frame and most of the system latency was introduced in the image processing stage (Chadda et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2011" title="Chadda A, Zhu W, Leu MC, Liu X (2011) Design, implementation and evaluation of optical low-cost motion capture system. In: proceedings of the ASME international design engineering technical conferences and computers and information in engineering conference (IDETC/CIE), August 29–31, Washington, DC, USA" href="/article/10.1007/s10055-015-0261-9#ref-CR5" id="ref-link-section-d3321e479">2011</a>).</p><h3 class="c-article__sub-heading" id="Sec3">Motion tracking hardware</h3><p>The system’s hardware was built using off-the-shelf components. Two Firefly MV cameras were set up as a stereo vision system to track the position of IR LEDs. The Firefly MV cameras are 1/3″ progressive scan CMOS cameras with a maximum resolution of 752 × 480 pixels. They interface with the computer using the IEEE 1394 port and can run at a rate of 63 fps at the maximum resolution. The cameras were placed on a long steel bar and then secured into position. A calibration board was created using a printed sheet with a checkerboard pattern and placed on a wooden plate. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-015-0261-9#Fig1">1</a> shows the camera setup and the calibration plate. The camera calibration algorithm developed by Zhang (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Zhang Z (2000) A flexible new technique for camera calibration. IEEE Trans Patt Mach Intell 22(11):1330–1334" href="/article/10.1007/s10055-015-0261-9#ref-CR19" id="ref-link-section-d3321e492">2000</a>), and coded by Bouguet (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2012" title="Bouguet JY, Camera calibration toolbox for Matlab (2012). &#xA;                    http://www.vision.caltech.edu/bouguetj/calib_doc/index.html&#xA;                    &#xA;                  &#xA;                " href="/article/10.1007/s10055-015-0261-9#ref-CR3" id="ref-link-section-d3321e495">2012</a>) as a camera calibration toolbox of the MATLAB software, was used for calculating the camera parameters. A T-shaped plate containing four LEDs was used to define the world coordinate system (WCS).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-015-0261-9/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-015-0261-9/MediaObjects/10055_2015_261_Fig1_HTML.jpg?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-015-0261-9/MediaObjects/10055_2015_261_Fig1_HTML.jpg" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p>Camera setup and calibration plate</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-015-0261-9/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>Active markers consisting of wide-angle LEDs were used as targets. Plastic shells served as marker mounts, which were attached to a skin-tight compression suit. Another piece of hardware utilized was the Kinect, which is a natural user interface (NUI) technology developed by Microsoft, to scale the digital human model in Jack software. The device includes an IR emitter, a depth sensor, and an RGB camera having 640 × 480 pixel resolution and operating at 30 fps. It interprets 3D scene information from a continuously projected IR structured light. This system can be used for marker-less human motion tracking.</p><h3 class="c-article__sub-heading" id="Sec4">Image processing</h3><p>Images from the cameras contained a lot of data that were not useful for tracking marker-based objects. These unwanted data were reduced significantly by placing an IR filter over the camera’s lens. The images further underwent a series of transformations so as to extract the center point of an IR LED. The image was first converted into a grayscale image to reduce the search space as shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-015-0261-9#Fig2">2</a>a. The data required for processing per pixel were reduced to 8 bits, and then a threshold intensity of 230 was applied. The threshold value was selected based on a pixel-wise histogram plot for an image with intensity values ranging from 0 to 255. All pixels with intensities above the threshold were converted into white pixels and the rest into black pixels, thus reducing the search space from 8 bits per pixel to 1 bit per pixel. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-015-0261-9#Fig2">2</a>b shows the image after applying the threshold. The resulting image then was ready to be processed for extracting the IR blobs. The AForge.Net (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2012" title="AForge.NET: Computer vision, artificial intelligence, robotics (2012). &#xA;                    http://www.aforgenet.com/framework/&#xA;                    &#xA;                  &#xA;                " href="/article/10.1007/s10055-015-0261-9#ref-CR1" id="ref-link-section-d3321e532">2012</a>) framework provides classes for extracting blobs and representing them with a best-fit rectangle. The center of this rectangle was taken as the center point representing the LED. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-015-0261-9#Fig2">2</a>c, d shows the blobs represented with best-fit rectangles and the extracted center points of blobs, respectively. In order to reconstruct the 3D positions of IR LEDs, correspondences must be established between the image points seen by the two cameras. The correspondence algorithm determined the pixel coordinates of an LED in the second camera given the pixel coordinates in the first camera. To ease the process of finding the corresponding point, the constraints of epipolar geometry on the pinhole camera model were used (Chadda et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2011" title="Chadda A, Zhu W, Leu MC, Liu X (2011) Design, implementation and evaluation of optical low-cost motion capture system. In: proceedings of the ASME international design engineering technical conferences and computers and information in engineering conference (IDETC/CIE), August 29–31, Washington, DC, USA" href="/article/10.1007/s10055-015-0261-9#ref-CR5" id="ref-link-section-d3321e538">2011</a>). After the image points were corresponded, their 3D coordinates were calculated based on the stereo triangulation algorithm described by Hartley and Sturm (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="Hartley RI, Sturm P (1997) Triangulation. Comput Vis Image Underst 68(2):146–157" href="/article/10.1007/s10055-015-0261-9#ref-CR9" id="ref-link-section-d3321e542">1997</a>).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-015-0261-9/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-015-0261-9/MediaObjects/10055_2015_261_Fig2_HTML.jpg?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-015-0261-9/MediaObjects/10055_2015_261_Fig2_HTML.jpg" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p>Stages in image processing: <b>a</b> image from camera, <b>b</b> image after applying threshold, <b>c</b> blob extraction, and <b>d</b> extracted centers of IR blobs</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-015-0261-9/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>In many situations, static noise exists in the environment from ambient lighting that is not of interest. To overcome this problem, static noise masking was implemented in our system, wherein after the cameras had been set up, the environment was scanned for static reflexes without the presence of any LEDs. When static noise was found, the pixel coordinates, along with the details of the blob (e.g., height and width), were stored in a file. During tracking, each detected blob was verified against the set of stored blobs and identified whether the details matched (location and size each within a range of ±2 pixels). If an LED is placed at exactly the same position as a source of static noise, its position might match, but the size of its blob will be different and hence will not be confused for noise. If the position of static noise shifts, a simple click of a button will re-scan the surroundings and store the new noise data. This is essential if the tracking is performed in a work environment.</p><h3 class="c-article__sub-heading" id="Sec5">Marker design</h3><p>The targets used for tracking were active markers composed of wide-angle IR LEDs. All the LEDs in an active marker system are either turned on at the same time or pulsed in sync with the cameras’ digital shutters (the markers can communicate unique identifications by modulating their pulses). PhaseSpace Motion Capture (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2012" title="Phasespace Motion Capture (2012). &#xA;                    http://www.phasespace.com/&#xA;                    &#xA;                  &#xA;                " href="/article/10.1007/s10055-015-0261-9#ref-CR16" id="ref-link-section-d3321e586">2012</a>) uses LED controllers to assign unique IDs to the active markers. We used active markers powered by an on-object power supply, not by an LED controller circuit. This required the markers to be designed in such a way that each marker was labeled during the tracking process. One of the problems with this active marker design was that their batteries had to be changed after a period of time. However, the cost advantage provided by our marker system made them an ideal choice for a low-cost system. They can be assembled with commonly available, inexpensive parts.</p><p>Tracking one or more body segments required that a system of markers be designed. Our objective was to capture the movements of three human body segments, including the wrist, elbow, and head. A human skeletal model cannot be defined when only three body segments are tracked. Algorithms for identifying body segments without the use of a skeletal model can be developed by using asymmetrical marker distribution and polyhedral search techniques (Kurihara et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Kurihara K, Hoshino S, Yamane K, Nakamura Y (2002) Optical motion capture system with pan-tilt camera tracking and real-time data processing. In: proceedings of the IEEE International conference on robotics and automation, May 11–15, Washington, DC, USA, p 1241–1248" href="/article/10.1007/s10055-015-0261-9#ref-CR13" id="ref-link-section-d3321e592">2002</a>). In our system, a marker model was designed such that each human body segment was considered as a rigid body represented by three IR markers mounted on it.</p><p>Markers attached to the body suit with double-adhesive tapes are prone to moving in relation to the underlying bone structure. Therefore, we used cluster-based marker sets consisting of a plastic shell with three markers attached to the shell. The plastic shells then were fastened to a skin-tight compression suit using a velcro strap. The use of marker mounts (plastic shells) eliminated relative movements between the markers mounted on each body segment.</p><p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-015-0261-9#Fig3">3</a>a shows three LEDs placed on a marker mount for the elbow joint. The IR LEDs were arranged back to back in order to achieve the maximum tracking angle of 360°. It is essential to arrange the markers on the shell in such a way that the distances between them are pairwise different. Out of the three markers in a body segment, the marker closest to a joint served as the reference marker (LED 1), which defined the position of the nearest body joint. The vectors 1-Xc, 1-Yc and 1-Zc together represented the local coordinate system of the body segment whose center was at LED 1. The marker coordinate system in the motion capture system had to be transformed in order to match the Jack coordinate system. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-015-0261-9#Fig3">3</a>b shows the arrangement of nine markers on the head, elbow, and wrist segments for tracking.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-015-0261-9/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-015-0261-9/MediaObjects/10055_2015_261_Fig3_HTML.gif?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-015-0261-9/MediaObjects/10055_2015_261_Fig3_HTML.gif" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p>Marker design: <b>a</b> elbow marker mount, <b>b</b> marker positions</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-015-0261-9/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <h3 class="c-article__sub-heading" id="Sec6">Body segment identification</h3><p>During tracking, the subject’s movement was tracked by the cameras, and the three-dimensional trajectory of each marker attached to the body was reconstructed. For identifying the markers attached to a body segment, the markers were labeled during the body calibration process. The subject wearing the body suit performed a range of motions with the IR markers attached to only one body segment turned on at a time. The set of three distances formed between the three markers on a segment was stored. These distances later were used to identify a particular body segment, each of which was represented by a segment name. At every time instant during the tracking, the application calculated the set of all distances between all the markers, which are represented in a Euclidean distance matrix (EDM) as:</p><div id="Equa" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$${\text{EDM}} = \left\{ {d\left( {m_{i} ,m_{j} } \right)} \right. | m_{i} , m_{j} \in M;i,j = 0,1..n\}$$</span></div></div><p>where <i>M</i> is the set of all markers in a configuration consisting of (<i>n</i> + 1) markers, and <i>d (m</i>
+                  <sub>
+                    <i>i</i>
+                  </sub>
+                  <i>, m</i>
+                  <sub>
+                    <i>j</i>
+                  </sub>
+                  <i>)</i> denotes the Euclidean distance between two markers, <i>m</i>
+                  <sub>
+                    <i>i</i>
+                  </sub> and <i>m</i>
+                  <sub>
+                    <i>j</i>
+                  </sub>, in 3D space. The (<i>n</i> + 1) × (<i>n</i> + 1) dimensional matrix EDM stores all the distances between the markers. From this equation, it follows that <i>d(m</i>
+                  <sub>
+                    <i>i</i>
+                  </sub>
+                  <i>,m</i>
+                  <sub>
+                    <i>i</i>
+                  </sub>) = 0, and <i>d</i> is symmetric, i.e., <i>d(m</i>
+                  <sub>
+                    <i>i</i>
+                  </sub>
+                  <i>,m</i>
+                  <sub>
+                    <i>j</i>
+                  </sub>
+                  <i>)</i> = <i>d(m</i>
+                  <sub>
+                    <i>j</i>
+                  </sub>
+                  <i>,m</i>
+                  <sub>
+                    <i>i</i>
+                  </sub>
+                  <i>)</i>. The markers on each body segment are designed to have unique distances. Hence, <i>d(m</i>
+                  <sub>
+                    <i>i</i>
+                  </sub>
+                  <i>,m</i>
+                  <sub>
+                    <i>j</i>
+                  </sub>
+                  <i>)</i> are pairwise different for all 0 ≤ <i>i</i> &lt; <i>j</i> ≤ <i>n</i>.</p><p>While tracking the body segments modeled as rigid bodies, each segment is identified by means of distance detection. The body segment identification algorithm matches the pre-defined point-to-point distances between the markers in a body segment to distances <i>d</i>
+                  <sub>
+                    <i>ij</i>
+                  </sub> = <i>d(m</i>
+                  <sub>
+                    <i>i</i>
+                  </sub>
+                  <i>, m</i>
+                  <sub>
+                    <i>j</i>
+                  </sub>
+                  <i>)</i> stored in the <i>i</i>-th row and <i>j</i>-th column of matrix EDM, which describes the set of all the distances formed between all the markers. A certain distance threshold (ε) is applied while matching the distances to account for accuracy errors. If any <i>d</i>
+                  <sub>
+                    <i>ij</i>
+                  </sub> varies by at most the distance threshold of ‘ε’ from some <i>d</i> ϵ EDM, i.e., if |<i>d</i>–<i>d</i>
+                  <sub>
+                    <i>ij</i>
+                  </sub>| &lt; ε, it is assumed that <i>d</i> = <i>d</i>
+                  <sub>
+                    <i>ij</i>
+                  </sub>. If the defined threshold is very small, distances may not be found. If the chosen threshold is too high, there may be ambiguities with other distances. Hence, the threshold must be chosen carefully based on the accuracy of the system. Let the first two markers of a detected body segment be <i>m</i>
+                  <sub>
+                    <i>i</i>
+                  </sub> and <i>m</i>
+                  <sub>
+                    <i>j</i>
+                  </sub>. The algorithm continues searching until a third marker, <i>m</i>
+                  <sub>
+                    <i>k</i>
+                  </sub>, is identified by detecting the distances <i>d</i>
+                  <sub>
+                    <i>ik</i>
+                  </sub> or <i>d</i>
+                  <sub>
+                    <i>jk</i>
+                  </sub> in the distance matrix EDM.</p><p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-015-0261-9#Fig4">4</a>b can be used to explain the process of identifying the head segment during tracking in a virtual fastening operation shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-015-0261-9#Fig4">4</a>a. The markers are represented as <i>m</i>
+                  <sub>
+                    <i>0</i>
+                  </sub>,…,<i>m</i>
+                  <sub>
+                    <i>n</i>
+                  </sub>, and (n + 1) is the number of markers. Distance <i>d</i>
+                  <sub>
+                    <i>ij</i>
+                  </sub> represents the distance between markers <i>m</i>
+                  <sub>
+                    <i>i</i>
+                  </sub> and <i>m</i>
+                  <sub>
+                    <i>j</i>
+                  </sub>. Ideally, a set of three distances in the EDM represents the distance formed between the markers on the head segment (or any other body segment). However, during tracking, more than three distances might be identified that fall within the distance range for a body segment. Let the set of distances identified for the head segment be D <span class="mathjax-tex">\(\in\)</span>{<i>d</i>
+                  <sub>01</sub>, <i>d</i>
+                  <sub>35</sub>, <i>d</i>
+                  <sub>12</sub>, <i>d</i>
+                  <sub>47</sub>, <i>d</i>
+                  <sub>02</sub>}. The marker pairs that form these distances are identified as MP <span class="mathjax-tex">\(\in\)</span>{(<i>m</i>
+                  <sub>0</sub>, <i>m</i>
+                  <sub>1</sub>), (<i>m</i>
+                  <sub>3</sub>, <i>m</i>
+                  <sub>5</sub>), (<i>m</i>
+                  <sub>1</sub>, <i>m</i>
+                  <sub>2</sub>), (<i>m</i>
+                  <sub>4</sub>, <i>m</i>
+                  <sub>7</sub>), (<i>m</i>
+                  <sub>0</sub>, <i>m</i>
+                  <sub>2</sub>)}. The first marker pair (<i>m</i>
+                  <sub>0</sub>, <i>m</i>
+                  <sub>1</sub>) is selected and compared with the subsequent marker pairs. In seeking a match for any of the markers in the subsequent pairs, the matching pair (<i>m</i>
+                  <sub>1</sub>, <i>m</i>
+                  <sub>2</sub>) is selected. The two selected marker pairs are [(<i>m</i>
+                  <sub>0</sub>, <i>m</i>
+                  <sub>1</sub>), (<i>m</i>
+                  <sub>1</sub>, <i>m</i>
+                  <sub>2</sub>)]. The markers that the two selected pairs do not share in common (<i>m</i>
+                  <sub>0</sub>, <i>m</i>
+                  <sub>2</sub>) are sought in the set of all marker pairs. The marker pair set forming the head segment is [(<i>m</i>
+                  <sub>0</sub>, <i>m</i>
+                  <sub>1</sub>), (<i>m</i>
+                  <sub>1</sub>, <i>m</i>
+                  <sub>2</sub>), (<i>m</i>
+                  <sub>0</sub>, <i>m</i>
+                  <sub>2</sub>)]. Thus, the markers <i>m</i>
+                  <sub>
+                    <i>0</i>
+                  </sub>, <i>m</i>
+                  <sub>
+                    <i>1</i>
+                  </sub> and <i>m</i>
+                  <sub>
+                    <i>2</i>
+                  </sub> that form the head segment are identified. The IR LED m<sub>0</sub> that forms the shortest distance (<i>d</i>
+                  <sub>01</sub>) and the longest distance (<i>d</i>
+                  <sub>02</sub>) within the marker pair set defines the joint position.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-015-0261-9/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-015-0261-9/MediaObjects/10055_2015_261_Fig4_HTML.gif?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-015-0261-9/MediaObjects/10055_2015_261_Fig4_HTML.gif" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p>Body segment identification: <b>a</b> virtual fastening operation in CAVE, <b>b</b> EDM formed by the IR markers</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-015-0261-9/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                </div></div></section><section aria-labelledby="Sec7"><div class="c-article-section" id="Sec7-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec7">Capture of motion data and motion simulation</h2><div class="c-article-section__content" id="Sec7-content"><p>The motion data captured during the virtual fastening operation in the CAVE was then used to simulate motions in the digital human modeling software package Jack. The motion data encompassed six DOF for each body segment: the 3D coordinates of the body segment and the Euler angles of rotation. These position and orientation data were used to simulate the digital human model in Jack.</p><h3 class="c-article__sub-heading" id="Sec8">Data capture from virtual fastening</h3><p>Evaluating assembly operations in a virtual environment eliminates or greatly reduces the time, cost, and material associated with the construction of physical prototypes. Though it is desirable to develop a virtual environment that is truly representative of the real world, there are several constraints in developing scenarios in a virtual environment. While performing assembly operations in a real-world environment, the operator experiences various motion constraints that may not be effectively simulated in a virtual environment. Depending on the task, this could reduce the overall effectiveness of the virtual environment in simulating assembly processes. Physical impediments that prevent the operator from adopting certain postures must be taken into consideration while analyzing tasks in a virtual environment. However, for the particular assembly task of our study, since the fastening operation was performed under the belly section of an aircraft fuselage, there were no such impediments that prevented the operator from adopting actual work postures in the virtual environment. Moreover, the worker’s operative knowledge of the assembly process helped in replicating actual fastening operation postures in the immersive virtual reality environment.</p><p>A virtual fastening operation as shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-015-0261-9#Fig4">4</a>a was performed on a 3D model of the belly section of an aircraft fuselage displayed in the CAVE. Before tracking the human motion, the WCS of the motion capture system was set using a T-shaped calibration plate (fitted with four LEDs) placed on the center of the floor of the CAVE, which represented the CAVE coordinate system as well. After setting the WCS, the motion capture system recorded the initial position and orientation of the three body segments of the subject wearing the body suit with markers on it. This information was used for mapping the markers to the digital human model during simulation. Once the body pose information was recorded, the system began recording the motion data.</p><h3 class="c-article__sub-heading" id="Sec9">Automation of simulation process</h3><p>Before transferring the motion data to Jack, the Jack simulation environment has to be set up. This involves creating the scene, scaling the human model, mapping the body joints, and creating constraints in Jack. These tasks are time consuming and require substantial knowledge of Jack software. Therefore, the simulation process was automated to minimize the time required of the person to perform these tasks. A module developed in Jack using the Jackscript programming language initialized and simulated human motion in Jack. It also provided the flexibility to play back the simulation of human motion for any number of body segments.</p><p>The simulation process can be categorized into two domains, <i>Initialize</i> and <i>Simulate</i>, as shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-015-0261-9#Fig5">5</a>. The <i>Initialize</i> function created a scene in Jack by generating different figures, such as the digital human model, as well as other objects required for simulation, such as the fastening tool model and the CAD model of the fuselage on which the fastening operation was performed. A marker triad was created in the scene for each tracked body segment. The human body joint of the subject in the real world was represented by these marker triads in the virtual scene.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-015-0261-9/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-015-0261-9/MediaObjects/10055_2015_261_Fig5_HTML.gif?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-015-0261-9/MediaObjects/10055_2015_261_Fig5_HTML.gif" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p>System architecture for human motion simulation</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-015-0261-9/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>The <i>Initialize</i> function also used the previously recorded body joint position data from the Kinect tracking system for auto-scaling the digital human model, as well as the initial joint position and orientation data (for the subject standing in a straight posture) from the Firefly motion capture system to map the physical body joints of the subject to the digital human model.</p><h3 class="c-article__sub-heading" id="Sec10">Auto-scaling digital human model with Kinect</h3><p>The digital human model in Jack is formed by different segments. Many default models are available in the Jack human library. Every default human figure has some default segment lengths depending upon the chosen percentile population (e.g., 95th or 5th percentile). In order to simulate the motion data of the subject being tracked by the motion capture system, the digital human model requires subject-specific scaling. Jack allows each body segment to be scaled using the measurements of different body segments as input. Full-body optical motion capture systems can provide the measurements of the lengths of different body segments. The developed motion capture system can track only three body segments, thus limiting the number of body segments that could be scaled. The process of manually measuring human body segments is time-consuming. Using Kinect to measure the lengths of the body segments eliminates the manual measurement process.</p><p>With the advantage of being a marker-less motion capture technology, Kinect can be used with the help of its skeleton-tracking software support to track the 3D positions of the operator’s joints. Even though Kinect can provide full-body motion data, simulations in Jack developed using motion data from Kinect often did not represent the actual human pose. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-015-0261-9#Fig6">6</a> shows some motions captured using a Kinect and the corresponding postures in Jack. This happened due to the variations in body segment lengths captured by Kinect while performing movements with changing postures. The digital human model in Jack could not accommodate changes in segment lengths because of the constraints that had to be satisfied by the human model. Hence, we used Kinect for capturing static postures only.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-6"><figure><figcaption><b id="Fig6" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 6</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-015-0261-9/figures/6" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-015-0261-9/MediaObjects/10055_2015_261_Fig6_HTML.gif?as=webp"></source><img aria-describedby="figure-6-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-015-0261-9/MediaObjects/10055_2015_261_Fig6_HTML.gif" alt="figure6" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-6-desc"><p>Dynamic motion analysis using data from Kinect</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-015-0261-9/figures/6" data-track-dest="link:Figure6 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>During the scaling process, the subject being tracked stood in a T-pose in front of the Kinect device. The 3D position data of 20 skeletal joints was obtained using the functions available in Kinect for Windows SDK (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2012" title="Kinect for Windows SDK (2012). &#xA;                    http://www.microsoft.com/en-us/kinectforwindows/&#xA;                    &#xA;                  &#xA;                " href="/article/10.1007/s10055-015-0261-9#ref-CR11" id="ref-link-section-d3321e1447">2012</a>), which was used to calculate 19 body segment lengths. To scale the digital human model in Jack, the scaling factor, which relates the length of each body segment obtained from the Kinect tracking system to the default length of the corresponding body segment of the digital human model in Jack, had to be determined. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-015-0261-9#Fig7">7</a> shows the Kinect skeleton model and the Jack skeleton model. The Jack human model consists of 69 joints and 71 body segments. Of these, we used the upper arm (A), lower arm (B), upper leg (D), lower leg (E), and upper torso (C) to scale the Jack digital human model.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-7"><figure><figcaption><b id="Fig7" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 7</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-015-0261-9/figures/7" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-015-0261-9/MediaObjects/10055_2015_261_Fig7_HTML.gif?as=webp"></source><img aria-describedby="figure-7-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-015-0261-9/MediaObjects/10055_2015_261_Fig7_HTML.gif" alt="figure7" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-7-desc"><p>Skeleton models: <b>a</b> Skeleton in Kinect, <b>b</b> Skeleton in Jack</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-015-0261-9/figures/7" data-track-dest="link:Figure7 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>To validate the digital auto-scaling application, we calculated the body segment lengths of five individuals at five different time instants. At each instant, data from the first 100 frames were used for calculating the body segment lengths. The actual body segment lengths were measured using a measuring tape. Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-015-0261-9#Tab1">1</a> provides a comparison of the actual length of the right lower arm segment with the measurements obtained from our auto-scaling application. The segment lengths measured using the auto-scaling application showed good repeatability with a standard deviation of less than 1 cm. While generating simulations manually using a key frame method, ergonomists usually scale the digital human model in Jack to match the actual human approximately. Hence, the accuracy of data obtained from Kinect for the scaling application is within acceptable limits for ergonomic analysis.</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-1"><figure><figcaption class="c-article-table__figcaption"><b id="Tab1" data-test="table-caption">Table 1 Right lower arm segment measurements (cm)</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-015-0261-9/tables/1"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                </div></div></section><section aria-labelledby="Sec11"><div class="c-article-section" id="Sec11-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec11">Ergonomic analysis</h2><div class="c-article-section__content" id="Sec11-content"><p>With the operator’s movements captured by the described motion capture system, ergonomic analysis was then performed in Jack to analyze the operator’s posture during the fastening operation.</p><h3 class="c-article__sub-heading" id="Sec12">Ergonomic analysis using Jack</h3><p>Jack’s task analysis toolkit (TAT) is a set of human factors analysis tools that can be applied to the simulated human. Lower back analysis, static strength prediction, NIOSH (National Institute for Occupational Safety and Health) lifting analysis, fatigue analysis, and rapid upper limb assessment (RULA) are some of the ergonomic analysis tools available from TAT. The fastening operation predominantly involves the upper body of the operator, so we selected RULA for the analysis.</p><h3 class="c-article__sub-heading" id="Sec13">RULA for virtual fastening operation</h3><p>RULA is a survey method that has been developed for use in ergonomic investigations of workplaces (McAtamney and Corlet <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1993" title="McAtamney L, Corlet EN (1993) RULA: a survey method for the investigation of world-related upper limb disorders. Appl Ergon 24(2):91–99" href="/article/10.1007/s10055-015-0261-9#ref-CR15" id="ref-link-section-d3321e1824">1993</a>). It is especially useful for scenarios in which work-related upper limb disorders are reported. The RULA analysis tool uses different operator postures and load conditions as input and provides an assessment of the upper body of the operator along with the risk level and suggestive action for that posture. Since RULA scores are not generated dynamically, the motion path that the worker traverses to attain a particular posture does not impact the RULA score. Rather, the position of the arms, wrist, neck, and trunk for a particular posture must resemble the posture adopted in the real work environment to obtain an accurate RULA score. RULA uses a scoring system based on posture, muscle use, and force to assign an action level to the evaluated task. For the fastening operation, the weight of the tool used was less than 2 kg, and the forces acting on the hand were assumed to be intermittent. The fastening operation was performed in a standing posture, and use of the arm and wrist muscles was set to be repeated more than four times per minute. After setting these parameters in RULA, the analysis was performed.</p><p>RULA calculates a grand score as a combined score of two different body groups: Group A (upper arm, lower arm and wrist) and Group B (neck and trunk) (McAtamney and Corlet <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1993" title="McAtamney L, Corlet EN (1993) RULA: a survey method for the investigation of world-related upper limb disorders. Appl Ergon 24(2):91–99" href="/article/10.1007/s10055-015-0261-9#ref-CR15" id="ref-link-section-d3321e1830">1993</a>). The data obtained from the motion capture system in our study enabled us to obtain a simulation of the operation mostly involving Group A body parts of the operator. The grand RULA score was obtained for every instant of the operation. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-015-0261-9#Fig8">8</a>a shows six different standing postures of the operator at the 5th, 13th, 19th, 23rd, 27th and 33rd second of the fastening operation as well as their respective RULA scores. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-015-0261-9#Fig8">8</a>b shows the distribution of the grand RULA score over a time period of 36 s of the fastening operation. A mean RULA score of four was calculated for the entire operation, which suggested that further investigation was needed to reduce the risk level of the operation and that changes might be required as referred in Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-015-0261-9#Tab2">2</a>. The RULA score obtained for different postures during the virtual fastening operation were similar to the results that were obtained while performing the fastening operation on the factory floor. These RULA scores were used to analyze the risk levels associated with particular postures and to suggest actions needed in order to reduce the risk of long-term ergonomic injuries.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-8"><figure><figcaption><b id="Fig8" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 8</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-015-0261-9/figures/8" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-015-0261-9/MediaObjects/10055_2015_261_Fig8_HTML.gif?as=webp"></source><img aria-describedby="figure-8-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-015-0261-9/MediaObjects/10055_2015_261_Fig8_HTML.gif" alt="figure8" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-8-desc"><p>Ergonomic analysis of fastening operation: <b>a</b> fastening operation postures, <b>b</b> grand RULA score for fastening operation</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-015-0261-9/figures/8" data-track-dest="link:Figure8 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                  <div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-2"><figure><figcaption class="c-article-table__figcaption"><b id="Tab2" data-test="table-caption">Table 2 Action levels in RULA</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-015-0261-9/tables/2"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                </div></div></section><section aria-labelledby="Sec14"><div class="c-article-section" id="Sec14-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec14">Conclusions</h2><div class="c-article-section__content" id="Sec14-content"><p>This paper has presented a method of developing an integrated system that enables creating the simulation of an assembly operation in an immersed virtual environment, tracking the motion of the person in the virtual environment, and performing ergonomic analysis using the captured motion data. The positions and orientations of the head, elbow, and wrist of a human body in performing a virtual fastening operation on an aircraft fuselage assembly were recorded using active optical markers placed on these segments. The process of integrating a motion capture system with ergonomic analysis software Jack has been discussed. Our method of auto-scaling digital human models using the marker-less skeleton-tracking capability of Kinect can be used to set up correct human models for simulation. The process of setting up the Jack environment prior to simulation was automated. An ergonomic analysis tool, RULA, was used to evaluate the risk involved in the fastening operation of an aircraft fuselage, which may help in designing safer workplaces. Although the task chosen for ergonomic analysis was the fastening operation of an aircraft fuselage in this study, the developed motion capture system and its integration with Jack are generic and can be used for other assembly operations.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="AForge.NET: Computer vision, artificial intelligence, robotics (2012). http://www.aforgenet.com/framework/&#xA;   " /><p class="c-article-references__text" id="ref-CR1">AForge.NET: Computer vision, artificial intelligence, robotics (2012). <a href="http://www.aforgenet.com/framework/">http://www.aforgenet.com/framework/</a>
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="N. Badler, CB. Phillips, BL. Webber, " /><meta itemprop="datePublished" content="1999" /><meta itemprop="headline" content="Badler N, Phillips CB, Webber BL (1999) Simulating humans: computer graphics, animation and control. Universit" /><p class="c-article-references__text" id="ref-CR2">Badler N, Phillips CB, Webber BL (1999) Simulating humans: computer graphics, animation and control. University of Pennsylvania, Oxford University Press, Department of Computer and Information Science</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 2 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Simulating%20humans%3A%20computer%20graphics%2C%20animation%20and%20control&amp;publication_year=1999&amp;author=Badler%2CN&amp;author=Phillips%2CCB&amp;author=Webber%2CBL">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bouguet JY, Camera calibration toolbox for Matlab (2012). http://www.vision.caltech.edu/bouguetj/calib_doc/ind" /><p class="c-article-references__text" id="ref-CR3">Bouguet JY, Camera calibration toolbox for Matlab (2012). <a href="http://www.vision.caltech.edu/bouguetj/calib_doc/index.html">http://www.vision.caltech.edu/bouguetj/calib_doc/index.html</a>
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bureau of Labor Statistics (2007). http://www.bls.gov/opub/ted/2008/dec/wk1/art02.htm&#xA;                " /><p class="c-article-references__text" id="ref-CR4">Bureau of Labor Statistics (2007). <a href="http://www.bls.gov/opub/ted/2008/dec/wk1/art02.htm">http://www.bls.gov/opub/ted/2008/dec/wk1/art02.htm</a>
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Chadda A, Zhu W, Leu MC, Liu X (2011) Design, implementation and evaluation of optical low-cost motion capture" /><p class="c-article-references__text" id="ref-CR5">Chadda A, Zhu W, Leu MC, Liu X (2011) Design, implementation and evaluation of optical low-cost motion capture system. In: proceedings of the ASME international design engineering technical conferences and computers and information in engineering conference (IDETC/CIE), August 29–31, Washington, DC, USA</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Fernando T, Marcelino L, Wimalaratne P, Tan K (2000) Interactive assembly modeling within a CAVE environment. " /><p class="c-article-references__text" id="ref-CR6">Fernando T, Marcelino L, Wimalaratne P, Tan K (2000) Interactive assembly modeling within a CAVE environment. In: proceedings of Eurographics-Portuguese Chapter, p 43–49</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Frati V, Prattichizzo D (2011) Using Kinect for hand tracking and rendering in wearable haptics. In: proceedin" /><p class="c-article-references__text" id="ref-CR7">Frati V, Prattichizzo D (2011) Using Kinect for hand tracking and rendering in wearable haptics. In: proceedings of IEEE world haptics conference, June 21–24, Istanbul, Turkey, p 317–321</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Gaonkar R, Madhavan V, Zhao W (2006) Virtual assembly operations with grasp and verbal interaction. In: procee" /><p class="c-article-references__text" id="ref-CR8">Gaonkar R, Madhavan V, Zhao W (2006) Virtual assembly operations with grasp and verbal interaction. In: proceedings of the ACM international conference on virtual reality continuum and its applications, June 14–17, Chinese University of Hong Kong, Hong Kong, p 245–254</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="RI. Hartley, P. Sturm, " /><meta itemprop="datePublished" content="1997" /><meta itemprop="headline" content="Hartley RI, Sturm P (1997) Triangulation. Comput Vis Image Underst 68(2):146–157" /><p class="c-article-references__text" id="ref-CR9">Hartley RI, Sturm P (1997) Triangulation. Comput Vis Image Underst 68(2):146–157</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1006%2Fcviu.1997.0547" aria-label="View reference 9">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 9 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Triangulation&amp;journal=Comput%20Vis%20Image%20Underst&amp;volume=68&amp;issue=2&amp;pages=146-157&amp;publication_year=1997&amp;author=Hartley%2CRI&amp;author=Sturm%2CP">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Joshi AS, Leu MC, Murray S (2008) Ergonomic impact of fastening operation. In: proceedings of 2nd CIRP confere" /><p class="c-article-references__text" id="ref-CR10">Joshi AS, Leu MC, Murray S (2008) Ergonomic impact of fastening operation. In: proceedings of 2nd CIRP conference on assembly technologies and systems, September 21–23, Toronto, ON, Canada</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Kinect for Windows SDK (2012). http://www.microsoft.com/en-us/kinectforwindows/&#xA;                " /><p class="c-article-references__text" id="ref-CR11">Kinect for Windows SDK (2012). <a href="http://www.microsoft.com/en-us/kinectforwindows/">http://www.microsoft.com/en-us/kinectforwindows/</a>
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Kinect Xbox (2012). http://www.xbox.com/en-US/KINECT&#xA;                " /><p class="c-article-references__text" id="ref-CR12">Kinect Xbox (2012). <a href="http://www.xbox.com/en-US/KINECT">http://www.xbox.com/en-US/KINECT</a>
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Kurihara K, Hoshino S, Yamane K, Nakamura Y (2002) Optical motion capture system with pan-tilt camera tracking" /><p class="c-article-references__text" id="ref-CR13">Kurihara K, Hoshino S, Yamane K, Nakamura Y (2002) Optical motion capture system with pan-tilt camera tracking and real-time data processing. In: proceedings of the IEEE International conference on robotics and automation, May 11–15, Washington, DC, USA, p 1241–1248</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="L. McAtamney, EN. Corlet, " /><meta itemprop="datePublished" content="1993" /><meta itemprop="headline" content="McAtamney L, Corlet EN (1993) RULA: a survey method for the investigation of world-related upper limb disorder" /><p class="c-article-references__text" id="ref-CR15">McAtamney L, Corlet EN (1993) RULA: a survey method for the investigation of world-related upper limb disorders. Appl Ergon 24(2):91–99</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1016%2F0003-6870%2893%2990080-S" aria-label="View reference 14">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 14 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=RULA%3A%20a%20survey%20method%20for%20the%20investigation%20of%20world-related%20upper%20limb%20disorders&amp;journal=Appl%20Ergon&amp;volume=24&amp;issue=2&amp;pages=91-99&amp;publication_year=1993&amp;author=McAtamney%2CL&amp;author=Corlet%2CEN">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Phasespace Motion Capture (2012). http://www.phasespace.com/&#xA;                " /><p class="c-article-references__text" id="ref-CR16">Phasespace Motion Capture (2012). <a href="http://www.phasespace.com/">http://www.phasespace.com/</a>
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Point Grey Research (2012). http://www.ptgrey.com/&#xA;                " /><p class="c-article-references__text" id="ref-CR17">Point Grey Research (2012). <a href="http://www.ptgrey.com/">http://www.ptgrey.com/</a>
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Stowers J, Hayes M, Bainbridge-Smith A (2011) Altitude control of a quadrotor helicopter using depth map from " /><p class="c-article-references__text" id="ref-CR18">Stowers J, Hayes M, Bainbridge-Smith A (2011) Altitude control of a quadrotor helicopter using depth map from Microsoft Kinect sensor. In: proceedings of the IEEE international conference on mechatronics, April 13–15, Istanbul, Turkey, p 358–362</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="Z. Zhang, " /><meta itemprop="datePublished" content="2000" /><meta itemprop="headline" content="Zhang Z (2000) A flexible new technique for camera calibration. IEEE Trans Patt Mach Intell 22(11):1330–1334" /><p class="c-article-references__text" id="ref-CR19">Zhang Z (2000) A flexible new technique for camera calibration. IEEE Trans Patt Mach Intell 22(11):1330–1334</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2F34.888718" aria-label="View reference 18">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 18 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=A%20flexible%20new%20technique%20for%20camera%20calibration&amp;journal=IEEE%20Trans%20Patt%20Mach%20Intell&amp;volume=22&amp;issue=11&amp;pages=1330-1334&amp;publication_year=2000&amp;author=Zhang%2CZ">
+                    Google Scholar</a> 
+                </p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-015-0261-9-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Ack1">Acknowledgments</h2><div class="c-article-section__content" id="Ack1-content"><p>The authors would like to acknowledge the financial support for this research from the Industrial Consortium of the Center for Aerospace Manufacturing Technologies (CAMT). The great help of Peter Wu and Alpha Chang to initiate and conduct the project is especially appreciated.</p></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">Codeware Inc., 5224 Station Way, Sarasota, FL, 34233, USA</p><p class="c-article-author-affiliation__authors-list">Sajeev C. Puthenveetil</p></li><li id="Aff2"><p class="c-article-author-affiliation__address">ESI Group, 32605 West 12 Mile Road, Suite 350, Farmington Hills, MI, 48334, USA</p><p class="c-article-author-affiliation__authors-list">Chinmay P. Daphalapurkar</p></li><li id="Aff3"><p class="c-article-author-affiliation__address">Missouri University of Science and Technology, Rolla, MO, 65409, USA</p><p class="c-article-author-affiliation__authors-list">Wenjuan Zhu, Ming C. Leu &amp; Xiaoqing F. Liu</p></li><li id="Aff4"><p class="c-article-author-affiliation__address">Spirit AeroSystems, Wichita, KS, 67278, USA</p><p class="c-article-author-affiliation__authors-list">Julie K. Gilpin-Mcminn &amp; Scott D. Snodgrass</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Sajeev_C_-Puthenveetil"><span class="c-article-authors-search__title u-h3 js-search-name">Sajeev C. Puthenveetil</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Sajeev C.+Puthenveetil&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Sajeev C.+Puthenveetil" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Sajeev C.+Puthenveetil%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Chinmay_P_-Daphalapurkar"><span class="c-article-authors-search__title u-h3 js-search-name">Chinmay P. Daphalapurkar</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Chinmay P.+Daphalapurkar&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Chinmay P.+Daphalapurkar" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Chinmay P.+Daphalapurkar%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Wenjuan-Zhu"><span class="c-article-authors-search__title u-h3 js-search-name">Wenjuan Zhu</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Wenjuan+Zhu&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Wenjuan+Zhu" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Wenjuan+Zhu%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Ming_C_-Leu"><span class="c-article-authors-search__title u-h3 js-search-name">Ming C. Leu</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Ming C.+Leu&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Ming C.+Leu" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Ming C.+Leu%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Xiaoqing_F_-Liu"><span class="c-article-authors-search__title u-h3 js-search-name">Xiaoqing F. Liu</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Xiaoqing F.+Liu&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Xiaoqing F.+Liu" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Xiaoqing F.+Liu%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Julie_K_-Gilpin_Mcminn"><span class="c-article-authors-search__title u-h3 js-search-name">Julie K. Gilpin-Mcminn</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Julie K.+Gilpin-Mcminn&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Julie K.+Gilpin-Mcminn" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Julie K.+Gilpin-Mcminn%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Scott_D_-Snodgrass"><span class="c-article-authors-search__title u-h3 js-search-name">Scott D. Snodgrass</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Scott D.+Snodgrass&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Scott D.+Snodgrass" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Scott D.+Snodgrass%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-015-0261-9/email/correspondent/c1/new">Sajeev C. Puthenveetil</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=Computer-automated%20ergonomic%20analysis%20based%20on%20motion%20capture%20and%20assembly%20simulation&amp;author=Sajeev%20C.%20Puthenveetil%20et%20al&amp;contentID=10.1007%2Fs10055-015-0261-9&amp;publication=1359-4338&amp;publicationDate=2015-03-06&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="u-hide-print c-bibliographic-information__column c-bibliographic-information__column--border"><a data-crossmark="10.1007/s10055-015-0261-9" target="_blank" rel="noopener" href="https://crossmark.crossref.org/dialog/?doi=10.1007/s10055-015-0261-9" data-track="click" data-track-action="Click Crossmark" data-track-label="link" data-test="crossmark"><img width="57" height="81" alt="Verify currency and authenticity via CrossMark" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjgxIiB3aWR0aD0iNTciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJtMTcuMzUgMzUuNDUgMjEuMy0xNC4ydi0xNy4wM2gtMjEuMyIgZmlsbD0iIzk4OTg5OCIvPjxwYXRoIGQ9Im0zOC42NSAzNS40NS0yMS4zLTE0LjJ2LTE3LjAzaDIxLjMiIGZpbGw9IiM3NDc0NzQiLz48cGF0aCBkPSJtMjggLjVjLTEyLjk4IDAtMjMuNSAxMC41Mi0yMy41IDIzLjVzMTAuNTIgMjMuNSAyMy41IDIzLjUgMjMuNS0xMC41MiAyMy41LTIzLjVjMC02LjIzLTIuNDgtMTIuMjEtNi44OC0xNi42Mi00LjQxLTQuNC0xMC4zOS02Ljg4LTE2LjYyLTYuODh6bTAgNDEuMjVjLTkuOCAwLTE3Ljc1LTcuOTUtMTcuNzUtMTcuNzVzNy45NS0xNy43NSAxNy43NS0xNy43NSAxNy43NSA3Ljk1IDE3Ljc1IDE3Ljc1YzAgNC43MS0xLjg3IDkuMjItNS4yIDEyLjU1cy03Ljg0IDUuMi0xMi41NSA1LjJ6IiBmaWxsPSIjNTM1MzUzIi8+PHBhdGggZD0ibTQxIDM2Yy01LjgxIDYuMjMtMTUuMjMgNy40NS0yMi40MyAyLjktNy4yMS00LjU1LTEwLjE2LTEzLjU3LTcuMDMtMjEuNWwtNC45Mi0zLjExYy00Ljk1IDEwLjctMS4xOSAyMy40MiA4Ljc4IDI5LjcxIDkuOTcgNi4zIDIzLjA3IDQuMjIgMzAuNi00Ljg2eiIgZmlsbD0iIzljOWM5YyIvPjxwYXRoIGQ9Im0uMiA1OC40NWMwLS43NS4xMS0xLjQyLjMzLTIuMDFzLjUyLTEuMDkuOTEtMS41Yy4zOC0uNDEuODMtLjczIDEuMzQtLjk0LjUxLS4yMiAxLjA2LS4zMiAxLjY1LS4zMi41NiAwIDEuMDYuMTEgMS41MS4zNS40NC4yMy44MS41IDEuMS44MWwtLjkxIDEuMDFjLS4yNC0uMjQtLjQ5LS40Mi0uNzUtLjU2LS4yNy0uMTMtLjU4LS4yLS45My0uMi0uMzkgMC0uNzMuMDgtMS4wNS4yMy0uMzEuMTYtLjU4LjM3LS44MS42Ni0uMjMuMjgtLjQxLjYzLS41MyAxLjA0LS4xMy40MS0uMTkuODgtLjE5IDEuMzkgMCAxLjA0LjIzIDEuODYuNjggMi40Ni40NS41OSAxLjA2Ljg4IDEuODQuODguNDEgMCAuNzctLjA3IDEuMDctLjIzcy41OS0uMzkuODUtLjY4bC45MSAxYy0uMzguNDMtLjguNzYtMS4yOC45OS0uNDcuMjItMSAuMzQtMS41OC4zNC0uNTkgMC0xLjEzLS4xLTEuNjQtLjMxLS41LS4yLS45NC0uNTEtMS4zMS0uOTEtLjM4LS40LS42Ny0uOS0uODgtMS40OC0uMjItLjU5LS4zMy0xLjI2LS4zMy0yLjAyem04LjQtNS4zM2gxLjYxdjIuNTRsLS4wNSAxLjMzYy4yOS0uMjcuNjEtLjUxLjk2LS43MnMuNzYtLjMxIDEuMjQtLjMxYy43MyAwIDEuMjcuMjMgMS42MS43MS4zMy40Ny41IDEuMTQuNSAyLjAydjQuMzFoLTEuNjF2LTQuMWMwLS41Ny0uMDgtLjk3LS4yNS0xLjIxLS4xNy0uMjMtLjQ1LS4zNS0uODMtLjM1LS4zIDAtLjU2LjA4LS43OS4yMi0uMjMuMTUtLjQ5LjM2LS43OC42NHY0LjhoLTEuNjF6bTcuMzcgNi40NWMwLS41Ni4wOS0xLjA2LjI2LTEuNTEuMTgtLjQ1LjQyLS44My43MS0xLjE0LjI5LS4zLjYzLS41NCAxLjAxLS43MS4zOS0uMTcuNzgtLjI1IDEuMTgtLjI1LjQ3IDAgLjg4LjA4IDEuMjMuMjQuMzYuMTYuNjUuMzguODkuNjdzLjQyLjYzLjU0IDEuMDNjLjEyLjQxLjE4Ljg0LjE4IDEuMzIgMCAuMzItLjAyLjU3LS4wNy43NmgtNC4zNmMuMDcuNjIuMjkgMS4xLjY1IDEuNDQuMzYuMzMuODIuNSAxLjM4LjUuMjkgMCAuNTctLjA0LjgzLS4xM3MuNTEtLjIxLjc2LS4zN2wuNTUgMS4wMWMtLjMzLjIxLS42OS4zOS0xLjA5LjUzLS40MS4xNC0uODMuMjEtMS4yNi4yMS0uNDggMC0uOTItLjA4LTEuMzQtLjI1LS40MS0uMTYtLjc2LS40LTEuMDctLjctLjMxLS4zMS0uNTUtLjY5LS43Mi0xLjEzLS4xOC0uNDQtLjI2LS45NS0uMjYtMS41MnptNC42LS42MmMwLS41NS0uMTEtLjk4LS4zNC0xLjI4LS4yMy0uMzEtLjU4LS40Ny0xLjA2LS40Ny0uNDEgMC0uNzcuMTUtMS4wNy40NS0uMzEuMjktLjUuNzMtLjU4IDEuM3ptMi41LjYyYzAtLjU3LjA5LTEuMDguMjgtMS41My4xOC0uNDQuNDMtLjgyLjc1LTEuMTNzLjY5LS41NCAxLjEtLjcxYy40Mi0uMTYuODUtLjI0IDEuMzEtLjI0LjQ1IDAgLjg0LjA4IDEuMTcuMjNzLjYxLjM0Ljg1LjU3bC0uNzcgMS4wMmMtLjE5LS4xNi0uMzgtLjI4LS41Ni0uMzctLjE5LS4wOS0uMzktLjE0LS42MS0uMTQtLjU2IDAtMS4wMS4yMS0xLjM1LjYzLS4zNS40MS0uNTIuOTctLjUyIDEuNjcgMCAuNjkuMTcgMS4yNC41MSAxLjY2LjM0LjQxLjc4LjYyIDEuMzIuNjIuMjggMCAuNTQtLjA2Ljc4LS4xNy4yNC0uMTIuNDUtLjI2LjY0LS40MmwuNjcgMS4wM2MtLjMzLjI5LS42OS41MS0xLjA4LjY1LS4zOS4xNS0uNzguMjMtMS4xOC4yMy0uNDYgMC0uOS0uMDgtMS4zMS0uMjQtLjQtLjE2LS43NS0uMzktMS4wNS0uN3MtLjUzLS42OS0uNy0xLjEzYy0uMTctLjQ1LS4yNS0uOTYtLjI1LTEuNTN6bTYuOTEtNi40NWgxLjU4djYuMTdoLjA1bDIuNTQtMy4xNmgxLjc3bC0yLjM1IDIuOCAyLjU5IDQuMDdoLTEuNzVsLTEuNzctMi45OC0xLjA4IDEuMjN2MS43NWgtMS41OHptMTMuNjkgMS4yN2MtLjI1LS4xMS0uNS0uMTctLjc1LS4xNy0uNTggMC0uODcuMzktLjg3IDEuMTZ2Ljc1aDEuMzR2MS4yN2gtMS4zNHY1LjZoLTEuNjF2LTUuNmgtLjkydi0xLjJsLjkyLS4wN3YtLjcyYzAtLjM1LjA0LS42OC4xMy0uOTguMDgtLjMxLjIxLS41Ny40LS43OXMuNDItLjM5LjcxLS41MWMuMjgtLjEyLjYzLS4xOCAxLjA0LS4xOC4yNCAwIC40OC4wMi42OS4wNy4yMi4wNS40MS4xLjU3LjE3em0uNDggNS4xOGMwLS41Ny4wOS0xLjA4LjI3LTEuNTMuMTctLjQ0LjQxLS44Mi43Mi0xLjEzLjMtLjMxLjY1LS41NCAxLjA0LS43MS4zOS0uMTYuOC0uMjQgMS4yMy0uMjRzLjg0LjA4IDEuMjQuMjRjLjQuMTcuNzQuNCAxLjA0Ljcxcy41NC42OS43MiAxLjEzYy4xOS40NS4yOC45Ni4yOCAxLjUzcy0uMDkgMS4wOC0uMjggMS41M2MtLjE4LjQ0LS40Mi44Mi0uNzIgMS4xM3MtLjY0LjU0LTEuMDQuNy0uODEuMjQtMS4yNC4yNC0uODQtLjA4LTEuMjMtLjI0LS43NC0uMzktMS4wNC0uN2MtLjMxLS4zMS0uNTUtLjY5LS43Mi0xLjEzLS4xOC0uNDUtLjI3LS45Ni0uMjctMS41M3ptMS42NSAwYzAgLjY5LjE0IDEuMjQuNDMgMS42Ni4yOC40MS42OC42MiAxLjE4LjYyLjUxIDAgLjktLjIxIDEuMTktLjYyLjI5LS40Mi40NC0uOTcuNDQtMS42NiAwLS43LS4xNS0xLjI2LS40NC0xLjY3LS4yOS0uNDItLjY4LS42My0xLjE5LS42My0uNSAwLS45LjIxLTEuMTguNjMtLjI5LjQxLS40My45Ny0uNDMgMS42N3ptNi40OC0zLjQ0aDEuMzNsLjEyIDEuMjFoLjA1Yy4yNC0uNDQuNTQtLjc5Ljg4LTEuMDIuMzUtLjI0LjctLjM2IDEuMDctLjM2LjMyIDAgLjU5LjA1Ljc4LjE0bC0uMjggMS40LS4zMy0uMDljLS4xMS0uMDEtLjIzLS4wMi0uMzgtLjAyLS4yNyAwLS41Ni4xLS44Ni4zMXMtLjU1LjU4LS43NyAxLjF2NC4yaC0xLjYxem0tNDcuODcgMTVoMS42MXY0LjFjMCAuNTcuMDguOTcuMjUgMS4yLjE3LjI0LjQ0LjM1LjgxLjM1LjMgMCAuNTctLjA3LjgtLjIyLjIyLS4xNS40Ny0uMzkuNzMtLjczdi00LjdoMS42MXY2Ljg3aC0xLjMybC0uMTItMS4wMWgtLjA0Yy0uMy4zNi0uNjMuNjQtLjk4Ljg2LS4zNS4yMS0uNzYuMzItMS4yNC4zMi0uNzMgMC0xLjI3LS4yNC0xLjYxLS43MS0uMzMtLjQ3LS41LTEuMTQtLjUtMi4wMnptOS40NiA3LjQzdjIuMTZoLTEuNjF2LTkuNTloMS4zM2wuMTIuNzJoLjA1Yy4yOS0uMjQuNjEtLjQ1Ljk3LS42My4zNS0uMTcuNzItLjI2IDEuMS0uMjYuNDMgMCAuODEuMDggMS4xNS4yNC4zMy4xNy42MS40Ljg0LjcxLjI0LjMxLjQxLjY4LjUzIDEuMTEuMTMuNDIuMTkuOTEuMTkgMS40NCAwIC41OS0uMDkgMS4xMS0uMjUgMS41Ny0uMTYuNDctLjM4Ljg1LS42NSAxLjE2LS4yNy4zMi0uNTguNTYtLjk0LjczLS4zNS4xNi0uNzIuMjUtMS4xLjI1LS4zIDAtLjYtLjA3LS45LS4ycy0uNTktLjMxLS44Ny0uNTZ6bTAtMi4zYy4yNi4yMi41LjM3LjczLjQ1LjI0LjA5LjQ2LjEzLjY2LjEzLjQ2IDAgLjg0LS4yIDEuMTUtLjYuMzEtLjM5LjQ2LS45OC40Ni0xLjc3IDAtLjY5LS4xMi0xLjIyLS4zNS0xLjYxLS4yMy0uMzgtLjYxLS41Ny0xLjEzLS41Ny0uNDkgMC0uOTkuMjYtMS41Mi43N3ptNS44Ny0xLjY5YzAtLjU2LjA4LTEuMDYuMjUtMS41MS4xNi0uNDUuMzctLjgzLjY1LTEuMTQuMjctLjMuNTgtLjU0LjkzLS43MXMuNzEtLjI1IDEuMDgtLjI1Yy4zOSAwIC43My4wNyAxIC4yLjI3LjE0LjU0LjMyLjgxLjU1bC0uMDYtMS4xdi0yLjQ5aDEuNjF2OS44OGgtMS4zM2wtLjExLS43NGgtLjA2Yy0uMjUuMjUtLjU0LjQ2LS44OC42NC0uMzMuMTgtLjY5LjI3LTEuMDYuMjctLjg3IDAtMS41Ni0uMzItMi4wNy0uOTVzLS43Ni0xLjUxLS43Ni0yLjY1em0xLjY3LS4wMWMwIC43NC4xMyAxLjMxLjQgMS43LjI2LjM4LjY1LjU4IDEuMTUuNTguNTEgMCAuOTktLjI2IDEuNDQtLjc3di0zLjIxYy0uMjQtLjIxLS40OC0uMzYtLjctLjQ1LS4yMy0uMDgtLjQ2LS4xMi0uNy0uMTItLjQ1IDAtLjgyLjE5LTEuMTMuNTktLjMxLjM5LS40Ni45NS0uNDYgMS42OHptNi4zNSAxLjU5YzAtLjczLjMyLTEuMy45Ny0xLjcxLjY0LS40IDEuNjctLjY4IDMuMDgtLjg0IDAtLjE3LS4wMi0uMzQtLjA3LS41MS0uMDUtLjE2LS4xMi0uMy0uMjItLjQzcy0uMjItLjIyLS4zOC0uM2MtLjE1LS4wNi0uMzQtLjEtLjU4LS4xLS4zNCAwLS42OC4wNy0xIC4ycy0uNjMuMjktLjkzLjQ3bC0uNTktMS4wOGMuMzktLjI0LjgxLS40NSAxLjI4LS42My40Ny0uMTcuOTktLjI2IDEuNTQtLjI2Ljg2IDAgMS41MS4yNSAxLjkzLjc2cy42MyAxLjI1LjYzIDIuMjF2NC4wN2gtMS4zMmwtLjEyLS43NmgtLjA1Yy0uMy4yNy0uNjMuNDgtLjk4LjY2cy0uNzMuMjctMS4xNC4yN2MtLjYxIDAtMS4xLS4xOS0xLjQ4LS41Ni0uMzgtLjM2LS41Ny0uODUtLjU3LTEuNDZ6bTEuNTctLjEyYzAgLjMuMDkuNTMuMjcuNjcuMTkuMTQuNDIuMjEuNzEuMjEuMjggMCAuNTQtLjA3Ljc3LS4ycy40OC0uMzEuNzMtLjU2di0xLjU0Yy0uNDcuMDYtLjg2LjEzLTEuMTguMjMtLjMxLjA5LS41Ny4xOS0uNzYuMzFzLS4zMy4yNS0uNDEuNGMtLjA5LjE1LS4xMy4zMS0uMTMuNDh6bTYuMjktMy42M2gtLjk4di0xLjJsMS4wNi0uMDcuMi0xLjg4aDEuMzR2MS44OGgxLjc1djEuMjdoLTEuNzV2My4yOGMwIC44LjMyIDEuMi45NyAxLjIuMTIgMCAuMjQtLjAxLjM3LS4wNC4xMi0uMDMuMjQtLjA3LjM0LS4xMWwuMjggMS4xOWMtLjE5LjA2LS40LjEyLS42NC4xNy0uMjMuMDUtLjQ5LjA4LS43Ni4wOC0uNCAwLS43NC0uMDYtMS4wMi0uMTgtLjI3LS4xMy0uNDktLjMtLjY3LS41Mi0uMTctLjIxLS4zLS40OC0uMzctLjc4LS4wOC0uMy0uMTItLjY0LS4xMi0xLjAxem00LjM2IDIuMTdjMC0uNTYuMDktMS4wNi4yNy0xLjUxcy40MS0uODMuNzEtMS4xNGMuMjktLjMuNjMtLjU0IDEuMDEtLjcxLjM5LS4xNy43OC0uMjUgMS4xOC0uMjUuNDcgMCAuODguMDggMS4yMy4yNC4zNi4xNi42NS4zOC44OS42N3MuNDIuNjMuNTQgMS4wM2MuMTIuNDEuMTguODQuMTggMS4zMiAwIC4zMi0uMDIuNTctLjA3Ljc2aC00LjM3Yy4wOC42Mi4yOSAxLjEuNjUgMS40NC4zNi4zMy44Mi41IDEuMzguNS4zIDAgLjU4LS4wNC44NC0uMTMuMjUtLjA5LjUxLS4yMS43Ni0uMzdsLjU0IDEuMDFjLS4zMi4yMS0uNjkuMzktMS4wOS41M3MtLjgyLjIxLTEuMjYuMjFjLS40NyAwLS45Mi0uMDgtMS4zMy0uMjUtLjQxLS4xNi0uNzctLjQtMS4wOC0uNy0uMy0uMzEtLjU0LS42OS0uNzItMS4xMy0uMTctLjQ0LS4yNi0uOTUtLjI2LTEuNTJ6bTQuNjEtLjYyYzAtLjU1LS4xMS0uOTgtLjM0LTEuMjgtLjIzLS4zMS0uNTgtLjQ3LTEuMDYtLjQ3LS40MSAwLS43Ny4xNS0xLjA4LjQ1LS4zMS4yOS0uNS43My0uNTcgMS4zem0zLjAxIDIuMjNjLjMxLjI0LjYxLjQzLjkyLjU3LjMuMTMuNjMuMi45OC4yLjM4IDAgLjY1LS4wOC44My0uMjNzLjI3LS4zNS4yNy0uNmMwLS4xNC0uMDUtLjI2LS4xMy0uMzctLjA4LS4xLS4yLS4yLS4zNC0uMjgtLjE0LS4wOS0uMjktLjE2LS40Ny0uMjNsLS41My0uMjJjLS4yMy0uMDktLjQ2LS4xOC0uNjktLjMtLjIzLS4xMS0uNDQtLjI0LS42Mi0uNHMtLjMzLS4zNS0uNDUtLjU1Yy0uMTItLjIxLS4xOC0uNDYtLjE4LS43NSAwLS42MS4yMy0xLjEuNjgtMS40OS40NC0uMzggMS4wNi0uNTcgMS44My0uNTcuNDggMCAuOTEuMDggMS4yOS4yNXMuNzEuMzYuOTkuNTdsLS43NC45OGMtLjI0LS4xNy0uNDktLjMyLS43My0uNDItLjI1LS4xMS0uNTEtLjE2LS43OC0uMTYtLjM1IDAtLjYuMDctLjc2LjIxLS4xNy4xNS0uMjUuMzMtLjI1LjU0IDAgLjE0LjA0LjI2LjEyLjM2cy4xOC4xOC4zMS4yNmMuMTQuMDcuMjkuMTQuNDYuMjFsLjU0LjE5Yy4yMy4wOS40Ny4xOC43LjI5cy40NC4yNC42NC40Yy4xOS4xNi4zNC4zNS40Ni41OC4xMS4yMy4xNy41LjE3LjgyIDAgLjMtLjA2LjU4LS4xNy44My0uMTIuMjYtLjI5LjQ4LS41MS42OC0uMjMuMTktLjUxLjM0LS44NC40NS0uMzQuMTEtLjcyLjE3LTEuMTUuMTctLjQ4IDAtLjk1LS4wOS0xLjQxLS4yNy0uNDYtLjE5LS44Ni0uNDEtMS4yLS42OHoiIGZpbGw9IiM1MzUzNTMiLz48L2c+PC9zdmc+" /></a></div><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Puthenveetil, S.C., Daphalapurkar, C.P., Zhu, W. <i>et al.</i> Computer-automated ergonomic analysis based on motion capture and assembly simulation.
+                    <i>Virtual Reality</i> <b>19, </b>119–128 (2015). https://doi.org/10.1007/s10055-015-0261-9</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-015-0261-9.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2014-07-29">29 July 2014</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2015-02-02">02 February 2015</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2015-03-06">06 March 2015</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2015-06">June 2015</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-015-0261-9" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-015-0261-9</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Assembly simulation</span></li><li class="c-article-subject-list__subject"><span itemprop="about">CAVE</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Ergonomic analysis</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Firefly</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Kinect</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Motion capture</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Virtual fastening</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-015-0261-9.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=261;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="Real-time infinite horizon tracking with data fusion for augmented rea"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="In 
+this paper, we propose a method for real-time horizon tracking (i.e., separation line between the sky and the sea) in a maritime operations context. We present the fusion of an image processing..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/18/2.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="Real-time infinite horizon tracking with data fusion for augmented reality in a maritime operations context"/>
+
+    <meta name="dc.source" content="Virtual Reality 2013 18:2"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2013-10-10"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2013 Springer-Verlag London"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="In 
+this paper, we propose a method for real-time horizon tracking (i.e., separation line between the sky and the sea) in a maritime operations context. We present the fusion of an image processing algorithm with the data obtained from the inertial measurement unit (IMU). The initial aim is to filter out environmental conditions using inertial information in order to combine a video stream with onboard electronic charts. This is achieved by the detection of the horizon with an image processing algorithm in an area defined by the IMU. We then present an evaluation of the algorithm with regard to the rate of detection of the horizon and the impact of the image resolution on the computational time. The purpose of developing this method is to create an augmented reality maritime operations application. We combine the video stream with electronic charts in a single display. We use the position of the horizon in the image to split the display into different areas. Then, we use transparency to display the video, the electronic charts or both."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2013-10-10"/>
+
+    <meta name="prism.volume" content="18"/>
+
+    <meta name="prism.number" content="2"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="129"/>
+
+    <meta name="prism.endingPage" content="138"/>
+
+    <meta name="prism.copyright" content="2013 Springer-Verlag London"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-013-0234-9"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-013-0234-9"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-013-0234-9.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-013-0234-9"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer London"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="Real-time infinite horizon tracking with data fusion for augmented reality in a maritime operations context"/>
+
+    <meta name="citation_volume" content="18"/>
+
+    <meta name="citation_issue" content="2"/>
+
+    <meta name="citation_publication_date" content="2014/06"/>
+
+    <meta name="citation_online_date" content="2013/10/10"/>
+
+    <meta name="citation_firstpage" content="129"/>
+
+    <meta name="citation_lastpage" content="138"/>
+
+    <meta name="citation_article_type" content="Original Article"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-013-0234-9"/>
+
+    <meta name="DOI" content="10.1007/s10055-013-0234-9"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-013-0234-9"/>
+
+    <meta name="description" content="In 
+this paper, we propose a method for real-time horizon tracking (i.e., separation line between the sky and the sea) in a maritime operations context. We"/>
+
+    <meta name="dc.creator" content="Olivier Hugues"/>
+
+    <meta name="dc.creator" content="Jean-Marc Cieutat"/>
+
+    <meta name="dc.creator" content="Pascal Guitton"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="Bouma H, de Lange DJJ, van den Broek PS (2008) Automatic detection of small surface targets with electro-optical sensor in a harbor environment. In: Proceedings of SPIE electronic imaging 2008 system analysis for digital photography, vol. 7114, pp 1&#8211;8"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Interact Comput; citation_title=A unifying reference framework for multi-target user interfaces; citation_author=G Calvary, J Coutaz, D Thevenin, Q Limbourg, L Bouillon, J V; citation_volume=15; citation_publication_date=2003; citation_pages=289-308; citation_doi=10.1016/S0953-5438(03)00010-9; citation_id=CR2"/>
+
+    <meta name="citation_reference" content="Cornall T (2004) A low computation method to determine horizon angle from video-preliminary version. Technical Report MECSE-4-2004"/>
+
+    <meta name="citation_reference" content="Ettinger S, Nechyba M, Ifju P, Waszak M (2002) Vision-guided flight stability and control for micro air vehicles. In: Intelligent robots and systems, 2002. IEEE/RSJ international conference on, vol. 3, pp 2134&#8211;2140"/>
+
+    <meta name="citation_reference" content="Fefilatyev S, Smarodzinava V, Hall LO, Goldgof DB (2006) Horizon detection using machine learning techniques. In: Machine learning and applications, 2006. ICMLA &#8217;06. 5th international conference on, pp 17 &#8211;21"/>
+
+    <meta name="citation_reference" content="French Government: Oceans round table (grenelle de la mer) (2009). 
+                    http://www.legrenelle-environnement.fr/IMG/pdf/Livre_bleu_anglais_web.pdf
+                    
+                  
+                "/>
+
+    <meta name="citation_reference" content="Grant S, Goodyear J (2010) ECDIS: past, present and future. Online : 
+                    http://www.mar.dfo-mpo.gc.ca
+                    
+                  
+                "/>
+
+    <meta name="citation_reference" content="Hugues O, Cieutat JM, Guitton P (2010a) An experimental augmented reality platform application for assisted maritime navigation: following targets. In: 12th virtual reality international conference (VRIC), ISBN: 2-9515730-9-X, pp 149&#8211;154. IEEE Computer Society France"/>
+
+    <meta name="citation_reference" content="Hugues O, Cieutat JM, Guitton P (2010b) An experimental augmented reality platform for assisted maritime navigation. In: AH &#8217;10 proceedings of the 1st augmented human international conference, pp 1&#8211;6. ACM, New York, NY, USA"/>
+
+    <meta name="citation_reference" content="Jie W, Xian-Zhong H (2008) The error chain in using electronic chart display and information systems. In: Systems, man and cybernetics, 2008. SMC 2008. IEEE international conference on, pp 1895&#8211;1899"/>
+
+    <meta name="citation_reference" content="Maidi M (2007) Hybrid tracking with occultation for augmented reality. (suivi hybride en pr&#233;sence d&#8217;occultations pour la r&#233;alit&#233; augment&#233;e). Ph.D. thesis, Evry-Val d&#8217;Essone University, &#201;vry"/>
+
+    <meta name="citation_reference" content="MTI XSens: Mti (2013) 
+                    http://www.xsens.com/en/general/mti
+                    
+                  
+                "/>
+
+    <meta name="citation_reference" content="International Maritime Organization (IMO): Resolution MSC.192(79)) (2007) Proposed modular structure for RADAR performance standards. Design and installation. CCRP and off-set compensation"/>
+
+    <meta name="citation_reference" content="Petit M, Claramunt C, Ray C, Calvary G (2008) A design process for the development of an interactive and adaptive GIS. In: Bertolotto M, Li X, Ray C (eds) Proceedings of the 8th international symposium on web and wireless geographical information systems, vol. 5373, pp 100&#8211;111. Springer"/>
+
+    <meta name="citation_reference" content="citation_title=The dynamics of the upper ocean. Cambridge monographs on mechnics and applied mathematics; citation_publication_date=1966; citation_id=CR16; citation_author=OM Phillips; citation_publisher=Cambridge University Press"/>
+
+    <meta name="citation_reference" content="Pillich B, Buttgenbach G (2001) Ecdis-the intelligent heart of the hazard and collision avoidance system. In: Intelligent transportation systems, 2001. Proceedings. 2001 IEEE, pp 1116&#8211;1119"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Comput Graph Appl; citation_title=Hybrid tracking for outdoor augmented reality applications; citation_author=M Ribo, P Lang, H Ganster, M Brandner, C Stock, A Pinz; citation_volume=22; citation_issue=6; citation_publication_date=2002; citation_pages=54-63; citation_doi=10.1109/MCG.2002.1046629; citation_id=CR18"/>
+
+    <meta name="citation_reference" content="Todorovic S, Nechyba MC (2004) A vision system for horizon tracking and object recognition for micro air vehicles. In: Florida conference on recent advances in robotics"/>
+
+    <meta name="citation_reference" content="Wang Y, Liao Z, Guo H, Liu T, Yang Y (2009) An approach for horizon extraction in ocean observation. In: Image and signal processing, 2009. CISP &#8217;09. 2nd international congress on, pp 1 &#8211;5"/>
+
+    <meta name="citation_reference" content="Woo JH, Kim GS (2005) Robust horizon and peak extraction for vision-based navigation. Conference on machine vision application (MVA2005) pp 526&#8211;529"/>
+
+    <meta name="citation_reference" content="You S, Neumann U (2001) Fusion of vision and gyro tracking for robust augmented reality registration. IEEE virtual reality conference pp 71&#8211;78"/>
+
+    <meta name="citation_reference" content="You S, Neumann U, Azuma R (1999) Hybrid inertial and vision tracking for augmented reality registration. In: VR &#8217;99: Proceedings of the IEEE virtual reality, p 260. IEEE Computer Society, Washington, DC, USA"/>
+
+    <meta name="citation_reference" content="Yuan HZ, Zhang XQ, Feng ZL (2010) Horizon detection in foggy aerial image. In: Image analysis and signal processing (IASP), 2010 international conference on, pp 191&#8211;194"/>
+
+    <meta name="citation_reference" content="Zabala FA (2006) Hough transform implementation in roll stability control of uavs. E-Book"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Visual Commun Image Process 2008; citation_title=Horizon detection based on sky-color and edge features; citation_author=B Zafarifar, H Weda, PHN With; citation_volume=6822; citation_issue=1; citation_publication_date=2008; citation_pages=682220; citation_doi=10.1117/12.766689; citation_id=CR26"/>
+
+    <meta name="citation_author" content="Olivier Hugues"/>
+
+    <meta name="citation_author_email" content="o.hugues@net.estia.fr"/>
+
+    <meta name="citation_author_institution" content="ESTIA-Research, MaxSea, LaBRI (INRIA), Bidart, France"/>
+
+    <meta name="citation_author" content="Jean-Marc Cieutat"/>
+
+    <meta name="citation_author_email" content="j.cieutat@estia.fr"/>
+
+    <meta name="citation_author_institution" content="ESTIA-Research, Bidart, France"/>
+
+    <meta name="citation_author" content="Pascal Guitton"/>
+
+    <meta name="citation_author_email" content="guitton@labri.fr"/>
+
+    <meta name="citation_author_institution" content="LaBRI-IPARLA (INRIA), University of Bordeaux 1, Bordeaux, France"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-013-0234-9&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2014/06/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-013-0234-9"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="Real-time infinite horizon tracking with data fusion for augmented reality in a maritime operations context"/>
+        <meta property="og:description" content="In this paper, we propose a method for real-time horizon tracking (i.e., separation line between the sky and the sea) in a maritime operations context. We present the fusion of an image processing algorithm with the data obtained from the inertial measurement unit (IMU). The initial aim is to filter out environmental conditions using inertial information in order to combine a video stream with onboard electronic charts. This is achieved by the detection of the horizon with an image processing algorithm in an area defined by the IMU. We then present an evaluation of the algorithm with regard to the rate of detection of the horizon and the impact of the image resolution on the computational time. The purpose of developing this method is to create an augmented reality maritime operations application. We combine the video stream with electronic charts in a single display. We use the position of the horizon in the image to split the display into different areas. Then, we use transparency to display the video, the electronic charts or both."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>Real-time infinite horizon tracking with data fusion for augmented reality in a maritime operations context | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-013-0234-9","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Image processing, Data fusion, Augmented reality, Electronic chart system, Geographical information system","kwrd":["Image_processing","Data_fusion","Augmented_reality","Electronic_chart_system","Geographical_information_system"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-013-0234-9","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-013-0234-9","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=234;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-013-0234-9">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            Real-time infinite horizon tracking with data fusion for augmented reality in a maritime operations context
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-013-0234-9.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-013-0234-9.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">Original Article</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2013-10-10" itemprop="datePublished">10 October 2013</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">Real-time infinite horizon tracking with data fusion for augmented reality in a maritime operations context</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Olivier-Hugues" data-author-popup="auth-Olivier-Hugues" data-corresp-id="c1">Olivier Hugues<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="ESTIA-Research, MaxSea, LaBRI (INRIA)" /><meta itemprop="address" content="grid.434242.7, 0000000121759145, ESTIA-Research, MaxSea, LaBRI (INRIA), Bidart, France" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Jean_Marc-Cieutat" data-author-popup="auth-Jean_Marc-Cieutat">Jean-Marc Cieutat</a></span><sup class="u-js-hide"><a href="#Aff2">2</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="ESTIA-Research" /><meta itemprop="address" content="grid.434242.7, 0000000121759145, ESTIA-Research, Bidart, France" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Pascal-Guitton" data-author-popup="auth-Pascal-Guitton">Pascal Guitton</a></span><sup class="u-js-hide"><a href="#Aff3">3</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of Bordeaux 1" /><meta itemprop="address" content="grid.412041.2, 000000012106639X, LaBRI-IPARLA (INRIA), University of Bordeaux 1, Bordeaux, France" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 18</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">129</span>–<span itemprop="pageEnd">138</span>(<span data-test="article-publication-year">2014</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">297 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">2 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-013-0234-9/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>In 
+this paper, we propose a method for real-time horizon tracking (i.e., separation line between the sky and the sea) in a maritime operations context. We present the fusion of an image processing algorithm with the data obtained from the inertial measurement unit (IMU). The initial aim is to filter out environmental conditions using inertial information in order to combine a video stream with onboard electronic charts. This is achieved by the detection of the horizon with an image processing algorithm in an area defined by the IMU. We then present an evaluation of the algorithm with regard to the rate of detection of the horizon and the impact of the image resolution on the computational time. The purpose of developing this method is to create an augmented reality maritime operations application. We combine the video stream with electronic charts in a single display. We use the position of the horizon in the image to split the display into different areas. Then, we use transparency to display the video, the electronic charts or both.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Introduction</h2><div class="c-article-section__content" id="Sec1-content"><p>As in aviation, onboard vessel information technology is omnipresent. Although the ECDIS
+<sup><a href="#Fn1"><span class="u-visually-hidden">Footnote </span>1</a></sup> is still debated as an alternative to traditional paper charts, the adoption in 2009 by the international maritime organization (IMO) (International Maritime Organization <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="International Maritime Organization (IMO): Resolution MSC.192(79)) (2007) Proposed modular structure for RADAR performance standards. Design and installation. CCRP and off-set compensation" href="/article/10.1007/s10055-013-0234-9#ref-CR14" id="ref-link-section-d1140e358">2007</a>) amendments requiring all ships engaged in international voyages to have electronic chart systems confirms the increasing use of this type of tool. There are always needs for specific developments for this type of applications in light of various technological improvements. Indeed, these tools are no longer limited to managing charts, but can be considered as onboard computers that centralize all the data from sensors and embedded navigation tools (radar, AIS,
+<sup><a href="#Fn2"><span class="u-visually-hidden">Footnote </span>2</a></sup> ARPA,
+<sup><a href="#Fn3"><span class="u-visually-hidden">Footnote </span>3</a></sup> sounder, sonar, etc.) (Grant and Goodyear <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2010" title="Grant S, Goodyear J (2010) ECDIS: past, present and future. Online : &#xA;                    http://www.mar.dfo-mpo.gc.ca&#xA;                    &#xA;                  &#xA;                " href="/article/10.1007/s10055-013-0234-9#ref-CR7" id="ref-link-section-d1140e371">2010</a>, Pillich and Buttgenbach <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Pillich B, Buttgenbach G (2001) Ecdis-the intelligent heart of the hazard and collision avoidance system. In: Intelligent transportation systems, 2001. Proceedings. 2001 IEEE, pp 1116–1119" href="/article/10.1007/s10055-013-0234-9#ref-CR17" id="ref-link-section-d1140e375">2001</a>). ECDIS offers advantages such as improving understanding of the environment, reducing the sailor’s workload and even improving performance in finding navigation solutions, responding to safety problems or proposing more economical routes (Jie and Xian-Zhong <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Jie W, Xian-Zhong H (2008) The error chain in using electronic chart display and information systems. In: Systems, man and cybernetics, 2008. SMC 2008. IEEE international conference on, pp 1895–1899" href="/article/10.1007/s10055-013-0234-9#ref-CR10" id="ref-link-section-d1140e378">2008</a>). However, using this type of tool is not free from errors and difficulties. In (Jie and Xian-Zhong <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Jie W, Xian-Zhong H (2008) The error chain in using electronic chart display and information systems. In: Systems, man and cybernetics, 2008. SMC 2008. IEEE international conference on, pp 1895–1899" href="/article/10.1007/s10055-013-0234-9#ref-CR10" id="ref-link-section-d1140e381">2008</a>), the authors identified three error categories when using this tool. The first category consists of human errors, the second category consists of equipment errors, and the third consists of procedural errors. According to the report (Organisation Maritime Internationale) of the IMO, 90 % of maritime accidents are caused by errors from the first category. Moreover, it is essential to take into consideration the environment of use (Calvary et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Calvary G, Coutaz J, Thevenin D, Limbourg Q, Bouillon L, V J (2003) A unifying reference framework for multi-target user interfaces. Interact Comput 15:289–308" href="/article/10.1007/s10055-013-0234-9#ref-CR2" id="ref-link-section-d1140e384">2003</a>; Petit et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Petit M, Claramunt C, Ray C, Calvary G (2008) A design process for the development of an interactive and adaptive GIS. In: Bertolotto M, Li X, Ray C (eds) Proceedings of the 8th international symposium on web and wireless geographical information systems, vol. 5373, pp 100–111. Springer" href="/article/10.1007/s10055-013-0234-9#ref-CR15" id="ref-link-section-d1140e387">2008</a>) especially when both complex and dangerous situations may be encountered by people (man overboard, injuries, etc.), equipment (running aground, deteriorations, loss of cargo, etc.) and the environment (oil slick, submerged polluting substances, etc). The increasing awareness on the part of governments related to the marine environment (French Government <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="French Government: Oceans round table (grenelle de la mer) (2009). &#xA;                    http://www.legrenelle-environnement.fr/IMG/pdf/Livre_bleu_anglais_web.pdf&#xA;                    &#xA;                  &#xA;                " href="/article/10.1007/s10055-013-0234-9#ref-CR6" id="ref-link-section-d1140e390">2009</a>) is leading maritime operations software publishers to adapt their offering to take into account these environmental characteristics by employing emerging technologies. For example, recent progress in the field of thermal sensors has led manufacturers to install this type of equipment on vessels (Hugues et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2010a" title="Hugues O, Cieutat JM, Guitton P (2010a) An experimental augmented reality platform application for assisted maritime navigation: following targets. In: 12th virtual reality international conference (VRIC), ISBN: 2-9515730-9-X, pp 149–154. IEEE Computer Society France" href="/article/10.1007/s10055-013-0234-9#ref-CR8" id="ref-link-section-d1140e394">2010a</a>).</p><p>To diminish the potential of misreads during navigation, we are working to improve the ECDIS by implementing an augmented reality functionality. To achieve this, we use embedded sensors (GPS, IMU, video camera) to georeference video streams in the 3D virtual environment of the ECDIS. However, the IMU cannot properly render certain frequency ranges (Phillips <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1966" title="Phillips OM (1966) The dynamics of the upper ocean. Cambridge monographs on mechnics and applied mathematics. Cambridge University Press, Cambridge" href="/article/10.1007/s10055-013-0234-9#ref-CR16" id="ref-link-section-d1140e400">1966</a>) of movements suffered by ships (Maidi <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Maidi M (2007) Hybrid tracking with occultation for augmented reality. (suivi hybride en présence d’occultations pour la réalité augmentée). Ph.D. thesis, Evry-Val d’Essone University, Évry" href="/article/10.1007/s10055-013-0234-9#ref-CR11" id="ref-link-section-d1140e403">2007</a>). This issue led us to use a multi-sensor approach. To enhance the precision of registration and the fusion between video and charts, we propose to track the horizon with an image processing algorithm.</p></div></div></section><section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">Related work</h2><div class="c-article-section__content" id="Sec2-content"><p>Two approaches are available in the literature for detecting the horizon. The first consists of segmenting the image into regions (region-based), while the second involves detecting the contours (edge-based). For the reasons stated in (Bouma et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Bouma H, de Lange DJJ, van den Broek PS (2008) Automatic detection of small surface targets with electro-optical sensor in a harbor environment. In: Proceedings of SPIE electronic imaging 2008 system analysis for digital photography, vol. 7114, pp 1–8" href="/article/10.1007/s10055-013-0234-9#ref-CR1" id="ref-link-section-d1140e414">2008</a>), the first approach is not efficient in our context due to the large variation of light intensities in different scenes. The authors therefore propose combining visual light, near infrared, mid-wavelength infrared and long-wavelength infrared cameras. In (Todorovic and Nechyba <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Todorovic S, Nechyba MC (2004) A vision system for horizon tracking and object recognition for micro air vehicles. In: Florida conference on recent advances in robotics" href="/article/10.1007/s10055-013-0234-9#ref-CR19" id="ref-link-section-d1140e417">2004</a>), the authors propose a vision-based approach using a multi-layer linear analysis of a non-thermal video stream to detect the horizon for piloting a micro-air vehicle, whose statistical algorithm is based on the work of (Ettinger et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Ettinger S, Nechyba M, Ifju P, Waszak M (2002) Vision-guided flight stability and control for micro air vehicles. In: Intelligent robots and systems, 2002. IEEE/RSJ international conference on, vol. 3, pp 2134–2140" href="/article/10.1007/s10055-013-0234-9#ref-CR4" id="ref-link-section-d1140e420">2002</a>). The authors of (Yuan et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2010" title="Yuan HZ, Zhang XQ, Feng ZL (2010) Horizon detection in foggy aerial image. In: Image analysis and signal processing (IASP), 2010 international conference on, pp 191–194" href="/article/10.1007/s10055-013-0234-9#ref-CR24" id="ref-link-section-d1140e423">2010</a>) propose extracting the visible horizon based on images containing fog. The execution time is relatively long and not compatible with a real-time functionality. Certain authors use machine learning (Fefilatyev et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Fefilatyev S, Smarodzinava V, Hall LO, Goldgof DB (2006) Horizon detection using machine learning techniques. In: Machine learning and applications, 2006. ICMLA ’06. 5th international conference on, pp 17 –21" href="/article/10.1007/s10055-013-0234-9#ref-CR5" id="ref-link-section-d1140e426">2006</a>) to segment the sky and the ground. However, this solution is dependent on the number of images available for machine learning, and the diversity of scenes and exposures complicate this learning. In (Wang et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Wang Y, Liao Z, Guo H, Liu T, Yang Y (2009) An approach for horizon extraction in ocean observation. In: Image and signal processing, 2009. CISP ’09. 2nd international congress on, pp 1 –5" href="/article/10.1007/s10055-013-0234-9#ref-CR20" id="ref-link-section-d1140e430">2009</a>), the authors propose an approach to extract the horizon from maritime scenes. They propose merging nine color channels in order to limit the impact of variations in luminosity.</p><p>Combining an analysis of contours and colors is proposed in (Zafarifar et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Zafarifar B, Weda H, de With PHN (2008) Horizon detection based on sky-color and edge features. Visual Commun Image Process 2008 6822(1):682220" href="/article/10.1007/s10055-013-0234-9#ref-CR26" id="ref-link-section-d1140e436">2008</a>) allowing the detection of lines to be significantly improved. In a technical report (Cornall <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Cornall T (2004) A low computation method to determine horizon angle from video-preliminary version. Technical Report MECSE-4-2004" href="/article/10.1007/s10055-013-0234-9#ref-CR3" id="ref-link-section-d1140e439">2004</a>), the author proposes a method for image analysis enabling the rolls of an airplane to be measured based on a sequence of images of the horizon. The performance of this solution is not satisfactory, however, since it is limited to one image per second. Extracting the horizon and mountain summits proposed in (Woo and Kim <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Woo JH, Kim GS (2005) Robust horizon and peak extraction for vision-based navigation. Conference on machine vision application (MVA2005) pp 526–529" href="/article/10.1007/s10055-013-0234-9#ref-CR21" id="ref-link-section-d1140e442">2005</a>) uses infrared images to determine the pixels which create the horizon (horixels). This solution is interesting, but not applicable for non-thermal video streams. The current state of technology for IMUs allows us to use this type of sensor to improve the robustness of vision-based methods. In this context, augmented reality (AR) functionalities are excellent candidates for using the multi-criteria approach (image processing, IMU, etc.) to insure the precision of registration. In (Ribo et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Ribo M, Lang P, Ganster H, Brandner M, Stock C, Pinz A (2002) Hybrid tracking for outdoor augmented reality applications. IEEE Comput Graph Appl 22(6):54–63" href="/article/10.1007/s10055-013-0234-9#ref-CR18" id="ref-link-section-d1140e445">2002</a>; You and Neumann <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="You S, Neumann U (2001) Fusion of vision and gyro tracking for robust augmented reality registration. IEEE virtual reality conference pp 71–78" href="/article/10.1007/s10055-013-0234-9#ref-CR22" id="ref-link-section-d1140e448">2001</a>; You et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="You S, Neumann U, Azuma R (1999) Hybrid inertial and vision tracking for augmented reality registration. In: VR ’99: Proceedings of the IEEE virtual reality, p 260. IEEE Computer Society, Washington, DC, USA" href="/article/10.1007/s10055-013-0234-9#ref-CR23" id="ref-link-section-d1140e452">1999</a>), the authors propose the combined use of a video camera and an IMU to improve registration in augmented reality applications.</p></div></div></section><section aria-labelledby="Sec3"><div class="c-article-section" id="Sec3-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec3">Details of the proposed system</h2><div class="c-article-section__content" id="Sec3-content"><p>The system consists of two software components presented in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0234-9#Fig1">1</a>. The first block (on the left) is responsible for image and inertial measurement processing. The objective of this component is to extract a line representing the visible horizon from the image. The two inputs are color video (visible or infrared) and inertial sensor data. The output of this block is an object (a geometric segment) defined by two coordinate points (<i>x</i>
+                <sub>0</sub>, <i>y</i>
+                <sub>0</sub>) and (<i>x</i>
+                <sub>1</sub>, <i>y</i>
+                <sub>1</sub>) given in pixels. In order to do that, the first block uses an image processing algorithm and a mathematical model of the video camera to determine where the camera is pointing. The geometric segment is then used by our AR component to improve the matching between real and virtual content.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-013-0234-9/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0234-9/MediaObjects/10055_2013_234_Fig1_HTML.gif?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0234-9/MediaObjects/10055_2013_234_Fig1_HTML.gif" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p>Overall organization of the system</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-013-0234-9/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+              <p>The second component (on the right) defines a block dependent on the geometric segment. This component uses GPU-accelerated functions to perform fusion between one image and the electronic charts in real time. The following section will discuss how we implemented these two components.</p><h3 class="c-article__sub-heading" id="Sec4">Video camera point of view</h3><p>First, we need to know where the video camera points to in the real world <i>W</i>. Placing a sensor on the vessel is defined by a homogenous rotation <sup><i>i</i></sup>
+                  <i>R</i>
+                  <sub>
+                    <i>j</i>
+                  </sub> and translation <sup><i>i</i></sup>
+                  <i>Tr</i>
+                  <sub>
+                    <i>j</i>
+                  </sub> matrix with a unit scale factor:
+</p><div id="Equ1" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$^{i}T_{j}=\left[\begin{array}{cc} ^{i}R_{j} ^{i} &amp; Tr_{j}\\ 000 &amp; 1\end{array}\right]$$</span></div><div class="c-article-equation__number">
+                    (1)
+                </div></div>
+                <p>The following sections will explain how to obtain the position and the orientation of the lens of the video camera, expressed is the real world: <sup><i>W</i></sup>
+                  <i>T</i>
+                  <sub>
+                    <i>C</i>
+                  </sub>.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec5">Static operators</h4><p>We have declared the different frames required with regard to the vessel reference point (VRP) in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0234-9#Fig2">2</a> with the formalism of Eq. (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-013-0234-9#Equ1">1</a>):
+</p><ul class="u-list-style-bullet">
+                      <li>
+                        <p>
+                          <sup>VRP</sup>
+                          <i>T</i>
+                          <sub>CG</sub> defines the frame of the vessel’s center of gravity (CG
+<sup><a href="#Fn4"><span class="u-visually-hidden">Footnote </span>4</a></sup>) in VRP;</p>
+                      </li>
+                      <li>
+                        <p>
+                          <sup>VRP</sup>
+                          <i>T</i>
+                          <sub>BC</sub> defines the frame of the video camera base in VRP;</p>
+                      </li>
+                      <li>
+                        <p>
+                          <sup>VRP</sup>
+                          <i>T</i>
+                          <sub>IMU</sub> defines the frame of the IMU box in VRP;</p>
+                      </li>
+                      <li>
+                        <p>
+                          <sup>VRP</sup>
+                          <i>T</i>
+                          <sub>GPS</sub> defines the frame of the GPS box in VRP.</p>
+                      </li>
+                    </ul>
+                    <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-013-0234-9/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0234-9/MediaObjects/10055_2013_234_Fig2_HTML.gif?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0234-9/MediaObjects/10055_2013_234_Fig2_HTML.gif" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p>Definition of the vessel reference point (VRP), embedded sensors and specific reference points. Positions of the sensors are arbitrary and need to be adapted for each vessel</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-013-0234-9/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                  <p>The following matrix calculations provide the position of the GPS and the IMU box relative to the CG frame by considering these boxes solidly fixed to the vessel:
+</p><div id="Equa" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$\begin{aligned} ^{{\rm CG}}T_{{\rm IMU}}&amp;=\left(^{{\rm VRP}}T_{{\rm CG}}\right)^{-1}\cdot^{{\rm VRP}}T_{{\rm IMU}}\\ ^{{\rm CG}}T_{{\rm GPS}}&amp;=\left(^{{\rm VRP}}T_{{\rm CG}}\right)^{-1}\cdot^{{\rm VRP}}T_{{\rm GPS}} \end{aligned}$$</span></div></div>
+                  <p>We must now take into account the embedded sensor measurements. We will define dynamic operators for the GPS measurement and for the IMU measurement.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec6">Dynamic operators</h4><p>Measurement operators are not identical to “box” operators due to possible assembly issues. The sensor manufacturer defines the reference frame in which the measurements will be expressed and there is no reason for this reference frame to be identical to the reference frame that enables the sensor to be positioned on the vessel. Here, are the dynamic operators:
+</p><ul class="u-list-style-bullet">
+                      <li>
+                        <p>
+                          <span class="mathjax-tex">\(^W T_{{\rm GPS}_{m}}\)</span>: GPS frame measurement in the real world. This operator represents a pure translation on only two components (altitude data provided by the GPS cannot be used because of its lack of precision);</p>
+                      </li>
+                      <li>
+                        <p>
+                          <span class="mathjax-tex">\(^W T_{{\rm IMU}_{m}}\)</span>: IMU frame measurement in the real world. This operator represents a pure rotation.</p>
+                      </li>
+                    </ul>
+                  <p>The frame of the camera lens cannot be considered as identical to the base. There are some geometric transformations to take into account to reflect the sensor architecture and the way the camera is articulated (two degrees of freedom for our model).</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec7">Camera model</h4><p>We have chosen to define the geometric model of the camera by five transformations. The model allows to take into account all available transformations in the video camera sensor from the base (<i>R</i>
+                    <sub>CB</sub>) to the lens (<i>R</i>
+                    <sub>
+                      <i>C</i>
+                    </sub>). This model is represented in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0234-9#Fig3">3</a> (rotations not represented).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-013-0234-9/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0234-9/MediaObjects/10055_2013_234_Fig3_HTML.gif?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0234-9/MediaObjects/10055_2013_234_Fig3_HTML.gif" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p>Geometric camera model</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-013-0234-9/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                  <p>Here are the five transformations: </p><ol class="u-list-style-none">
+                      <li>
+                        <span class="u-custom-list-number">1.</span>
+                        
+                          <p>A <i>q</i>
+                            <sub>1</sub> translation (camera height);</p>
+                        
+                      </li>
+                      <li>
+                        <span class="u-custom-list-number">2.</span>
+                        
+                          <p>A <i>q</i>
+                            <sub>2</sub> azimuth rotation;</p>
+                        
+                      </li>
+                      <li>
+                        <span class="u-custom-list-number">3.</span>
+                        
+                          <p>A <i>q</i>
+                            <sub>3</sub> elevation rotation;</p>
+                        
+                      </li>
+                      <li>
+                        <span class="u-custom-list-number">4.</span>
+                        
+                          <p>A <i>q</i>
+                            <sub>4</sub> translation (lens shift);</p>
+                        
+                      </li>
+                      <li>
+                        <span class="u-custom-list-number">5.</span>
+                        
+                          <p>A <i>q</i>
+                            <sub>5</sub> roll rotation (the camera does not physically have this degree of freedom. We have nevertheless modeled the camera so as to use this degree of freedom later).</p>
+                        
+                      </li>
+                    </ol>
+                  <p>Thus, the camera model is defined by <sup>CB</sup>
+                    <i>T</i>
+                    <sub>
+                      <i>C</i>
+                    </sub> with:
+</p><div id="Equb" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$^{{\rm CB}}T_{C}=Tr_{q1}\cdot R_{q_{2}}\cdot R_{q_{3}}\cdot Tr_{q_{4}}\cdot R_{q_{5}}$$</span></div></div>
+                  <h3 class="c-article__sub-heading" id="Sec8">Position of the camera lens</h3><p>We must now calculate the camera base frame in CG, and therefore, the frame of the camera lens from this reference point.
+</p><div id="Equc" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$\begin{aligned} ^{{\rm CG}}T_{{\rm CB}}&amp;=\left(^{{\rm VRP}}T_{{\rm CG}}\right)^{-1}\cdot^{{\rm VRP}}T_{{\rm CB}}\\ ^{{\rm CG}}T_{C}&amp;=^{{\rm CG}}T_{{\rm CB}}\cdot{}^{{\rm CB}}T_{C} \end{aligned}$$</span></div></div>
+                <p>We must now calculate the CG frame in the world. The position of this reference frame therefore depends on the four following operators: </p><ol class="u-list-style-none">
+                    <li>
+                      <span class="u-custom-list-number">1.</span>
+                      
+                        <p>GPS measurement (<span class="mathjax-tex">\(^W T_{{\rm GPS}_{m}}\)</span>);</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">2.</span>
+                      
+                        <p>IMU measurement (<span class="mathjax-tex">\(^W T_{{\rm IMU}_{m}}\)</span>);</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">3.</span>
+                      
+                        <p>IMU correction (in the case that the unit’s box is not perfectly positioned);</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">4.</span>
+                      
+                        <p>GPS correction (in the case that the GPS box is not perfectly positioned).
+</p><div id="Equ2" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$^{W}T_{{\rm CG}}={}^{W}T_{{\rm GPS}_{m}}\cdot^{W}T_{{\rm IMU}_{m}}\cdot^{{\rm CG}} T_{{\rm IMU}}\cdot{}^{{\rm CG}}T_{{\rm GPS}}$$</span></div><div class="c-article-equation__number">
+                    (2)
+                </div></div>
+                        
+                      
+                    </li>
+                  </ol>
+                <p>Now, we are able to obtain all the operators (<i>T</i>
+                  <sub>GPS</sub>, <i>T</i>
+                  <sub>UI</sub>, <i>T</i>
+                  <sub>BC</sub>, <i>T</i>
+                  <sub>
+                    <i>C</i>
+                  </sub>) expressed in the world frame. The last one is the most important because it indicates the lens of the video camera sensor:
+</p><div id="Equd" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$\begin{aligned} ^{W}T_{{\rm GPS}}&amp;={}^{W}T_{{\rm CG}}\cdot^{{\rm CG}}T_{{\rm GPS}}\\ ^{W}T_{{\rm UI}}&amp;={}^{W}T_{{\rm CG}}\cdot^{{\rm CG}}T_{{\rm UI}}\\ ^{W}T_{{\rm BC}}&amp;={}^{W}T_{{\rm CG}}\cdot^{{\rm CG}}T_{{\rm BC}}\\ ^{W}T_{C}&amp;={}^{W}T_{{\rm CG}}\cdot^{{\rm CG}}T_{C} \end{aligned}$$</span></div></div>
+                <h3 class="c-article__sub-heading" id="Sec9">Position of the visible horizon</h3><p>By using this type of IMO (MTI XSens <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2013" title="MTI XSens: Mti (2013) &#xA;                    http://www.xsens.com/en/general/mti&#xA;                    &#xA;                  &#xA;                " href="/article/10.1007/s10055-013-0234-9#ref-CR12" id="ref-link-section-d1140e2026">2013</a>), we want to extract an area in which the horizon can be found. We shall extract from <sup><i>W</i></sup>
+                  <i>T</i>
+                  <sub>
+                    <i>C</i>
+                  </sub> the values required to obtain this area. Using the projective space available from (Zabala <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Zabala FA (2006) Hough transform implementation in roll stability control of uavs. E-Book" href="/article/10.1007/s10055-013-0234-9#ref-CR25" id="ref-link-section-d1140e2042">2006</a>), it is possible to determine the relation between the camera movements (pure rotation matrix) in the world frame and the height of the horizon in the image, in pixel coordinates in the camera’s reference frame. This expression depends on the roll (<i>β</i>), pitch (<i>α</i>) and yaw (<i>γ</i>) angles defined in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0234-9#Fig4">4</a>.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-013-0234-9/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0234-9/MediaObjects/10055_2013_234_Fig4_HTML.gif?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0234-9/MediaObjects/10055_2013_234_Fig4_HTML.gif" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p>Degrees of Freedom and feature extraction through projective geometry</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-013-0234-9/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0234-9#Fig4">4</a> presents the horizon’s dependence on the movements of the vessel. The frame to the right is an image of the video stream. The solid line in the image represents the reference horizon. The dotted line represented as Horizon 1 corresponds to the horizon after a transformation by an angle <i>α</i> which results in an elevation with respect to the horizon. The dotted line represented as Horizon 2 corresponds to the horizon after a transformation by an angle <i>β</i> which results in a change in orientation with respect to the reference horizon.</p><p>Using this projective space, we know where the visible horizon can be found in the picture through the IMU data.</p><h3 class="c-article__sub-heading" id="Sec10">Image processing</h3><p>The aim of our image analysis is to detect the horizon from an image coming irrespectively from a video camera or a thermal camera. The visible horizon is represented in the source image by a green line. Our image analysis is carried out in several stages: </p><ol class="u-list-style-none">
+                    <li>
+                      <span class="u-custom-list-number">1.</span>
+                      
+                        <p>Histogram normalization.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">2.</span>
+                      
+                        <p>Gaussian smoothing.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">3.</span>
+                      
+                        <p>Dilate/erode.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">4.</span>
+                      
+                        <p>Laplacian filter.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">5.</span>
+                      
+                        <p>Threshold.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">6.</span>
+                      
+                        <p>Hough lines binary.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">7.</span>
+                      
+                        <p>Group lines.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">8.</span>
+                      
+                        <p>Lines filter.</p>
+                      
+                    </li>
+                  </ol>
+                <p>We used the OpenCV
+<sup><a href="#Fn5"><span class="u-visually-hidden">Footnote </span>5</a></sup> library to implement this functionality. From the source frame (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0234-9#Fig5">5</a>a), histogram normalization (1) (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0234-9#Fig5">5</a>b) is used to limit the undesirable effects caused by variations in brightness. This requires two parameters (minimum and maximum) so as to determine the proportionality rule between the input pixel value and the output pixel value. We obtain the best results for values between 150 and 180. The Gaussian filter (2) is used to reduce noise and smooth the image (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0234-9#Fig5">5</a>c). It requires a single parameter, the core, whose value is between 7 and 9 to obtain the best results. We then apply a morphological closure operator (3) enabling noise to be reduced (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0234-9#Fig5">5</a>d). Erosion and dilatation are executed with the structuring element (core) by default from the OpenCV library with 6–8 iterations. We then apply a Laplacian filter (4) in order to extract the initial contours whose iteration number is also between 6 and 8. Finally, after having binarized (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0234-9#Fig5">5</a>e) the image (5), we use the Hough transform (6) to detect the lines. The next phase consists of a statistical analysis. We calculate the average and the standard deviation for the position of the segments given by the Hough transform to group together close segments or those which are juxtaposed. Finally, we filter the segments according to their slopes in the image. This is done by the use of the IMU data. We use the roll value to filter the detected segments. All the segments whose slopes in the image have a difference of more than 5 % with the IMU data are eliminated. Some results are shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0234-9#Fig8">8</a>.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-013-0234-9/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0234-9/MediaObjects/10055_2013_234_Fig5a_HTML.jpg?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0234-9/MediaObjects/10055_2013_234_Fig5a_HTML.jpg" alt="figure5" loading="lazy" /></picture><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0234-9/MediaObjects/10055_2013_234_Fig5b_HTML.jpg?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0234-9/MediaObjects/10055_2013_234_Fig5b_HTML.jpg" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p>Presentation of the different stages of our image analysis on a thermal image extracted from an image sequence.<b> a</b> Source frame 97.<b> b</b> Histogram normalisation.<b> c</b> Gaussian smoothing.<b> d</b> Closure algorithm.<b> e</b> Threshold</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-013-0234-9/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <h3 class="c-article__sub-heading" id="Sec11">Inertial tracking</h3><p>Knowing the camera calibration and its position in the real world allows to use the IMU (MTI XSens <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2013" title="MTI XSens: Mti (2013) &#xA;                    http://www.xsens.com/en/general/mti&#xA;                    &#xA;                  &#xA;                " href="/article/10.1007/s10055-013-0234-9#ref-CR12" id="ref-link-section-d1140e2256">2013</a>) to limit the search area of our image analysis as illustrated in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0234-9#Fig6">6</a>. We consider, in its initial state, that the camera is positioned horizontally with regard to the water.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-6"><figure><figcaption><b id="Fig6" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 6</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-013-0234-9/figures/6" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0234-9/MediaObjects/10055_2013_234_Fig6_HTML.jpg?as=webp"></source><img aria-describedby="figure-6-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0234-9/MediaObjects/10055_2013_234_Fig6_HTML.jpg" alt="figure6" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-6-desc"><p>Limiting the image analysis area by IMU</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-013-0234-9/figures/6" data-track-dest="link:Figure6 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>The IMU’s angular information enables us to assign a height in pixels to the horizon in the image. We define an area around the horizon with a red rectangle as illustrated in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0234-9#Fig6">6</a>. The height of this strip is defined by <span class="mathjax-tex">\(\alpha+\varepsilon,\)</span> with <span class="mathjax-tex">\(\varepsilon=\pm 5^{\circ}.\)</span> For example, the height of the strip is 24 pixels for an image resolution of 640 × 480 (only 5 % of the total image’s pixels).</p><p>Using the IMU to limit the search area has two advantages. Firstly, reducing the number of pixels to be analyzed by the image processing offers real-time performance with embedded hardware. In fact, the small number of pixels needed to process allows to obtain a minimum frequency of 32 images per second for the highest resolution tested (Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-013-0234-9#Sec12">4</a>). Secondly, we limit the risks of detecting horizontal lines on the surface of the water and in the sky. So, the robustness is improved. An example is given in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0234-9#Fig7">7</a> showing the advantage of reducing the detection area. Some result are shown in the Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0234-9#Fig8">8</a> in other conditions.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-7"><figure><figcaption><b id="Fig7" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 7</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-013-0234-9/figures/7" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0234-9/MediaObjects/10055_2013_234_Fig7_HTML.jpg?as=webp"></source><img aria-describedby="figure-7-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0234-9/MediaObjects/10055_2013_234_Fig7_HTML.jpg" alt="figure7" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-7-desc"><p>Illustration of the advantage of reducing the detection area. Example for a thermal image <b>a</b> Image processing without IMU creates a false-positive result. Because a wave is detected as the horizon. <b>b</b> Image processing with IMU properly tracks the horizon. The wave is not detected.</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-013-0234-9/figures/7" data-track-dest="link:Figure7 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                  <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-8"><figure><figcaption><b id="Fig8" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 8</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-013-0234-9/figures/8" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0234-9/MediaObjects/10055_2013_234_Fig8_HTML.jpg?as=webp"></source><img aria-describedby="figure-8-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0234-9/MediaObjects/10055_2013_234_Fig8_HTML.jpg" alt="figure8" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-8-desc"><p>Some results in different conditions. <b>a</b> Non-thermal video stream. <b>b</b> Non-thermal video stream. <b>c</b> A case where the horizon is almost invisible. <b>d</b> Non-thermal video stream with mist</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-013-0234-9/figures/8" data-track-dest="link:Figure8 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                </div></div></section><section aria-labelledby="Sec12"><div class="c-article-section" id="Sec12-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec12">Evaluating the algorithm’s performance</h2><div class="c-article-section__content" id="Sec12-content"><p>We created this functionality in C# (managed code). Evaluations were carried out on a PC equipped with an Intel Core 2 Duo™ processor at 2.66 GHz. Tests were carried out on several image sequences in different situations and exposures. We present the results for three image sequences including a thermal image. We tested 13,062 images from sequences. The horizon was present in each image. Our detection algorithm correctly identifies the horizon in around 98.45 % of cases. Each image has been appended with a green line to represent the detected horizon. All the images were manually checked. If the horizon is not found or the candidate is not close enough to the horizon (manually checked), the image is rejected. The graph in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0234-9#Fig9">9</a> presents for each sequence of images the number of images tested (left) and the number of images for which the horizon has been detected (right). The calculation time for the horizon extraction routine (excluding rendering) required an average of 6.5 ms for a resolution of 640 × 480.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-9"><figure><figcaption><b id="Fig9" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 9</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-013-0234-9/figures/9" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0234-9/MediaObjects/10055_2013_234_Fig9_HTML.gif?as=webp"></source><img aria-describedby="figure-9-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0234-9/MediaObjects/10055_2013_234_Fig9_HTML.gif" alt="figure9" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-9-desc"><p>Algorithm evaluation</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-013-0234-9/figures/9" data-track-dest="link:Figure9 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+              <p>Regarding performance, we wanted to insure that the different available resolutions would not deteriorate the video’s visual quality. For the highest resolution tested, the algorithm enables approximately 32 fps to be obtained. The impact of the image’s resolution on our algorithm is shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0234-9#Fig10">10</a>.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-10"><figure><figcaption><b id="Fig10" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 10</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-013-0234-9/figures/10" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0234-9/MediaObjects/10055_2013_234_Fig10_HTML.gif?as=webp"></source><img aria-describedby="figure-10-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0234-9/MediaObjects/10055_2013_234_Fig10_HTML.gif" alt="figure10" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-10-desc"><p>FPS variation depending on frame resolution</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-013-0234-9/figures/10" data-track-dest="link:Figure10 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+              </div></div></section><section aria-labelledby="Sec13"><div class="c-article-section" id="Sec13-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec13">Merging video and charts</h2><div class="c-article-section__content" id="Sec13-content"><p>In addition to controlling the video camera by clicking on the e-chart as described in (Hugues et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2010a" title="Hugues O, Cieutat JM, Guitton P (2010a) An experimental augmented reality platform application for assisted maritime navigation: following targets. In: 12th virtual reality international conference (VRIC), ISBN: 2-9515730-9-X, pp 149–154. IEEE Computer Society France" href="/article/10.1007/s10055-013-0234-9#ref-CR8" id="ref-link-section-d1140e2482">2010a</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference b" title="Hugues O, Cieutat JM, Guitton P (2010b) An experimental augmented reality platform for assisted maritime navigation. In: AH ’10 proceedings of the 1st augmented human international conference, pp 1–6. ACM, New York, NY, USA" href="/article/10.1007/s10055-013-0234-9#ref-CR9" id="ref-link-section-d1140e2485">b</a>), the objective of the horizon detection presented in the previous sections is mixing video with digital geographical data stored on the vessel. The ECDIS can be considered as an onboard 3D mapping software. This 3D world is a 3D model of the environment where entities include the coast, seabed and beacons. We therefore use the vessel’s GPS position and the IMU to georeference the camera’s video stream (Jie and Xian-Zhong <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Jie W, Xian-Zhong H (2008) The error chain in using electronic chart display and information systems. In: Systems, man and cybernetics, 2008. SMC 2008. IEEE international conference on, pp 1895–1899" href="/article/10.1007/s10055-013-0234-9#ref-CR10" id="ref-link-section-d1140e2488">2008</a>). In Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0234-9#Fig11">11</a>, we can see the video stream (black and white image) referenced in the 3D environment. The distance between the plane of projection and the vessel depends on the size of the image in the 3D world. This point of view is not provided to the end user, but is shown here to illustrate the video’s georeferencing. Only the “first person” point of view is used; i.e., the frame of the virtual camera used by the 3D scene is in the same position and orientation as the frame of the physical camera lens. This enables the point of view illustrated in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0234-9#Fig13">13</a> to be obtained.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-11"><figure><figcaption><b id="Fig11" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 11</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-013-0234-9/figures/11" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0234-9/MediaObjects/10055_2013_234_Fig11_HTML.jpg?as=webp"></source><img aria-describedby="figure-11-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0234-9/MediaObjects/10055_2013_234_Fig11_HTML.jpg" alt="figure11" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-11-desc"><p>Example of a georeferenced image in the 3D virtual world of the ECDIS. The image is projected on a 2D surface. The surface area depends on the camera’s field of view. The position of the surface depends on the orientation of the camera and the vessel</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-013-0234-9/figures/11" data-track-dest="link:Figure11 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-12"><figure><figcaption><b id="Fig12" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 12</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-013-0234-9/figures/12" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0234-9/MediaObjects/10055_2013_234_Fig12_HTML.gif?as=webp"></source><img aria-describedby="figure-12-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0234-9/MediaObjects/10055_2013_234_Fig12_HTML.gif" alt="figure12" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-12-desc"><p>Areas of the image and opacity settings. <b>a</b> Definition of areas. <b>b</b> User interface for the opacity settings</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-013-0234-9/figures/12" data-track-dest="link:Figure12 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-13"><figure><figcaption><b id="Fig13" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 13</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-013-0234-9/figures/13" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0234-9/MediaObjects/10055_2013_234_Fig13_HTML.jpg?as=webp"></source><img aria-describedby="figure-13-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0234-9/MediaObjects/10055_2013_234_Fig13_HTML.jpg" alt="figure13" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-13-desc"><p>Some examples of mixing the video stream, e-chart and vectorial augmentations. <b>a</b> Thermal video in both areas. Visual augmentations by vectorial objects for the coast and a buoy. <b>b</b> Thermal video and purely virtual information (route to follow) without physical representation. <b>c</b> Thermal video in the upper area, <i>e-chart color</i> in the lower area and vectorial augmentations. <b>d</b> Thermal video in the lower area and model data in the upper area with vectorial augmentations. (clouds are virtual!)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-013-0234-9/figures/13" data-track-dest="link:Figure13 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+              <p>We divide the screen into two distinct areas as illustrated in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0234-9#Fig12">12</a>a. We use shader programming
+<sup><a href="#Fn6"><span class="u-visually-hidden">Footnote </span>6</a></sup> to vary the image’s transparency across each area. By doing this, the height of the Sky + Earth area varies according to the horizon’s position detected by the previously described algorithm.
+<dl class="c-abbreviation_list"><dt class="c-abbreviation_list__term"><dfn>Sky + Earth area:</dfn></dt><dd class="c-abbreviation_list__description">
+                      <p>The video is displayed at 80 % and digital data at 20 %. Charts must not be completely hidden because in certain situations, for example close to the coast, mountains can be used as reference points for sailors. Since charts also model mountains, this information must not be removed. We use a GPU-accelerated function defined by the DirectX (HLSL) library enabling linear interpolation of the transparency between this area and the lower area.</p>
+                    </dd><dt class="c-abbreviation_list__term"><dfn>Sea area:</dfn></dt><dd class="c-abbreviation_list__description">
+                      <p>The video is displayed at 20 % and digital data at 80 %. The video must not be completely hidden because in certain situations, close to ports for example, other vessels may be close by and visually “below” the visible horizon. The video must also not be made completely transparent due to a risk of making other surrounding vessels or unidentified floating objects disappear.</p>
+                    </dd></dl>
+              </p><p>An example of different cases is available in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0234-9#Fig13">13</a>. The transparency of each area is adjusted by default with the previously presented values. However, users are still able to modify these values by using sliders in the ECDIS graphic interface as illustrated in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0234-9#Fig12">12</a>b.</p></div></div></section><section aria-labelledby="Sec14"><div class="c-article-section" id="Sec14-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec14">Future work</h2><div class="c-article-section__content" id="Sec14-content"><p>Our image analysis could benefit from several improvements. Robustness could be improved further by employing the presence of two types of camera. Currently, detection is carried out in the video stream chosen by the user (classical or thermal), but we could use the thermal video stream to improve the detection of the horizon in the classic video stream in bad weather, for example. Another possible improvement would be automatically adapting the surface of the image analysis area. We could use preprocessing to evaluate the “height” of this area to be evaluated, which would enable a greater number of cases to be taken into account. We could also improve, if necessary, calculation loop execution time by using GPU-accelerated programming given the parallel nature of the processing being carried out.</p><p>The presented functionality is being integrated in our ECDIS, and we plan to explore its potential in other maritime operations such as vessel stopping latencies, collision alert or sea rescue.</p></div></div></section><section aria-labelledby="Sec15"><div class="c-article-section" id="Sec15-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec15">Conclusions</h2><div class="c-article-section__content" id="Sec15-content"><p>We have presented an image analysis algorithm enabling horizon detection in maritime scenes. The same algorithm is able to detect the horizon using a video stream from either a classic camera or a thermal camera. We assessed our image analysis by the quality of detection of the visible horizon and the processing time for several image resolutions. Performance is satisfactory through the use of an inertial measurement unit to define the horizon’s detection area in the image. Our detection algorithm correctly identifies the horizon in around 98.45 % of cases. We obtain a performance close to 60 fps with an image resolution of 320 × 240 and over 30 fps with an image resolution of 960 × 540. Finally, we use the horizon detected by our image analysis to divide the display screen into two distinct areas. For each area, the transparency of the video image of a maritime computer-assisted navigation tool (ECDIS) is adjusted to selectively overlay information from a virtual 3D environment.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="notes"><div class="c-article-section" id="notes-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="notes">Notes</h2><div class="c-article-section__content" id="notes-content"><ol class="c-article-footnote c-article-footnote--listed"><li class="c-article-footnote--listed__item" id="Fn1"><span class="c-article-footnote--listed__index">1.</span><div class="c-article-footnote--listed__content"><p>Electronic chart display and information system.</p></div></li><li class="c-article-footnote--listed__item" id="Fn2"><span class="c-article-footnote--listed__index">2.</span><div class="c-article-footnote--listed__content"><p>Automatic identification system: automated tracking system for identifying and locating vessels.</p></div></li><li class="c-article-footnote--listed__item" id="Fn3"><span class="c-article-footnote--listed__index">3.</span><div class="c-article-footnote--listed__content"><p>Automatic radar plotting aid: radar feature for tracking others vessels with echo radar.</p></div></li><li class="c-article-footnote--listed__item" id="Fn4"><span class="c-article-footnote--listed__index">4.</span><div class="c-article-footnote--listed__content"><p>Considering the dimensions, we assume that the vessel’s center of rotation is anchored in (VRP).</p></div></li><li class="c-article-footnote--listed__item" id="Fn5"><span class="c-article-footnote--listed__index">5.</span><div class="c-article-footnote--listed__content"><p>Intel Open Source Computer Vision.</p></div></li><li class="c-article-footnote--listed__item" id="Fn6"><span class="c-article-footnote--listed__index">6.</span><div class="c-article-footnote--listed__content"><p>Instructions directly executed by the graphic card.</p></div></li></ol></div></div></section><section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bouma H, de Lange DJJ, van den Broek PS (2008) Automatic detection of small surface targets with electro-optic" /><p class="c-article-references__text" id="ref-CR1">Bouma H, de Lange DJJ, van den Broek PS (2008) Automatic detection of small surface targets with electro-optical sensor in a harbor environment. In: Proceedings of SPIE electronic imaging 2008 system analysis for digital photography, vol. 7114, pp 1–8</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="G. Calvary, J. Coutaz, D. Thevenin, Q. Limbourg, L. Bouillon, J. V, " /><meta itemprop="datePublished" content="2003" /><meta itemprop="headline" content="Calvary G, Coutaz J, Thevenin D, Limbourg Q, Bouillon L, V J (2003) A unifying reference framework for multi-t" /><p class="c-article-references__text" id="ref-CR2">Calvary G, Coutaz J, Thevenin D, Limbourg Q, Bouillon L, V J (2003) A unifying reference framework for multi-target user interfaces. Interact Comput 15:289–308</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1016%2FS0953-5438%2803%2900010-9" aria-label="View reference 2">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 2 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=A%20unifying%20reference%20framework%20for%20multi-target%20user%20interfaces&amp;journal=Interact%20Comput&amp;volume=15&amp;pages=289-308&amp;publication_year=2003&amp;author=Calvary%2CG&amp;author=Coutaz%2CJ&amp;author=Thevenin%2CD&amp;author=Limbourg%2CQ&amp;author=Bouillon%2CL&amp;author=V%2CJ">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Cornall T (2004) A low computation method to determine horizon angle from video-preliminary version. Technical" /><p class="c-article-references__text" id="ref-CR3">Cornall T (2004) A low computation method to determine horizon angle from video-preliminary version. Technical Report MECSE-4-2004</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Ettinger S, Nechyba M, Ifju P, Waszak M (2002) Vision-guided flight stability and control for micro air vehicl" /><p class="c-article-references__text" id="ref-CR4">Ettinger S, Nechyba M, Ifju P, Waszak M (2002) Vision-guided flight stability and control for micro air vehicles. In: Intelligent robots and systems, 2002. IEEE/RSJ international conference on, vol. 3, pp 2134–2140</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Fefilatyev S, Smarodzinava V, Hall LO, Goldgof DB (2006) Horizon detection using machine learning techniques. " /><p class="c-article-references__text" id="ref-CR5">Fefilatyev S, Smarodzinava V, Hall LO, Goldgof DB (2006) Horizon detection using machine learning techniques. In: Machine learning and applications, 2006. ICMLA ’06. 5th international conference on, pp 17 –21</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="French Government: Oceans round table (grenelle de la mer) (2009). http://www.legrenelle-environnement.fr/IMG/" /><p class="c-article-references__text" id="ref-CR6">French Government: Oceans round table (grenelle de la mer) (2009). <a href="http://www.legrenelle-environnement.fr/IMG/pdf/Livre_bleu_anglais_web.pdf">http://www.legrenelle-environnement.fr/IMG/pdf/Livre_bleu_anglais_web.pdf</a>
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Grant S, Goodyear J (2010) ECDIS: past, present and future. Online : http://www.mar.dfo-mpo.gc.ca&#xA;            " /><p class="c-article-references__text" id="ref-CR7">Grant S, Goodyear J (2010) ECDIS: past, present and future. Online : <a href="http://www.mar.dfo-mpo.gc.ca">http://www.mar.dfo-mpo.gc.ca</a>
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Hugues O, Cieutat JM, Guitton P (2010a) An experimental augmented reality platform application for assisted ma" /><p class="c-article-references__text" id="ref-CR8">Hugues O, Cieutat JM, Guitton P (2010a) An experimental augmented reality platform application for assisted maritime navigation: following targets. In: 12th virtual reality international conference (VRIC), ISBN: 2-9515730-9-X, pp 149–154. IEEE Computer Society France</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Hugues O, Cieutat JM, Guitton P (2010b) An experimental augmented reality platform for assisted maritime navig" /><p class="c-article-references__text" id="ref-CR9">Hugues O, Cieutat JM, Guitton P (2010b) An experimental augmented reality platform for assisted maritime navigation. In: AH ’10 proceedings of the 1st augmented human international conference, pp 1–6. ACM, New York, NY, USA</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Jie W, Xian-Zhong H (2008) The error chain in using electronic chart display and information systems. In: Syst" /><p class="c-article-references__text" id="ref-CR10">Jie W, Xian-Zhong H (2008) The error chain in using electronic chart display and information systems. In: Systems, man and cybernetics, 2008. SMC 2008. IEEE international conference on, pp 1895–1899</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Maidi M (2007) Hybrid tracking with occultation for augmented reality. (suivi hybride en présence d’occultatio" /><p class="c-article-references__text" id="ref-CR11">Maidi M (2007) Hybrid tracking with occultation for augmented reality. (suivi hybride en présence d’occultations pour la réalité augmentée). Ph.D. thesis, Evry-Val d’Essone University, Évry</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="MTI XSens: Mti (2013) http://www.xsens.com/en/general/mti&#xA;                " /><p class="c-article-references__text" id="ref-CR12">MTI XSens: Mti (2013) <a href="http://www.xsens.com/en/general/mti">http://www.xsens.com/en/general/mti</a>
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="International Maritime Organization (IMO): Resolution MSC.192(79)) (2007) Proposed modular structure for RADAR" /><p class="c-article-references__text" id="ref-CR14">International Maritime Organization (IMO): Resolution MSC.192(79)) (2007) Proposed modular structure for RADAR performance standards. Design and installation. CCRP and off-set compensation</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Petit M, Claramunt C, Ray C, Calvary G (2008) A design process for the development of an interactive and adapt" /><p class="c-article-references__text" id="ref-CR15">Petit M, Claramunt C, Ray C, Calvary G (2008) A design process for the development of an interactive and adaptive GIS. In: Bertolotto M, Li X, Ray C (eds) Proceedings of the 8th international symposium on web and wireless geographical information systems, vol. 5373, pp 100–111. Springer</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="OM. Phillips, " /><meta itemprop="datePublished" content="1966" /><meta itemprop="headline" content="Phillips OM (1966) The dynamics of the upper ocean. Cambridge monographs on mechnics and applied mathematics. " /><p class="c-article-references__text" id="ref-CR16">Phillips OM (1966) The dynamics of the upper ocean. Cambridge monographs on mechnics and applied mathematics. Cambridge University Press, Cambridge</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 15 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=The%20dynamics%20of%20the%20upper%20ocean.%20Cambridge%20monographs%20on%20mechnics%20and%20applied%20mathematics&amp;publication_year=1966&amp;author=Phillips%2COM">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Pillich B, Buttgenbach G (2001) Ecdis-the intelligent heart of the hazard and collision avoidance system. In: " /><p class="c-article-references__text" id="ref-CR17">Pillich B, Buttgenbach G (2001) Ecdis-the intelligent heart of the hazard and collision avoidance system. In: Intelligent transportation systems, 2001. Proceedings. 2001 IEEE, pp 1116–1119</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="M. Ribo, P. Lang, H. Ganster, M. Brandner, C. Stock, A. Pinz, " /><meta itemprop="datePublished" content="2002" /><meta itemprop="headline" content="Ribo M, Lang P, Ganster H, Brandner M, Stock C, Pinz A (2002) Hybrid tracking for outdoor augmented reality ap" /><p class="c-article-references__text" id="ref-CR18">Ribo M, Lang P, Ganster H, Brandner M, Stock C, Pinz A (2002) Hybrid tracking for outdoor augmented reality applications. IEEE Comput Graph Appl 22(6):54–63</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2FMCG.2002.1046629" aria-label="View reference 17">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 17 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Hybrid%20tracking%20for%20outdoor%20augmented%20reality%20applications&amp;journal=IEEE%20Comput%20Graph%20Appl&amp;volume=22&amp;issue=6&amp;pages=54-63&amp;publication_year=2002&amp;author=Ribo%2CM&amp;author=Lang%2CP&amp;author=Ganster%2CH&amp;author=Brandner%2CM&amp;author=Stock%2CC&amp;author=Pinz%2CA">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Todorovic S, Nechyba MC (2004) A vision system for horizon tracking and object recognition for micro air vehic" /><p class="c-article-references__text" id="ref-CR19">Todorovic S, Nechyba MC (2004) A vision system for horizon tracking and object recognition for micro air vehicles. In: Florida conference on recent advances in robotics</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Wang Y, Liao Z, Guo H, Liu T, Yang Y (2009) An approach for horizon extraction in ocean observation. In: Image" /><p class="c-article-references__text" id="ref-CR20">Wang Y, Liao Z, Guo H, Liu T, Yang Y (2009) An approach for horizon extraction in ocean observation. In: Image and signal processing, 2009. CISP ’09. 2nd international congress on, pp 1 –5</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Woo JH, Kim GS (2005) Robust horizon and peak extraction for vision-based navigation. Conference on machine vi" /><p class="c-article-references__text" id="ref-CR21">Woo JH, Kim GS (2005) Robust horizon and peak extraction for vision-based navigation. Conference on machine vision application (MVA2005) pp 526–529</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="You S, Neumann U (2001) Fusion of vision and gyro tracking for robust augmented reality registration. IEEE vir" /><p class="c-article-references__text" id="ref-CR22">You S, Neumann U (2001) Fusion of vision and gyro tracking for robust augmented reality registration. IEEE virtual reality conference pp 71–78</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="You S, Neumann U, Azuma R (1999) Hybrid inertial and vision tracking for augmented reality registration. In: V" /><p class="c-article-references__text" id="ref-CR23">You S, Neumann U, Azuma R (1999) Hybrid inertial and vision tracking for augmented reality registration. In: VR ’99: Proceedings of the IEEE virtual reality, p 260. IEEE Computer Society, Washington, DC, USA</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Yuan HZ, Zhang XQ, Feng ZL (2010) Horizon detection in foggy aerial image. In: Image analysis and signal proce" /><p class="c-article-references__text" id="ref-CR24">Yuan HZ, Zhang XQ, Feng ZL (2010) Horizon detection in foggy aerial image. In: Image analysis and signal processing (IASP), 2010 international conference on, pp 191–194</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Zabala FA (2006) Hough transform implementation in roll stability control of uavs. E-Book" /><p class="c-article-references__text" id="ref-CR25">Zabala FA (2006) Hough transform implementation in roll stability control of uavs. E-Book</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="B. Zafarifar, H. Weda, PHN. With, " /><meta itemprop="datePublished" content="2008" /><meta itemprop="headline" content="Zafarifar B, Weda H, de With PHN (2008) Horizon detection based on sky-color and edge features. Visual Commun " /><p class="c-article-references__text" id="ref-CR26">Zafarifar B, Weda H, de With PHN (2008) Horizon detection based on sky-color and edge features. Visual Commun Image Process 2008 6822(1):682220</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1117%2F12.766689" aria-label="View reference 25">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 25 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Horizon%20detection%20based%20on%20sky-color%20and%20edge%20features&amp;journal=Visual%20Commun%20Image%20Process%202008&amp;volume=6822&amp;issue=1&amp;publication_year=2008&amp;author=Zafarifar%2CB&amp;author=Weda%2CH&amp;author=With%2CPHN">
+                    Google Scholar</a> 
+                </p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-013-0234-9-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><div class="c-article-section__content" id="Ack1-content"></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">ESTIA-Research, MaxSea, LaBRI (INRIA), Bidart, France</p><p class="c-article-author-affiliation__authors-list">Olivier Hugues</p></li><li id="Aff2"><p class="c-article-author-affiliation__address">ESTIA-Research, Bidart, France</p><p class="c-article-author-affiliation__authors-list">Jean-Marc Cieutat</p></li><li id="Aff3"><p class="c-article-author-affiliation__address">LaBRI-IPARLA (INRIA), University of Bordeaux 1, Bordeaux, France</p><p class="c-article-author-affiliation__authors-list">Pascal Guitton</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Olivier-Hugues"><span class="c-article-authors-search__title u-h3 js-search-name">Olivier Hugues</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Olivier+Hugues&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Olivier+Hugues" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Olivier+Hugues%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Jean_Marc-Cieutat"><span class="c-article-authors-search__title u-h3 js-search-name">Jean-Marc Cieutat</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Jean-Marc+Cieutat&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Jean-Marc+Cieutat" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Jean-Marc+Cieutat%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Pascal-Guitton"><span class="c-article-authors-search__title u-h3 js-search-name">Pascal Guitton</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Pascal+Guitton&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Pascal+Guitton" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Pascal+Guitton%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-013-0234-9/email/correspondent/c1/new">Olivier Hugues</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=Real-time%20infinite%20horizon%20tracking%20with%20data%20fusion%20for%20augmented%20reality%20in%20a%20maritime%20operations%20context&amp;author=Olivier%20Hugues%20et%20al&amp;contentID=10.1007%2Fs10055-013-0234-9&amp;publication=1359-4338&amp;publicationDate=2013-10-10&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Hugues, O., Cieutat, J. &amp; Guitton, P. Real-time infinite horizon tracking with data fusion for augmented reality in a maritime operations context.
+                    <i>Virtual Reality</i> <b>18, </b>129–138 (2014). https://doi.org/10.1007/s10055-013-0234-9</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-013-0234-9.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2011-04-22">22 April 2011</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2013-09-24">24 September 2013</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2013-10-10">10 October 2013</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2014-06">June 2014</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-013-0234-9" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-013-0234-9</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Image processing</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Data fusion</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Augmented reality</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Electronic chart system</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Geographical information system</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-013-0234-9.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=234;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="Flexible bones for the haptic prototyping of deformable objects"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="Accurate modelling of the compliance characteristics of solid models is an important rendering task for increasing the realism of virtual environments. The ability to feel the force and moment..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/7/2.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="Flexible bones for the haptic prototyping of deformable objects"/>
+
+    <meta name="dc.source" content="Virtual Reality 2004 7:2"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2004-02-24"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2004 Springer-Verlag London Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="Accurate modelling of the compliance characteristics of solid models is an important rendering task for increasing the realism of virtual environments. The ability to feel the force and moment stress resultants that cause the bending, twisting, shearing and/or fracture of physically-based models is useful for a large number of application areas including medical training, CAD environments, computer animation and games. An important element of compliance rendering is the mechanics engine that solves the equations governing the deformations and stresses in solid models. The development of such engines has to carefully balance the needs for haptic (not just graphical) realism with the needs for real time processing at rates in the range of 500-1000&#160;Hz. In this paper we describe methods and techniques we have developed for such an engine, and demonstrate their characteristics in a number of applications including design of compliant mechanisms, animation and solid modelling."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2004-02-24"/>
+
+    <meta name="prism.volume" content="7"/>
+
+    <meta name="prism.number" content="2"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="103"/>
+
+    <meta name="prism.endingPage" content="111"/>
+
+    <meta name="prism.copyright" content="2004 Springer-Verlag London Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-003-0119-4"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-003-0119-4"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-003-0119-4.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-003-0119-4"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="Flexible bones for the haptic prototyping of deformable objects"/>
+
+    <meta name="citation_volume" content="7"/>
+
+    <meta name="citation_issue" content="2"/>
+
+    <meta name="citation_publication_date" content="2004/04"/>
+
+    <meta name="citation_online_date" content="2004/02/24"/>
+
+    <meta name="citation_firstpage" content="103"/>
+
+    <meta name="citation_lastpage" content="111"/>
+
+    <meta name="citation_article_type" content="Original Article"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-003-0119-4"/>
+
+    <meta name="DOI" content="10.1007/s10055-003-0119-4"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-003-0119-4"/>
+
+    <meta name="description" content="Accurate modelling of the compliance characteristics of solid models is an important rendering task for increasing the realism of virtual environments. The"/>
+
+    <meta name="dc.creator" content="Robert L. Blanding"/>
+
+    <meta name="dc.creator" content="George M. Turkiyyah"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="McDonnell KT, Hong Q (2000) Dynamic sculpting and animation of free-form subdivision solids. In: Proceedings of Computer Animation 2000, Philadelphia, PA, 3&#8211;5 May 2000"/>
+
+    <meta name="citation_reference" content="Metaxas D (1996) Physics-based deformable models. Kluwer, New York"/>
+
+    <meta name="citation_reference" content="MacCracken R, Joy KI (1996) Free-form deformations with lattices of arbitrary topology. In: Proceedings of SIGGRAPH&#8217;96, ACM, New York"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comput Geom Theor Appl; citation_title=Skeleton-based three-dimensional geometric morphing; citation_author=RL Blanding; citation_volume=15; citation_issue=1&#8211;3; citation_publication_date=2000; citation_pages=129-48; citation_id=CR4"/>
+
+    <meta name="citation_reference" content="Blanding R et al. (1999) A skeletal-based solid editor. In: Proceedings of the Fifth Symposium on Solid Modeling and Applications, ACM, Ann Arbor, MI"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Engin Comp; citation_author=null Nebi; citation_volume=8; citation_publication_date=1992; citation_pages=121; citation_id=CR6"/>
+
+    <meta name="citation_reference" content="Storti DW et al. (1997) Skeleton-based modeling operations on solids. In: Proceedings of the Fourth Symposium on Solid Modeling and Applications, ACM, New York"/>
+
+    <meta name="citation_reference" content="Held M (1994) On computing Voronoi diagrams of convex polyhedra by means of wavefront propagation. In: Proceedings of the 6th Canadian Conference on Computing Geometry, Saskatoon, Canada, August 1994"/>
+
+    <meta name="citation_reference" content="Milenkovic V (1993) Robust construction of the Voronoi diagram of a polyhedron. In: Proceedings of the 5th Canadian Conference on Computing Geometry, Waterloo, Canada, August 1993"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Trans Visual Comp Graph; citation_author=null Sherbrooke; citation_volume=2; citation_publication_date=1996; citation_pages=44; citation_doi=10.1109/2945.489386; citation_id=CR10"/>
+
+    <meta name="citation_reference" content="Etzion M, Rappoport A (1999) Computing the Voronoi diagram of a 3-D polyhedron by separate computation of its symbolic and geometric parts. In: Proceedings of the Fifth Symposium on Solid Modeling and Applications, ACM, Ann Arbor, MI"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comp-Aid Des; citation_title=Computation of 3D skeletons by a generalized Delaunay triangulation technique; citation_author=JM Reddy, GM Turkiyyah; citation_volume=27; citation_issue=9; citation_publication_date=1995; citation_pages=677-694; citation_id=CR12"/>
+
+    <meta name="citation_reference" content="Ananthasuresh GK, Kota S (1995) Designing compliant mechanisms. ASME Mech Engin 117(11)74&#8211;77"/>
+
+    <meta name="citation_reference" content="Igarashi T, Matsuoka S and Tanaka H (1999) Teddy: a sketching interface for 3D freeform design. In: Proceedings of SIGGRAPH&#8217;99, ACM, New York"/>
+
+    <meta name="citation_reference" content="Teichmann M, Teller S (1998) Assisted articulation of closed polygonal models. In: Proceedings of the Ninth Eurographics Workship on Animation and Simulation, Lisbon, Portugal, August-September 1998"/>
+
+    <meta name="citation_author" content="Robert L. Blanding"/>
+
+    <meta name="citation_author_email" content="rob@hitl.washington.edu"/>
+
+    <meta name="citation_author_institution" content="Human Interface Technology Lab, University of Washington, Seattle, USA"/>
+
+    <meta name="citation_author" content="George M. Turkiyyah"/>
+
+    <meta name="citation_author_institution" content="Department of Civil and Environmental Engineering, University of Washington, Seattle, USA"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-003-0119-4&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2004/04/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-003-0119-4"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="Flexible bones for the haptic prototyping of deformable objects"/>
+        <meta property="og:description" content="Accurate modelling of the compliance characteristics of solid models is an important rendering task for increasing the realism of virtual environments. The ability to feel the force and moment stress resultants that cause the bending, twisting, shearing and/or fracture of physically-based models is useful for a large number of application areas including medical training, CAD environments, computer animation and games. An important element of compliance rendering is the mechanics engine that solves the equations governing the deformations and stresses in solid models. The development of such engines has to carefully balance the needs for haptic (not just graphical) realism with the needs for real time processing at rates in the range of 500-1000&amp;nbsp;Hz. In this paper we describe methods and techniques we have developed for such an engine, and demonstrate their characteristics in a number of applications including design of compliant mechanisms, animation and solid modelling."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>Flexible bones for the haptic prototyping of deformable objects | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-003-0119-4","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Compliant mechanisms, Finite element analysis, Haptic feedback, Medial axis, 3D solid deformation, Virtual prototyping","kwrd":["Compliant_mechanisms","Finite_element_analysis","Haptic_feedback","Medial_axis","3D_solid_deformation","Virtual_prototyping"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-003-0119-4","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-003-0119-4","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=119;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-003-0119-4">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            Flexible bones for the haptic prototyping of deformable objects
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-003-0119-4.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-003-0119-4.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">Original Article</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2004-02-24" itemprop="datePublished">24 February 2004</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">Flexible bones for the haptic prototyping of deformable objects</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Robert_L_-Blanding" data-author-popup="auth-Robert_L_-Blanding" data-corresp-id="c1">Robert L. Blanding<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of Washington" /><meta itemprop="address" content="grid.34477.33, 0000000122986657, Human Interface Technology Lab, University of Washington, 215 Fluke Hall, Mason Road, Seattle, WA 98195-2142, USA" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-George_M_-Turkiyyah" data-author-popup="auth-George_M_-Turkiyyah">George M. Turkiyyah</a></span><sup class="u-js-hide"><a href="#Aff2">2</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of Washington" /><meta itemprop="address" content="grid.34477.33, 0000000122986657, Department of Civil and Environmental Engineering, University of Washington, Seattle, WA, USA" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 7</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">103</span>–<span itemprop="pageEnd">111</span>(<span data-test="article-publication-year">2004</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">67 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">1 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-003-0119-4/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>Accurate modelling of the compliance characteristics of solid models is an important rendering task for increasing the realism of virtual environments. The ability to feel the force and moment stress resultants that cause the bending, twisting, shearing and/or fracture of physically-based models is useful for a large number of application areas including medical training, CAD environments, computer animation and games. An important element of compliance rendering is the mechanics engine that solves the equations governing the deformations and stresses in solid models. The development of such engines has to carefully balance the needs for haptic (not just graphical) realism with the needs for real time processing at rates in the range of 500-1000 Hz. In this paper we describe methods and techniques we have developed for such an engine, and demonstrate their characteristics in a number of applications including design of compliant mechanisms, animation and solid modelling.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">Introduction</h2><div class="c-article-section__content" id="Sec2-content"><p>Accurate modelling of the compliance characteristics of solid models is an important rendering task for increasing the realism of virtual environments. The ability to feel the force and moment stress resultants that cause the bending, twisting, shearing and/or fracture of physically-based models is useful for a large number of application areas including medical training, CAD environments, computer animation and games.</p><p>Compliance rendering has two elements. The first is the haptic device that can generate the stress/force feedback. A number of devices currently exist that are capable of generating a wide range of force feedback. They include devices such as the stylus-based SensAble Technologies PHANToM, the Immersion 3D Interaction CyberGrasp glove, force feedback mice such as the Betacom Screen Rover and various force feedback joysticks. The second element of compliance rendering is the mechanics engine that solves the equations governing the deformations and stresses in solid models. The development of such engines has to carefully balance the needs for haptic (not just graphical) realism with the needs for real time processing at rates in the range of 500-1000 Hz. In this paper we describe methods and techniques we have developed for such an engine, and demonstrate their characteristics in a number of applications including the design of compliant mechanisms, animation and solid modelling. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0119-4#Fig1">1</a> is an illustration of some of the capabilities of the proposed methods. In the CAD application shown, the deformation and force calculations are performed in real-time and the user can push on the model and feel the resultant forces through a PHANToM haptic device.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1.</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-003-0119-4/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0119-4/MediaObjects/s10055-003-0119-4fhb1.jpg?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0119-4/MediaObjects/s10055-003-0119-4fhb1.jpg" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p> A solid modelling application with real-time deformations and haptic feedback</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-003-0119-4/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <h3 class="c-article__sub-heading" id="Sec3">Deformable models for haptic interaction</h3><p>The standard way to model the mechanical behaviour of solid models in engineering and the physical sciences is to discretise the model using finite elements. The finite element discretisation approximates the governing partial differential equations that describe the deformation and stresses, and results in a set of algebraic equations whose solution provides the deformations at a set of discrete nodal points, from which stresses, reactions and other quantities of interest can be computed. The finite element approximation improves in accuracy as the finite element mesh gets more refined. Various mechanics-based models have been proposed for computer graphics applications and surface deformations, including spring lattices and continuum finite elements with various energy terms [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1" title="McDonnell KT, Hong Q (2000) Dynamic sculpting and animation of free-form subdivision solids. In: Proceedings of Computer Animation 2000, Philadelphia, PA, 3–5 May 2000" href="/article/10.1007/s10055-003-0119-4#ref-CR1" id="ref-link-section-d77605e342">1</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2" title="Metaxas D (1996) Physics-based deformable models. Kluwer, New York" href="/article/10.1007/s10055-003-0119-4#ref-CR2" id="ref-link-section-d77605e345">2</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 3" title="MacCracken R, Joy KI (1996) Free-form deformations with lattices of arbitrary topology. In: Proceedings of SIGGRAPH’96, ACM, New York" href="/article/10.1007/s10055-003-0119-4#ref-CR3" id="ref-link-section-d77605e348">3</a>].</p><p>Unfortunately the use of standard finite element discretisations in the context of haptic rendering is limited by computational requirements. Accurate computation of stresses for haptic rendering purposes requires prohibitively large meshes even for objects of moderate geometric complexity. Stresses generally converge slowly (more slowly than displacements, since the stresses and strains are related to derivatives of the displacements) as the mesh is refined, but the updates must be performed at rates exceeding 500 Hz.</p><p>In the case of small deformations and linear material behaviour, some preprocessing can be used to allow the use of a reasonably sized mesh and computation on it at haptic rates. However, in the context of large deformations, which a realistic haptic environment for deformable models must support, the computational requirements increase substantially. Accurate rendering of forces that cause large deformations in physical models requires the use of nonlinear relations between strains and displacements and results in a set of nonlinear algebraic equations that must be solved. Using a Newton-type method, the solution requires the repeated formulation and solution of a linear set of equations. As a result, only a relatively coarse mesh can be afforded resulting in a poor approximation of stresses and unintuitive haptic interaction. The use of nonlinear relations for large deformations is necessary, as we will demonstrate later. Without accounting for geometric nonlinearities, even deformations become unintuitive.</p><p>In this paper, we propose to use a geometric abstraction of the model as the basis for generating the description of its mechanical behaviour. By representing the solid model by a lower dimensional abstraction that captures its essential geometric characteristics, we are able to use far fewer elements to accurately represent the mechanical deformation and resulting stresses even in the case of large geometric deformations. Said differently, given the limited size mesh that we can use in accurate haptic rendering contexts, we propose a methodology that allows the placement of nodes and elements in a way that best approximates the behaviour of the model.</p><h3 class="c-article__sub-heading" id="Sec4">Geometric skeletons of solid models</h3><p>The geometric abstraction used in the generation of deformable models is the skeleton, aka the medial axis/surface. The skeleton of a polygon is composed of arcs (linear or parabolic) which are equidistant from two points on the surface and junction points which are equidistant from at least three points (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0119-4#Fig2">2</a>). In three dimensions, the skeleton consists of surface sheets and/or curves consisting of the loci of points that are minimally equidistant from at least two boundary points on the model, i.e., the centres of spheres maximally inscribable in the object. Points on skeletal sheets are equidistant from exactly two boundary points. Points on skeleton seams (which in non-degenerate cases are intersections of three surface sheets) are equidistant from three boundary points. Seams intersect at junction points, which are generally equidistant from four boundary points.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2a,b.</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-003-0119-4/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0119-4/MediaObjects/s10055-003-0119-4fhb2.jpg?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0119-4/MediaObjects/s10055-003-0119-4fhb2.jpg" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p> Skeletons in two and three dimensions</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-003-0119-4/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec5">Skeleton generation</h4><p>The importance of skeletons for various applications in solid modelling and engineering analysis/design [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 4" title="Blanding RL et al (2000) Skeleton-based three-dimensional geometric morphing. Comput Geom Theor Appl 15(1–3):129–48" href="/article/10.1007/s10055-003-0119-4#ref-CR4" id="ref-link-section-d77605e393">4</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 5" title="Blanding R et al. (1999) A skeletal-based solid editor. In: Proceedings of the Fifth Symposium on Solid Modeling and Applications, ACM, Ann Arbor, MI" href="/article/10.1007/s10055-003-0119-4#ref-CR5" id="ref-link-section-d77605e396">5</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 6" title="Nebi GH, Patrikalakis NM (1992) An automatic coarse and fine surface mesh generation scheme based on medial axis transform. I. Algorithms. Engin Comp 8(3):121–37" href="/article/10.1007/s10055-003-0119-4#ref-CR6" id="ref-link-section-d77605e399">6</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 7" title="Storti DW et al. (1997) Skeleton-based modeling operations on solids. In: Proceedings of the Fourth Symposium on Solid Modeling and Applications, ACM, New York" href="/article/10.1007/s10055-003-0119-4#ref-CR7" id="ref-link-section-d77605e402">7</a>] has led to an extensive body of literature describing algorithms and implementations for skeleton generation [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 8" title="Held M (1994) On computing Voronoi diagrams of convex polyhedra by means of wavefront propagation. In: Proceedings of the 6th Canadian Conference on Computing Geometry, Saskatoon, Canada, August 1994" href="/article/10.1007/s10055-003-0119-4#ref-CR8" id="ref-link-section-d77605e405">8</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 9" title="Milenkovic V (1993) Robust construction of the Voronoi diagram of a polyhedron. In: Proceedings of the 5th Canadian Conference on Computing Geometry, Waterloo, Canada, August 1993" href="/article/10.1007/s10055-003-0119-4#ref-CR9" id="ref-link-section-d77605e409">9</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 10" title="Sherbrooke EC, Patrikalakis NM and Brisson E (1996) An algorithm for the medial axis transform of 3D polyhedral solids. IEEE Trans Visual Comp Graph 2(1):44–61" href="/article/10.1007/s10055-003-0119-4#ref-CR10" id="ref-link-section-d77605e412">10</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 11" title="Etzion M, Rappoport A (1999) Computing the Voronoi diagram of a 3-D polyhedron by separate computation of its symbolic and geometric parts. In: Proceedings of the Fifth Symposium on Solid Modeling and Applications, ACM, Ann Arbor, MI" href="/article/10.1007/s10055-003-0119-4#ref-CR11" id="ref-link-section-d77605e415">11</a>]. For the purposes of this paper it is assumed that we have access to a robust and efficient skeleton generation implementation. The implementation we use is based on the work of Reddy and Turkiyyah [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 12" title="Reddy JM, Turkiyyah GM (1995) Computation of 3D skeletons by a generalized Delaunay triangulation technique. Comp-Aid Des 27(9)677–694" href="/article/10.1007/s10055-003-0119-4#ref-CR12" id="ref-link-section-d77605e418">12</a>].</p></div></div></section><section aria-labelledby="Sec6"><div class="c-article-section" id="Sec6-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec6">Building the deformable model</h2><div class="c-article-section__content" id="Sec6-content"><p>The principal contribution of our research is a method for constructing a finite element model from a boundary representation of a solid object that is simple enough to be solved in real time, yet accurately captures the mechanical behaviour of the object. In order to accomplish this, we use the skeleton of the object as a basis from which we construct a finite element mesh consisting of non-linear beam/frame elements. We refer to the resulting network of beam elements as “flexible bones.”</p><p>The use of the skeleton is motivated primarily by its ability to capture the characteristics of the model that are important for accurate deformation modelling. The skeleton lies along the “middle” of the object and the maximal circles capture the thickness of the object, which is directly related to its stiffness. The skeleton also contains the information necessary to correlate the surface of the object with the skeleton such that deformations of the skeleton are translated into object deformations and vice-versa.</p><p>Building the deformable model consists of the following steps:</p><ol class="u-list-style-none">
+                  <li>
+                    <span class="u-custom-list-number">1.</span>
+                    
+                      <p>Generate the skeleton</p>
+                    
+                  </li>
+                  <li>
+                    <span class="u-custom-list-number">2.</span>
+                    
+                      <p>Associate boundary points with the skeleton (this may require a resampling of the boundary of the object)</p>
+                    
+                  </li>
+                  <li>
+                    <span class="u-custom-list-number">3.</span>
+                    
+                      <p>Simplify the skeleton (maintaining boundary associations)</p>
+                    
+                  </li>
+                  <li>
+                    <span class="u-custom-list-number">4.</span>
+                    
+                      <p>Build the finite element mesh</p>
+                    
+                  </li>
+                </ol>
+                     <p>For simplicity we describe the algorithm here in detail for two dimensional models only. Extending the algorithm to three dimensions does not introduce any fundamental changes to the approach. Also note that skeleton generation is not discussed here. For further information on skeleton generation the reader is referred to the large body of existing literature on the subject.</p><h3 class="c-article__sub-heading" id="Sec7">Tying the skeleton to the boundary</h3><p>In order to associate the deformation of the mesh with the boundary of the object, we must establish correspondences between the two. These correspondences serve to translate deformations from the mesh to the boundary, as well as translate applied forces and displacements from the boundary to the mesh.</p><p>As the object deforms, segments of the boundary that were initially linear may become curved. In order to account for and display this behaviour it may be necessary to subdivide large linear boundary edges into smaller segments. After a suitable boundary discretisation is generated, each vertex of the boundary is projected onto the skeleton and represented as an offset vector from a portion of the skeleton. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0119-4#Fig3">3</a> shows how the boundary of a simple polygon is discretised and tied to the skeleton.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3.</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-003-0119-4/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0119-4/MediaObjects/s10055-003-0119-4fhb3.jpg?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0119-4/MediaObjects/s10055-003-0119-4fhb3.jpg" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p> The boundary of the model and an approximate skeleton<b> a</b> The boundary is discretised<b> b</b> and associated with the skeleton<b> c</b>
+                                    </p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-003-0119-4/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h3 class="c-article__sub-heading" id="Sec8">Skeleton simplification</h3><p>In the next step of the algorithm we will build a beam mesh using the skeleton. Because the time required to solve the mesh is a function of the complexity of the mesh, and the complexity of the mesh is directly tied to the complexity of the skeleton, it is best to simplify the skeleton as much as possible. We would like to simplify the skeleton without sacrificing the accuracy of the resulting model. The following pseudo-code summarizes the skeleton simplification step of the algorithm.</p><p>Linearise the skeleton</p><p>Compute edge collapse costs</p><p>While (skeleton size &gt; desired size &amp; least cost &lt; maximum allowable cost){</p><p>   Collapse edge with least cost</p><p>   Update adjacent edge collapse costs</p><p>}</p><p>We begin by linearising the skeleton. The exact skeleton may consist of linear as well as curved portions. Before any other simplification we replace all of the curved portions of the skeleton with linear approximations.</p><p>The skeleton is now simplified by progressively collapsing skeletal edges. When an edge is collapsed, any boundary associations tied to the removed edge are updated and associated with one of the remaining adjacent edges. The challenge for this portion of the algorithm is to compute the cost of collapsing a given edge in such a way that the cost reflects the impact that removing the edge will have on the accuracy of the final beam model.</p><p>There are several heuristics that govern the removal of edges, which we would like to be reflected in the edge collapse cost. These heuristics include:</p><ul class="u-list-style-dash">
+                    <li>
+                      <p>Wings (portions of the skeleton which extend to the boundary) are removed first.</p>
+                    </li>
+                    <li>
+                      <p>Junctions where more than two skeletal edges meet are always preserved.</p>
+                    </li>
+                    <li>
+                      <p>
+                                    <i>Criteria for junctions where two skeletal edges meet (</i>refer<i> to</i> Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0119-4#Fig4">4</a>
+                                    <i>):</i>
+                                    </p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4.</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-003-0119-4/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0119-4/MediaObjects/s10055-003-0119-4flb4.gif?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0119-4/MediaObjects/s10055-003-0119-4flb4.gif" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p> Variables affecting edge collapse around the junction between two skeletal edges</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-003-0119-4/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                                 
+                    </li>
+                    <li>
+                      <p>If<i> l1</i> or<i> l2</i> is very small, the vertex is removed.</p>
+                    </li>
+                    <li>
+                      <p>If<i> θ</i> is small, the vertex is preserved.</p>
+                    </li>
+                    <li>
+                      <p>If<i> r1</i> &lt;=<i> r2</i> &lt;=<i> r3</i> the vertex is removed.</p>
+                    </li>
+                    <li>
+                      <p>If<i> r1</i> ≈<i> r2</i> ≈<i> r3</i> the vertex is removed.</p>
+                    </li>
+                    <li>
+                      <p>if<i> r1&lt;&lt;r3</i> or<i> r1&gt;&gt;r3</i> the vertex is preserved.</p>
+                    </li>
+                  </ul>
+                        <p>Using these heuristics we associate a cost with collapsing each edge in the model. The junction of two skeletal edges shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0119-4#Fig4">4</a> is the most common situation we encounter and also the trickiest. One possible formulation that does a good job capturing the heuristics for these types of edges is:</p><div id="Equ2" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ collapse\_\cos t = {\left| {\theta (rad)} \right|} + {\left| {\frac{{r1 - r2}} {{l1}} - \frac{{r2 - r3}} {{l2}}} \right|}. $$ </span></div></div>
+                        <p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0119-4#Fig5">5</a>a shows an object for which we wish to construct a flexible bone model. The complete skeleton, consisting of 940 skeletal edges is shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0119-4#Fig5">5</a>b. Applying our simplification algorithm with a target mesh size of 40 elements yields the structure shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0119-4#Fig5">5</a>c. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0119-4#Fig5">5</a>d shows the same model simplified further to only 19 elements. This simplified skeleton consists of only about two percent of the edges in the original model yet still accurately captures the important characteristics of the object.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5.</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-003-0119-4/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0119-4/MediaObjects/s10055-003-0119-4fhb5.jpg?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0119-4/MediaObjects/s10055-003-0119-4fhb5.jpg" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p> An object<b> a</b> with the initial beam mesh<b> b</b> consisting of 940 elements, the same mesh simplified down to 40 elements using edge collapse operations<b> c</b> and 19 edges<b> d</b>
+                                    </p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-003-0119-4/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h3 class="c-article__sub-heading" id="Sec9">Building the finite element mesh</h3><p>After the skeleton has been simplified we construct a finite element mesh by placing mesh nodes at every junction in the skeleton and beam elements corresponding to each edge in the simplified skeleton. We choose to use beam elements with a variable cross section in order to best capture the geometric characteristics dictated by the skeletal edges and radii.</p><p>We can write the force vector and tangent stiffness matrix for a frame element undergoing large deformation as:</p><div id="Equ1" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ \begin{array}{*{20}l} {{q_{u} } \hfill} &amp; {{ = {\int_l^{} {P{N}'^{t}_{u} } }} \hfill} \\ {{q_{v} } \hfill} &amp; {{ = {\int_l^{} {M{N}''_{v} + {\int_{}^{} {P{N}'^{t}_{v} N_{v} ^{\prime } d_{v} } }} }} \hfill} \\ {{k_{{uu}} } \hfill} &amp; {{ = {\int_l {EA{N}'^{t}_{u} {N}'_{u} } }} \hfill} \\ {{k_{{uv}} } \hfill} &amp; {{ = {\int_l {EA{N}'^{t}_{u} ({N}'_{v} d_{v} ){N}'_{v} } }} \hfill} \\ {{k_{{vv}} } \hfill} &amp; {{ = {\int_l {EI{N}''^{t}_{v} {N}''_{v} } } + {\int_l {P{N}'^{t}_{v} {N}'_{v} } } + {\int_{} {EA{N}'^{t}_{v} ({N}'_{v} d_{v} )^{2} {N}'_{v} } }} \hfill} \\ \end{array} $$</span></div><div class="c-article-equation__number">
+                    (1)
+                </div></div><p>where <i>q</i>
+                           <sub>
+                    <i>u</i>
+                  </sub> and <i>q</i>
+                           <sub>
+                    <i>v</i>
+                  </sub> are the internal forces and <i>k</i>
+                           <sub>
+                    <i>uu</i>
+                  </sub>, <i>k</i>
+                           <sub>
+                    <i>uv</i>
+                  </sub> and <i>k</i>
+                           <sub>
+                    <i>vv</i>
+                  </sub> are stiffness matrices. <i>A</i>, <i>I</i> and <i>E</i> are the area, moment of inertia, and the elastic modulus of the material respectively. <i>P</i> and <i>M</i> are the internal force and moment in the element and can be written as:</p><div id="Equ99" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex"> $$ \begin{aligned} P = EA\varepsilon &amp; \\ M = \kappa EI &amp; \\ \end{aligned} $$ </span></div></div><p>where<i> ε</i> and<i> κ</i> are the strain and curvature of the member.</p><p>Evaluating these integrals with constant<i> A</i> and<i> I</i> will generate a prismatic frame element (constant cross section). Non-prismatic frame elements may be generated by using<i> A</i> and<i> I</i> that reflect the variable cross section. For our purposes, we use a frame element with circular cross section that varies linearly along the length of the element. Therefore, we write:</p><div id="Equ3" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ \begin{aligned} r = \frac{{L - x}} {L}r1 + \frac{x} {L}r2 &amp; \\ I = \frac{{\pi r^{4} }} {4} &amp; \\ A = \pi r^{2} &amp; \\ \end{aligned} $$ </span></div></div>
+                        <p>At this point we can hand the work off to a symbolic solver to perform the integrations, or we can evaluate the integrals numerically using a method such as Gaussian quadrature.</p></div></div></section><section aria-labelledby="Sec10"><div class="c-article-section" id="Sec10-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec10">Interacting with the deformable model</h2><div class="c-article-section__content" id="Sec10-content"><p>The user interacts with the deformable model by either explicitly or implicitly applying force and/or displacement boundary conditions to the model, then solving the resulting constrained finite element model. The method by which boundary conditions are applied to the model is dependent on the application and may be anything from explicitly defining displacements and forces at nodes of the mesh, to simply “grabbing” part of the model and tugging on it. When modelling assemblies or complex scenes, boundary conditions may be derived from interaction between objects in the virtual environment such as collision or friction. The flexible bone model supports all of these types of interactions. The mesh is then solved to generate the resulting deformation, force, and stress reactions within the model.</p><h3 class="c-article__sub-heading" id="Sec11">Translating boundary conditions from the surface to the mesh</h3><p>Most interactions with the model take place at the surface, but ultimately the boundary conditions must be applied to nodes in the finite element mesh. This requires that we translate surface interactions to interactions on the skeleton. If we desire an approximate solution, it may be sufficient to simply attach boundary conditions to the nearest node. For a more accurate solution, applied forces at the surface can be represented by statically equivalent force-moment pairs at the skeleton nodes. Surface displacement and rotation constraints may be written as linear combinations of the displacements and rotations of skeletal nodes.</p><h3 class="c-article__sub-heading" id="Sec12">Solving the mesh</h3><p>After all of the boundary conditions have been applied to the mesh, we solve for the resulting forces and displacements at the nodes. The displacements are applied to the node geometry to produce a display of the deformed model. The forces can be used to supply haptic feedback to the user. Stresses in the mesh can also be calculated and interpreted as an approximate measure of stress in the object due to the deformation.</p><p>If speed is our major concern or we assume that all deformations will be small, we can choose to treat the mesh as a linear system. The primary appeal of this is that the stiffness matrix remains constant for a given set of boundary condition locations. This allows us to factor the stiffness matrix only when the location of the boundary conditions changes. Under normal user interaction this means that once the user has selected a node with which to interact, we can factor the matrix immediately and quickly solve the mesh as the user interacts with the selected node. In most cases however the results obtained using the linear model are only accurate for a very small range of motion. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0119-4#Fig6">6</a> shows an object in its undeflected position, and the result of applying a large deformation using the linear model. The linear solution exhibits an unacceptable distortion of the model. A much more accurate result is shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0119-4#Fig6">6</a>c where the same model and loading conditions have been solved using a non-linear model.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-6"><figure><figcaption><b id="Fig6" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 6.</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-003-0119-4/figures/6" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0119-4/MediaObjects/s10055-003-0119-4fhb6.jpg?as=webp"></source><img aria-describedby="figure-6-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0119-4/MediaObjects/s10055-003-0119-4fhb6.jpg" alt="figure6" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-6-desc"><p> Deforming an object<b> a</b> using the linear model<b> b</b> compared with the same applied force using the non-linear model<b> c</b>
+                                    </p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-003-0119-4/figures/6" data-track-dest="link:Figure6 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>This effect is not just a consequence of using the flexible bone model. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0119-4#Fig7">7</a> shows the same problem solved using linear methods on a standard continuum finite element mesh. Although the surface distortion is not as noticeable, the error (introduced by the linear theory) is still apparent in the unnatural expansion of the deformed portion of the model.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-7"><figure><figcaption><b id="Fig7" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 7.</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-003-0119-4/figures/7" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0119-4/MediaObjects/s10055-003-0119-4fhb7.jpg?as=webp"></source><img aria-describedby="figure-7-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0119-4/MediaObjects/s10055-003-0119-4fhb7.jpg" alt="figure7" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-7-desc"><p> A large deformation error in a linear continuum model</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-003-0119-4/figures/7" data-track-dest="link:Figure7 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>The non-linear solution strategy uses Newton’s method to solve the equilibrium equations. At every iteration of Newton’s method an updated stiffness matrix based on the current displacements has to be formed (the<i> k</i> terms of Eq. <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0119-4#Equ1">1</a>) and factored to obtain an incremental update to the displaced shape. Naturally, this requires significantly more computational resources than the linear theory; however, it is necessary for the accurate solution of large deformations. The flexible bone model allows us to perform these computations at haptic speed even for objects of moderate complexity.</p></div></div></section><section aria-labelledby="Sec13"><div class="c-article-section" id="Sec13-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec13">Sample applications</h2><div class="c-article-section__content" id="Sec13-content"><p>We have developed three applications that utilize flexible bones to simulate deformable objects: a two dimensional sketch-based modeller, a three dimensional modeller for mechanical design and a sketch-based 3D modeller that has interesting implications for using flexible bones as an animation tool. All three applications support haptic devices as a means of providing feedback to the designer.</p><h3 class="c-article__sub-heading" id="Sec14">The compliant mechanism design</h3><p>Compliant mechanisms are mechanisms that derive some or all of their motion from deformation in the object rather than a kinematic linkage [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 13" title="Ananthasuresh GK, Kota S (1995) Designing compliant mechanisms. ASME Mech Engin 117(11)74–77" href="/article/10.1007/s10055-003-0119-4#ref-CR13" id="ref-link-section-d77605e954">13</a>]. Applying traditional force and deformation analysis is generally too slow for interactive design and does not allow for immediate user feedback and rapid design iteration. Additionally compliant mechanisms will often undergo large deformations, which renders most linear solutions virtually useless. We have developed an application that uses flexible bones in a simple sketch-based 2D modelling environment that allows the user to make changes to the design and see as well as feel (via a force-feedback mouse) the results in real time. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0119-4#Fig8">8</a> shows a compliant gripper design sketched and deformed using flexible bones. All of the calculations occur in real-time including skeleton generation and large deformation simulation.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-8"><figure><figcaption><b id="Fig8" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 8a–d.</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-003-0119-4/figures/8" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0119-4/MediaObjects/s10055-003-0119-4fhb8.jpg?as=webp"></source><img aria-describedby="figure-8-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0119-4/MediaObjects/s10055-003-0119-4fhb8.jpg" alt="figure8" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-8-desc"><p> A prototype for a compliant gripper design</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-003-0119-4/figures/8" data-track-dest="link:Figure8 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0119-4#Fig9">9</a> illustrates the process of designing a compliant crimping tool using our application. Firstly, an initial design is sketched (we take advantage of symmetry and only half of the part is modelled), constrained, and deformed to verify that the proper motion is achieved (Figs. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0119-4#Fig9">9</a> and <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0119-4#Fig9">9</a>c). Next, the model is constrained to simulate conditions when an object is placed inside the jaws of the crimper and a force is applied (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0119-4#Fig9">9</a>d). Our interaction with the handle of the crimper reveals unacceptable flexure in a portion of the device, so additional supports are added to the model until the desired rigidity is achieved (Figs. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0119-4#Fig9">9</a>e, <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0119-4#Fig9">9</a>f and <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0119-4#Fig9">9</a>g). At no time in the design process are we required to do anything more complicated than apply boundary conditions. By simply observing the behaviour of the model (visually and through haptic feedback) under different loading conditions and over a wide range of motion, design decisions are made and implemented very rapidly. (a)</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-9"><figure><figcaption><b id="Fig9" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 9a–g.</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-003-0119-4/figures/9" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0119-4/MediaObjects/s10055-003-0119-4fhb9.jpg?as=webp"></source><img aria-describedby="figure-9-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0119-4/MediaObjects/s10055-003-0119-4fhb9.jpg" alt="figure9" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-9-desc"><p> Designing a compliant crimping device</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-003-0119-4/figures/9" data-track-dest="link:Figure9 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h3 class="c-article__sub-heading" id="Sec15">3D engineering analysis</h3><p>Both of our 3D applications are implemented in a screen-based virtual reality (VR) environment that makes use of head-tracked shutter glasses for 3D display, a Spacetek Spaceball for viewpoint manipulation, and a Sensable Technologies PHANToM haptic feedback device. The user-interface configuration is shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0119-4#Fig10">10</a>. This is a powerful user environment that allows for intuitive creation and interaction with 3D models.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-10"><figure><figcaption><b id="Fig10" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 10.</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-003-0119-4/figures/10" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0119-4/MediaObjects/s10055-003-0119-4fhb10.jpg?as=webp"></source><img aria-describedby="figure-10-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0119-4/MediaObjects/s10055-003-0119-4fhb10.jpg" alt="figure10" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-10-desc"><p> The 3D user interface hardware configuration which incorporates an ultrasonic head tracker<b> A</b>, a PHANToM stylus<b> B</b>, shutter glasses<b> C</b>, and a Spaceball<b> D</b>
+                                    </p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-003-0119-4/figures/10" data-track-dest="link:Figure10 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>Using our solid modelling application we designed and deformed the circular bracket model shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0119-4#Fig11">11</a>. Generating the flexible bone model from the solid model took approximately 30 seconds on a 500 MHz Intel Pentium III computer. The model was then easily deformable at haptic rates.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-11"><figure><figcaption><b id="Fig11" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 11.</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-003-0119-4/figures/11" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0119-4/MediaObjects/s10055-003-0119-4fhb11.jpg?as=webp"></source><img aria-describedby="figure-11-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0119-4/MediaObjects/s10055-003-0119-4fhb11.jpg" alt="figure11" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-11-desc"><p> A circular bracket<b> a</b>, its skeleton<b> b</b>, reaction under an applied displacement<b> c</b>, and the deformed flexible bone structure<b> d</b>
+                                    </p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-003-0119-4/figures/11" data-track-dest="link:Figure11 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h3 class="c-article__sub-heading" id="Sec16">Animation</h3><p>We have also implemented a simple animation application which uses a sketch-based modeller based on Takeo Igarashi’s Teddy algorithm [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 14" title="Igarashi T, Matsuoka S and Tanaka H (1999) Teddy: a sketching interface for 3D freeform design. In: Proceedings of SIGGRAPH’99, ACM, New York" href="/article/10.1007/s10055-003-0119-4#ref-CR14" id="ref-link-section-d77605e1108">14</a>] to allow the user to easily create 3D shapes and pose them by simply dragging the limbs into the desired positions. This applications shares some features with the I-K skeleton generation and animation algorithm described in [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 15" title="Teichmann M, Teller S (1998) Assisted articulation of closed polygonal models. In: Proceedings of the Ninth Eurographics Workship on Animation and Simulation, Lisbon, Portugal, August-September 1998" href="/article/10.1007/s10055-003-0119-4#ref-CR15" id="ref-link-section-d77605e1111">15</a>], with the important difference that our bones exhibit physically accurate deformations. In Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0119-4#Fig12">12</a> we show how the interface is used to sketch and pose a simple character. By recording the different loading conditions as a type of keyframe data, we can then play them back as a real-time animation.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-12"><figure><figcaption><b id="Fig12" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 12.</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-003-0119-4/figures/12" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0119-4/MediaObjects/s10055-003-0119-4fhb12.jpg?as=webp"></source><img aria-describedby="figure-12-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0119-4/MediaObjects/s10055-003-0119-4fhb12.jpg" alt="figure12" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-12-desc"><p> Gumbi, a sketch-based 3D modeling and animation tool. Sketching<b> a</b>, the resulting 3D object<b> b</b>, and deforming the object<b> c</b> and<b> d</b>
+                                    </p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-003-0119-4/figures/12" data-track-dest="link:Figure12 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        </div></div></section><section aria-labelledby="Sec17"><div class="c-article-section" id="Sec17-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec17">Conclusions and further work</h2><div class="c-article-section__content" id="Sec17-content"><p>We have shown a method for performing deformations of 2D and 3D objects in real-time. The key contribution presented is a new method for generating a simplified, yet mechanically accurate finite element model based on the shape skeleton of an object. The resulting flexible bone model can be solved for large, non-linear deformations at haptic speeds on standard PC hardware.</p><p>The flexible bone model makes the implicit assumption that axial and bending strain energies in the beam elements are a good approximation of the total strain energy in the solid model. Additional strain energies due to other effects (e.g., surface effects) may be added to improve the realism of the flexible bone model. We are currently exploring methods for incorporating these and other effects into our model.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="McDonnell KT, Hong Q (2000) Dynamic sculpting and animation of free-form subdivision solids. In: Proceedings o" /><span class="c-article-references__counter">1.</span><p class="c-article-references__text" id="ref-CR1">McDonnell KT, Hong Q (2000) Dynamic sculpting and animation of free-form subdivision solids. In: Proceedings of Computer Animation 2000, Philadelphia, PA, 3–5 May 2000</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Metaxas D (1996) Physics-based deformable models. Kluwer, New York" /><span class="c-article-references__counter">2.</span><p class="c-article-references__text" id="ref-CR2">Metaxas D (1996) Physics-based deformable models. Kluwer, New York</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="MacCracken R, Joy KI (1996) Free-form deformations with lattices of arbitrary topology. In: Proceedings of SIG" /><span class="c-article-references__counter">3.</span><p class="c-article-references__text" id="ref-CR3">MacCracken R, Joy KI (1996) Free-form deformations with lattices of arbitrary topology. In: Proceedings of SIGGRAPH’96, ACM, New York</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="RL. Blanding, " /><meta itemprop="datePublished" content="2000" /><meta itemprop="headline" content="Blanding RL et al (2000) Skeleton-based three-dimensional geometric morphing. Comput Geom Theor Appl 15(1–3):1" /><span class="c-article-references__counter">4.</span><p class="c-article-references__text" id="ref-CR4">Blanding RL et al (2000) Skeleton-based three-dimensional geometric morphing. Comput Geom Theor Appl 15(1–3):129–48</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 4 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Skeleton-based%20three-dimensional%20geometric%20morphing&amp;journal=Comput%20Geom%20Theor%20Appl&amp;volume=15&amp;issue=1%E2%80%933&amp;pages=129-48&amp;publication_year=2000&amp;author=Blanding%2CRL">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Blanding R et al. (1999) A skeletal-based solid editor. In: Proceedings of the Fifth Symposium on Solid Modeli" /><span class="c-article-references__counter">5.</span><p class="c-article-references__text" id="ref-CR5">Blanding R et al. (1999) A skeletal-based solid editor. In: Proceedings of the Fifth Symposium on Solid Modeling and Applications, ACM, Ann Arbor, MI</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content=". Nebi, " /><meta itemprop="datePublished" content="1992" /><meta itemprop="headline" content="Nebi GH, Patrikalakis NM (1992) An automatic coarse and fine surface mesh generation scheme based on medial ax" /><span class="c-article-references__counter">6.</span><p class="c-article-references__text" id="ref-CR6">Nebi GH, Patrikalakis NM (1992) An automatic coarse and fine surface mesh generation scheme based on medial axis transform. I. Algorithms. Engin Comp 8(3):121–37</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 6 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=&amp;journal=Engin%20Comp&amp;volume=8&amp;publication_year=1992&amp;author=Nebi%2C">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Storti DW et al. (1997) Skeleton-based modeling operations on solids. In: Proceedings of the Fourth Symposium " /><span class="c-article-references__counter">7.</span><p class="c-article-references__text" id="ref-CR7">Storti DW et al. (1997) Skeleton-based modeling operations on solids. In: Proceedings of the Fourth Symposium on Solid Modeling and Applications, ACM, New York</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Held M (1994) On computing Voronoi diagrams of convex polyhedra by means of wavefront propagation. In: Proceed" /><span class="c-article-references__counter">8.</span><p class="c-article-references__text" id="ref-CR8">Held M (1994) On computing Voronoi diagrams of convex polyhedra by means of wavefront propagation. In: Proceedings of the 6th Canadian Conference on Computing Geometry, Saskatoon, Canada, August 1994</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Milenkovic V (1993) Robust construction of the Voronoi diagram of a polyhedron. In: Proceedings of the 5th Can" /><span class="c-article-references__counter">9.</span><p class="c-article-references__text" id="ref-CR9">Milenkovic V (1993) Robust construction of the Voronoi diagram of a polyhedron. In: Proceedings of the 5th Canadian Conference on Computing Geometry, Waterloo, Canada, August 1993</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content=". Sherbrooke, " /><meta itemprop="datePublished" content="1996" /><meta itemprop="headline" content="Sherbrooke EC, Patrikalakis NM and Brisson E (1996) An algorithm for the medial axis transform of 3D polyhedra" /><span class="c-article-references__counter">10.</span><p class="c-article-references__text" id="ref-CR10">Sherbrooke EC, Patrikalakis NM and Brisson E (1996) An algorithm for the medial axis transform of 3D polyhedral solids. IEEE Trans Visual Comp Graph 2(1):44–61</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2F2945.489386" aria-label="View reference 10">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 10 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=&amp;journal=IEEE%20Trans%20Visual%20Comp%20Graph&amp;volume=2&amp;publication_year=1996&amp;author=Sherbrooke%2C">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Etzion M, Rappoport A (1999) Computing the Voronoi diagram of a 3-D polyhedron by separate computation of its " /><span class="c-article-references__counter">11.</span><p class="c-article-references__text" id="ref-CR11">Etzion M, Rappoport A (1999) Computing the Voronoi diagram of a 3-D polyhedron by separate computation of its symbolic and geometric parts. In: Proceedings of the Fifth Symposium on Solid Modeling and Applications, ACM, Ann Arbor, MI</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="JM. Reddy, GM. Turkiyyah, " /><meta itemprop="datePublished" content="1995" /><meta itemprop="headline" content="Reddy JM, Turkiyyah GM (1995) Computation of 3D skeletons by a generalized Delaunay triangulation technique. C" /><span class="c-article-references__counter">12.</span><p class="c-article-references__text" id="ref-CR12">Reddy JM, Turkiyyah GM (1995) Computation of 3D skeletons by a generalized Delaunay triangulation technique. Comp-Aid Des 27(9)677–694</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 12 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Computation%20of%203D%20skeletons%20by%20a%20generalized%20Delaunay%20triangulation%20technique&amp;journal=Comp-Aid%20Des&amp;volume=27&amp;issue=9&amp;pages=677-694&amp;publication_year=1995&amp;author=Reddy%2CJM&amp;author=Turkiyyah%2CGM">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Ananthasuresh GK, Kota S (1995) Designing compliant mechanisms. ASME Mech Engin 117(11)74–77" /><span class="c-article-references__counter">13.</span><p class="c-article-references__text" id="ref-CR13">Ananthasuresh GK, Kota S (1995) Designing compliant mechanisms. ASME Mech Engin 117(11)74–77</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Igarashi T, Matsuoka S and Tanaka H (1999) Teddy: a sketching interface for 3D freeform design. In: Proceeding" /><span class="c-article-references__counter">14.</span><p class="c-article-references__text" id="ref-CR14">Igarashi T, Matsuoka S and Tanaka H (1999) Teddy: a sketching interface for 3D freeform design. In: Proceedings of SIGGRAPH’99, ACM, New York</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Teichmann M, Teller S (1998) Assisted articulation of closed polygonal models. In: Proceedings of the Ninth Eu" /><span class="c-article-references__counter">15.</span><p class="c-article-references__text" id="ref-CR15">Teichmann M, Teller S (1998) Assisted articulation of closed polygonal models. In: Proceedings of the Ninth Eurographics Workship on Animation and Simulation, Lisbon, Portugal, August-September 1998</p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-003-0119-4-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><div class="c-article-section__content" id="Ack1-content"></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">Human Interface Technology Lab, University of Washington, 215 Fluke Hall, Mason Road, Seattle, WA 98195-2142, USA</p><p class="c-article-author-affiliation__authors-list">Robert L. Blanding</p></li><li id="Aff2"><p class="c-article-author-affiliation__address">Department of Civil and Environmental Engineering, University of Washington, Seattle, WA, USA</p><p class="c-article-author-affiliation__authors-list">George M. Turkiyyah</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Robert_L_-Blanding"><span class="c-article-authors-search__title u-h3 js-search-name">Robert L. Blanding</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Robert L.+Blanding&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Robert L.+Blanding" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Robert L.+Blanding%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-George_M_-Turkiyyah"><span class="c-article-authors-search__title u-h3 js-search-name">George M. Turkiyyah</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;George M.+Turkiyyah&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=George M.+Turkiyyah" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22George M.+Turkiyyah%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-003-0119-4/email/correspondent/c1/new">Robert L. Blanding</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=Flexible%20bones%20for%20the%20haptic%20prototyping%20of%20deformable%20objects&amp;author=Robert%20L.%20Blanding%20et%20al&amp;contentID=10.1007%2Fs10055-003-0119-4&amp;publication=1359-4338&amp;publicationDate=2004-02-24&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Blanding, R.L., Turkiyyah, G.M. Flexible bones for the haptic prototyping of deformable objects.
+                    <i>Virtual Reality</i> <b>7, </b>103–111 (2004). https://doi.org/10.1007/s10055-003-0119-4</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-003-0119-4.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2002-04-02">02 April 2002</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2002-04-25">25 April 2002</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2004-02-24">24 February 2004</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2004-04">April 2004</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-003-0119-4" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-003-0119-4</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Compliant mechanisms</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Finite element analysis</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Haptic feedback</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Medial axis</span></li><li class="c-article-subject-list__subject"><span itemprop="about">3D solid deformation</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Virtual prototyping</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-003-0119-4.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=119;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="Co-presence, collaboration, and control in environmental studies"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="In this paper, we describe a framework for synchronous collaborative visualization and remote control in the agricultural domain. The framework builds on &#8220;Second Life&#8221; (SL), a popular..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/13/3.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="Co-presence, collaboration, and control in environmental studies"/>
+
+    <meta name="dc.source" content="Virtual Reality 2009 13:3"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2009-08-05"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2009 Springer-Verlag London Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="In this paper, we describe a framework for synchronous collaborative visualization and remote control in the agricultural domain. The framework builds on &#8220;Second Life&#8221; (SL), a popular networked online 3D virtual world, where users are represented as avatars (graphical self-representations). Co-presence in SL takes the form of instant (real-time) two-way interaction among two or more avatars. The aim of our work is to facilitate co-presence for sharing knowledge and exchanging wisdom about environmental practices. In order to establish a realistic simulated context for communication in SL, virtual counterparts of real devices are created in the virtual world. Specifically, we aim to represent field servers that sense and monitor fields such as rice paddies and vineyards. The Twin-World Mediator (TWM) is developed in order to replicate the behavior of real devices in virtual counterparts, and to facilitate seamless communication between real and virtual world. The TWM is an easy-to-use, extensible, and flexible communication framework. A small study demonstrated how the TWM can support collaboration and experience sharing in the agricultural domain."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2009-08-05"/>
+
+    <meta name="prism.volume" content="13"/>
+
+    <meta name="prism.number" content="3"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="195"/>
+
+    <meta name="prism.endingPage" content="204"/>
+
+    <meta name="prism.copyright" content="2009 Springer-Verlag London Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-009-0130-5"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-009-0130-5"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-009-0130-5.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-009-0130-5"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="Co-presence, collaboration, and control in environmental studies"/>
+
+    <meta name="citation_volume" content="13"/>
+
+    <meta name="citation_issue" content="3"/>
+
+    <meta name="citation_publication_date" content="2009/09"/>
+
+    <meta name="citation_online_date" content="2009/08/05"/>
+
+    <meta name="citation_firstpage" content="195"/>
+
+    <meta name="citation_lastpage" content="204"/>
+
+    <meta name="citation_article_type" content="Original Article"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-009-0130-5"/>
+
+    <meta name="DOI" content="10.1007/s10055-009-0130-5"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-009-0130-5"/>
+
+    <meta name="description" content="In this paper, we describe a framework for synchronous collaborative visualization and remote control in the agricultural domain. The framework builds on &"/>
+
+    <meta name="dc.creator" content="Songpol Attasiriluk"/>
+
+    <meta name="dc.creator" content="Arturo Nakasone"/>
+
+    <meta name="dc.creator" content="Wisut Hantanong"/>
+
+    <meta name="dc.creator" content="Rui Prada"/>
+
+    <meta name="dc.creator" content="Pizzanu Kanongchaiyos"/>
+
+    <meta name="dc.creator" content="Helmut Prendinger"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Science; citation_title=The scientific research potential of virtual worlds; citation_author=WS Bainbridge; citation_volume=317; citation_publication_date=2007; citation_pages=472-476; citation_doi=10.1126/science.1146930; citation_id=CR1"/>
+
+    <meta name="citation_reference" content="citation_title=Coming of age in Second Life: an anthropologist explores the virtually human; citation_publication_date=2008; citation_id=CR2; citation_author=T Boellstorff; citation_publisher=Princeton University Press"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Health Inform Libr J; citation_title=Second life: an overview of the potential of 3D virtual worlds in medical and health education; citation_author=MNK Boulos, L Hetherington, S Wheeler; citation_volume=24; citation_issue=4; citation_publication_date=2007; citation_pages=233-245; citation_doi=10.1111/j.1471-1842.2007.00733.x; citation_id=CR3"/>
+
+    <meta name="citation_reference" content="Brandherm B, Ullrich S, Prendinger H (2008) Simulation of sensor-based tracking in second life. In: AAMAS &#8217;08: proceedings of the 7th international joint conference on autonomous agents and multiagent systems, International Foundation for Autonomous Agents and Multiagent Systems, pp 1689&#8211;1690"/>
+
+    <meta name="citation_reference" content="citation_journal_title=SIGMIS Database; citation_title=Virtual worlds: multi-disciplinary research opportunities; citation_author=DA Bray, BR Konsynski; citation_volume=38; citation_issue=4; citation_publication_date=2007; citation_pages=17-25; citation_doi=10.1145/1314234.1314239; citation_id=CR5"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Commun ACM; citation_title=Virtual reality in scientific visualization; citation_author=S Bryson; citation_volume=39; citation_issue=5; citation_publication_date=1996; citation_pages=62-71; citation_doi=10.1145/229459.229467; citation_id=CR6"/>
+
+    <meta name="citation_reference" content="Casanueva JS, Blake EH (2001) The effects of avatars on copresence in a collaborative virtual environment. Technical Report CS010200. Department of Computer Science, University of Cape Town, South Africa"/>
+
+    <meta name="citation_reference" content="Du K, Sun Z, Han H, Liu S (2008) Development of a web-based wireless telemonitoring system for agro-environment. In: International Federation for Information Processing (IFIP), Springer, Boston, pp 799&#8211;807"/>
+
+    <meta name="citation_reference" content="Eysenbach G (2008) Medicine 2.0: social networking, collaboration, participation, apomediation, and openness. J Med Internet Res 10(3):e22. 
+                    http://www.jmir.org/2008/3/e22/
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="Fundinger A (2007) Real life control panel for Second Life. 
+                    http://channel3b.wordpress.com/2007/01/24/real-life-control-panel-for-second-life
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="GlobalLab (2008&#8211;2009) GlobalLab project website. 
+                    http://www.prendingerlab.net/globallab/
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="Ichikawa (2009) Yamani Orchard, Ichikawa. 
+                    http://fsds.dc.affrc.go.jp/data4/Ichikawa01/
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="Kobayashi K (2009) Shinshu University&#8217;s field server. 
+                    http://www.cs.shinshu-u.ac.jp/~kkobayashi/ja/index.php?fs-obuse
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comput Graphics Appl IEEE; citation_title=Supporting transcontinental collaborative work in persistent virtual environments; citation_author=J Leigh, AE Johnson; citation_volume=16; citation_issue=4; citation_publication_date=1996; citation_pages=47-51; citation_doi=10.1109/38.511853; citation_id=CR15"/>
+
+    <meta name="citation_reference" content="libsecondlife (2007) libsecondlife project. 
+                    http://www.libsecondlife.org
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="Lifton J, Feldmeier M, Ono Y, Lewis C, Paradiso JA (2007) A platform for ubiquitous sensor deployment in occupational and domestic environments. In: IPSN &#8217;07: proceedings of the 6th international conference on information processing in sensor networks, ACM, New York, NY, pp 119&#8211;127"/>
+
+    <meta name="citation_reference" content="Lombard M, Ditton T (1997) At the heart of it all: the concept of presence. J Comput-Mediated Commun 3(2). 
+                    http://jcmc.indiana.edu/vol3/issue2/lombard.html
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="Mangan J (1997) Participatory pest analysis. In: PLA notes, 28"/>
+
+    <meta name="citation_reference" content="Milgram P, Takemura H, Utsumi A, Kishino F (1994) Augmented reality: a class of displays on the reality&#8211;virtuality continuum. In: Proceedings of SPIE, vol 2351. Telemanipulator and Telepresence Technologies, Boston, pp 282&#8211;292"/>
+
+    <meta name="citation_reference" content="Ogi T, Tamagawa K, Yamada T, Hirose M (1999) Collaborative scientific visualization in networked immersive virtual environment. In: IEEE international conference on systems, man, and cybernetics (SMC &#8217;99), pp VI-87&#8211;VI-91"/>
+
+    <meta name="citation_reference" content="OpenMetaverse (2009) Virtual worlds connection library. 
+                    http://www.opensimulator.com/projects/libopenmetaverse
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="OpenSimulator (2009) Virtual worlds server technology. 
+                    http://opensimulator.org
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="SensorML (2009) Sensor model language. 
+                    http://www.opengeospatial.org/standards/sensorml
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="Valin S, Francu A, Trefftz H, Marsic I (2001) Sharing viewpoints in collaborative virtual environments. In: Proceedings of the 34th annual Hawaii international conference on system sciences"/>
+
+    <meta name="citation_reference" content="von Kapri A, Ullrich S, Brandherm B, Prendinger H (2009) Global lab: an interaction, simulation, and experimentation platform based on &#8220;Second Life&#8221; and &#8220;OpenSimulator&#8221; (demo paper). In: Proceedings Pacific-Rim symposium on image and video technology (PSIVT &#8217;09)"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Computer; citation_title=Social networking; citation_author=AC Weaver, BB Morrison; citation_volume=41; citation_issue=2; citation_publication_date=2008; citation_pages=97-100; citation_doi=10.1109/MC.2008.61; citation_id=CR27"/>
+
+    <meta name="citation_reference" content="Weber A, Rufer-Bach K, Platel R (2007) Creating your world: the official guide to advanced content creation for second life. Wiley, Indianapolis
+"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Presence: Teleoper Virtual Environ; citation_title=Toward a taxonomy of copresence; citation_author=S Zhao; citation_volume=12; citation_issue=5; citation_publication_date=2003; citation_pages=445-455; citation_doi=10.1162/105474603322761261; citation_id=CR28"/>
+
+    <meta name="citation_author" content="Songpol Attasiriluk"/>
+
+    <meta name="citation_author_institution" content="National Institute of Informatics, Tokyo, Japan"/>
+
+    <meta name="citation_author_institution" content="Department of Computer Engineering, Chulalongkorn University, Bangkok, Thailand"/>
+
+    <meta name="citation_author" content="Arturo Nakasone"/>
+
+    <meta name="citation_author_email" content="arturonakasone@nii.ac.jp"/>
+
+    <meta name="citation_author_institution" content="National Institute of Informatics, Tokyo, Japan"/>
+
+    <meta name="citation_author" content="Wisut Hantanong"/>
+
+    <meta name="citation_author_email" content="wizzup@wizzup.com"/>
+
+    <meta name="citation_author_institution" content="National Institute of Informatics, Tokyo, Japan"/>
+
+    <meta name="citation_author_institution" content="Department of Computer Engineering, Chulalongkorn University, Bangkok, Thailand"/>
+
+    <meta name="citation_author" content="Rui Prada"/>
+
+    <meta name="citation_author_email" content="rui.prada@gaips.inesc-id.pt"/>
+
+    <meta name="citation_author_institution" content="IST-UTL, INESC-ID, Porto Salvo, Portugal"/>
+
+    <meta name="citation_author" content="Pizzanu Kanongchaiyos"/>
+
+    <meta name="citation_author_email" content="pizzanu@cp.eng.chula.ac.th"/>
+
+    <meta name="citation_author_institution" content="Department of Computer Engineering, Chulalongkorn University, Bangkok, Thailand"/>
+
+    <meta name="citation_author" content="Helmut Prendinger"/>
+
+    <meta name="citation_author_email" content="helmut@nii.ac.jp"/>
+
+    <meta name="citation_author_institution" content="National Institute of Informatics, Tokyo, Japan"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-009-0130-5&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2009/09/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-009-0130-5"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="Co-presence, collaboration, and control in environmental studies"/>
+        <meta property="og:description" content="In this paper, we describe a framework for synchronous collaborative visualization and remote control in the agricultural domain. The framework builds on “Second Life” (SL), a popular networked online 3D virtual world, where users are represented as avatars (graphical self-representations). Co-presence in SL takes the form of instant (real-time) two-way interaction among two or more avatars. The aim of our work is to facilitate co-presence for sharing knowledge and exchanging wisdom about environmental practices. In order to establish a realistic simulated context for communication in SL, virtual counterparts of real devices are created in the virtual world. Specifically, we aim to represent field servers that sense and monitor fields such as rice paddies and vineyards. The Twin-World Mediator (TWM) is developed in order to replicate the behavior of real devices in virtual counterparts, and to facilitate seamless communication between real and virtual world. The TWM is an easy-to-use, extensible, and flexible communication framework. A small study demonstrated how the TWM can support collaboration and experience sharing in the agricultural domain."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>Co-presence, collaboration, and control in environmental studies | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-009-0130-5","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Presence in shared virtual environments and online communities, Avatars, Presence applications (communications and collaboration; teleoperation)","kwrd":["Presence_in_shared_virtual_environments_and_online_communities","Avatars","Presence_applications_(communications_and_collaboration;_teleoperation)"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-009-0130-5","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-009-0130-5","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=130;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-009-0130-5">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            Co-presence, collaboration, and control in environmental studies
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-009-0130-5.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-009-0130-5.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">Original Article</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2009-08-05" itemprop="datePublished">05 August 2009</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">Co-presence, collaboration, and control in environmental studies</h1><p lang="en">A Second Life-based approach</p>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Songpol-Attasiriluk" data-author-popup="auth-Songpol-Attasiriluk">Songpol Attasiriluk</a></span><sup class="u-js-hide"><a href="#Aff1">1</a>,<a href="#Aff2">2</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="National Institute of Informatics" /><meta itemprop="address" content="grid.250343.3, 0000000110185342, National Institute of Informatics, 2-1-2 Hitotsubashi, Chiyoda-ku, Tokyo, 101-8430, Japan" /></span><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Chulalongkorn University" /><meta itemprop="address" content="grid.7922.e, 0000000102447875, Department of Computer Engineering, Chulalongkorn University, Bangkok, Thailand" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Arturo-Nakasone" data-author-popup="auth-Arturo-Nakasone">Arturo Nakasone</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="National Institute of Informatics" /><meta itemprop="address" content="grid.250343.3, 0000000110185342, National Institute of Informatics, 2-1-2 Hitotsubashi, Chiyoda-ku, Tokyo, 101-8430, Japan" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Wisut-Hantanong" data-author-popup="auth-Wisut-Hantanong">Wisut Hantanong</a></span><sup class="u-js-hide"><a href="#Aff1">1</a>,<a href="#Aff2">2</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="National Institute of Informatics" /><meta itemprop="address" content="grid.250343.3, 0000000110185342, National Institute of Informatics, 2-1-2 Hitotsubashi, Chiyoda-ku, Tokyo, 101-8430, Japan" /></span><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Chulalongkorn University" /><meta itemprop="address" content="grid.7922.e, 0000000102447875, Department of Computer Engineering, Chulalongkorn University, Bangkok, Thailand" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Rui-Prada" data-author-popup="auth-Rui-Prada">Rui Prada</a></span><sup class="u-js-hide"><a href="#Aff3">3</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="IST-UTL, INESC-ID" /><meta itemprop="address" content="grid.14647.30, 0000 0001 0279 8114, IST-UTL, INESC-ID, Av. Prof. Cavaco Silva, Taguspark, 2744-016, Porto Salvo, Portugal" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Pizzanu-Kanongchaiyos" data-author-popup="auth-Pizzanu-Kanongchaiyos">Pizzanu Kanongchaiyos</a></span><sup class="u-js-hide"><a href="#Aff2">2</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Chulalongkorn University" /><meta itemprop="address" content="grid.7922.e, 0000000102447875, Department of Computer Engineering, Chulalongkorn University, Bangkok, Thailand" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Helmut-Prendinger" data-author-popup="auth-Helmut-Prendinger" data-corresp-id="c1">Helmut Prendinger<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="National Institute of Informatics" /><meta itemprop="address" content="grid.250343.3, 0000000110185342, National Institute of Informatics, 2-1-2 Hitotsubashi, Chiyoda-ku, Tokyo, 101-8430, Japan" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 13</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">195</span>–<span itemprop="pageEnd">204</span>(<span data-test="article-publication-year">2009</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">195 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">6 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                    
+                        <li class="c-article-metrics-bar__item">
+                            <p class="c-article-metrics-bar__count">0 <span class="c-article-metrics-bar__label">Altmetric</span></p>
+                        </li>
+                    
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-009-0130-5/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>In this paper, we describe a framework for synchronous collaborative visualization and remote control in the agricultural domain. The framework builds on “Second Life” (SL), a popular networked online 3D virtual world, where users are represented as avatars (graphical self-representations). Co-presence in SL takes the form of instant (real-time) two-way interaction among two or more avatars. The aim of our work is to facilitate co-presence for sharing knowledge and exchanging wisdom about environmental practices. In order to establish a realistic simulated context for communication in SL, virtual counterparts of real devices are created in the virtual world. Specifically, we aim to represent field servers that sense and monitor fields such as rice paddies and vineyards. The Twin-World Mediator (TWM) is developed in order to replicate the behavior of real devices in virtual counterparts, and to facilitate seamless communication between real and virtual world. The TWM is an easy-to-use, extensible, and flexible communication framework. A small study demonstrated how the TWM can support collaboration and experience sharing in the agricultural domain.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Introduction</h2><div class="c-article-section__content" id="Sec1-content"><p>In everyday life, humans share experiences by attending to or interacting with objects within the same reference frame. For example, a group of fans cheer their sports team in the stadium, company workers discuss their new product design shown on a display, and children play a video game on the same console. Those kinds of activities require a two-way interaction among various people on the same object. Typically, people have to “be there” at the same physical location to ensure that they are sharing the same experience. However, the development of communication networks such as the telephone and Internet has been successful in introducing alternative ways of experience sharing for geographically separated people. For instance, applications such as online-gaming and teleconferencing implement the concept of “virtual co-presence” where communication partners are present as virtual simulations (Zhao <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Zhao S (2003) Toward a taxonomy of copresence. Presence: Teleoper Virtual Environ 12(5):445–455" href="/article/10.1007/s10055-009-0130-5#ref-CR28" id="ref-link-section-d49762e409">2003</a>).</p><p>The concept of “presence” is extensively described in Lombard and Ditton (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="Lombard M, Ditton T (1997) At the heart of it all: the concept of presence. J Comput-Mediated Commun 3(2). &#xA;                    http://jcmc.indiana.edu/vol3/issue2/lombard.html&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-009-0130-5#ref-CR18" id="ref-link-section-d49762e415">1997</a>). The authors show that presence can refer (1) to the degree that a communication medium is perceived as sociable or personal, (2) to the extent that real-world objects and events are represented accurately, (3) to the idea of ‘transportation’: “being there” or “being together” (in the simulated environment), (4) to the concept of perceptual and psychological immersion, e.g. via head-mounted display, (5) to social interfaces with embodied social actors, and even (6) to anthropomorphic cues of the medium itself. In our approach, the notion of presence is anchored to the user’s avatar, i.e. his or her graphical self-representation in the virtual world.</p><p>According to the taxonomy suggested by Zhao (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Zhao S (2003) Toward a taxonomy of copresence. Presence: Teleoper Virtual Environ 12(5):445–455" href="/article/10.1007/s10055-009-0130-5#ref-CR28" id="ref-link-section-d49762e421">2003</a>), our platform can be conceived as an application that supports hypervirtual telecopresence, where persons are presented in electronic proximity through digital simulation. In this form of co-presence, humans can entertain immediate (synchronous) interactions and receive feedback through the interlocutor’s avatar gesture and behavior. An important aspect of co-presence in Second Life (SL) is that multiple users (as avatars) can share the same situation and experience.</p><p>With the rapid growth of the web, social networking web sites are becoming the prime collaboration and advice-giving work spaces (Weaver and Morrison <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Weaver AC, Morrison BB (2008) Social networking. Computer 41(2):97–100" href="/article/10.1007/s10055-009-0130-5#ref-CR27" id="ref-link-section-d49762e427">2008</a>). Millions of people spend their time online to offer or receive help from their online contacts, which can be seen as a form of asynchronous collaborative work. A large number of Web2.0 sites were created to support collaborative work between remote people, e.g. in medicine (Eysenbach <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Eysenbach G (2008) Medicine 2.0: social networking, collaboration, participation, apomediation, and openness. J Med Internet Res 10(3):e22. &#xA;                    http://www.jmir.org/2008/3/e22/&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-009-0130-5#ref-CR9" id="ref-link-section-d49762e430">2008</a>). Despite the improvement in connecting experts with help seekers, the communication in current social network sites still lacks the immediate nature of face-to-face communication or presence.</p><p>Since the new generation of personal computers can bring the performance of realistic 3D interfaces to common users at a reasonable price, 3D networked virtual worlds have been suggested as affordable collaborative platforms (Bray and Konsynski <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Bray DA, Konsynski BR (2007) Virtual worlds: multi-disciplinary research opportunities. SIGMIS Database 38(4):17–25" href="/article/10.1007/s10055-009-0130-5#ref-CR5" id="ref-link-section-d49762e437">2007</a>; Bainbridge <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Bainbridge WS (2007) The scientific research potential of virtual worlds. Science 317:472–476" href="/article/10.1007/s10055-009-0130-5#ref-CR1" id="ref-link-section-d49762e440">2007</a>). In particular, SL, a 3D multi-user online virtual world, became very popular in 2007, with over 15 million registered users (as of September 2008) and about 40,000 users logged in at any time. SL attracts significant interest from various communities including anthropology (Boellstorff <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Boellstorff T (2008) Coming of age in Second Life: an anthropologist explores the virtually human. Princeton University Press, Princeton, NJ" href="/article/10.1007/s10055-009-0130-5#ref-CR2" id="ref-link-section-d49762e443">2008</a>), medical and health education (Boulos et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Boulos MNK, Hetherington L, Wheeler S (2007) Second life: an overview of the potential of 3D virtual worlds in medical and health education. Health Inform Libr J 24(4):233–245" href="/article/10.1007/s10055-009-0130-5#ref-CR3" id="ref-link-section-d49762e446">2007</a>), and location-based systems (Brandherm et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Brandherm B, Ullrich S, Prendinger H (2008) Simulation of sensor-based tracking in second life. In: AAMAS ’08: proceedings of the 7th international joint conference on autonomous agents and multiagent systems, International Foundation for Autonomous Agents and Multiagent Systems, pp 1689–1690" href="/article/10.1007/s10055-009-0130-5#ref-CR4" id="ref-link-section-d49762e449">2008</a>; von Kapri et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="von Kapri A, Ullrich S, Brandherm B, Prendinger H (2009) Global lab: an interaction, simulation, and experimentation platform based on “Second Life” and “OpenSimulator” (demo paper). In: Proceedings Pacific-Rim symposium on image and video technology (PSIVT ’09)" href="/article/10.1007/s10055-009-0130-5#ref-CR13" id="ref-link-section-d49762e453">2009</a>).</p><p>However, SL is not yet established as a common platform for advanced collaborative work. We speculate that the need to learn the libsecondlife software library (libsecondlife <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="libsecondlife (2007) libsecondlife project. &#xA;                    http://www.libsecondlife.org&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-009-0130-5#ref-CR16" id="ref-link-section-d49762e459">2007</a>) and the “Linden Scripting Language” (LSL, Weber et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Weber A, Rufer-Bach K, Platel R (2007) Creating your world: the official guide to advanced content creation for second life. Wiley, Indianapolis&#xA;" href="/article/10.1007/s10055-009-0130-5#ref-CR19" id="ref-link-section-d49762e462">2007</a>) is a major hindrance for common users without dedicated programming skills. Hence, we developed the Twin-World Mediator (TWM), a software framework which supports ready-to-use communication management between the real and virtual world. In particular, we want to facilitate collaboration, knowledge exchange, and control of a sensor–actuator device in environmental studies.</p><p>The rest of the article is structured as follows. In Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-009-0130-5#Sec2">2</a>, we present a brief review of related work. Section <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-009-0130-5#Sec3">3</a> describes two SL-based scenarios of collaboration in agriculture. The scenario involving the control of a field server motivates the TWM communication framework, which will then be described in detail in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-009-0130-5#Sec4">4</a>. In Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-009-0130-5#Sec10">5</a>, we describe the results from a pilot study about a knowledge sharing in agriculture. Section <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-009-0130-5#Sec11">6</a> discusses technical limitations and Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-009-0130-5#Sec12">7</a> concludes the paper.</p></div></div></section><section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">Related Work</h2><div class="c-article-section__content" id="Sec2-content"><p>Here, we report on some related work in the categories virtual reality (VR), collaborative virtual environments, and connection between real world and SL.</p><p>The research field of VR has proposed interfaces that let users interact immersively with objects (Bryson <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1996" title="Bryson S (1996) Virtual reality in scientific visualization. Commun ACM 39(5):62–71" href="/article/10.1007/s10055-009-0130-5#ref-CR6" id="ref-link-section-d49762e497">1996</a>) and other users (Ogi et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Ogi T, Tamagawa K, Yamada T, Hirose M (1999) Collaborative scientific visualization in networked immersive virtual environment. In: IEEE international conference on systems, man, and cybernetics (SMC ’99), pp VI-87–VI-91" href="/article/10.1007/s10055-009-0130-5#ref-CR22" id="ref-link-section-d49762e500">1999</a>). Milgram et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1994" title="Milgram P, Takemura H, Utsumi A, Kishino F (1994) Augmented reality: a class of displays on the reality–virtuality continuum. In: Proceedings of SPIE, vol 2351. Telemanipulator and Telepresence Technologies, Boston, pp 282–292" href="/article/10.1007/s10055-009-0130-5#ref-CR21" id="ref-link-section-d49762e503">1994</a>) investigated ‘mixed reality’ displays of the reality–virtuality continuum, such as augmented reality and augmented virtuality interfaces. Similar to our SL-based approach, VR aims to support tele-presence and associated interaction capabilities with things and people. However, while the fidelity of interaction in a virtual world might be lower than, e.g., in a 3D cave, the interaction capability is affordable to any networked computer user.</p><p>Work in collaborative virtual environments emphasizes the benefits of a shared 3D view. Leigh and Johnson (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1996" title="Leigh J, Johnson AE (1996) Supporting transcontinental collaborative work in persistent virtual environments. Comput Graphics Appl IEEE 16(4):47–51" href="/article/10.1007/s10055-009-0130-5#ref-CR15" id="ref-link-section-d49762e509">1996</a>) developed the concepts of shared viewpoint and telepointer to facilitate cooperation. However, natural face-to-face communication is not supported. The work of Valin et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Valin S, Francu A, Trefftz H, Marsic I (2001) Sharing viewpoints in collaborative virtual environments. In: Proceedings of the 34th annual Hawaii international conference on system sciences" href="/article/10.1007/s10055-009-0130-5#ref-CR26" id="ref-link-section-d49762e512">2001</a>) recognizes the importance of persistent virtual environments, but like other VR applications, it depends on special-made equipment.</p><p>Finally, there is some preliminary work on connecting real-world devices to SL. In Lifton et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Lifton J, Feldmeier M, Ono Y, Lewis C, Paradiso JA (2007) A platform for ubiquitous sensor deployment in occupational and domestic environments. In: IPSN ’07: proceedings of the 6th international conference on information processing in sensor networks, ACM, New York, NY, pp 119–127" href="/article/10.1007/s10055-009-0130-5#ref-CR17" id="ref-link-section-d49762e518">2007</a>), data from a specialized power-plug-based sensor network is fed into the virtual world by means of a SL script-based implementation of a XML-RPC protocol. However, the data are used for visualization only and there is no support for interaction with it. Fundinger (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Fundinger A (2007) Real life control panel for Second Life. &#xA;                    http://channel3b.wordpress.com/2007/01/24/real-life-control-panel-for-second-life&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-009-0130-5#ref-CR10" id="ref-link-section-d49762e521">2007</a>) reports about a real-world control panel that can both control and be controlled by objects in SL, i.e. changes to the knobs or push buttons in the real world are translated to virtual buttons, which control the LEDs on the real-world control panel. The control panel can be seen as a specific implementation, whereas the TWM provides a generic solution to two-way communication. The first steps towards a generic solution are described in Brandherm et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Brandherm B, Ullrich S, Prendinger H (2008) Simulation of sensor-based tracking in second life. In: AAMAS ’08: proceedings of the 7th international joint conference on autonomous agents and multiagent systems, International Foundation for Autonomous Agents and Multiagent Systems, pp 1689–1690" href="/article/10.1007/s10055-009-0130-5#ref-CR4" id="ref-link-section-d49762e524">2008</a>).</p></div></div></section><section aria-labelledby="Sec3"><div class="c-article-section" id="Sec3-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec3">Motivating example: participatory agriculture</h2><div class="c-article-section__content" id="Sec3-content"><p>Participatory agriculture is an example for co-presence (more precisely, hypervirtual telecopresence) in an online virtual world with the purpose of sharing information about the real world (von Kapri et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="von Kapri A, Ullrich S, Brandherm B, Prendinger H (2009) Global lab: an interaction, simulation, and experimentation platform based on “Second Life” and “OpenSimulator” (demo paper). In: Proceedings Pacific-Rim symposium on image and video technology (PSIVT ’09)" href="/article/10.1007/s10055-009-0130-5#ref-CR13" id="ref-link-section-d49762e535">2009</a>). The concept of “participation” is not new in agro-ecosystem analysis. In pest analysis, e.g., it is practiced using a pen and paper approach, in which groups of farmers are taken to a crop field and asked to draw the type of plant they see on a sheet of paper, along with the insects that they can identify as being beneficial or harmful to the crop (Mangan <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="Mangan J (1997) Participatory pest analysis. In: PLA notes, 28" href="/article/10.1007/s10055-009-0130-5#ref-CR20" id="ref-link-section-d49762e538">1997</a>). Furthermore, the infrastructure for environmental data acquisition is available through the implementation of networked field servers (distributed sensing devices composed of a web camera, multi-sensors, a wireless LAN module and a high intensity LED lighting to be used for environmental measurement, plant/animal monitoring, and farm fields/facilities observation), see e.g. Du et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Du K, Sun Z, Han H, Liu S (2008) Development of a web-based wireless telemonitoring system for agro-environment. In: International Federation for Information Processing (IFIP), Springer, Boston, pp 799–807" href="/article/10.1007/s10055-009-0130-5#ref-CR8" id="ref-link-section-d49762e541">2008</a>).</p><p>Inspired by real-world objects (a rice paddy, field servers), we have created virtual meeting spaces in SL where information relevant to environmental studies is displayed and can thus be shared concurrently by all visitors, e.g. experts (senior farmers) and novices (junior farmers). Furthermore, we have created virtual (counterpart) devices, with which SL avatars can interact in the same way as people would operate the real device in the real world. Using the TWM described in this paper, we could easily create the behavior of all virtual devices, which either display information or allow avatars to interact with them (see Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-009-0130-5#Sec4">4</a>). In our demonstrators, we use information from the National Agricultural Research Center (NARC) field server and Shinshu University field server.</p><p>The field server of the NARC in Japan provides real-time video images and agricultural data, including air temperature, humidity, soil temperature, soil moisture, CO<sub>2</sub> concentration, leaf wetness, etc. We have created a virtual rice paddy with a virtual version of the NARC field server (see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-009-0130-5#Fig1">1</a>a). This environment supports working meetings of agricultural experts, owners of agriculture fields, and layman in order to conveniently discuss the current status of the field across physical borders and make decisions about its treatment.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-009-0130-5/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-009-0130-5/MediaObjects/10055_2009_130_Fig1_HTML.gif?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-009-0130-5/MediaObjects/10055_2009_130_Fig1_HTML.gif" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p>Two scenarios for environmental studies. <b>a</b> Visual representations of temperature and humidity visualizations (10 each) based on data of Yamani Orchard, Ichikawa (data captured on 26 January 2009; 15:00), based on Ichikawa (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Ichikawa (2009) Yamani Orchard, Ichikawa. &#xA;                    http://fsds.dc.affrc.go.jp/data4/Ichikawa01/&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-009-0130-5#ref-CR12" id="ref-link-section-d49762e571">2009</a>). <b>b</b> Number of panels for temperature and humidity (data captured on 26 January 2009; 15:00), based on Kobayashi (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Kobayashi K (2009) Shinshu University’s field server. &#xA;                    http://www.cs.shinshu-u.ac.jp/~kkobayashi/ja/index.php?fs-obuse&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-009-0130-5#ref-CR14" id="ref-link-section-d49762e577">2009</a>). The <i>right-most avatar</i> operates (‘rides’) the controller of the field server</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-009-0130-5/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>The field server of Shinshu University provides real-time image, temperature, and humidity. We created a virtual version of this field server, which can be used to control the real camera (see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-009-0130-5#Fig1">1</a>b). For example, if a visitor pans the virtual camera, the new camera image is retrieved from the real camera and refreshed in the display screen. As in the case of the previous scenario, interested persons can meet virtually and discuss based on the shared situation.</p></div></div></section><section aria-labelledby="Sec4"><div class="c-article-section" id="Sec4-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec4">The Twin-World Mediator</h2><div class="c-article-section__content" id="Sec4-content"><p>The TWM framework is a robust platform for interconnection between real-world devices and their virtual counterparts. Even though the basic functionality of the framework is the transmission of data from the real world to the virtual world and vice versa, we took special consideration in its design, providing common users a tool, i.e.:
+</p><ul class="u-list-style-bullet">
+                  <li>
+                    <p>
+                                 <i>Easy to use</i>. Non-programmers can create virtual devices using a simple description file written in an XML-based language.</p>
+                  </li>
+                  <li>
+                    <p>
+                                 <i>Extensible</i>. Both the description of real devices and the communication channels are independent of the application program, which makes the addition or deletion of real devices and their virtual representations very easy to perform.</p>
+                  </li>
+                  <li>
+                    <p>
+                                 <i>Flexible</i>. Users can select SL objects of their choice to customize the way they visualize the data that come from the real devices.</p>
+                  </li>
+                  <li>
+                    <p>
+                                 <i>Secure</i>. TWM provides a two-bot data communication paradigm, which helps to prevent the misuse of the framework to transmit incorrect or malicious data in the form of spam.</p>
+                  </li>
+                </ul>
+                     <h3 class="c-article__sub-heading" id="Sec5">TWM architecture components</h3><p>The TWM framework is composed of two independent executables: the <i>TWM Client application</i> and the <i>TWM Server application</i>, which can be run on separate computers. The TWM Client application is for device owners who want to connect their devices to the virtual world, whereas the TWM Server application is for SL island owners who provide the space for the creation of their paired virtual devices (see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-009-0130-5#Fig2">2</a>).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-009-0130-5/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-009-0130-5/MediaObjects/10055_2009_130_Fig2_HTML.gif?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-009-0130-5/MediaObjects/10055_2009_130_Fig2_HTML.gif" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p>TWM architecture design: the client component manages the connection to the real devices, whereas the server component manages their virtual counterparts</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-009-0130-5/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>The TWM Server application is in charge of instantiating and managing the virtual devices in SL. In order to perform this task, it logs in a computer-controlled avatar (i.e. the Server Bot), through which it issues commands framed as instant messages to create and modify the objects that would represent the devices. When this Server Bot receives device manipulation requests from a TWM Client application, it utilizes the Virtual Device Storage database to store specific information that helps the program determine which virtual devices correspond to this particular client. In addition, when any modification to a virtual device is perceived, the modification is transmitted to the Server Bot as an instant message and retransmitted back to the corresponding TWM Client application.</p><p>The TWM Client application is in charge of connecting the real devices to the virtual world. Similarly, it logs in a computer-controlled avatar (i.e. the Client Bot), through which it transmits device manipulation requests to the TWM Server application. When the application starts, it reads the information regarding real devices’ connection methods and data formats from a configuration file called the Device Description File (DDF). Once the Client Bot is logged, it requests a connection with a predefined Server Bot and, when the connection is established, the TWM Client application starts issuing the appropriate commands to (1) create the virtual devices that correspond to each real device defined in the DDF and (2) update the virtual devices’ values based on the real ones. When any virtual device update notification comes from the Server Bot, it is perceived by the Client Bot and retransmitted to its correspondent real device by the application.</p><p>The communication between the Server Bot with the Client Bot is implemented as an XML-based instant message passing protocol known as the Communication Description Language (CDL), which is described in detail in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-009-0130-5#Sec9">4.5</a>.</p><p>Both the TWM Client and the TWM Server applications were implemented in C sharp, making use of a third party connection library called OpenMetaverse (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="OpenMetaverse (2009) Virtual worlds connection library. &#xA;                    http://www.opensimulator.com/projects/libopenmetaverse&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-009-0130-5#ref-CR23" id="ref-link-section-d49762e693">2009</a>), which allows external programs to manipulate avatars and objects in SL.</p><h3 class="c-article__sub-heading" id="Sec6">Sensor/actuator definitions</h3><p>The TWM has two categories of devices: </p><ol class="u-list-style-none">
+                    <li>
+                      <span class="u-custom-list-number">1.</span>
+                      
+                        <p>
+                                       <i>Sensors</i>. These are devices that sense real-world data and display them on their virtual world counterparts. An example of a sensor can be an electronic device connected to a computer or any kind of device that provides a way to retrieve data from it.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">2.</span>
+                      
+                        <p>
+                                       <i>Actuators</i>. These are devices in which avatars can interact with, such that the result of interaction (in SL) drives their real-world counterparts to perform a task. Interactions in SL include touching, turning, driving, etc. An example of an actuator is a 3D visual component in SL.</p>
+                      
+                    </li>
+                  </ol>
+                        <p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-009-0130-5#Fig3">3</a> shows four examples of virtual devices we have created for our testing scenarios. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-009-0130-5#Fig3">3</a>a and b represents sensors and Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-009-0130-5#Fig3">3</a>c and d represents actuators. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-009-0130-5#Fig3">3</a>a depicts a virtual chart to display multidimensional numeric values. This chart displays ten prisms, with the height of each prism representing a value between 0 and 100. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-009-0130-5#Fig3">3</a>b is a seven-segment display of temperature data in Celsius units. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-009-0130-5#Fig3">3</a>c represents a push switch that returns a boolean value (i.e. pushed or not pushed) to any actuator device, and finally, Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-009-0130-5#Fig3">3</a>d is a camera controller that returns pan values when an avatar ‘rides’ on it and the user presses the arrow buttons on the keyboard.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-009-0130-5/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-009-0130-5/MediaObjects/10055_2009_130_Fig3_HTML.gif?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-009-0130-5/MediaObjects/10055_2009_130_Fig3_HTML.gif" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p>Examples of virtual devices. <b>a</b>, <b>b</b> are of type sensor, and <b>c</b>, <b>d</b> are of type actuator. <b>a</b> Chart display for data array, <b>b</b> temperature display for
+thermometer, <b>c</b> ON/OFF switch controller, and <b>d</b> camera controller</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-009-0130-5/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>The TWM framework was not designed for the requirements of only specific devices. On the contrary, it was designed to be scalable and open for the inclusion of new virtual and real devices. All communication to devices, both real and virtual, is performed through device interfaces. For real devices, the device interface is called the “device driver”. The most common way to read data from or write data to a real device is through the use of a network protocol (e.g. HTTP, FTP), a file, or an I/O port (e.g. serial, parallel). For virtual devices, the device interface takes the form of chat messages over certain chat channels. Virtual devices require embedded LSL scripts in order to be able to send data, receive data and update their appearance (color, size, etc.). The TWM framework can interact with any real device that can provide any of the interfaces described above and any virtual device that implements a messaging system which the Server Bot can understand.</p><p>Since most real devices can be classified into sensors and actuators, the TWM was designed to provide functional connectivity on the sensor/actuator paradigm, making it very easy for any equipment to work with TWM. Device owners just need to write a detailed parametric description of their device. TWM allows definitions specified in common data types found in every programming language (e.g. integer, floating point number, character string, and arrays).</p><h3 class="c-article__sub-heading" id="Sec7">TWM connection scenario</h3><p>When users want to establish a connection between their real devices and SL, the procedure defined below has to be followed:
+</p><ul class="u-list-style-bullet">
+                    <li>
+                      <p>The user who wants to connect his/her real devices (i.e. the device owner) needs to specify beforehand the description of each device, and how to connect to it from the client application. This is performed through the creation of an XML-based configuration file called the DDF. Also, the user needs to provide information regarding the Client Bot which will stream the real data into SL and the Server Bot which will receive the data and update the virtual devices.</p>
+                    </li>
+                    <li>
+                      <p>Accordingly, the user in charge of manipulating the Server Bot needs to specify the list of Client Bots that will be allowed to communicate with his/her Server Bot in a XML-based configuration file.</p>
+                    </li>
+                    <li>
+                      <p>When the Client Bot logs into SL, it will start requesting the creation of a virtual counterpart for every real device listed in the client’s configuration file. If the device is not present in the virtual world, it will be instantiated from the Server Bot’s inventory to the position specified by the client.</p>
+                    </li>
+                    <li>
+                      <p>After the Client Bot receives an acknowledgement that the virtual device connection has been established, the communication with the Server Bot will begin, with the direction of the communication depending on the type of device instantiated. If the device is defined as a sensor, it waits for data from the Sensor Bot. If the device is defined as an actuator, it will wait for the user to manipulate the virtual device.</p>
+                    </li>
+                    <li>
+                      <p>To update a sensor device, the Client Bot periodically reads the data from the real device and sends it to the Server Bot, which updates the virtual device.</p>
+                    </li>
+                    <li>
+                      <p>When an avatar, with the proper permissions given by the island owner, activates (either by pushing, driving, etc.) the virtual actuator, this condition will be detected by the Server Bot that will transmit the information to the Client Bot, which will pass the data to the real device.</p>
+                    </li>
+                    <li>
+                      <p>The two-way communication between Client and Server Bot continues until one of them logs out of the virtual world.</p>
+                    </li>
+                  </ul>
+                        <h3 class="c-article__sub-heading" id="Sec8">Device Description File</h3><p>The TWM framework provides a way to easily configure real devices for client application users through the specification of an XML-based configuration file called “DDF”. This file is written using a proprietary language created by us known as the Device Description Language (DDL) (GlobalLab <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008–2009" title="GlobalLab (2008–2009) GlobalLab project website. &#xA;                    http://www.prendingerlab.net/globallab/&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-009-0130-5#ref-CR11" id="ref-link-section-d49762e864">2008–2009</a>). Most real devices can easily be specified using DDL, covering the majority of demands, and users can also add their own specifications with little effort. Our language is conceptually similar to the sensor definition language called SensorML (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="SensorML (2009) Sensor model language. &#xA;                    http://www.opengeospatial.org/standards/sensorml&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-009-0130-5#ref-CR25" id="ref-link-section-d49762e867">2009</a>), but we extended this language to include actuator definitions.</p><p>A typical DDL file has three major structural components: the <i>login</i> section, the <i>sensors</i> section, and the <i>actuators</i> section. A simple configuration file which contains only one sensor and one actuator is shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-009-0130-5#Fig4">4</a>.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-009-0130-5/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-009-0130-5/MediaObjects/10055_2009_130_Fig4_HTML.gif?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-009-0130-5/MediaObjects/10055_2009_130_Fig4_HTML.gif" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p>Simple DDL configuration file for the TWM Client application</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-009-0130-5/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>In the login section, indicated by the <span class="c-literal">
+                    <span class="u-monospace">login</span>
+                  </span> and <span class="c-literal">
+                    <span class="u-monospace">serverbot</span>
+                  </span> tags, the user must specify the login information for the Client Bot (its first name, last name, and password) as well as for the Server Bot to which the client application will connect to. In this case, the Server Bot is identified by its assigned UUID (Universal Unique Identifier), which must be retrieved from SL.</p><p>The sensors section, indicated by the <span class="c-literal">
+                    <span class="u-monospace">sensors</span>
+                  </span> tag, describes the list of physical sensors that will be displayed as virtual objects in SL. Each sensor is defined by a unique id, a name, a visual representation (the type of predefined object used for the sensor in SL), its location in the virtual world, and the type of data value it generates, along with the source of such data. In the sample configuration file, the sensor defined as “1” is a device that provides single integer values that would be displayed as a thermometer in the virtual world.</p><p>Lastly, the actuators section, indicated by the <span class="c-literal">
+                    <span class="u-monospace">actuators</span>
+                  </span> tag, describes the list of physical actuators that will be represented as manipulable virtual objects in SL. Each actuator is defined by a unique id, a name, a visual representation, its location in the virtual world, and the type of data value it accepts, along with the target of such data. In the sample configuration file, the actuator defined as “2” is a device that can be set through a boolean value and that would be displayed as an ON/OFF switch.</p><h3 class="c-article__sub-heading" id="Sec9">Client server communication protocol</h3><p>The Client Bot and the Server Bot communicate with each other by sending XML-based messages using the SL instant messaging channel. The specification of this message is written in what we call the “CDL”. This proprietary language (also developed by us) helps to describe the target, purpose of the message, and details of the operation to be performed in the virtual device (GlobalLab <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008–2009" title="GlobalLab (2008–2009) GlobalLab project website. &#xA;                    http://www.prendingerlab.net/globallab/&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-009-0130-5#ref-CR11" id="ref-link-section-d49762e945">2008–2009</a>). CDL was designed to be open to developers who want to build their own Client or Server Bot.</p><p>As an example, Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-009-0130-5#Fig5">5</a> shows a sample CDL message that is sent from a client application to create a virtual sensor. In contrast, Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-009-0130-5#Fig6">6</a> shows a sample CDL message that is sent from a server application to update a real actuator device.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-009-0130-5/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-009-0130-5/MediaObjects/10055_2009_130_Fig5_HTML.gif?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-009-0130-5/MediaObjects/10055_2009_130_Fig5_HTML.gif" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p>Client to server: CDL client message for creating device</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-009-0130-5/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-6"><figure><figcaption><b id="Fig6" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 6</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-009-0130-5/figures/6" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-009-0130-5/MediaObjects/10055_2009_130_Fig6_HTML.gif?as=webp"></source><img aria-describedby="figure-6-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-009-0130-5/MediaObjects/10055_2009_130_Fig6_HTML.gif" alt="figure6" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-6-desc"><p>Server to client: CDL server message for updating client’s actuator</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-009-0130-5/figures/6" data-track-dest="link:Figure6 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>A typical CDL message, identified by the <span class="c-literal">
+                    <span class="u-monospace">conversation</span>
+                  </span> tag, is composed of a timestamp, which records the time in which the message was generated, and an instruction or instructions (identified by the <span class="c-literal">
+                    <span class="u-monospace">message</span>
+                  </span> tag) which will be executed either in the virtual device or in the real device, depending on the direction of the message.</p><p>Any instruction in CDL has three main attributes: the type of device to which the instruction is targeted (sensor or actuator), the type of instruction to execute, and its parameters. Instructions for virtual device operation between the server and the client applications can be divided into four types: </p><ol class="u-list-style-none">
+                    <li>
+                      <span class="u-custom-list-number">1.</span>
+                      
+                        <p>
+                                       <i>Virtual device creation</i>. The client application requests to establish a connection with a specific virtual device on SL.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">2.</span>
+                      
+                        <p>
+                                       <i>Virtual device update</i>. For sensors, the client application sends updated values to the server application, including new position and new rotation values. For actuators, the server application sends updated data to the client application.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">3.</span>
+                      
+                        <p>
+                                       <i>Virtual device removal</i>. The client application requests to remove a virtual device from the virtual world.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">4.</span>
+                      
+                        <p>
+                                       <i>Operation acknowledgement</i>. The sensor application sends an acknowledgement back to the client application that the creation, update or removal operation was either successful or not.</p>
+                      
+                    </li>
+                  </ol>
+                        <p>The parameters of the instruction, identified by the <span class="c-literal">
+                    <span class="u-monospace">detail</span>
+                  </span> tag, can vary depending on the type of instruction. For instance, a create operation requires the specification of an id, a name, a visual representation, a location and a value; on the other hand, an update operation just requires the id of the device and a value.</p></div></div></section><section aria-labelledby="Sec10"><div class="c-article-section" id="Sec10-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec10">Pilot study</h2><div class="c-article-section__content" id="Sec10-content"><p>We prepared a simple scenario using our virtual devices in SL, and tested the response of users to the in-world experience. In the scenario, users, in pairs, were asked to discuss and make a decision regarding an agricultural problem. They presented some data, provided by virtual devices, to facilitate their discussion, and four different options to choose from as a means to save the field. The virtual devices provided measures of temperature and humidity in the field, with a history of the past 7 days, and an image from the field that could be explored by panning the virtual camera.</p><p>Subjects were shown a situation with a dry field and some humid and hot days. The four choices were (1) to add water, (2) to reduce the sun exposure, (3) to apply pesticide or (4) to do nothing. The situation was controlled in order to be ambiguous and generate some discussion. The actual choice made in the end was not important. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-009-0130-5#Fig7">7</a> shows the experiment setup in SL.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-7"><figure><figcaption><b id="Fig7" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 7</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-009-0130-5/figures/7" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-009-0130-5/MediaObjects/10055_2009_130_Fig7_HTML.jpg?as=webp"></source><img aria-describedby="figure-7-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-009-0130-5/MediaObjects/10055_2009_130_Fig7_HTML.jpg" alt="figure7" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-7-desc"><p>The <i>left</i> avatar is controlling the camera. Both avatars co-experience humidity (<i>left)</i>, a view on the field (<i>middle</i>), and temperature (<i>right</i>). Humidity and temperature are displayed for 10 days</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-009-0130-5/figures/7" data-track-dest="link:Figure7 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>The experiment was conducted with 10 subjects (5 pairs), students at National Institute of Informatics, with ages between 21 and 35 (mean 27.3, <i>σ</i> = 3.83). All except one subject were male. Most subjects did not have prior experience with SL even though they have some experience with virtual environments in general. When asked about their expertise in agriculture, they confirmed to have some knowledge
+<sup><a href="#Fn1"><span class="u-visually-hidden">Footnote </span>1</a></sup> (e.g. common sense). Subjects were instructed to discuss and come to a decision within 10 min. Time spent in the experiment was in average 6 min 14 s (<i>σ</i> = 1 min 48 s). Therefore, all groups successfully performed the task within reasonable time.</p><p>To assess the experience of users, we applied a co-presence questionnaire developed by Casanueva and Blake (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Casanueva JS, Blake EH (2001) The effects of avatars on copresence in a collaborative virtual environment. Technical Report CS010200. Department of Computer Science, University of Cape Town, South Africa" href="/article/10.1007/s10055-009-0130-5#ref-CR7" id="ref-link-section-d49762e1146">2001</a>), consisting of 6 questions ranked in a 1–7 Likert scale (see Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-009-0130-5#Tab1">1</a>). In addition, we recorded the time spent for the experiment and the chat log.</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-1"><figure><figcaption class="c-article-table__figcaption"><b id="Tab1" data-test="table-caption">Table 1 The items of the co-presence questionnaire</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-009-0130-5/tables/1"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>Results show that a sense of co-presence was successfully achieved. We obtained a mean rank of 5.23 (<i>σ</i> = 0.63) in the co-presence questionnaire. Furthermore, by carefully analyzing each individual question, we realized that the question concerned with the emergence of group/community was ranking quite low (mean rank 4.20, <i>σ</i> = 2.0). We speculate that by using pairs of subjects rather than bigger groups, this sense of group emergence was broken. If we remove this question in our measure of co-presence, our results are slightly improved (mean rank 5.44, <i>σ</i> = 0.42). In fact, the questionnaire’s Cronbach’s <i>α</i> improved significantly, from 0.65 to 0.79, after removing the question.</p><p>Regarding the chat log, we found that the discussion was usually dominated by one person although both conversed. The average number of chat messages was 26.0 (<i>σ</i> = 18.99). The average number of chat messages of the more talkative person was 17.8 (<i>σ</i> = 11.99), while for the less talkative it was 8.6 (<i>σ</i> = 7.2). The discussion was generally centered in the choice between to add water to the field and to cover the field to reduce sun exposure. Both persons, in each pair, presented arguments based on the readings of the virtual sensors, but, usually, only one controlled the camera. This can be explained by the fact that the camera’s controls could only be used by one person at a time. In the end, three of the groups decided to add water to the field while the other two decided to cover the field to reduce sun exposure. Both answers are acceptable given the data that were shown to the users.</p><p>Here are some free-text comments from the subjects. One participant stated “In the beginning I was not aware, that another user was on the island as well. But then the collaboration was very interesting, I had the feeling like I talk to him directly face-to-face”, while another said “If graphics could be improved and speech could be added (e.g., TTS), we could have better experience. But it is a great way of experiencing the web based content.”. These comments indicate that the experience was generally good, even though the fidelity of the virtual environment is not high.</p></div></div></section><section aria-labelledby="Sec11"><div class="c-article-section" id="Sec11-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec11">Discussion</h2><div class="c-article-section__content" id="Sec11-content"><p>For common users, the TWM framework provides a flexible and easy-to-use approach to display data of real devices in SL. Nevertheless, some technical issues regarding the external connectivity library (libsecondlife) and SL itself limited our options to deliver a more streamed solution. For example, the information shown in our virtual screen in the rice field corresponds to a texture image applied over the screen itself, whereby a real-time screen would require the display of several different texture images per second. However, Linden Labs (the company running SL) charges a small amount of real money to upload images. Thus, we used another feature offered by Linden Labs called MediaTexture. Here, a user can stream information content into the island via one unique channel. This feature nicely overcomes the economic issue, but constrains TWM into processing just one stream at a time per island.</p><p>In addition, working with libsecondlife created some unexpected dysfunctional situations due to its (current) instability. Sometimes, virtual devices cannot be created or information is lost during device manipulation. Network limitations and synchronization issues were also present due to the size/amount of data that needs to be transmitted from the sensors to the virtual world.</p><p>However, we believe that these limitations can be overcome by (1) implementing better ways to transmit and process real data and (2) work around the virtual world limitations by considering other more flexible and configurable alternatives such as open source projects. Currently, we are also working on porting our solution into an open source virtual world implementation called OpenSimulator (<a href="http://www.opensimulator.org">http://www.opensimulator.org</a>), which gives us the possibility not only to overcome limitations of SL, but also to enhance the current functionality of our framework, thus providing users with more efficient and effective ways to connect their real devices.</p></div></div></section><section aria-labelledby="Sec12"><div class="c-article-section" id="Sec12-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec12">Conclusions</h2><div class="c-article-section__content" id="Sec12-content"><p>In this paper, we advocate an approach to virtual co-presence and collaboration based on the SL virtual world. SL supports co-presence by synchronous multi-modal avatar communication, and collaboration via shared context and in-world object control. Our focus is on facilitating environmental studies in the agricultural field for common users, rather than computer experts. For this purpose, we developed the TWM framework, which manages the communication and interfaces between real devices and its virtual counterpart devices. Using the TWM, even non-programmers can easily set up a collaborative platform for visualization of real-world data and control real devices from within the virtual world. Visitors of our SL island may experience data from the NARC field server and control the Shinshu field server by following the links from our project web site (GlobalLab <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008–2009" title="GlobalLab (2008–2009) GlobalLab project website. &#xA;                    http://www.prendingerlab.net/globallab/&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-009-0130-5#ref-CR11" id="ref-link-section-d49762e1358">2008–2009</a>).</p><p>In our pilot study, we investigated a collaborative scenario in the agricultural field. Results indicate a high level of co-presence achieved in the scenario. Informal comments were generally positive.</p><p>While interaction between users happens mostly via text chat, the open nature of the virtual world client technology allows for the development of alternative client programs that could, in principle, handle richer, multi-modal types of interaction. Currently, the official SL client software only supports text and voice communication, but other data protocols could be implemented when supported by SL.</p><p>The only ‘programming’ required to use TWM is the specification of the DDL configuration file. The creation of this file requires some expertise in SL terminology and XML, which can be easily managed by most users. Having the DDL file correctly described, TWM eliminates the need to code the data formatting and synchronization, which are usually the most challenging tasks. This feature of the TWM contributes to the generic characteristic of the framework, i.e. the TWM can be applied to any kind of streamed data that can be visually represented as a virtual object (e.g. to display object positions in 3D map representations for positioning systems or to display weather variables as alterations of a virtual object’s physical properties such as color and lighting for weather report systems).</p><p>Since the TWM is built on SL technology, significant architectural changes of SL might affect its functioning. However, our component-oriented design guarantees that we would be able to easily adapt our connectivity component and thus be ready to support other types of visualization paradigms. On the other hand, open source alternatives such as OpenSimulator (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="OpenSimulator (2009) Virtual worlds server technology. &#xA;                    http://opensimulator.org&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-009-0130-5#ref-CR24" id="ref-link-section-d49762e1371">2009</a>), which can replicate the server functionality provided by SL, are getting more stable and increasingly popular. Since they offer additional degrees of control for more robust and efficient solutions in virtual worlds, we are also considering to port the TWM to this platform and increase its performance and functionality.</p><p>As a future enhancement of our framework, we are currently working on a definition of composite devices (i.e. devices that are constituted by two or more real devices) using DDL. This will allow users to define complex visualization schemas for data that are composed of different types of information, e.g. a virtual smartphone, which could be composed of a screen for image display, virtual buttons for manipulation, and an accelerometer for signalling movement.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="notes"><div class="c-article-section" id="notes-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="notes">Notes</h2><div class="c-article-section__content" id="notes-content"><ol class="c-article-footnote c-article-footnote--listed"><li class="c-article-footnote--listed__item" id="Fn1"><span class="c-article-footnote--listed__index">1.</span><div class="c-article-footnote--listed__content"><p>This was assessed by asking subjects to rate their expertise in agriculture in a seven-point Likert scale (1 representing “no knowledge at all” and 7 representing “professional knowledge”). The mean value for this was 3.6 (<i>σ</i> =  1.2).</p></div></li></ol></div></div></section><section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="WS. Bainbridge, " /><meta itemprop="datePublished" content="2007" /><meta itemprop="headline" content="Bainbridge WS (2007) The scientific research potential of virtual worlds. Science 317:472–476" /><p class="c-article-references__text" id="ref-CR1">Bainbridge WS (2007) The scientific research potential of virtual worlds. Science 317:472–476</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1126%2Fscience.1146930" aria-label="View reference 1">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 1 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=The%20scientific%20research%20potential%20of%20virtual%20worlds&amp;journal=Science&amp;volume=317&amp;pages=472-476&amp;publication_year=2007&amp;author=Bainbridge%2CWS">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="T. Boellstorff, " /><meta itemprop="datePublished" content="2008" /><meta itemprop="headline" content="Boellstorff T (2008) Coming of age in Second Life: an anthropologist explores the virtually human. Princeton U" /><p class="c-article-references__text" id="ref-CR2">Boellstorff T (2008) Coming of age in Second Life: an anthropologist explores the virtually human. Princeton University Press, Princeton, NJ</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 2 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Coming%20of%20age%20in%20Second%20Life%3A%20an%20anthropologist%20explores%20the%20virtually%20human&amp;publication_year=2008&amp;author=Boellstorff%2CT">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="MNK. Boulos, L. Hetherington, S. Wheeler, " /><meta itemprop="datePublished" content="2007" /><meta itemprop="headline" content="Boulos MNK, Hetherington L, Wheeler S (2007) Second life: an overview of the potential of 3D virtual worlds in" /><p class="c-article-references__text" id="ref-CR3">Boulos MNK, Hetherington L, Wheeler S (2007) Second life: an overview of the potential of 3D virtual worlds in medical and health education. Health Inform Libr J 24(4):233–245</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1111%2Fj.1471-1842.2007.00733.x" aria-label="View reference 3">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 3 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Second%20life%3A%20an%20overview%20of%20the%20potential%20of%203D%20virtual%20worlds%20in%20medical%20and%20health%20education&amp;journal=Health%20Inform%20Libr%20J&amp;volume=24&amp;issue=4&amp;pages=233-245&amp;publication_year=2007&amp;author=Boulos%2CMNK&amp;author=Hetherington%2CL&amp;author=Wheeler%2CS">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Brandherm B, Ullrich S, Prendinger H (2008) Simulation of sensor-based tracking in second life. In: AAMAS ’08:" /><p class="c-article-references__text" id="ref-CR4">Brandherm B, Ullrich S, Prendinger H (2008) Simulation of sensor-based tracking in second life. In: AAMAS ’08: proceedings of the 7th international joint conference on autonomous agents and multiagent systems, International Foundation for Autonomous Agents and Multiagent Systems, pp 1689–1690</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="DA. Bray, BR. Konsynski, " /><meta itemprop="datePublished" content="2007" /><meta itemprop="headline" content="Bray DA, Konsynski BR (2007) Virtual worlds: multi-disciplinary research opportunities. SIGMIS Database 38(4):" /><p class="c-article-references__text" id="ref-CR5">Bray DA, Konsynski BR (2007) Virtual worlds: multi-disciplinary research opportunities. SIGMIS Database 38(4):17–25</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1145%2F1314234.1314239" aria-label="View reference 5">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 5 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Virtual%20worlds%3A%20multi-disciplinary%20research%20opportunities&amp;journal=SIGMIS%20Database&amp;volume=38&amp;issue=4&amp;pages=17-25&amp;publication_year=2007&amp;author=Bray%2CDA&amp;author=Konsynski%2CBR">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="S. Bryson, " /><meta itemprop="datePublished" content="1996" /><meta itemprop="headline" content="Bryson S (1996) Virtual reality in scientific visualization. Commun ACM 39(5):62–71" /><p class="c-article-references__text" id="ref-CR6">Bryson S (1996) Virtual reality in scientific visualization. Commun ACM 39(5):62–71</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1145%2F229459.229467" aria-label="View reference 6">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 6 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Virtual%20reality%20in%20scientific%20visualization&amp;journal=Commun%20ACM&amp;volume=39&amp;issue=5&amp;pages=62-71&amp;publication_year=1996&amp;author=Bryson%2CS">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Casanueva JS, Blake EH (2001) The effects of avatars on copresence in a collaborative virtual environment. Tec" /><p class="c-article-references__text" id="ref-CR7">Casanueva JS, Blake EH (2001) The effects of avatars on copresence in a collaborative virtual environment. Technical Report CS010200. Department of Computer Science, University of Cape Town, South Africa</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Du K, Sun Z, Han H, Liu S (2008) Development of a web-based wireless telemonitoring system for agro-environmen" /><p class="c-article-references__text" id="ref-CR8">Du K, Sun Z, Han H, Liu S (2008) Development of a web-based wireless telemonitoring system for agro-environment. In: International Federation for Information Processing (IFIP), Springer, Boston, pp 799–807</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Eysenbach G (2008) Medicine 2.0: social networking, collaboration, participation, apomediation, and openness. " /><p class="c-article-references__text" id="ref-CR9">Eysenbach G (2008) Medicine 2.0: social networking, collaboration, participation, apomediation, and openness. J Med Internet Res 10(3):e22. <a href="http://www.jmir.org/2008/3/e22/">http://www.jmir.org/2008/3/e22/</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Fundinger A (2007) Real life control panel for Second Life. http://channel3b.wordpress.com/2007/01/24/real-lif" /><p class="c-article-references__text" id="ref-CR10">Fundinger A (2007) Real life control panel for Second Life. <a href="http://channel3b.wordpress.com/2007/01/24/real-life-control-panel-for-second-life">http://channel3b.wordpress.com/2007/01/24/real-life-control-panel-for-second-life</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="GlobalLab (2008–2009) GlobalLab project website. http://www.prendingerlab.net/globallab/&#xA;                     " /><p class="c-article-references__text" id="ref-CR11">GlobalLab (2008–2009) GlobalLab project website. <a href="http://www.prendingerlab.net/globallab/">http://www.prendingerlab.net/globallab/</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Ichikawa (2009) Yamani Orchard, Ichikawa. http://fsds.dc.affrc.go.jp/data4/Ichikawa01/&#xA;                       " /><p class="c-article-references__text" id="ref-CR12">Ichikawa (2009) Yamani Orchard, Ichikawa. <a href="http://fsds.dc.affrc.go.jp/data4/Ichikawa01/">http://fsds.dc.affrc.go.jp/data4/Ichikawa01/</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Kobayashi K (2009) Shinshu University’s field server. http://www.cs.shinshu-u.ac.jp/~kkobayashi/ja/index.php?f" /><p class="c-article-references__text" id="ref-CR14">Kobayashi K (2009) Shinshu University’s field server. <a href="http://www.cs.shinshu-u.ac.jp/~kkobayashi/ja/index.php?fs-obuse">http://www.cs.shinshu-u.ac.jp/~kkobayashi/ja/index.php?fs-obuse</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="J. Leigh, AE. Johnson, " /><meta itemprop="datePublished" content="1996" /><meta itemprop="headline" content="Leigh J, Johnson AE (1996) Supporting transcontinental collaborative work in persistent virtual environments. " /><p class="c-article-references__text" id="ref-CR15">Leigh J, Johnson AE (1996) Supporting transcontinental collaborative work in persistent virtual environments. Comput Graphics Appl IEEE 16(4):47–51</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2F38.511853" aria-label="View reference 14">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 14 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Supporting%20transcontinental%20collaborative%20work%20in%20persistent%20virtual%20environments&amp;journal=Comput%20Graphics%20Appl%20IEEE&amp;volume=16&amp;issue=4&amp;pages=47-51&amp;publication_year=1996&amp;author=Leigh%2CJ&amp;author=Johnson%2CAE">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="libsecondlife (2007) libsecondlife project. http://www.libsecondlife.org&#xA;                        " /><p class="c-article-references__text" id="ref-CR16">libsecondlife (2007) libsecondlife project. <a href="http://www.libsecondlife.org">http://www.libsecondlife.org</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Lifton J, Feldmeier M, Ono Y, Lewis C, Paradiso JA (2007) A platform for ubiquitous sensor deployment in occup" /><p class="c-article-references__text" id="ref-CR17">Lifton J, Feldmeier M, Ono Y, Lewis C, Paradiso JA (2007) A platform for ubiquitous sensor deployment in occupational and domestic environments. In: IPSN ’07: proceedings of the 6th international conference on information processing in sensor networks, ACM, New York, NY, pp 119–127</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Lombard M, Ditton T (1997) At the heart of it all: the concept of presence. J Comput-Mediated Commun 3(2). htt" /><p class="c-article-references__text" id="ref-CR18">Lombard M, Ditton T (1997) At the heart of it all: the concept of presence. J Comput-Mediated Commun 3(2). <a href="http://jcmc.indiana.edu/vol3/issue2/lombard.html">http://jcmc.indiana.edu/vol3/issue2/lombard.html</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Mangan J (1997) Participatory pest analysis. In: PLA notes, 28" /><p class="c-article-references__text" id="ref-CR20">Mangan J (1997) Participatory pest analysis. In: PLA notes, 28</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Milgram P, Takemura H, Utsumi A, Kishino F (1994) Augmented reality: a class of displays on the reality–virtua" /><p class="c-article-references__text" id="ref-CR21">Milgram P, Takemura H, Utsumi A, Kishino F (1994) Augmented reality: a class of displays on the reality–virtuality continuum. In: Proceedings of SPIE, vol 2351. Telemanipulator and Telepresence Technologies, Boston, pp 282–292</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Ogi T, Tamagawa K, Yamada T, Hirose M (1999) Collaborative scientific visualization in networked immersive vir" /><p class="c-article-references__text" id="ref-CR22">Ogi T, Tamagawa K, Yamada T, Hirose M (1999) Collaborative scientific visualization in networked immersive virtual environment. In: IEEE international conference on systems, man, and cybernetics (SMC ’99), pp VI-87–VI-91</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="OpenMetaverse (2009) Virtual worlds connection library. http://www.opensimulator.com/projects/libopenmetaverse" /><p class="c-article-references__text" id="ref-CR23">OpenMetaverse (2009) Virtual worlds connection library. <a href="http://www.opensimulator.com/projects/libopenmetaverse">http://www.opensimulator.com/projects/libopenmetaverse</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="OpenSimulator (2009) Virtual worlds server technology. http://opensimulator.org&#xA;                        " /><p class="c-article-references__text" id="ref-CR24">OpenSimulator (2009) Virtual worlds server technology. <a href="http://opensimulator.org">http://opensimulator.org</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="SensorML (2009) Sensor model language. http://www.opengeospatial.org/standards/sensorml&#xA;                      " /><p class="c-article-references__text" id="ref-CR25">SensorML (2009) Sensor model language. <a href="http://www.opengeospatial.org/standards/sensorml">http://www.opengeospatial.org/standards/sensorml</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Valin S, Francu A, Trefftz H, Marsic I (2001) Sharing viewpoints in collaborative virtual environments. In: Pr" /><p class="c-article-references__text" id="ref-CR26">Valin S, Francu A, Trefftz H, Marsic I (2001) Sharing viewpoints in collaborative virtual environments. In: Proceedings of the 34th annual Hawaii international conference on system sciences</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="von Kapri A, Ullrich S, Brandherm B, Prendinger H (2009) Global lab: an interaction, simulation, and experimen" /><p class="c-article-references__text" id="ref-CR13">von Kapri A, Ullrich S, Brandherm B, Prendinger H (2009) Global lab: an interaction, simulation, and experimentation platform based on “Second Life” and “OpenSimulator” (demo paper). In: Proceedings Pacific-Rim symposium on image and video technology (PSIVT ’09)</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="AC. Weaver, BB. Morrison, " /><meta itemprop="datePublished" content="2008" /><meta itemprop="headline" content="Weaver AC, Morrison BB (2008) Social networking. Computer 41(2):97–100" /><p class="c-article-references__text" id="ref-CR27">Weaver AC, Morrison BB (2008) Social networking. Computer 41(2):97–100</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2FMC.2008.61" aria-label="View reference 26">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 26 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Social%20networking&amp;journal=Computer&amp;volume=41&amp;issue=2&amp;pages=97-100&amp;publication_year=2008&amp;author=Weaver%2CAC&amp;author=Morrison%2CBB">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Weber A, Rufer-Bach K, Platel R (2007) Creating your world: the official guide to advanced content creation fo" /><p class="c-article-references__text" id="ref-CR19">Weber A, Rufer-Bach K, Platel R (2007) Creating your world: the official guide to advanced content creation for second life. Wiley, Indianapolis
+</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="S. Zhao, " /><meta itemprop="datePublished" content="2003" /><meta itemprop="headline" content="Zhao S (2003) Toward a taxonomy of copresence. Presence: Teleoper Virtual Environ 12(5):445–455" /><p class="c-article-references__text" id="ref-CR28">Zhao S (2003) Toward a taxonomy of copresence. Presence: Teleoper Virtual Environ 12(5):445–455</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1162%2F105474603322761261" aria-label="View reference 28">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 28 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Toward%20a%20taxonomy%20of%20copresence&amp;journal=Presence%3A%20Teleoper%20Virtual%20Environ&amp;volume=12&amp;issue=5&amp;pages=445-455&amp;publication_year=2003&amp;author=Zhao%2CS">
+                    Google Scholar</a> 
+                </p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-009-0130-5-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Ack1">Acknowledgments</h2><div class="c-article-section__content" id="Ack1-content"><p>This research was partly supported by a “Grand Challenge” Grant from NII, Tokyo. We would like to thank Kazuki Kobayashi and Yasunori Saito from Shinshu University and the NARC research group for their kind support.</p></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">National Institute of Informatics, 2-1-2 Hitotsubashi, Chiyoda-ku, Tokyo, 101-8430, Japan</p><p class="c-article-author-affiliation__authors-list">Songpol Attasiriluk, Arturo Nakasone, Wisut Hantanong &amp; Helmut Prendinger</p></li><li id="Aff2"><p class="c-article-author-affiliation__address">Department of Computer Engineering, Chulalongkorn University, Bangkok, Thailand</p><p class="c-article-author-affiliation__authors-list">Songpol Attasiriluk, Wisut Hantanong &amp; Pizzanu Kanongchaiyos</p></li><li id="Aff3"><p class="c-article-author-affiliation__address">IST-UTL, INESC-ID, Av. Prof. Cavaco Silva, Taguspark, 2744-016, Porto Salvo, Portugal</p><p class="c-article-author-affiliation__authors-list">Rui Prada</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Songpol-Attasiriluk"><span class="c-article-authors-search__title u-h3 js-search-name">Songpol Attasiriluk</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Songpol+Attasiriluk&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Songpol+Attasiriluk" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Songpol+Attasiriluk%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Arturo-Nakasone"><span class="c-article-authors-search__title u-h3 js-search-name">Arturo Nakasone</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Arturo+Nakasone&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Arturo+Nakasone" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Arturo+Nakasone%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Wisut-Hantanong"><span class="c-article-authors-search__title u-h3 js-search-name">Wisut Hantanong</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Wisut+Hantanong&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Wisut+Hantanong" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Wisut+Hantanong%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Rui-Prada"><span class="c-article-authors-search__title u-h3 js-search-name">Rui Prada</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Rui+Prada&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Rui+Prada" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Rui+Prada%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Pizzanu-Kanongchaiyos"><span class="c-article-authors-search__title u-h3 js-search-name">Pizzanu Kanongchaiyos</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Pizzanu+Kanongchaiyos&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Pizzanu+Kanongchaiyos" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Pizzanu+Kanongchaiyos%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Helmut-Prendinger"><span class="c-article-authors-search__title u-h3 js-search-name">Helmut Prendinger</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Helmut+Prendinger&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Helmut+Prendinger" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Helmut+Prendinger%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-009-0130-5/email/correspondent/c1/new">Helmut Prendinger</a>.</p></div></div></section><section aria-labelledby="additional-information"><div class="c-article-section" id="additional-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="additional-information">Additional information</h2><div class="c-article-section__content" id="additional-information-content"><p>S. Attasiriluk, A. Nakasone, W. Hantanong contributed equally to the content of the paper.</p><p>S. Attasiriluk and W. Hantanong were awarded a Memorandum of Understanding (MOU) Internship grant from the National Institute of Informatics, Tokyo.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=Co-presence%2C%20collaboration%2C%20and%20control%20in%20environmental%20studies&amp;author=Songpol%20Attasiriluk%20et%20al&amp;contentID=10.1007%2Fs10055-009-0130-5&amp;publication=1359-4338&amp;publicationDate=2009-08-05&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Attasiriluk, S., Nakasone, A., Hantanong, W. <i>et al.</i> Co-presence, collaboration, and control in environmental studies.
+                    <i>Virtual Reality</i> <b>13, </b>195–204 (2009). https://doi.org/10.1007/s10055-009-0130-5</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-009-0130-5.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2009-02-05">05 February 2009</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2009-06-17">17 June 2009</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2009-08-05">05 August 2009</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2009-09">September 2009</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-009-0130-5" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-009-0130-5</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Presence in shared virtual environments and online communities</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Avatars</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Presence applications (communications and collaboration; teleoperation)</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-009-0130-5.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=130;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

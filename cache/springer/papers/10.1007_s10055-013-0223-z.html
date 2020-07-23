@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="RORSIM: a warship collision avoidance 3D simulation designed to comple"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="Royal Navy Junior Warfare Officers (JWO) undergo a comprehensive training package in order to prepare them to be officers of the watch. One aspect of this training relates to their knowledge of the..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/17/3.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="RORSIM: a warship collision avoidance 3D simulation designed to complement existing Junior Warfare Officer training"/>
+
+    <meta name="dc.source" content="Virtual Reality 2013 17:3"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2013-02-22"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2013 The Author(s)"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="Royal Navy Junior Warfare Officers (JWO) undergo a comprehensive training package in order to prepare them to be officers of the watch. One aspect of this training relates to their knowledge of the &#8216;Rules of the Road&#8217; or &#8216;COLREGS&#8217;; the rules for the manoeuvring and signalling that approaching vessels make in order to avoid collision. The training and assessment exercises undertaken predominantly use non-interactive static materials. These do not exercise the required skill in reconciling information from maritime charts, radar displays and &#8216;out-of-the-window&#8217; monitoring. Consequently, performance during assessment on the VR-based bridge simulator falls short. This paper describes The Rules of the Road SIMulator (RORSIM)&#8212;a proof of concept interactive 3D (i3D) simulator developed to bridge the training gap between classroom teaching and VR bridge simulator assessment. RORSIM&#8217;s differentiation and its key functionality in terms of visualisaton, physics/interaction and game mechanics are influenced by the consideration of pedagogical learning models during requirements capture. This capture is formalised by a &#8216;Training Gap Use Case&#8217;&#8212;a graphical viewpoint using the Universal Modelling Language which can assist developers in requirements capture and development of i3D tools for existing training programmes. Key functionality, initial JWO feedback and a planned pilot study design are reported."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2013-02-22"/>
+
+    <meta name="prism.volume" content="17"/>
+
+    <meta name="prism.number" content="3"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="169"/>
+
+    <meta name="prism.endingPage" content="179"/>
+
+    <meta name="prism.copyright" content="2013 The Author(s)"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-013-0223-z"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-013-0223-z"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-013-0223-z.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-013-0223-z"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer London"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="RORSIM: a warship collision avoidance 3D simulation designed to complement existing Junior Warfare Officer training"/>
+
+    <meta name="citation_volume" content="17"/>
+
+    <meta name="citation_issue" content="3"/>
+
+    <meta name="citation_publication_date" content="2013/09"/>
+
+    <meta name="citation_online_date" content="2013/02/22"/>
+
+    <meta name="citation_firstpage" content="169"/>
+
+    <meta name="citation_lastpage" content="179"/>
+
+    <meta name="citation_article_type" content="Original Article"/>
+
+    <meta name="citation_fulltext_world_readable" content=""/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-013-0223-z"/>
+
+    <meta name="DOI" content="10.1007/s10055-013-0223-z"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-013-0223-z"/>
+
+    <meta name="description" content="Royal Navy Junior Warfare Officers (JWO) undergo a comprehensive training package in order to prepare them to be officers of the watch. One aspect of this "/>
+
+    <meta name="dc.creator" content="Neil Cooke"/>
+
+    <meta name="dc.creator" content="Robert Stone"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="Alexander A, Bruny&#233; T, Sidman J, Weil S (2005) From gaming to training: a review of studies on fidelity, immersion, presence, and buy-in and their effects on transfer in pc-based simulations and games. In: The interservice/industry training, simulation, and education conference (I/ITSEC), NTSA, Orlando, Florida"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Trans Control Syst Technol; citation_title=PID control system analysis, design, and technology; citation_author=K Ang, G Chong, Y Li, Y Ltd, S Singapore; citation_volume=13; citation_issue=4; citation_publication_date=2005; citation_pages=559-576; citation_doi=10.1109/TCST.2005.847331; citation_id=CR2"/>
+
+    <meta name="citation_reference" content="citation_title=Software design; citation_publication_date=2003; citation_id=CR3; citation_author=D Budgen; citation_publisher=Addison Wesley"/>
+
+    <meta name="citation_reference" content="Buziak C, CA NPSM (2000) The Role of Personality in Determining Variability in Evaluating Expertise, unpublished Masters Thesis"/>
+
+    <meta name="citation_reference" content="Chau T, Maurer F, Melnik G (2003) Knowledge sharing: agile methods vs. Tayloristic methods. In: Enabling technologies: infrastructure for collaborative enterprises, 2003. WET ICE 2003. Proceedings. Twelfth IEEE international workshops on, IEEE, pp 302&#8211;307"/>
+
+    <meta name="citation_reference" content="citation_title=Guide to the collision avoidance rules; citation_publication_date=1996; citation_id=CR6; citation_author=A Cockcroft; citation_author=J Lameijer; citation_author=E Corporation; citation_publisher=Butterworth-Heinemann"/>
+
+    <meta name="citation_reference" content="citation_title=Flow and the psychology of discovery and invention; citation_publication_date=1997; citation_id=CR7; citation_author=M Csikszentmihalyi; citation_publisher=HarperPerennial"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Commun ACM; citation_title=How UML is used; citation_author=B Dobing, J Parsons; citation_volume=49; citation_issue=5; citation_publication_date=2006; citation_pages=113; citation_doi=10.1145/1125944.1125949; citation_id=CR8"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Perform Improv Q; citation_title=Behaviorism, cognitivism, constructivism: comparing critical features from a design perspective; citation_author=P Ertmer, T Newby; citation_volume=6; citation_issue=4; citation_publication_date=1993; citation_pages=50-72; citation_doi=10.1111/j.1937-8327.1993.tb00605.x; citation_id=CR9"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Virtual Real; citation_title=The virtual trillium trail and the empirical effects of freedom and fidelity on discovery-based learning; citation_author=M Harrington; citation_volume=16; citation_publication_date=2012; citation_pages=105-120; citation_doi=10.1007/s10055-011-0189-7; citation_id=CR10"/>
+
+    <meta name="citation_reference" content="Hays R, Seamon A, Bradley S (1997) User-oriented design analysis of the VESUB technology demonstration system. DTIC/NTIS Accession Number ADA332570"/>
+
+    <meta name="citation_reference" content="Hays R, Seamon A, Bradley S, Vincenzi D (1998) Training effectiveness evaluation of the VESUB technology demonstration system. Technical Report DTIC/NTIS Accession Number ADA349219"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Virtual Real; citation_title=Haptic modules for palpatory diagnosis training of medical students; citation_author=E Karadogan, RL I Williams; citation_volume=17; citation_issue=1; citation_publication_date=2013; citation_pages=45-58; citation_id=CR13"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Internet High Educ; citation_title=Digital game-based learning: towards an experiential gaming model; citation_author=K Kiili; citation_volume=8; citation_issue=1; citation_publication_date=2005; citation_pages=13-24; citation_doi=10.1016/j.iheduc.2004.12.001; citation_id=CR14"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Acad Manag Learn Educ; citation_title=Learning styles and learning spaces: enhancing experiential learning in higher education; citation_author=A Kolb, D Kolb; citation_volume=4; citation_issue=2; citation_publication_date=2005; citation_pages=193-212; citation_doi=10.5465/AMLE.2005.17268566; citation_id=CR15"/>
+
+    <meta name="citation_reference" content="citation_title=A theory of fun in game design; citation_publication_date=2005; citation_id=CR16; citation_author=R Koster; citation_publisher=Paraglyph press"/>
+
+    <meta name="citation_reference" content="Norris S (1998) A task analysis of underway replenishment for virtual environment ship-handling simulator scenario development. PhD thesis, Naval Postgraduate School, masters Thesis DTIC/NTIS Accession Number ADA355905"/>
+
+    <meta name="citation_reference" content="Petridis P, Dunwell I, de Freitas S, Panzoli D (2010) An engine selection methodology for high fidelity serious games. In: 2010 second international conference on games and virtual worlds for serious applications, IEEE, pp 27&#8211;34"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Comput Graph Appl; citation_title=From linear story generation to branching story graphs; citation_author=M Riedl, R Young; citation_volume=26; citation_issue=3; citation_publication_date=2006; citation_pages=23-31; citation_doi=10.1109/MCG.2006.56; citation_id=CR19"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Virtual Real; citation_title=Using immersive game-based virtual reality to teach fire-safety skills to children; citation_author=S Smith, E Ericson; citation_volume=13; citation_publication_date=2009; citation_pages=87-99; citation_doi=10.1007/s10055-009-0113-6; citation_id=CR20"/>
+
+    <meta name="citation_reference" content="St John M, Kobus D, Morrison J (2002) A multi-tasking environment for manipulating and measuring neural correlates of cognitive workload. In: Human factors and power plants, 2002. Proceedings of the 2002 IEEE 7th conference on, IEEE, p 7"/>
+
+    <meta name="citation_reference" content="Stanton N (2005) Human factors methods: a practical guide for engineering and design. Ashgate Publishing Co, Aldershot"/>
+
+    <meta name="citation_reference" content="citation_journal_title=J Navig; citation_title=Autonomous ship collision avoidance navigation concepts, technologies and techniques; citation_author=T Statheros, G Howells, K Maier; citation_volume=61; citation_issue=01; citation_publication_date=2007; citation_pages=129-142; citation_id=CR23"/>
+
+    <meta name="citation_reference" content="Stone R, Caird-Daley A, Bessell K (2010) Human factors evaluation of a submarine spatial awareness training tool. In: Proceedings of the human performance at sea (HPAS) conference Glasgow 16&#8211;18 June 2010, pp 231&#8211;241"/>
+
+    <meta name="citation_reference" content="Stone R (2008) Human factors guidelines for interactive 3D and games-based training systems design: Edition 1, 
+                    http://www.hfidtc.com/pdf-downloads/hf-guidelines-for-sg.pdf
+                    
+                  , unpublished Human Factors Integration Defence Technology Centre Report"/>
+
+    <meta name="citation_reference" content="Stone R, Flannery T (2007) Initial/Junior Warfare Officer Performance Capture Tool: Research Milestone Summary, 
+                    http://www.hfidtc.com/research/training/training-reports/phase-1/4-7-2-1-i-jwo.pdf
+                    
+                  , unpublished Human Factors Integration Defence Technology Centre Report HFIDTC/WP4.7.2/1"/>
+
+    <meta name="citation_reference" content="Stone R, Rees J (2002) Application of virtual reality to the development of naval weapons simulators. In: The interservice/industry training, simulation &amp; education conference (I/ITSEC), NTSA, 1"/>
+
+    <meta name="citation_reference" content="citation_journal_title=J Mar Sci Technol; citation_title=Collision risk assessment for ships; citation_author=C Tam, R Bucknall; citation_volume=15; citation_issue=3; citation_publication_date=2010; citation_pages=257-270; citation_doi=10.1007/s00773-010-0089-7; citation_id=CR28"/>
+
+    <meta name="citation_reference" content="citation_journal_title=J Navig; citation_title=Review of collision avoidance and path planning methods for ships in close range encounters; citation_author=C Tam, R Bucknall, A Greig; citation_volume=62; citation_issue=03; citation_publication_date=2009; citation_pages=455-476; citation_doi=10.1017/S0373463308005134; citation_id=CR29"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Virtual Real; citation_title=A ship motion simulation system; citation_author=S Ueng, D Lin, C Liu; citation_volume=12; citation_issue=1; citation_publication_date=2008; citation_pages=65-76; citation_doi=10.1007/s10055-008-0088-8; citation_id=CR30"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Naval Eng J; citation_title=Submarine officer of the deck training using virtual environments: an assessment of training system capabilities; citation_author=D Vincenzi, R Hays, A Seamon; citation_volume=115; citation_issue=1; citation_publication_date=2003; citation_pages=79-95; citation_doi=10.1111/j.1559-3584.2003.tb00189.x; citation_id=CR31"/>
+
+    <meta name="citation_author" content="Neil Cooke"/>
+
+    <meta name="citation_author_email" content="n.j.cooke@bham.ac.uk"/>
+
+    <meta name="citation_author_institution" content="University of Birmingham, Birmingham, UK"/>
+
+    <meta name="citation_author" content="Robert Stone"/>
+
+    <meta name="citation_author_institution" content="University of Birmingham, Birmingham, UK"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-013-0223-z&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2013/09/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-013-0223-z"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="RORSIM: a warship collision avoidance 3D simulation designed to complement existing Junior Warfare Officer training"/>
+        <meta property="og:description" content="Royal Navy Junior Warfare Officers (JWO) undergo a comprehensive training package in order to prepare them to be officers of the watch. One aspect of this training relates to their knowledge of the ‘Rules of the Road’ or ‘COLREGS’; the rules for the manoeuvring and signalling that approaching vessels make in order to avoid collision. The training and assessment exercises undertaken predominantly use non-interactive static materials. These do not exercise the required skill in reconciling information from maritime charts, radar displays and ‘out-of-the-window’ monitoring. Consequently, performance during assessment on the VR-based bridge simulator falls short. This paper describes The Rules of the Road SIMulator (RORSIM)—a proof of concept interactive 3D (i3D) simulator developed to bridge the training gap between classroom teaching and VR bridge simulator assessment. RORSIM’s differentiation and its key functionality in terms of visualisaton, physics/interaction and game mechanics are influenced by the consideration of pedagogical learning models during requirements capture. This capture is formalised by a ‘Training Gap Use Case’—a graphical viewpoint using the Universal Modelling Language which can assist developers in requirements capture and development of i3D tools for existing training programmes. Key functionality, initial JWO feedback and a planned pilot study design are reported."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>RORSIM: a warship collision avoidance 3D simulation designed to complement existing Junior Warfare Officer training | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-013-0223-z","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Serious games, Game-based training, Virtual environments, Defence, Simulation","kwrd":["Serious_games","Game-based_training","Virtual_environments","Defence","Simulation"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"Y","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"vgzm.415900-10.1007-s10055-013-0223-z","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-013-0223-z","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=223;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-013-0223-z">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            RORSIM: a warship collision avoidance 3D simulation designed to complement existing Junior Warfare Officer training
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-013-0223-z.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-013-0223-z.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">Original Article</li>
+    
+    
+        <li class="c-article-identifiers__item">
+            <span class="c-article-identifiers__open" data-test="open-access">Open Access</span>
+        </li>
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2013-02-22" itemprop="datePublished">22 February 2013</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">RORSIM: a warship collision avoidance 3D simulation designed to complement existing Junior Warfare Officer training</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Neil-Cooke" data-author-popup="auth-Neil-Cooke" data-corresp-id="c1">Neil Cooke<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of Birmingham" /><meta itemprop="address" content="grid.6572.6, 0000000419367486, University of Birmingham, Birmingham, UK" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Robert-Stone" data-author-popup="auth-Robert-Stone">Robert Stone</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of Birmingham" /><meta itemprop="address" content="grid.6572.6, 0000000419367486, University of Birmingham, Birmingham, UK" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 17</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">169</span>–<span itemprop="pageEnd">179</span>(<span data-test="article-publication-year">2013</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">2102 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">3 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                    
+                        <li class="c-article-metrics-bar__item">
+                            <p class="c-article-metrics-bar__count">3 <span class="c-article-metrics-bar__label">Altmetric</span></p>
+                        </li>
+                    
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-013-0223-z/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>Royal Navy Junior Warfare Officers (JWO) undergo a comprehensive training package in order to prepare them to be officers of the watch. One aspect of this training relates to their knowledge of the ‘Rules of the Road’ or ‘COLREGS’; the rules for the manoeuvring and signalling that approaching vessels make in order to avoid collision. The training and assessment exercises undertaken predominantly use non-interactive static materials. These do not exercise the required skill in reconciling information from maritime charts, radar displays and ‘out-of-the-window’ monitoring. Consequently, performance during assessment on the VR-based bridge simulator falls short. This paper describes The Rules of the Road SIMulator (RORSIM)—a proof of concept interactive 3D (i3D) simulator developed to bridge the training gap between classroom teaching and VR bridge simulator assessment. RORSIM’s differentiation and its key functionality in terms of visualisaton, physics/interaction and game mechanics are influenced by the consideration of pedagogical learning models during requirements capture. This capture is formalised by a ‘Training Gap Use Case’—a graphical viewpoint using the Universal Modelling Language which can assist developers in requirements capture and development of i3D tools for existing training programmes. Key functionality, initial JWO feedback and a planned pilot study design are reported.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Introduction</h2><div class="c-article-section__content" id="Sec1-content"><p>Interactive 3D (i3D) simulations are playing an increasingly important role in the training of Royal Navy (RN) personnel, from close-range weapons handling and vessel safety training (Stone and Rees <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Stone R, Rees J (2002) Application of virtual reality to the development of naval weapons simulators. In: The interservice/industry training, simulation &amp; education conference (I/ITSEC), NTSA, 1" href="/article/10.1007/s10055-013-0223-z#ref-CR27" id="ref-link-section-d58659e301">2002</a>; Stone et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2010" title="Stone R, Caird-Daley A, Bessell K (2010) Human factors evaluation of a submarine spatial awareness training tool. In: Proceedings of the human performance at sea (HPAS) conference Glasgow 16–18 June 2010, pp 231–241" href="/article/10.1007/s10055-013-0223-z#ref-CR24" id="ref-link-section-d58659e304">2010</a>) to the bridge activities of Junior, or ‘Initial’ Warfare Officers (J/IWOs). A key challenge is to ensure that i3D simulations effectively complement and/or replace existing training tools and methods. For example, the RN’s Close-Range Weapons Simulator (CRWS) demonstrated its value in bridging the training gap between classroom theory and field training through the use of inert weapons as the user interface (Stone and Rees <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Stone R, Rees J (2002) Application of virtual reality to the development of naval weapons simulators. In: The interservice/industry training, simulation &amp; education conference (I/ITSEC), NTSA, 1" href="/article/10.1007/s10055-013-0223-z#ref-CR27" id="ref-link-section-d58659e307">2002</a>). In contrast, mixed results in using speech recognition and synthesis technologies to command vessels were reported in the evaluation of the U.S. Navy’s VESUB submarine deck trainer (Vincenzi et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Vincenzi D, Hays R, Seamon A (2003) Submarine officer of the deck training using virtual environments: an assessment of training system capabilities. Naval Eng J 115(1):79–95" href="/article/10.1007/s10055-013-0223-z#ref-CR31" id="ref-link-section-d58659e310">2003</a>). Simulation design choices such as fidelity of visual presentation, control surfaces, artificial intelligence and physics must support and not hinder the aim of bridging the training gap between performance required and that achieved.</p><p>JWO’s undertake a three year training programme. A key part prepares them for the role of Officer Of the Watch (OOW)—an officer situated on a warship bridge who contributes to control and navigation tasks. An important OOW task is to avoid collisions with other vessels—that is—develop the necessary situational awareness to enable the assessment of potential threats and to make and justify courses of action regarding the threats, through the safe manoeuvring of their own ship, the communication of their intentions to other vessels and, where appropriate, the issuing of warning signals via horn and/or light.</p><p>This paper describes the development of the ‘Rules Of the Road SIMulator’ (RORSIM) which bridges the training gap between existing paper and computer-based methods. Desktop games-based trainers are seen in many military spheres as a cost-effective solution to enhance training quality and supplement more elaborate and expensive multi-screen VR simulator-based trainers. We argue that, to justify their existence, i3D desktop trainers should afford learning methods and assessment which differentiate them from mainstream mission or whole-system simulators in addition to replicating their function in a cost-effective manner. Precedently, to ensure a rapid development cycle, differentiation between training tools should be made explicit during the requirements capture phase. To develop RORSIM, we present a methodology for requirements capture which emphasises analysis of the training gap—the ‘Training Gap Use Case’. This explicitly considers learning styles and existing training methods, which in turn assists the designer in developing system function and helps to speed up the iterative development cycle so that a fit-for-purpose design evolves.</p><p>While it is known that i3D can be effective training tools (e.g. Karadogan and Williams <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2013" title="Karadogan E, Williams RL I (2013) Haptic modules for palpatory diagnosis training of medical students. Virtual Real 17(1):45–58. doi:&#xA;                    10.1007/s10055-013-0220-2&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-013-0223-z#ref-CR13" id="ref-link-section-d58659e320">2013</a>; Harrington <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2012" title="Harrington M (2012) The virtual trillium trail and the empirical effects of freedom and fidelity on discovery-based learning. Virtual Real 16:105–120. doi:&#xA;                    10.1007/s10055-011-0189-7&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-013-0223-z#ref-CR10" id="ref-link-section-d58659e323">2012</a>; Smith and Ericson <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Smith S, Ericson E (2009) Using immersive game-based virtual reality to teach fire-safety skills to children. Virtual Real 13:87–99. doi:&#xA;                    10.1007/s10055-009-0113-6&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-013-0223-z#ref-CR20" id="ref-link-section-d58659e326">2009</a>), such training will be most helpful when the tools are appropriately tailored to meet needs in the curriculum; the ‘Training Gap Use Case’ can be applied generally to both desktop and immersive 3D training applications. We also describe technical aspects of the system design and rationale to benefit the design of other similar systems, namely visualisation, interaction/physics and the use of game mechanics. Assessments of the tool’s effectiveness are ongoing and beyond the scope of the present work.</p><p>In Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-013-0223-z#Sec2">2</a>, the background to this project is discussed. Section <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-013-0223-z#Sec6">3</a> describes requirements capture process and introduces the Training Gap Use Case. Section <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-013-0223-z#Sec10">4</a> provides an overview of RORSIM and how the use case has influenced key functional aspects. Section <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-013-0223-z#Sec16">5</a> reports initial JWO trial feedback and outlines the planned pilot study design. Section <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-013-0223-z#Sec19">6</a> concludes the lessons learned and future work planned.</p></div></div></section><section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">Background</h2><div class="c-article-section__content" id="Sec2-content"><h3 class="c-article__sub-heading" id="Sec3">Junior Warfare Officer</h3><p>The principal role of the JWO is to apply navigational knowledge and observational skills relating to the application of naval ‘rules of the road’, thereby ensuring the safe passage of their own vessel and the safety of others. To achieve this while onboard, JWOs are required to undertake regular bridge polaris (North Star) bearing checks of known man-made and natural geographical features (including features indicated on supplied Admiralty charts), to correlate events presented via the radar display with the outside world scene, to check heading and to monitor other displays (including the rearward-looking closed-circuit television camera). JWOs are also required to check the type and motion status of other vessels (from small sailing craft to other RN assets), using binoculars when necessary. Any close-proximity vessels or potential threats must be reported to the senior officer or captain, who may be located off bridge.</p><p>Unpublished historical performance data generated in 2004 by Initial Warfare Officer (IWO) instructors based at the Maritime Warfare School, HMS Collingwood, indicated that the simulator-based training methods in place at that time were not consistently producing the required levels of competencies expected of OOW. Further anecdotal evidence suggested that certain trainees appeared to be unable to correlate navigational data presented in essentially two-dimensional form (e.g. from charts and bridge radar screens) with their simulated out-of-the-window counterparts. Instructors were also concerned that some trainees tended to display very poor spatial awareness, visuospatial, cognitive and basic numeracy skills while undertaking simulator training and assessment sessions and that these problems were not being detected until JWOs were well into their training programme. Given the significant investment in time and finances in the trainee’s career up to the point they arrive at HMS Collingwood for simulator-based training and assessment, the 40 % failure rate quoted by instructors had become a totally unacceptable situation.</p><p>The original request for a human factors study addressing these issues originated from the Second Sea Lord’s (senior admiral’s) Office early in 2005. The initial motivation behind the study related to the possibility of developing a low-cost simulation-based tool capable of testing JWO candidates at an early stage in their career, thus enabling RN personnel to ‘filter out’ (during officer selection procedures at the Britannia Royal Naval College in Dartmouth) those trainees who demonstrated poor spatial and cognitive skills related to OOW activities. If successful, the tool would, it was suggested, be incorporated into the training and assessment suites at HMS Collingwood and, potentially, onboard RN vessels (as a means of providing objective data to commanding officers relating to the readiness of their officers to undertake simulator training and assessment).</p><p>Given the level of resources required to support a necessarily longitudinal project to design, trial, validate, package, introduce and support such a selection tool, not to mention the sensitivities relating to issues involving the adoption of new technologies for personnel selection, these early aspirations proved to be impossible to fulfil. Consequently, it was agreed that a more constructive way ahead would be to develop an interactive 3D (i3D) tool capable of capturing visuospatial and cognitive performance of JWO personnel at an early stage of their career, preferably before gaining at-sea experience.</p><h3 class="c-article__sub-heading" id="Sec4">IWO performance capture tool</h3><p>The human factors observational sessions took place within the RN’s endeavour building simulator suite at HMS Collingwood in June 2005. The observations were made during an end-of-course examination period for the JWO candidates and access to the simulator bridge area was permitted at all times. An additional navigational observation opportunity was also taken in October 2005 onboard HMS <i>Roebuck</i>, one of the RN’s oceanographic survey vessels, during a return journey from a Minigun firing trial in the English Channel to a mooring just inside Plymouth Breakwater. During the observations, data were captured relevant to a range of subsequent simulation design activities, including those features that would be influential in defining the appropriate levels of physical fidelity in any future simulation tool.</p><p>The results of the human factors assessment (Stone and Flannery <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Stone R, Flannery T (2007) Initial/Junior Warfare Officer Performance Capture Tool: Research Milestone Summary, &#xA;                    http://www.hfidtc.com/research/training/training-reports/phase-1/4-7-2-1-i-jwo.pdf&#xA;                    &#xA;                  , unpublished Human Factors Integration Defence Technology Centre Report HFIDTC/WP4.7.2/1" href="/article/10.1007/s10055-013-0223-z#ref-CR26" id="ref-link-section-d58659e379">2007</a>) suggested that the complexity of previously reported immersive virtual reality training solutions was not necessary to achieve the aims of the IWO performance capture tool. These tools included the Canadian Navy’s Maritime Surface/Subsurface Simulator, MARS (Norris <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1998" title="Norris S (1998) A task analysis of underway replenishment for virtual environment ship-handling simulator scenario development. PhD thesis, Naval Postgraduate School, masters Thesis DTIC/NTIS Accession Number ADA355905" href="/article/10.1007/s10055-013-0223-z#ref-CR17" id="ref-link-section-d58659e382">1998</a>), the US Virtual Environment for Submarines, VESUB (Hays et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="Hays R, Seamon A, Bradley S (1997) User-oriented design analysis of the VESUB technology demonstration system. DTIC/NTIS Accession Number ADA332570" href="/article/10.1007/s10055-013-0223-z#ref-CR11" id="ref-link-section-d58659e385">1997</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1998" title="Hays R, Seamon A, Bradley S, Vincenzi D (1998) Training effectiveness evaluation of the VESUB technology demonstration system. Technical Report DTIC/NTIS Accession Number ADA349219" href="/article/10.1007/s10055-013-0223-z#ref-CR12" id="ref-link-section-d58659e388">1998</a>), and another US development, the Conning Officer’s Virtual Environment, COVE (Buziak and CA <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Buziak C, CA NPSM (2000) The Role of Personality in Determining Variability in Evaluating Expertise, unpublished Masters Thesis" href="/article/10.1007/s10055-013-0223-z#ref-CR4" id="ref-link-section-d58659e391">2000</a>). Instead, a single screen, multiple-window performance capture tool could be developed that would not only provide an affordable and portable solution, but also enable developers to take full control over the host software to deliver appropriate content and provide recordable performance capture elements.</p><p>With acknowledgement to the inspiration provided by one of the earliest and best-known multitasking video games, Elite (written in 1982 by Cambridge University undergraduates David Braben and Ian Bell), the IWO performance capture tool took the form of a multi-window, single screen, interface, displaying a primary ‘out-of-the-window’ navigational view (for collision threat detection and prioritisation activities), with secondary task elements, including the monitoring of different digital readouts, such as a 360° ‘situational awareness’ radar-like display, a rear-view target detection display and a ‘cognitive question’ field, as shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0223-z#Fig1">1</a>.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-013-0223-z/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0223-z/MediaObjects/10055_2013_223_Fig1_HTML.gif?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0223-z/MediaObjects/10055_2013_223_Fig1_HTML.gif" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p>The IWO performance capture tool. This was a forerunner to RORSIM and shared similar objective in improving Junior Warfare Officers performance in reconciling visual and radar information</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-013-0223-z/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>The primary task of the IWO trainee involved a form of compensatory tracking. In effect, this required the trainee to follow—using keyboard speed and direction inputs—a computer-controlled vessel representation around a virtual ‘channel’ environment for approximately 16 minutes while maintaining a specified distance behind it. The computer-controlled vessel increased and decreased its speed at random during the simulation in an attempt to change the separation distance. Distance management was achieved by direct ‘out-of-the-window’ viewing and by monitoring a vertical bar chart display, located close to the left-hand edge of the main window (as can be seen in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0223-z#Fig1">1</a>), which depicted (using colour coding) the vessel separation distance. The candidate’s performance in the primary task was determined by the length of time that they spent outside the specified ‘safe distance’ zone of the computer-controlled tracking vessel.</p><p>Two secondary tasks were included. The first required trainees to answer a number of ‘cognitive questions’, one mathematical, one relating to situational awareness (own ship, other vessels, land features) and one demanding string recognition. These were partly based on questions evident in the Automated Neuropsychological Assessment Metrics Battery (ANAM), developed by the US Office of Military Performance Assessment Technology. The second task required the candidate to monitor both the simple ‘radar’ and the rear-view ‘camera’ screens for other vessels. When another vessel appeared, the candidate was required to identify it by pressing a specified key on the keyboard. The concept behind these visual scanning tasks was taken from the Pacific Science &amp; Engineering Group’s Warship Commander command and control task (St John et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="St John M, Kobus D, Morrison J (2002) A multi-tasking environment for manipulating and measuring neural correlates of cognitive workload. In: Human factors and power plants, 2002. Proceedings of the 2002 IEEE 7th conference on, IEEE, p 7" href="/article/10.1007/s10055-013-0223-z#ref-CR21" id="ref-link-section-d58659e428">2002</a>).</p><p>Unfortunately, and due to a perennial problem in defence research (the promotion or change in role of key RN stakeholders, requiring them to move on), the implementation and evaluation of this early tool within classrooms at HMS Collingwood did not occur. Nevertheless, the study did produce a number of useful ‘lessons learned’, especially with regard to the development of appropriate fidelities for real-time interactive 3D simulation (subsequently incorporated within Stone <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Stone R (2008) Human factors guidelines for interactive 3D and games-based training systems design: Edition 1, &#xA;                    http://www.hfidtc.com/pdf-downloads/hf-guidelines-for-sg.pdf&#xA;                    &#xA;                  , unpublished Human Factors Integration Defence Technology Centre Report" href="/article/10.1007/s10055-013-0223-z#ref-CR25" id="ref-link-section-d58659e434">2008</a>). The Rules of the Road project did not end here, however. With new stakeholders becoming involved in defining the role of simulation in future RN training at HMS Collingwood from 2009 onwards, the issue of OOW training once again became a priority (with motivation evident at Commodore level) and interest was resurrected.</p><h3 class="c-article__sub-heading" id="Sec5">‘The rules’</h3><p>The ‘Rules of the Road’ or ‘The Rules’ that JWOs follow are more formally known as the International Regulations for Preventing Collisions at Sea (COLREGS), published by the International Maritime Organisation. These regulations provide a set of rules which determine how vessels should move and communicate in relation to one another given the environment conditions, vessels’ type (e.g. a power driven, sailing or engaged in fishing) and their relative courses and speed. COLREGS also standardise vessel sound signals and light positions to aid inter-vessel communication clarity.</p><p>The learning of COLREGS is assessed at multiple stages during a JWOs three years of training. During the first year of training based at the Britannia Royal Naval College in Dartmouth, students learn them directly from the book by rote and must reproduce them exactly in a written examination. In the second year based at HMS Collingwood, students are tutored in classroom in a small number of complex collision scenarios and are formatively assessed on their ability to formulate courses of action. Training is a mixture of computer-based training (CBT) and instructor-lead material delivery. The CBT primarily consists of presenting static radar data to JWOs, followed by asking multiple choice questions regarding the best action to take. Some formative feedback is provided to the student if they pick an incorrect answer in terms of the rules they have broken.</p><p>During the third year of training, JWOs spend nine months at sea. However, practical COLREGS training is at the mercy of the frequency of real life collision scenarios encountered. Consequently, as a cohort, they do not receive the same exposure and experience in collision avoidance during this posting—a sizable minority receive none whatsoever. Towards the end of their training, they are assessed on the VR bridge simulator. This comprises a real physical bridge which looks out onto a 360° surround seascape populated by terrain, ships and harbours. An operator controls the movement of multiple ships around the virtual waters, while the instructor takes the role of captain and interrogates JWOs about their observations and orders they need to make. The use of a bridge simulator for training prior to simulation is brief due to cost constraint; there are approximately 100 JWOs enrolled each year and a typical session with one JWO will take up to an hour; thus, there is little opportunity for ‘low stakes’ practice and training prior to assessment; a training gap bridged by RORSIM.</p></div></div></section><section aria-labelledby="Sec6"><div class="c-article-section" id="Sec6-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec6">Requirements capture</h2><div class="c-article-section__content" id="Sec6-content"><h3 class="c-article__sub-heading" id="Sec7">Development lifecycle</h3><p>Formalising the requirements for RORSIM requires understanding the task and the context in which the task is performed. Appropriate task and interactive fidelity (Alexander et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Alexander A, Brunyé T, Sidman J, Weil S (2005) From gaming to training: a review of studies on fidelity, immersion, presence, and buy-in and their effects on transfer in pc-based simulations and games. In: The interservice/industry training, simulation, and education conference (I/ITSEC), NTSA, Orlando, Florida" href="/article/10.1007/s10055-013-0223-z#ref-CR1" id="ref-link-section-d58659e461">2005</a>) are designed into the simulation to bridge the training gap. In line with standard prototyping approaches, an informal iterative sequence of design activities is followed: </p><ol class="u-list-style-none">
+                    <li>
+                      <span class="u-custom-list-number">1.</span>
+                      
+                        <p>Task capture and observation.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">2.</span>
+                      
+                        <p>Training gap analysis with consideration of existing methods and learning styles.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">3.</span>
+                      
+                        <p>A requirements model.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">4.</span>
+                      
+                        <p>Rapid prototyping of i3D concept demonstrator using a 3D games engine.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">5.</span>
+                      
+                        <p>Feedback from stakeholders prior to performing the next design iteration.</p>
+                      
+                    </li>
+                  </ol>
+                        <p>For the task capture and observation, information was predominantly obtained by interviews with the main stakeholders—Instructors at HMS Collingwood. From these interviews, some clear themes emerged. Learning rules by rote during the first year lacks exercising the application of knowledge; the training methods in the classroom during the second year are over reliant on the use of static radar imagery and go against the core training philosophy of making JWO use instrumentation to back up their own visual observational awareness; the time and performance pressure evident in third year VR bridge simulator assessments are entirely absent from previous classroom training; finally, JWO’s assessments of complex collision scenarios and their actions may be ‘text-book perfect’ (insofar as they adhere to COLREGS) but often lead to a greater risk of collision. Additionally, a human factors observation of a JWO training session on the bridge of HMS <i>Gloucester</i> (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0223-z#Fig2">2</a>) was undertaken which provided background understanding of the OOW role, such as the informational sources and the operative language used.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-013-0223-z/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0223-z/MediaObjects/10055_2013_223_Fig2_HTML.jpg?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0223-z/MediaObjects/10055_2013_223_Fig2_HTML.jpg" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p>The view from the bridge of HMS <i>Gloucester</i> during a RORSIM task observation. RORSIM interface functionality was influenced by how and when trainees access radar and visual information, and how consequent orders were formulated and issued</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-013-0223-z/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h3 class="c-article__sub-heading" id="Sec8">Training gap use case</h3><p>This process of requirements capture, analysis and system design for an i3D trainer such as RORSIM can be supported by a variety of human factors methods (Stanton <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Stanton N (2005) Human factors methods: a practical guide for engineering and design. Ashgate Publishing Co, Aldershot" href="/article/10.1007/s10055-013-0223-z#ref-CR22" id="ref-link-section-d58659e556">2005</a>) and software development processes (Budgen <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Budgen D (2003) Software design. Addison Wesley, Pearson" href="/article/10.1007/s10055-013-0223-z#ref-CR3" id="ref-link-section-d58659e559">2003</a>). Many of these methods make use of graphical viewpoints. The UML use case has gained widespread adoption as a useful graphical model around which to elicit end user requirements and is the most frequently used UML models (Dobing and Parsons <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Dobing B, Parsons J (2006) How UML is used. Commun ACM 49(5):113" href="/article/10.1007/s10055-013-0223-z#ref-CR8" id="ref-link-section-d58659e562">2006</a>). Briefly, the UML use case diagram consists of actors (e.g. the student), use cases (an element of the system behaviour from the actor’s perspective) and relationships between actors and use cases. The UML standard enables a use case to be elaborated by further relationships, notably the &lt;&lt;<i>include</i>&gt;&gt; where common behaviours (i.e. use cases themselves) are shared between different use cases, and &lt;&lt;<i>extend</i>&gt;&gt; which relates use cases to their variants.</p><p>For RORSIM, we have tailored the UML use case specifically for training gap analysis. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0223-z#Fig3">3</a> shows the use case. Standard use cases (e.g. ‘remember rules’) represent the JWO tasks. These may or may not be decomposed into sub-tasks using &lt;&lt;<i>includes</i>&gt;&gt; relationship, for example, assessing the situation requires a visual and radar assessment, with the former requiring JWO’s to take bearings and identify vessel types. Stereotyped use cases (designated by &lt;&lt;<i>train</i>&gt;&gt; e.g. ‘recite rules’) represent training activities. The relationship between a task use case and a train use case is defined by an &lt;&lt;<i>extend</i>&gt;&gt; relation, which reflects that learning and practicing are different. For example, the ‘remember rules’ task use case is extended to a training use case ‘reciting rules’. The train use cases are tagged with the learning style or a method they afford, so, for example, reciting rules is achieved by ‘learning by rote’. The stereotyped &lt;&lt;<i>train</i>&gt;&gt; use cases are realised by training methods and tools. These are represented on the use case diagram with collaborations (dotted ovals); for example, remembering the rules is realised using book work. The collaborations are also tagged with the assessment criteria used, for example, a paper-based examination.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-013-0223-z/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0223-z/MediaObjects/10055_2013_223_Fig3_HTML.gif?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0223-z/MediaObjects/10055_2013_223_Fig3_HTML.gif" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p>The Training Gap Use Case diagram developed during this study which makes use of the UML extensibility mechanism to distinguish between task and learning, and make explicit the learning styles afforded by pedagogical theories and the assessment methods</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-013-0223-z/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h3 class="c-article__sub-heading" id="Sec9">Learning styles</h3><p>Collaborations in the Training Gap Use Case (i.e. existing training methods in JWO training for collision) are tagged by the pedagogical learning styles that they utilise. The three main theories developed about how students learn are considered: behaviourism, cognitivism and constructivism (Ertmer and Newby <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1993" title="Ertmer P, Newby T (1993) Behaviorism, cognitivism, constructivism: comparing critical features from a design perspective. Perform Improv Q 6(4):50–72" href="/article/10.1007/s10055-013-0223-z#ref-CR9" id="ref-link-section-d58659e616">1993</a>). Behaviourism proposes that a student learns when they respond correctly (as instructed) to stimulus; the correct response being reinforced by repetition. Cognitivism proposes that a student constructs mental models (schema) which condition the responses to stimulus and enable the student to generalise what they learn—that is—there is less emphasis on repetition. Constructivism proposes that a student’s knowledge representations are constructed from experience (i.e. doing) and that knowledge acquisition is best achieved by negotiating the meaning (ideally as a group) of any new knowledge.</p><p>A popular constructivist learning model particularly suited to this study is Kolb’s Experiential Learning Theory (ELT) model (Kolb and Kolb <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Kolb A, Kolb D (2005) Learning styles and learning spaces: enhancing experiential learning in higher education. Acad Manag Learn Educ 4(2):193–212" href="/article/10.1007/s10055-013-0223-z#ref-CR15" id="ref-link-section-d58659e622">2005</a>). ELT emphasises learning knowledge as a recursive cycle of concrete experiencing (CE), reflective observation (RO), abstract conceptualisation (AC) and active experimentation (AE). Following this cycle allows the learner to ‘grasp’ an experience (AC/CE) and ‘transform’ it to understanding (RO/AE). For example, the train use case ‘justify actions’ is tagged <i>ELT</i>−<i>RO</i> which indicates that this use case should lead to functionality supporting reflective observation in the learner. Collaborations are also informative as they differentiate between VR bridge simulator and RORSIM explicitly stated in terms of scenario length and how performance of the JWO is measured.</p><p>There have been efforts to incorporate ELT into the educational game design processes. Notably, in Kiili (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Kiili K (2005) Digital game-based learning: towards an experiential gaming model. Internet High Educ 8(1):13–24" href="/article/10.1007/s10055-013-0223-z#ref-CR14" id="ref-link-section-d58659e634">2005</a>), the ELT cycle is applied to gaming with specific consideration to optimising the level of immersion or ‘flow’ (Csikszentmihalyi <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="Csikszentmihalyi M (1997) Flow and the psychology of discovery and invention. HarperPerennial, New York" href="/article/10.1007/s10055-013-0223-z#ref-CR7" id="ref-link-section-d58659e637">1997</a>). In our Training Gap Use Case, we use the ELT model as an exemplar as to how learning models may be represented in the Training Gap Use Case model rather than make ELT central to a game/simulation design model; such design models in software engineering are often shunned in lieu of more ‘agile’ rapid prototyping (Chau et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Chau T, Maurer F, Melnik G (2003) Knowledge sharing: agile methods vs. Tayloristic methods. In: Enabling technologies: infrastructure for collaborative enterprises, 2003. WET ICE 2003. Proceedings. Twelfth IEEE international workshops on, IEEE, pp 302–307" href="/article/10.1007/s10055-013-0223-z#ref-CR5" id="ref-link-section-d58659e640">2003</a>), particularly for small-scale development.</p></div></div></section><section aria-labelledby="Sec10"><div class="c-article-section" id="Sec10-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec10">RORSIM prototype</h2><div class="c-article-section__content" id="Sec10-content"><p>During rapid prototyping, we developed the Training Gap Use Case utilising Kolb’s ELT model to influence the RORSIM functionality and design. The task use cases define the general behaviour of the 3D warship simulation, and the train use cases define how RORSIM functions as a learning tool. Technical details of key elements are described in this section and how they relate to the Training Gap Use Case.</p><h3 class="c-article__sub-heading" id="Sec11">Visualisation</h3><p>RORSIM presents JWOs with a simplified representation of an oceanic environment from the bridge of a Type 23 Destroyer (see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0223-z#Fig4">4</a>). The visual fidelity of this view is sufficient to meet user expectation and capabilities of the graphics processors in the average computer installed in HMS Collingwood classrooms. The JWO can switch to other realistic views as would be available to them such as port, starboard, bow and stern. Views from other vessels in the scenario and overhead view are also available. The oceanic environment is populated with various vessels as defined by a specific scenario. The 3D bridge view is overlayed with a 2D head-up display (HUD) which presents vessel data such as speed, heading, bearing, signalling and radar data, and a radar map and data for each vessel highlighting their closest point of approach (CPA) and the time to CPA (TCPA). JWOs assess the situation by taking bearings, identifying vessels using a zoom facility and gathering CPA/TCPA data for each vessel. To avoid collision, they elect changes in speed, heading and signalling. The scenarios can be undertaken with different visibility conditions and at day or night, the latter enabling rule assessment using vessel lights to identify type and course.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-013-0223-z/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0223-z/MediaObjects/10055_2013_223_Fig4_HTML.gif?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0223-z/MediaObjects/10055_2013_223_Fig4_HTML.gif" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p>The RORSIM main view—a 3D visualisation from the warship bridge overlaid with a 2D HUD presenting with information and interaction affordance that supports the training requirement for trainees to actively experiment with formulating collision avoidance actions using radar and visual data</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-013-0223-z/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>The Training Gap Use Case is instrumental in defining key functions in the visualisation—for example, the replication of binocular use, the ability to take bearings (and the timely availability of radar data while taking them), and the on-screen list of previous commands issued.</p><h3 class="c-article__sub-heading" id="Sec12">Physics and interaction</h3><p>Direct control of the ship so that speed, heading can be adjusted in small increments and their effects observed immediately, is forsaken in preference for allowing JWO’s to formulate orders in the manner they would in real life, for example, 'port 15 altering 330 course alteration 30 degrees to port'. Formulating actions in this way is intended to give JWO’s time to consider actions before committing them and to enable the system to log decisions. The Training Gap Use Case affords functionality to be excluded, as demonstrated in the simulation physics. Simplified control surfaces and ship physics (sometimes referred to as ‘folk physics’) are implemented in lieu of a full physics simulation. Various physics models were considered, for example, in Ueng et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Ueng S, Lin D, Liu C (2008) A ship motion simulation system. Virtual Real 12(1):65–76" href="/article/10.1007/s10055-013-0223-z#ref-CR30" id="ref-link-section-d58659e689">2008</a>) a rigid body model is proposed that takes into account motions induced by internal (e.g. propulsion) and external (e.g. waves, current and wind) forces. However, the Training Gap Use Case reveals that OOW is not required to control the ship under adverse conditions with forces such as heave, pitch and roll, surge, yaw and sway—they issue orders only and others pilot the vessel. Consequently, inertial effects of changing course and speed are estimated in the horizontal plane as separate closed loop over damped servo control systems using a proportional integral-derivative (PID) controller algorithm, a standard control scheme used in a majority of industrial control applications (for a recent review of PID see Ang et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Ang K, Chong G, Li Y, Ltd Y, Singapore S (2005) PID control system analysis, design, and technology. IEEE Trans Control Syst Technol 13(4):559–576" href="/article/10.1007/s10055-013-0223-z#ref-CR2" id="ref-link-section-d58659e692">2005</a>). Vertical ship motion due to waves is constrained to sinusoidal movement in the horizontal plane to provide a visual affect of head latency when standing on the bridge. This simplified physics fidelity is relevant for the training need, user expectation, and is computationally efficient for real-time simulation.</p><h3 class="c-article__sub-heading" id="Sec13">Simulation mechanics</h3><p>RORSIM employs aspects of games mechanics of time pressure, variability and repeatability to assist in user uptake and engagement. In Koster (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Koster R (2005) A theory of fun in game design. Paraglyph press, Scottsdale" href="/article/10.1007/s10055-013-0223-z#ref-CR16" id="ref-link-section-d58659e703">2005</a>), the definition of a good game is given as ‘one that teaches everything it has to offer before the player stops playing’, and although RORSIM is designed to fit into an established training programme as a simulation tool rather than game, there is consideration of game mechanics to make the simulation mechanics more compelling and ‘fun’. Initially, there was stakeholder discussion in making giving vessels in scenarios semi-autonomous and pseudo-random behaviour regarding adherence to COLREGS, following a simplified version of algorithms the kind proposed in Tam and Bucknall (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2010" title="Tam C, Bucknall R (2010) Collision risk assessment for ships. J Mar Sci Technol 15(3):257–270" href="/article/10.1007/s10055-013-0223-z#ref-CR28" id="ref-link-section-d58659e706">2010</a>), Tam et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Tam C, Bucknall R, Greig A (2009) Review of collision avoidance and path planning methods for ships in close range encounters. J Navig 62(03):455–476" href="/article/10.1007/s10055-013-0223-z#ref-CR29" id="ref-link-section-d58659e709">2009</a>), Statheros et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Statheros T, Howells G, Maier K (2007) Autonomous ship collision avoidance navigation concepts, technologies and techniques. J Navig 61(01):129–142" href="/article/10.1007/s10055-013-0223-z#ref-CR23" id="ref-link-section-d58659e712">2007</a>). However, the time given to complete a scenario (3 min) and the desire to make students repeat the same scenarios in order to lower the collision threat requires more consistency in vessel behaviour; reactions of vessels to issuing specific orders were deemed better explored in separate follow-up scenarios, which can be combined to follow a form of branching narrative using a story graph (for example, see Riedl and Young <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Riedl M, Young R (2006) From linear story generation to branching story graphs. IEEE Comput Graph Appl 26(3):23–31" href="/article/10.1007/s10055-013-0223-z#ref-CR19" id="ref-link-section-d58659e715">2006</a>), branching narratives enabling instructors to design scenarios based on real episodes such as dealing with hostile vessels which contain specific learning objectives.</p><p>For students to practice away from the classroom using RORSIM, vessels are given optional psuedo-random behaviour regarding motion. Small changes in course and heading over varying times guided by normally distributed random variables have an unpredictable yet realistic effect on TCPA and CPA calculations and the derived threat score (Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-013-0223-z#Sec13">4.3</a>), making for a more challenging task which encourages repetition. A time limit of 3 minutes for scenarios adds to the pressure.</p><p>The Training Gap Use Case ‘issue action, measure impact’ identified the need for students to measure their the success of their course of action. This measurement is made quantifiable by being based on the dynamic CPA and TCPA data, resulting in a threat score at time <span class="mathjax-tex">\(t,\, \hat{S}\)</span>, expressed as a percentage with 0 % representing no threat and 100 % representing collision. Because use of TCPA and CPA in autonomous vessels (real and virtual) to comply with COLREGS is an ongoing research question, we provide further details of its calculation.</p><p>
+                           <span class="mathjax-tex">\(\hat{S}\)</span> is calculated as follows. Given the position <i>p</i>
+                           <sup><i>n</i></sup> at time <i>t</i> of a vessel <i>n</i> in the plane {<i>x</i>, <i>y</i>} representing the ocean, i.e. <i>p</i>
+                           <sup><i>n</i></sup> = {<i>p</i>
+                           <span class="c-stack">
+                    <sup><i>n</i></sup><sub>
+                      <i>x</i>
+                    </sub>
+                    
+                  </span>, <i>p</i>
+                           <span class="c-stack">
+                    <sup><i>n</i></sup><sub>
+                      <i>y</i>
+                    </sub>
+                    
+                  </span>}, and the vessel’s corresponding velocity <span class="mathjax-tex">\(\acute{p}=\{\acute{p}^n_x,\acute{p}^n_y\}\)</span>, the TCPA <i>T</i>
+                           <sub>0,1</sub> of the non-player vessel (<i>n</i> ≥ 0) from the player vessel (<i>n</i> = 0) at time <i>t</i> is calculated by:</p><div id="Equ1" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ T_{0,1}= \frac{-p^1_x \acute{p}^1_x + p^0_x \acute{p}^1_x + p^1_x \acute{p}^0_x + p^0_x \acute{p}^0_x - p^1_y \acute{p}^1_y + p^0_y \acute{p}^1_y + p^1_y \acute{p}^0_y - p^0_y \acute{p}^0_y} {(\acute{p}^1_x)^2-2\acute{p}^1_x\acute{p}^0_x+(\acute{p}^0_x)^2 +(\acute{p}^1_y)^2-2\acute{p}^1_y\acute{p}^0_y+(\acute{p}^0_y)^2} $$</span></div><div class="c-article-equation__number">
+                    (1)
+                </div></div>
+                        <p>Note that expressions omit <i>t</i> for brevity, e.g. <i>T</i>
+                           <sub>0,1</sub>(<i>t</i>), <i>p</i>
+                           <span class="c-stack">
+                    <sup>0</sup><sub>
+                      <i>x</i>
+                    </sub>
+                    
+                  </span>(<i>t</i>) etc. The corresponding CPA <i>C</i>
+                           <sub>0,1</sub> is calculated from the TCPA:</p><div id="Equ2" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ C_{0,1} = \sqrt{((p^1_x+T_{0,1}\acute{p}^1_x)-(p^0_x+T_{0,1}\acute{p}^0_x))^2+((p^1_y+T_{0,1}\acute{p}^1_y)-(p^0_y+T_{0,1}\acute{p}^0_y))^2} $$</span></div><div class="c-article-equation__number">
+                    (2)
+                </div></div>
+                        <p>With TCPA and CPA calculated, the threat score of the player vessel in relation to all other vessels <span class="mathjax-tex">\(S_{0,n}\)</span> is computed by the exponent of the product of the CPA and TCPA levels each scaled by simulation parameters<i> χ</i> and<i> τ</i>, respectively:</p><div id="Equ3" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ S_{0,n}= \exp\left(\frac{C_{0,n}}{\chi} * \frac{T_{0,n}}{\tau}\right) $$</span></div><div class="c-article-equation__number">
+                    (3)
+                </div></div>
+                        <p>Scaling of simulation parameters<i> χ</i> and<i> τ</i> enables instructors to adapt the threat score to scenario and trainee experience. For example, scenarios with slower moving vessels which give the trainee more decision time for collision avoidance may required higher values for<i> τ</i>. Likewise, scenarios with larger vessels may require a greater separation in collision avoidance requiring higher values for<i> χ</i>.</p><p>The maximum threat score <span class="mathjax-tex">\(\hat{S}\)</span> at time <i>t</i> considering all non-player vessels is reported to the user:
+</p><div id="Equ4" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ \hat{S_{0}}=\max_n (S_{0,n}) $$</span></div><div class="c-article-equation__number">
+                    (4)
+                </div></div>
+                        <p>The threat score is fed back to the user via score and colouring of the HUD. Then, this score and a time limit for avoiding collision introduces a game element into the design and gives motivates the JWOs to repeat the scenario to achieve a lower threat level by exploring different actions—the ‘explore alternative actions’ use case.</p><h3 class="c-article__sub-heading" id="Sec14">After action review</h3><p>A compulsory After Action Review (AAR) is always presented to the JWO on completion of the scenarios and is tagged ‘ELT–RO’ in the Training Gap Use Case as it is a reflective activity. On the AAR, JWO can step through each action they took and observe the radar data available at the time they issued each order and justify their actions (see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0223-z#Fig5">5</a>). This is compulsory to prevent students skipping the AAR and thus ‘break’ the ELT learning cycle made explicit in the training gap analysis.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-013-0223-z/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0223-z/MediaObjects/10055_2013_223_Fig5_HTML.gif?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0223-z/MediaObjects/10055_2013_223_Fig5_HTML.gif" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p>The RORSIM After Action Review. This is a compulsory screen which occurs at the end of a scenario where trainees justify their actions in order to transform actions to understanding, following the constructivist learning model made explicit by the Training Gap Use Case</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-013-0223-z/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h3 class="c-article__sub-heading" id="Sec15">Technical platform</h3><p>RORSIM uses the open source Blender 3D modelling tool and game engine as the technical platform. Blender is unique in that it offers a common environment for 3D modelling and game development. In Petridis et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2010" title="Petridis P, Dunwell I, de Freitas S, Panzoli D (2010) An engine selection methodology for high fidelity serious games. In: 2010 second international conference on games and virtual worlds for serious applications, IEEE, pp 27–34" href="/article/10.1007/s10055-013-0223-z#ref-CR18" id="ref-link-section-d58659e1020">2010</a>), the authors note the lack of in-built scripting functionality compared to other game engines such as Quake3D, Unreal and Unity. However, because Blender scripts use standard python language and interpreter, the ability to use python software libraries enables more scope to extend (or indeed restrict) functionality during rapid prototyping at the expense of performance due to replying on an interpreted scripting language. Similarly, Blender is chosen over repurposing an existing application supporting ship simulation (for example, VStep’s Ship Simulator and Bohemia Interactive’s VBS2) because the use case identifies learner activities which are potentially harder to develop in an existing systems whose AI functionality and control mechanisms are less pliable. Although existing game functionality can prevent having to ‘reinvent the wheel’, the dependence on proprietary, third party development release cycles can harm rapid prototyping at the concept/research stage. All of the above platforms, however, could be candidates for a enterprise-level supported version of RORSIM given sufficient resource.</p></div></div></section><section aria-labelledby="Sec16"><div class="c-article-section" id="Sec16-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec16">Evaluation</h2><div class="c-article-section__content" id="Sec16-content"><h3 class="c-article__sub-heading" id="Sec17">Initial usability study</h3><p>RORSIM was trialled by 14 JWOs as part of their training at HMS Collingwood in January 2011. In groups of two or three, they were invited to use the simulation tool for approximately 20 min, during which they gave verbal feedback on their experience. Afterwards, they completed a questionnaire which asked them to rate the usefulness of various components in the simulation on a five point scale and to make suggestions for improvement including rank possible future features. As the JWOs questioned were currently at the stage in their training that RORSIM is targeted at, feedback was valuable as it revealed their self-perceived deficiencies.</p><p>Answers revealed that students appreciated the use of 3D graphics to gain spatial awareness (<i>μ</i> = 4.1,<i> σ</i> = 1.1) and the opportunity for reflecting in an After Action Review (<i>μ</i> = 4.0,<i> σ</i> = 0.9) over the requirement for realistic ship physics (<i>μ</i> = 3.6,<i> σ</i> = 0.8) and sound (<i>μ</i> = 3.0,<i> σ</i> = 1.2) which support the emphasis on functionality arising from the training gap use case. Future features showed a preference for visibility controls over the formal capture of performance (i.e. to file for instructor review), suggesting that JWOs wish for low-stakes training with formative feedback.</p><h3 class="c-article__sub-heading" id="Sec18">Evaluation study design</h3><p>A 3 year pilot study evaluation is underway. A typical JWO intake consists of up to 25 students and there are 4 intakes per annum. Each cohort receives different exposure to RORSIM, that is, the main independent variable is how RORSIM is utilised as a training tool. The conditions are as follows: </p><ol class="u-list-style-none">
+                    <li>
+                      <span class="u-custom-list-number">1.</span>
+                      
+                        <p>No access to RORSIM (control).</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">2.</span>
+                      
+                        <p>Access to RORSIM prior to JWO course (IWO Course).</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">3.</span>
+                      
+                        <p>Instructor use of RORSIM in the classroom.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">4.</span>
+                      
+                        <p>JWO use of RORSIM in the classroom.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">5.</span>
+                      
+                        <p>JWO use of RORSIM outside of the class room.</p>
+                      
+                    </li>
+                  </ol>
+                        <p>Instructors will use RORSIM in the classroom to walk through a set of five training scenarios developed specifically for this trial, with each scenario having a specific learning objective. When JWOs use RORSIM in the classroom, they will typically be working in pairs to formulate and justify collisions manoeuvres. Outside of the classroom, either before training or during, they will access a variety of scenarios that correspond to that currently presented in their reference books (for example, Cockcroft et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1996" title="Cockcroft A, Lameijer J, Corporation E (1996) Guide to the collision avoidance rules. Butterworth-Heinemann, Burlington" href="/article/10.1007/s10055-013-0223-z#ref-CR6" id="ref-link-section-d58659e1127">1996</a>). Some JWO’s will receive the software prior to undertaking the JWO course as part of the IWO course. The conditions will be evaluated in a sequential manner with instructor classroom trials first envisaging that RORSIM will need to achieve a higher level of development maturity when used by JWOs and outside of the classroom than in, however, early trials indicate that exposure to the classroom is minimal and that benefits will be best derived by giving JWO access for personal use.</p><p>The primary dependent variable is a human assessment of the performance of JWO’s on the VR bridge simulator during their final assessment. Traditionally, this has been recorded only ‘pass’ or ‘fail’ plus subjective comments. Because the bridge simulator assessment concerns the range of skills (such as navigation), for this trial, assessors will expand assessment criterion so that comments also explicitly refer to collision avoidance performance. A number of secondary dependent variables concerning the use of the RORSIM will be measured extracted from automatic logging tool use—notably how long individuals spend viewing the AAR and how often they replay collision scenarios in order to achieve a better ‘score’. These will be used to measure between-person variation in performance in conditions where JWO directly use the tool.</p></div></div></section><section aria-labelledby="Sec19"><div class="c-article-section" id="Sec19-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec19">Discussion</h2><div class="c-article-section__content" id="Sec19-content"><p>The RORSIM concept capability research demonstrator is a desktop i3D part-task trainer which has been developed to address a specific training gap in applying COLREGS during RN JWO training. In this paper, we have detailed the methodology used to elicit requirements and thus beneficially influence functionality based around the extended UML use case which considers learning activities, styles and assessment methods—the Training Gap Use Case. This will benefit those seeking to formalise the value of introducing i3D desktop and immersive trainers into existing training programmes and can be applied retrospectively to existing training tools. We have outlined some technical details around simulation mechanics with specific focus on how the collision threat derived from radar data is quantified and fed back to students. This has potential to be used in the behaviour of autonomous vessels with a requirement to follow COLREGS.</p><p>Initial usability feedback gained from JWOs indicated broad acceptance of introducing RORSIM into training. The simulation also has potential for extension to support submarine fin-based navigation training at the RN Submarine School at HMS Raleigh and to train rules of engagement in theatre. We aim to measure the success and usage patterns of RORSIM across these different domains. Lessons learned during evaluation will also address fidelity appropriation to ensure successful training outcomes and will be reported in future studies.</p><p>RORSIM serves as an example in using rapid prototyping of an i3D simulation to plug a training gap in an existing training programme. By careful and formal consideration of the learning afforded by the simulation and how it complements existing teaching tools, its value to JWO training is better justified. Bespoke functionality inspired from the analysis can be rapidly realised by using open source game engine technology giving a high degree of control over levels of visual, task, logic and physics fidelity.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Alexander A, Brunyé T, Sidman J, Weil S (2005) From gaming to training: a review of studies on fidelity, immer" /><p class="c-article-references__text" id="ref-CR1">Alexander A, Brunyé T, Sidman J, Weil S (2005) From gaming to training: a review of studies on fidelity, immersion, presence, and buy-in and their effects on transfer in pc-based simulations and games. In: The interservice/industry training, simulation, and education conference (I/ITSEC), NTSA, Orlando, Florida</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="K. Ang, G. Chong, Y. Li, Y. Ltd, S. Singapore, " /><meta itemprop="datePublished" content="2005" /><meta itemprop="headline" content="Ang K, Chong G, Li Y, Ltd Y, Singapore S (2005) PID control system analysis, design, and technology. IEEE Tran" /><p class="c-article-references__text" id="ref-CR2">Ang K, Chong G, Li Y, Ltd Y, Singapore S (2005) PID control system analysis, design, and technology. IEEE Trans Control Syst Technol 13(4):559–576</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2FTCST.2005.847331" aria-label="View reference 2">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 2 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=PID%20control%20system%20analysis%2C%20design%2C%20and%20technology&amp;journal=IEEE%20Trans%20Control%20Syst%20Technol&amp;volume=13&amp;issue=4&amp;pages=559-576&amp;publication_year=2005&amp;author=Ang%2CK&amp;author=Chong%2CG&amp;author=Li%2CY&amp;author=Ltd%2CY&amp;author=Singapore%2CS">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="D. Budgen, " /><meta itemprop="datePublished" content="2003" /><meta itemprop="headline" content="Budgen D (2003) Software design. Addison Wesley, Pearson" /><p class="c-article-references__text" id="ref-CR3">Budgen D (2003) Software design. Addison Wesley, Pearson</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 3 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Software%20design&amp;publication_year=2003&amp;author=Budgen%2CD">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Buziak C, CA NPSM (2000) The Role of Personality in Determining Variability in Evaluating Expertise, unpublish" /><p class="c-article-references__text" id="ref-CR4">Buziak C, CA NPSM (2000) The Role of Personality in Determining Variability in Evaluating Expertise, unpublished Masters Thesis</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Chau T, Maurer F, Melnik G (2003) Knowledge sharing: agile methods vs. Tayloristic methods. In: Enabling techn" /><p class="c-article-references__text" id="ref-CR5">Chau T, Maurer F, Melnik G (2003) Knowledge sharing: agile methods vs. Tayloristic methods. In: Enabling technologies: infrastructure for collaborative enterprises, 2003. WET ICE 2003. Proceedings. Twelfth IEEE international workshops on, IEEE, pp 302–307</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="A. Cockcroft, J. Lameijer, E. Corporation, " /><meta itemprop="datePublished" content="1996" /><meta itemprop="headline" content="Cockcroft A, Lameijer J, Corporation E (1996) Guide to the collision avoidance rules. Butterworth-Heinemann, B" /><p class="c-article-references__text" id="ref-CR6">Cockcroft A, Lameijer J, Corporation E (1996) Guide to the collision avoidance rules. Butterworth-Heinemann, Burlington</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 6 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Guide%20to%20the%20collision%20avoidance%20rules&amp;publication_year=1996&amp;author=Cockcroft%2CA&amp;author=Lameijer%2CJ&amp;author=Corporation%2CE">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="M. Csikszentmihalyi, " /><meta itemprop="datePublished" content="1997" /><meta itemprop="headline" content="Csikszentmihalyi M (1997) Flow and the psychology of discovery and invention. HarperPerennial, New York" /><p class="c-article-references__text" id="ref-CR7">Csikszentmihalyi M (1997) Flow and the psychology of discovery and invention. HarperPerennial, New York</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 7 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Flow%20and%20the%20psychology%20of%20discovery%20and%20invention&amp;publication_year=1997&amp;author=Csikszentmihalyi%2CM">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="B. Dobing, J. Parsons, " /><meta itemprop="datePublished" content="2006" /><meta itemprop="headline" content="Dobing B, Parsons J (2006) How UML is used. Commun ACM 49(5):113" /><p class="c-article-references__text" id="ref-CR8">Dobing B, Parsons J (2006) How UML is used. Commun ACM 49(5):113</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1145%2F1125944.1125949" aria-label="View reference 8">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 8 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=How%20UML%20is%20used&amp;journal=Commun%20ACM&amp;volume=49&amp;issue=5&amp;publication_year=2006&amp;author=Dobing%2CB&amp;author=Parsons%2CJ">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="P. Ertmer, T. Newby, " /><meta itemprop="datePublished" content="1993" /><meta itemprop="headline" content="Ertmer P, Newby T (1993) Behaviorism, cognitivism, constructivism: comparing critical features from a design p" /><p class="c-article-references__text" id="ref-CR9">Ertmer P, Newby T (1993) Behaviorism, cognitivism, constructivism: comparing critical features from a design perspective. Perform Improv Q 6(4):50–72</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1111%2Fj.1937-8327.1993.tb00605.x" aria-label="View reference 9">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 9 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Behaviorism%2C%20cognitivism%2C%20constructivism%3A%20comparing%20critical%20features%20from%20a%20design%20perspective&amp;journal=Perform%20Improv%20Q&amp;volume=6&amp;issue=4&amp;pages=50-72&amp;publication_year=1993&amp;author=Ertmer%2CP&amp;author=Newby%2CT">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="M. Harrington, " /><meta itemprop="datePublished" content="2012" /><meta itemprop="headline" content="Harrington M (2012) The virtual trillium trail and the empirical effects of freedom and fidelity on discovery-" /><p class="c-article-references__text" id="ref-CR10">Harrington M (2012) The virtual trillium trail and the empirical effects of freedom and fidelity on discovery-based learning. Virtual Real 16:105–120. doi:<a href="https://doi.org/10.1007/s10055-011-0189-7">10.1007/s10055-011-0189-7</a>
+                        </p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1007%2Fs10055-011-0189-7" aria-label="View reference 10">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 10 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=The%20virtual%20trillium%20trail%20and%20the%20empirical%20effects%20of%20freedom%20and%20fidelity%20on%20discovery-based%20learning&amp;journal=Virtual%20Real&amp;doi=10.1007%2Fs10055-011-0189-7&amp;volume=16&amp;pages=105-120&amp;publication_year=2012&amp;author=Harrington%2CM">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Hays R, Seamon A, Bradley S (1997) User-oriented design analysis of the VESUB technology demonstration system." /><p class="c-article-references__text" id="ref-CR11">Hays R, Seamon A, Bradley S (1997) User-oriented design analysis of the VESUB technology demonstration system. DTIC/NTIS Accession Number ADA332570</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Hays R, Seamon A, Bradley S, Vincenzi D (1998) Training effectiveness evaluation of the VESUB technology demon" /><p class="c-article-references__text" id="ref-CR12">Hays R, Seamon A, Bradley S, Vincenzi D (1998) Training effectiveness evaluation of the VESUB technology demonstration system. Technical Report DTIC/NTIS Accession Number ADA349219</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="E. Karadogan, RL I. Williams, " /><meta itemprop="datePublished" content="2013" /><meta itemprop="headline" content="Karadogan E, Williams RL I (2013) Haptic modules for palpatory diagnosis training of medical students. Virtual" /><p class="c-article-references__text" id="ref-CR13">Karadogan E, Williams RL I (2013) Haptic modules for palpatory diagnosis training of medical students. Virtual Real 17(1):45–58. doi:<a href="https://doi.org/10.1007/s10055-013-0220-2">10.1007/s10055-013-0220-2</a>
+                        </p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 13 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Haptic%20modules%20for%20palpatory%20diagnosis%20training%20of%20medical%20students&amp;journal=Virtual%20Real&amp;volume=17&amp;issue=1&amp;pages=45-58&amp;publication_year=2013&amp;author=Karadogan%2CE&amp;author=Williams%2CRL%20I">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="K. Kiili, " /><meta itemprop="datePublished" content="2005" /><meta itemprop="headline" content="Kiili K (2005) Digital game-based learning: towards an experiential gaming model. Internet High Educ 8(1):13–2" /><p class="c-article-references__text" id="ref-CR14">Kiili K (2005) Digital game-based learning: towards an experiential gaming model. Internet High Educ 8(1):13–24</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1016%2Fj.iheduc.2004.12.001" aria-label="View reference 14">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 14 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Digital%20game-based%20learning%3A%20towards%20an%20experiential%20gaming%20model&amp;journal=Internet%20High%20Educ&amp;volume=8&amp;issue=1&amp;pages=13-24&amp;publication_year=2005&amp;author=Kiili%2CK">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="A. Kolb, D. Kolb, " /><meta itemprop="datePublished" content="2005" /><meta itemprop="headline" content="Kolb A, Kolb D (2005) Learning styles and learning spaces: enhancing experiential learning in higher education" /><p class="c-article-references__text" id="ref-CR15">Kolb A, Kolb D (2005) Learning styles and learning spaces: enhancing experiential learning in higher education. Acad Manag Learn Educ 4(2):193–212</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.5465%2FAMLE.2005.17268566" aria-label="View reference 15">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 15 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Learning%20styles%20and%20learning%20spaces%3A%20enhancing%20experiential%20learning%20in%20higher%20education&amp;journal=Acad%20Manag%20Learn%20Educ&amp;volume=4&amp;issue=2&amp;pages=193-212&amp;publication_year=2005&amp;author=Kolb%2CA&amp;author=Kolb%2CD">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="R. Koster, " /><meta itemprop="datePublished" content="2005" /><meta itemprop="headline" content="Koster R (2005) A theory of fun in game design. Paraglyph press, Scottsdale" /><p class="c-article-references__text" id="ref-CR16">Koster R (2005) A theory of fun in game design. Paraglyph press, Scottsdale</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 16 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=A%20theory%20of%20fun%20in%20game%20design&amp;publication_year=2005&amp;author=Koster%2CR">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Norris S (1998) A task analysis of underway replenishment for virtual environment ship-handling simulator scen" /><p class="c-article-references__text" id="ref-CR17">Norris S (1998) A task analysis of underway replenishment for virtual environment ship-handling simulator scenario development. PhD thesis, Naval Postgraduate School, masters Thesis DTIC/NTIS Accession Number ADA355905</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Petridis P, Dunwell I, de Freitas S, Panzoli D (2010) An engine selection methodology for high fidelity seriou" /><p class="c-article-references__text" id="ref-CR18">Petridis P, Dunwell I, de Freitas S, Panzoli D (2010) An engine selection methodology for high fidelity serious games. In: 2010 second international conference on games and virtual worlds for serious applications, IEEE, pp 27–34</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="M. Riedl, R. Young, " /><meta itemprop="datePublished" content="2006" /><meta itemprop="headline" content="Riedl M, Young R (2006) From linear story generation to branching story graphs. IEEE Comput Graph Appl 26(3):2" /><p class="c-article-references__text" id="ref-CR19">Riedl M, Young R (2006) From linear story generation to branching story graphs. IEEE Comput Graph Appl 26(3):23–31</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2FMCG.2006.56" aria-label="View reference 19">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 19 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=From%20linear%20story%20generation%20to%20branching%20story%20graphs&amp;journal=IEEE%20Comput%20Graph%20Appl&amp;volume=26&amp;issue=3&amp;pages=23-31&amp;publication_year=2006&amp;author=Riedl%2CM&amp;author=Young%2CR">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="S. Smith, E. Ericson, " /><meta itemprop="datePublished" content="2009" /><meta itemprop="headline" content="Smith S, Ericson E (2009) Using immersive game-based virtual reality to teach fire-safety skills to children. " /><p class="c-article-references__text" id="ref-CR20">Smith S, Ericson E (2009) Using immersive game-based virtual reality to teach fire-safety skills to children. Virtual Real 13:87–99. doi:<a href="https://doi.org/10.1007/s10055-009-0113-6">10.1007/s10055-009-0113-6</a>
+                        </p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1007%2Fs10055-009-0113-6" aria-label="View reference 20">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 20 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Using%20immersive%20game-based%20virtual%20reality%20to%20teach%20fire-safety%20skills%20to%20children&amp;journal=Virtual%20Real&amp;doi=10.1007%2Fs10055-009-0113-6&amp;volume=13&amp;pages=87-99&amp;publication_year=2009&amp;author=Smith%2CS&amp;author=Ericson%2CE">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="St John M, Kobus D, Morrison J (2002) A multi-tasking environment for manipulating and measuring neural correl" /><p class="c-article-references__text" id="ref-CR21">St John M, Kobus D, Morrison J (2002) A multi-tasking environment for manipulating and measuring neural correlates of cognitive workload. In: Human factors and power plants, 2002. Proceedings of the 2002 IEEE 7th conference on, IEEE, p 7</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Stanton N (2005) Human factors methods: a practical guide for engineering and design. Ashgate Publishing Co, A" /><p class="c-article-references__text" id="ref-CR22">Stanton N (2005) Human factors methods: a practical guide for engineering and design. Ashgate Publishing Co, Aldershot</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="T. Statheros, G. Howells, K. Maier, " /><meta itemprop="datePublished" content="2007" /><meta itemprop="headline" content="Statheros T, Howells G, Maier K (2007) Autonomous ship collision avoidance navigation concepts, technologies a" /><p class="c-article-references__text" id="ref-CR23">Statheros T, Howells G, Maier K (2007) Autonomous ship collision avoidance navigation concepts, technologies and techniques. J Navig 61(01):129–142</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 23 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Autonomous%20ship%20collision%20avoidance%20navigation%20concepts%2C%20technologies%20and%20techniques&amp;journal=J%20Navig&amp;volume=61&amp;issue=01&amp;pages=129-142&amp;publication_year=2007&amp;author=Statheros%2CT&amp;author=Howells%2CG&amp;author=Maier%2CK">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Stone R, Caird-Daley A, Bessell K (2010) Human factors evaluation of a submarine spatial awareness training to" /><p class="c-article-references__text" id="ref-CR24">Stone R, Caird-Daley A, Bessell K (2010) Human factors evaluation of a submarine spatial awareness training tool. In: Proceedings of the human performance at sea (HPAS) conference Glasgow 16–18 June 2010, pp 231–241</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Stone R (2008) Human factors guidelines for interactive 3D and games-based training systems design: Edition 1," /><p class="c-article-references__text" id="ref-CR25">Stone R (2008) Human factors guidelines for interactive 3D and games-based training systems design: Edition 1, <a href="http://www.hfidtc.com/pdf-downloads/hf-guidelines-for-sg.pdf">http://www.hfidtc.com/pdf-downloads/hf-guidelines-for-sg.pdf</a>, unpublished Human Factors Integration Defence Technology Centre Report</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Stone R, Flannery T (2007) Initial/Junior Warfare Officer Performance Capture Tool: Research Milestone Summary" /><p class="c-article-references__text" id="ref-CR26">Stone R, Flannery T (2007) Initial/Junior Warfare Officer Performance Capture Tool: Research Milestone Summary, <a href="http://www.hfidtc.com/research/training/training-reports/phase-1/4-7-2-1-i-jwo.pdf">http://www.hfidtc.com/research/training/training-reports/phase-1/4-7-2-1-i-jwo.pdf</a>, unpublished Human Factors Integration Defence Technology Centre Report HFIDTC/WP4.7.2/1</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Stone R, Rees J (2002) Application of virtual reality to the development of naval weapons simulators. In: The " /><p class="c-article-references__text" id="ref-CR27">Stone R, Rees J (2002) Application of virtual reality to the development of naval weapons simulators. In: The interservice/industry training, simulation &amp; education conference (I/ITSEC), NTSA, 1</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="C. Tam, R. Bucknall, " /><meta itemprop="datePublished" content="2010" /><meta itemprop="headline" content="Tam C, Bucknall R (2010) Collision risk assessment for ships. J Mar Sci Technol 15(3):257–270" /><p class="c-article-references__text" id="ref-CR28">Tam C, Bucknall R (2010) Collision risk assessment for ships. J Mar Sci Technol 15(3):257–270</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1007%2Fs00773-010-0089-7" aria-label="View reference 28">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 28 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Collision%20risk%20assessment%20for%20ships&amp;journal=J%20Mar%20Sci%20Technol&amp;volume=15&amp;issue=3&amp;pages=257-270&amp;publication_year=2010&amp;author=Tam%2CC&amp;author=Bucknall%2CR">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="C. Tam, R. Bucknall, A. Greig, " /><meta itemprop="datePublished" content="2009" /><meta itemprop="headline" content="Tam C, Bucknall R, Greig A (2009) Review of collision avoidance and path planning methods for ships in close r" /><p class="c-article-references__text" id="ref-CR29">Tam C, Bucknall R, Greig A (2009) Review of collision avoidance and path planning methods for ships in close range encounters. J Navig 62(03):455–476</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1017%2FS0373463308005134" aria-label="View reference 29">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 29 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Review%20of%20collision%20avoidance%20and%20path%20planning%20methods%20for%20ships%20in%20close%20range%20encounters&amp;journal=J%20Navig&amp;volume=62&amp;issue=03&amp;pages=455-476&amp;publication_year=2009&amp;author=Tam%2CC&amp;author=Bucknall%2CR&amp;author=Greig%2CA">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="S. Ueng, D. Lin, C. Liu, " /><meta itemprop="datePublished" content="2008" /><meta itemprop="headline" content="Ueng S, Lin D, Liu C (2008) A ship motion simulation system. Virtual Real 12(1):65–76" /><p class="c-article-references__text" id="ref-CR30">Ueng S, Lin D, Liu C (2008) A ship motion simulation system. Virtual Real 12(1):65–76</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1007%2Fs10055-008-0088-8" aria-label="View reference 30">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 30 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=A%20ship%20motion%20simulation%20system&amp;journal=Virtual%20Real&amp;volume=12&amp;issue=1&amp;pages=65-76&amp;publication_year=2008&amp;author=Ueng%2CS&amp;author=Lin%2CD&amp;author=Liu%2CC">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="D. Vincenzi, R. Hays, A. Seamon, " /><meta itemprop="datePublished" content="2003" /><meta itemprop="headline" content="Vincenzi D, Hays R, Seamon A (2003) Submarine officer of the deck training using virtual environments: an asse" /><p class="c-article-references__text" id="ref-CR31">Vincenzi D, Hays R, Seamon A (2003) Submarine officer of the deck training using virtual environments: an assessment of training system capabilities. Naval Eng J 115(1):79–95</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1111%2Fj.1559-3584.2003.tb00189.x" aria-label="View reference 31">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 31 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Submarine%20officer%20of%20the%20deck%20training%20using%20virtual%20environments%3A%20an%20assessment%20of%20training%20system%20capabilities&amp;journal=Naval%20Eng%20J&amp;volume=115&amp;issue=1&amp;pages=79-95&amp;publication_year=2003&amp;author=Vincenzi%2CD&amp;author=Hays%2CR&amp;author=Seamon%2CA">
+                    Google Scholar</a> 
+                </p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-013-0223-z-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Ack1">Acknowledgments</h2><div class="c-article-section__content" id="Ack1-content"><p>The work reported here is part funded by the Human Dimension and Medical Sciences Domain of the UK Ministry of Defence Scientific Research Programme and was initiated by the Domain Leader. The authors would like to acknowledge the invaluable contribution and specialist support provided by the technology-based training unit (TBTU) at HMS Collingwood in Fareham. Lt Cdr Steve Clark, Lt Cdr David Elsey, Lt Roxane Heaton, Cdr Sean Fletcher and Cdr Rob Floyd. Without their contribution, hospitality and tolerance, this project would not have been possible.</p></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">University of Birmingham, Birmingham, UK</p><p class="c-article-author-affiliation__authors-list">Neil Cooke &amp; Robert Stone</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Neil-Cooke"><span class="c-article-authors-search__title u-h3 js-search-name">Neil Cooke</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Neil+Cooke&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Neil+Cooke" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Neil+Cooke%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Robert-Stone"><span class="c-article-authors-search__title u-h3 js-search-name">Robert Stone</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Robert+Stone&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Robert+Stone" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Robert+Stone%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-013-0223-z/email/correspondent/c1/new">Neil Cooke</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content">
+                <p>
+                           <b>Open Access</b> This article is distributed under the terms of the Creative Commons Attribution License which permits any use, distribution, and reproduction in any medium, provided the original author(s) and the source are credited.</p>
+              <p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=RORSIM%3A%20a%20warship%20collision%20avoidance%203D%20simulation%20designed%20to%20complement%20existing%20Junior%20Warfare%20Officer%20training&amp;author=Neil%20Cooke%20et%20al&amp;contentID=10.1007%2Fs10055-013-0223-z&amp;publication=1359-4338&amp;publicationDate=2013-02-22&amp;publisherName=SpringerNature&amp;orderBeanReset=true&amp;oa=CC%20BY">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Cooke, N., Stone, R. RORSIM: a warship collision avoidance 3D simulation designed to complement existing Junior Warfare Officer training.
+                    <i>Virtual Reality</i> <b>17, </b>169–179 (2013). https://doi.org/10.1007/s10055-013-0223-z</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-013-0223-z.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2011-06-11">11 June 2011</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2013-02-05">05 February 2013</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2013-02-22">22 February 2013</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2013-09">September 2013</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-013-0223-z" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-013-0223-z</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Serious games</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Game-based training</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Virtual environments</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Defence</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Simulation</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-013-0223-z.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=223;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

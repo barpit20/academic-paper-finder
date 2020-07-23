@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en" class="pb-page"  data-request-id="96117cff-9bf0-4aab-bc6d-f26e5f3261cb"  
+><head data-pb-dropzone="head"><meta name="pbContext" content=";topic:topic:conference-collections&gt;chi;page:string:Article/Chapter View;subPage:string:Abstract;wgroup:string:ACM Publication Websites;issue:issue:doi\:10.1145/3173574;article:article:doi\:10.1145/3173574.3174221;groupTopic:topic:acm-pubtype&gt;proceeding;csubtype:string:Conference Proceedings;website:website:dl-site;ctype:string:Book Content;journal:journal:acmconferences;pageGroup:string:Publication Pages"/>
+<link rel="schema.DC" href="http://purl.org/DC/elements/1.0/"></link><meta name="dc.Format" content="text/HTML"></meta><meta name="dc.Language" content="EN"></meta><meta name="dc.Coverage" content="world"></meta><!-- ${citation_fulltext_world_readable:10.1007/11941354_7} -->
+        
+        
+
+        
+            <link rel="meta" type="application/atom+xml" href="https://doi.org/&#xA;            10.1007%2F11941354_7"></link>
+            <link rel="meta" type="application/rdf+json" href="https://doi.org/&#xA;            10.1007%2F11941354_7"></link>
+            <link rel="meta" type="application/unixref+xml" href="https://doi.org/&#xA;            10.1007%2F11941354_7"></link>
+        
+    
+
+
+
+
+
+
+
+
+<title>Selection-based Text Entry in Virtual Reality | Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems</title>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta charset="UTF-8">
+
+
+
+
+
+
+<meta name="robots" content="noarchive"/>
+<meta name="pb-robots-disabled">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+        <meta property="og:url" content="https://dl.acm.org/doi/abs/10.1145/3173574.3174221"/>
+    
+
+
+
+
+
+
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+
+
+
+
+
+
+
+    
+
+
+<!--Render the heads templates for digital objects, Head templates are used to include additional meta tags specially used for digital objects-->
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/wro/j3i3~product.css">
+
+
+    <!--link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Merriweather+Sans:300,400,700,800|Merriweather:300,400,700,900')--><link rel="stylesheet" href="/products/acm/releasedAssets/css/build-de744579ab758f2eeb42.css"/><link rel="stylesheet" href="/products/acm/releasedAssets/css/print-de744579ab758f2eeb42.css" media="print"/>
+
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script src="https://scholar.google.com/scholar_js/casa.js" async></script>
+<script type="text/javascript">
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+      heap.load("1083010732");
+</script>
+<link rel="apple-touch-icon" sizes="180x180" href="/pb-assets/head-metadata/apple-touch-icon-1574252172393.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/pb-assets/head-metadata/favicon-32x32-1574252172003.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/pb-assets/head-metadata/favicon-16x16-1574252172937.png">
+<link rel="manifest" href="/pb-assets/head-metadata/site-1574252171130.webmanifest">
+<link rel="mask-icon" href="/pb-assets/head-metadata/safari-pinned-tab-1574252171193.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#00a300">
+<meta name="theme-color" content="#ffffff">
+
+    <!-- Google Tag Manager -->
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NFGCMX');</script>
+    <!-- End Google Tag Manager -->
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+    
+        
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</head>
+<body class="pb-ui">
+
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFGCMX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+    if(false) {
+        document.getElementById("skipNavigationLink").onclick =function skipElement () {
+            var element = document.getElementById('');
+            if(element == null || element == undefined) {
+                element = document.getElementsByClassName('').item(0);
+            }
+            element.setAttribute('tabindex','0');
+            element.focus();
+
+        }
+
+    }
+
+</script>
+
+
+
+
+
+    <div id="pb-page-content" data-ng-non-bindable>
+        <div data-pb-dropzone="main" data-pb-dropzone-name="Main">
+
+
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+        <header data-widget-def="ux3-layout-widget" data-widget-id="88f434fd-b4d9-4f0e-b7b6-cde0fadcc9ef" class="header base chi">
+        
+
+
+
+        
+        <div class="header__fixed-items fixed fixed-element">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="ux3-layout-widget" data-widget-id="c844bab8-b1d5-4df4-8bea-71f6156459e4" class="container header--first-row">
+        
+
+
+
+        
+        <div class="pull-left">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="ux3-general-image" data-widget-id="83eada61-9003-4cb3-99a8-a38fa7692761" class="header__logo1">
+        
+
+
+
+        
+        <a href="/" title="ACM Digital Library Logo"><img id="" alt="ACM Digital Library Logo" src="/pb-assets/icons/ACM-DL-Logo-white-1519079037293.png"/></a>
+
+        </div>
+    
+
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="ux3-general-image" data-widget-id="5517ee17-e847-46ff-b42e-c5a6754e032d" class="header__logo2">
+        
+
+
+
+        
+        <a href="https://www.acm.org" title="ACM Logo"><img id="" alt="ACM Logo" src="/specs/products/acm/templates/header/Images/logo2.png"/></a>
+
+        </div>
+    
+</div><div class="pull-right">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3InstitutionBanner" data-widget-id="6468ce1d-9e67-40ee-ae2a-f8f700846ee0" class="institution-wrapper">
+        
+
+
+
+        
+        <div class="institution"><div class="institution-info-wrapper"><span class="institution__intro"> </span><span class="institution__name">Copenhagen University Library Royal Library</span></div></div>
+
+        </div>
+    
+
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="ux3-layout-widget" data-widget-id="ab4ba9a1-6e57-4b90-b9c2-fc7914d9a3a1" class="header__quick-menu text-onDark">
+        
+
+
+
+        
+        <ul class="rlist--inline"><li class="advanced-search-link hidden-lg hidden-md hidden-sm">
+
+
+
+        
+        <a href="/search/advanced" >Advanced Search</a>
+</li><li class="show-on-mobile">
+
+
+
+        
+        <a href="/browse" title="browse">Browse</a>
+</li><li class="show-on-mobile">
+
+
+
+        
+        <a href="/about" title="About">About</a>
+</li><li>
+
+
+
+        
+        
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+<div class="dropBlock loginBar login-open">
+    <ul class="rlist--inline">
+        <li class="login-link">
+            <a href="/action/showLogin?redirectUri=%2Fdoi%2F10.1145%2F3173574.3174221">
+                Sign in
+            </a>
+        </li>
+        <li class="register-link">
+            <a href="https://accounts.acm.org?redirectUri=%2Fdoi%2F10.1145%2F3173574.3174221" class="btn" title="Register">
+                Register
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+
+</li></ul>
+
+        </div>
+    
+</div>
+
+        </div>
+    
+
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="menuWidget" data-widget-id="13da1316-80a7-4370-a291-8968cd9cb35e" class="container header--second-row">
+        
+
+
+
+        
+        <div class="responsive-menu-container clearfix"><div class="left-section pull-left"></div><div class="menu-section"><div class="main-nav responsive-menu-nav"><a href="#global-menu" data-target="global-menu" data-toggle="nav" title="menu drawer"><span class="drawer__icons-box"><span class="drawer__icons-controls"></span></span></a><nav role="navigation" id="global-menu" data-ctrl-res="screen-sm" class="drawer__nav container gutterless hidden-sm hidden-xs"><ul id="menubar" role="menubar" class="menubar rlist--inline"><li class="hidden-lg hidden-md"><div data-toggle="transplant" data-target-class="hidden-xs hidden-sm" data-target=".header--second-row .quick-search--form" data-direction="from" data-transplant="self" class="quick-search-mobile"></div></li><li role="menuitem" aria-label="Advanced Search" id="menu-item-global-menu-0" class="menu-item mobile-menu-item"><a href="/search/advanced"><span>Advanced Search</span></a></li><li role="menuitem" aria-label="Journals" id="menu-item-global-menu-1" class="menu-item"><a href="/journals"><span>Journals</span></a></li><li role="menuitem" aria-label="Magazines" id="menu-item-global-menu-2" class="menu-item"><a href="/magazines"><span>Magazines</span></a></li><li role="menuitem" aria-label="Proceedings" id="menu-item-global-menu-3" class="menu-item"><a href="/proceedings"><span>Proceedings</span></a></li><li role="menuitem" aria-label="Books" id="menu-item-global-menu-4" class="menu-item"><a href="/acmbooks"><span>Books</span></a></li><li role="menuitem" aria-label="SIGs" id="menu-item-global-menu-5" class="menu-item"><a href="/sigs"><span>SIGs</span></a></li><li role="menuitem" aria-label="Conferences" id="menu-item-global-menu-6" class="menu-item"><a href="/conferences"><span>Conferences</span></a></li><li role="menuitem" aria-label="People" id="menu-item-global-menu-7" class="menu-item"><a href="/people"><span>People</span></a></li><li class="hidden-lg hidden-md"><div data-toggle="transplant" data-target-class="hidden-xs hidden-sm" data-target=".header__quick-menu .show-on-mobile" data-direction="from" data-transplant="self"></div></li><li role="menuitem" aria-haspopup="true" aria-label="More" class="dropdown-more hidden dropdown menu-parent"><a href="#" title="More" data-toggle="dropdown" class="dropdown__toggle"><span>More</span><i aria-hidden="true" class="icon-section_arrow_d pull-right hidden-sm hidden-xs"></i></a><ul aria-labelledby="main0-1" aria-hidden="true" role="menu" class="rlist dropdown__menu"></ul></li><li class="menubar__extra-mob-links"></li></ul></nav></div></div><div class="right-section pull-right">
+
+
+
+        
+        <div class="quickSearchFormContainer"><div class="quick-search"><div class="clearfix quick-search__clearfix"><form action="/action/doSearch" name="defaultQuickSearch" method="get" title="Quick Search" class="quick-search--form"><div class="quick-search--input"><div class="input-group option-0"><label for="AllFieldf73847c0-d936-48ec-9bf9-139b3828507f" class="sr-only">Search ACM Digital Library</label><input id="AllFieldf73847c0-d936-48ec-9bf9-139b3828507f" type="search" name="AllField" placeholder="Search ACM Digital Library" data-auto-complete-max-words="7" data-auto-complete-max-chars="32" data-contributors-conf="0" data-topics-conf="3" data-publication-titles-conf="3" data-history-items-conf="3" value="" class="autocomplete quick-search__input"/></div></div><div class="quick-search--button"><button type="submit" title="Search" aria-label="Search" class="btn quick-search__button icon-Icon_Search"><span class="sr-only">Search</span><span>Search</span></button></div></form></div>
+
+
+
+        
+        <a class="quick-search__advancedHeader" href="/search/advanced">Advanced Search</a>
+</div></div>
+</div></div><div class="header__dropzone"></div>
+
+        </div>
+    
+
+
+
+
+        
+        <span style="display: none;">10.1145/3173574.3174221</span><span style="display: none;">acmconferences</span><span style="display: none;">Article/Chapter View</span><span style="display: none;">Abstract</span><span style="display: none;">Publication Pages</span><span style="display: none;">chi</span><span style="display: none;">Conference Proceedings</span><div class="sub-nav fixed-element"><a href="#" data-db-target-for="sub-nav__items" data-more="false" data-lines="1" style="text-transform: uppercase;" class="sub-nav__toggle hidden-lg truncate-text-css">chi</a><div class="sub-nav__container"><div class="container"><div data-ctrl-res="screen-md" class="responsive-menu-container"><div class="left-section pull-left"></div><div class="menu-section"><div style="display: block" class="responsive-menu-nav"><nav id="sub-nav__items" data-db-target-of="sub-nav__items" class="sub-nav__holder drawer__nav"><ul role="menu" class="rlist--inline menubar"><li role="menuitem"><a title="Conference" href="/conference/chi" class="sub-nav__item">Conference</a></li><li role="menuitem"><a title="Proceedings" href="/conference/chi/proceedings" class="sub-nav__item">Proceedings</a></li><li role="menuitem"><a title="Upcoming Events" href="/conference/chi/upcoming" class="sub-nav__item">Upcoming Events</a></li><li role="menuitem"><a title="Authors" href="/conference/chi/authors" class="sub-nav__item">Authors</a></li><li role="menuitem"><a title="Affiliations" href="/conference/chi/affiliations" class="sub-nav__item">Affiliations</a></li><li role="menuitem"><a title="Award Winners" href="/conference/chi/award-winners" class="sub-nav__item">Award Winners</a></li><li role="menuitem" aria-haspopup="true" aria-label="More" class="dropdown-more hidden dropdown menu-parent"><a href="#" title="More" data-toggle="dropdown" class="dropdown__toggle hidden-md hidden-sm hidden-xs"><span>More</span><i aria-hidden="true" class="icon-section_arrow_d"></i></a><ul aria-labelledby="main0-1" aria-hidden="true" role="menu" class="rlist dropdown__menu visible-md visible-sm visible-xs"></ul></li></ul></nav></div></div><div class="right-section hidden-md hidden-sm hidden-xs"></div></div></div></div><div class="hidden-xs hidden-sm"><div class="progress-bar--wrapper"><div style="width: 0.116818%;" class="progress-bar"></div></div></div></div>
+</div><div></div><div class="banner conference-landing"></div><div class="header-breadcrumb">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="ux3-layout-widget" data-widget-id="f5f275c5-a862-48bf-8119-8528d04615da" class="container">
+        
+
+
+
+        
+        <div>
+
+
+
+        
+        
+
+
+
+        
+        <nav class="article__breadcrumbs separator"><a href="/" class="article__tocHeading">Home</a><a href="/conferences" class="article__tocHeading">Conferences</a><a href="/conference/chi" class="article__tocHeading">CHI</a><a href="/conference/chi/proceedings" class="article__tocHeading">Proceedings</a><a href="/doi/proceedings/10.1145/3173574" class="article__tocHeading">CHI '18</a><a href="/doi/10.1145/3173574.3174221" class="article__tocHeading">Selection-based Text Entry in Virtual Reality</a></nav>
+
+</div>
+
+        </div>
+    
+</div>
+
+        </header>
+    
+
+
+
+
+
+
+        
+        <main class="content chi loi-page no-margin">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3combinedRecommendationsWidget" data-widget-id="bf2b14e9-d9dc-4518-8bb0-d9b157f47c7e" class="recommendations" data-show-id="sec-ref">
+        
+
+
+
+        
+        <div data-widgetId="bf2b14e9-d9dc-4518-8bb0-d9b157f47c7e" class="recommended--lazyLoad"></div>
+
+        </div>
+    
+
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="ux3-publicationContent-widget" data-widget-id="f69d88a8-b404-4aae-83a9-9acea4426d78" class="container">
+        
+
+
+
+        
+        <article data-enable-mathjax="true" data-citationInfo="/action/acmCitationInfo?widgetId=f69d88a8-b404-4aae-83a9-9acea4426d78&ajax=true&doi=10.1145%2F3173574.3174221&pbContext=%3Btopic%3Atopic%3Aconference-collections%26gt%3Bchi%3Bpage%3Astring%3AArticle%2FChapter+View%3BsubPage%3Astring%3AAbstract%3Bwgroup%3Astring%3AACM+Publication+Websites%3Bissue%3Aissue%3Adoi%5C%3A10.1145%2F3173574%3Barticle%3Aarticle%3Adoi%5C%3A10.1145%2F3173574.3174221%3BgroupTopic%3Atopic%3Aacm-pubtype%26gt%3Bproceeding%3Bcsubtype%3Astring%3AConference+Proceedings%3Bwebsite%3Awebsite%3Adl-site%3Bctype%3Astring%3ABook+Content%3Bjournal%3Ajournal%3Aacmconferences%3BpageGroup%3Astring%3APublication+Pages" data-proceedingInfo="/action/proceedingArticleMeta?widgetId=f69d88a8-b404-4aae-83a9-9acea4426d78&ajax=true&doi=10.1145%2F3173574.3174221&pbContext=%3Btopic%3Atopic%3Aconference-collections%26gt%3Bchi%3Bpage%3Astring%3AArticle%2FChapter+View%3BsubPage%3Astring%3AAbstract%3Bwgroup%3Astring%3AACM+Publication+Websites%3Bissue%3Aissue%3Adoi%5C%3A10.1145%2F3173574%3Barticle%3Aarticle%3Adoi%5C%3A10.1145%2F3173574.3174221%3BgroupTopic%3Atopic%3Aacm-pubtype%26gt%3Bproceeding%3Bcsubtype%3Astring%3AConference+Proceedings%3Bwebsite%3Awebsite%3Adl-site%3Bctype%3Astring%3ABook+Content%3Bjournal%3Ajournal%3Aacmconferences%3BpageGroup%3Astring%3APublication+Pages"><div class="row"><div class="col-md-2 col-sm-3"></div><div class="col-md-8 col-sm-7"><div class="citation"><div class="issue-item__citation"><span class="issue-heading">research-article </span><span class="article__access"></span></div><div class="border-bottom clearfix"><h1 class="citation__title">Selection-based Text Entry in Virtual Reality</h1>
+
+
+
+        
+        <!-- Go to www.addthis.com/dashboard to customize your tools --><script type="text/javascript" async="async" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-4faab26f2cff13a7"></script><div class="share__block share__inline-links"><div class="pb-dropzone" data-pb-dropzone="shareBlock" title="shareBlock"></div><span class="sr-only">Share on</span><div class="rlist--inline addthis addthis_toolbox addthis_default_style addthis_32x32_style"><a role="link" class="addthis_button_twitter"><i aria-hidden="true" class="at-icon-wrapper icon-Icon_Twitter"></i></a><a role="link" class="addthis_button_linkedin"><i aria-hidden="true" class="at-icon-wrapper icon-linkedin"></i></a><a role="link" class="addthis_button_reddit"><i aria-hidden="true" class="at-icon-wrapper icon-riddit-filled"></i></a><a role="link" class="addthis_button_facebook"><i aria-hidden="true" class="at-icon-wrapper icon-Icon_Facebook"></i></a><a role="link" class="addthis_button_email"><i aria-hidden="true" class="at-icon-wrapper icon-Icon_mail"></i></a><div class="pb-dropzone" data-pb-dropzone="share-additional-links" title="share-additional-links"></div></div></div>
+</div> <div class="border-bottom clearfix"> <div id="sb-1"> <ul data-lines="2" ariaa-label="authors" data-position="beforeLast" class="rlist--inline loa truncate-list"> <li class="label"><b>Authors: </b></li> <li class="loa__item"><a id="arnd_34706815424070711_Ctrl" href="javascript:void(0);" aria-controls="arnd_34706815424070711" aria-haspopup="true" class="author-name" title="Marco Speicher"><span class="loa__author-info"> <div class="author-data"><span class="loa__author-name"><span><img class="author-picture" src="/do/10.1145/contrib-89758843557/rel-imgonly/89758843557.jpg" alt="Marco Speicher profile image"/>Marco Speicher</span></span></div><span class="loa_author_inst"> <p data-pill-inst="arnd_34706815424070711" data-doi="10.1145/contrib-89758843557">Saarland University, Saarland Informatics Campus, Saarbrücken, Saarland, Germany</p></span></span></a><div id="arnd_34706815424070711" aria-labelledby="arnd_34706815424070711_Ctrl" class="author-info"> <div class="author-info__header" data-pill="d638410e169"></div> <div class="author-info__body"> <p data-pill-inst="d638410e169" data-doi="10.1145/contrib-89758843557">Saarland University, Saarland Informatics Campus, Saarbrücken, Saarland, Germany</p><a href="/profile/89758843557" class="btn blue stretched">View Profile</a> </div> </div><span>, </span></li> <li class="loa__item"><a id="arnd_34706815424351928_Ctrl" href="javascript:void(0);" aria-controls="arnd_34706815424351928" aria-haspopup="true" class="author-name" title="Anna Maria Feit"><span class="loa__author-info"> <div class="author-data"><span class="loa__author-name"><span><img class="author-picture" src="/do/10.1145/contrib-81556550256/rel-imgonly/crop1.jpg" alt="Anna Maria Feit profile image"/>Anna Maria Feit</span></span></div><span class="loa_author_inst"> <p data-pill-inst="arnd_34706815424351928" data-doi="10.1145/contrib-81556550256">Aalto University, Helsinki, Finland</p></span></span></a><div id="arnd_34706815424351928" aria-labelledby="arnd_34706815424351928_Ctrl" class="author-info"> <div class="author-info__header" data-pill="d638410e190"></div> <div class="author-info__body"> <p data-pill-inst="d638410e190" data-doi="10.1145/contrib-81556550256">Aalto University, Helsinki, Finland</p><a href="/profile/81556550256" class="btn blue stretched">View Profile</a> </div> </div><span>, </span></li> <li class="loa__item"><a id="arnd_34706815424614278_Ctrl" href="javascript:void(0);" aria-controls="arnd_34706815424614278" aria-haspopup="true" class="author-name" title="Pascal Ziegler"><span class="loa__author-info"> <div class="author-data"><span class="loa__author-name"><span><img class="author-picture" src="/pb-assets/icons/DOs/default-profile-1543932446943.svg" alt="Pascal &nbsp;Ziegler profile image"/>Pascal Ziegler</span></span></div><span class="loa_author_inst"> <p data-pill-inst="arnd_34706815424614278" data-doi="10.1145/contrib-99659261978">Saarland University, Saarland Informatics Campus, Saarbrücken, Saarland, Germany</p></span></span></a><div id="arnd_34706815424614278" aria-labelledby="arnd_34706815424614278_Ctrl" class="author-info"> <div class="author-info__header" data-pill="d638410e211"></div> <div class="author-info__body"> <p data-pill-inst="d638410e211" data-doi="10.1145/contrib-99659261978">Saarland University, Saarland Informatics Campus, Saarbrücken, Saarland, Germany</p><a href="/profile/99659261978" class="btn blue stretched">View Profile</a> </div> </div><span>, </span></li> <li class="loa__item"><a id="arnd_34706815424894948_Ctrl" href="javascript:void(0);" aria-controls="arnd_34706815424894948" aria-haspopup="true" class="author-name" title="Antonio Krüger"><span class="loa__author-info"> <div class="author-data"><span class="loa__author-name"><span><img class="author-picture" src="/pb-assets/icons/DOs/default-profile-1543932446943.svg" alt="Antonio Kr&#x00fc;ger profile image"/>Antonio Krüger</span></span></div><span class="loa_author_inst"> <p data-pill-inst="arnd_34706815424894948" data-doi="10.1145/contrib-81548004671">Saarland University, Saarland Informatics Campus, Saarbrücken, Saarland, Germany</p></span></span></a><div id="arnd_34706815424894948" aria-labelledby="arnd_34706815424894948_Ctrl" class="author-info"> <div class="author-info__header" data-pill="d638410e232"></div> <div class="author-info__body"> <p data-pill-inst="d638410e232" data-doi="10.1145/contrib-81548004671">Saarland University, Saarland Informatics Campus, Saarbrücken, Saarland, Germany</p><a href="/profile/81548004671" class="btn blue stretched">View Profile</a> </div> </div> </li> <li><a href="#pill-authors__contentcon" data-slide-target="#pill-information" data-full-screen="false" data-ctrl-res="screen-xlg" data-tab="pill-authors__content" data-label="<i class='icon-Icon_Information'&gt;</i&gt; Information &amp; Authors" class="loa__link w-slide__btn tab-link slide-active">Authors Info &amp; Affiliations </a></li> </ul> </div> </div> <div class="border-bottom clearfix"><div class="issue-item__detail"><span class="bold label"> Publication:  </span><a href="/doi/proceedings/10.1145/3173574" title="CHI '18: Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems"><span class="epub-section__title">CHI '18: Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems</span></a><span class="dot-separator"><span class="epub-section__date">April 2018  </span></span><span class="dot-separator"><span class="epub-section__ids">Paper No.: 647 </span></span><span class="dot-separator"><span class="epub-section__pagerange">Pages   1–13</span></span><span class="dot-separator"><a href="https://doi.org/10.1145/3173574.3174221" class="issue-item__doi">https://doi.org/10.1145/3173574.3174221</a></span></div></div>
+
+
+
+        
+        
+<div class="border-bottom clearfix"><div class="issue-item__footer"><div class="issue-item__footer-info pull-left"><div tabindex="0" class="tooltip"><ul class="rlist--inline"><li><span class="citation"><i class="icon-quote"></i><span>14</span><span class="sr-only">citation</span></span></li><li><span class="metric"><i class="icon-metric"></i><span>1,073</span></span></li><span class="sr-only">Downloads</span></ul><div class="tooltip__body"><span class="arrow"></span><div class="left-bordered-title">Metrics</div><div class="citation">Total Citations<span class="bold">14</span></div><div class="metric">Total Downloads<span class="bold">1,073</span></div><div class="info">Last 12 Months<span class="bold">381</span></div><div class="info">Last 6 weeks<span class="bold">52</span></div></div></div></div><div class="issue-item__footer-links pull-right"><ul class="rlist--inline">
+
+
+
+        
+        <li role="presentation" class="article-tool"><a id="manageAlert__crtl" href="/action/addCitationAlert?doi=10.1145/3173574.3174221" role="menuitem" data-title="Get Citation Alerts" data-target="#manageAlert" class="btn--icon simple-tooltip__block--b"><i class="icon-Icon_Alerts"></i><span class="visibility-hidden">Get Citation Alerts</span></a><div class="ux-modal-container"><div id="manageAlert" class="modal"><div class="modal__dialog"><div class="modal__dialog--success"><div class="modal__header"><button type="button" data-dismiss="modal" class="close"><i aria-hidden="true" class="icon-close_thin"></i></button><a id="id-hatemile-navigation-6073290063892647-7" name="id-hatemile-navigation-6073290063892647-7" data-headinganchorfor="id-hatemile-navigation-6073290063892647-6" class="heading-anchor"></a><h2 id="id-hatemile-navigation-6073290063892647-6">New Citation Alert added!</h2></div><div class="modal__body"><p>This alert has been successfully added and will be sent to:<span class="email"></span></p><p>You will be notified whenever a record that you have chosen has been cited.</p></div><div class="modal__footer"><p>To manage your alert preferences, click on the button below.</p><a href="/action/showPreferences?menuTab=Alerts" title="Manage my Alerts" id="id-hatemile-display-1019331959102511-5" class="btn blue big stretched manageAlert__btn"><span data-attributetitleof="id-hatemile-display-1019331959102511-5" class="force-read-before">Manage my Alerts</span></a></div></div><div class="modal__dialog--error"><div class="modal__header"><button type="button" data-dismiss="modal" class="close"><i aria-hidden="true" class="icon-close_thin"></i></button><a id="id-hatemile-navigation-6073290063892647-9" name="id-hatemile-navigation-6073290063892647-9" data-headinganchorfor="id-hatemile-navigation-6073290063892647-8" class="heading-anchor"></a><h2 id="id-hatemile-navigation-6073290063892647-8">New Citation Alert!</h2></div><div class="modal__body"><p>Please <a href="/action/showLogin?redirectUri=/doi/10.1145/3173574.3174221" title="Sign In" class="link">log in to your account</a></p></div></div></div></div></div></li>
+<li role="presentation" class="article-tool"><a href="/" role="menuitem" data-title="Save to Binder" data-db-target-for="save-to-binder" data-link="/action/binderList?doi=10.1145/3173574.3174221" class="btn--icon simple-tooltip__block--b saveToBinders"><i aria-hidden="true" class="icon-add-folder"></i><span class="visibility-hidden">Save to Binder</span></a><div data-db-target-of="save-to-binder"><div class="saveToBinders-list"><input type="hidden" name="doiVal" value="10.1145/3173574.3174221"/><h5>Save to Binder</h5><div class="binder-list-alerts"></div><div class="saveToBinders-list__container"><ul class="rlist saveToBinders-list__items"><div class="loader"><img src="/specs/products/acm/releasedAssets/images/loader.gif"/></div></ul></div><div class="binder__create"><a data-action="show" href="/action/showMyBinders" title="Create a New Binder" class="show-binder-form toggle-binder-form"><i class="icon-plus-light"></i>Create a New Binder</a><div class="binder-create-form binder__create-mini-form"><div class="input-group input-group--gray-bg"><label>Name</label><div class="input-group__field-container--right-icon"><input type="text" placeholder="My new Binder" name="binderName" data-maxChar="256" class="binder-create-form__name charCount__text form-control"/><span class="input-group-addon input-group-addon--right"><span class="charLimit"></span></span></div></div><div><ul class="rlist--inline binder__create-btns-container"><li><button type="reset" value="Cancel" data-action="hide" class="toggle-binder-form btn btn--border-less btn transparent binder__create-cancel">Cancel</button></li><li class="pull-right"><button type="submit" value="Create Binder" disabled="disabled" data-append-newbinder-link="/action/createBinder" class="btn btn--no-margin blue big binder__create-submit binder-create-form__create"><i aria-hidden="true" class="icon-plus-light"></i>Create</button></li></ul></div></div></div></div></div></li><li role="presentation" class="article-tool"><a href="/" role="menuitem" data-title="Export Citation" data-toggle="modal" data-target="#exportCitation" class="btn--icon simple-tooltip__block--b"><i aria-hidden="true" class="icon-quote"></i><span class="visibility-hidden">Export Citation</span><input type="hidden" name="doiVal" value="10.1145/3173574.3174221"/></a></li><li class="publisher-site article-tool"><a href="#" class="btn blue"><span>Publisher Site</span><i aria-hidden="true" class="icon-export"></i></a></li></ul><ul class="rlist--inline right"><li><a href="/doi/epdf/10.1145/3173574.3174221" title="View online with eReader" target="_blank" class="btn blue"><i class="icon-eReader"></i><span>eReader</span></a></li><li><a href="/doi/pdf/10.1145/3173574.3174221" title="PDF" target="_blank" class="btn red"><i class="icon-pdf-file"></i><span>PDF</span></a></li></ul></div></div></div></div></div><div class="col-sm-2"></div></div><div class="row"><div class="col-md-2 col-sm-3 sidebar-section article-sidebar-section"><div class="article__sections"><div class="sections-box"><div><div class="sections-box__static-items"><div class="parent-item"><h5 class="parent-item__title"><a href="/doi/proceedings/10.1145/3173574" data-lines="2" data-title="CHI '18: Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems" class="simple-tooltip__inline--r truncate-text-css">CHI '18: Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems</a></h5><span href="/doi/proceedings/10.1145/3173574" data-lines="2" data-title="Selection-based Text Entry in Virtual Reality" class="parent-item__subtitle simple-tooltip__inline--r truncate-text-css">Selection-based Text Entry in Virtual Reality</span><div class="pageRange">Pages   1–13</div></div>
+
+
+
+        
+        <div class="content-navigation clearfix"><a href="/doi/10.1145/3173574.3174220" title="Previous item in TOC" class="content-navigation__btn--pre "><span><i class="icon-Arrow-Stroke"></i></span><span class="control">Previous</span><span class="type">Chapter</span></a><a href="/doi/10.1145/3173574.3174222" title="Next item in TOC" class="content-navigation__btn--next "><span class="control">Next</span><span class="type">Chapter</span><span><i class="icon-Arrow-Stroke"></i></span></a></div>
+</div><div class="sections-block scroll-to-target"></div></div><div class="logo"><img src="/specs/products/acm/releasedAssets/images/footer-logo1.png" alt="ACM Digital Library" title="ACM Digital Library"/></div></div></div></div><div class="col-md-8 col-sm-7 sticko__side-content"><div class="stickybar__original__position"></div><nav class="stickybar coolBar trans visible-xs visible-sm"><div class="stickybar__wrapper coolBar__wrapper clearfix"><div class="coolBar__section"><a id="article_Ctrl" href="#" data-db-target-for="article-sec_Pop" role="button" aria-expanded="false" class="coolBar__ctrl"><i class="icon-burger"></i></a><div id="article_Pop" data-db-target-of="article-sec_Pop" aria-hidden="true" class="coolBar__drop fixed rlist"><div data-target=".article__sections" data-remove="false" data-target-class="hidden-xs hidden-sm" data-toggle="transplant" data-direction="from" data-transplant="self" class="transplant showit"></div></div></div><div data-target=".pill-section .pill-list" data-remove="false" data-target-class="hidden-xs hidden-sm" data-toggle="transplant" data-direction="from" data-transplant="self" class="transplant showit"></div></div></nav><div class="article__body"><!-- abstract content --><div class="hlFld-Abstract"><div class="article__section article__abstract hlFld-Abstract"><div class="colored-block__title"><h2 id="d638488e1" class="section__title left-bordered-title">ABSTRACT</h2></div><div class="left-side-image"><img src="/cms/attachment/7e36a691-bd5f-4881-bcda-bc6ecbb27d31/3173574.3174221.key.jpg" class="key-image" alt-text=""></div><div class="abstractSection abstractInFull"><p>In recent years, Virtual Reality (VR) and 3D User Interfaces (3DUI) have seen a drastic increase in popularity, especially in terms of consumer-ready hardware and software. While the technology for input as well as output devices is market ready, only a few solutions for text input exist, and empirical knowledge about performance and user preferences is lacking. In this paper, we study text entry in VR by selecting characters on a virtual keyboard. We discuss the design space for assessing selection-based text entry in VR. Then, we implement six methods that span different parts of the design space and evaluate their performance and user preferences. Our results show that pointing using tracked hand-held controllers outperforms all other methods. Other methods such as head pointing can be viable alternatives depending on available resources. We summarize our findings by formulating guidelines for choosing optimal virtual keyboard text entry methods in VR.</p><div class="responsive-embed"><iframe src="https://www.youtube.com/embed/1NtChwmMQ6U" frameborder="0" allowfullscreen="" width="100%" height="400"></iframe></div></div></div></div><!-- /abstract content --><div class="pb-dropzone" data-pb-dropzone="pubContentAccessDenialDropzone"><!-- Empty dropzone --></div><div class="article__section article__references show-more-items" data-sectionname="References"><p class="explanation__text"></p><div class="colored-block__title"><h2 id="sec-ref" class="section__title left-bordered-title">
+                    References
+                </h2></div><ol class="rlist references__list references__numeric"><li id="ref-00001" class="&#xA;                references__item&#xA;            "><span class="references__note">Jaewoo Ahn and Kyungha Min. 2006. VirtualPhonepad: a text input tool for virtual environments. Advances in Artificial Reality and Tele-Existence (2006), 58--64.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Jaewoo+Ahn+and+Kyungha+Min.+2006.+VirtualPhonepad%3A+a+text+input+tool+for+virtual+environments.+Advances+in+Artificial+Reality+and+Tele-Existence+%282006%29%2C+58%2D%2D64.+10.1007%2F11941354_7+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00002" class="&#xA;                references__item&#xA;            "><span class="references__note">Ian G Angus and Henry A Sowizral. 1995. Embedding the 2D interaction metaphor in a real 3D virtual environment. In IS&amp;T/SPIE's Symposium on Electronic Imaging: Science &amp; Technology. International Society for Optics and Photonics, 282--293.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Ian+G+Angus+and+Henry+A+Sowizral.+1995.+Embedding+the+2D+interaction+metaphor+in+a+real+3D+virtual+environment.+In+IS%26T%2FSPIE%27s+Symposium+on+Electronic+Imaging%3A+Science+%26+Technology.+International+Society+for+Optics+and+Photonics%2C+282%2D%2D293."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00003" class="&#xA;                references__item&#xA;            "><span class="references__note">Shiri Azenkot and Shumin Zhai. 2012. Touch Behavior with Different Postures on Soft Smartphone Keyboards. In Proceedings of the 14th International Conference on Human-computer Interaction with Mobile Devices and Services (MobileHCI '12). ACM, New York, NY, USA, 251--260.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Shiri+Azenkot+and+Shumin+Zhai.+2012.+Touch+Behavior+with+Different+Postures+on+Soft+Smartphone+Keyboards.+In+Proceedings+of+the+14th+International+Conference+on+Human-computer+Interaction+with+Mobile+Devices+and+Services+%28MobileHCI+%2712%29.+ACM%2C+New+York%2C+NY%2C+USA%2C+251%2D%2D260.+10.1145%2F2371574.2371612+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00004" class="&#xA;                references__item&#xA;            "><span class="references__note">Myroslav Bachynskyi, Gregorio Palmas, Antti Oulasvirta, and Tino Weinkauf. 2015. Informing the Design of Novel Input Methods with Muscle Coactivation Clustering. ACM Trans. Comput.-Hum. Interact. 21, 6, Article 30 (Jan. 2015), 25 pages.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Myroslav+Bachynskyi%2C+Gregorio+Palmas%2C+Antti+Oulasvirta%2C+and+Tino+Weinkauf.+2015.+Informing+the+Design+of+Novel+Input+Methods+with+Muscle+Coactivation+Clustering.+ACM+Trans.+Comput.-Hum.+Interact.+21%2C+6%2C+Article+30+%28Jan.+2015%29%2C+25+pages.+10.1145%2F2687921+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00005" class="&#xA;                references__item&#xA;            "><span class="references__note">Thomas Baudel and Michel Beaudouin-Lafon. 1993. Charade: Remote Control of Objects Using Free-hand Gestures. Commun. ACM 36, 7 (July 1993), 28--35.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Thomas+Baudel+and+Michel+Beaudouin-Lafon.+1993.+Charade%3A+Remote+Control+of+Objects+Using+Free-hand+Gestures.+Commun.+ACM+36%2C+7+%28July+1993%29%2C+28%2D%2D35.+10.1145%2F159544.159562+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00006" class="&#xA;                references__item&#xA;            "><span class="references__note">Nikolaus Bee and Elisabeth Andr´ e. 2008. Writing with your eye: A dwell time free writing system adapted to the nature of human eye gaze. In International Tutorial and Research Workshop on Perception and Interactive Technologies for Speech-Based Systems. Springer, 111--122.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Nikolaus+Bee+and+Elisabeth+Andr%C2%B4+e.+2008.+Writing+with+your+eye%3A+A+dwell+time+free+writing+system+adapted+to+the+nature+of+human+eye+gaze.+In+International+Tutorial+and+Research+Workshop+on+Perception+and+Interactive+Technologies+for+Speech-Based+Systems.+Springer%2C+111%2D%2D122.+10.1007%2F978-3-540-69369-7_13+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00007" class="&#xA;                references__item&#xA;            "><span class="references__note">Doug Bowman, Ernst Kruijff, Joseph J LaViola Jr, and Ivan P Poupyrev. 2004. 3D User Interfaces: Theory and Practice, CourseSmart eTextbook. Addison-Wesley. <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Doug+Bowman%2C+Ernst+Kruijff%2C+Joseph+J+LaViola+Jr%2C+and+Ivan+P+Poupyrev.+2004.+3D+User+Interfaces%3A+Theory+and+Practice%2C+CourseSmart+eTextbook.+Addison-Wesley.+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00008" class="&#xA;                references__item&#xA;            "><span class="references__note">Doug A. Bowman, Ryan P. McMahan, and Eric D. Ragan. 2012. Questioning Naturalism in 3D User Interfaces. Commun. ACM 55, 9 (Sept. 2012), 78--88.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Doug+A.+Bowman%2C+Ryan+P.+McMahan%2C+and+Eric+D.+Ragan.+2012.+Questioning+Naturalism+in+3D+User+Interfaces.+Commun.+ACM+55%2C+9+%28Sept.+2012%29%2C+78%2D%2D88.+10.1145%2F2330667.2330687+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00009" class="&#xA;                references__item&#xA;            "><span class="references__note">Doug A. Bowman, Christopher J. Rhoton, and Marcio S. Pinho. 2002. Text Input Techniques for Immersive Virtual Environments: An Empirical Comparison. Proceedings of the Human Factors and Ergonomics Society Annual Meeting 46, 26 (2002), 2154--2158.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Doug+A.+Bowman%2C+Christopher+J.+Rhoton%2C+and+Marcio+S.+Pinho.+2002.+Text+Input+Techniques+for+Immersive+Virtual+Environments%3A+An+Empirical+Comparison.+Proceedings+of+the+Human+Factors+and+Ergonomics+Society+Annual+Meeting+46%2C+26+%282002%29%2C+2154%2D%2D2158."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00010" class="&#xA;                references__item&#xA;            "><span class="references__note">Wei Ding, Ping Chen, Hisham Al-Mubaid, and Marc Pomplun. 2009. A Gaze-Controlled Interface to Virtual Reality Applications for Motor-and Speech-Impaired Users. HCI International, San Diego, CA (2009).<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Wei+Ding%2C+Ping+Chen%2C+Hisham+Al-Mubaid%2C+and+Marc+Pomplun.+2009.+A+Gaze-Controlled+Interface+to+Virtual+Reality+Applications+for+Motor-and+Speech-Impaired+Users.+HCI+International%2C+San+Diego%2C+CA+%282009%29."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00011" class="&#xA;                references__item&#xA;            "><span class="references__note">August Dvorak, Nellie L Merrick, William L Dealey, and Gertrude C Ford. 1936. Typewriting behavior. New York: American Book Company 1, 6 (1936).<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=August+Dvorak%2C+Nellie+L+Merrick%2C+William+L+Dealey%2C+and+Gertrude+C+Ford.+1936.+Typewriting+behavior.+New+York%3A+American+Book+Company+1%2C+6+%281936%29."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00012" class="&#xA;                references__item&#xA;            "><span class="references__note">Peter J Gianaros, Eric R Muth, J Toby Mordkoff, Max E Levine, and Robert M Stern. 2001. A questionnaire for the assessment of the multiple dimensions of motion sickness. Aviation, Space, and Environmental Medicine 72, 2 (2001), 115.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Peter+J+Gianaros%2C+Eric+R+Muth%2C+J+Toby+Mordkoff%2C+Max+E+Levine%2C+and+Robert+M+Stern.+2001.+A+questionnaire+for+the+assessment+of+the+multiple+dimensions+of+motion+sickness.+Aviation%2C+Space%2C+and+Environmental+Medicine+72%2C+2+%282001%29%2C+115."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00013" class="&#xA;                references__item&#xA;            "><span class="references__note">Yulia Gizatdinova, Oleg Špakov, and Veikko Surakka. 2012. Comparison of Video-based Pointing and Selection Techniques for Hands-free Text Entry. In Proceedings of the International Working Conference on Advanced Visual Interfaces (AVI '12). ACM, New York, NY, USA, 132--139.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Yulia+Gizatdinova%2C+Oleg+%C5%A0pakov%2C+and+Veikko+Surakka.+2012.+Comparison+of+Video-based+Pointing+and+Selection+Techniques+for+Hands-free+Text+Entry.+In+Proceedings+of+the+International+Working+Conference+on+Advanced+Visual+Interfaces+%28AVI+%2712%29.+ACM%2C+New+York%2C+NY%2C+USA%2C+132%2D%2D139.+10.1145%2F2254556.2254582+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00014" class="&#xA;                references__item&#xA;            "><span class="references__note">Gabriel Gonz´ alez, Jos´ e P Molina, Arturo S Garc´ìa, Diego Mart´nez, and Pascual Gonz´ alez. 2009. Evaluation of text input techniques in immersive virtual environments. In New Trends on Human-Computer Interaction. Springer, 109--118.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Gabriel+Gonz%C2%B4+alez%2C+Jos%C2%B4+e+P+Molina%2C+Arturo+S+Garc%C2%B4%C3%ACa%2C+Diego+Mart%C2%B4nez%2C+and+Pascual+Gonz%C2%B4+alez.+2009.+Evaluation+of+text+input+techniques+in+immersive+virtual+environments.+In+New+Trends+on+Human-Computer+Interaction.+Springer%2C+109%2D%2D118."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00015" class="&#xA;                references__item&#xA;            "><span class="references__note">Jan Gugenheimer, David Dobbelstein, Christian Winkler, Gabriel Haas, and Enrico Rukzio. 2016. FaceTouch: Enabling Touch Interaction in Display Fixed UIs for Mobile Virtual Reality. In Proceedings of the 29th Annual Symposium on User Interface Software and Technology (UIST '16). ACM, New York, NY, USA, 49--60.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Jan+Gugenheimer%2C+David+Dobbelstein%2C+Christian+Winkler%2C+Gabriel+Haas%2C+and+Enrico+Rukzio.+2016.+FaceTouch%3A+Enabling+Touch+Interaction+in+Display+Fixed+UIs+for+Mobile+Virtual+Reality.+In+Proceedings+of+the+29th+Annual+Symposium+on+User+Interface+Software+and+Technology+%28UIST+%2716%29.+ACM%2C+New+York%2C+NY%2C+USA%2C+49%2D%2D60.+10.1145%2F2984511.2984576+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00016" class="&#xA;                references__item&#xA;            "><span class="references__note">Sean Gustafson, Daniel Bierwirth, and Patrick Baudisch. 2010. Imaginary Interfaces: Spatial Interaction with Empty Hands and Without Visual Feedback. In Proceedings of the 23Nd Annual ACM Symposium on User Interface Software and Technology (UIST '10). ACM, New York, NY, USA, 3--12.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Sean+Gustafson%2C+Daniel+Bierwirth%2C+and+Patrick+Baudisch.+2010.+Imaginary+Interfaces%3A+Spatial+Interaction+with+Empty+Hands+and+Without+Visual+Feedback.+In+Proceedings+of+the+23Nd+Annual+ACM+Symposium+on+User+Interface+Software+and+Technology+%28UIST+%2710%29.+ACM%2C+New+York%2C+NY%2C+USA%2C+3%2D%2D12.+10.1145%2F1866029.1866033+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00017" class="&#xA;                references__item&#xA;            "><span class="references__note">S. G. Hart and L. E. Stavenland. 1988. Development of NASA-TLX (Task Load Index): Results of empirical and theoretical research. In Human Mental Workload, P. A. Hancock and N. Meshkati (Eds.). Elsevier, Chapter 7, 139--183. http://ntrs.nasa.gov/archive/nasa/casi.ntrs. nasa.gov/20000004342_1999205624.pdf<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=S.+G.+Hart+and+L.+E.+Stavenland.+1988.+Development+of+NASA-TLX+%28Task+Load+Index%29%3A+Results+of+empirical+and+theoretical+research.+In+Human+Mental+Workload%2C+P.+A.+Hancock+and+N.+Meshkati+%28Eds.%29.+Elsevier%2C+Chapter+7%2C+139%2D%2D183.+http%3A%2F%2Fntrs.nasa.gov%2Farchive%2Fnasa%2Fcasi.ntrs.+nasa.gov%2F20000004342_1999205624.pdf"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00018" class="&#xA;                references__item&#xA;            "><span class="references__note">Ken Hinckley, Mary Czerwinski, and Mike Sinclair. 1998. Interaction and Modeling Techniques for Desktop Two-handed Input. In Proceedings of the 11th Annual ACM Symposium on User Interface Software and Technology (UIST '98). ACM, New York, NY, USA, 49--58.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Ken+Hinckley%2C+Mary+Czerwinski%2C+and+Mike+Sinclair.+1998.+Interaction+and+Modeling+Techniques+for+Desktop+Two-handed+Input.+In+Proceedings+of+the+11th+Annual+ACM+Symposium+on+User+Interface+Software+and+Technology+%28UIST+%2798%29.+ACM%2C+New+York%2C+NY%2C+USA%2C+49%2D%2D58.+10.1145%2F288392.288572+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00019" class="&#xA;                references__item&#xA;            "><span class="references__note">Lode Hoste, Bruno Dumas, and Beat Signer. 2012. SpeeG: A Multimodal Speech- and Gesture-based Text Input Solution. In Proceedings of the International Working Conference on Advanced Visual Interfaces (AVI '12). ACM, New York, NY, USA, 156--163.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Lode+Hoste%2C+Bruno+Dumas%2C+and+Beat+Signer.+2012.+SpeeG%3A+A+Multimodal+Speech-+and+Gesture-based+Text+Input+Solution.+In+Proceedings+of+the+International+Working+Conference+on+Advanced+Visual+Interfaces+%28AVI+%2712%29.+ACM%2C+New+York%2C+NY%2C+USA%2C+156%2D%2D163.+10.1145%2F2254556.2254585+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00020" class="&#xA;                references__item&#xA;            "><span class="references__note">Jason Jerald. 2015. The VR book: human-centered design for virtual reality. (2015). <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Jason+Jerald.+2015.+The+VR+book%3A+human-centered+design+for+virtual+reality.+%282015%29.+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00021" class="&#xA;                references__item&#xA;            "><span class="references__note">Robin Kinkead. 1975. Typing Speed, Keying Rates, and Optimal Keyboard Layouts. Proceedings of the Human Factors Society Annual Meeting 19, 2 (1975), 159--161.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Robin+Kinkead.+1975.+Typing+Speed%2C+Keying+Rates%2C+and+Optimal+Keyboard+Layouts.+Proceedings+of+the+Human+Factors+Society+Annual+Meeting+19%2C+2+%281975%29%2C+159%2D%2D161."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00022" class="&#xA;                references__item&#xA;            "><span class="references__note">Regis Kopper, Doug A. Bowman, Mara G. Silva, and Ryan P. McMahan. 2010. A human motor behavior model for distal pointing tasks. International Journal of Human-Computer Studies 68, 10 (2010), 603 -- 615.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Regis+Kopper%2C+Doug+A.+Bowman%2C+Mara+G.+Silva%2C+and+Ryan+P.+McMahan.+2010.+A+human+motor+behavior+model+for+distal+pointing+tasks.+International+Journal+of+Human-Computer+Studies+68%2C+10+%282010%29%2C+603+%2D%2D+615.+10.1016%2Fj.ijhcs.2010.05.001+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00023" class="&#xA;                references__item&#xA;            "><span class="references__note">Per Ola Kristensson and Keith Vertanen. 2012. Performance Comparisons of Phrase Sets and Presentation Styles for Text Entry Evaluations. In Proceedings of the 2012 ACM International Conference on Intelligent User Interfaces (IUI '12). ACM, New York, NY, USA, 29--32.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Per+Ola+Kristensson+and+Keith+Vertanen.+2012.+Performance+Comparisons+of+Phrase+Sets+and+Presentation+Styles+for+Text+Entry+Evaluations.+In+Proceedings+of+the+2012+ACM+International+Conference+on+Intelligent+User+Interfaces+%28IUI+%2712%29.+ACM%2C+New+York%2C+NY%2C+USA%2C+29%2D%2D32.+10.1145%2F2166966.2166972+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00024" class="&#xA;                references__item&#xA;            "><span class="references__note">Bettina Laugwitz, Theo Held, and Martin Schrepp. 2008. Construction and evaluation of a user experience questionnaire. In Symposium of the Austrian HCI and Usability Engineering Group. Springer, 63--76.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Bettina+Laugwitz%2C+Theo+Held%2C+and+Martin+Schrepp.+2008.+Construction+and+evaluation+of+a+user+experience+questionnaire.+In+Symposium+of+the+Austrian+HCI+and+Usability+Engineering+Group.+Springer%2C+63%2D%2D76.+10.1007%2F978-3-540-89350-9_6+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00025" class="&#xA;                references__item&#xA;            "><span class="references__note">Anatole Lecuyer. 2009. Simulating Haptic Feedback Using Vision: A Survey of Research and Applications of Pseudo-Haptic Feedback. Presence: Teleoperators and Virtual Environments 18, 1 (2009), 39--53.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Anatole+Lecuyer.+2009.+Simulating+Haptic+Feedback+Using+Vision%3A+A+Survey+of+Research+and+Applications+of+Pseudo-Haptic+Feedback.+Presence%3A+Teleoperators+and+Virtual+Environments+18%2C+1+%282009%29%2C+39%2D%2D53.+10.1162%2Fpres.18.1.39+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00026" class="&#xA;                references__item&#xA;            "><span class="references__note">Kun Chang Lee and Namho Chung. 2008. Empirical analysis of consumer reaction to the virtual reality shopping mall. Computers in Human Behavior 24, 1 (2008), 88 -- 104.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Kun+Chang+Lee+and+Namho+Chung.+2008.+Empirical+analysis+of+consumer+reaction+to+the+virtual+reality+shopping+mall.+Computers+in+Human+Behavior+24%2C+1+%282008%29%2C+88+%2D%2D+104.+10.1016%2Fj.chb.2007.01.018+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00027" class="&#xA;                references__item&#xA;            "><span class="references__note">Vladimir I Levenshtein. 1966. Binary codes capable of correcting deletions, insertions, and reversals. In Soviet physics doklady, Vol. 10. 707--710.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Vladimir+I+Levenshtein.+1966.+Binary+codes+capable+of+correcting+deletions%2C+insertions%2C+and+reversals.+In+Soviet+physics+doklady%2C+Vol.+10.+707%2D%2D710."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00028" class="&#xA;                references__item&#xA;            "><span class="references__note">Jia-Wei Lin, Ping-Hsuan Han, Jiun-Yu Lee, Yang-Sheng Chen, Ting-Wei Chang, Kuan-Wen Chen, and Yi-Ping Hung. 2017. Visualizing the Keyboard in Virtual Reality for Enhancing Immersive Experience. In ACM SIGGRAPH 2017 Posters (SIGGRAPH '17). ACM, New York, NY, USA, Article 35, 2 pages.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Jia-Wei+Lin%2C+Ping-Hsuan+Han%2C+Jiun-Yu+Lee%2C+Yang-Sheng+Chen%2C+Ting-Wei+Chang%2C+Kuan-Wen+Chen%2C+and+Yi-Ping+Hung.+2017.+Visualizing+the+Keyboard+in+Virtual+Reality+for+Enhancing+Immersive+Experience.+In+ACM+SIGGRAPH+2017+Posters+%28SIGGRAPH+%2717%29.+ACM%2C+New+York%2C+NY%2C+USA%2C+Article+35%2C+2+pages.+10.1145%2F3102163.3102175+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00029" class="&#xA;                references__item&#xA;            "><span class="references__note">Kent Lyons, Thad Starner, Daniel Plaisted, James Fusia, Amanda Lyons, Aaron Drew, and E. W. Looney. 2004. Twiddler Typing: One-handed Chording Text Entry for Mobile Phones. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '04). ACM, New York, NY, USA, 671--678.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Kent+Lyons%2C+Thad+Starner%2C+Daniel+Plaisted%2C+James+Fusia%2C+Amanda+Lyons%2C+Aaron+Drew%2C+and+E.+W.+Looney.+2004.+Twiddler+Typing%3A+One-handed+Chording+Text+Entry+for+Mobile+Phones.+In+Proceedings+of+the+SIGCHI+Conference+on+Human+Factors+in+Computing+Systems+%28CHI+%2704%29.+ACM%2C+New+York%2C+NY%2C+USA%2C+671%2D%2D678.+10.1145%2F985692.985777+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00030" class="&#xA;                references__item&#xA;            "><span class="references__note">I. Scott MacKenzie. 2002. KSPC (Keystrokes per Character) as a Characteristic of Text Entry Techniques. Springer Berlin Heidelberg, Berlin, Heidelberg, 195--210.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=I.+Scott+MacKenzie.+2002.+KSPC+%28Keystrokes+per+Character%29+as+a+Characteristic+of+Text+Entry+Techniques.+Springer+Berlin+Heidelberg%2C+Berlin%2C+Heidelberg%2C+195%2D%2D210."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00031" class="&#xA;                references__item&#xA;            "><span class="references__note">I. Scott MacKenzie and Kumiko Tanaka-Ishii. 2007. Text Entry Systems: Mobility, Accessibility, Universality. Morgan Kaufmann Publishers Inc., San Francisco, CA, USA. <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=I.+Scott+MacKenzie+and+Kumiko+Tanaka-Ishii.+2007.+Text+Entry+Systems%3A+Mobility%2C+Accessibility%2C+Universality.+Morgan+Kaufmann+Publishers+Inc.%2C+San+Francisco%2C+CA%2C+USA.+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00032" class="&#xA;                references__item&#xA;            "><span class="references__note">I. Scott MacKenzie and Shawn X. Zhang. 1999. The Design and Evaluation of a High-performance Soft Keyboard. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '99). ACM, New York, NY, USA, 25--31.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=I.+Scott+MacKenzie+and+Shawn+X.+Zhang.+1999.+The+Design+and+Evaluation+of+a+High-performance+Soft+Keyboard.+In+Proceedings+of+the+SIGCHI+Conference+on+Human+Factors+in+Computing+Systems+%28CHI+%2799%29.+ACM%2C+New+York%2C+NY%2C+USA%2C+25%2D%2D31.+10.1145%2F302979.302983+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00033" class="&#xA;                references__item&#xA;            "><span class="references__note">Allan MacLean, Richard M. Young, Victoria M. E. Bellotti, and Thomas P. Moran. 1991. Questions, Options, and Criteria: Elements of Design Space Analysis. Hum.-Comput. Interact. 6, 3 (Sept. 1991), 201--250.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Allan+MacLean%2C+Richard+M.+Young%2C+Victoria+M.+E.+Bellotti%2C+and+Thomas+P.+Moran.+1991.+Questions%2C+Options%2C+and+Criteria%3A+Elements+of+Design+Space+Analysis.+Hum.-Comput.+Interact.+6%2C+3+%28Sept.+1991%29%2C+201%2D%2D250.+10.1207%2Fs15327051hci0603%25264_2+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00034" class="&#xA;                references__item&#xA;            "><span class="references__note">P¨ aivi Majaranta and Kari-Jouko R¨ aih¨ a. 2007. Text entry by gaze: Utilizing eye-tracking. Text entry systems: Mobility, accessibility, universality (2007), 175--187. http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1. 1.102.5479<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=P%C2%A8+aivi+Majaranta+and+Kari-Jouko+R%C2%A8+aih%C2%A8+a.+2007.+Text+entry+by+gaze%3A+Utilizing+eye-tracking.+Text+entry+systems%3A+Mobility%2C+accessibility%2C+universality+%282007%29%2C+175%2D%2D187.+http%3A%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.+1.102.5479"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00035" class="&#xA;                references__item&#xA;            "><span class="references__note">Anders Markussen, Mikkel R Jakobsen, and Kasper Hornbæk. 2013. Selection-based mid-air text entry on large displays. In IFIP Conference on Human-Computer Interaction. Springer, 401--418.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Anders+Markussen%2C+Mikkel+R+Jakobsen%2C+and+Kasper+Hornb%C3%A6k.+2013.+Selection-based+mid-air+text+entry+on+large+displays.+In+IFIP+Conference+on+Human-Computer+Interaction.+Springer%2C+401%2D%2D418."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00036" class="&#xA;                references__item&#xA;            "><span class="references__note">Mark McGill, Daniel Boland, Roderick Murray-Smith, and Stephen Brewster. 2015. A Dose of Reality: Overcoming Usability Challenges in VR Head-Mounted Displays. In Proceedings of the 33rd Annual ACM Conference on Human Factors in Computing Systems (CHI '15). ACM, New York, NY, USA, 2143--2152.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Mark+McGill%2C+Daniel+Boland%2C+Roderick+Murray-Smith%2C+and+Stephen+Brewster.+2015.+A+Dose+of+Reality%3A+Overcoming+Usability+Challenges+in+VR+Head-Mounted+Displays.+In+Proceedings+of+the+33rd+Annual+ACM+Conference+on+Human+Factors+in+Computing+Systems+%28CHI+%2715%29.+ACM%2C+New+York%2C+NY%2C+USA%2C+2143%2D%2D2152.+10.1145%2F2702123.2702382+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00037" class="&#xA;                references__item&#xA;            "><span class="references__note">Mathieu Nancel, Julie Wagner, Emmanuel Pietriga, Olivier Chapuis, and Wendy Mackay. 2011. Mid-air Pan-and-zoom on Wall-sized Displays. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '11). ACM, New York, NY, USA, 177--186.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Mathieu+Nancel%2C+Julie+Wagner%2C+Emmanuel+Pietriga%2C+Olivier+Chapuis%2C+and+Wendy+Mackay.+2011.+Mid-air+Pan-and-zoom+on+Wall-sized+Displays.+In+Proceedings+of+the+SIGCHI+Conference+on+Human+Factors+in+Computing+Systems+%28CHI+%2711%29.+ACM%2C+New+York%2C+NY%2C+USA%2C+177%2D%2D186.+10.1145%2F1978942.1978969+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00038" class="&#xA;                references__item&#xA;            "><span class="references__note">Jan Noyes. 1983. The QWERTY keyboard: A review. International Journal of Man-Machine Studies 18, 3 (1983), 265--281.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Jan+Noyes.+1983.+The+QWERTY+keyboard%3A+A+review.+International+Journal+of+Man-Machine+Studies+18%2C+3+%281983%29%2C+265%2D%2D281."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00039" class="&#xA;                references__item&#xA;            "><span class="references__note">Gang Ren and Eamonn O'Neill. 2013. Freehand Gestural Text Entry for Interactive TV. In Proceedings of the 11th European Conference on Interactive TV and Video (EuroITV '13). ACM, New York, NY, USA, 121--130.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Gang+Ren+and+Eamonn+O%27Neill.+2013.+Freehand+Gestural+Text+Entry+for+Interactive+TV.+In+Proceedings+of+the+11th+European+Conference+on+Interactive+TV+and+Video+%28EuroITV+%2713%29.+ACM%2C+New+York%2C+NY%2C+USA%2C+121%2D%2D130.+10.1145%2F2465958.2465966+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00040" class="&#xA;                references__item&#xA;            "><span class="references__note">Garth Shoemaker, Leah Findlater, Jessica Q. Dawson, and Kellogg S. Booth. 2009. Mid-air Text Input Techniques for Very Large Wall Displays. In Proceedings of Graphics Interface 2009 (GI '09). Canadian Information Processing Society, Toronto, Ont., Canada, Canada, 231--238. http://dl.acm.org/citation.cfm?id=1555880.1555931 <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Garth+Shoemaker%2C+Leah+Findlater%2C+Jessica+Q.+Dawson%2C+and+Kellogg+S.+Booth.+2009.+Mid-air+Text+Input+Techniques+for+Very+Large+Wall+Displays.+In+Proceedings+of+Graphics+Interface+2009+%28GI+%2709%29.+Canadian+Information+Processing+Society%2C+Toronto%2C+Ont.%2C+Canada%2C+Canada%2C+231%2D%2D238.+http%3A%2F%2Fdl.acm.org%2Fcitation.cfm%3Fid%3D1555880.1555931+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00041" class="&#xA;                references__item&#xA;            "><span class="references__note">Srinath Sridhar, Anna Maria Feit, Christian Theobalt, and Antti Oulasvirta. 2015. Investigating the Dexterity of Multi-Finger Input for Mid-Air Text Entry. In Proceedings of the 33rd Annual ACM Conference on Human Factors in Computing Systems (CHI '15). ACM, New York, NY, USA, 3643--3652.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Srinath+Sridhar%2C+Anna+Maria+Feit%2C+Christian+Theobalt%2C+and+Antti+Oulasvirta.+2015.+Investigating+the+Dexterity+of+Multi-Finger+Input+for+Mid-Air+Text+Entry.+In+Proceedings+of+the+33rd+Annual+ACM+Conference+on+Human+Factors+in+Computing+Systems+%28CHI+%2715%29.+ACM%2C+New+York%2C+NY%2C+USA%2C+3643%2D%2D3652.+10.1145%2F2702123.2702136+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00042" class="&#xA;                references__item&#xA;            "><span class="references__note">Keith Vertanen and Per Ola Kristensson. 2011. A Versatile Dataset for Text Entry Evaluations Based on Genuine Mobile Emails. In Proceedings of the 13th International Conference on Human Computer Interaction with Mobile Devices and Services (MobileHCI '11). ACM, New York, NY, USA, 295--298.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Keith+Vertanen+and+Per+Ola+Kristensson.+2011.+A+Versatile+Dataset+for+Text+Entry+Evaluations+Based+on+Genuine+Mobile+Emails.+In+Proceedings+of+the+13th+International+Conference+on+Human+Computer+Interaction+with+Mobile+Devices+and+Services+%28MobileHCI+%2711%29.+ACM%2C+New+York%2C+NY%2C+USA%2C+295%2D%2D298.+10.1145%2F2037373.2037418+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00043" class="&#xA;                references__item&#xA;            "><span class="references__note">James Walker, Bochao Li, Keith Vertanen, and Scott Kuhl. 2017. Efficient Typing on a Visually Occluded Physical Keyboard. In Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems (CHI '17). ACM, New York, NY, USA, 5457--5461.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=James+Walker%2C+Bochao+Li%2C+Keith+Vertanen%2C+and+Scott+Kuhl.+2017.+Efficient+Typing+on+a+Visually+Occluded+Physical+Keyboard.+In+Proceedings+of+the+2017+CHI+Conference+on+Human+Factors+in+Computing+Systems+%28CHI+%2717%29.+ACM%2C+New+York%2C+NY%2C+USA%2C+5457%2D%2D5461.+10.1145%2F3025453.3025783+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00044" class="&#xA;                references__item&#xA;            "><span class="references__note">Frank Weichert, Daniel Bachmann, Bartholomus Rudak, and Denis Fisseler. 2013. Analysis of the Accuracy and Robustness of the Leap Motion Controller. Sensors 13, 5 (2013), 6380--6393.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Frank+Weichert%2C+Daniel+Bachmann%2C+Bartholomus+Rudak%2C+and+Denis+Fisseler.+2013.+Analysis+of+the+Accuracy+and+Robustness+of+the+Leap+Motion+Controller.+Sensors+13%2C+5+%282013%29%2C+6380%2D%2D6393."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00045" class="&#xA;                references__item&#xA;            "><span class="references__note">Andrew D. Wilson and Maneesh Agrawala. 2006. Text Entry Using a Dual Joystick Game Controller. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '06). ACM, New York, NY, USA, 475--478.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Andrew+D.+Wilson+and+Maneesh+Agrawala.+2006.+Text+Entry+Using+a+Dual+Joystick+Game+Controller.+In+Proceedings+of+the+SIGCHI+Conference+on+Human+Factors+in+Computing+Systems+%28CHI+%2706%29.+ACM%2C+New+York%2C+NY%2C+USA%2C+475%2D%2D478.+10.1145%2F1124772.1124844+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00046" class="&#xA;                references__item&#xA;            "><span class="references__note">Jacob O Wobbrock. 2007. Measures of text entry performance. San Francisco: Morgan Kaufmann.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Jacob+O+Wobbrock.+2007.+Measures+of+text+entry+performance.+San+Francisco%3A+Morgan+Kaufmann."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00047" class="&#xA;                references__item&#xA;            "><span class="references__note">Jacob O. Wobbrock, Duen Horng Chau, and Brad A. Myers. 2007. An Alternative to Push, Press, and Tap-tap-tap: Gesturing on an Isometric Joystick for Mobile Phone Text Entry. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '07). ACM, New York, NY, USA, 667--676.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Jacob+O.+Wobbrock%2C+Duen+Horng+Chau%2C+and+Brad+A.+Myers.+2007.+An+Alternative+to+Push%2C+Press%2C+and+Tap-tap-tap%3A+Gesturing+on+an+Isometric+Joystick+for+Mobile+Phone+Text+Entry.+In+Proceedings+of+the+SIGCHI+Conference+on+Human+Factors+in+Computing+Systems+%28CHI+%2707%29.+ACM%2C+New+York%2C+NY%2C+USA%2C+667%2D%2D676.+10.1145%2F1240624.1240728+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00048" class="&#xA;                references__item&#xA;            "><span class="references__note">Chun Yu, Yizheng Gu, Zhican Yang, Xin Yi, Hengliang Luo, and Yuanchun Shi. 2017. Tap, Dwell or Gesture?: Exploring Head-Based Text Entry Techniques for HMDs. In Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems (CHI '17). ACM, New York, NY, USA, 4479--4488.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Chun+Yu%2C+Yizheng+Gu%2C+Zhican+Yang%2C+Xin+Yi%2C+Hengliang+Luo%2C+and+Yuanchun+Shi.+2017.+Tap%2C+Dwell+or+Gesture%3F%3A+Exploring+Head-Based+Text+Entry+Techniques+for+HMDs.+In+Proceedings+of+the+2017+CHI+Conference+on+Human+Factors+in+Computing+Systems+%28CHI+%2717%29.+ACM%2C+New+York%2C+NY%2C+USA%2C+4479%2D%2D4488.+10.1145%2F3025453.3025964+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00049" class="&#xA;                references__item&#xA;            "><span class="references__note">Shumin Zhai. 1995. Human Performance in Six Degree of Freedom Input Control. (1995).<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Shumin+Zhai.+1995.+Human+Performance+in+Six+Degree+of+Freedom+Input+Control.+%281995%29."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li></ol></div><div class="hidden supplFiles--data"></div><div data-rel="videos" class="article__section article__supplemental-material"><div class="colored-block__title"><h2 id="sec-supp" class="section__title left-bordered-title">Supplemental Material</h2></div><div class="article-media"><h6>video</h6><div class="row"><div class="component-container"><div class="article-media__item separated-block--dashed--bottom clearfix"><div class="video__image col-sm-3 col-xs-8"><div data-show-browse-icon="false" class="overlay-video__trigger open-media-viewer"><i aria-hidden="true" class="icon-play"></i></div><span id="video_item0294_src" style="display:none;" class="video-source"><span class="video-source">https://acm-prod-streaming.literatumonline.com/3173574.3174221/6e7d0292-2df8-4a8a-822a-b253e42d68be/pn4876-file3.,180,300,750,964,1500,.mp4.m3u8?b92b4ad1b4f274c70877518315abb28be831d54738a81f1de54388f7ee06e0e0927f1e11a21c84ce9c058849e8aa6c6105a816da2fe8db75c2d0c174321709c3e0b122eeff1ccb9a6b9627c8aff7ae7d628ef5d86629ca2740395a0a2fd099fa639dea37c1</span><span class="video-type">application/x-mpegurl</span></span><div id="video_item0294" data-rel="videos" class="media-item flowPlayer use-play-2 use-drag-handle"><video width="100%"><source/></video></div></div><div class="video__details visible-xs visible-sm col-xs-4 gutterless"><p class="bold text-uppercase">mp4</p><p>18.4 MB</p></div><div class="video__meta col-sm-9"><h5 class="article-media__title">pn4876-file3.mp4</h5><div class="table-view"><div class="video__details table__cell-view hidden-xs hidden-sm"><p class="bold text-uppercase">mp4</p><p>18.4 MB</p></div><div class="video__links table__cell-view"><a href="#" title="Play stream" data-show-browse-icon="false" class="btn open-media-viewer"><i class="icon-play_circle_filled"></i><span>Play stream</span></a><a href="https://dl.acm.org/action/downloadSupplement?doi=10.1145%2F3173574.3174221&amp;file=pn4876-file3.mp4&amp;download=true" title="Download" download="pn4876-file3.mp4" class="btn"><i class="icon-Icon_Download"></i><span>Download</span></a></div></div></div></div></div></div><div class="row"><div class="component-container"><div class="article-media__item separated-block--dashed--bottom clearfix"><div class="video__image col-sm-3 col-xs-8"><div data-show-browse-icon="false" class="overlay-video__trigger open-media-viewer"><i aria-hidden="true" class="icon-play"></i></div><span id="video_item1tgx_src" style="display:none;" class="video-source"><span class="video-source">https://acm-prod-streaming.literatumonline.com/3173574.3174221/1eab5134-a692-444d-adb5-cd0f36a31c43/pn4876.,180,300,750,964,1500,.mp4.m3u8?b92b4ad1b4f274c70877518315abb28be831d54738a81f1de54388f7ee06e0e0927f1e11a21c84ce9c058849efaa3a67b3dd6ef33b9d8969384e97b0ec14b5c769d2e9602e077cfe69749e425f4ee324cda40a03a2d04b2ea12d7bc8a0ec31d77db2787ce8</span><span class="video-type">application/x-mpegurl</span></span><div id="video_item1tgx" data-rel="videos" class="media-item flowPlayer use-play-2 use-drag-handle"><video width="100%"><source/></video></div></div><div class="video__details visible-xs visible-sm col-xs-4 gutterless"><p class="bold text-uppercase">mp4</p><p>200.6 MB</p></div><div class="video__meta col-sm-9"><h5 class="article-media__title">pn4876.mp4</h5><div class="table-view"><div class="video__details table__cell-view hidden-xs hidden-sm"><p class="bold text-uppercase">mp4</p><p>200.6 MB</p></div><div class="video__links table__cell-view"><a href="#" title="Play stream" data-show-browse-icon="false" class="btn open-media-viewer"><i class="icon-play_circle_filled"></i><span>Play stream</span></a><a href="https://dl.acm.org/action/downloadSupplement?doi=10.1145%2F3173574.3174221&amp;file=pn4876.mp4&amp;download=true" title="Download" download="pn4876.mp4" class="btn"><i class="icon-Icon_Download"></i><span>Download</span></a></div></div></div></div></div></div><div class="row"><div class="component-container"><div class="article-media__item separated-block--dashed--bottom clearfix"><div class="video__image col-sm-3 col-xs-8"><div data-show-browse-icon="false" class="overlay-video__trigger open-media-viewer"><i aria-hidden="true" class="icon-play"></i></div><span id="video_item27ez_src" style="display:none;" class="video-source"><span class="video-source">https://acm-prod-streaming.literatumonline.com/3173574.3174221/ddf0b88b-1dcc-4c99-b727-393b0f1e9c65/pn4876-file5.,180,300,750,964,1500,.mp4.m3u8?b92b4ad1b4f274c70877518315abb28be831d54738a81f1de54388f7ee06e0e0927f1e11a21c84ce9c058849baab3d351cf6af9a8a984a5c2c56b54557221008468630611c46b61d739a60f65aab6b1a5402cb4a96598b51f31cf131d9d3e016712723fba1</span><span class="video-type">application/x-mpegurl</span></span><div id="video_item27ez" data-rel="videos" class="media-item flowPlayer use-play-2 use-drag-handle"><video width="100%"><source/></video></div></div><div class="video__details visible-xs visible-sm col-xs-4 gutterless"><p class="bold text-uppercase">mp4</p><p>3.4 MB</p></div><div class="video__meta col-sm-9"><h5 class="article-media__title">pn4876-file5.mp4</h5><div class="table-view"><div class="video__details table__cell-view hidden-xs hidden-sm"><p class="bold text-uppercase">mp4</p><p>3.4 MB</p></div><div class="video__links table__cell-view"><a href="#" title="Play stream" data-show-browse-icon="false" class="btn open-media-viewer"><i class="icon-play_circle_filled"></i><span>Play stream</span></a><a href="https://dl.acm.org/action/downloadSupplement?doi=10.1145%2F3173574.3174221&amp;file=pn4876-file5.mp4&amp;download=true" title="Download" download="pn4876-file5.mp4" class="btn"><i class="icon-Icon_Download"></i><span>Download</span></a></div></div></div></div></div></div></div></div>
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3TagWidget" data-widget-id="2a75f978-170a-4843-8722-e878a1b77fbc" class="citation article__section article__index-terms">
+        
+
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="graphQueryWidget" data-widget-id="4ca2ed65-717e-4e67-bbb5-6578b8c6acac" class="colored-block__title">
+        
+
+
+
+        
+        <h2 id="sec-terms" class="section__title left-bordered-title">Index Terms</h2>
+
+        </div>
+    
+
+<ol class="rlist organizational-chart"><li><h6>Selection-based Text Entry in Virtual Reality</h6><ol class="rlist level-1  ch-1"><li><div data-background="#808080" style="background-color:#808080;box-shadow:none"><p><a href="/topic/ccs2012/10003120?ContentGroupKey=10.1145%2F3173574&amp;expand=all">Human-centered computing</a></p></div><ol class="rlist level-2 ch-0"></ol></li></ol></li></ol>
+
+        </div>
+    
+
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="graphQueryWidget" data-widget-id="91639479-279a-46e3-b7c7-f902a3fd7945" class="toc__section accordion-tabbed__tab">
+        
+
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3RelatedDigitalObject" data-widget-id="98838540-5c38-436f-9b98-0e292765fbe4" class="accordion-tabbed__content">
+        
+
+
+
+        
+        
+
+        </div>
+    
+
+
+        </div>
+    
+
+
+
+
+        
+        <div class="article__section article__comments">
+
+
+
+        
+        <div class="colored-block__title"> <h2 id="sec-comments" class="section__title left-bordered-title">Comments</h2> </div>
+
+
+
+
+        
+        <div id="disqus_thread"></div><a href="https://dl.acm.org/doi/10.1145/3173574.3174221#disqus_thread" class="disqus-count hidden"></a><script>var disqus_config = function () {
+    this.page.url = window.location.href;
+    this.page.identifier = '10.1145/3173574.3174221';
+    this.page.remote_auth_s3 = '';
+    this.page.api_key = 'MmWj4FlWmXk20FJsmWMXbTJoZT7TVzTsc9Rw0yrJp3L1ZNXZuvmxF3F5rFIF8RqQ';
+};
+(function () {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://acm-prod.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();</script><noscript>Please enable JavaScript to view the<a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><script id="dsq-count-scr" src="//acm-prod.disqus.com/count.js" async=""></script>
+</div>
+</div><div class="pill-content"><div id="pill-access"><div class="pill-access__content">
+
+
+
+        
+        <div class="pill-access__content"><div class="section__separator"><h3 class="left-bordered-title">Login options</h3><div class="section__content"><p class="info--text">Check if you have access through your login credentials or your institution to get full access on this article.</p><a href="/action/showLogin?redirectUri=/doi/10.1145/3173574.3174221" title="Sign in" class="btn big btn--inverse">Sign in</a></div></div><div class="section__separator"><h3 class="left-bordered-title">Full Access</h3><div class="section__content"><a href="/action/publisherEcommerceHelper?doi=10.1145/3173574.3174221&amp;redirectUri=https://dl.acm.org/doi/10.1145/3173574.3174221" title="Get this Publication" class="btn blue big">Get this Publication</a></div></div></div>
+</div></div><div id="pill-information"><div class="tab tab--flex"><ul role="tablist" class="rlist tab__nav"><li role="presentation" class="active"><a id="pill-information__contentcon" href="#pill-information__content" aria-controls="pill-information__content" role="tab" data-toggle="tab" title="Information" aria-selected="true" data-simple-tab-id="" tabindex="0" class="active">Information</a></li><li role="presentation"><a id="pill-authors__contentcon" href="#pill-authors__content" aria-controls="pill-authors__content" role="tab" data-toggle="tab" title="Authors" aria-selected="false" data-simple-tab-id="" tabindex="-1">Contributors</a></li></ul><ul class="rlist tab__content"><li id="pill-information__content" aria-labelledby="pill-information__contentcon" role="tabpanel" aria-hidden="false" tabindex="0" class="tab__pane active"><div class="pill-information__content"><div class="section__separator"><h3 class="left-bordered-title">Published in</h3><div class="section__content cover-image-proceeding">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3CoverImage" data-widget-id="7b8bd09e-8112-4266-b136-2f71ab2b109c" class="left-side-image">
+        
+
+
+
+        
+        <div class="cover-image"><div class="cover-image__image"><img src="/specs/products/acm/releasedAssets/images/Default_image_lazy.svg" data-src="/cms/attachment/4b31a452-fce3-4040-8f6b-14f3a17c015f/3173574.cover.jpg" alt="ACM Conferences cover image" class="lazy"/></div><div class="cover-image__details"><div class="book-meta">CHI '18: Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems</div><div class="cover-date">April 2018</div><div class="cover-pages">8489  pages</div><div class="cover-image__details-extra"><div class="flex-container"><span class="bold">ISBN:</span><span class="space">9781450356206</span></div><div class="flex-container"><span class="bold">DOI:</span><span class="space">10.1145/3173574</span></div><div class="flex-container"><div>
+
+
+<ul class="rlist--inline loa truncate-list" title="list of authors" data-lines="2">
+   <li class="label"><b>General Chairs: </b></li>
+   <li><a href="/author/Mandryk%2C+Regan" title="Regan Mandryk"><span>Regan Mandryk</span></a><span class="loa_author_inst hidden">
+         <p>University of Saskatchewan, Canada</p></span><span>, </span></li>
+   <li><a href="/author/Hancock%2C+Mark" title="Mark Hancock"><span>Mark Hancock</span></a><span class="loa_author_inst hidden">
+         <p>University of Waterloo, Canada</p></span><span>, </span></li>
+   <li class="label"><b>Program Chairs: </b></li>
+   <li><a href="/author/Perry%2C+Mark" title="Mark Perry"><span>Mark Perry</span></a><span class="loa_author_inst hidden">
+         <p>Brunel University London, UK</p></span><span>, </span></li>
+   <li><a href="/author/Cox%2C+Anna" title="Anna Cox"><span>Anna Cox</span></a><span class="loa_author_inst hidden">
+         <p>University College London, UK</p></span></li>
+</ul>
+
+
+
+
+
+</div></div></div><div class="pb-dropzone" data-pb-dropzone="metadataDisplayExtra" title="metadataDisplayExtra"></div></div></div>
+
+        </div>
+    
+<p class="copyrights small">Copyright © 2018 ACM</p></div></div><div class="section__separator proceedingInfo-sponsors hidden"><h3 class="left-bordered-title">Sponsors</h3><ul class="proceedingInfo-sponsors__list"></ul></div><div class="section__separator proceedingInfo-inCoop hidden"><h3 class="left-bordered-title">In-Cooperation</h3><ul class="proceedingInfo-inCoop__list"></ul></div><div class="section__separator"><h3 class="left-bordered-title">Publisher</h3><div class="section__content publisher"><div class="inlineBlock"></div><div class="inlineBlock"><p class="publisher__name">Association for Computing Machinery</p><p class="publisher__address">New York, NY, United States</p></div></div></div>
+
+
+
+        
+        <div class="section__separator"><h3 class="left-bordered-title">Publication History</h3><div class="section__content"><ul class="rlist"><li>Published: 21 April 2018</li></ul></div></div>
+
+
+
+
+        
+        <!-- rightslink drop zone-->
+
+
+
+        
+        <div class="section__separator"><h3 class="left-bordered-title"> Permissions</h3><div class="section__content"><p class="info--text">Request permissions about this article.</p><a href="/servlet/linkout?type=rightslinkBasic&amp;url=ContentIdType%3Ddoi%26isbn%3D9781450356206%26contentID%3D10.1145%252F3173574.3174221%26bookTitle%3DProceedings%2Bof%2Bthe%2B2018%2BCHI%2BConference%2Bon%2BHuman%2BFactors%2Bin%2BComputing%2BSystems" rel="noopener" target="_blank" class="btn big stretched blue">Request Permissions</a></div></div>
+
+
+
+<div class="section__separator"><h3 class="left-bordered-title">Author Tags</h3><div class="section__content"><div class="tags-widget"><div class="tags-widget__content"><ul class="rlist--inline"><li><a href="/keyword/user experience?expand=all" title="user experience" class="badge-type">user experience</a></li><li><a href="/keyword/virtual reality?expand=all" title="virtual reality" class="badge-type">virtual reality</a></li><li><a href="/keyword/task performance?expand=all" title="task performance" class="badge-type">task performance</a></li><li><a href="/keyword/mid-air?expand=all" title="mid-air" class="badge-type">mid-air</a></li><li><a href="/keyword/text entry?expand=all" title="text entry" class="badge-type">text entry</a></li><li><a href="/keyword/pointing?expand=all" title="pointing" class="badge-type">pointing</a></li></ul></div></div></div></div><div class="section__separator"><h3 class="left-bordered-title">Qualifiers</h3><ul class="qualifiers__list"><li class="capitalized qualifiers__list__item">research-article</li></ul></div><div class="section__separator proceedingInfo-conference hidden"><h3 class="left-bordered-title">Conference</h3></div>
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3AcceptanceRatesWidget" data-widget-id="daac1568-1d03-438e-a4c9-c9df280908b7" class="section__separator">
+        
+
+
+
+        
+        <div class="acceptance-rates__section"><h2 id="acceptance-rates" aria-expanded="true" class="left-bordered-title">Acceptance Rates</h2><div class="accordion-tabbed__content"><div class="acceptance-rates__heading"><h6>CHI '18 
+Paper Acceptance Rate<span> 666 </span>of<span> 2,590 </span>submissions,<span> 26%</span></h6><h6>Overall Acceptance Rate<span> 7,181 </span>of<span> 30,669 </span>submissions,<span> 23%</span></h6></div><div class="more-link more-link--without-border"><a href="/doi/proceedings/10.1145/3173574#acceptance-rates" title="More">More<i aria-hidden="true" class="icon-Arrow-Stroke"></i></a></div></div></div>
+
+        </div>
+    
+
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3UpcomingConferencesWidget" data-widget-id="452ce022-9919-435e-ab40-1386965a30bd" class="section__separator">
+        
+
+
+
+        
+        
+
+        </div>
+    
+<div class="section__separator funding-sources hidden"><h3 class="left-bordered-title">Funding Sources</h3><ul class="funding-list"></ul></div></div></li><li id="pill-authors__content" aria-labelledby="pill-authors__contentcon" role="tabpanel" aria-hidden="true" class="tab__pane"><div class="pill-authors__content"><div class="section__separator"><div class="pill-authors-list"><div class="expandable-accordion"><div class="pill-normalized-authors">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3BibliometricsWidget" data-widget-id="b8ab2a42-427c-48b4-a4b0-de7e4ca80aa8" class="contrib-metrics-bibliometrics">
+        
+
+
+
+        
+        <div class="contrib-metrics-wrapper accordion-tabbed__tab">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3HTMLWidget" data-widget-id="fef8712e-21ff-4a15-97d6-535afe5b5fbb" class="clearfix">
+        
+
+
+
+        
+        <h2 class="left-bordered-title pull-left">Contributor Metrics</h2><a class="pull-right expand-all" href="/" aria-expanded="false">Expand All </a>
+
+        </div>
+    
+<div data-sectionname="Authors" data-numberOfLiToShwo="4"><div class="contrib-metrics-bibliometrics"><div class="accordion authors-accordion"><ul class="accordion-tabbed rlist loa clearfix"><li class="accordion-tabbed__tab accordion__closed grid-item"><div class="accordion-tabbed__control"><a href="javascript:void(0)" aria-controls="adItem-0" aria-expanded="false" aria-haspopup="true" id="adItem-0_Ctrl" class="accordion-tabbed__arrow"></a>
+    <input class="contrib-id" type="hidden" value="10.1145/contrib-89758843557"/>
+    <div class="auth-image">
+        
+            <a href="/profile/89758843557">
+                <img src="/do/10.1145/contrib-89758843557/pill-img-name-aff/BSA191220101808.jpg" alt='Marco Speicher profile image' title='Marco Speicher profile image'>
+            </a>    
+        
+    </div>
+    <div class="auth-info" style="word-break: break-word; width: 70%;">
+        <span class="auth-name">
+            <a href="/profile/89758843557" title='Marco Speicher'>Marco Speicher</a>
+        </span>
+        <span class="info--text auth-institution">
+             German Research Center for Artificial Intelligence (DFKI) 
+        </span>
+    </div>
+</div><div aria-labelledby="adItem-0_Ctrl" style="display: none;" id="adItem-0" class="accordion-tabbed__content"><ul class="rlist auth-metrics metrics__list separated-block--dashed--top"><li><span class="metric-name">Publication Years</span><span class="metric-value">2014 - 2020</span></li><li><span class="metric-name">Publication counts</span><span class="metric-value">17</span></li><li><span class="metric-name">Available for Download</span><span class="metric-value">17</span></li><li><span class="metric-name">Citation count</span><span class="metric-value">69</span></li><li><span class="metric-name">Downloads (cumulative)</span><span class="metric-value">4,511</span></li><li><span class="metric-name">Downloads (6 weeks)</span><span class="metric-value">253</span></li><li><span class="metric-name">Downloads (12 months)</span><span class="metric-value">1,910</span></li><li><span class="metric-name">Average Citation per Article</span><span class="metric-value">4</span></li><li><span class="metric-name">Average Downloads per Article</span><span class="metric-value">265</span></li></ul><div class="view-profile separated-block--dashed--top"><a href="/profile/89758843557" title="View Full Profile" class="btn transparent stretched">View Full Profile<i aria-hidden="true" class="icon-export"></i></a></div></div></li><li class="accordion-tabbed__tab accordion__closed grid-item"><div class="accordion-tabbed__control"><a href="javascript:void(0)" aria-controls="adItem-1" aria-expanded="false" aria-haspopup="true" id="adItem-1_Ctrl" class="accordion-tabbed__arrow"></a>
+    <input class="contrib-id" type="hidden" value="10.1145/contrib-81556550256"/>
+    <div class="auth-image">
+        
+            <a href="/profile/81556550256">
+                <img src="/do/10.1145/contrib-81556550256/pill-img-name-aff/crop1.jpg" alt='Anna Maria Feit profile image' title='Anna Maria Feit profile image'>
+            </a>    
+        
+    </div>
+    <div class="auth-info" style="word-break: break-word; width: 70%;">
+        <span class="auth-name">
+            <a href="/profile/81556550256" title='Anna Maria Feit'>Anna Maria Feit</a>
+        </span>
+        <span class="info--text auth-institution">
+             Aalto University 
+        </span>
+    </div>
+</div><div aria-labelledby="adItem-1_Ctrl" style="display: none;" id="adItem-1" class="accordion-tabbed__content"><ul class="rlist auth-metrics metrics__list separated-block--dashed--top"><li><span class="metric-name">Publication Years</span><span class="metric-value">2013 - 2020</span></li><li><span class="metric-name">Publication counts</span><span class="metric-value">17</span></li><li><span class="metric-name">Available for Download</span><span class="metric-value">17</span></li><li><span class="metric-name">Citation count</span><span class="metric-value">196</span></li><li><span class="metric-name">Downloads (cumulative)</span><span class="metric-value">11,242</span></li><li><span class="metric-name">Downloads (6 weeks)</span><span class="metric-value">545</span></li><li><span class="metric-name">Downloads (12 months)</span><span class="metric-value">4,459</span></li><li><span class="metric-name">Average Citation per Article</span><span class="metric-value">12</span></li><li><span class="metric-name">Average Downloads per Article</span><span class="metric-value">661</span></li></ul><div class="view-profile separated-block--dashed--top"><a href="/profile/81556550256" title="View Full Profile" class="btn transparent stretched">View Full Profile<i aria-hidden="true" class="icon-export"></i></a></div></div></li><li class="accordion-tabbed__tab accordion__closed grid-item"><div class="accordion-tabbed__control"><a href="javascript:void(0)" aria-controls="adItem-2" aria-expanded="false" aria-haspopup="true" id="adItem-2_Ctrl" class="accordion-tabbed__arrow"></a>
+    <input class="contrib-id" type="hidden" value="10.1145/contrib-99659261978"/>
+    <div class="auth-image">
+        
+            <a href="/profile/99659261978">
+                <img src="/pb-assets/icons/DOs/default-profile-1543932446943.svg" alt='Pascal  Ziegler profile image' title='Pascal  Ziegler profile image'>
+            </a>    
+        
+    </div>
+    <div class="auth-info" style="word-break: break-word; width: 70%;">
+        <span class="auth-name">
+            <a href="/profile/99659261978" title='Pascal  Ziegler'>Pascal  Ziegler</a>
+        </span>
+        <span class="info--text auth-institution">
+             Saarland University 
+        </span>
+    </div>
+</div><div aria-labelledby="adItem-2_Ctrl" style="display: none;" id="adItem-2" class="accordion-tabbed__content"><ul class="rlist auth-metrics metrics__list separated-block--dashed--top"><li><span class="metric-name">Publication Years</span><span class="metric-value">2018 - 2019</span></li><li><span class="metric-name">Publication counts</span><span class="metric-value">2</span></li><li><span class="metric-name">Available for Download</span><span class="metric-value">2</span></li><li><span class="metric-name">Citation count</span><span class="metric-value">14</span></li><li><span class="metric-name">Downloads (cumulative)</span><span class="metric-value">1,118</span></li><li><span class="metric-name">Downloads (6 weeks)</span><span class="metric-value">57</span></li><li><span class="metric-name">Downloads (12 months)</span><span class="metric-value">426</span></li><li><span class="metric-name">Average Citation per Article</span><span class="metric-value">7</span></li><li><span class="metric-name">Average Downloads per Article</span><span class="metric-value">559</span></li></ul><div class="view-profile separated-block--dashed--top"><a href="/profile/99659261978" title="View Full Profile" class="btn transparent stretched">View Full Profile<i aria-hidden="true" class="icon-export"></i></a></div></div></li><li class="accordion-tabbed__tab accordion__closed grid-item"><div class="accordion-tabbed__control"><a href="javascript:void(0)" aria-controls="adItem-3" aria-expanded="false" aria-haspopup="true" id="adItem-3_Ctrl" class="accordion-tabbed__arrow"></a>
+    <input class="contrib-id" type="hidden" value="10.1145/contrib-81548004671"/>
+    <div class="auth-image">
+        
+            <a href="/profile/81548004671">
+                <img src="/pb-assets/icons/DOs/default-profile-1543932446943.svg" alt='Antonio  Kr&#x00fc;ger profile image' title='Antonio  Kr&#x00fc;ger profile image'>
+            </a>    
+        
+    </div>
+    <div class="auth-info" style="word-break: break-word; width: 70%;">
+        <span class="auth-name">
+            <a href="/profile/81548004671" title='Antonio  Kr&#x00fc;ger'>Antonio  Kr&#x00fc;ger</a>
+        </span>
+        <span class="info--text auth-institution">
+             German Research Center for Artificial Intelligence (DFKI) 
+        </span>
+    </div>
+</div><div aria-labelledby="adItem-3_Ctrl" style="display: none;" id="adItem-3" class="accordion-tabbed__content"><ul class="rlist auth-metrics metrics__list separated-block--dashed--top"><li><span class="metric-name">Publication Years</span><span class="metric-value">2010 - 2020</span></li><li><span class="metric-name">Publication counts</span><span class="metric-value">104</span></li><li><span class="metric-name">Available for Download</span><span class="metric-value">94</span></li><li><span class="metric-name">Citation count</span><span class="metric-value">799</span></li><li><span class="metric-name">Downloads (cumulative)</span><span class="metric-value">30,420</span></li><li><span class="metric-name">Downloads (6 weeks)</span><span class="metric-value">1,193</span></li><li><span class="metric-name">Downloads (12 months)</span><span class="metric-value">8,759</span></li><li><span class="metric-name">Average Citation per Article</span><span class="metric-value">8</span></li><li><span class="metric-name">Average Downloads per Article</span><span class="metric-value">324</span></li></ul><div class="view-profile separated-block--dashed--top"><a href="/profile/81548004671" title="View Full Profile" class="btn transparent stretched">View Full Profile<i aria-hidden="true" class="icon-export"></i></a></div></div></li></ul></div></div></div>
+
+
+
+</div>
+
+        </div>
+    
+</div><div aria-hidden="true" class="pill-all-authors authors-accordion disable-truncate hidden"> <div class="border-bottom clearfix"> <div id="sb-1"> <ul data-lines="2" ariaa-label="authors" data-position="beforeLast" class="rlist--inline loa truncate-list"> <li class="label"><b>Authors: </b></li> <li class="loa__item"><a id="arnd_34706815424070711_Ctrl" href="javascript:void(0);" aria-controls="arnd_34706815424070711" aria-haspopup="true" class="author-name" title="Marco Speicher"><span class="loa__author-info"> <div class="author-data"><span class="loa__author-name"><span><img class="author-picture" src="/do/10.1145/contrib-89758843557/rel-imgonly/89758843557.jpg" alt="Marco Speicher profile image"/>Marco Speicher</span></span></div><span class="loa_author_inst"> <p data-pill-inst="arnd_34706815424070711" data-doi="10.1145/contrib-89758843557">Saarland University, Saarland Informatics Campus, Saarbrücken, Saarland, Germany</p></span></span></a><div id="arnd_34706815424070711" aria-labelledby="arnd_34706815424070711_Ctrl" class="author-info"> <div class="author-info__header" data-pill="d638410e169"></div> <div class="author-info__body"> <p data-pill-inst="d638410e169" data-doi="10.1145/contrib-89758843557">Saarland University, Saarland Informatics Campus, Saarbrücken, Saarland, Germany</p><a href="/profile/89758843557" class="btn blue stretched">View Profile</a> </div> </div><span>, </span></li> <li class="loa__item"><a id="arnd_34706815424351928_Ctrl" href="javascript:void(0);" aria-controls="arnd_34706815424351928" aria-haspopup="true" class="author-name" title="Anna Maria Feit"><span class="loa__author-info"> <div class="author-data"><span class="loa__author-name"><span><img class="author-picture" src="/do/10.1145/contrib-81556550256/rel-imgonly/crop1.jpg" alt="Anna Maria Feit profile image"/>Anna Maria Feit</span></span></div><span class="loa_author_inst"> <p data-pill-inst="arnd_34706815424351928" data-doi="10.1145/contrib-81556550256">Aalto University, Helsinki, Finland</p></span></span></a><div id="arnd_34706815424351928" aria-labelledby="arnd_34706815424351928_Ctrl" class="author-info"> <div class="author-info__header" data-pill="d638410e190"></div> <div class="author-info__body"> <p data-pill-inst="d638410e190" data-doi="10.1145/contrib-81556550256">Aalto University, Helsinki, Finland</p><a href="/profile/81556550256" class="btn blue stretched">View Profile</a> </div> </div><span>, </span></li> <li class="loa__item"><a id="arnd_34706815424614278_Ctrl" href="javascript:void(0);" aria-controls="arnd_34706815424614278" aria-haspopup="true" class="author-name" title="Pascal Ziegler"><span class="loa__author-info"> <div class="author-data"><span class="loa__author-name"><span><img class="author-picture" src="/pb-assets/icons/DOs/default-profile-1543932446943.svg" alt="Pascal &nbsp;Ziegler profile image"/>Pascal Ziegler</span></span></div><span class="loa_author_inst"> <p data-pill-inst="arnd_34706815424614278" data-doi="10.1145/contrib-99659261978">Saarland University, Saarland Informatics Campus, Saarbrücken, Saarland, Germany</p></span></span></a><div id="arnd_34706815424614278" aria-labelledby="arnd_34706815424614278_Ctrl" class="author-info"> <div class="author-info__header" data-pill="d638410e211"></div> <div class="author-info__body"> <p data-pill-inst="d638410e211" data-doi="10.1145/contrib-99659261978">Saarland University, Saarland Informatics Campus, Saarbrücken, Saarland, Germany</p><a href="/profile/99659261978" class="btn blue stretched">View Profile</a> </div> </div><span>, </span></li> <li class="loa__item"><a id="arnd_34706815424894948_Ctrl" href="javascript:void(0);" aria-controls="arnd_34706815424894948" aria-haspopup="true" class="author-name" title="Antonio Krüger"><span class="loa__author-info"> <div class="author-data"><span class="loa__author-name"><span><img class="author-picture" src="/pb-assets/icons/DOs/default-profile-1543932446943.svg" alt="Antonio Kr&#x00fc;ger profile image"/>Antonio Krüger</span></span></div><span class="loa_author_inst"> <p data-pill-inst="arnd_34706815424894948" data-doi="10.1145/contrib-81548004671">Saarland University, Saarland Informatics Campus, Saarbrücken, Saarland, Germany</p></span></span></a><div id="arnd_34706815424894948" aria-labelledby="arnd_34706815424894948_Ctrl" class="author-info"> <div class="author-info__header" data-pill="d638410e232"></div> <div class="author-info__body"> <p data-pill-inst="d638410e232" data-doi="10.1145/contrib-81548004671">Saarland University, Saarland Informatics Campus, Saarbrücken, Saarland, Germany</p><a href="/profile/81548004671" class="btn blue stretched">View Profile</a> </div> </div> </li> <li><a href="#pill-authors__contentcon" data-slide-target="#pill-information" data-full-screen="false" data-ctrl-res="screen-xlg" data-tab="pill-authors__content" data-label="<i class='icon-Icon_Information'&gt;</i&gt; Information &amp; Authors" class="loa__link w-slide__btn tab-link slide-active">Authors Info &amp; Affiliations </a></li> </ul> </div> </div> </div></div></div></div><div class="section__separator"><h3 class="left-bordered-title">Other Metrics</h3><div class="section__content badges"><a href="#pill-bibliometrics__contentcon" data-slide-target="#pill-metric" data-tab="pill-bibliometrics__content" data-ctrl-res="screen-xlg" data-full-screen="false" data-label="&lt;i class=&quot;icon-metric &quot;&gt;&lt;/i&gt;Bibliometrics &amp; Citations" class="btn big stretched btn--inverse w-slide__btn tab-link">View Article Metrics</a></div></div></div></li></ul></div></div><div id="pill-metric"><div class="tab tab--flex"><ul role="tablist" class="rlist tab__nav"><li role="presentation" class="active"><a id="pill-bibliometrics__contentcon" href="#pill-bibliometrics__content" aria-controls="pill-bibliometrics__content" role="tab" data-toggle="tab" title="Bibliometrics" aria-selected="true" data-simple-tab-id="" tabindex="0" class="active">Bibliometrics</a></li><li role="presentation"><a id="pill-citations__contentcon" href="#pill-citations__content" data-ajaxurl="/action/ajaxShowCitedBy?widgetId=f69d88a8-b404-4aae-83a9-9acea4426d78&amp;ajax=true&amp;doi=10.1145%2F3173574.3174221&amp;pbContext=%3Btopic%3Atopic%3Aconference-collections%26gt%3Bchi%3Bpage%3Astring%3AArticle%2FChapter+View%3BsubPage%3Astring%3AAbstract%3Bwgroup%3Astring%3AACM+Publication+Websites%3Bissue%3Aissue%3Adoi%5C%3A10.1145%2F3173574%3Barticle%3Aarticle%3Adoi%5C%3A10.1145%2F3173574.3174221%3BgroupTopic%3Atopic%3Aacm-pubtype%26gt%3Bproceeding%3Bcsubtype%3Astring%3AConference+Proceedings%3Bwebsite%3Awebsite%3Adl-site%3Bctype%3Astring%3ABook+Content%3Bjournal%3Ajournal%3Aacmconferences%3BpageGroup%3Astring%3APublication+Pages" data-component="pubAjaxContent" data-ajaxtarget="#pill-citations__content .citedBy" aria-controls="pill-citations__content" role="tab" data-toggle="tab" title="Citations" aria-selected="false" data-simple-tab-id="" tabindex="-1" class="loadAjax loadLazyAjax">Citations<span class="citation-count count-bubble">14</span></a></li></ul><ul class="rlist tab__content"><li id="pill-bibliometrics__content" aria-labelledby="pill-bibliometrics__contentcon" role="tabpanel" aria-hidden="false" tabindex="0" class="tab__pane active"><div class="pill-bibliometrics__content"><div class="section__separator"><h3 class="left-bordered-title">Article Metrics</h3><div class="section__content"><ul class="rlist--inline article-metrics"><li><div class="article-metric citation"><div class="metric-value"><span>14</span></div>Total Citations</div><a href="#pill-citations__contentcon" data-tab="pill-citations__content" data-slide-target="#pill-metric" data-full-screen="false" data-ctrl-res="screen-xlg" class="primary-blue-color w-slide__btn tab-link slide-active">View Citations</a></li><li><div class="article-metric download"><div class="metric-value"><span>1,073</span></div>Total Downloads</div></li></ul><ul class="rlist metrics__list"><li><span class="metric-name">Downloads (Last 12 months)</span><span class="metric-value">381</span></li><li><span class="metric-name">Downloads (Last 6 weeks)</span><span class="metric-value">52</span></li></ul></div></div><div class="section__separator"><h3 class="left-bordered-title">Other Metrics</h3><div class="section__content"><a href="#pill-authors__contentcon" data-slide-target="#pill-information" data-ctrl-res="screen-xlg" data-tab="pill-authors__content" data-full-screen="false" data-label="&lt;i class=&quot;icon-Icon_Information &quot;&gt;&lt;/i&gt;Information &amp; Authors" class="btn big stretched btn--inverse w-slide__btn tab-link">View Author Metrics</a></div></div></div></li><li id="pill-citations__content" aria-labelledby="pill-citations__contentcon" role="tabpanel" aria-hidden="true" class="tab__pane"><div class="pill-citations__content"><div class="section__separator"><h3 class="left-bordered-title">Cited By</h3><ol class="rlist references__list citedBy"></ol></div></div></li></ul></div></div><div id="pill-formats"><div class="pill-formats__content"><div class="section__separator"><h3 class="left-bordered-title">PDF Format</h3><div class="section__content"><p class="info--text">View or Download as a PDF file.</p><a href="/doi/pdf/10.1145/3173574.3174221" title="View or Download as a PDF file" class="btn big stretched red"><i aria-hidden="true" class="icon-pdf-file"></i>PDF</a></div></div><div class="section__separator"><h3 class="left-bordered-title">eReader</h3><div class="section__content"><p class="info--text">View online with eReader.</p><a href="/doi/epdf/10.1145/3173574.3174221" title="View online with eReader" class="btn big stretched blue no-margin-top"><i aria-hidden="true" class="icon-eReader"></i>eReader</a></div></div><div class="section__separator de-format hidden"><h3 class="left-bordered-title">Digital Edition</h3><div class="section__content"><p class="info--text">View this article in digital edition.</p><a href="#" title="View Digital Edition" class="btn big stretched blue"><i aria-hidden="true" class="icon-open-book"></i>View Digital Edition</a></div></div></div></div><div id="pill-references"><div class="pill-references__content"></div></div><div id="pill-media"><div class="tab tab--flex"><ul role="tablist" class="rlist tab__nav"><li role="presentation" class="active"><a id="pill-fig__contentcon" href="#pill-fig__content" aria-controls="pill-fig__content" role="tab" data-toggle="tab" title="Figures" aria-selected="true" data-simple-tab-id="" tabindex="0" class="active">Figures</a></li><li role="presentation"><a id="pill-media__contentcon" href="#pill-media__content" aria-controls="pill-media__content" role="tab" data-toggle="tab" title="Other" aria-selected="false" data-simple-tab-id="" tabindex="-1">Other</a></li></ul><div class="pill-figures__content"><ul class="rlist tab__content"><li id="pill-fig__content" aria-labelledby="pill-fig__contentcon" role="tabpanel" aria-hidden="false" tabindex="0" class="tab__pane active"></li><li id="pill-media__content" aria-labelledby="pill-media__contentcon" role="tabpanel" aria-hidden="true" class="tab__pane"><ul class="rlist pill-media__content"></ul></li></ul></div></div></div><div id="pill-tables"><div class="pill-tables__content"></div></div><div id="pill-share"><div class="pill-share__content"><div class="section__separator"><h3 class="left-bordered-title">Share this Publication link</h3><div class="section__content copy__text-wrapper"><fieldset><p id="shareable-link__text" class="copy__text">https://dl.acm.org/doi/10.1145/3173574.3174221</p><button type="submit" class="btn big btn--inverse copy__btn"><i aria-hidden="true" class="icon-pages"></i>Copy Link</button></fieldset></div></div><div class="section__separator"><h3 class="left-bordered-title">Share on Social Media</h3><div class="section__content"><div class="visible-service-name">
+
+
+
+        
+        <!-- Go to www.addthis.com/dashboard to customize your tools --><script type="text/javascript" async="async" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-4faab26f2cff13a7"></script><div class="share__block share__inline-links"><div class="pb-dropzone" data-pb-dropzone="shareBlock" title="shareBlock"></div><span class="sr-only">Share on</span><div class="rlist--inline addthis addthis_toolbox addthis_default_style addthis_32x32_style"><a role="link" class="addthis_button_twitter"></a><a role="link" class="addthis_button_linkedin"></a><a role="link" class="addthis_button_reddit"></a><a role="link" class="addthis_button_facebook"></a><a role="link" class="addthis_button_email"></a><div class="pb-dropzone" data-pb-dropzone="share-additional-links" title="share-additional-links"></div></div></div>
+</div></div></div></div></div></div></div><div class="col-sm-2 pill-section"><div data-stop-on=".more-issue__section" class="pill-icons"><ul class="rlist pill-list"><li title="Information &amp; Authors"><a href="javascript:void(0);" data-slide-target="#pill-information" data-ctrl-res="screen-xlg" data-full-screen="false" title="Information and Authors" data-label="&lt;i class=&quot;icon-Icon_Information&quot;&gt;&lt;/i&gt;Information &amp; Authors" class="w-slide__btn pill-information"><i aria-hidden="true" class="icon-Icon_Information"></i></a></li><li title="Bibliometrics &amp; Citations"><a href="javascript:void(0);" data-slide-target="#pill-metric" data-ctrl-res="screen-xlg" data-full-screen="false" data-label="&lt;i class=&quot;icon-metric &quot;&gt;&lt;/i&gt;Bibliometrics &amp; Citations" title="Bibliometrics and Citations" class="w-slide__btn pill-metric"><i aria-hidden="true" class="icon-metric"></i></a></li><li title="View Options"><a href="javascript:void(0);" data-slide-target="#pill-formats" data-ctrl-res="screen-xlg" data-full-screen="false" title="View Options" data-label="&lt;i class=&quot;icon-views&quot;&gt;&lt;/i&gt;View Options" class="w-slide__btn pill-formats"><i aria-hidden="true" class="icon-views"></i></a></li><li title="References"><a href="javascript:void(0);" data-slide-target="#pill-references" data-ctrl-res="screen-xlg" data-full-screen="false" title="References" data-label="&lt;i class=&quot;icon-Icon_Links-References&quot;&gt;&lt;/i&gt;References" class="w-slide__btn pill-references"><i aria-hidden="true" class="icon-Icon_Links-References"></i><span class="refNum count-bubble">0<span class="sr-only">References</span></span></a></li><li title="Media"><a href="javascript:void(0);" data-slide-target="#pill-media" data-ctrl-res="screen-xlg" data-full-screen="false" title="Media" data-label="&lt;i class=&quot;icon-Icon_Images&quot;&gt;&lt;/i&gt;Media" data-ajaxtarget="#pill-fig__content" data-component="pubAjaxContent" data-action="onResponse" data-ajaxurl="/action/ajaxShowFigures?widgetId=f69d88a8-b404-4aae-83a9-9acea4426d78&amp;ajax=true&amp;doi=10.1145%2F3173574.3174221&amp;pbContext=%3Btopic%3Atopic%3Aconference-collections%26gt%3Bchi%3Bpage%3Astring%3AArticle%2FChapter+View%3BsubPage%3Astring%3AAbstract%3Bwgroup%3Astring%3AACM+Publication+Websites%3Bissue%3Aissue%3Adoi%5C%3A10.1145%2F3173574%3Barticle%3Aarticle%3Adoi%5C%3A10.1145%2F3173574.3174221%3BgroupTopic%3Atopic%3Aacm-pubtype%26gt%3Bproceeding%3Bcsubtype%3Astring%3AConference+Proceedings%3Bwebsite%3Awebsite%3Adl-site%3Bctype%3Astring%3ABook+Content%3Bjournal%3Ajournal%3Aacmconferences%3BpageGroup%3Astring%3APublication+Pages" class="w-slide__btn loadAjax-auto pill-media"><i aria-hidden="true" class="icon-Icon_Images"></i></a></li><li title="Tables"><a href="javascript:void(0);" data-slide-target="#pill-tables" data-ctrl-res="screen-xlg" title="Tables" data-full-screen="false" data-label="&lt;i class=&quot;icon-table&quot;&gt;&lt;/i&gt;Tables" data-ajaxtarget=".pill-tables__content" data-component="pubAjaxContent" data-action="onResponse" data-ajaxurl="/action/ajaxShowTables?widgetId=f69d88a8-b404-4aae-83a9-9acea4426d78&amp;ajax=true&amp;doi=10.1145%2F3173574.3174221&amp;pbContext=%3Btopic%3Atopic%3Aconference-collections%26gt%3Bchi%3Bpage%3Astring%3AArticle%2FChapter+View%3BsubPage%3Astring%3AAbstract%3Bwgroup%3Astring%3AACM+Publication+Websites%3Bissue%3Aissue%3Adoi%5C%3A10.1145%2F3173574%3Barticle%3Aarticle%3Adoi%5C%3A10.1145%2F3173574.3174221%3BgroupTopic%3Atopic%3Aacm-pubtype%26gt%3Bproceeding%3Bcsubtype%3Astring%3AConference+Proceedings%3Bwebsite%3Awebsite%3Adl-site%3Bctype%3Astring%3ABook+Content%3Bjournal%3Ajournal%3Aacmconferences%3BpageGroup%3Astring%3APublication+Pages" class="w-slide__btn loadAjax-auto pill-tables"><i aria-hidden="true" class="icon-table"></i></a></li><li title="Share"><a href="javascript:void(0);" data-slide-target="#pill-share" data-ctrl-res="screen-xlg" data-full-screen="false" title="Share" data-label="&lt;i class=&quot;icon-Icon_Share&quot;&gt;&lt;/i&gt;Share" class="w-slide__btn pill-share"><i aria-hidden="true" class="icon-Icon_Share"></i></a></li></ul></div></div></div></article><div id="figure-viewer" data-ux3-wrapper="figure-viewer" data-ux3-transformed-by="figureInit" data-ux3-role="parent" role="dialog" class="figure-viewer"><div class="figure-viewer__reg__top clearfix"><div class="figure-viewer__top__right"><button class="figure-viewer__label__zoom icon-zoom-out zoom-out hidden"><span class="sr-only">Zoom out</span></button><a title="Open Caption" href="#" class="figure-viewer__ctrl figure-viewer__ctrl__caption"><i aria-hidden="true" class="icon-Icon_Information"></i></a><a href="#" data-ux3-role="controller" role="button" title="close" class="figure-viewer__ctrl figure-viewer__ctrl__close"><i aria-hidden="true" class="icon-cancel-bold"><span class="sr-only">Close Figure Viewer</span></i></a></div><h4 class="figure-viewer__top__center"></h4><div class="figure-viewer__top__left"><a href="#" role="button" title="Browse All" class="figure-viewer__ctrl__browse"><i aria-hidden="true" class="icon-grid-3"><span class="sr-only">Browse All</span></i></a><a href="#" role="button" title="Return" class="figure-viewer__ctrl__return is-hidden"><i aria-hidden="true" class="icon-cancel-bold"><span class="sr-only">Return</span></i></a></div></div><div class="figure-viewer__reg__center"><div class="figure-viewer__cent__left"><div class="figure-viewer__hold__fig"><div class="holder"></div></div><div class="figure-viewer__hold__list"><h3 class="figure-viewer__browse-title"></h3><div class="flex-grid"></div></div></div><div class="figure-viewer__cent__right"><div class="figure-viewer__caption-header"><h3 class="figure-viewer__caption-label">Caption</h3><a title="Close Caption" href="#" class="pull-right figure-viewer__close-caption figure-viewer__ctrl__caption"><i aria-hidden="true" class="icon-cancel-bold"></i></a></div><div class="figure-viewer__caption-wrapper"><div class="figure-viewer__title"><span class="figure-viewer__title__text"></span></div><div class="figure-viewer__hold__figcap"></div></div></div></div></div>
+
+        </div>
+    
+
+
+
+
+        
+        <div class="separated-block--dashed align-center"><a href="/doi/proceedings/10.1145/3173574" style="text-transform: capitalize;" class="btn btn--inverse big">View Table of Contents</a></div>
+
+
+
+
+        
+        <div class="ux-modal-container"><div id="exportCitation" class="modal"><div class="modal__dialog"><div class="modal__header"><button type="button" data-dismiss="modal" class="close"><i aria-hidden="true" class="icon-close_thin"></i></button><h2>Export Citation</h2></div><div class="modal__body"><div class="csl-wrapper copy__text-wrapper"><form action="/action/exportCiteProcCitation" method="post" target="_blank"><input type="hidden" name="content" value=""/><input type="hidden" name="dois" value=""/><input type="hidden" name="format" value=""/><fieldset class="input-group"><label for="citation-format" class="visibility-hidden">Select Citation format</label><select id="citation-format" data-csl-doi="10.1145/3173574.3174221"><option value="bibtex" data-format="bibTex">BibTeX</option><option value="endNote" data-format="endNote">EndNote</option><option value="acm" data-format="text">ACM Ref</option></select><span class="select-arrow"><i class="icon-bottom-arrow"></i></span></fieldset><pre class="copy__text csl-response"></pre><div id="export-warning"></div><div class="pull-right"><ul class="rlist--inline separator"><li><a href="javascript:void(0)" role="menuitem" title="Download citation" class="download__btn disabled"><label class="visibility-hidden">Download citation</label><i aria-hidden="true" class="icon-Icon_Download"></i></a></li><li><a href="javascript:void(0)" role="menuitem" title="Copy citation" class="copy__btn disabled"><label class="visibility-hidden">Copy citation</label><i aria-hidden="true" class="icon-pages"></i><input type="hidden" id="doisLimitNumber" value="-1"/></a></li></ul></div></form></div></div></div></div></div>
+</main>
+
+
+
+
+        
+        <footer class="footer">
+
+
+
+        
+        <div class="back-to-top clearfix">
+    <i class="icon-arrow_u_p"></i>
+</div>
+
+
+
+
+        
+        <div class="footer-top">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="ux3-layout-widget" data-widget-id="81a18a14-d709-41fd-9bb6-25a7fc1e13df" class="container">
+        
+
+
+
+        
+        <div class="row sitemap">
+
+
+
+        
+        <div class="col-sm-2 col-xs-6 sitemap__column">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3HTMLWidget" data-widget-id="5b00ef28-f63b-4518-bd06-da82035f86ca" class="sitemap__data">
+        
+
+
+
+        
+        <h6>Categories</h6>
+<ul class="rlist">
+    <li><a href="/journals">Journals</a></li>
+    <li><a href="/magazines">Magazines</a></li>
+    <li><a href="/acmbooks">Books</a></li>
+    <li><a href="/proceedings">Proceedings</a></li>
+    <li><a href="/sigs">SIGs</a></li>
+    <li><a href="/conferences">Conferences</a></li>
+    <li><a href="/collections">Collections</a></li>
+    <li><a href="/people">People</a></li>
+</ul>
+
+        </div>
+    
+</div><div class="col-sm-4 col-xs-6 sitemap__column">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3HTMLWidget" data-widget-id="731f98d3-e996-490d-a071-e9b966b32e2d" class="sitemap__data">
+        
+
+
+
+        
+        <h6>About</h6>
+<ul class="rlist">
+    <li><a href="/about">About ACM Digital Library</a></li>
+    <li><a href="/about/access">Subscription Information</a></li>
+    <li><a href="https://www.acm.org/publications/authors/information-for-authors">Author Guidelines</a></li>
+    <li><a href="/about/access">Using ACM Digital Library</a></li>
+    <li><a href="/about/content#sec2">All Holdings within the ACM Digital Library</a></li>
+    <li><a href="/ccs">ACM Computing Classification System</a></li>
+</ul>
+
+        </div>
+    
+</div><div class="col-sm-3 col-xs-6 sitemap__column">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3HTMLWidget" data-widget-id="d4ed040d-22e8-481c-a7ef-0cac141f5246" class="sitemap__data">
+        
+
+
+
+        
+        <h6>Join</h6>
+<ul class="rlist">
+    <li><a href="https://www.acm.org/membership/join">Join ACM</a></li>
+    <li><a href="https://www.acm.org/special-interest-groups/join">Join SIGs</a></li>
+    <li><a href="https://www.acm.org/publications/subscribe">Subscribe to Publications</a></li>
+    <li><a href="https://libraries.acm.org/">Institutions and Libraries</a></li>
+</ul>
+
+        </div>
+    
+</div><div class="col-sm-3 col-xs-6 sitemap__column">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3HTMLWidget" data-widget-id="4a649bf1-cf3f-472c-b764-dc3ab0cf4310" class="sitemap__data">
+        
+
+
+
+        
+        <h6>Connect</h6>
+<ul class="rlist social-media__connect">
+    <li><a href="/cdn-cgi/l/email-protection#76121a5b0213171b361e075817151b58190411" title="icon-mail"><i class="icon-Icon_mail" aria-hidden="true"></i><span>Contact</span></a></li>
+    <li><a href="https://www.facebook.com/AssociationForComputingMachinery/" title="icon-facebook"><i class="icon-facebook" aria-hidden="true"></i><span>Facebook</span></a></li>
+    <li><a href="https://twitter.com/acmdl" title="icon-twitter"><i class="icon-twitter" aria-hidden="true"></i><span>Twitter</span></a></li>
+    <li><a href="https://www.linkedin.com/company/association-for-computing-machinery/" title="icon-linkedin"><i class="icon-linkedin" aria-hidden="true"></i><span>Linkedin</span></a></li>
+    <!--li><a href="#" title="icon-Rss"><i class="icon-Rss" aria-hidden="true"></i><span>RSS</span></a></li-->
+</ul>
+
+        </div>
+    
+</div>
+</div>
+
+        </div>
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="ux3-layout-widget" data-widget-id="6e6da9b7-371e-4ea0-827e-8de5915b8cd5" class="footer-bottom text-onDark">
+        
+
+
+
+        
+        <div class="container"><div class="row"><div class="col-md-8 col-sm-6 footer__copyright-wrapper">
+
+
+
+        
+        <div class="copyright">The ACM Digital Library is published by the Association for Computing Machinery. Copyright © 2020 ACM, Inc.</div>
+<ul class="rlist--inline">
+    <li><a href="https://libraries.acm.org/digital-library/policies#anchor3">Terms of Usage</a></li>
+    <li><a href="https://www.acm.org/about-acm/privacy-policy">Privacy Policy</a></li>
+    <li><a href="https://www.acm.org/code-of-ethics">Code of Ethics</a></li>
+</ul>
+</div><div class="col-md-4 col-sm-6 footer__logos-wrapper">
+
+
+
+        
+        <div class="logos">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="ux3-general-image" data-widget-id="42d543b3-ff9d-4f92-bf03-6d1fa00da8c6" class="footer__logo1">
+        
+
+
+
+        
+        <a href="/" title="ACM Digital Library Logo"><img id="" alt="ACM Digital Library Logo" src="/pb-assets/images/logo1-1545045194317.png"/></a>
+
+        </div>
+    
+
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="ux3-general-image" data-widget-id="5a0bc5df-cd95-408f-8ae5-8b1f40746519" class="footer__logo2">
+        
+
+
+
+        
+        <a href="https://www.acm.org" title="ACM Logo"><img id="" alt="ACM Logo" src="/pb-assets/images/logo2-1545045488167.png"/></a>
+
+        </div>
+    
+</div>
+</div></div></div>
+
+        </div>
+    
+
+
+
+
+        
+        <!-- Mopinion Pastea.se  start --><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">(function(){var id="7zt4vp6rxi2bbpxuy9yzabob4fy2enwmumr";var js=document.createElement("script");var pbBtn=document.querySelector('.admin-bar-disclosure');if(!window.PB){js.setAttribute("src","//deploy.mopinion.com/js/pastease.js");document.getElementsByTagName("head")[0].appendChild(js);var t=setInterval(function(){try{new Pastease.load(id);clearInterval(t)}catch(e){}},50)}})();
+    </script><!-- Mopinion Pastea.se end -->
+</footer>
+
+
+
+
+        
+        <script type="text/javascript">
+(function(h,o,t,j,a,r){
+    h.hj=h.hj||function()
+    
+    {(h.hj.q=h.hj.q||[]).push(arguments)}
+    ;
+    h._hjSettings={hjid:1290436,hjsv:6};
+    a=o.getElementsByTagName('head')[0];
+    r=o.createElement('script');r.async=1;
+    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+    a.appendChild(r);
+})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+
+
+
+        
+        <script type="text/javascript">
+    (function (w, d) {
+    var b = d.getElementsByTagName('body')[0];
+    var s = d.createElement("script");
+    var v = !("IntersectionObserver" in w) ? "8.17.0" : "10.19.0";
+    s.async = true; // This includes the script as async. See the "recipes" section for more information about async loading of LazyLoad.
+    s.src = "https://cdn.jsdelivr.net/npm/vanilla-lazyload@" + v + "/dist/lazyload.min.js";
+    w.lazyLoadOptions = {elements_selector: ".lazy", "class_loaded": "image-lazy-loaded"};
+    b.appendChild(s);
+}(window, document));
+</script>
+
+
+
+
+        
+        
+
+
+
+
+        
+        <div class="cookiePolicy-popup"><div class="cookiePolicy-popup__header"><i aria-hidden="true" class="icon-cookie"></i><h5 class="cookiePolicy-popup__title">About Cookies On This Site</h5></div><div class="cookiePolicy-popup__body clearfix"><p><p>We use cookies to ensure that we give you the best experience on our website.</p>
+<p><a href="https://www.acm.org/privacy-policy" class="blue link">Learn more</a></p></p><a href="#" class="btn blue cookiePolicy-popup__close pull-right">Got it!</a></div></div>
+
+
+
+
+        
+        
+
+
+
+        
+    
+
+        </div>
+    </div>
+
+
+
+
+    <script>if (typeof define !== 'undefined' && define.amd)
+    define.amd = false</script><script src="/products/acm/releasedAssets/js/main.bundle-9ac1359d6b0cbbd98171.js"></script><script>(function (w, d) {
+    var b = d.getElementsByTagName('body')[0];
+    var s = d.createElement("script");
+    var v = !("IntersectionObserver" in w) ? "8.17.0" : "10.19.0";
+    s.async = true; // This includes the script as async. See the "recipes" section for more information about async loading of LazyLoad.
+    s.src = "https://cdn.jsdelivr.net/npm/vanilla-lazyload@" + v + "/dist/lazyload.min.js";
+    w.lazyLoadOptions = {elements_selector: ".lazy", "class_loaded": "image-lazy-loaded"};
+    b.appendChild(s);
+}(window, document));</script>
+
+
+<script type="text/javascript" src="/wro/j3i3~product.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="Animatronic shader lamps avatars"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="Applications such as telepresence and training involve the display of real or synthetic humans to multiple viewers. When attempting to render the humans with conventional displays, non-verbal cues..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/15/2.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="Animatronic shader lamps avatars"/>
+
+    <meta name="dc.source" content="Virtual Reality 2010 15:2"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2010-10-12"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2010 Springer-Verlag London Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="Applications such as telepresence and training involve the display of real or synthetic humans to multiple viewers. When attempting to render the humans with conventional displays, non-verbal cues such as head pose, gaze direction, body posture, and facial expression are difficult to convey correctly to all viewers. In addition, a framed image of a human conveys only a limited physical sense of presence&#8212;primarily through the display&#8217;s location. While progress continues on articulated robots that mimic humans, the focus has been on the motion and behavior of the robots rather than on their appearance. We introduce a new approach for robotic avatars of real people: the use of cameras and projectors to capture and map both the dynamic motion and the appearance of a real person onto a humanoid animatronic model. We call these devices animatronic Shader Lamps Avatars (SLA). We present a proof-of-concept prototype comprised of a camera, a tracking system, a digital projector, and a life-sized styrofoam head mounted on a pan-tilt unit. The system captures imagery of a moving, talking user and maps the appearance and motion onto the animatronic SLA, delivering a dynamic, real-time representation of the user to multiple viewers."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2010-10-12"/>
+
+    <meta name="prism.volume" content="15"/>
+
+    <meta name="prism.number" content="2"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="225"/>
+
+    <meta name="prism.endingPage" content="238"/>
+
+    <meta name="prism.copyright" content="2010 Springer-Verlag London Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-010-0175-5"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-010-0175-5"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-010-0175-5.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-010-0175-5"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="Animatronic shader lamps avatars"/>
+
+    <meta name="citation_volume" content="15"/>
+
+    <meta name="citation_issue" content="2"/>
+
+    <meta name="citation_publication_date" content="2011/06"/>
+
+    <meta name="citation_online_date" content="2010/10/12"/>
+
+    <meta name="citation_firstpage" content="225"/>
+
+    <meta name="citation_lastpage" content="238"/>
+
+    <meta name="citation_article_type" content="SI: Augmented Reality"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-010-0175-5"/>
+
+    <meta name="DOI" content="10.1007/s10055-010-0175-5"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-010-0175-5"/>
+
+    <meta name="description" content="Applications such as telepresence and training involve the display of real or synthetic humans to multiple viewers. When attempting to render the humans wi"/>
+
+    <meta name="dc.creator" content="Peter Lincoln"/>
+
+    <meta name="dc.creator" content="Greg Welch"/>
+
+    <meta name="dc.creator" content="Andrew Nashel"/>
+
+    <meta name="dc.creator" content="Andrei State"/>
+
+    <meta name="dc.creator" content="Adrian Ilie"/>
+
+    <meta name="dc.creator" content="Henry Fuchs"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Int J Imaging Syst Technol; citation_title=Face tracking for model-based coding and face animation; citation_author=J Ahlberg, R Forchheimer; citation_volume=13; citation_issue=1; citation_publication_date=2003; citation_pages=8-22; citation_doi=10.1002/ima.10042; citation_id=CR1"/>
+
+    <meta name="citation_reference" content="AIST (2009) Successful development of a robot with appearance and performance similar to humans. 
+                    http://www.aist.go.jp/aist_e/latest_research/2009/20090513/20090513.html
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="citation_title=Gaze and mutual gaze/Michael Argyle and Mark Cook; citation_publication_date=1976; citation_id=CR3; citation_author=M Argyle; citation_author=M Cook; citation_publisher=Cambridge University Press, Cambridge, Eng."/>
+
+    <meta name="citation_reference" content="Bandyopadhyay D, Raskar R, Fuchs H (2001) Dynamic shader lamps: painting on real objects. In: Proceedings of IEEE and ACM international symposium on augmented reality (ISAR &#8217;01). IEEE Computer Society, New York, NY, USA, pp 207&#8211;216"/>
+
+    <meta name="citation_reference" content="Criminisi A, Shotton J, Blake A, Torr P (2003) Gaze manipulation for one-to-one teleconferencing. Computer Vision. IEEE International Conference on 1:191"/>
+
+    <meta name="citation_reference" content="DeAndrea JL (2009) AskART. 
+                    http://www.askart.com/askart/d/john_louis_de_andrea/john_louis_de_andrea.aspx
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="Epstein R (2006) My date with a robot. Scientific American Mind, June/July, pp 68&#8211;73"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Neuroreport; citation_title=Does your gaze direction and head orientation shift my visual attention?; citation_author=JK Hietanen; citation_volume=10; citation_issue=16; citation_publication_date=1999; citation_pages=3443-3447; citation_doi=10.1097/00001756-199911080-00033; citation_id=CR8"/>
+
+    <meta name="citation_reference" content="Honda Motor Co., Ltd (2009) Honda Worldwide&#8212;ASIMO. 
+                    http://world.honda.com/ASIMO/
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="Huang TS, Tao H (2001) Visual face tracking and its application to 3d model-based video coding. In: Picture coding symposium, pp 57&#8211;60"/>
+
+    <meta name="citation_reference" content="Ilie A (2009) Camera and projector calibrator. 
+                    http://www.cs.unc.edu/~adyilie/Research/CameraCalibrator/
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="Ishiguro H (2009) Intelligent robotics laboratory, Osaka University.
+                    http://www.is.sys.es.osaka-u.ac.jp/research/index.en.html
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="Jones A, McDowall I, Yamada H, Bolas M, Debevec P (2007) Rendering for an interactive 360^ light field display. In: SIGGRAPH &#8217;07: ACM SIGGRAPH 2007 papers, vol 26. ACM, New York, NY, USA, pp 40&#8211;1&#8211;40&#8211;10"/>
+
+    <meta name="citation_reference" content="Jones A, Lang M, Fyffe G, Yu X, Busch J, McDowall I, Bolas M, Debevec P (2009) Achieving eye contact in a one-to-many 3d video teleconferencing system. In: SIGGRAPH &#8217;09: ACM SIGGRAPH 2009 papers. ACM, New York, NY, USA, pp 1&#8211;8"/>
+
+    <meta name="citation_reference" content="Kerse D, Regenbrecht H, Purvis M (2005) Telepresence and user-initiated control. In: Proceedings of the 2005 international conference on Augmented tele-existence. ACM, p 240"/>
+
+    <meta name="citation_reference" content="Takanishi Laboratory (2009) Various face shape expression robot. 
+                    http://www.takanishi.mech.waseda.ac.jp/top/research/docomo/index.htm
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="Lincoln P, Nashel A, Ilie A, Towles H, Welch G, Fuchs H (2009) Multi-view lenticular display for group teleconferencing. Immerscom"/>
+
+    <meta name="citation_reference" content="LOOXIS GmbH (2009) FaceWorx. 
+                    http://www.looxis.com/en/k75.Downloads_Bits-and-Bytes-to-download.htm
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="citation_journal_title=Energy; citation_title=The uncanny valley; citation_author=M Mori; citation_volume=7; citation_issue=4; citation_publication_date=1970; citation_pages=33-35; citation_id=CR19"/>
+
+    <meta name="citation_reference" content="Nguyen D, Canny J (2005) Multiview: spatially faithful group video conferencing. In: CHI &#8217;05: Proceedings of the SIGCHI conference on human factors in computing systems. ACM, New York, NY, USA, pp 799&#8211;808"/>
+
+    <meta name="citation_reference" content="Nguyen DT, Canny J (2007) Multiview: improving trust in group video conferencing through spatial faithfulness. In: CHI &#8217;07: Proceedings of the SIGCHI conference on human factors in computing systems. ACM, New York, NY, USA, pp 1465&#8211;1474"/>
+
+    <meta name="citation_reference" content="OpenCV (2009) The OpenCV library. 
+                    http://sourceforge.net/projects/opencvlibrary/
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="citation_journal_title=Auton Robots; citation_title=Social tele-embodiment: understanding presence; citation_author=E Paulos, J Canny; citation_volume=11; citation_issue=1; citation_publication_date=2001; citation_pages=87-95; citation_doi=10.1023/A:1011264330469; citation_id=CR23"/>
+
+    <meta name="citation_reference" content="Raskar R, Welch G, Chen W-C (1999) Table-top spatially-augmented reality: bringing physical models to life with projected imagery. In: IWAR &#8217;99: Proceedings of the 2nd IEEE and ACM international workshop on augmented reality. IEEE Computer Society, Washington, DC, USA, p 64"/>
+
+    <meta name="citation_reference" content="Raskar R, Welch G, Low K-L, Bandyopadhyay D (2001) Shader lamps: animating real objects with image-based illumination. In: Eurographics workshop on rendering"/>
+
+    <meta name="citation_reference" content="Schreer O, Feldmann I, Atzpadin N, Eisert P, Kauff P, Belt H (2008) 3DPresence-a system concept for multi-user and multi-party immersive 3D videoconferencing, CVMP 2008, pp 1&#8211;8"/>
+
+    <meta name="citation_reference" content="Seeing Machines (2009) faceAPI. 
+                    http://www.seeingmachines.com/product/faceapi/
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="citation_journal_title=ACM Trans Graph; citation_title=Computer puppetry: an importance-based approach; citation_author=HJ Shin, J Lee, SY Shin, M Gleicher; citation_volume=20; citation_issue=2; citation_publication_date=2001; citation_pages=67-94; citation_doi=10.1145/502122.502123; citation_id=CR28"/>
+
+    <meta name="citation_reference" content="State A (2007) Exact eye contact with virtual humans. In: ICCV-HCI, pp 138&#8211;145"/>
+
+    <meta name="citation_reference" content="Tachi S (2009) 
+                    http://projects.tachilab.org/telesar2/
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="citation_journal_title=Int J HR; citation_title=Mutual telexistence system using retro-reflective projection technology; citation_author=S Tachi, N Kawakami, M Inami, Y Zaitsu; citation_volume=1; citation_issue=1; citation_publication_date=2004; citation_pages=45-64; citation_id=CR31"/>
+
+    <meta name="citation_reference" content="Wikipedia (2010) Cisco telepresence. 
+                    http://en.wikipedia.org/wiki/Cisco_TelePresence
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="Woodworth C, Golden G, Gitlin R (1993) An integrated multimedia terminal for teleconferencing. In: Global telecommunications conference, 1993, including a communications theory mini-conference. Technical Program Conference Record, IEEE in Houston. GLOBECOM &#8217;93., IEEE, vol 1. pp 399&#8211;405"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Visual Comput; citation_title=Hypermask: talking head projected onto real object; citation_author=T Yotsukura, F Nielsen, K Binsted, S Morishima, CS Pinhanez; citation_volume=18; citation_issue=2; citation_publication_date=2002; citation_pages=111-120; citation_doi=10.1007/s003710100140; citation_id=CR34"/>
+
+    <meta name="citation_author" content="Peter Lincoln"/>
+
+    <meta name="citation_author_email" content="plincoln@cs.unc.edu"/>
+
+    <meta name="citation_author_institution" content="Department of Computer Science, The University of North Carolina at Chapel Hill, Chapel Hill, USA"/>
+
+    <meta name="citation_author" content="Greg Welch"/>
+
+    <meta name="citation_author_email" content="welch@cs.unc.edu"/>
+
+    <meta name="citation_author_institution" content="Department of Computer Science, The University of North Carolina at Chapel Hill, Chapel Hill, USA"/>
+
+    <meta name="citation_author" content="Andrew Nashel"/>
+
+    <meta name="citation_author_email" content="nashel@cs.unc.edu"/>
+
+    <meta name="citation_author_institution" content="Department of Computer Science, The University of North Carolina at Chapel Hill, Chapel Hill, USA"/>
+
+    <meta name="citation_author" content="Andrei State"/>
+
+    <meta name="citation_author_email" content="andrei@cs.unc.edu"/>
+
+    <meta name="citation_author_institution" content="Department of Computer Science, The University of North Carolina at Chapel Hill, Chapel Hill, USA"/>
+
+    <meta name="citation_author" content="Adrian Ilie"/>
+
+    <meta name="citation_author_email" content="adyilie@cs.unc.edu"/>
+
+    <meta name="citation_author_institution" content="Department of Computer Science, The University of North Carolina at Chapel Hill, Chapel Hill, USA"/>
+
+    <meta name="citation_author" content="Henry Fuchs"/>
+
+    <meta name="citation_author_email" content="fuchs@cs.unc.edu"/>
+
+    <meta name="citation_author_institution" content="Department of Computer Science, The University of North Carolina at Chapel Hill, Chapel Hill, USA"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-010-0175-5&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2011/06/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-010-0175-5"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="Animatronic shader lamps avatars"/>
+        <meta property="og:description" content="Applications such as telepresence and training involve the display of real or synthetic humans to multiple viewers. When attempting to render the humans with conventional displays, non-verbal cues such as head pose, gaze direction, body posture, and facial expression are difficult to convey correctly to all viewers. In addition, a framed image of a human conveys only a limited physical sense of presence—primarily through the display’s location. While progress continues on articulated robots that mimic humans, the focus has been on the motion and behavior of the robots rather than on their appearance. We introduce a new approach for robotic avatars of real people: the use of cameras and projectors to capture and map both the dynamic motion and the appearance of a real person onto a humanoid animatronic model. We call these devices animatronic Shader Lamps Avatars (SLA). We present a proof-of-concept prototype comprised of a camera, a tracking system, a digital projector, and a life-sized styrofoam head mounted on a pan-tilt unit. The system captures imagery of a moving, talking user and maps the appearance and motion onto the animatronic SLA, delivering a dynamic, real-time representation of the user to multiple viewers."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>Animatronic shader lamps avatars | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-010-0175-5","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Telepresence, Avatar, Shader lamps, Teleconferencing, Conferencing, Animatronic","kwrd":["Telepresence","Avatar","Shader_lamps","Teleconferencing","Conferencing","Animatronic"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-010-0175-5","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-010-0175-5","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=175;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-010-0175-5">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            Animatronic shader lamps avatars
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-010-0175-5.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-010-0175-5.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">SI: Augmented Reality</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2010-10-12" itemprop="datePublished">12 October 2010</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">Animatronic shader lamps avatars</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Peter-Lincoln" data-author-popup="auth-Peter-Lincoln" data-corresp-id="c1">Peter Lincoln<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="The University of North Carolina at Chapel Hill" /><meta itemprop="address" content="grid.10698.36, 0000000122483208, Department of Computer Science, The University of North Carolina at Chapel Hill, Chapel Hill, NC, USA" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Greg-Welch" data-author-popup="auth-Greg-Welch">Greg Welch</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="The University of North Carolina at Chapel Hill" /><meta itemprop="address" content="grid.10698.36, 0000000122483208, Department of Computer Science, The University of North Carolina at Chapel Hill, Chapel Hill, NC, USA" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Andrew-Nashel" data-author-popup="auth-Andrew-Nashel">Andrew Nashel</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="The University of North Carolina at Chapel Hill" /><meta itemprop="address" content="grid.10698.36, 0000000122483208, Department of Computer Science, The University of North Carolina at Chapel Hill, Chapel Hill, NC, USA" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Andrei-State" data-author-popup="auth-Andrei-State">Andrei State</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="The University of North Carolina at Chapel Hill" /><meta itemprop="address" content="grid.10698.36, 0000000122483208, Department of Computer Science, The University of North Carolina at Chapel Hill, Chapel Hill, NC, USA" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Adrian-Ilie" data-author-popup="auth-Adrian-Ilie">Adrian Ilie</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="The University of North Carolina at Chapel Hill" /><meta itemprop="address" content="grid.10698.36, 0000000122483208, Department of Computer Science, The University of North Carolina at Chapel Hill, Chapel Hill, NC, USA" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Henry-Fuchs" data-author-popup="auth-Henry-Fuchs">Henry Fuchs</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="The University of North Carolina at Chapel Hill" /><meta itemprop="address" content="grid.10698.36, 0000000122483208, Department of Computer Science, The University of North Carolina at Chapel Hill, Chapel Hill, NC, USA" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 15</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">225</span>–<span itemprop="pageEnd">238</span>(<span data-test="article-publication-year">2011</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">332 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">13 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                    
+                        <li class="c-article-metrics-bar__item">
+                            <p class="c-article-metrics-bar__count">3 <span class="c-article-metrics-bar__label">Altmetric</span></p>
+                        </li>
+                    
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-010-0175-5/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>Applications such as telepresence and training involve the display of real or synthetic humans to multiple viewers. When attempting to render the humans with conventional displays, non-verbal cues such as head pose, gaze direction, body posture, and facial expression are difficult to convey correctly to all viewers. In addition, a framed image of a human conveys only a limited physical sense of presence—primarily through the display’s location. While progress continues on articulated robots that mimic humans, the focus has been on the motion and behavior of the robots rather than on their appearance. We introduce a new approach for robotic avatars of real people: the use of cameras and projectors to capture and map both the dynamic motion and the appearance of a real person onto a humanoid animatronic model. We call these devices <i>animatronic Shader Lamps Avatars</i> (SLA). We present a proof-of-concept prototype comprised of a camera, a tracking system, a digital projector, and a life-sized styrofoam head mounted on a pan-tilt unit. The system captures imagery of a moving, talking user and maps the appearance and motion onto the animatronic SLA, delivering a dynamic, real-time representation of the user to multiple viewers.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Introduction</h2><div class="c-article-section__content" id="Sec1-content"><p>The term “telepresence” describes technologies that enable activities as diverse as remote manipulation, communication, and collaboration. Today, it is a moniker embraced by companies building commercial video teleconferencing systems and by researchers exploring immersive collaboration between one or more participants at multiple sites. In a collaborative telepresence system, each user needs some way to perceive remote sites, and in turn be perceived by participants at those sites. In this paper, we focus primarily on the latter challenge—how a user is <i>seen</i> by remote participants, as opposed to how he or she <i>sees</i> the remote participants.</p><p>There are numerous approaches to visually simulating the presence of a remote person. The most common is to use 2D video imagery; however, such imagery lacks a number of spatial and perceptual cues, especially when presented on static displays. If the user gazes into the camera, then all participants think the user is looking at them individually; if instead the user gazes elsewhere, no one thinks the user is gazing at them, but each may think the user is gazing at a neighboring participant. These 2D displays can be augmented with pan-tilt units in order to provide some amount of gaze awareness (Kerse et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Kerse D, Regenbrecht H, Purvis M (2005) Telepresence and user-initiated control. In: Proceedings of the 2005 international conference on Augmented tele-existence. ACM, p 240" href="/article/10.1007/s10055-010-0175-5#ref-CR15" id="ref-link-section-d65089e381">2005</a>; Paulos and Canny <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Paulos E, Canny J (2001) Social tele-embodiment: understanding presence. Auton Robots 11(1):87–95" href="/article/10.1007/s10055-010-0175-5#ref-CR23" id="ref-link-section-d65089e384">2001</a>), the same shared eye gaze issue continue to apply as in the static case. Even with 3D captured or rendered imagery and 3D or view-dependent displays, it is difficult to convey information such as body posture and gaze direction to multiple viewers. Such information can single out the intended recipient of a statement, convey interest or attention (or lack thereof), and direct facial expressions and other non-verbal communication. To convey that information to specific individuals, each participant must see the remote person from his or her own viewpoint.</p><h3 class="c-article__sub-heading" id="Sec2">Providing distinct views</h3><p>Providing distinct, view-dependent imagery of a person to multiple observers poses several challenges. One approach is to provide separate tracked and multiplexed views to each observer, such that the remote person appears in one common location. However, approaches involving head-worn displays or stereo glasses are usually unacceptable, given the importance of eye contact between all (local and remote) participants.</p><p>Another approach is to use <i>multi-view</i> displays. These displays can be realized with various technologies and approaches; however, each has limitations that restrict its utility:
+</p><ul class="u-list-style-bullet">
+                    <li>
+                      <p>“Personal” (per-user) projectors combined with retroreflective surfaces at the locations corresponding to the remote users (Nguyen and Canny <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Nguyen D, Canny J (2005) Multiview: spatially faithful group video conferencing. In: CHI ’05: Proceedings of the SIGCHI conference on human factors in computing systems. ACM, New York, NY, USA, pp 799–808" href="/article/10.1007/s10055-010-0175-5#ref-CR20" id="ref-link-section-d65089e405">2005</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Nguyen DT, Canny J (2007) Multiview: improving trust in group video conferencing through spatial faithfulness. In: CHI ’07: Proceedings of the SIGCHI conference on human factors in computing systems. ACM, New York, NY, USA, pp 1465–1474" href="/article/10.1007/s10055-010-0175-5#ref-CR21" id="ref-link-section-d65089e408">2007</a>). Advantages: arbitrary placement of distinct viewing zones. Limitations: no stereo; each projector needs to remain physically very close to its observer.</p>
+                    </li>
+                    <li>
+                      <p>Wide-angle lenticular sheets placed over conventional displays to assign a subset of the display pixels to each observer (Lincoln et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Lincoln P, Nashel A, Ilie A, Towles H, Welch G, Fuchs H (2009) Multi-view lenticular display for group teleconferencing. Immerscom" href="/article/10.1007/s10055-010-0175-5#ref-CR17" id="ref-link-section-d65089e417">2009</a>; Schreer et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Schreer O, Feldmann I, Atzpadin N, Eisert P, Kauff P, Belt H (2008) 3DPresence-a system concept for multi-user and multi-party immersive 3D videoconferencing, CVMP 2008, pp 1–8" href="/article/10.1007/s10055-010-0175-5#ref-CR26" id="ref-link-section-d65089e420">2008</a>). Advantages: lateral multi-view with or without stereo. Limitations: difficult to separate distinct images; noticeable blurring between views; fixed viewing positions; approach sometimes trades limited range of stereo for a wider range of individual views.</p>
+                    </li>
+                    <li>
+                      <p>High-speed projectors combined with spinning mirrors used to create 360° light field displays (Jones et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Jones A, Lang M, Fyffe G, Yu X, Busch J, McDowall I, Bolas M, Debevec P (2009) Achieving eye contact in a one-to-many 3d video teleconferencing system. In: SIGGRAPH ’09: ACM SIGGRAPH 2009 papers. ACM, New York, NY, USA, pp 1–8" href="/article/10.1007/s10055-010-0175-5#ref-CR14" id="ref-link-section-d65089e429">2007</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Jones A, McDowall I, Yamada H, Bolas M, Debevec P (2007) Rendering for an interactive 360^ light field display. In: SIGGRAPH ’07: ACM SIGGRAPH 2007 papers, vol 26. ACM, New York, NY, USA, pp 40–1–40–10" href="/article/10.1007/s10055-010-0175-5#ref-CR13" id="ref-link-section-d65089e432">2009</a>). Advantages: lateral multi-view with stereo. Limitations: small physical size due to spinning mechanism; binary/few colors due to dividing the imagery over 360°; no appropriate image change as viewer moves head vertically or radially.</p>
+                    </li>
+                  </ul>
+                        <h3 class="c-article__sub-heading" id="Sec3">Eye contact</h3><p>Eye contact is an essential ingredient of human interaction (Argyle and Cook <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1976" title="Argyle M, Cook M (1976) Gaze and mutual gaze/Michael Argyle and Mark Cook. Cambridge University Press, Cambridge, Eng., New York" href="/article/10.1007/s10055-010-0175-5#ref-CR3" id="ref-link-section-d65089e446">1976</a>) and as such merits special attention in teleconferencing applications. Conventional teleconferencing systems based on video cameras and video displays generally do not offer eye contact due to the inherent difficulty of physically colocating the display showing the remote participant(s) and the camera(s) capturing imagery of the local participants. High-end products such as Cisco Telepresence (Wikipedia <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2010" title="Wikipedia (2010) Cisco telepresence. &#xA;                    http://en.wikipedia.org/wiki/Cisco_TelePresence&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-010-0175-5#ref-CR32" id="ref-link-section-d65089e449">2010</a>) alleviate this problem through a display-camera setup that keeps the distance between the acquisition camera and the screen location showing the remote participant’s eyes at a minimum. Other solutions include optical beam splitters that virtually colocate camera and display (Woodworth et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1993" title="Woodworth C, Golden G, Gitlin R (1993) An integrated multimedia terminal for teleconferencing. In: Global telecommunications conference, 1993, including a communications theory mini-conference. Technical Program Conference Record, IEEE in Houston. GLOBECOM ’93., IEEE, vol 1. pp 399–405" href="/article/10.1007/s10055-010-0175-5#ref-CR33" id="ref-link-section-d65089e452">1993</a>), and even automatic, real-time manipulation of remote users’ video images, aiming to reorient the remote user’s eyes and face toward the camera (Criminisi et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Criminisi A, Shotton J, Blake A, Torr P (2003) Gaze manipulation for one-to-one teleconferencing. Computer Vision. IEEE International Conference on 1:191" href="/article/10.1007/s10055-010-0175-5#ref-CR5" id="ref-link-section-d65089e455">2003</a>). The addition of stereoscopy and/or head tracking further increases the complexity of such approaches.</p><p>Our approach (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0175-5#Fig1">1</a>) makes the approach inherently asymmetric: while the human participants can obviously look the SLA in the eyes, the SLA can only appear to be making eye contact with those participants if correctly matched imagery acquired from the SLA’s point of view is displayed at the SLA user’s location. “Correctly matched” implies imagery that is presented to the SLA user in such a way that when the user looks at a distant human participant’s image—whether by directly facing that participant’s image or merely out of the corner of an eye—the SLA user’s head and eye poses are remapped onto the SLA such as to recreate at the distant location the geometry of eye contact (State <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="State A (2007) Exact eye contact with virtual humans. In: ICCV-HCI, pp 138–145" href="/article/10.1007/s10055-010-0175-5#ref-CR29" id="ref-link-section-d65089e464">2007</a>) between the SLA and the targeted human participant. Furthermore, “correctly matched” also requires that the imagery for the SLA user be acquired from the points of view of the SLA’s eyes. One way to accomplish this is to mount miniature video cameras within the SLA’s eyes. While we do not do that (yet), we developed a preliminary approximate approach, described in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0175-5#Sec10">3.2</a>.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0175-5/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0175-5/MediaObjects/10055_2010_175_Fig1_HTML.gif?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0175-5/MediaObjects/10055_2010_175_Fig1_HTML.gif" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p>The upper images conceptually illustrate one possible use of animatronic Shader Lamps Avatars (SLA): full-duplex telepresence for medical consultation. The physician in <b>a</b> interacts with a remote patient and therapist in <b>b</b> by means of a camera-equipped SLA. The SLA allows the physician to both <i>see</i> and be <i>seen</i> by the patient and therapist. The lower two figures show our current bi-directional proof-of-concept prototype. The user in <b>c</b> wears a tracking system and is imaged by a video camera (<i>inset</i> and <i>red arrow</i>). In <b>d</b>, we show the Avatar of the user, consisting of a styrofoam head mounted on a pan-tilt unit and illuminated by a projector. The setup in <b>c</b> also includes a two-projector panoramic view of the Avatar site, acquired by two colocated cameras mounted above the styrofoam head in d (<i>inset</i> and <i>green arrow</i>)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0175-5/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h3 class="c-article__sub-heading" id="Sec4">Shader lamps avatars (overview)</h3><p>The approach we describe here is to use cameras and projectors to capture and map both the dynamic motion and the appearance of a real person onto a human-shaped display surface. We call these devices <i>animatronic Shader Lamps Avatars</i> (SLA). The approach intrinsically provides depth cues, distinct views, and improved gaze cues. This one-to-many approach also scales to any number of observers, who do not need to be head tracked. To convey appearance, we capture live video imagery of a person, warp the imagery, and use Shader Lamps techniques (Bandyopadhyay et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Bandyopadhyay D, Raskar R, Fuchs H (2001) Dynamic shader lamps: painting on real objects. In: Proceedings of IEEE and ACM international symposium on augmented reality (ISAR ’01). IEEE Computer Society, New York, NY, USA, pp 207–216" href="/article/10.1007/s10055-010-0175-5#ref-CR4" id="ref-link-section-d65089e535">2001</a>; Raskar et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Raskar R, Welch G, Chen W-C (1999) Table-top spatially-augmented reality: bringing physical models to life with projected imagery. In: IWAR ’99: Proceedings of the 2nd IEEE and ACM international workshop on augmented reality. IEEE Computer Society, Washington, DC, USA, p 64" href="/article/10.1007/s10055-010-0175-5#ref-CR24" id="ref-link-section-d65089e538">1999</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Raskar R, Welch G, Low K-L, Bandyopadhyay D (2001) Shader lamps: animating real objects with image-based illumination. In: Eurographics workshop on rendering" href="/article/10.1007/s10055-010-0175-5#ref-CR25" id="ref-link-section-d65089e541">2001</a>) to project it onto the human-shaped display surface. As a result, all observers view the remote user from their own perspectives. To convey motion and orientation, we track the user and use animatronics to update the pose of the display surface accordingly, while continually projecting matching imagery.</p><p>A fundamental limitation of this approach is that it does not result in a general-purpose display—it is a <i>person</i> display. More general multi-view displays (Jones et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Jones A, McDowall I, Yamada H, Bolas M, Debevec P (2007) Rendering for an interactive 360^ light field display. In: SIGGRAPH ’07: ACM SIGGRAPH 2007 papers, vol 26. ACM, New York, NY, USA, pp 40–1–40–10" href="/article/10.1007/s10055-010-0175-5#ref-CR13" id="ref-link-section-d65089e550">2009</a>; Lincoln et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Lincoln P, Nashel A, Ilie A, Towles H, Welch G, Fuchs H (2009) Multi-view lenticular display for group teleconferencing. Immerscom" href="/article/10.1007/s10055-010-0175-5#ref-CR17" id="ref-link-section-d65089e553">2009</a>) can—and often are—used to display artifacts like coffee cups and pieces of paper along with the remote person. However, to use such displays for multi-viewer teleconferencing, one needs either many cameras (one per view) or real-time 3D reconstruction.</p><p>This paper presents an implemented prototype Animatronic SLA telepresence system. This implemented system is one step along a path toward a fully usable and flexible system. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0175-5#Fig1">1</a> shows conceptual sketches and real results from our current proof-of-concept prototype. Our method and prototype are described in detail in Sects. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0175-5#Sec8">3</a> and <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0175-5#Sec11">4</a>. In Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0175-5#Sec20">5</a>, we present results, followed by details of our experience with a public demonstration of the system in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0175-5#Sec21">6</a>, and in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0175-5#Sec22">7</a>, we conclude with thoughts on the current state of our work and discuss future possibilities.</p></div></div></section><section aria-labelledby="Sec5"><div class="c-article-section" id="Sec5-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec5">Related work</h2><div class="c-article-section__content" id="Sec5-content"><p>There has been prior work related to our SLA ideas. These works include both commercialized and academics systems, which are each composed of projective surfaces, animatronic objects, tactile surfaces, cameras, and/or synthetic sources. The relevant works are organized by major categories below.</p><h3 class="c-article__sub-heading" id="Sec6">3D-surface projective systems</h3><p>Fixed-surface projective systems include those consisting of moving or static fixed-shape surfaces and projectors that provide an appearance for that surface. Some of the most visible work in projective avatars has been in theme park entertainment, which has been making use of projectively illuminated puppets for many years. The early concepts consisted of rigid statue-like devices with external film-based projection, examples of which include the head busts at the Haunted Mansion ride at Disney Land. More recent systems include animatronic devices with internal (rear) projection such as the animatronic Buzz Lightyear that greets guests as they enter the <i>Buzz Lightyear Space Ranger Spin</i> attraction in the Walt Disney World Magic Kingdom. While our current SLA prototype uses front projection, similarly using internal projection would reduce the overall footprint, making it less intrusive and potentially more practical.</p><p>In the academic realm, <i>Shader lamps</i>, introduced by Raskar et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Raskar R, Welch G, Low K-L, Bandyopadhyay D (2001) Shader lamps: animating real objects with image-based illumination. In: Eurographics workshop on rendering" href="/article/10.1007/s10055-010-0175-5#ref-CR25" id="ref-link-section-d65089e602">2001</a>), use projected imagery to illuminate physical objects, dynamically changing their appearance. In this system, the virtual and physical objects have the same shape. The authors demonstrated changing surface characteristics such as texture and specular reflectance, as well as dynamic lighting conditions, simulating cast shadows that change with the time of day. The concept was extended to <i>dynamic shader lamps</i> (Bandyopadhyay et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Bandyopadhyay D, Raskar R, Fuchs H (2001) Dynamic shader lamps: painting on real objects. In: Proceedings of IEEE and ACM international symposium on augmented reality (ISAR ’01). IEEE Computer Society, New York, NY, USA, pp 207–216" href="/article/10.1007/s10055-010-0175-5#ref-CR4" id="ref-link-section-d65089e608">2001</a>), whose projected imagery can be interactively modified, allowing users to paint synthetic surface characteristics on physical objects. Shader lamps illuminated objects have the main advantage in that they can be viewed by multiple unencumbered participants in an accurate manner on all surfaces covered by the projected imagery. Our prototype makes significant use of shader lamps techniques.</p><p><i>Hypermask</i> (Yotsukura et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Yotsukura T, Nielsen F, Binsted K, Morishima S, Pinhanez CS (2002) Hypermask: talking head projected onto real object. The Vis Comput 18(2):111–120" href="/article/10.1007/s10055-010-0175-5#ref-CR34" id="ref-link-section-d65089e616">2002</a>) is a system that dynamically synthesizes views of a talking, expressive character, based on voice and keypad input from an actor wearing a mask onto which the synthesized views are projected. While aimed at storytelling and theatrical performances, it deals with many of the issues we discuss here as well, such as the construction of 3D models of human heads and projecting dynamic face imagery onto a moving object (in this case, the mask). Unlike shader lamps, however, the projection surface differs from the projected object, which can distort the appearance and perceived shape when viewed off-angle.</p><h3 class="c-article__sub-heading" id="Sec7">Animatronic systems</h3><p>There are many humanoid animatronic systems in production or in existence as research systems. These systems typically take on a singular fixed identity. Future versions of the technology we introduce here will require complex humanoid animatronics (robots) as “display carriers,” which can be passive (projectively illuminated, as shown here) or active (covered with flexible, self-illuminated display surfaces such as the ones currently under development in research labs at Philips, Sony and others) in order to be able to switch between multiple users appearances.</p><p>Significant work in the area of humanoid robots is being conducted in research labs in Japan. In addition to the well-known Honda ASIMO robot (Honda Motor and Ltd. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference May(2009" title="Honda Motor Co., Ltd (2009) Honda Worldwide—ASIMO. &#xA;                    http://world.honda.com/ASIMO/&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-010-0175-5#ref-CR9" id="ref-link-section-d65089e629">May(2009</a>), which looks like a fully suited and helmeted astronaut with child-like proportions, more recent work led by Shuuji Kajita at Japan’s National Institute of Advanced Industrial Science and Technology (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="AIST (2009) Successful development of a robot with appearance and performance similar to humans. &#xA;                    http://www.aist.go.jp/aist_e/latest_research/2009/20090513/20090513.html&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-010-0175-5#ref-CR2" id="ref-link-section-d65089e632">2009</a>) has demonstrated a robot with the proportions and weight of an adult female, capable of human-like gait and equipped with an expressive human-like face. Other researchers have focused on the subtle, continuous body movements that help portray lifelike appearance, on facial movement, on convincing speech delivery, and on response to touch. The work led by Ishiguro (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Ishiguro H (2009) Intelligent robotics laboratory, Osaka University.&#xA;                    http://www.is.sys.es.osaka-u.ac.jp/research/index.en.html&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-010-0175-5#ref-CR12" id="ref-link-section-d65089e635">2009</a>) at Osaka University’s Intelligent Robotics Laboratory stands out, in particular the lifelike <i>Repliee</i> android series (Epstein <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Epstein R (2006) My date with a robot. Scientific American Mind, June/July, pp 68–73" href="/article/10.1007/s10055-010-0175-5#ref-CR7" id="ref-link-section-d65089e641">2006</a>) and the <i>Geminoid</i> device. They are highly detailed animatronic units equipped with numerous actuators and designed to appear as human-like as possible, thanks to skin-embedded sensors that induce a realistic response to touch. The <i>Geminoid</i> is a replica of principal investigator Hiroshi Ishiguro himself, complete with facial skin folds, moving eyes, and implanted hair—yet still not at the level of detail of the “hyper-realistic” sculptures and life castings of (sculptor) De Andrea (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="DeAndrea JL (2009) AskART. &#xA;                    http://www.askart.com/askart/d/john_louis_de_andrea/john_louis_de_andrea.aspx&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-010-0175-5#ref-CR6" id="ref-link-section-d65089e651">2009</a>), which induce a tremendous sense of realism despite their rigidity. Geminoid is teleoperated and can thus take the PI’s place in interactions with remote participants, much like the technology we advocate here. While each of these systems can take on a single human’s appearance to varying degrees of realism, they are limited in their flexibility in who can legitimately teleoperate the system.</p><p>On the other hand, the Takanishi Laboratory’s WD-2 (Takanishi Laboratory <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Takanishi Laboratory (2009) Various face shape expression robot. &#xA;                    http://www.takanishi.mech.waseda.ac.jp/top/research/docomo/index.htm&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-010-0175-5#ref-CR16" id="ref-link-section-d65089e657">2009</a>) robot is capable of changing shape in order to produce multiple expressions and identities. The WD-2 also uses rear-projection in order to texture a real user’s face onto the robot’s display surface. The robot’s creators are interested in behavioral issues and plan to investigate topics in human–geminoid interaction and sense of presence. The flexibility in appearances of which the WD-2 is capable would make it quite useful for a telepresence system, as it could theoretically take on the shape of its user. Unfortunately, in its current state, the shape changing apparatus is much too bulky for use as a head atop a mobile body. However, one can anticipate the eventual miniaturization of the necessary equipment, making this a potentially useful addition to an SLA.</p><p>When building animatronic avatars, one is inevitably faced with the challenge of mapping human motion to the animatronic avatar’s motion. The avatar’s range of motion, as well as its acceleration and speed characteristics, will generally differ from a human’s; with current state-of-the-art in animatronics, they are a subset of human capabilities. Hence, one has to “squeeze” the human motion into the avatar’s available capabilities envelope, while striving to maintain the appearance and meaning of gestures and body language, as well as the overall perception of resemblance to the imaged person. In the case of our current prototype, we are for now concerned with the mapping of head movements; previous work has addressed the issue of motion mapping (“retargeting”) as applied to synthetic puppets. Shin et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Shin HJ, Lee J, Shin SY, Gleicher M (2001) Computer puppetry: an importance-based approach. ACM Trans Graph 20(2):67–94" href="/article/10.1007/s10055-010-0175-5#ref-CR28" id="ref-link-section-d65089e663">2001</a>) describe online determination of the importance of measured motion, with the goal of deciding to what extent it should be mapped to the puppet. The authors use an inverse kinematics solver to calculate the retargeted motion. They also introduce filtering techniques for noisy input data (not an issue with our current tracker, but possibly with alternative, tetherless vision-based methods). Their work is geared toward complete figures, not just a single joint element as in our prototype, but their methods could be applied to our system as well.</p><p>The TELESAR 2 project led by Tachi (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Tachi S (2009) &#xA;                    http://projects.tachilab.org/telesar2/&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-010-0175-5#ref-CR30" id="ref-link-section-d65089e670">2009</a>), and Tachi et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Tachi S, Kawakami N, Inami M, Zaitsu Y (2004) Mutual telexistence system using retro-reflective projection technology. Int J HR 1(1):45–64" href="/article/10.1007/s10055-010-0175-5#ref-CR31" id="ref-link-section-d65089e673">2004</a>) integrates animatronic avatars with the display of a person. In contrast to the other work in this subsection, the robot-mounted display surfaces do not mimic human face or body shapes; the three-dimensional appearance of the human is recreated through stereoscopic projection. The researchers created a roughly humanoid robot equipped with remote manipulators as arms, and retro-reflective surfaces on face and torso, onto which imagery of the person “inhabiting” the robot is projected. The retro-reflective surfaces and the multiple projectors enable multiple fixed viewing positions with distinct views of the user. However, a very large number of projectors would be required to provide a full 360° view for participants. The robot also contains cameras; it is controlled by a human from a remote station equipped with multi-degree-of-freedom controls and monitors displaying imagery acquired by the robot’s cameras. The work is part of an extensive project that aims to enable users to experience “telexistence” in any environment, including environments that are not accessible to humans.</p></div></div></section><section aria-labelledby="Sec8"><div class="c-article-section" id="Sec8-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec8">Design</h2><div class="c-article-section__content" id="Sec8-content"><p>In this section, we describe the overall design of our proof-of-concept system. The system is composed of two main functions and corresponding channels: the capture and presentation of the Avatar’s user and the capture and presentation of the Avatar’s site.</p><h3 class="c-article__sub-heading" id="Sec9">User capture and presentation</h3><p>The components of our proof-of-concept system, as shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0175-5#Fig2">2</a>, are grouped at two sites: the capture site and the display site. The capture site is where images and motion of a human subject are captured. In addition to a designated place for the human subject, it includes a camera and a tracker, with a tracker target (a headband) placed onto the human’s head, as shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0175-5#Fig3">3</a>a. We currently use a single 1,024 × 768 1/3′′ CCD color camera running at 15 FPS for capturing imagery. The focus, depth of field, and field of view of the camera have been optimized to allow the subject to comfortably move around in a fixed chair. The NDI Optotrak system is currently used for tracking. Future systems may choose to employ vision-based tracking, obviating the need for a separate tracker and allowing human motion to be captured without cumbersome user-worn targets.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0175-5/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0175-5/MediaObjects/10055_2010_175_Fig2_HTML.gif?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0175-5/MediaObjects/10055_2010_175_Fig2_HTML.gif" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p>Proof-of-concept implementation and diagram of Avatar user capture and display. At the capture site shown in (<b>a</b>), a camera captures a person, also tracked using a headband. At the display site shown in (<b>b</b>), a projector displays images onto an avatar consisting of a styrofoam head placed on an animatronic robot. The diagram in the lower part of the figure highlights the system components and the processes involved</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0175-5/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0175-5/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0175-5/MediaObjects/10055_2010_175_Fig3_HTML.jpg?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0175-5/MediaObjects/10055_2010_175_Fig3_HTML.jpg" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p>Active IR-LED tracker targets. <b>a</b> Headband tracker placed on a human head. <b>b</b> Tracker tool attached to the back of the Avatar’s head, which is mounted on a pan-tilt unit, current in its reference pose (zero pan and tilt)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0175-5/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>The display site includes a projector, the Avatar, and a tracker with a tracker target mounted onto the Avatar as shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0175-5#Fig3">3</a>b. The Avatar consists of an animatronic head made of styrofoam that serves as the projection surface. The Avatar head is a generic commercially available male styrofoam head. The Avatar is mounted on a pan-tilt unit that allows moving the head to mimic the movements of the human at the capture site. The pan-tilt unit in use is capable of rotating at 300° per second; however, in order to ensure smooth motion, the speed is limited to 100°/s. This head and pan-tilt unit are mounted above a dressed torso with fixed arms and legs. The 1024 × 768 60 Hz DLP projector is mounted approximately 1 meter in front of the Avatar and is configured to only project upon the visual extent, including range of motion, of the mounted Avatar; the projector’s focus and depth of field are sufficient to cover the illuminated half of the Avatar. Instead of a tracker, future systems may choose to use position-reporting features of more sophisticated pan-tilt units in order to derive the pose of the styrofoam head.</p><h3 class="c-article__sub-heading" id="Sec10">Site capture and presentation</h3><p>We initially developed our prototype system with capture and display sites colocated within our laboratory (see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0175-5#Fig4">4</a>). In order to progress toward a realistic full-duplex tele-conferencing system (our main application focus), we incorporated all image and sound transmission paths needed for the two sites to operate at a large distance from one another. As shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0175-5#Fig1">1</a>c, the capture site is equipped with a panoramic dual-projector setup; the two projectors are connected to a dual-camera rig mounted just above the Avatar’s head at the display site (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0175-5#Fig1">1</a>d). The fields of view of the camera rig and of the projection setup are matched, aligning the gaze directions of the human user at the capture site and of the Avatar at the remote site. That is, if the human user turns his or her head to face a person appearing 15° to the right on the projective display, the slaved Avatar head will also turn by 15° to directly face that same person. This allows for approximately correct gaze at both sites (SLA toward remote participants at the display site, as well as remote participants’ panoramic imagery toward human user at the capture site) in the horizontal direction.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0175-5/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0175-5/MediaObjects/10055_2010_175_Fig4_HTML.gif?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0175-5/MediaObjects/10055_2010_175_Fig4_HTML.gif" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p>Full-duplex configuration of the prototype system. The back-to-back setup was chosen to primarily to suit the capabilities of the NDI tracker while both presenting the Avatar to the viewers, and allowing the viewers to step to the side to see the human user/inhabiter</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0175-5/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>To achieve correct SLA gaze in the vertical direction as well, we must first ensure that the SLA’s eyes (mapped from the human subject’s eyes) appear to have the correct vertical elevation when the human user is looking at a remote participant’s image at the capture site. We can easily achieve this by vertically adjusting the projected panoramic imagery which serves as the human user’s visual target at the capture site. At the display site however, the remote participants are captured by dual cameras mounted above the SLA head as mentioned and therefore appear to be looking down when shown at the capture site, even though they are gazing at the SLA’s eyes. An optimized future design could make use of cameras mounted within the avatar’s eye location (as mentioned in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0175-5#Sec3">1.2</a>) or reorient remote participant’s eyes and/or faces through image manipulation methods (Criminisi et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Criminisi A, Shotton J, Blake A, Torr P (2003) Gaze manipulation for one-to-one teleconferencing. Computer Vision. IEEE International Conference on 1:191" href="/article/10.1007/s10055-010-0175-5#ref-CR5" id="ref-link-section-d65089e794">2003</a>).</p><p>The second subsystem required for full-duplex operation consists of a set of audio components for sound transmission. The display site is equipped with two stereo microphones that pick up ambient sound and conversation, amplified and transmitted into ear buds for the capture site user. That user wears a lapel microphone, whose amplified signal is transmitted to a single speaker located close to the Avatar’s head at the display site. Together with the core elements described above, these additional components turn our experimental system into a rudimentary yet full-fledged SLA telepresence prototype.</p></div></div></section><section aria-labelledby="Sec11"><div class="c-article-section" id="Sec11-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec11">Method</h2><div class="c-article-section__content" id="Sec11-content"><p>In this section, we explain the methods we employ in our proof-of-concept system. We begin by describing one-time operations such as calibration and model construction. We continue with the adjustments performed before each run and finish by describing the real-time processes that take place during the use of the system.</p><h3 class="c-article__sub-heading" id="Sec12">One-time operations</h3><p>One-time operations are performed when the system components are installed. They include camera and projector calibration, as well as head model construction and calibration.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec13">Camera and projector calibration</h4><p>To calibrate the intrinsic and extrinsic parameters of the camera at the capture site, we use a custom application (Ilie <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Ilie A (2009) Camera and projector calibrator. &#xA;                    http://www.cs.unc.edu/~adyilie/Research/CameraCalibrator/&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-010-0175-5#ref-CR11" id="ref-link-section-d65089e820">2009</a>) built on top of the OpenCV (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="OpenCV (2009) The OpenCV library. &#xA;                    http://sourceforge.net/projects/opencvlibrary/&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-010-0175-5#ref-CR22" id="ref-link-section-d65089e823">2009</a>) library. Our custom application, in order to compute the camera’s intrinsic parameters, makes use of the standard OpenCV camera calibration procedure, which evaluates a set of images containing checkerboards of known physical sizes. As a slight variant on the standard techniques, in order to ensure that the computed extrinsic parameters are in the same space as the tracker’s coordinate frame, we use a probe to capture the 3D points of one of the fixed checkerboard positions and use those points as the input to the extrinsic parameters calibration of the OpenCV library. In the case of our system, these techniques result in a reprojection error on the order of a pixel or less.</p><p>We calibrate the projector at the display site using a similar process. Instead of capturing images of the checkerboard pattern, we place the physical checkerboard pattern at various positions and orientations inside the projector’s field of view and use our custom application to render and manually adjust the size and location of a virtual pattern until it matches the physical pattern. By using these virtual patterns and another set of tracker probe positions as input to our custom calibration application, we produce the projector’s intrinsic and extrinsic parameters in the tracker’s coordinate space.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec14">Head model construction</h4><p>We built our 3D head models (human and animatronic) using FaceWorx (LOOXIS GmbH <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="LOOXIS GmbH (2009) FaceWorx. &#xA;                    http://www.looxis.com/en/k75.Downloads_Bits-and-Bytes-to-download.htm&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-010-0175-5#ref-CR18" id="ref-link-section-d65089e836">2009</a>), an application that allows one to start from two images of a person’s head (front and side view), requires manual identification of distinctive features such as eyes, nose, and mouth, and subsequently produces a textured 3D model. The process consists of importing a front and a side picture of the head to be modeled and adjusting the position of a number of given control points overlaid on top of each image—see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0175-5#Fig5">5</a>a, e. The program provides real-time feedback by displaying the resulting 3D model as shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0175-5#Fig5">5</a>b, f. A key property of all FaceWorx models is that they have the same topology, only the vertex positions differ. This allows a straightforward mapping from one head model to another. In particular, we can render the texture of a model onto the shape of another. In Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0175-5#Fig5">5</a>, the projection-ready model (i) is obtained using the shape from the Avatar head (h) and the texture from the human head (c).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0175-5/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0175-5/MediaObjects/10055_2010_175_Fig5_HTML.gif?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0175-5/MediaObjects/10055_2010_175_Fig5_HTML.gif" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p>Head model construction and mapping. FaceWorx (LOOXIS GmbH <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="LOOXIS GmbH (2009) FaceWorx. &#xA;                    http://www.looxis.com/en/k75.Downloads_Bits-and-Bytes-to-download.htm&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-010-0175-5#ref-CR18" id="ref-link-section-d65089e858">2009</a>) is used to move control points in photographs showing the fronts and sides of heads (<b>a</b>,<b>e</b>), resulting in 3D models (<b>b</b>,<b>f</b>), which are comprised of texture (<b>c</b>,<b>g</b>) and geometry (<b>d</b>,<b>h</b>). The final model (<b>i</b>) is built using the texture of the human head (<b>c</b>) and the geometry of the Avatar head (<b>h</b>)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0175-5/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec15">Head model calibration</h4><p>Capturing the human head model and rendering the animatronic head model “on top of” the styrofoam projection surface requires finding their poses in the coordinate frames of the trackers at each site. Both the human’s and the Avatar’s heads are assumed to have static shape, which simplifies the calibration process. The same procedure can be used for both the human’s and Avatar’s heads. The first step in this calibration is to find the relative pose of each head model with respect to a <i>reference coordinate frame</i> which corresponds to a physical tracker target rigidly attached to each head being modeled. We use a tracker probe to capture about 4 or 5 3D points corresponding to salient face features on each head and compute the offsets between each captured 3D point and the 6D pose of the reference coordinate frame. Next, we use a custom GUI to manually associate each computed offset with a corresponding 3D vertex in the FaceWorx model. We then run an automatic optimization process to compute the 4 × 4 homogeneous transformation matrix that best characterizes (in terms of minimum error) the mapping between the 3D point offsets and the corresponding 3D vertices in the FaceWorx model. The calibration transformation matrices obtained through the optimization process are constrained to be orthonormal. This transformation represents the relative pose and scale of the model with respect to the reference coordinate frame. At runtime, we can multiply the computed matrix by the matrix that characterizes the pose of the reference coordinate frame in the tracker’s coordinate frame to obtain the complete live transformation. The quality of the calibration matrix can be observationally evaluated by running the system and is more dependent on the accuracy of the model than the accuracy of the probed positions.</p><h3 class="c-article__sub-heading" id="Sec16">Per-run calibrations</h3><p>The headband used to track the human head is assumed to be rigidly mounted onto the head. Alas, each time the user dons the headband, the position and orientation is slightly different. Although a complete calibration prior to each run would ensure the best results, in practice small manual adjustments are sufficient to satisfy the above assumption. Only two small adjustments are required for each run of the system.</p><p>The first adjustment consists of aligning the poses of the pan-tilt unit and of the human head. We ask the human to rotate his or her head and look straight at the camera and capture a <i>reference pose</i>. We set this pose to correspond to the zero pan and zero tilt pose of the pan-tilt unit—see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0175-5#Fig3">3</a>b, which positions the styrofoam head as if it were directly facing the projector. Given the physical calibration of the human user’s viewing area displays (see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0175-5#Fig4">4</a>), this ensures that the human user’s gaze matches the Avatar’s gaze.</p><p>The second small adjustment is required only if the user has removed the headband between head calibration and system execution. We perform additional manual adjustments to the headband by asking the user to rotate and shift the headband to ensure that the projections of salient face features in the projected image are aligned with the corresponding features on the animatronic head; these features include the positions of the eyes, tip of the nose, and edges of the mouth. In essence, these shifting operations restore the headband to its originally calibrated position on the human’s head. Realigning the pan-tilt and human poses one more time restores the gaze alignment and completes the per-run calibrations.</p><h3 class="c-article__sub-heading" id="Sec17">Real-time processes</h3><p>Once the system is calibrated, it becomes possible for the Avatar on the display side to mimic the appearance and motion of the person on the capture side. In this section we describe the real-time processes that implement this function.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec18">Animatronic control</h4><p>Given a pose for a human head tracked in real time and a reference pose captured as described in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0175-5#Sec16">4.2</a>, it is possible to compute a relative orientation. This orientation constitutes the basis for the animatronic control signals for the Avatar. The pose gathered from the headband is a 4 × 4 orthonormal matrix consisting of rotations and translations from the tracker’s origin. We use a decomposition of rotation component of the matrix to compute the roll, pitch, and yaw of the human head. The relative pitch and yaw of the tracked human are mapped to the pan and tilt capabilities of the pan-tilt unit and transformed into commands issued to the pan-tilt unit. Using this process, the Avatar emulates a subset of the head <i>motions</i> of its human “master”; roll and translation motion is discarded.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec19">Dynamic texturing</h4><p>Given a calibrated input camera, a tracked human, and a calibrated 3D model of the human’s head, we compute a texture map for the human head model. This is achieved through <i>texture projection</i>; the imagery of the camera is projected upon the surface of the head model as though the camera were a digital projector and the human head the projection surface. In order to present that texture on the Avatar’s head model, which is a different shape, some processing is required. In our system, we use custom OpenGL vertex and pixel shaders, which allows us to view a live textured model of the human or Avatar head in real time from any point of view on a standard display.</p><p>In the case of the physical Avatar, however, it is desirable to compute a texture map using the calibrated model of the human head and project the resulting live imagery onto the calibrated model of the Avatar head. Although the two heads have different shapes, both heads are modeled in FaceWorx and thus have the same topology. That similar topology enables us to perform the warping operation shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0175-5#Fig5">5</a> to transform the texture projection to target the Avatar’s head. Though OpenGL vertex and pixel shaders, it is possible to perform this warp entirely on the GPU. Essentially these shaders perform texture projection with one major difference: we use the vertex coordinates and pose of the tracked and calibrated human head model for computing texture look-up coordinates, and we use the vertex coordinates and pose of the tracked and calibrated Avatar head model for computing the location to draw the head. Given an arbitrary projection matrix, it is possible to render a textured model of the Avatar from any perspective, using a live texture from camera imagery of the human head. By selecting the perspective of the calibrated projector, the live texture is projected upon the tracked animatronic head, and the model shape is morphed to that of the animatronic head model. Using this process, the animatronic head emulates the <i>appearance</i> of its human counterpart.</p></div></div></section><section aria-labelledby="Sec20"><div class="c-article-section" id="Sec20-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec20">Results</h2><div class="c-article-section__content" id="Sec20-content"><p>The overall result of the system is the presentation of a physical proxy for a live human. Currently, the Avatar can present elements of a user’s facial appearance and head motion. See Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0175-5#Fig6">6</a>.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-6"><figure><figcaption><b id="Fig6" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 6</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0175-5/figures/6" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0175-5/MediaObjects/10055_2010_175_Fig6_HTML.jpg?as=webp"></source><img aria-describedby="figure-6-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0175-5/MediaObjects/10055_2010_175_Fig6_HTML.jpg" alt="figure6" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-6-desc"><p>Humans and Avatars as seen from different viewpoints. <i>Column 1</i> shows the live camera images; <i>column 2</i> shows the warped head models; <i>column 3</i> shows photographs of the models projected onto the Avatar; <i>column 4</i> shows the un-illuminated styrofoam head in poses matching the <i>column 3</i> images. In <i>row 1</i>, the photographs in <i>columns 3</i> and <i>4</i> are taken from the left side of the projector; in <i>row 2</i>, these photographs are taken from behind the projector</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0175-5/figures/6" data-track-dest="link:Figure6 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>Visual appearance is generated through the use of (currently) a single camera and single projector and thus is limited to certain perspectives. In particular, high-quality imagery is limited to the front of the face. Surfaces not facing the camera or projectors, such as the top or sides of the head, are not well covered when the user is facing the camera or the Avatar is facing the projector. As in-person communication is generally face-to-face, it is reasonable to focus visual attention onto this component. Since the human’s facial features are mapped to the Avatar’s corresponding features by taking advantage of the identical topology of their 3D models, the Avatar can present the human’s eyes, nose, mouth, and ears in structurally appropriate positions. The quality of this matching is demonstrated in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0175-5#Fig6">6</a>. As both relationships (camera/human and projector/Avatar) are approximately the same in terms of direction, the imagery is generally appropriate, and the features well matched. As the user moves, the tracker and the camera imagery update correspondingly to project the proper texture on the virtual model of the head, thus maintaining proper eye contact from the target participant’s perspective and good gaze awareness from the other participants’ perspectives.</p><p>Using the pan-tilt unit, the Avatar is also capable of movement that matches the yaw and pitch components of the human’s head motion. As long as the human’s orientation stays within the limits of the pan-tilt unit and tracker, the Avatar can rotate to match the latest reported human head orientation. Because the human’s features are texture-mapped to the corresponding locations of the Avatar, all observers at the display site can both see a representation of the Avatar’s user and accurately assess in which direction the user is looking. However, humans are capable of accelerating faster than the available pan-tilt unit’s configured max speed of 100°/s. This limiting factor and the pan-tilt unit’s response delay can result in the Avatar’s head motion lagging behind the most recently reported camera imagery and corresponding tracker position. Deliberate head motions, such as gazing, nodding, or indicating no, can be matched, and mismatched orientations between the human and avatar for a given camera frame can be handled by the rendering algorithm. Unfortunately, extremely fast periodic head motions can result in truncated amplitude. It is possible that this lag issue could be mitigated by a more responsive pan-tilt unit, good-quality predictive filtering on the expected pan-tilt unit’s motions, or a higher-level intended-behavior analysis of the human’s motion. Motions that go beyond panning or tilting such as cocking one’s head or stretching one’s neck would require a motion platform with additional degrees of freedom.</p><p>Fortunately, the capture and playback sides of the system can be decoupled; the motion of the Avatar need not match that of the human user in order to show relevant imagery. Because the texture produced by the input camera is displayed on the Avatar via projective texturing of an intermediate 3D model, the position and orientation of the Avatar is independent of the human’s position and orientation. The image directly projected on the Avatar is dependent on the Avatar’s model and the current tracker position for the pan-tilt unit. Through this decoupling, the motion of the Avatar can be disabled or overridden and the facial characteristics of human and Avatar would still match to the best degree possible. However, if the relative orientations of human and camera at the capture site and of Avatar and projector at the display site are significantly different, the quality of the projective texture may be degraded due to missing visual information. For example, if the person looks significantly to one side, away from the capture camera, and the Avatar faces the projector, then part of the projected surface cannot be seen by the camera and can result in incorrect imagery. This issue could resolved with additional cameras and/or projectors that would capture and/or project with better coverage of the two heads.</p></div></div></section><section aria-labelledby="Sec21"><div class="c-article-section" id="Sec21-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec21">Demonstration at ISMAR 2009</h2><div class="c-article-section__content" id="Sec21-content"><p>On October 19–20, 2009, we demonstrated the full-duplex prototype SLA system at the 2009 International Symposium on Mixed and Augmented Reality (ISMAR 2009) in Orlando, FL. As described in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0175-5#Sec10">3.2</a> and illustrated in Figs. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0175-5#Fig4">4</a> and <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0175-5#Fig7">7</a>, the capture and display sites were set up in a back-to-back configuration, separated by a large opaque curtain. The result is that the capture site was not directly visible to casual visitors, who were thus interacting primarily with the SLA on the display side. The visitors could, however, step to the side to look behind the curtain and see the human inhabiter.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-7"><figure><figcaption><b id="Fig7" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 7</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0175-5/figures/7" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0175-5/MediaObjects/10055_2010_175_Fig7_HTML.jpg?as=webp"></source><img aria-describedby="figure-7-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0175-5/MediaObjects/10055_2010_175_Fig7_HTML.jpg" alt="figure7" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-7-desc"><p>Experimental setup of the Animatronic Shader Lamps Avatar prototype system as presented at ISMAR 2009. <b>a</b> Shows the SLA and the professional comedian (Brian Bradley) back-to-back—the comedian’s head is optically tracked and his appearance is captured by a camera, <b>b</b> shows a closeup of the SLA with the comedian’s dynamic appearance, and <b>c</b> attendees conversing with the comedian’s by means of the SLA. See also Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0175-5#Fig4">4</a>
+                                 </p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0175-5/figures/7" data-track-dest="link:Figure7 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>We demonstrated the system for a total of 3 h on two separate days. On the first day, the SLA was inhabited for approximately 2 h by coauthor Henry Fuchs, a researcher who we expected to be visibly recognizable to many of the visitors. For the second day, we hired a professional comedian (Brian Bradley) to inhabit the SLA. The idea was to try someone who was unlikely to be visibly recognizable to the audience but was skilled at personal interactions in a public setting and likely to be engaging (humorous) in doing so.</p><p>Neither human inhabiter had spent any significant amount of time “in the Avatar” before, and both had to get used to the system and its restrictions (e.g., head motion limits), which they did quickly. Both inhabiters managed to engage many walk-up visitors in exchanges that ranged from a few seconds to several minutes, at times with lively back-and-forth talking. One exchange between the Avatar of professional comedian (Brian Bradley) and some visitors is given below.
+</p><ul class="u-list-style-none">
+                  <li>
+                    <p><b>Visitor:</b> [a bit indecipherable, but apparently a comment about not being a real human]</p>
+                  </li>
+                  <li>
+                    <p><b>SLA:</b> Ha ha, wow, [rolling head while laughing] you’re not exactly the Avon lady yourself! [nodding toward the visitor] You have dark secrets in your bag I’m sure. [nodding affirmatively]</p>
+                  </li>
+                  <li>
+                    <p><b>Visitor:</b> You’re a little creepy. [looking around the sides of the SLA]</p>
+                  </li>
+                  <li>
+                    <p><b>SLA:</b> [shaking head] I’m not creepy! [looking at visitor] I’m very nice.</p>
+                  </li>
+                  <li>
+                    <p><b>SLA:</b> [looking up at another visitor] What’s your name?</p>
+                  </li>
+                  <li>
+                    <p><b>Visitor:</b> Karen.</p>
+                  </li>
+                  <li>
+                    <p><b>SLA:</b> Hi Karen. See-more here. Hi Ladies! [looking around and nodding]</p>
+                  </li>
+                  <li>
+                    <p><b>Visitors:</b> Hi.</p>
+                  </li>
+                  <li>
+                    <p><b>SLA:</b> How are you? [lifting and tilting head toward another group of visitors—Karen follows the SLA gaze]</p>
+                  </li>
+                </ul>
+                     <p>A subsequent exchange was as follows.
+</p><ul class="u-list-style-none">
+                  <li>
+                    <p><b>SLA:</b> What I hear from Karen is that I’m creepy! [looking around at three visitors]</p>
+                  </li>
+                  <li>
+                    <p><b>Visitor:</b> [visitors laugh]</p>
+                  </li>
+                  <li>
+                    <p><b>SLA:</b> Uh, well [looking around]—a little can—just a few—uh—a couple molecules of creepy is enough to give me self-esteem issues. [looking downward sadly]</p>
+                  </li>
+                </ul>
+                     <p>As was the case in the above exchange, several of the conversations involved more than one visitor, requiring the human user (and hence the SLA) to alternately look at one visitor, then at the other as the human user was addressing each visitor in turn. We observed that as the SLA was changing gaze direction in this way, the visitors appeared to naturally follow its gaze and assess who among the bystanders had become the SLA’s new eye contact partner. Following someone else’s gaze in this way is a natural group interaction behavior (Hietanen <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Hietanen JK (1999) Does your gaze direction and head orientation shift my visual attention?. Neuroreport 10(16):3443–3447" href="/article/10.1007/s10055-010-0175-5#ref-CR8" id="ref-link-section-d65089e1212">1999</a>), and we were encouraged that our SLA and the full-duplex setup appeared to support it.</p><p>We also noticed what appeared to be emotional connections with the SLA. For example, one visitor made a joking comment about how his (the visitor’s) chest hurt, asking whether the “doctor” (the SLA was dressed as a doctor) could tell him what was wrong. The SLA (comedian), looking at the visitor, responded that the primary cause was likely related to the visitor’s sweater, which (the comedian said) went out of style about 20 years ago. The visitor in turn looked down at the sweater and walked away with a bit of a dejected look. As in other exchanges, nearby people were looking back and forth between the SLA and the visitor. In this particular case, when the SLA made the “out of style” comment about the visitor’s sweater, other nearby visitors looked back at the SLA making comments questioning the nature of the insult and offering verbal sympathy for the visitor.</p><p>Most of the visitors commented on the SLA’s appearance in some way. Some reacted in a quizzical fashion, realizing that the Avatar was not real and yet seemed intrigued by its presence. Some commented that the Avatar was “a little eerie,” and some appeared reluctant to interact with it, for whatever reason. (Some people would normally be reluctant to interact face-to-face with a <i>real human</i> comedian in a public setting, for example if they were embarrassed.) On the other hand, in many exchanges the visitors appeared to fully engage their own bodies, using head motion, changing body position and posture, and hand gestures that seemed as natural as if the SLA had been a real person in front of them. Some would reach out and point to specific parts of the SLA body, asking for example “Can you move your hands?” In future, it would be interesting to compare such SLA interactions with the same using a 2D video of the inhabiter.</p><p>Some of the visitors initially thought the Avatar behavior was synthetic (an automated character) until we encouraged them to talk to it. Naturally, the conversations with the researcher focused more on technology, whereas the interactions with the comedian were driven by jokes. Some visitors used the terms “uncanny” as well as “uncanny valley,” with the latter obviously referring to the notion that an avatar (any synthetic artifact) that has some human-like features, but not quite human behavior may, at some point, begin to appear uncanny even as its creators strive to make thee features and behavior more realistic (Mori <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1970" title="Mori M (1970) The uncanny valley. Energy 7(4):33–35" href="/article/10.1007/s10055-010-0175-5#ref-CR19" id="ref-link-section-d65089e1226">1970</a>). Nevertheless, all of the “uncanny valley” quoters proceeded to engage the Avatar without reserve.</p><p>Overall, we were encouraged by what we saw during this opportunity. It seems that the overall approach shows promise for the tele-presence application it was conceived for.</p></div></div></section><section aria-labelledby="Sec22"><div class="c-article-section" id="Sec22-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec22">Conclusions and future work</h2><div class="c-article-section__content" id="Sec22-content"><p>We introduced animatronic Shader Lamps Avatars (SLAs), described a proof-of-concept prototype system, and presented preliminary results. We are currently exploring passive vision-based methods for tracking the real person’s head (Ahlberg and Forchheimer <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Ahlberg J, Forchheimer R (2003) Face tracking for model-based coding and face animation. Int J Imaging Syst Technol 13(1):8–22" href="/article/10.1007/s10055-010-0175-5#ref-CR1" id="ref-link-section-d65089e1239">2003</a>; Huang and Tao <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Huang TS, Tao H (2001) Visual face tracking and its application to 3d model-based video coding. In: Picture coding symposium, pp 57–60" href="/article/10.1007/s10055-010-0175-5#ref-CR10" id="ref-link-section-d65089e1242">2001</a>; Seeing Machines <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Seeing Machines (2009) faceAPI. &#xA;                    http://www.seeingmachines.com/product/faceapi/&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-010-0175-5#ref-CR27" id="ref-link-section-d65089e1245">2009</a>), so that we can eliminate the separate tracking system. We also hope to add additional cameras and projectors. Both will involve the dynamic blending of imagery: as the real person moves, textures from multiple cameras will have to be dynamically blended and mapped onto the graphical model, and as the physical Avatar moves, the projector imagery will have to be dynamically blended (intensity and perhaps also color) as it is projected. We are also considering methods for internal projection. In terms of the robotics, we will be exploring possibilities for more sophisticated animation, and more rigorous motion retargeting methods (Shin et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Shin HJ, Lee J, Shin SY, Gleicher M (2001) Computer puppetry: an importance-based approach. ACM Trans Graph 20(2):67–94" href="/article/10.1007/s10055-010-0175-5#ref-CR28" id="ref-link-section-d65089e1248">2001</a>) to address the limitations of the animatronic components (range and speed of motion, degrees of freedom) while still attempting human-like performance. Some of the filtering techniques in (Shin et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Shin HJ, Lee J, Shin SY, Gleicher M (2001) Computer puppetry: an importance-based approach. ACM Trans Graph 20(2):67–94" href="/article/10.1007/s10055-010-0175-5#ref-CR28" id="ref-link-section-d65089e1251">2001</a>) could be useful if we use vision-based face tracking as mentioned. We are also exploring the design of shape of the Avatar’s head in terms of the acceptability of the generic head when compared with a copy of the user’s head or some principled average head. Finally, together with collaborators at the Naval Postgraduate School, we plan to undertake a series of human subject evaluations related to gaze.</p><p>While our current prototype supports only rudimentary full-duplex communications by means of the modest dual camera/projector setup described above, we envision a generous full-duplex capability via the use of multiple cameras associated with the SLA and a seamless surround display associated with the user. For example, outward-looking cameras could be mounted in a canopy over the SLA to provide remote imagery for the user as depicted in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0175-5#Fig1">1</a>b, a, respectively. If these outward facing cameras are mounted close to the head, then the vertical disparity between where the participants are looking, namely the Avatar’s eyes, and the Avatar’s user’s viewpoint would be minimized, helping maintain good eye contact for the Avatar’s user. The optimal location for full two-way eye contact would place the capture cameras inside of the Avatar’s eyes. However, given that the Avatar’s head moves, one would have to remap the camera imagery back to its geometrically correct location on display surface at the Avatar user’s location. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0175-5#Fig8">8</a> shows a preliminary demonstration of a panoramic camera and a surround display that could be used for viewing the Avatar’s surroundings. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0175-5#Fig8">8</a> also illustrates the asymmetric one-to-many nature of the telepresence Avatar paradigm.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-8"><figure><figcaption><b id="Fig8" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 8</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0175-5/figures/8" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0175-5/MediaObjects/10055_2010_175_Fig8_HTML.jpg?as=webp"></source><img aria-describedby="figure-8-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0175-5/MediaObjects/10055_2010_175_Fig8_HTML.jpg" alt="figure8" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-8-desc"><p>Mock-up of remote panoramic video for Avatar control. A tripod-mounted PointGrey Ladybug camera is used to capture panoramic imagery of a remote scene in (<b>a</b>). The real-time panoramic video is mapped to a projector-based 270° surround display as shown in (<b>b</b>). The Ladybug would eventually be mounted above the SLA</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0175-5/figures/8" data-track-dest="link:Figure8 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>In the longer term, we have a vision for SLAs mounted on mobile platforms with outward-looking cameras that enable users to explore remote facilities such as hospitals, factories, and shopping centers, while interacting with multiple remote individuals—both <i>seeing</i> and being <i>seen</i>. For some disabled individuals, this could provide a “prosthetic presence” that is otherwise unattainable. SLAs may also be useful as role players in immersive training environments for medicine and defense, robotic teachers that visually transform between historians and historic individuals, or personal robotic companions that take on different real or synthetic appearances during live interactions. In fact, SLAs could some day support the limited integration of a virtual “second life” into our “first lives”—allowing people to visit remote real places, using a real or alternate persona, as if they (or their persona) were really there.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="J. Ahlberg, R. Forchheimer, " /><meta itemprop="datePublished" content="2003" /><meta itemprop="headline" content="Ahlberg J, Forchheimer R (2003) Face tracking for model-based coding and face animation. Int J Imaging Syst Te" /><p class="c-article-references__text" id="ref-CR1">Ahlberg J, Forchheimer R (2003) Face tracking for model-based coding and face animation. Int J Imaging Syst Technol 13(1):8–22</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1002%2Fima.10042" aria-label="View reference 1">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 1 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Face%20tracking%20for%20model-based%20coding%20and%20face%20animation&amp;journal=Int%20J%20Imaging%20Syst%20Technol&amp;volume=13&amp;issue=1&amp;pages=8-22&amp;publication_year=2003&amp;author=Ahlberg%2CJ&amp;author=Forchheimer%2CR">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="AIST (2009) Successful development of a robot with appearance and performance similar to humans. http://www.ai" /><p class="c-article-references__text" id="ref-CR2">AIST (2009) Successful development of a robot with appearance and performance similar to humans. <a href="http://www.aist.go.jp/aist_e/latest_research/2009/20090513/20090513.html">http://www.aist.go.jp/aist_e/latest_research/2009/20090513/20090513.html</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="M. Argyle, M. Cook, " /><meta itemprop="datePublished" content="1976" /><meta itemprop="headline" content="Argyle M, Cook M (1976) Gaze and mutual gaze/Michael Argyle and Mark Cook. Cambridge University Press, Cambrid" /><p class="c-article-references__text" id="ref-CR3">Argyle M, Cook M (1976) Gaze and mutual gaze/Michael Argyle and Mark Cook. Cambridge University Press, Cambridge, Eng., New York</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 3 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Gaze%20and%20mutual%20gaze%2FMichael%20Argyle%20and%20Mark%20Cook&amp;publication_year=1976&amp;author=Argyle%2CM&amp;author=Cook%2CM">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bandyopadhyay D, Raskar R, Fuchs H (2001) Dynamic shader lamps: painting on real objects. In: Proceedings of I" /><p class="c-article-references__text" id="ref-CR4">Bandyopadhyay D, Raskar R, Fuchs H (2001) Dynamic shader lamps: painting on real objects. In: Proceedings of IEEE and ACM international symposium on augmented reality (ISAR ’01). IEEE Computer Society, New York, NY, USA, pp 207–216</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Criminisi A, Shotton J, Blake A, Torr P (2003) Gaze manipulation for one-to-one teleconferencing. Computer Vis" /><p class="c-article-references__text" id="ref-CR5">Criminisi A, Shotton J, Blake A, Torr P (2003) Gaze manipulation for one-to-one teleconferencing. Computer Vision. IEEE International Conference on 1:191</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="DeAndrea JL (2009) AskART. http://www.askart.com/askart/d/john_louis_de_andrea/john_louis_de_andrea.aspx&#xA;     " /><p class="c-article-references__text" id="ref-CR6">DeAndrea JL (2009) AskART. <a href="http://www.askart.com/askart/d/john_louis_de_andrea/john_louis_de_andrea.aspx">http://www.askart.com/askart/d/john_louis_de_andrea/john_louis_de_andrea.aspx</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Epstein R (2006) My date with a robot. Scientific American Mind, June/July, pp 68–73" /><p class="c-article-references__text" id="ref-CR7">Epstein R (2006) My date with a robot. Scientific American Mind, June/July, pp 68–73</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="JK. Hietanen, " /><meta itemprop="datePublished" content="1999" /><meta itemprop="headline" content="Hietanen JK (1999) Does your gaze direction and head orientation shift my visual attention?. Neuroreport 10(16" /><p class="c-article-references__text" id="ref-CR8">Hietanen JK (1999) Does your gaze direction and head orientation shift my visual attention?. Neuroreport 10(16):3443–3447</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1097%2F00001756-199911080-00033" aria-label="View reference 8">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 8 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Does%20your%20gaze%20direction%20and%20head%20orientation%20shift%20my%20visual%20attention%3F&amp;journal=Neuroreport&amp;volume=10&amp;issue=16&amp;pages=3443-3447&amp;publication_year=1999&amp;author=Hietanen%2CJK">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Honda Motor Co., Ltd (2009) Honda Worldwide—ASIMO. http://world.honda.com/ASIMO/&#xA;                        " /><p class="c-article-references__text" id="ref-CR9">Honda Motor Co., Ltd (2009) Honda Worldwide—ASIMO. <a href="http://world.honda.com/ASIMO/">http://world.honda.com/ASIMO/</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Huang TS, Tao H (2001) Visual face tracking and its application to 3d model-based video coding. In: Picture co" /><p class="c-article-references__text" id="ref-CR10">Huang TS, Tao H (2001) Visual face tracking and its application to 3d model-based video coding. In: Picture coding symposium, pp 57–60</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Ilie A (2009) Camera and projector calibrator. http://www.cs.unc.edu/~adyilie/Research/CameraCalibrator/&#xA;     " /><p class="c-article-references__text" id="ref-CR11">Ilie A (2009) Camera and projector calibrator. <a href="http://www.cs.unc.edu/~adyilie/Research/CameraCalibrator/">http://www.cs.unc.edu/~adyilie/Research/CameraCalibrator/</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Ishiguro H (2009) Intelligent robotics laboratory, Osaka University.http://www.is.sys.es.osaka-u.ac.jp/researc" /><p class="c-article-references__text" id="ref-CR12">Ishiguro H (2009) Intelligent robotics laboratory, Osaka University.<a href="http://www.is.sys.es.osaka-u.ac.jp/research/index.en.html">http://www.is.sys.es.osaka-u.ac.jp/research/index.en.html</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Jones A, McDowall I, Yamada H, Bolas M, Debevec P (2007) Rendering for an interactive 360^ light field display" /><p class="c-article-references__text" id="ref-CR13">Jones A, McDowall I, Yamada H, Bolas M, Debevec P (2007) Rendering for an interactive 360<sup>^</sup> light field display. In: SIGGRAPH ’07: ACM SIGGRAPH 2007 papers, vol 26. ACM, New York, NY, USA, pp 40–1–40–10</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Jones A, Lang M, Fyffe G, Yu X, Busch J, McDowall I, Bolas M, Debevec P (2009) Achieving eye contact in a one-" /><p class="c-article-references__text" id="ref-CR14">Jones A, Lang M, Fyffe G, Yu X, Busch J, McDowall I, Bolas M, Debevec P (2009) Achieving eye contact in a one-to-many 3d video teleconferencing system. In: SIGGRAPH ’09: ACM SIGGRAPH 2009 papers. ACM, New York, NY, USA, pp 1–8</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Kerse D, Regenbrecht H, Purvis M (2005) Telepresence and user-initiated control. In: Proceedings of the 2005 i" /><p class="c-article-references__text" id="ref-CR15">Kerse D, Regenbrecht H, Purvis M (2005) Telepresence and user-initiated control. In: Proceedings of the 2005 international conference on Augmented tele-existence. ACM, p 240</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Takanishi Laboratory (2009) Various face shape expression robot. http://www.takanishi.mech.waseda.ac.jp/top/re" /><p class="c-article-references__text" id="ref-CR16">Takanishi Laboratory (2009) Various face shape expression robot. <a href="http://www.takanishi.mech.waseda.ac.jp/top/research/docomo/index.htm">http://www.takanishi.mech.waseda.ac.jp/top/research/docomo/index.htm</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Lincoln P, Nashel A, Ilie A, Towles H, Welch G, Fuchs H (2009) Multi-view lenticular display for group telecon" /><p class="c-article-references__text" id="ref-CR17">Lincoln P, Nashel A, Ilie A, Towles H, Welch G, Fuchs H (2009) Multi-view lenticular display for group teleconferencing. Immerscom</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="LOOXIS GmbH (2009) FaceWorx. http://www.looxis.com/en/k75.Downloads_Bits-and-Bytes-to-download.htm&#xA;           " /><p class="c-article-references__text" id="ref-CR18">LOOXIS GmbH (2009) FaceWorx. <a href="http://www.looxis.com/en/k75.Downloads_Bits-and-Bytes-to-download.htm">http://www.looxis.com/en/k75.Downloads_Bits-and-Bytes-to-download.htm</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="M. Mori, " /><meta itemprop="datePublished" content="1970" /><meta itemprop="headline" content="Mori M (1970) The uncanny valley. Energy 7(4):33–35" /><p class="c-article-references__text" id="ref-CR19">Mori M (1970) The uncanny valley. Energy 7(4):33–35</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 19 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=The%20uncanny%20valley&amp;journal=Energy&amp;volume=7&amp;issue=4&amp;pages=33-35&amp;publication_year=1970&amp;author=Mori%2CM">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Nguyen D, Canny J (2005) Multiview: spatially faithful group video conferencing. In: CHI ’05: Proceedings of t" /><p class="c-article-references__text" id="ref-CR20">Nguyen D, Canny J (2005) Multiview: spatially faithful group video conferencing. In: CHI ’05: Proceedings of the SIGCHI conference on human factors in computing systems. ACM, New York, NY, USA, pp 799–808</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Nguyen DT, Canny J (2007) Multiview: improving trust in group video conferencing through spatial faithfulness." /><p class="c-article-references__text" id="ref-CR21">Nguyen DT, Canny J (2007) Multiview: improving trust in group video conferencing through spatial faithfulness. In: CHI ’07: Proceedings of the SIGCHI conference on human factors in computing systems. ACM, New York, NY, USA, pp 1465–1474</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="OpenCV (2009) The OpenCV library. http://sourceforge.net/projects/opencvlibrary/&#xA;                        " /><p class="c-article-references__text" id="ref-CR22">OpenCV (2009) The OpenCV library. <a href="http://sourceforge.net/projects/opencvlibrary/">http://sourceforge.net/projects/opencvlibrary/</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="E. Paulos, J. Canny, " /><meta itemprop="datePublished" content="2001" /><meta itemprop="headline" content="Paulos E, Canny J (2001) Social tele-embodiment: understanding presence. Auton Robots 11(1):87–95" /><p class="c-article-references__text" id="ref-CR23">Paulos E, Canny J (2001) Social tele-embodiment: understanding presence. Auton Robots 11(1):87–95</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="http://www.emis.de/MATH-item?0983.68552" aria-label="View reference 23 on MATH">MATH</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1023%2FA%3A1011264330469" aria-label="View reference 23">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 23 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Social%20tele-embodiment%3A%20understanding%20presence&amp;journal=Auton%20Robots&amp;volume=11&amp;issue=1&amp;pages=87-95&amp;publication_year=2001&amp;author=Paulos%2CE&amp;author=Canny%2CJ">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Raskar R, Welch G, Chen W-C (1999) Table-top spatially-augmented reality: bringing physical models to life wit" /><p class="c-article-references__text" id="ref-CR24">Raskar R, Welch G, Chen W-C (1999) Table-top spatially-augmented reality: bringing physical models to life with projected imagery. In: IWAR ’99: Proceedings of the 2nd IEEE and ACM international workshop on augmented reality. IEEE Computer Society, Washington, DC, USA, p 64</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Raskar R, Welch G, Low K-L, Bandyopadhyay D (2001) Shader lamps: animating real objects with image-based illum" /><p class="c-article-references__text" id="ref-CR25">Raskar R, Welch G, Low K-L, Bandyopadhyay D (2001) Shader lamps: animating real objects with image-based illumination. In: Eurographics workshop on rendering</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Schreer O, Feldmann I, Atzpadin N, Eisert P, Kauff P, Belt H (2008) 3DPresence-a system concept for multi-user" /><p class="c-article-references__text" id="ref-CR26">Schreer O, Feldmann I, Atzpadin N, Eisert P, Kauff P, Belt H (2008) 3DPresence-a system concept for multi-user and multi-party immersive 3D videoconferencing, CVMP 2008, pp 1–8</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Seeing Machines (2009) faceAPI. http://www.seeingmachines.com/product/faceapi/&#xA;                        " /><p class="c-article-references__text" id="ref-CR27">Seeing Machines (2009) faceAPI. <a href="http://www.seeingmachines.com/product/faceapi/">http://www.seeingmachines.com/product/faceapi/</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="HJ. Shin, J. Lee, SY. Shin, M. Gleicher, " /><meta itemprop="datePublished" content="2001" /><meta itemprop="headline" content="Shin HJ, Lee J, Shin SY, Gleicher M (2001) Computer puppetry: an importance-based approach. ACM Trans Graph 20" /><p class="c-article-references__text" id="ref-CR28">Shin HJ, Lee J, Shin SY, Gleicher M (2001) Computer puppetry: an importance-based approach. ACM Trans Graph 20(2):67–94</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1145%2F502122.502123" aria-label="View reference 28">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 28 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Computer%20puppetry%3A%20an%20importance-based%20approach&amp;journal=ACM%20Trans%20Graph&amp;volume=20&amp;issue=2&amp;pages=67-94&amp;publication_year=2001&amp;author=Shin%2CHJ&amp;author=Lee%2CJ&amp;author=Shin%2CSY&amp;author=Gleicher%2CM">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="State A (2007) Exact eye contact with virtual humans. In: ICCV-HCI, pp 138–145" /><p class="c-article-references__text" id="ref-CR29">State A (2007) Exact eye contact with virtual humans. In: ICCV-HCI, pp 138–145</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Tachi S (2009) http://projects.tachilab.org/telesar2/&#xA;                        " /><p class="c-article-references__text" id="ref-CR30">Tachi S (2009) <a href="http://projects.tachilab.org/telesar2/">http://projects.tachilab.org/telesar2/</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="S. Tachi, N. Kawakami, M. Inami, Y. Zaitsu, " /><meta itemprop="datePublished" content="2004" /><meta itemprop="headline" content="Tachi S, Kawakami N, Inami M, Zaitsu Y (2004) Mutual telexistence system using retro-reflective projection tec" /><p class="c-article-references__text" id="ref-CR31">Tachi S, Kawakami N, Inami M, Zaitsu Y (2004) Mutual telexistence system using retro-reflective projection technology. Int J HR 1(1):45–64</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 31 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Mutual%20telexistence%20system%20using%20retro-reflective%20projection%20technology&amp;journal=Int%20J%20HR&amp;volume=1&amp;issue=1&amp;pages=45-64&amp;publication_year=2004&amp;author=Tachi%2CS&amp;author=Kawakami%2CN&amp;author=Inami%2CM&amp;author=Zaitsu%2CY">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Wikipedia (2010) Cisco telepresence. http://en.wikipedia.org/wiki/Cisco_TelePresence&#xA;                        " /><p class="c-article-references__text" id="ref-CR32">Wikipedia (2010) Cisco telepresence. <a href="http://en.wikipedia.org/wiki/Cisco_TelePresence">http://en.wikipedia.org/wiki/Cisco_TelePresence</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Woodworth C, Golden G, Gitlin R (1993) An integrated multimedia terminal for teleconferencing. In: Global tele" /><p class="c-article-references__text" id="ref-CR33">Woodworth C, Golden G, Gitlin R (1993) An integrated multimedia terminal for teleconferencing. In: Global telecommunications conference, 1993, including a communications theory mini-conference. Technical Program Conference Record, IEEE in Houston. GLOBECOM ’93., IEEE, vol 1. pp 399–405</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="T. Yotsukura, F. Nielsen, K. Binsted, S. Morishima, CS. Pinhanez, " /><meta itemprop="datePublished" content="2002" /><meta itemprop="headline" content="Yotsukura T, Nielsen F, Binsted K, Morishima S, Pinhanez CS (2002) Hypermask: talking head projected onto real" /><p class="c-article-references__text" id="ref-CR34">Yotsukura T, Nielsen F, Binsted K, Morishima S, Pinhanez CS (2002) Hypermask: talking head projected onto real object. The Vis Comput 18(2):111–120</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="http://www.emis.de/MATH-item?1002.68752" aria-label="View reference 34 on MATH">MATH</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1007%2Fs003710100140" aria-label="View reference 34">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 34 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Hypermask%3A%20talking%20head%20projected%20onto%20real%20object&amp;journal=Visual%20Comput&amp;volume=18&amp;issue=2&amp;pages=111-120&amp;publication_year=2002&amp;author=Yotsukura%2CT&amp;author=Nielsen%2CF&amp;author=Binsted%2CK&amp;author=Morishima%2CS&amp;author=Pinhanez%2CCS">
+                    Google Scholar</a> 
+                </p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-010-0175-5-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Ack1">Acknowledgments</h2><div class="c-article-section__content" id="Ack1-content"><p>We thank Herman Towles for his insightful suggestions and technical help and advice. John Thomas provided mechanical and electronic engineering assistance. David Harrison set up our full-duplex audio subsystem. Dorothy Turner became our first non-author SLA user (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0175-5#Fig5">5</a>, bottom half of image set). Tao Li helped set up the ISMAR demonstration. Donna Boggs modeled as the Avatar’s interlocutor (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0175-5#Fig2">2</a>). We thank Chris Macedonia, M.D. for inspiring us by expressing his desire to visit his patients in remote hospitals and other medical facilities with a greater effectiveness than is possible with current remote presence systems, and for offering the term “prosthetic presence.” We are grateful to Brian Bradley for his appearance as a prosthetic physician at our ISMAR 2009 booth, and we thank all ISMAR participants who visited our booth and engaged both the Avatar and the researchers with questions and suggestions. Partial funding for this work was provided by the Office of Naval Research (award N00014-09-1-0813, “3D Display and Capture of Humans for Live-Virtual Training,” Dr. Roy Stripling, Program Manager).</p></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">Department of Computer Science, The University of North Carolina at Chapel Hill, Chapel Hill, NC, USA</p><p class="c-article-author-affiliation__authors-list">Peter Lincoln, Greg Welch, Andrew Nashel, Andrei State, Adrian Ilie &amp; Henry Fuchs</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Peter-Lincoln"><span class="c-article-authors-search__title u-h3 js-search-name">Peter Lincoln</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Peter+Lincoln&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Peter+Lincoln" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Peter+Lincoln%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Greg-Welch"><span class="c-article-authors-search__title u-h3 js-search-name">Greg Welch</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Greg+Welch&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Greg+Welch" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Greg+Welch%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Andrew-Nashel"><span class="c-article-authors-search__title u-h3 js-search-name">Andrew Nashel</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Andrew+Nashel&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Andrew+Nashel" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Andrew+Nashel%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Andrei-State"><span class="c-article-authors-search__title u-h3 js-search-name">Andrei State</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Andrei+State&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Andrei+State" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Andrei+State%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Adrian-Ilie"><span class="c-article-authors-search__title u-h3 js-search-name">Adrian Ilie</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Adrian+Ilie&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Adrian+Ilie" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Adrian+Ilie%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Henry-Fuchs"><span class="c-article-authors-search__title u-h3 js-search-name">Henry Fuchs</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Henry+Fuchs&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Henry+Fuchs" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Henry+Fuchs%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-010-0175-5/email/correspondent/c1/new">Peter Lincoln</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=Animatronic%20shader%20lamps%20avatars&amp;author=Peter%20Lincoln%20et%20al&amp;contentID=10.1007%2Fs10055-010-0175-5&amp;publication=1359-4338&amp;publicationDate=2010-10-12&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Lincoln, P., Welch, G., Nashel, A. <i>et al.</i> Animatronic shader lamps avatars.
+                    <i>Virtual Reality</i> <b>15, </b>225–238 (2011). https://doi.org/10.1007/s10055-010-0175-5</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-010-0175-5.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2009-11-20">20 November 2009</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2010-09-23">23 September 2010</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2010-10-12">12 October 2010</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2011-06">June 2011</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-010-0175-5" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-010-0175-5</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Telepresence</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Avatar</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Shader lamps</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Teleconferencing</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Conferencing</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Animatronic</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-010-0175-5.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=175;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

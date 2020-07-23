@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="Benchmarking template-based tracking algorithms"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="For natural interaction with augmented reality (AR) applications, good tracking technology is key. But unlike dense stereo, optical flow or multi-view stereo, template-based tracking which is most..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/15/2.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="Benchmarking template-based tracking algorithms"/>
+
+    <meta name="dc.source" content="Virtual Reality 2010 15:2"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2010-12-09"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2010 Springer-Verlag London Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="For natural interaction with augmented reality (AR) applications, good tracking technology is key. But unlike dense stereo, optical flow or multi-view stereo, template-based tracking which is most commonly used for AR applications lacks benchmark datasets allowing a fair comparison between state-of-the-art algorithms. Until now, in order to evaluate objectively and quantitatively the performance and the robustness of template-based tracking algorithms, mainly synthetically generated image sequences were used. The evaluation is therefore often intrinsically biased. In this paper, we describe the process we carried out to perform the acquisition of real-scene image sequences with very precise and accurate ground truth poses using an industrial camera rigidly mounted on the end effector of a high-precision robotic measurement arm. For the acquisition, we considered most of the critical parameters that influence the tracking results such as: the texture richness and the texture repeatability of the objects to be tracked, the camera motion and speed, and the changes of the object scale in the images and variations of the lighting conditions over time. We designed an evaluation scheme for object detection and interframe tracking algorithms suited for AR and other computer vision applications and used the image sequences to apply this scheme to several state-of-the-art algorithms. The image sequences are freely available for testing, submitting and evaluating new template-based tracking algorithms, i.e. algorithms that detect or track a planar object in an image sequence given only one image of the object (called the template)."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2010-12-09"/>
+
+    <meta name="prism.volume" content="15"/>
+
+    <meta name="prism.number" content="2"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="99"/>
+
+    <meta name="prism.endingPage" content="108"/>
+
+    <meta name="prism.copyright" content="2010 Springer-Verlag London Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-010-0185-3"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-010-0185-3"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-010-0185-3.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-010-0185-3"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="Benchmarking template-based tracking algorithms"/>
+
+    <meta name="citation_volume" content="15"/>
+
+    <meta name="citation_issue" content="2"/>
+
+    <meta name="citation_publication_date" content="2011/06"/>
+
+    <meta name="citation_online_date" content="2010/12/09"/>
+
+    <meta name="citation_firstpage" content="99"/>
+
+    <meta name="citation_lastpage" content="108"/>
+
+    <meta name="citation_article_type" content="SI: Augmented Reality"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-010-0185-3"/>
+
+    <meta name="DOI" content="10.1007/s10055-010-0185-3"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-010-0185-3"/>
+
+    <meta name="description" content="For natural interaction with augmented reality (AR) applications, good tracking technology is key. But unlike dense stereo, optical flow or multi-view ster"/>
+
+    <meta name="dc.creator" content="Sebastian Lieberknecht"/>
+
+    <meta name="dc.creator" content="Selim Benhimane"/>
+
+    <meta name="dc.creator" content="Peter Meier"/>
+
+    <meta name="dc.creator" content="Nassir Navab"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IJCV; citation_title=Lucas-kanade 20&#160;years on: a unifying framework; citation_author=S Baker, I Matthews; citation_volume=56; citation_issue=3; citation_publication_date=2004; citation_pages=221-255; citation_doi=10.1023/B:VISI.0000011205.11775.fd; citation_id=CR3"/>
+
+    <meta name="citation_reference" content="Baker S, Scharstein D, Lewis J, Roth S, Black MJ, Szeliski R (2007) A database and evaluation methodology for optical flow. In: ICCV, pp 1&#8211;8"/>
+
+    <meta name="citation_reference" content="Bay H, Tuytelaars T, Gool LJV (2006) Surf: speeded up robust features. In: ECCV, pp 404&#8211;417"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Int J Rob Res; citation_title=Homography-based 2d visual tracking and servoing; citation_author=S Benhimane, E Malis; citation_volume=26; citation_issue=7; citation_publication_date=2007; citation_pages=661-676; citation_doi=10.1177/0278364907080252; citation_id=CR6"/>
+
+    <meta name="citation_reference" content="citation_journal_title=J Opt Soc Am A; citation_title=Model for the extraction of image flow; citation_author=DJ Heeger; citation_volume=4; citation_issue=8; citation_publication_date=1987; citation_pages=1455-1471; citation_doi=10.1364/JOSAA.4.001455; citation_id=CR8"/>
+
+    <meta name="citation_reference" content="Klein G, Murray D (2007) Parallel tracking and mapping for small ar workspaces. In: ISMAR, pp 225&#8211;234"/>
+
+    <meta name="citation_reference" content="Lieberknecht S, Benhimane S, Meier P, Navab N (2009) A dataset and evaluation methodology for template-based tracking algorithms. In: ISMAR"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IJCV; citation_title=Distinctive image features from scale-invariant keypoints; citation_author=DG Lowe; citation_volume=60; citation_issue=2; citation_publication_date=2004; citation_pages=91-110; citation_doi=10.1023/B:VISI.0000029664.99615.94; citation_id=CR11"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IJCV; citation_title=Scale and affine invariant interest point detectors; citation_author=K Mikolajczyk, C Schmid; citation_volume=60; citation_issue=1; citation_publication_date=2004; citation_pages=63-86; citation_doi=10.1023/B:VISI.0000027790.02288.f2; citation_id=CR12"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IJCV; citation_title=Evaluation of features detectors and descriptors based on 3d objects; citation_author=P Moreels, P Perona; citation_volume=73; citation_issue=3; citation_publication_date=2007; citation_pages=263-284; citation_doi=10.1007/s11263-006-9967-1; citation_id=CR13"/>
+
+    <meta name="citation_reference" content="&#214;zuysal M, Fua P, Lepetit V (2007) Fast keypoint recognition in ten lines of code. In: CVPR, pp 1&#8211;8"/>
+
+    <meta name="citation_reference" content="Pentenrieder K, Meier P, Klinker G (2006) Analysis of tracking accuracy for single-camera square-marker-based tracking. In: Proceedings of Dritter Workshop Virtuelle und Erweiterte Realit&#228;t der GI-Fachgruppe VR/AR"/>
+
+    <meta name="citation_reference" content="citation_journal_title=J Optim Theory Appl; citation_title=A convergent variant of the nelder-mead algorithm; citation_author=CJ Price, ID Coope, D Byatt; citation_volume=113; citation_issue=1; citation_publication_date=2002; citation_pages=5-19; citation_doi=10.1023/A:1014849028575; citation_id=CR16"/>
+
+    <meta name="citation_reference" content="Seitz SM, Curless B, Diebel J, Scharstein D, Szeliski R (2006) A comparison and evaluation of multi-view stereo reconstruction algorithms. In: CVPR, pp 519&#8211;528"/>
+
+    <meta name="citation_reference" content="citation_journal_title=PAMI; citation_title=A comparative study of energy minimization methods for markov random fields with smoothness-based priors; citation_author=R Szeliski, R Zabih, D Scharstein, O Veksler, V Kolmogorov, A Agarwala, M Tappen, C Rother; citation_volume=30; citation_issue=6; citation_publication_date=2008; citation_pages=1068-1080; citation_doi=10.1109/TPAMI.2007.70844; citation_id=CR18"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Trans Rob Autom; citation_title=A new technique for fully autonomous and efficient 3d robotics hand/eye calibration; citation_author=RY Tsai, RK Lenz; citation_volume=5; citation_issue=3; citation_publication_date=1989; citation_pages=345-358; citation_doi=10.1109/70.34770; citation_id=CR19"/>
+
+    <meta name="citation_reference" content="Vedaldi A, Fulkerson B (2008) VLFeat: an open and portable library of computer vision algorithms. 
+                    http://www.vlfeat.org
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="Wagner D, Reitmayr G, Mulloni A, Drummond T, Schmalstieg D (2008) Pose tracking from natural features on mobile phones. In: ISMAR, pp 125&#8211;134"/>
+
+    <meta name="citation_reference" content="citation_journal_title=PAMI; citation_title=Tracking by an optimal sequence of linear predictors; citation_author=K Zimmerman, J Matas, T Svoboda; citation_volume=31; citation_issue=4; citation_publication_date=2009; citation_pages=677-692; citation_doi=10.1109/TPAMI.2008.119; citation_id=CR22"/>
+
+    <meta name="citation_author" content="Sebastian Lieberknecht"/>
+
+    <meta name="citation_author_email" content="Sebastian.Lieberknecht@metaio.com"/>
+
+    <meta name="citation_author_institution" content="metaio Gmbh, Munich, Germany"/>
+
+    <meta name="citation_author" content="Selim Benhimane"/>
+
+    <meta name="citation_author_email" content="Selim.Benhimane@metaio.com"/>
+
+    <meta name="citation_author_institution" content="metaio Gmbh, Munich, Germany"/>
+
+    <meta name="citation_author" content="Peter Meier"/>
+
+    <meta name="citation_author_email" content="Peter.Meier@metaio.com"/>
+
+    <meta name="citation_author_institution" content="metaio Gmbh, Munich, Germany"/>
+
+    <meta name="citation_author" content="Nassir Navab"/>
+
+    <meta name="citation_author_email" content="Navab@cs.tum.edu"/>
+
+    <meta name="citation_author_institution" content="Technical University of Munich, Munich, Germany"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-010-0185-3&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2011/06/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-010-0185-3"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="Benchmarking template-based tracking algorithms"/>
+        <meta property="og:description" content="For natural interaction with augmented reality (AR) applications, good tracking technology is key. But unlike dense stereo, optical flow or multi-view stereo, template-based tracking which is most commonly used for AR applications lacks benchmark datasets allowing a fair comparison between state-of-the-art algorithms. Until now, in order to evaluate objectively and quantitatively the performance and the robustness of template-based tracking algorithms, mainly synthetically generated image sequences were used. The evaluation is therefore often intrinsically biased. In this paper, we describe the process we carried out to perform the acquisition of real-scene image sequences with very precise and accurate ground truth poses using an industrial camera rigidly mounted on the end effector of a high-precision robotic measurement arm. For the acquisition, we considered most of the critical parameters that influence the tracking results such as: the texture richness and the texture repeatability of the objects to be tracked, the camera motion and speed, and the changes of the object scale in the images and variations of the lighting conditions over time. We designed an evaluation scheme for object detection and interframe tracking algorithms suited for AR and other computer vision applications and used the image sequences to apply this scheme to several state-of-the-art algorithms. The image sequences are freely available for testing, submitting and evaluating new template-based tracking algorithms, i.e. algorithms that detect or track a planar object in an image sequence given only one image of the object (called the template)."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>Benchmarking template-based tracking algorithms | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-010-0185-3","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Augmented reality, Optical tracking, Template-based tracking, Benchmark, Evaluation","kwrd":["Augmented_reality","Optical_tracking","Template-based_tracking","Benchmark","Evaluation"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-010-0185-3","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-010-0185-3","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=185;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-010-0185-3">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            Benchmarking template-based tracking algorithms
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-010-0185-3.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-010-0185-3.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">SI: Augmented Reality</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2010-12-09" itemprop="datePublished">09 December 2010</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">Benchmarking template-based tracking algorithms</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Sebastian-Lieberknecht" data-author-popup="auth-Sebastian-Lieberknecht" data-corresp-id="c1">Sebastian Lieberknecht<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="metaio Gmbh" /><meta itemprop="address" content="grid.474343.3, 0000000417920057, metaio Gmbh, Munich, Germany" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Selim-Benhimane" data-author-popup="auth-Selim-Benhimane">Selim Benhimane</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="metaio Gmbh" /><meta itemprop="address" content="grid.474343.3, 0000000417920057, metaio Gmbh, Munich, Germany" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Peter-Meier" data-author-popup="auth-Peter-Meier">Peter Meier</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="metaio Gmbh" /><meta itemprop="address" content="grid.474343.3, 0000000417920057, metaio Gmbh, Munich, Germany" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Nassir-Navab" data-author-popup="auth-Nassir-Navab">Nassir Navab</a></span><sup class="u-js-hide"><a href="#Aff2">2</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Technical University of Munich" /><meta itemprop="address" content="grid.6936.a, 0000000123222966, Technical University of Munich, Munich, Germany" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 15</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">99</span>–<span itemprop="pageEnd">108</span>(<span data-test="article-publication-year">2011</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">407 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">13 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                    
+                        <li class="c-article-metrics-bar__item">
+                            <p class="c-article-metrics-bar__count">0 <span class="c-article-metrics-bar__label">Altmetric</span></p>
+                        </li>
+                    
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-010-0185-3/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>For natural interaction with augmented reality (AR) applications, good tracking technology is key. But unlike dense stereo, optical flow or multi-view stereo, template-based tracking which is most commonly used for AR applications lacks benchmark datasets allowing a fair comparison between state-of-the-art algorithms. Until now, in order to evaluate objectively and quantitatively the performance and the robustness of template-based tracking algorithms, mainly synthetically generated image sequences were used. The evaluation is therefore often intrinsically biased. In this paper, we describe the process we carried out to perform the acquisition of real-scene image sequences with very precise and accurate ground truth poses using an industrial camera rigidly mounted on the end effector of a high-precision robotic measurement arm. For the acquisition, we considered most of the critical parameters that influence the tracking results such as: the texture richness and the texture repeatability of the objects to be tracked, the camera motion and speed, and the changes of the object scale in the images and variations of the lighting conditions over time. We designed an evaluation scheme for object detection and interframe tracking algorithms suited for AR and other computer vision applications and used the image sequences to apply this scheme to several state-of-the-art algorithms. The image sequences are freely available for testing, submitting and evaluating new template-based tracking algorithms, i.e. algorithms that detect or track a planar object in an image sequence given only one image of the object (called the template).</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Introduction</h2><div class="c-article-section__content" id="Sec1-content"><p>In the last few years, markerless visual tracking reached the level where a large variety of algorithms could be successfully used in a wide range of AR applications (Klein and Murray <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Klein G, Murray D (2007) Parallel tracking and mapping for small ar workspaces. In: ISMAR, pp 225–234" href="/article/10.1007/s10055-010-0185-3#ref-CR9" id="ref-link-section-d68688e347">2007</a>; Wagner et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Wagner D, Reitmayr G, Mulloni A, Drummond T, Schmalstieg D (2008) Pose tracking from natural features on mobile phones. In: ISMAR, pp 125–134" href="/article/10.1007/s10055-010-0185-3#ref-CR21" id="ref-link-section-d68688e350">2008</a>). Only accurate, robust and stable tracking can empower a natural interaction with AR. Until now, the performance of state-of-the-art algorithms was either evaluated quantitatively using synthetically rendered images or evaluated qualitatively using ad hoc recorded videos demonstrating a new method.</p><p>Using synthetic images has the advantage that the camera pose with respect to the synthetic scene can be set perfectly. On the one hand, comparing the pose estimation obtained using a given tracking algorithm with the camera pose set during the rendering process allows the establishment of the estimation error. On the other hand, it is very hard to create synthetic images that reproduce the real effects of every phenomenon such as lighting, noise, motion blur, discretization, blooming or limited color depths during the real image acquisitions. In general, these effects can only be approximated, which makes the evaluations intrinsically biased. Such images could be used during the design of new algorithms and to get a rough impression of the behavior of the tracking but they do not guarantee the performances that will be obtained with real-world data.</p><p>Using recorded videos of real scenes can, however, demonstrate that a given algorithm can or cannot work in real-world conditions but the evaluation of the performances remains qualitative. For example, it makes it possible to visually see that the camera pose was or was not correctly estimated if the virtual augmentation is or is not positioned and oriented as expected.</p><p>Since the research community is working on markerless visual tracking very actively, the need of common objective datasets with ground truth is growing. We believe that image sequences acquired with a real camera where the pose of the camera for every frame of the sequences is known quite perfectly will give very strong benefits to the community. Such datasets will allow a fast performance estimation in terms of speed and accuracy of a newly designed algorithm and its fair comparison with the existing ones.</p><p>This paper is based on our previous work (Lieberknecht et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Lieberknecht S, Benhimane S, Meier P, Navab N (2009) A dataset and evaluation methodology for template-based tracking algorithms. In: ISMAR" href="/article/10.1007/s10055-010-0185-3#ref-CR10" id="ref-link-section-d68688e363">2009</a>), we present the methodology we used to record image sequences with ground truth knowledge about the position and orientation of the camera in every frame. We used an industrial camera mounted on the end effector of a high-precision robotic measurement arm as hardware setup. The camera is calibrated intrinsically with an industrial 3D calibration target which is also used to compute the hand-eye-calibration, i.e. the transformation between the camera center and the measurement tip.</p><p>For this first version of the dataset, we recorded sequences of planar targets using the calibrated setup. We identified four different types of tracking targets classified by texture richness and repeatability. Each type is represented by two targets in the dataset. Next, we determined five standard factors that have the biggest influence on the performance of the tracking and which are related to the camera motion, the size of the tracked object in the image and the lighting conditions; one sequence per target is dedicated to each influence. The dataset has in total 40 sequences of 1,200 images each.</p><p>The recorded sequences were first checked against very accurately detected corners of fiducials, and the resulting average residual was below one pixel. We also used the dataset in order to evaluate four popular (and at least in compiled form available) state-of-the-art algorithms, three tracking-by-detection methods and one frame-by-frame tracking method. We summarize the evaluation results in the end of the paper.</p></div></div></section><section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">Related work</h2><div class="c-article-section__content" id="Sec2-content"><p>For a long time, Quam’s Yosemite sequence (Heeger <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1987" title="Heeger DJ (1987) Model for the extraction of image flow. J Opt Soc Am A 4(8):1455–1471" href="/article/10.1007/s10055-010-0185-3#ref-CR8" id="ref-link-section-d68688e378">1987</a>) used to be the reference used for evaluating optical flow algorithms. Quam created a model by mapping aerial photos onto a depth map of the Yosemite valley and generated a sequence by simulating a flight through the valley.</p><p>Today, the Middlebury datasets (Baker et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Baker S, Scharstein D, Lewis J, Roth S, Black MJ, Szeliski R (2007) A database and evaluation methodology for optical flow. In: ICCV, pp 1–8" href="/article/10.1007/s10055-010-0185-3#ref-CR4" id="ref-link-section-d68688e384">2007</a>) are the reference for optical flow. Besides having generated synthetic images, they also created dense ground truth by using hidden fluorescent texture. The same group additionally made ground truth datasets for dense stereo matching using structured light and datasets for multi-view stereo using a laser scanner (Szeliski et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Szeliski R, Zabih R, Scharstein D, Veksler O, Kolmogorov V, Agarwala A, Tappen M, Rother C (2008) A comparative study of energy minimization methods for markov random fields with smoothness-based priors. PAMI 30(6):1068–1080" href="/article/10.1007/s10055-010-0185-3#ref-CR18" id="ref-link-section-d68688e387">2008</a>; Seitz et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Seitz SM, Curless B, Diebel J, Scharstein D, Szeliski R (2006) A comparison and evaluation of multi-view stereo reconstruction algorithms. In: CVPR, pp 519–528" href="/article/10.1007/s10055-010-0185-3#ref-CR17" id="ref-link-section-d68688e390">2006</a>). Theoretically, these images could be used to evaluate tracking algorithms as well. However, due to the very limited number of frames/image pairs given and the completely different goal set when creating these datasets, the result from an evaluation using these datasets will be missing important factors such as e.g. motion blur and the irregular movements coming from a human camera operator.</p><p>In markerless visual tracking, Baker and Matthews (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Baker S, Matthews I (2004) Lucas-kanade 20 years on: a unifying framework. IJCV 56(3):221–255" href="/article/10.1007/s10055-010-0185-3#ref-CR3" id="ref-link-section-d68688e396">2004</a>) used synthetically warped images to compare four different tracking algorithms; the warping amplitude and the noise of the image were simulated synthetically. Mikolajczyk and Schmid (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Mikolajczyk K, Schmid C (2004) Scale and affine invariant interest point detectors. IJCV 60(1):63–86" href="/article/10.1007/s10055-010-0185-3#ref-CR12" id="ref-link-section-d68688e399">2004</a>) used still images for comparing affine region detectors, their dataset was also used by many others. Moreels and Perona (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Moreels P, Perona P (2007) Evaluation of features detectors and descriptors based on 3d objects. IJCV 73(3):263–284" href="/article/10.1007/s10055-010-0185-3#ref-CR13" id="ref-link-section-d68688e402">2007</a>) used a turn table together with a static stereo camera setup to evaluate the performance of feature detectors and descriptors on 3D objects. They generated a database consisting of 100 objects with calibrated views, one image pair for each 5° rotation of the turntable. In general, turntable sequences with a static camera only model a limited range of transformations that are not specifically representative for AR applications.</p><p>Recently, Zimmerman et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Zimmerman K, Matas J, Svoboda T (2009) Tracking by an optimal sequence of linear predictors. PAMI 31(4):677–692" href="/article/10.1007/s10055-010-0185-3#ref-CR22" id="ref-link-section-d68688e408">2009</a>) published a dataset consisting of grayscale image sequences with transformations of the targets that cover all six degrees of freedom and that thus could be used to evaluate frame-by-frame tracking algorithms. The ground truth poses of these sequences were obtained by manually clicking on either crosses that were attached to objects or by clicking directly on the corners of an object. The three image sequences consist of approximately 12,000 images in total and feature three different targets.</p><p>Unfortunately, this dataset only considers a very limited number of objects and factors influencing the tracking, e.g. the lighting conditions were kept fixed. Moreover, the ground truth data were based on information exclusively coming from the images, it was mainly done by clicking points in the images with pixel-accurate localization (no sub-pixel localization). Following this approach, it is not possible to have reliable ground truth in the case of blurry or noisy images. It is also not possible to recover the camera position and orientation when the points used to determine the pose are not in the field of view of the camera. Consequently, the performance of the tested algorithms could not be evaluated in the presence of noise, motion blur or for some relative position between the camera and the tracked objects.</p><p>We propose a novel dataset that methodically focusses on different types of tracking targets as well as on the factors with biggest influence on the tracking performance. The ground truth was established using dedicated hardware and was not exclusively dependent on the acquired image data.</p></div></div></section><section aria-labelledby="Sec3"><div class="c-article-section" id="Sec3-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec3">Description of the setup</h2><div class="c-article-section__content" id="Sec3-content"><p>In the following, we describe the hardware components we use to obtain the ground truth pose data. In order to reach a very high precision, we use proven industrial hardware components wherever possible and appropriate.</p><p>A FaroArm Platinum (FARO Europe GmbH and Co. KG. <a href="http://faro.com">http://faro.com</a>), a robotic measurement arm, was used as key component for the ground truth measurements. It has seven axes and an accuracy better than 0.013 mm within its reach of around 1.2 m from its base. The arm uses internal temperature sensors to compensate the effect of thermal variations. We assume that the residual noise in the measurement arm is negligibly small. An industrial AVT Marlin F-080C camera (Allied Vision Technologies GmbH. <a href="http://alliedvisiontec.com">http://alliedvisiontec.com</a>) was rigidly mounted on the end effector of the measurement arm. The camera is able to progressively capture VGA frames with 40 Hz, while the measurement arm provides absolute pose data with 75 Hz. We used an adjustable panel light providing daylight-balanced 5,600 K light for controlling the illumination. An image of the setup can be seen in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0185-3#Fig1">1</a>.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0185-3/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0185-3/MediaObjects/10055_2010_185_Fig1_HTML.jpg?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0185-3/MediaObjects/10055_2010_185_Fig1_HTML.jpg" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p>The measurement arm, the camera and one of the targets</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0185-3/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>The following steps were done to make the system operational: First, the intrinsics and undistortion coefficients of the camera were computed using a professional photogrammetric calibration target and the accompanying software from AICON (AICON 3D Systems GmbH. <a href="http://aicon.de/">http://aicon.de/</a>). The camera calibration was conducted following the guidelines of the provider, and the residual error was less than 0.07 pixels.</p><p>The intrinsics of the robot, namely its tip and the seven joints, were also calibrated according to the guidelines of the manufacturer. After that, the hand-eye-calibration was conducted. For this, we again used the AICON calibration target and software, but this time only used the extrinsic orientation together with poses of the faro arm. Ten pose pairs were recorded, and the hand-eye-calibration was computed with a method similar to the one proposed by Tsai and Lenz (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1989" title="Tsai RY, Lenz RK (1989) A new technique for fully autonomous and efficient 3d robotics hand/eye calibration. IEEE Trans Rob Autom 5(3):345–358" href="/article/10.1007/s10055-010-0185-3#ref-CR19" id="ref-link-section-d68688e474">1989</a>).</p></div></div></section><section aria-labelledby="Sec4"><div class="c-article-section" id="Sec4-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec4">Designing the dataset</h2><div class="c-article-section__content" id="Sec4-content"><p>The motivation for creating the dataset is to evaluate and to allow a fair comparison between a wide range of template-based tracking algorithms. There are algorithms that use corners, edges and whole regions of an image. We tried to make the dataset balanced and focused on real-world usage. In the following, we describe how we tried to achieve these goals.</p><h3 class="c-article__sub-heading" id="Sec5">Targets</h3><p>The most basic, essential and quasi-incontrovertible task is the tracking of planar structures. In fact, in order to be able to determine the relative position and orientation of the camera with respect to different objects of the environment in real time, most of the model-free detection and tracking algorithms have to assume that the objects are locally planar or piecewise planar. That is why we used planar targets. These targets were chosen to represent a broad overview of all types of possible tracking targets. We classified them into four different groups, namely “Low Texture”, “High Texture”, “Repetitive Texture” and “Normal Texture”, meaning somewhere in between. Each class is represented by two targets each, shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0185-3#Fig2">2</a>. We did not track any of these targets in advance in order to not make the selection of the targets biased.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0185-3/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0185-3/MediaObjects/10055_2010_185_Fig2_HTML.jpg?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0185-3/MediaObjects/10055_2010_185_Fig2_HTML.jpg" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p>The reference targets used in our dataset. From<i> left</i>: low, repetitive, normal, high texturedness</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0185-3/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>The “Low Texture” group consists of images of road signs, which are composed of two distinct colors and large uniform areas, thus large edges are visible. In the “Repetitive” group, there are images of electronic boards, one image with mainly large, one image with mainly small components. An image of a car and of a cityscape are in the group of the “Normal” reference targets. Finally, the group of “Highly Textured” images is composed of an image of a wall made of different sized stones and of an image with English lawn, which features many extremely small structures everywhere.</p><p>Each target image was resampled to a resolution of 800 × 600 before printing. The algorithms later were provided with the inner 640 × 480 area of these target images. We compared the results of the ground truth with the results of the tracking of six fiducials (markers) placed next to the reference targets (see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0185-3#Fig5">5</a>) for final validations.</p><p>The targets were printed with a color laser printer. Both the printer and the camera were not specifically color calibrated such that the captured images of the printed targets match the reference targets exactly. These steps were skipped on purpose as they are common in real-world scenarios and hard to emulate with synthetic images. The printed pages were glued onto foamboard, which was later fixed on a table rigidly connected with the base of the measurement arm.</p><h3 class="c-article__sub-heading" id="Sec6">Sequences</h3><p>Next, we designed the dynamic part of the evaluation. Here, we focus on five different types of dynamic behaviors: “Angle”, “Range”, “Fast Far”, “Fast Close” and “Illumination”.</p><p>In the sequences of type “Angle”, we focus on varying the angle between the normal of the reference target and the optical axis of the camera between 0° and approximately 80° while trying to keep the distance to the target constant. The target covers around 10–30% of the image.</p><p>The “Range” sequences focus on the size of the reference image in the camera image. The maximum distance of the camera to the target resulted in a visible area of the reference target of about 130 × 100 pixels or 4% of the original area, whereas the maximum of the visible area is around 100%, i.e. the reference template occupied the whole camera image. The reference template is always facing the camera near fronto-parallel in these sequences and there is only rotation around the normal of the target.</p><p>The next type of sequences is “Fast Far”; here, we go away from the target until it covers again an area of approximately 4% of the image. Then, we move the camera with increasing speed resulting in big inter-frame motion. Toward the end of these sequences, the effect of motion blur shows strongly.</p><p>These motions are also applied to the “Fast Close” sequences, the only difference here being that the reference image typically covers 60% and more of the image where parts of the targets go often outside the image.</p><p>The last type of sequences we recorded, “Illumination”, varies the lighting conditions of the scene, while the camera is moving slowly. For this, we switch off and on again two sets of fluorescent tubes during the sequence, additionally a shadow is cast by a waving hand onto the reference target. In this scenario, the target is always covering more than 15% of the camera image.</p><p>Selected frames from the sequences can be seen in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0185-3#Fig3">3</a>. Every sequence consists of 1,200 RGB images with a resolution of 640 × 480 pixels acquired from the camera at 40 Hz, and the measurement arm provides its absolute poses with 75 Hz. These data were recorded directly into the main memory of the attached computer in order to minimize the influence of slowing down the recording at arbitrary moments because of hard disk access. The images and poses are written to disk as batch job after each sequence. We also chose not to fuse the images with the poses while recording; instead, we synchronize them offline. Thus, we make sure that also fast and sudden motions are accurately represented in the dataset.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0185-3/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0185-3/MediaObjects/10055_2010_185_Fig3_HTML.gif?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0185-3/MediaObjects/10055_2010_185_Fig3_HTML.gif" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p>Sample images taken from some of the sequences each 200 frames. In this figure, the real background is blended with the image the algorithms process during the evaluation to highlight the randomized borders used</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0185-3/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        </div></div></section><section aria-labelledby="Sec7"><div class="c-article-section" id="Sec7-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec7">Post-processing the dataset acquisition</h2><div class="c-article-section__content" id="Sec7-content"><p>After recording the images and poses of all 40 sequences, we still had to assign a specific pose to each image and compute the residual error of the sequences. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0185-3#Fig4">4</a> shows an overview of the transformations in our setup, which will be discussed briefly.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0185-3/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0185-3/MediaObjects/10055_2010_185_Fig4_HTML.jpg?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0185-3/MediaObjects/10055_2010_185_Fig4_HTML.jpg" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p>The transformations used in our setup</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0185-3/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>The internal pose <b>T</b>
+                        <sub>int</sub> of the robot is known to be very precise. The hand-eye-calibration <b>T</b>
+                        <sub>hec</sub> is based on the AICON calibration pattern and the internal pose of the robot; thus, it is also very precise. The transformation <b>T</b>
+                        <sub>alg</sub> is given by the evaluated algorithm and compared to the ground truth pose computed via a concatenation of <span class="mathjax-tex">\({\bf T}_{\rm hec}, {\bf T}_{\rm int}\)</span> and <b>T</b>
+                        <sub>ext</sub>. The external offset of the measurement arm <b>T</b>
+                        <sub>ext</sub> has to be provided by generating 3D–3D correspondences with the tip of the arm by moving it to coordinates of known 3D reference points. We chose the 24 corners of six fiducials next to the reference target for those points. These corners were also used for computing the residuals, for the synchronization of the measurement arm with the camera and also for fine-tuning <b>T</b>
+                        <sub>ext</sub>. Although the detection of the fiducials is not perfect, it is extremely accurate (Pentenrieder et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Pentenrieder K, Meier P, Klinker G (2006) Analysis of tracking accuracy for single-camera square-marker-based tracking. In: Proceedings of Dritter Workshop Virtuelle und Erweiterte Realität der GI-Fachgruppe VR/AR" href="/article/10.1007/s10055-010-0185-3#ref-CR15" id="ref-link-section-d68688e644">2006</a>) and thus appropriate for these tasks.</p><p>To synchronize the measurement arm to the images of the camera, we did the following: as soon as an image is fully captured from the camera, i.e. available to our software, we attach a timestamp <i>t</i>
+                        <span class="c-stack">
+                  <sup><i>i</i></sup><sub>img</sub>
+                  
+                </span> to it; the same is done with the poses of the measurement arm, and these timestamps are denoted by <i>t</i>
+                        <span class="c-stack">
+                  <sup><i>j</i></sup><sub>meas</sub>
+                  
+                </span>. We assume that there is a constant offset <i>t</i>
+                        <sub>offset</sub> between the timestamps <i>t</i>
+                        <span class="c-stack">
+                  <sup><i>i</i></sup><sub>img</sub>
+                  
+                </span> and <i>t</i>
+                        <span class="c-stack">
+                  <sup><i>j</i></sup><sub>meas</sub>
+                  
+                </span> that can be thought of the time needed to capture the image, to transfer the image information via the various busses to the main memory and finally to invoke all hard- and software interrupts until the image is available to our software. The optimal offset together with the optimal <b>T</b>
+                        <sub>ext</sub> should give the lowest residual, i.e. in our case, the lowest RMS of the reprojection error of the fiducials for a full sequence (1,200 images). Due to the difference in the acquisition frequency between the camera and the measurement arm, the pose assigned to an image was interpolated from the two nearest neighbors using linear interpolation for the translational part and spherical interpolation for the rotational part. We used the Nelder-Mead algorithm (Price et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Price CJ, Coope ID, Byatt D (2002) A convergent variant of the nelder-mead algorithm. J Optim Theory Appl 113(1):5–19" href="/article/10.1007/s10055-010-0185-3#ref-CR16" id="ref-link-section-d68688e710">2002</a>) to jointly optimize <i>t</i>
+                        <sub>offset</sub> and <b>T</b>
+                        <sub>ext</sub> for each sequence, starting with <i>t</i>
+                        <sub>offset</sub> = 0 and with the result of the manual registration for <b>T</b>
+                        <sub>ext</sub>.</p><p>After the synchronization was completed, we arrived at an average RMS reprojection error of 0.86 pixels for all sequences. This error also incorporates all errors from the internal and external calibrations. The “Fast Close” sequences typically have the highest residual error (mean 1.54 pixels) due to the motion blur and the large size of the reference target in the image, and the lowest residual error (mean 0.54 pixels) was found for the “Illumination” sequences.</p></div></div></section><section aria-labelledby="Sec8"><div class="c-article-section" id="Sec8-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec8">Evaluating template-based tracking algorithms</h2><div class="c-article-section__content" id="Sec8-content"><p>We differentiate between tracking-by-detection and frame-by-frame tracking algorithms: frame-by-frame tracking algorithms require an initial pose/homography, but then should be able to track the reference target in the images with high precision and over many consecutive frames. Similar to the Middlebury datasets (Baker et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Baker S, Scharstein D, Lewis J, Roth S, Black MJ, Szeliski R (2007) A database and evaluation methodology for optical flow. In: ICCV, pp 1–8" href="/article/10.1007/s10055-010-0185-3#ref-CR4" id="ref-link-section-d68688e745">2007</a>), we are not planning to publish the ground truth for every frame. However, to support the frame-by-frame algorithms, we give the pose/homography for the first and every 250th frame in the dataset. Thus, it is possible to initialize a frame-by-frame algorithm five times per sequence in case it lost tracking.</p><p>However, tracking-by-detection algorithms were provided with the reference images only, they had to locate the target in the images of the sequences without any further prior knowledge about its pose. The missing need of an approximate initial pose is a benefit over the frame-by-frame tracking algorithms, and they are usually initialized using detection-style algorithms. The total number of successfully detected frames is more important for this type of algorithms than the number of consecutively tracked frames.</p><p>We evaluated four tracking algorithms: an algorithm based on SIFT (Lowe <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Lowe DG (2004) Distinctive image features from scale-invariant keypoints. IJCV 60(2):91–110" href="/article/10.1007/s10055-010-0185-3#ref-CR11" id="ref-link-section-d68688e753">2004</a>), an algorithm based on SURF (Bay et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Bay H, Tuytelaars T, Gool LJV (2006) Surf: speeded up robust features. In: ECCV, pp 404–417" href="/article/10.1007/s10055-010-0185-3#ref-CR5" id="ref-link-section-d68688e756">2006</a>), FERNS (Özuysal et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Özuysal M, Fua P, Lepetit V (2007) Fast keypoint recognition in ten lines of code. In: CVPR, pp 1–8" href="/article/10.1007/s10055-010-0185-3#ref-CR14" id="ref-link-section-d68688e759">2007</a>) and ESM (Benhimane and Malis <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Benhimane S, Malis E (2007) Homography-based 2d visual tracking and servoing. Int J Rob Res 26(7):661–676" href="/article/10.1007/s10055-010-0185-3#ref-CR6" id="ref-link-section-d68688e762">2006</a>). These will be discussed in the next sections.</p><h3 class="c-article__sub-heading" id="Sec9">Evaluation</h3><p>The evaluation of the four algorithms was conducted as follows. Each algorithm was given the 640 × 480 uncompressed image of the reference targets, more specifically of the centered inner area of each reference targets (marked white in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0185-3#Fig5">5</a>). Then, all algorithms were given time to transform the data in the format suitable for tracking, i.e. for SIFT and SURF, the descriptors of the features of the reference images were constructed; for FERNS, the classifiers were trained.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0185-3/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0185-3/MediaObjects/10055_2010_185_Fig5_HTML.gif?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0185-3/MediaObjects/10055_2010_185_Fig5_HTML.gif" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p>A reference target with the six fiducials. The<i> inner area</i> of each template is provided to the algorithms as reference image, they have to compute the position of the four points on the<i> diagonals</i>
+                                    </p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0185-3/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>After that they were given the undistorted images of the sequences. To prevent algorithms from being distracted by a cluttered background, we replaced the background with white.</p><p>In addition to that, we also removed the original borders of the reference target to prevent algorithms from simply using the image borders instead of the template image itself. The original borders of the 800 × 600 reference target were replaced by randomized borders, but at the same time, we made sure that the 640 × 480 image the algorithms were given is not cut by the new randomized borders. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0185-3#Fig6">6</a> visualizes these steps.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-6"><figure><figcaption><b id="Fig6" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 6</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0185-3/figures/6" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0185-3/MediaObjects/10055_2010_185_Fig6_HTML.gif?as=webp"></source><img aria-describedby="figure-6-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0185-3/MediaObjects/10055_2010_185_Fig6_HTML.gif" alt="figure6" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-6-desc"><p>The steps taken to prepare an image for evaluation:<i> Left</i>, the captured image; in the<i> middle</i>, the undistorted image with the background removed; and on the<i> right</i>, the final image with randomized borders</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0185-3/figures/6" data-track-dest="link:Figure6 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>While removing the background is clearly a simplification, we chose this approach with the current datasets to focus on the best performance of the algorithms possible with images of the tracked object coming from a real camera. In later datasets, we could add a cluttered background to the real scene or add a virtual cluttered background after recording.</p><p>The evaluation is based on four reference points that are placed on the diagonal lines of the reference images (marked with blue crosses in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0185-3#Fig5">5</a>); they are at the XGA resolution boundaries, i.e. at (±512; ±384). Since the effect of the perceived errors varies depending on the position and orientation of the tracked object, using errors in the image domain, i.e. in pixel, is beneficial for AR over using metric errors, i.e. meters for the translation and radians or degrees for the rotation. Errors in the image domain better reflect whether the augmentation would be correctly perceived or not and whether it would allow seamless integration, i.e. the augmentation would appear as close as possible to the desired position <i>in the image</i>.</p><p>For every image <b>I</b>
+                           <sub>
+                    <i>i</i>
+                  </sub> per sequence, the RMS distance err<sub>
+                    <i>i</i>
+                  </sub> of each imaged reference point <b>x</b>
+                           <sub>
+                    <i>j</i>
+                  </sub> to the ground truth point <span class="mathjax-tex">\({\bf x}^{\star}_j\)</span> was computed as</p><div id="Equa" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ {\hbox{err}}_i = \sqrt{{{1}\over {4}} \sum_{j=1}^{4}{\|{{\bf x}_j - {\bf x}^{\star}_j}\|^2}} $$</span></div></div><p>After computing these errors for a sequence, all frames with an <span class="mathjax-tex">\({\hbox{err}}_i \geq 10\)</span> px are removed as we regard the cases with a higher RMS error as sign that the tracking algorithm lost the target. Based on these filtered results, we compute the ratio of tracked frames and analyze the distribution of the error.</p><p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0185-3#Fig7">7</a> shows a comparison of poses originating from matched SURF features to ground truth poses. The former are ordered by reprojection error, from 6.2 to 29.7 px. While the first two images with errors below 10 px are still very similar to their corresponding ground truth images in the lower row, with increasing reprojection error, also the dissimilarity increases. We observed that until 10 px, the tracking result looks reasonable when the template is visible at least in 15% of the image (which is fulfilled in the majority of the sequences).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-7"><figure><figcaption><b id="Fig7" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 7</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0185-3/figures/7" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0185-3/MediaObjects/10055_2010_185_Fig7_HTML.gif?as=webp"></source><img aria-describedby="figure-7-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0185-3/MediaObjects/10055_2010_185_Fig7_HTML.gif" alt="figure7" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-7-desc"><p><i>Top row</i> displays images augmented with a teapot, the poses originate from SURF;<i> bottom row</i> uses ground truth poses. The reprojection errors of SURF are (<i>from left</i>): 6.2, 9.7, 14.2, 22.6 and 29.7 px. We use a threshold of 10 px for classification tracked/not tracked</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0185-3/figures/7" data-track-dest="link:Figure7 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h3 class="c-article__sub-heading" id="Sec10">Results</h3><p>We used the original implementations of ESM, FERNS and SURF for the evaluation; for SIFT, we used the implementation from Vedaldi and Fulkerson (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Vedaldi A, Fulkerson B (2008) VLFeat: an open and portable library of computer vision algorithms. &#xA;                    http://www.vlfeat.org&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-010-0185-3#ref-CR20" id="ref-link-section-d68688e951">2008</a>). The majority of the parameters were left at their authors’ default settings, and we only constrained SURF and FERNS to use the 800 strongest points, a number we had to provide to the implementations that was high enough to not degrade their performance.</p><p>The poses used in the evaluation were computed from 2D–3D correspondences using a non-linear Levenberg–Marquardt minimization of the reprojection error that was initialized by DLT. To obtain these correspondences from the algorithms based on SIFT and SURF, we used nearest-neighbor matching of the descriptors to generate initial 2D–3D correspondences, then removed outliers via RANSAC. As FERNS has integrated matching and outlier removal, we directly used the filtered correspondences. For ESM, we used the output homography to project corners of the reference template into the current frame.</p><p>The targets were evaluated in the order as shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0185-3#Fig2">2</a>, i.e. “Low”, “Repetitive”, “Normal”, “High Texturedness”. Each target was evaluated following the discussed foci in the order “Angle”, “Range”, “Fast Far”, “Fast Close”, “Illumination”. The results of the evaluation indicated that SIFT is, most of the time, outperforming FERNS and SURF in terms of accuracy and percentage of tracked frames. However, it should be mentioned that the evaluation of SIFT took more than 2.5 days (approximately 3 s per frame) to compute, whereas FERNS, SURF and ESM finished in less than 6 hours each.</p><p>The focus of the evaluation in this paper is primarily to see whether the targets and the chosen sequences per target were suitable for building a dataset that is both challenging and at the same time not undoable so that it can be useful to the computer vision community. That is why we mainly focused on the accuracy of the algorithms in close-to-ideal situations. The timings were not considered since the best possible frame rates of the algorithms are generally achieved with extensive finetuning of parameters and this was of minor interest to us.</p><p>In Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-010-0185-3#Tab1">1</a>, the percentage of correctly tracked frames is given for all algorithms and targets. Feature point approaches typically select positions with high cornerness. The evaluation showed that ESM often depends on the selected area to be tracked. In contrast to the selective feature points approaches, ESM gives the same weight to every pixel in its area. This can severely degrade the accuracy if e.g. the border of the image is approximately uniform. Thus, to make the comparison fair, we manually selected patches in the low-texture targets for ESM. After that, it tracked the extremely low-textured yellow road sign for 100% of the “Angle” sequence, also surpassing all three other algorithms in terms of accuracy. Concerning low texturedness, both FERNS and SURF showed a better performance on the slightly more textured stop sign target.</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-1"><figure><figcaption class="c-article-table__figcaption"><b id="Tab1" data-test="table-caption">Table 1 Ratio of successfully tracked images, i.e. with err<sub>
+                            <i>i</i>
+                          </sub> &lt; 10 px</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-010-0185-3/tables/1"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>The reason for the performance of SURF for the first target is that SURF does not find sufficient feature points on the yellow traffic sign, the same again applies to the grass target which for ESM also turned out to be an extremely difficult target. FERNS was in general very well adapted to the “Angle” sequences that might come from the explicit training phase that warps the reference targets numerous times.</p><p>The “Fast Close” sequences with large amounts of motion blur were the most difficult to detect for all four algorithms, whereas “Range” and “Illumination” sequences were often correctly detected. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0185-3#Fig8">8</a> shows the RMS errors for all targets, sequences and algorithm as box-and-whiskers-like diagram; the whiskers mark the minimum and maximum error, while the box spans from the first to the third quartile, the mean is given via the red horizontal line. The targets per target group are separated by a vertical black line. In general, the “Fast Close” sequences were detected with the largest error per target while “Illumination” yielded, most of the time, the lowest error.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-8"><figure><figcaption><b id="Fig8" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 8</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0185-3/figures/8" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0185-3/MediaObjects/10055_2010_185_Fig8_HTML.gif?as=webp"></source><img aria-describedby="figure-8-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0185-3/MediaObjects/10055_2010_185_Fig8_HTML.gif" alt="figure8" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-8-desc"><p>Distribution of the RMS error for each sequence, only successfully tracked frames were taken into account. The<i> whiskers</i> denote minimum and maximum, the box spans from first to third quartile; an extra <i>horizontal line</i> segment shows the mean RMS error (usually between first and third quartile)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0185-3/figures/8" data-track-dest="link:Figure8 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        </div></div></section><section aria-labelledby="Sec11"><div class="c-article-section" id="Sec11-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec11">Conclusion</h2><div class="c-article-section__content" id="Sec11-content"><p>We presented a methodology to create a dataset for evaluating template-based tracking algorithms. The goal was to create image sequences with precisely known poses of the camera so that they can be used as objective ground truth to evaluate algorithms and enable fair comparisons.</p><p>The ground truth sequences were recorded using a highly precise measurement arm together with an industrial camera. They feature realistic imaging conditions and motions and are very precise. When generating the dataset, we carefully selected the texture of the chosen targets and the camera motions to be as much representative as possible. Using these sequences, we evaluated four state-of-the-art algorithms.</p><p>Our sequences can now be used by the vision and AR communities, we offer a webpage at <a href="http://metaio.com/research">http://metaio.com/research</a> to give other authors the opportunity to extensively evaluate their template-based tracking algorithms and to be able to objectively compare them to other methods. We provide the sequences both undistorted and containing the natural distortion of the lense; furthermore, the undistortion coefficients computed by AICON are available which were used for the undistorted sequences and which will be useful for tracking algorithms that perform undistortion on their own. By using not every consecutive image of the sequences, but only every <i>n</i>th image, it is also possible to analyze the effect of bigger interframe motions as the ones captured, or even use the sequences for wide-baseline matching instead of tracking.</p><p>Future directions might include a comprehensive evaluation of the currently fixed 10 px threshold, whether and how it should change with respect to the observed size of the template in the image. The dataset is not frozen and it is meant to be evolutive, e.g. we would be able to add new sequence types in case it is requested by a large number of users. Although we focused on planar reference targets, extending the presented approach in order to evaluate 3D tracking methods is straight forward.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="S. Baker, I. Matthews, " /><meta itemprop="datePublished" content="2004" /><meta itemprop="headline" content="Baker S, Matthews I (2004) Lucas-kanade 20 years on: a unifying framework. IJCV 56(3):221–255" /><p class="c-article-references__text" id="ref-CR3">Baker S, Matthews I (2004) Lucas-kanade 20 years on: a unifying framework. IJCV 56(3):221–255</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1023%2FB%3AVISI.0000011205.11775.fd" aria-label="View reference 1">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 1 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Lucas-kanade%2020%C2%A0years%20on%3A%20a%20unifying%20framework&amp;journal=IJCV&amp;volume=56&amp;issue=3&amp;pages=221-255&amp;publication_year=2004&amp;author=Baker%2CS&amp;author=Matthews%2CI">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Baker S, Scharstein D, Lewis J, Roth S, Black MJ, Szeliski R (2007) A database and evaluation methodology for " /><p class="c-article-references__text" id="ref-CR4">Baker S, Scharstein D, Lewis J, Roth S, Black MJ, Szeliski R (2007) A database and evaluation methodology for optical flow. In: ICCV, pp 1–8</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bay H, Tuytelaars T, Gool LJV (2006) Surf: speeded up robust features. In: ECCV, pp 404–417" /><p class="c-article-references__text" id="ref-CR5">Bay H, Tuytelaars T, Gool LJV (2006) Surf: speeded up robust features. In: ECCV, pp 404–417</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="S. Benhimane, E. Malis, " /><meta itemprop="datePublished" content="2007" /><meta itemprop="headline" content="Benhimane S, Malis E (2007) Homography-based 2d visual tracking and servoing. Int J Rob Res 26(7):661–676" /><p class="c-article-references__text" id="ref-CR6">Benhimane S, Malis E (2007) Homography-based 2d visual tracking and servoing. Int J Rob Res 26(7):661–676</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1177%2F0278364907080252" aria-label="View reference 4">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 4 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Homography-based%202d%20visual%20tracking%20and%20servoing&amp;journal=Int%20J%20Rob%20Res&amp;volume=26&amp;issue=7&amp;pages=661-676&amp;publication_year=2007&amp;author=Benhimane%2CS&amp;author=Malis%2CE">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="DJ. Heeger, " /><meta itemprop="datePublished" content="1987" /><meta itemprop="headline" content="Heeger DJ (1987) Model for the extraction of image flow. J Opt Soc Am A 4(8):1455–1471" /><p class="c-article-references__text" id="ref-CR8">Heeger DJ (1987) Model for the extraction of image flow. J Opt Soc Am A 4(8):1455–1471</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1364%2FJOSAA.4.001455" aria-label="View reference 5">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 5 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Model%20for%20the%20extraction%20of%20image%20flow&amp;journal=J%20Opt%20Soc%20Am%20A&amp;volume=4&amp;issue=8&amp;pages=1455-1471&amp;publication_year=1987&amp;author=Heeger%2CDJ">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Klein G, Murray D (2007) Parallel tracking and mapping for small ar workspaces. In: ISMAR, pp 225–234" /><p class="c-article-references__text" id="ref-CR9">Klein G, Murray D (2007) Parallel tracking and mapping for small ar workspaces. In: ISMAR, pp 225–234</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Lieberknecht S, Benhimane S, Meier P, Navab N (2009) A dataset and evaluation methodology for template-based t" /><p class="c-article-references__text" id="ref-CR10">Lieberknecht S, Benhimane S, Meier P, Navab N (2009) A dataset and evaluation methodology for template-based tracking algorithms. In: ISMAR</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="DG. Lowe, " /><meta itemprop="datePublished" content="2004" /><meta itemprop="headline" content="Lowe DG (2004) Distinctive image features from scale-invariant keypoints. IJCV 60(2):91–110" /><p class="c-article-references__text" id="ref-CR11">Lowe DG (2004) Distinctive image features from scale-invariant keypoints. IJCV 60(2):91–110</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1023%2FB%3AVISI.0000029664.99615.94" aria-label="View reference 8">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 8 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Distinctive%20image%20features%20from%20scale-invariant%20keypoints&amp;journal=IJCV&amp;volume=60&amp;issue=2&amp;pages=91-110&amp;publication_year=2004&amp;author=Lowe%2CDG">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="K. Mikolajczyk, C. Schmid, " /><meta itemprop="datePublished" content="2004" /><meta itemprop="headline" content="Mikolajczyk K, Schmid C (2004) Scale and affine invariant interest point detectors. IJCV 60(1):63–86" /><p class="c-article-references__text" id="ref-CR12">Mikolajczyk K, Schmid C (2004) Scale and affine invariant interest point detectors. IJCV 60(1):63–86</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1023%2FB%3AVISI.0000027790.02288.f2" aria-label="View reference 9">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 9 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Scale%20and%20affine%20invariant%20interest%20point%20detectors&amp;journal=IJCV&amp;volume=60&amp;issue=1&amp;pages=63-86&amp;publication_year=2004&amp;author=Mikolajczyk%2CK&amp;author=Schmid%2CC">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="P. Moreels, P. Perona, " /><meta itemprop="datePublished" content="2007" /><meta itemprop="headline" content="Moreels P, Perona P (2007) Evaluation of features detectors and descriptors based on 3d objects. IJCV 73(3):26" /><p class="c-article-references__text" id="ref-CR13">Moreels P, Perona P (2007) Evaluation of features detectors and descriptors based on 3d objects. IJCV 73(3):263–284</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1007%2Fs11263-006-9967-1" aria-label="View reference 10">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 10 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Evaluation%20of%20features%20detectors%20and%20descriptors%20based%20on%203d%20objects&amp;journal=IJCV&amp;volume=73&amp;issue=3&amp;pages=263-284&amp;publication_year=2007&amp;author=Moreels%2CP&amp;author=Perona%2CP">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Özuysal M, Fua P, Lepetit V (2007) Fast keypoint recognition in ten lines of code. In: CVPR, pp 1–8" /><p class="c-article-references__text" id="ref-CR14">Özuysal M, Fua P, Lepetit V (2007) Fast keypoint recognition in ten lines of code. In: CVPR, pp 1–8</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Pentenrieder K, Meier P, Klinker G (2006) Analysis of tracking accuracy for single-camera square-marker-based " /><p class="c-article-references__text" id="ref-CR15">Pentenrieder K, Meier P, Klinker G (2006) Analysis of tracking accuracy for single-camera square-marker-based tracking. In: Proceedings of Dritter Workshop Virtuelle und Erweiterte Realität der GI-Fachgruppe VR/AR</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="CJ. Price, ID. Coope, D. Byatt, " /><meta itemprop="datePublished" content="2002" /><meta itemprop="headline" content="Price CJ, Coope ID, Byatt D (2002) A convergent variant of the nelder-mead algorithm. J Optim Theory Appl 113(" /><p class="c-article-references__text" id="ref-CR16">Price CJ, Coope ID, Byatt D (2002) A convergent variant of the nelder-mead algorithm. J Optim Theory Appl 113(1):5–19</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="http://www.ams.org/mathscinet-getitem?mr=1896704" aria-label="View reference 13 on MathSciNet">MathSciNet</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" href="http://www.emis.de/MATH-item?1172.90508" aria-label="View reference 13 on MATH">MATH</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1023%2FA%3A1014849028575" aria-label="View reference 13">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 13 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=A%20convergent%20variant%20of%20the%20nelder-mead%20algorithm&amp;journal=J%20Optim%20Theory%20Appl&amp;volume=113&amp;issue=1&amp;pages=5-19&amp;publication_year=2002&amp;author=Price%2CCJ&amp;author=Coope%2CID&amp;author=Byatt%2CD">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Seitz SM, Curless B, Diebel J, Scharstein D, Szeliski R (2006) A comparison and evaluation of multi-view stere" /><p class="c-article-references__text" id="ref-CR17">Seitz SM, Curless B, Diebel J, Scharstein D, Szeliski R (2006) A comparison and evaluation of multi-view stereo reconstruction algorithms. In: CVPR, pp 519–528</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="R. Szeliski, R. Zabih, D. Scharstein, O. Veksler, V. Kolmogorov, A. Agarwala, M. Tappen, C. Rother, " /><meta itemprop="datePublished" content="2008" /><meta itemprop="headline" content="Szeliski R, Zabih R, Scharstein D, Veksler O, Kolmogorov V, Agarwala A, Tappen M, Rother C (2008) A comparativ" /><p class="c-article-references__text" id="ref-CR18">Szeliski R, Zabih R, Scharstein D, Veksler O, Kolmogorov V, Agarwala A, Tappen M, Rother C (2008) A comparative study of energy minimization methods for markov random fields with smoothness-based priors. PAMI 30(6):1068–1080</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2FTPAMI.2007.70844" aria-label="View reference 15">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 15 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=A%20comparative%20study%20of%20energy%20minimization%20methods%20for%20markov%20random%20fields%20with%20smoothness-based%20priors&amp;journal=PAMI&amp;volume=30&amp;issue=6&amp;pages=1068-1080&amp;publication_year=2008&amp;author=Szeliski%2CR&amp;author=Zabih%2CR&amp;author=Scharstein%2CD&amp;author=Veksler%2CO&amp;author=Kolmogorov%2CV&amp;author=Agarwala%2CA&amp;author=Tappen%2CM&amp;author=Rother%2CC">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="RY. Tsai, RK. Lenz, " /><meta itemprop="datePublished" content="1989" /><meta itemprop="headline" content="Tsai RY, Lenz RK (1989) A new technique for fully autonomous and efficient 3d robotics hand/eye calibration. I" /><p class="c-article-references__text" id="ref-CR19">Tsai RY, Lenz RK (1989) A new technique for fully autonomous and efficient 3d robotics hand/eye calibration. IEEE Trans Rob Autom 5(3):345–358</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2F70.34770" aria-label="View reference 16">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 16 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=A%20new%20technique%20for%20fully%20autonomous%20and%20efficient%203d%20robotics%20hand%2Feye%20calibration&amp;journal=IEEE%20Trans%20Rob%20Autom&amp;volume=5&amp;issue=3&amp;pages=345-358&amp;publication_year=1989&amp;author=Tsai%2CRY&amp;author=Lenz%2CRK">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Vedaldi A, Fulkerson B (2008) VLFeat: an open and portable library of computer vision algorithms. http://www.v" /><p class="c-article-references__text" id="ref-CR20">Vedaldi A, Fulkerson B (2008) VLFeat: an open and portable library of computer vision algorithms. <a href="http://www.vlfeat.org">http://www.vlfeat.org</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Wagner D, Reitmayr G, Mulloni A, Drummond T, Schmalstieg D (2008) Pose tracking from natural features on mobil" /><p class="c-article-references__text" id="ref-CR21">Wagner D, Reitmayr G, Mulloni A, Drummond T, Schmalstieg D (2008) Pose tracking from natural features on mobile phones. In: ISMAR, pp 125–134</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="K. Zimmerman, J. Matas, T. Svoboda, " /><meta itemprop="datePublished" content="2009" /><meta itemprop="headline" content="Zimmerman K, Matas J, Svoboda T (2009) Tracking by an optimal sequence of linear predictors. PAMI 31(4):677–69" /><p class="c-article-references__text" id="ref-CR22">Zimmerman K, Matas J, Svoboda T (2009) Tracking by an optimal sequence of linear predictors. PAMI 31(4):677–692</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2FTPAMI.2008.119" aria-label="View reference 19">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 19 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Tracking%20by%20an%20optimal%20sequence%20of%20linear%20predictors&amp;journal=PAMI&amp;volume=31&amp;issue=4&amp;pages=677-692&amp;publication_year=2009&amp;author=Zimmerman%2CK&amp;author=Matas%2CJ&amp;author=Svoboda%2CT">
+                    Google Scholar</a> 
+                </p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-010-0185-3-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Ack1">Acknowledgments</h2><div class="c-article-section__content" id="Ack1-content"><p>This work was partially supported by BMBF grant Avilus/01 IM08001 P.</p></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">metaio Gmbh, Munich, Germany</p><p class="c-article-author-affiliation__authors-list">Sebastian Lieberknecht, Selim Benhimane &amp; Peter Meier</p></li><li id="Aff2"><p class="c-article-author-affiliation__address">Technical University of Munich, Munich, Germany</p><p class="c-article-author-affiliation__authors-list">Nassir Navab</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Sebastian-Lieberknecht"><span class="c-article-authors-search__title u-h3 js-search-name">Sebastian Lieberknecht</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Sebastian+Lieberknecht&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Sebastian+Lieberknecht" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Sebastian+Lieberknecht%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Selim-Benhimane"><span class="c-article-authors-search__title u-h3 js-search-name">Selim Benhimane</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Selim+Benhimane&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Selim+Benhimane" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Selim+Benhimane%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Peter-Meier"><span class="c-article-authors-search__title u-h3 js-search-name">Peter Meier</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Peter+Meier&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Peter+Meier" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Peter+Meier%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Nassir-Navab"><span class="c-article-authors-search__title u-h3 js-search-name">Nassir Navab</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Nassir+Navab&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Nassir+Navab" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Nassir+Navab%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-010-0185-3/email/correspondent/c1/new">Sebastian Lieberknecht</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=Benchmarking%20template-based%20tracking%20algorithms&amp;author=Sebastian%20Lieberknecht%20et%20al&amp;contentID=10.1007%2Fs10055-010-0185-3&amp;publication=1359-4338&amp;publicationDate=2010-12-09&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Lieberknecht, S., Benhimane, S., Meier, P. <i>et al.</i> Benchmarking template-based tracking algorithms.
+                    <i>Virtual Reality</i> <b>15, </b>99–108 (2011). https://doi.org/10.1007/s10055-010-0185-3</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-010-0185-3.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2009-11-18">18 November 2009</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2010-11-24">24 November 2010</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2010-12-09">09 December 2010</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2011-06">June 2011</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-010-0185-3" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-010-0185-3</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Augmented reality</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Optical tracking</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Template-based tracking</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Benchmark</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Evaluation</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-010-0185-3.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=185;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

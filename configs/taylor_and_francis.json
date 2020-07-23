@@ -1,0 +1,38 @@
+{
+    "name": "taylor_and_francis",
+    "urls": {
+        "list": {
+            "_url": "http://localhost:8000/tandf",
+            "url": "https://www.tandfonline.com/action/doSearch",
+            "per-page": 50,
+            "params": {
+                "page": "startPage",
+                "per-page": "pageSize"
+            }
+        },
+        "paper": {
+            "_url": "http://localhost:8000/tandf/{identifier}",
+            "url": "https://www.tandfonline.com/doi/full/{identifier}"
+        },
+        "pdf": "https://www.tandfonline.com/doi/pdf/{identifier}"
+    },
+    "sleep_between_requests": 0.1,
+    "regex": {
+        "list": {
+            "identifiers": "<span class=\"hlFld-Title\"><a class=\"ref nowrap\" href=\"\/doi\/full\/([^\"]+)\">",
+            "total_number_of_results": "<p role=\"status\">[\\s]+<strong>[^<]+<\/strong> of <strong>([^<]+)<\/strong> results[\\s]+<\/p>"
+        },
+        "paper": {
+            "authors": "<span class=\"contribDegrees \"><a class=\"entryAuthor\" href=\"[^\"]+\">([^<]+)<span class=\"overlay\">",
+            "abstract": "<div class=\"abstractSection abstractInFull\">([\\s\\S]+?)<\/div>",
+            "citations": "<div class=\"value\">\\s*([\\d]+)\\s*<\/div>\\s*<div class=\"title\">\\s*CrossRef citations to date\\s*<\/div>",
+            "title": "<h1><span class=\"NLM_article-title hlFld-title\">([\\s\\S]+?)(<sup>|<\/h1>)",
+            "doi": "<a href=\"https:\/\/doi\\.org\/([^\"]+)\">",
+            "publication_date": "<div class=\"widget-body body body-none  body-compact-all\"><div>[^<]+<\/div><div>Published online: ([^<]+)<\/div><\/div>",
+            "published_in": "<div class=\"title-container\">\\s+<span class=\"titleHeading\">[^<]+<\/span>([\\s\\S]+?)<\/div>",
+
+            "isbn": "",
+            "keywords": ""
+        }
+    }
+}

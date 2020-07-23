@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="OpenTracker: A flexible software design for three-dimensional interact"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="Tracking is an indispensable part of any virtual reality and augmented reality application. While the need for quality of tracking, in particular for high performance and fidelity, has led to a..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/9/1.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="OpenTracker: A flexible software design for three-dimensional interaction"/>
+
+    <meta name="dc.source" content="Virtual Reality 2005 9:1"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2005-09-29"/>
+
+    <meta name="dc.type" content="BriefCommunication"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2005 Springer-Verlag London Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="Tracking is an indispensable part of any virtual reality and augmented reality application. While the need for quality of tracking, in particular for high performance and fidelity, has led to a large body of past and current research, little attention is typically paid to software engineering aspects of tracking software. To address this issue we describe a software design and implementation that applies the pipes-and-filter architectural pattern to provide a customizable and flexible way of dealing with tracking data and configurations. The contribution of this work cumulates in the development of a generic data flow network library called OpenTracker to deal specifically with tracking data. The flexibility of the data flow network approach is demonstrated in a set of development scenarios and prototype applications in the area of mobile augmented reality."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2005-09-29"/>
+
+    <meta name="prism.volume" content="9"/>
+
+    <meta name="prism.number" content="1"/>
+
+    <meta name="prism.section" content="BriefCommunication"/>
+
+    <meta name="prism.startingPage" content="79"/>
+
+    <meta name="prism.endingPage" content="92"/>
+
+    <meta name="prism.copyright" content="2005 Springer-Verlag London Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-005-0006-2"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-005-0006-2"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-005-0006-2.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-005-0006-2"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="OpenTracker: A flexible software design for three-dimensional interaction"/>
+
+    <meta name="citation_volume" content="9"/>
+
+    <meta name="citation_issue" content="1"/>
+
+    <meta name="citation_publication_date" content="2005/12"/>
+
+    <meta name="citation_online_date" content="2005/09/29"/>
+
+    <meta name="citation_firstpage" content="79"/>
+
+    <meta name="citation_lastpage" content="92"/>
+
+    <meta name="citation_article_type" content="Original Article"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-005-0006-2"/>
+
+    <meta name="DOI" content="10.1007/s10055-005-0006-2"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-005-0006-2"/>
+
+    <meta name="description" content="Tracking is an indispensable part of any virtual reality and augmented reality application. While the need for quality of tracking, in particular for high "/>
+
+    <meta name="dc.creator" content="Gerhard Reitmayr"/>
+
+    <meta name="dc.creator" content="Dieter Schmalstieg"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="NTP (2004) The network time protocol. 
+                    http://www.ntp.org/
+                    
+                  , 16 February 2004"/>
+
+    <meta name="citation_reference" content="Bauer M, Bruegge B, Klinker G, MacWilliams A, Reichner T, Riss S, Sandor C, Wagner M (2001) Design of a component-based augmented reality framework. In: Proceedings of the ISAR 2001, New York, 29&#8211;30 October 2001. IEEE and ACM, pp 45&#8211;54"/>
+
+    <meta name="citation_reference" content="Bauer M, Hilliges O, MacWilliams A, Sandor C, Wagner M, Klinker G, Newman J, Reitmayr G, Fahmy T, Pintaric T, Schmalstieg D (2003) Integrating Studierstube and DWARF. In: Proceedings of the STARS 2003, Tokyo, Japan, 7 October 2003, pp 1&#8211;5"/>
+
+    <meta name="citation_reference" content="Bray T, Paoli J, Sperberg-McQueen CM et&#160;al (2000) Extensible markup language (XML) 1.0. 
+                    http://www.w3.org/TR/REC-xml/
+                    
+                  , 6 October 2000"/>
+
+    <meta name="citation_reference" content="Buschmann F, Meunier R, Rohnert H, Sommerlad P, Stal M (1996) Pattern-oriented software architecture&#8212;a system of patterns, vol 1. Wiley, Great Britain"/>
+
+    <meta name="citation_reference" content="Carey R, Bell G (1997) The annotated VRML 2.0 reference manual. Addison-Wesley, Reading"/>
+
+    <meta name="citation_reference" content="He T, Kaufman A (1993) Virtual input devices for 3D systems. In: Proceedings of the IEEE Visualization&#8217;93, IEEE, pp 142&#8211;148"/>
+
+    <meta name="citation_reference" content="IBM (2004) Xeena XML editor. 
+                    http://www.alphaworks.ibm.com/tech/xeena
+                    
+                  , visited 20 February 2004"/>
+
+    <meta name="citation_reference" content="Icon Information Systems GmbH (2004) XMLSpy. 
+                    http://www.xmlspy.com
+                    
+                  , visited 20 February 2004"/>
+
+    <meta name="citation_reference" content="ISO (1985) Graphical kernel system (GKS). IS 7942"/>
+
+    <meta name="citation_reference" content="Kato H, Billinghurst M (1999) Marker tracking and HMD calibration for a video-based augmented reality conferencing system. In: Proceedings of the IWAR 99, San Francisco, USA, October 1999"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comput Graph; citation_title=Mathematics and geometry education with collaborative augmented reality; citation_author=H Kaufmann, D Schmalstieg; citation_volume=27; citation_issue=3; citation_publication_date=2003; citation_pages=339-345; citation_doi=10.1016/S0097-8493(03)00028-1; citation_id=CR12"/>
+
+    <meta name="citation_reference" content="Newman J, Ingram D, Hopper A (2001) Augmented reality in a wide area sentient environment. In: Proceedings of the ISAR 2001, New York, 29&#8211;30 October 2001. IEEE and ACM, pp 77&#8211;86"/>
+
+    <meta name="citation_reference" content="Reitmayr G, Schmalstieg D (2001) Mobile collaborative augmented reality. In: Proceedings of the ISAR 2001, New York, 29&#8211;30 October 2001. IEEE, pp 114&#8211;123"/>
+
+    <meta name="citation_reference" content="Reitmayr G, Schmalstieg D (2001) An open software architecture for virtual reality interaction. In: Proceedings of the VRST 2001, Banff, Alberta, Canada, 15&#8211;17 November 2001. ACM, pp 47&#8211;54"/>
+
+    <meta name="citation_reference" content="Reitmayr G, Schmalstieg D (2003) Location based applications for mobile augmented reality. In: Biddle R, Thomas B (eds) Proceedings of the AUIC 2003, vol 25 (3) of Australian Computer Science Communications, Adelaide, Australia, 4 &#8211; 7 February 2003. ACS, pp 65&#8211;73"/>
+
+    <meta name="citation_reference" content="citation_journal_title=PRESENCE&#8212;teleoperators and virtual environments; citation_title=The Studierstube augmented reality project; citation_author=D Schmalstieg, A Fuhrmann, G Hesina, Z Szalavari, LM Encarnacao, M Gervautz, W Purgathofer; citation_volume=11; citation_issue=1; citation_publication_date=2002; citation_pages=&#160;; citation_id=CR17"/>
+
+    <meta name="citation_reference" content="Sch&#246;nfelder R, Wolf G, Ree&#223;ing M, Kr&#252;ger R, Br&#252;derlin B (2002) A pragmatic approach to a VR/AR component integration framework for rapid system setup. In: Proceedings of the 1. Paderborner Workshop &#8220;Augmented und Virtual Reality in der Produktentstehung&#8221;, Paderborn, Germany, 11&#8211;12 June 2002. Heinz Nixdorf Institut, pp 67&#8211;79"/>
+
+    <meta name="citation_reference" content="citation_journal_title=ACM Trans Inform Syst; citation_title=Decoupled simulation in virtual reality with the MR toolkit; citation_author=C Shaw, M Green, J Liang, Y Sun; citation_volume=11; citation_issue=3; citation_publication_date=1993; citation_pages=287-317; citation_doi=10.1145/159161.173948; citation_id=CR19"/>
+
+    <meta name="citation_reference" content="Sokolewicz M, Wirth H, B&#246;hm K, John W (1993) Using the GIVEN++ toolkit for system development in MuSE. In: 1st Eurographics workshop on virtual environments, Barcelona, Spain, September 1993"/>
+
+    <meta name="citation_reference" content="Strauss P, Carey R (1992) An object oriented 3D graphics toolkit. In: Proceedings of the ACM SIGGRAPH&#8217;92. ACM"/>
+
+    <meta name="citation_reference" content="Taylor RM II, Hudson TC, Seeger A, Weber H, Juliano J, Helser AT (2001) VRPN: a device-independent, network-transparent VR peripheral system. In: Proceedings of the VRST 2001, Banff, Alberta, Canada, November 15&#8211;17 2001. ACM, pp 55&#8211;61"/>
+
+    <meta name="citation_reference" content="The Apache Software Foundation (2004) Xerces XML parser. 
+                    http://xml.apache.org/xerces-c/index.html
+                    
+                  , visited 20 February 2004"/>
+
+    <meta name="citation_reference" content="Veigl S, Kaltenbach A, Ledermann F, Reitmayr G, Schmalstieg D (2002) Two-handed direct interaction with artoolkit. In: Proceedings of the ART&#8217;02, Darmstadt, Germany, 30 September 2002"/>
+
+    <meta name="citation_reference" content="VRCO (2004) Trackd. 
+                    http://www.vrco.com/products/trackd/trackd.html
+                    
+                  , visited 2 March 2004"/>
+
+    <meta name="citation_reference" content="Wagner M, MacWilliams A, Bauer M, Klinker G, Newman J, Pintaric T, Schmalstieg D (2004) Fundamentals of ubiquitous tracking. In: Proceedings of the PERVASIVE 2004, Vienna, Austria, 18&#8211;23 April 2004"/>
+
+    <meta name="citation_reference" content="Wood L, Hors AL, Apparao V, Byrne S, Champion M, Isaacs S, Jacobs I, Nicol G, Robie J, Sutor R, Wilson C (2004) Document object model (DOM) level 1 specification (second edition). 
+                    http://www.w3.org/TR/2000/WD-DOM-Level-1-20000929/
+                    
+                  , 19 January 2004"/>
+
+    <meta name="citation_author" content="Gerhard Reitmayr"/>
+
+    <meta name="citation_author_email" content="gr281@cam.ac.uk"/>
+
+    <meta name="citation_author_institution" content="University of Cambridge, Cambridge, UK"/>
+
+    <meta name="citation_author" content="Dieter Schmalstieg"/>
+
+    <meta name="citation_author_email" content="schmalstieg@icg.tu-graz.ac.at"/>
+
+    <meta name="citation_author_institution" content="Graz University of Technology, Graz, Austria"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-005-0006-2&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2005/12/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-005-0006-2"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="OpenTracker: A flexible software design for three-dimensional interaction"/>
+        <meta property="og:description" content="Tracking is an indispensable part of any virtual reality and augmented reality application. While the need for quality of tracking, in particular for high performance and fidelity, has led to a large body of past and current research, little attention is typically paid to software engineering aspects of tracking software. To address this issue we describe a software design and implementation that applies the pipes-and-filter architectural pattern to provide a customizable and flexible way of dealing with tracking data and configurations. The contribution of this work cumulates in the development of a generic data flow network library called OpenTracker to deal specifically with tracking data. The flexibility of the data flow network approach is demonstrated in a set of development scenarios and prototype applications in the area of mobile augmented reality."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>OpenTracker: A flexible software design for three-dimensional interaction | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-005-0006-2","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Virtual Reality, Source Node, Augmented Reality, Sink Node, Tracking Data","kwrd":["Virtual_Reality","Source_Node","Augmented_Reality","Sink_Node","Tracking_Data"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-005-0006-2","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-005-0006-2","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=6;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-005-0006-2">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            OpenTracker: A flexible software design for three-dimensional interaction
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-005-0006-2.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-005-0006-2.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">Original Article</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2005-09-29" itemprop="datePublished">29 September 2005</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">OpenTracker: A flexible software design for three-dimensional interaction</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Gerhard-Reitmayr" data-author-popup="auth-Gerhard-Reitmayr">Gerhard Reitmayr</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of Cambridge" /><meta itemprop="address" content="grid.5335.0, 0000000121885934, University of Cambridge, Cambridge, CB12PZ, UK" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Dieter-Schmalstieg" data-author-popup="auth-Dieter-Schmalstieg" data-corresp-id="c1">Dieter Schmalstieg<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff2">2</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Graz University of Technology" /><meta itemprop="address" content="grid.410413.3, 000000012294748X, Graz University of Technology, 8010, Graz, Austria" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 9</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">79</span>–<span itemprop="pageEnd">92</span>(<span data-test="article-publication-year">2005</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">161 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">12 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                    
+                        <li class="c-article-metrics-bar__item">
+                            <p class="c-article-metrics-bar__count">3 <span class="c-article-metrics-bar__label">Altmetric</span></p>
+                        </li>
+                    
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-005-0006-2/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>Tracking is an indispensable part of any virtual reality and augmented reality application. While the need for quality of tracking, in particular for high performance and fidelity, has led to a large body of past and current research, little attention is typically paid to software engineering aspects of tracking software. To address this issue we describe a software design and implementation that applies the pipes-and-filter architectural pattern to provide a customizable and flexible way of dealing with tracking data and configurations. The contribution of this work cumulates in the development of a generic data flow network library called <i>OpenTracker</i> to deal specifically with tracking data. The flexibility of the data flow network approach is demonstrated in a set of development scenarios and prototype applications in the area of mobile augmented reality.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Introduction</h2><div class="c-article-section__content" id="Sec1-content"><p>Tracking is an indispensable part of any virtual reality (VR) or augmented reality (AR) application. Processing of tracking data requires operating of devices, reading specialized network protocols, performing calculations to fuse data from different sources and interpreting it provide multi to modal interaction.</p><p>As the development of interactive applications moves beyond building a single demonstration setup, a number of requirements appear. Different tracking devices need to be supported because an application setup will be updated with new devices or installed at different sites. Complex setups require more than one host computer and therefore distribute the processing of tracking data between different software components. Experimental tracking configurations and combinations of hardware require frequent changes to the tracking software.</p><p>A focus of multi modal interaction in VR and AR systems is the combination of multiple tracking systems to provide novel interaction techniques or extension of the functionality of a single system. Such approaches require appropriate sensor fusion of multiple systems and a flexible integration of these systems into the application. Current software offloads these tasks to the application instead of encapsulating them within the actual configuration used in a setup.</p><p>Some current systems have a modular approach that allows to substitute one type of tracking device for another. Typically, commercial VR products take this approach offering turn-key support for many popular tracking and input devices, but at the cost of a limited amount of extensibility and configuration options. In particular, they make it hard to combine existing features in novel ways.</p><p>In contrast, research systems may offer features not found in commercial systems, such as prediction or sensor fusion, but are usually limited to their particular research domain and not intended for the end user. In such systems, replacing a piece of hardware or changing its configuration usually leads to rewriting a significant portion of the tracker software.</p><p>In the middle(-ware), there is a lack of tools that allow for a high degree of customization, yet are easy to use and to extend. What is needed is a system that allows mixing and matching of different features, as well as simple creation and maintenance of possibly complex tracker configurations. To address this issue, we describe a software design and implementation that applies the pipes-and-filter architectural pattern [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 5" title="Buschmann F, Meunier R, Rohnert H, Sommerlad P, Stal M (1996) Pattern-oriented software architecture—a system of patterns, vol 1. Wiley, Great Britain" href="/article/10.1007/s10055-005-0006-2#ref-CR5" id="ref-link-section-d105871e318">5</a>] to provide a customizable and flexible way of dealing with tracking data and configurations.</p><h3 class="c-article__sub-heading" id="Sec2">Design requirements</h3><p>We established a number of requirements for an independent software component for processing tracking data which were derived from the experience of researching collaborative augmented reality applications for a number of years in the Studierstube project [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 17" title="Schmalstieg D, Fuhrmann A, Hesina G, Szalavari Z, Encarnacao LM, Gervautz M, Purgathofer W (2002) The Studierstube augmented reality project. PRESENCE - Teleoperators and Virtual Environments 11(1)" href="/article/10.1007/s10055-005-0006-2#ref-CR17" id="ref-link-section-d105871e328">17</a>].</p>
+                  <h3 class="c-article__sub-heading">
+                    <i>Device abstraction:</i>
+                  </h3>
+                  <p>Typically, a variety of devices provide the same or similar data, therefore abstraction from an individual device would be beneficial to the reusability and portability of an application.</p>
+                
+                  <h3 class="c-article__sub-heading">
+                    <i>Support for complex configurations:</i>
+                  </h3>
+                  <p>Processing input data requires more than reading it from input devices. Calibration and registration of tracking data is mandatory in most applications. Tracking data from different devices can be combined to appear as a single more complex device. However, typically the combination of data from different devices is a non-trivial problem due to different measurement modalities, update rates or error properties.</p>
+                
+                  <h3 class="c-article__sub-heading">
+                    <i>Network transparency:</i>
+                  </h3>
+                  <p>Collaborative and distributed applications require network transport of tracking data. However, applications should be developed independently of the actual configuration used in any given setup. Therefore, a dedicated tracking software layer should provide support for network transparency.</p>
+                
+                  <h3 class="c-article__sub-heading">
+                    <i>Low overhead and latency:</i>
+                  </h3>
+                  <p>Applications require timely delivery of tracking data to reduce the end-to-end latency perceived by the user. Therefore, any tracking software should only add minimal processing time to the overall process.</p>
+                
+                  <h3 class="c-article__sub-heading">
+                    <i>Support for iterative development:</i>
+                  </h3>
+                  <p>Configurations should be simple to author and change. Research requires frequent changes to installations and configurations and the tracking software component should separate the application’s core from such changes, if possible.</p>
+                
+                  <h3 class="c-article__sub-heading">
+                    <i>Simple to integrate:</i>
+                  </h3>
+                  <p>To ensure a broad applicability, the software component should not dictate a certain software architecture but allow for integration into different styles of application architectures. Use in both simple main-loop driven applications and frameworks employing inversion of control style architectures should be possible.</p>
+                
+                  <h3 class="c-article__sub-heading">
+                    <i>Allow for extensibility:</i>
+                  </h3>
+                  <p>Tracking hardware itself is a moving target and new devices need to be supported by implementing new device drivers. Multi-modal interaction requires development of new and experimental algorithms to process input data. Both types of functionality should be simple to add to a dedicated software component.</p>
+                <h3 class="c-article__sub-heading" id="Sec3">OpenTracker approach</h3><p>The contribution of this work is the development of a generic data flow network library called <i>OpenTracker</i> to deal specifically with tracking data. It is built on a number of key observations:
+</p><ul class="u-list-style-dash">
+                    <li>
+                      <p>Abstraction of recurring operations on tracking data separates applications from concrete devices and configurations and yields better code reuse.</p>
+                    </li>
+                    <li>
+                      <p>Flexible arrangement of such operations simplifies experimentation with and development of VR and AR applications.</p>
+                    </li>
+                    <li>
+                      <p>A dedicated configuration language allows simple authoring and configuration of complex setups.</p>
+                    </li>
+                    <li>
+                      <p>An extensible software design supports rapid implementation of new functionality and device support.</p>
+                    </li>
+                  </ul>
+                        <p>In a typical VR or AR application, tracking data passes through a series of steps. It is generated by tracking hardware, read by device drivers, transformed to fit the requirements of the application and send over network connections to other hosts. Different setups and applications may require different subsets and combinations of the steps described but the individual steps are common among a wide range of applications. Examples of such invariant steps are geometric transformations, Kalman filters and data fusion of two or more data sources.</p><p>The main concept behind OpenTracker is to break up the whole data manipulation into these individual steps and build a data flow network of the transformations. Moreover, it abstracts from the details of accessing and manipulating tracking data by forming an architectural layer between the tracking devices and the application (see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0006-2#Fig1">1</a>). To describe the details of this concept, we will need some theoretical definitions which are discussed in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-005-0006-2#Sec5">3</a>. Details of an actual implementation are described in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-005-0006-2#Sec8">4</a>. Some example configurations in the area of mobile augmented reality are discussed in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-005-0006-2#Sec16">5</a> to demonstrate the features of OpenTracker.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0006-2/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0006-2/MediaObjects/10055_2005_6_Fig1_HTML.gif?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0006-2/MediaObjects/10055_2005_6_Fig1_HTML.gif" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p>A block diagram detailing the relationship of OpenTracker with other software components. Device drivers and network connectivity are separated from the application sitting on top of OpenTracker</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0006-2/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        </div></div></section><section aria-labelledby="Sec4"><div class="c-article-section" id="Sec4-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec4">Related work</h2><div class="c-article-section__content" id="Sec4-content"><p>Device abstraction is a standard requirement for 2D graphical user interfaces (e.g. GKS [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 10" title="ISO (1985) Graphical kernel system (GKS). IS 7942" href="/article/10.1007/s10055-005-0006-2#ref-CR10" id="ref-link-section-d105871e487">10</a>]), and sometimes incorporated into 3D applications [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 7" title="He T, Kaufman A (1993) Virtual input devices for 3D systems. In: Proceedings of the IEEE Visualization’93, IEEE, pp 142–148" href="/article/10.1007/s10055-005-0006-2#ref-CR7" id="ref-link-section-d105871e490">7</a>]. Many interactive systems employ sophisticated event handling schemes. State changes to attributes of scene objects are either propagated by functional dependencies (e.g. routes in VRML [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 6" title="Carey R, Bell G (1997) The annotated VRML 2.0 reference manual. Addison-Wesley, Reading" href="/article/10.1007/s10055-005-0006-2#ref-CR6" id="ref-link-section-d105871e493">6</a>], engines in Open Inventor [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 21" title="Strauss P, Carey R (1992) An object oriented 3D graphics toolkit. In: Proceedings of the ACM SIGGRAPH’92. ACM" href="/article/10.1007/s10055-005-0006-2#ref-CR21" id="ref-link-section-d105871e496">21</a>]), or may be handled by user supplied callback functions (e.g. script nodes in VRML). These approaches inspire the architecture of OpenTracker, although none of them deals specifically with tracker configurations.</p><p>An early example of a software toolkit dedicated to developing interactive and immersive graphics applications is the MR Toolkit [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 19" title="Shaw C, Green M, Liang J, Sun Y (1993) Decoupled simulation in virtual reality with the MR toolkit. ACM Trans Inform Syst 11(3):287–317" href="/article/10.1007/s10055-005-0006-2#ref-CR19" id="ref-link-section-d105871e502">19</a>]. It provides device abstraction and network transparency for tracking devices. A similar development is the GIVEN++ toolkit [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 20" title="Sokolewicz M, Wirth H, Böhm K, John W (1993) Using the GIVEN++ toolkit for system development in MuSE. In: 1st Eurographics workshop on virtual environments, Barcelona, Spain, September 1993" href="/article/10.1007/s10055-005-0006-2#ref-CR20" id="ref-link-section-d105871e505">20</a>] which supports multiple input devices in a distributed framework.</p><p>The virtual reality peripheral network (VRPN) [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 22" title="Taylor RM II, Hudson TC, Seeger A, Weber H, Juliano J, Helser AT (2001) VRPN: a device-independent, network-transparent VR peripheral system. In: Proceedings of the VRST 2001, Banff, Alberta, Canada, November 15–17 2001. ACM, pp 55–61" href="/article/10.1007/s10055-005-0006-2#ref-CR22" id="ref-link-section-d105871e511">22</a>] is a C++ library implementing device abstraction for a large number of tracking devices and also networking support based on tracking servers and application clients. It defines a small set of data types that can be reported by a device through individual facets. VRCO trackd is a commercial tracking device software framework [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 25" title="VRCO (2004) Trackd. &#xA;                    http://www.vrco.com/products/trackd/trackd.html&#xA;                    &#xA;                  , visited 2 March 2004" href="/article/10.1007/s10055-005-0006-2#ref-CR25" id="ref-link-section-d105871e514">25</a>]. A central server process implements device drivers and provides device abstraction and network transparency to applications that connect to the server process.</p><p>All these software libraries provide device abstraction and network transparency, both of which are already important features of a re-useable software design for interactive applications. However, they do not provide for more advanced operations on tracking data and simple configuration thereof.</p><p>Two notable software frameworks were developed after a first publication of our work on OpenTracker [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 15" title="Reitmayr G, Schmalstieg D (2001) An open software architecture for virtual reality interaction. In: Proceedings of the VRST 2001, Banff, Alberta, Canada, 15–17 November 2001. ACM, pp 47–54" href="/article/10.1007/s10055-005-0006-2#ref-CR15" id="ref-link-section-d105871e523">15</a>] and draw some inspiration from the data flow approach presented there.</p><p>The virtual and augmented reality input output (VARIO) framework [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 18" title="Schönfelder R, Wolf G, Reeßing M, Krüger R, Brüderlin B (2002) A pragmatic approach to a VR/AR component integration framework for rapid system setup. In: Proceedings of the 1. Paderborner Workshop “Augmented und Virtual Reality in der Produktentstehung”, Paderborn, Germany, 11–12 June 2002. Heinz Nixdorf Institut, pp 67–79" href="/article/10.1007/s10055-005-0006-2#ref-CR18" id="ref-link-section-d105871e529">18</a>] implements a generic flow scheduling framework with distributed components that can reside on different hosts. A central configuration process manages the connections between components and the configuration of individual components. Configurations are made persistent by saving and loading descriptions of the connection and configuration parameters to and from XML files.</p><p>The DWARF project [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2" title="Bauer M, Bruegge B, Klinker G, MacWilliams A, Reichner T, Riss S, Sandor C, Wagner M (2001) Design of a component-based augmented reality framework. In: Proceedings of the ISAR 2001, New York, 29–30 October 2001. IEEE and ACM, pp 45–54" href="/article/10.1007/s10055-005-0006-2#ref-CR2" id="ref-link-section-d105871e535">2</a>] aims for a design concept that differs greatly from traditional AR software designs. The basic units of the DWARF framework are distributed services. A <i>service</i> is a process running on a stationary or mobile computer that provides a certain piece of functionality such as optical tracking. Services can be connected to use the functionality of other services establishing a data flow network to achieve a more complex function. Dedicated tracker services operate tracking devices and provide raw data to other services which can perform additional transformations or constitute part of an application. Configurations are created in an indirect way by specifying properties on services that describe the conditions for connections to be made.</p><p>VARIO and DWARF both support data flows for processing tracking data. Both are based on a component system which models each processing step as an individual process communicating with other processes. Such a solution trades off increased flexibility for additional communication overhead. The individual processing nodes are heavyweight and can lead to increased latency in VR and AR applications.</p><p>The earlier related work demonstrates the need for some software design to provide device abstraction or network transparency for developing applications. The use of data flow networks to describe processing steps of tracking data has become a standard approach since the inception of OpenTracker. In contrast to the later implementations OpenTracker presents a lightweight approach that does not force a specific framework on the application. It also provides a direct scripting approach to support simple configuration of the data flow network.</p></div></div></section><section aria-labelledby="Sec5"><div class="c-article-section" id="Sec5-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec5">Concepts</h2><div class="c-article-section__content" id="Sec5-content"><p>Each unit of operation in OpenTracker is represented by a node in a data flow graph. Nodes are connected by directed edges to describe the direction of flow. The originating node of a directed edge is called the child whereas the receiving node is called the parent. To allow more than simple linear graphs, we introduce ports, references and edge types as follows.</p><h3 class="c-article__sub-heading" id="Sec6">Multiple input ports and references</h3><p>Each node has one or more input ports and a single output port. A port is a distinguished connection point for an edge, i.e. the node can distinguish between events passing through different node ports. The output port of one node is connected to any of the input ports of another node. This establishes the flow by defining directed edges in the graph. A node receiving a new data event via one of its inputs computes a new update for itself and sends the new data event out via its output port.</p><p>Multiple input ports are desirable because computations typically have more than one parameter. Dynamic transformations, for example, are parameterized by the value of another node and thus use the data value received by a child to be transformed differently from the data of the parameterizing child. Merge nodes may select part of the data of an event based on the input port the event used. Combinations allow more complex computational structures.</p><p>Additionally, an input port can be connected to several output ports to provide fan-in of events. Thereby several children nodes are connected to the same input port of a node. Upon receiving an event, the parent node can only distinguish between the input ports, but not between the actual children. Fan-In of several events is accomplished by serializing the events and the parent operates on each event in turn.</p><p>Conversely, an output port can also be connected to several input ports of other nodes to provide fan-out of events by using references within the graph. Again the multiple connections are transparent to the node which cannot selectively send events to only one parent, but all events are distributed equally to all parents.</p><p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0006-2#Fig2">2</a> gives some examples of data flow graphs that can be built with OpenTracker. Part (a) shows a simple linear graph applying a geometrical transformation to a data source, (b) shows a node with several input ports, combining the received data. Part (c) is a graph using a reference node to get a copy of the output of a node and (d) combines these features in a more complicated graph.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0006-2/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0006-2/MediaObjects/10055_2005_6_Fig2_HTML.gif?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0006-2/MediaObjects/10055_2005_6_Fig2_HTML.gif" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p>Visualizations of a data flow graphs as used in OpenTracker. <b>a</b> A linear flow. <b>b</b> A node with different input ports. <b>c</b> Fan-Out of output ports. <b>d</b> A complex example employing all features</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0006-2/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h3 class="c-article__sub-heading" id="Sec7">Edge types and time</h3><p>The basic mechanism behind the data flow concept is event passing. Data events are passed from the children nodes upward to their parents. However, not all computations fit well into this model: algorithms that operate on a list of tracker measurements or that compute the tracker state at an arbitrary point in time require different types of input or output interfaces. Examples are filtering algorithms that take a history of events into account, or prediction algorithms that compute an expected measurement for a given point in time.</p><p>To support different ways of incorporating time into computations, we also distinguish between different edge types. Edges are typed by typing the ports of the nodes they connect. We establish the rule that only two ports of the same type can be connected and this type is the type of the edge. There are three edge types: <i>event</i>, <i>event queue</i> and <i>time-dependent</i>.</p><p>
+                           <i>Event</i> edges implement the typical event push pattern as new events are pushed from children to their parent nodes. Each event is time stamped by the individual node that generated it. Thus nodes can react to the temporal aspects of tracking data. For example, a simple prediction node incorporates the time difference between single events to correctly update its output.</p><p>
+                           <i>Event queue</i> and <i>time-dependent</i> edges provide a polling pattern for data processing. These interfaces are polled by the parent node, because the data returned is parameterized. The <i>event queue</i> interface represents a queue of events and supports querying the number of stored events and retrieving them by index. The <i>time-dependent</i> interface can be queried by specifying a point in time, for which the appropriate data value is returned. The manner in which this value is calculated depends on the node’s implementation.</p><p>The latter two interfaces are used to implement nodes that perform computations on a set of event values such as windowed filters or which use a point in time as parameter such as a prediction for a given point in time. Only specialized nodes implement these interfaces while the majority of nodes only supports the <i>event</i> interface.</p></div></div></section><section aria-labelledby="Sec8"><div class="c-article-section" id="Sec8-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec8">Implementation</h2><div class="c-article-section__content" id="Sec8-content"><p>In an actual implementation we distinguish <i>source nodes</i>, which are leaves in the graph and receive their data values from external sources, <i>filter nodes</i>, which are intermediate nodes and modify the values received from other nodes, and <i>sink nodes</i>, which propagate data values to external outputs.</p><p>The data type passed between nodes is a complex data structure tailored towards the requirements of AR applications and consists of a fixed set of components (see Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-005-0006-2#Tab1">1</a>). Although this restriction to a fixed data type appears as an limitation, it can easily be extended or generalized because nothing in the supporting system relies on the type of the event data.</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-1"><figure><figcaption class="c-article-table__figcaption"><b id="Tab1" data-test="table-caption">Table 1 Components of the OpenTracker event data type</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-005-0006-2/tables/1"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <h3 class="c-article__sub-heading" id="Sec9">Source nodes</h3><p>Most source nodes encapsulate a device driver that directly accesses a particular tracking device, such as a Polhemus or Ascension tracker connected to a serial interface. Other node objects form bridges to complex self-contained systems, such as the video tracking library from ARToolkit [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 11" title="Kato H, Billinghurst M (1999) Marker tracking and HMD calibration for a video-based augmented reality conferencing system. In: Proceedings of the IWAR 99, San Francisco, USA, October 1999" href="/article/10.1007/s10055-005-0006-2#ref-CR11" id="ref-link-section-d105871e784">11</a>] or implement a DWARF service interface [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 3" title="Bauer M, Hilliges O, MacWilliams A, Sandor C, Wagner M, Klinker G, Newman J, Reitmayr G, Fahmy T, Pintaric T, Schmalstieg D (2003) Integrating Studierstube and DWARF. In: Proceedings of the STARS 2003, Tokyo, Japan, 7 October 2003, pp 1–5" href="/article/10.1007/s10055-005-0006-2#ref-CR3" id="ref-link-section-d105871e787">3</a>]. A third type of source node emulates a tracker via the keyboard, access network data (see Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-005-0006-2#Sec18">5.2</a>) or simply responds with constant values (useful for development and debugging).</p><p>The default implementation for most source nodes only provides the last data received from either a tracking device or the network. Some source nodes have a multi-threaded execution model to implement an efficient decoupled simulation model [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 19" title="Shaw C, Green M, Liang J, Sun Y (1993) Decoupled simulation in virtual reality with the MR toolkit. ACM Trans Inform Syst 11(3):287–317" href="/article/10.1007/s10055-005-0006-2#ref-CR19" id="ref-link-section-d105871e796">19</a>] (e.g. when blocking I/O must be used to poll a device).</p><h3 class="c-article__sub-heading" id="Sec10">Filter nodes</h3><p>Filter nodes receive values from one or more child nodes. Upon receiving an update from one or more of their children, they compute their own state based on the collected data. A non-exhaustive list of filters includes:
+</p><ul class="u-list-style-dash">
+                    <li>
+                      <p>Transformation filters perform geometric transformations of their children’s values. These include pre- and posttransformations and may be static or depend on data values received from other children. The latter allows modifications of the filtered state relative to another tracker state.</p>
+                    </li>
+                    <li>
+                      <p>Button filters perform boolean operations on the button state of different input sources to combine them into a new event value.</p>
+                    </li>
+                    <li>
+                      <p>Prediction filters allow to partially compensate for lag in the measuring and processing tracker data.</p>
+                    </li>
+                    <li>
+                      <p>Noise and smoothing filters are handy to deal with inherent inaccuracies of trackers.</p>
+                    </li>
+                    <li>
+                      <p>Undistortion filter are necessary e.g. to linearize distortions in the magnetic field of a magnetic tracking device.</p>
+                    </li>
+                    <li>
+                      <p>Merge filters assemble new data values using different parts of the data values of several children. Use cases include the combination of orientation from an inertial tracker with position information from an acoustic tracker, or adding a button device to a closed tracking solution such as Polhemus Ultratrak.</p>
+                    </li>
+                    <li>
+                      <p>Conversion filters are able to translate one data type into another. For example, 2D positions from a desktop pointing device can be translated into 3D positions by adding a constant third value.</p>
+                    </li>
+                    <li>
+                      <p>Clamp filter are special nonlinear transformation filters that cut off values at user-specified extrema, for example to deliberately limit interaction to a valid range.</p>
+                    </li>
+                    <li>
+                      <p>Confidence filters select data values from different children based on some measure of confidence in the accuracy of the data.</p>
+                    </li>
+                  </ul>
+                        <h3 class="c-article__sub-heading" id="Sec11">Sink nodes</h3><p>Sink nodes are similar to source nodes but distribute data rather than receive it. They include output to network multicast groups, debugging output to a user interface or thread-safe shared memory output to integrate OpenTracker as a library into other applications. A logging node writes the received data into files to record a a stream of data which can be played back on a corresponding file source node.</p><h3 class="c-article__sub-heading" id="Sec12">Time</h3><p>Time is reflected in several ways in the architecture of OpenTracker. As described in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-005-0006-2#Sec7">3.2</a>, the type system for edges supplies us with different ways of dealing with time, either having an event based approach, with or without queueing of events, or by specifying functions of tracking data as continuous functions of time. OpenTracker does not implement any clock synchronization of different hosts working together in a network. There are well established means to solve this problem such as the NTP protocol [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1" title="NTP (2004) The network time protocol. &#xA;                    http://www.ntp.org/&#xA;                    &#xA;                  , 16 February 2004" href="/article/10.1007/s10055-005-0006-2#ref-CR1" id="ref-link-section-d105871e875">1</a>].</p><h3 class="c-article__sub-heading" id="Sec13">Software architecture</h3><p>The intent of OpenTracker is to provide an auxiliary library that is to be integrated into VR or AR applications. Therefore it is kept lightweight and customizable. The library is designed as a class hierarchy of tracker objects, implemented in C++. It is built around a small set of core classes that implement the basic node interfaces, a parser that builds the runtime structure from a configuration file and the main loop driving the event model. Any other functionality is implemented by a set of module classes that can be easily extended or modified.</p><p>The library is extensible through the use of an abstract <i>NodeFactory</i> interface to define the class interface for creating new nodes and through the <i>Module</i> class that provides an interface for processing within the main loop. Any extension adds new node types by providing an object that implements the NodeFactory interface. The object is added to a list of factories known by a Context object at startup and can then create nodes of the new type as requested by the parser. Parameters for node creation are passed in by the parser as a generic map of key-value pairs.</p><p>To add more complex functionality such as device drivers, a subclass of Module is created and added to the list of modules known to a Context object. The modules are called regularly during processing of the main loop. Within these callbacks, they can implement any processing and create new events. These events are then propagated into the data flow network by associated nodes. Events can also be read in from the network by these nodes. A module obtains references to the nodes it is interested in by implementing the NodeFactory interface. It thereby acts as both the creator and the active implementation of the nodes.</p><p>There are also nodes that perform without an underlying module. Examples are filter nodes that implement geometric transformations on incoming events and pass the transformed events to their parents.</p><p>There is no fixed interface to the integrating application in order to maximize flexibility. Application programmers either have to use one of the supplied nodes (such as a generic call back node) or to supply their own module implementing sink nodes as interfaces to their application. Moreover, the use of the library main loop is not mandatory. The processing can be integrated with the application’s main loop to avoid additional threads and synchronize the tracking data processing more closely with the application. These design decisions ensure that the library can adapt to the needs of any application.</p><p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0006-2#Fig3">3</a> shows a class diagram of the core classes. The class <i>Context</i> implements the main loop and keeps reference of all modules and the data flow data structure. It employs an object of class <i>ConfigurationParser</i> to parse the configuration files. Actual node implementations are derived from <i>Node</i>, for example the <i>Transformation</i> or the <i>TestSource</i> class. <i>WrapperNode</i> and <i>RefNode</i> are special nodes that implement the port and reference functionality. <i>State</i> is the default event type.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0006-2/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0006-2/MediaObjects/10055_2005_6_Fig3_HTML.gif?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0006-2/MediaObjects/10055_2005_6_Fig3_HTML.gif" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p>Class diagram of the OpenTracker library. <i>Light gray</i> classes are extended to add new nodes and modules. <i>Dark gray</i> classes are examples of extensions. <i>Arrows</i> with hollow heads describe derivation, other <i>arrows</i> associations</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0006-2/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h3 class="c-article__sub-heading" id="Sec14">Software engineering with XML</h3><p>XML, the eXtensible Markup Language [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 4" title="Bray T, Paoli J, Sperberg-McQueen CM et al (2000) Extensible markup language (XML) 1.0. &#xA;                    http://www.w3.org/TR/REC-xml/&#xA;                    &#xA;                  , 6 October 2000" href="/article/10.1007/s10055-005-0006-2#ref-CR4" id="ref-link-section-d105871e971">4</a>], is a markup definition language that allows to define hierarchical markup languages with so-called document type definitions (DTD). With the appropriate DTD, standard XML tools can be used to conveniently edit, type check, parse, and transform any XML file. Thus, providing a simple DTD for describing the data flow graphs of tracker nodes opens access to software libraries and tools that simplify several steps of the development cycle. A visual DTD editor can be used to design and maintain the DTD. An XML parser [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 23" title="The Apache Software Foundation (2004) Xerces XML parser. &#xA;                    http://xml.apache.org/xerces-c/index.html&#xA;                    &#xA;                  , visited 20 February 2004" href="/article/10.1007/s10055-005-0006-2#ref-CR23" id="ref-link-section-d105871e974">23</a>] enforces content format on the tracker configuration file while building the corresponding structure in memory, thus automatically performing many of the consistency checks that otherwise have to be hand-coded. A convenient XML editor such as [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 9" title="Icon Information Systems GmbH (2004) XMLSpy. &#xA;                    http://www.xmlspy.com&#xA;                    &#xA;                  , visited 20 February 2004" href="/article/10.1007/s10055-005-0006-2#ref-CR9" id="ref-link-section-d105871e977">9</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 8" title="IBM (2004) Xeena XML editor. &#xA;                    http://www.alphaworks.ibm.com/tech/xeena&#xA;                    &#xA;                  , visited 20 February 2004" href="/article/10.1007/s10055-005-0006-2#ref-CR8" id="ref-link-section-d105871e980">8</a>] allows the end user to design the tracker configuration without having to master the syntax while enforcing the correct content format, reducing syntax and semantic errors.</p><p>Configuration files for OpenTracker are written in a dedicated XML language defined by the DTD. Elements correspond to nodes in the dataflow and attributes to parameters of such nodes. The parent – child relationship of the data flow graph is directly mapped onto the parent – child relationship of XML elements. The content model of the language enforces interface and semantic constraints on the specified graph. As described in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-005-0006-2#Sec7">3.2</a>, the edges and the corresponding node ports are typed and therefore restrict the possible combinations in the construction of the graph. These constraints and others on the number of children are described in the DTD. For example, source nodes typically do not have any children as they rely on data from external sources to compute their own data. In contrast, confidence filters use any number of children to compute their data value.</p><p>The reference structure is created by using unique ID attributes on elements and referencing these IDs in reference elements. While children of nodes with only one input port are directly mapped to children elements in the XML file, multiple input ports need to be addressed differently. Children that are connected to a specific input port are wrapped by an additional XML element which in turn is the direct child of the node of interest. These elements are mapped to special wrapper nodes that can be distinguished by the node implementation. Otherwise they are transparent to the actual data processing.</p><p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0006-2#Fig4">4</a> gives an example of such a configuration file, using all of the features described before. The interesting constructs are highlighted and cross linked with the corresponding nodes in the resulting data flow graph.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0006-2/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0006-2/MediaObjects/10055_2005_6_Fig4_HTML.gif?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0006-2/MediaObjects/10055_2005_6_Fig4_HTML.gif" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p>An example configuration file and the corresponding data flow graph. The use of Ref nodes and multiple input ports is highlighted</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0006-2/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h3 class="c-article__sub-heading" id="Sec15">Data flow implementation</h3><p>The implementation of the node graph and the data flow of events is directly based on the document object model (DOM, [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 27" title="Wood L, Hors AL, Apparao V, Byrne S, Champion M, Isaacs S, Jacobs I, Nicol G, Robie J, Sutor R, Wilson C (2004) Document object model (DOM) level 1 specification (second edition). &#xA;                    http://www.w3.org/TR/2000/WD-DOM-Level-1-20000929/&#xA;                    &#xA;                  , 19 January 2004" href="/article/10.1007/s10055-005-0006-2#ref-CR27" id="ref-link-section-d105871e1023">27</a>]) structure provided by the XML parser library Xerces [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 23" title="The Apache Software Foundation (2004) Xerces XML parser. &#xA;                    http://xml.apache.org/xerces-c/index.html&#xA;                    &#xA;                  , visited 20 February 2004" href="/article/10.1007/s10055-005-0006-2#ref-CR23" id="ref-link-section-d105871e1026">23</a>]. The library reads in a configuration file and constructs a tree structure in memory representing the elements and attributes and the relations between. OpenTracker reuses the in-memory DOM tree and decorates it with instances of the node types described above. A DOM node provides a facility to store a mapping of names to pointers to user data and OpenTracker stores the pointer to the node instance associated with a certain element in the configuration file in this map (see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0006-2#Fig5">5</a>).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0006-2/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0006-2/MediaObjects/10055_2005_6_Fig5_HTML.gif?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0006-2/MediaObjects/10055_2005_6_Fig5_HTML.gif" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p>The DOM tree elements in gray are decorated with the white OpenTracker nodes. The links between the nodes are only virtual and are inferred from the DOM structure</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0006-2/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>Tracking events flow through the network via a push and a pull mechanism. The <i>event</i> interface uses a push mechanism, that passes the current event from the source nodes via any intermediary nodes to the sink nodes. Every node calls an update method on its parent which recursively calls its own parent’s update method after processing the event (see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0006-2#Fig6">6</a>a). Thus, the modules associated with the source nodes only have to trigger this event propagation by calling the update method on their source nodes. Only a reference to the object storing the event data is passed. A node that changes the event’s data has to provide a new instance to avoid changing an instance that may also be used by other nodes. This instance is typically a member of the node reused to avoid frequent allocation and deallocation of an event object on the stack.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-6"><figure><figcaption><b id="Fig6" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 6</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0006-2/figures/6" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0006-2/MediaObjects/10055_2005_6_Fig6_HTML.gif?as=webp"></source><img aria-describedby="figure-6-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0006-2/MediaObjects/10055_2005_6_Fig6_HTML.gif" alt="figure6" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-6-desc"><p>Two types of data flow in OpenTracker. <b>a</b> Events are pushed by source nodes through the graph. <b>b</b> Events are pulled by sink nodes</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0006-2/figures/6" data-track-dest="link:Figure6 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>The <i>event queue</i> and <i>time dependent</i> interfaces use a pull mechanism. If a node is queried via one of these interfaces and it requires event information from any child nodes upstream in the network, it recursively calls the childrens’ interfaces with the appropriate parameters (see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0006-2#Fig6">6</a>b). Pulling data is typically not implemented for network nodes to avoid incurring large delays and therefore is only happening within one process. Again all nodes have to provide their own object instances to avoid side effects by shared event instances.</p><p>Not all nodes implement all interfaces. The <i>event</i> interface is the standard case and is implemented by most nodes. The remaining interfaces are only implemented in a small subset of nodes that use it to implement more complex behaviors. For example, an <i>EventQueue</i> node stores a queue of the last events pushed through it and exposes the queue through the <i>event queue</i> interface. Another node called <i>Filter</i> then uses an EventQueue node to implement a linear filter over the last events that is triggered by any event pushed through it.</p></div></div></section><section aria-labelledby="Sec16"><div class="c-article-section" id="Sec16-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec16">Results</h2><div class="c-article-section__content" id="Sec16-content"><p>We continue with a description of some results showcasing the flexibility of OpenTracker and giving an overview of some applications that were implemented using it.</p><h3 class="c-article__sub-heading" id="Sec17">Rapid prototyping</h3><p>Modifying and refining a user interface and its underlying tracking configuration are common tasks in developing research prototypes of VR and AR applications. During the development of a mobile system described in more detail in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-005-0006-2#Sec19">5.3</a>, a number of systems were created that provided different user interfaces. The system described in this work uses a pen and a graphics tablet as main input devices. Another version used a pair of tracked gloves [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 24" title="Veigl S, Kaltenbach A, Ledermann F, Reitmayr G, Schmalstieg D (2002) Two-handed direct interaction with artoolkit. In: Proceedings of the ART’02, Darmstadt, Germany, 30 September 2002" href="/article/10.1007/s10055-005-0006-2#ref-CR24" id="ref-link-section-d105871e1129">24</a>] and a touch pad. Here one glove mapped to the pen in the original setup and the touch pad controlled a 2D cursor mapped into 3D to replace the tracked graphics tablet. Therefore all applications working on the original system could also run on the changed one. Only changes to the OpenTracker configuration were necessary.</p><p>Using an application in different configurations also requires flexibility within the tracking software framework. Examples are a debug scenario running on a desktop machine versus an installation using a dedicated 6DOF tracker and head-mounted displays. Our group develops a complex augmented reality application for 3D geometry education [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 12" title="Kaufmann H, Schmalstieg D (2003) Mathematics and geometry education with collaborative augmented reality. Comput Graph 27(3):339–345" href="/article/10.1007/s10055-005-0006-2#ref-CR12" id="ref-link-section-d105871e1135">12</a>] working in a laboratory setup with six inputs tracked with 6DOF. However development mostly takes place on a desktop setup where the inputs are mapped to virtual devices controlled by keyboard or mouse input. The logging features of OpenTracker also allow to record tracking data of individual sessions which helps with debugging wrong behavior occurring only during certain movements of the users. The tracking data can be replayed on the desktop in real time or at accelerated speeds to provide reliable test cases and speed up development. In all these cases, only the tracking configuration is modified, never the application itself.</p><h3 class="c-article__sub-heading" id="Sec18">Distributed tracking</h3><p>OpenTracker implements a pair of source and sink nodes that transport tracking events over the network. These nodes allow multiple senders and receivers of tracking data to communicate asynchronously by using IP multicast. It is even possible for a single host to operate as a sender and receiver at the same time, by picking up data, then modifying and re-sending it to the network on another network channel. Thus, larger networks spanning multiple hosts can be created. There are several reasons why it is desirable to share tracking data over a network.</p><p>Multi-processing based on inexpensive PCs becomes possible with little configuration effort. This is useful to achieve some degree of load balancing. In particular, computationally expensive functions such as filtering or undistortion can be assigned to either sender or receiver, depending on the computational budget. Also, network support makes it easy to span multiple operating systems, in particular if a specific tracking device or service is only available at one particular host.</p><p>Examples of such configurations are used in our laboratory. A dedicated host operates the tracking device and runs some filters on the tracking data. Individual development workstations running the actual applications receive the data. Therefore we can update the tracking configuration without interfering with the applications themselves or implement dedicated additional transformations for each individual application in its local OpenTracker configuration.</p><p>Transparent substitution of tracking devices enables to switch devices during run-time or to use virtual devices for testing and playback of prerecorded or generated tracking data. For example, an outdoor mobile AR system we built communicates with a dedicated tracking process that operates a GPS receiver and inertial tracker to provide position and orientation information. The configuration of this process can be switched to a different one which provides information from a user controlled simulator without stopping the application itself.</p><p>While there is a preferred network protocol for OpenTracker, support for additional formats can be easily implemented. Sofar, we implemented support for VRPN and DWARF allowing an OpenTracker based process to both receive and send data to and from VRPN or DWARF based processes. Such a process could be used to perform some registration and filtering computations in an otherwise VRPN based setup.</p><h3 class="c-article__sub-heading" id="Sec19">Mobile augmented reality system</h3><p>Augmented reality setups often require the integration of various different tracking devices. We built a series of mobile AR systems to investigate mobile collaborative applications [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 14" title="Reitmayr G, Schmalstieg D (2001) Mobile collaborative augmented reality. In: Proceedings of the ISAR 2001, New York, 29–30 October 2001. IEEE, pp 114–123" href="/article/10.1007/s10055-005-0006-2#ref-CR14" id="ref-link-section-d105871e1162">14</a>]. The first iteration consisted of a PC notebook equipped with a NVidia GeForce2Go video chip and a 1GHZ processor and worked under Windows 2000. As an output device, we use an Sony Glasstron see-through stereoscopic color HMD. The display is fixed to a helmet worn by the user. Moreover, an InterSense InterTrax<sup>2</sup> orientation sensor and a web camera for fiducial tracking of interaction props are mounted on the helmet. The setup is carried by the user in a backpack.</p><p>The main user interface is a pen and pad setup using a Wacom graphics tablet and its pen. Both devices are optically tracked by the camera using markers. The 2D position of the pen (provided by the Wacom tablet) is incorporated into the processing to provide more accurate tracking on the pad itself. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0006-2#Fig7">7</a> gives an overview of the setup.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-7"><figure><figcaption><b id="Fig7" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 7</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0006-2/figures/7" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0006-2/MediaObjects/10055_2005_6_Fig7_HTML.gif?as=webp"></source><img aria-describedby="figure-7-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0006-2/MediaObjects/10055_2005_6_Fig7_HTML.gif" alt="figure7" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-7-desc"><p>Hardware components of the mobile AR setup</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0006-2/figures/7" data-track-dest="link:Figure7 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>Tracking of the user and the interaction props is achieved by combining data from various sources. The OpenTracker component receives data about the user’s head orientation from the InterTrax<sup>2</sup> sensor to provide a coordinate system with body stabilized position and world stabilized orientation.</p><p>Within this coordinate system, the pen and pad are tracked using the video camera mounted on the helmet and ARToolKit [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 11" title="Kato H, Billinghurst M (1999) Marker tracking and HMD calibration for a video-based augmented reality conferencing system. In: Proceedings of the IWAR 99, San Francisco, USA, October 1999" href="/article/10.1007/s10055-005-0006-2#ref-CR11" id="ref-link-section-d105871e1199">11</a>] to process the video information. Because the video camera and the HMD are fixed to the helmet the transformation between the cameras and the users coordinate system is fixed and determined in a calibration step.</p><p>The pad is equipped with one marker. This is enough for standard operation, where the user holds it within her field of view to interact with 2D user interface elements displayed on the pad. The pen, however, is equipped with a cube featuring a marker on the five sides which are not occluded. This allows to track the pen in almost any position and orientation. Moreover whenever the user touches the pad with the pen, the more accurate information provided by the graphics tablet is used to set the position of the pen with respect to the tablet.</p><p>The data flow graph describing the necessary data transformations is shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0006-2#Fig8">8</a>. Round nodes at the top are source nodes that encapsulate device drivers. The round nodes at the bottom are sinks that copy the resulting data to the AR software. Intermediate nodes receive events containing tracking data, transform it and pass it on, downwards. An important type of transformation is the relative transformation that takes input from two different devices and interprets the location of one device relative to the location of the other (called the <i>base</i>).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-8"><figure><figcaption><b id="Fig8" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 8</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0006-2/figures/8" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0006-2/MediaObjects/10055_2005_6_Fig8_HTML.gif?as=webp"></source><img aria-describedby="figure-8-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0006-2/MediaObjects/10055_2005_6_Fig8_HTML.gif" alt="figure8" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-8-desc"><p>The data flow graph of the tracking configuration for the mobile AR setup. Individual flows are indicated per source. The diagram was automatically generated from the XML configuration description</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0006-2/figures/8" data-track-dest="link:Figure8 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>Different colors denote paths through the graph that describe how the tracking data for different devices are processed. Relative transformations are marked by cross stripes in the color of the two paths connecting. For example, the <i>optical pen</i> path describes the five markers that are each transformed to relate the pen point location. The results are merged, then further transformed. After another merge with data from the graphics tablet, it is once more transformed to the reference system established by the orientation sensor.</p><p>Similarly, the <i>optical pad</i> path describes the computation to obtain the location of the pad. As a side effect, the <i>optical pad</i> information is used at one step to transform the 2D information from the <i>graphics tablet</i> path to the actual pen position which is subsequently merged with the pure optical information. Finally the white <i>HMD location</i> path is used to provide information about the head location. The TestSource node’s task is to provide a constant value which is then transformed by the orientation sensors.</p><p>We would like to point out that using a visual XML editor, this complex configuration was created without writing a single line of code.</p><h3 class="c-article__sub-heading" id="Sec20">Indoor wide area tracking</h3><p>To build an environment where we could test drive our mobile AR kit, we implemented an indoor tracking solution to cover a floor of our building. As we did not have access to a proprietary building-wide positioning infrastructure (such as AT&amp;T Cambridge’s BAT system used by Newman et al. [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 13" title="Newman J, Ingram D, Hopper A (2001) Augmented reality in a wide area sentient environment. In: Proceedings of the ISAR 2001, New York, 29–30 October 2001. IEEE and ACM, pp 77–86" href="/article/10.1007/s10055-005-0006-2#ref-CR13" id="ref-link-section-d105871e1264">13</a>]), we choose to rely on a hybrid optical/inertial tracking solution. This approach proved very flexible in terms of development of positioning infrastructure, but also pushes the limits of what the used optical tracking library ARToolkit can provide. A more detailed account can be found in [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 16" title="Reitmayr G, Schmalstieg D (2003) Location based applications for mobile augmented reality. In: Biddle R, Thomas B (eds) Proceedings of the AUIC 2003, vol 25 (3) of Australian Computer Science Communications, Adelaide, Australia, 4 – 7 February 2003. ACS, pp 65–73" href="/article/10.1007/s10055-005-0006-2#ref-CR16" id="ref-link-section-d105871e1267">16</a>].</p><p>To implement a wide area indoor tracking solution we resolved to use a set of well-known markers that were distributed in the environment. Together with a geometric model of the building that includes the location of the well-known markers (see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0006-2#Fig9">9</a>) we can compute the user’s location as soon as a marker is tracked by the optical tracking system. These models and the location of the markers were obtained by manual measurements with a survey instrument.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-9"><figure><figcaption><b id="Fig9" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 9</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0006-2/figures/9" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0006-2/MediaObjects/10055_2005_6_Fig9_HTML.gif?as=webp"></source><img aria-describedby="figure-9-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0006-2/MediaObjects/10055_2005_6_Fig9_HTML.gif" alt="figure9" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-9-desc"><p>The diagram shows the geometric model of the floor. The <i>dark dots</i> denote the locations of measured markers used to track the user within the environment. The overlayed grid marks the cells defining unique marker sets</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0006-2/figures/9" data-track-dest="link:Figure9 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>The implemented tracking approach requires a large set of markers. It is necessary to place a marker about every two meters and to cover each wall of a single room with at least one marker. Deploying it in our floor covering about 20 rooms and long hallways would require over two hundred different markers. However, marking up a large indoor space with unique ARToolKit markers is not feasible. The more markers, the higher the degree of similarity of any pair of markers, which leads to false recognitions. A large set of markers also enlarges the search space that ARToolKit has to traverse, leading to significant decrease in performance. Consequently, the use of ARToolKit is not feasible for large marker assemblies.</p><p>To overcome this restriction, we developed a space partitioning-scheme that allows reusing sets of markers within the given environment. The idea behind this approach is that, if the tracking system knows the user’s location, it can rule out large parts of the building because they will not be visible to the camera. Therefore, for two areas, which are not visible to each other, it becomes possible to use the same set of markers.</p><p>To compute a possible placement of markers, the space of the model is partitioned into a 3-dimensional cubic grid of a fixed length (see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0006-2#Fig9">9</a>). Then, marker patterns are assigned to the measured positions such that the patterns are unique within each cubic cell and its 26 direct neighbors. Basically, every cell defines a partial mapping from marker patterns to marker positions in the environment.</p><p>The tracking computes the user’s location from a known cell and a marker pattern observed by the camera mounted on the helmet. Because the pattern is unique within the cell and it’s neighbors, the associated marker position can be established and the user’s location is computed by concatenating the marker position and the relative measurement computed by the ARToolKit library. These computations are executed within OpenTracker by configuring appropriate transform nodes.</p><p>The representation of the mapping from marker patterns to marker positions within the cells is implemented with the help of a special node within OpenTracker called <i>GroupGate</i>. A GroupGate defines a gate that passes incoming events on, if enabled and stops them otherwise. A set of GroupGate nodes is configured into an directed graph describing a neighborhood relationship. The relationship is typically symmetric but need not be. At any point in time, only one GroupGate node is denoted as active. If a GroupGate node is active, it is enabled and all its neighboring GroupGates are enabled as well. All other nodes are disabled and will not pass events. A GroupGate becomes active, if it is enabled and an event passes through it. Additionally, a GroupGate also defines a second input port named override. If an event passes through the override port, the node is also activated.</p><p>A single cell is modelled as a GroupGate and its 26 neighboring cells are configured as neighbors. The measured data from a single marker pattern is passed through all possible transformations for the different maker positions it is used at. Then, each transformed data event is passed through the GroupGate of the cell the marker position is associated with. The active GroupGate corresponds to the cell the user is currently in. Because events can only pass through the active GroupGate and its neighbors, data from a marker will be used only once. Moreover the data passes only through the GroupGate associated with the marker position of the last seen marker activating it if necessary. Thus the activation will always shift with the user’s movement through the set of GroupGates. Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0006-2#Fig10">10</a> gives an example of the use of the GroupGate node.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-10"><figure><figcaption><b id="Fig10" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 10</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0006-2/figures/10" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0006-2/MediaObjects/10055_2005_6_Fig10_HTML.gif?as=webp"></source><img aria-describedby="figure-10-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0006-2/MediaObjects/10055_2005_6_Fig10_HTML.gif" alt="figure10" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-10-desc"><p>The function of the GroupGate node. <b>a</b> A set of GroupGates allows to select a single path from a set of paths through the graph. Only the active GroupGate propagates events. <b>b</b> The GroupGates are in a neighborhood relation. The active GroupGate’s neighbors are enabled to propagate events as well and become active, if an event passes through them</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0006-2/figures/10" data-track-dest="link:Figure10 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>The tracking needs an initial position at startup to set the first active cell and GroupGate. A set of unique markers are used to define starting positions on individual floors and the user can select her current position at any time to correct any errors. Both operations simply activate the correct GroupGate to set the current cell.</p></div></div></section><section aria-labelledby="Sec21"><div class="c-article-section" id="Sec21-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec21">Conclusions and future work</h2><div class="c-article-section__content" id="Sec21-content"><p>OpenTracker is the first software framework to thoroughly apply the pipes-and-filters architecture to the problem of manipulating tracking data. The resulting advantages are twofold. The high-level language introduced to configure the processing of tracking data simplifies experimental and exploratory programming of data manipulations. Describing the configuration in a dedicated language renders it also more accessible to automated methods such as generating a certain configuration.</p><p>The layered architecture that OpenTracker enforces on the overall application provides a clear cut interface between the application logic and the functions required to deal with tracking devices. A number of issues appearing in relation with tracking devices such as calibration and registration, network transparency or fusion of input data can be dealt with in a way that is transparent to the application. Decoupling the application specific functionality from the device layer also furthers reuse of the application in the context of different tracking systems. While the existing nodes in OpenTracker will not cover the requirements of every application, the extensibility guarantees that new functions can be implemented rather easily. By extending OpenTracker rather than hard-coding the application, new functionality can be reused and is not locked into a single application.</p><p>The current OpenTracker implementation has a set of shortcomings. The data type processed is a fixed structure tailored towards a specific application. An extension to different data structures will enable multi-modal processing of input data and expand application area of the OpenTracker concept. Runtime reconfiguration of the tracking graph would allow a number of interesting applications. A dedicated tracking configuration tool can build up a configuration based on user input and simplify setting up an AR system. Auto-calibration of a running system becomes possible and would improve the registration errors of the computer generated images transparently and without intervention by a human operator. These issues are addressed in the next generation of OpenTracker which is under active development.</p><p>A more ambitions research direction is Ubiquitous Tracking [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 26" title="Wagner M, MacWilliams A, Bauer M, Klinker G, Newman J, Pintaric T, Schmalstieg D (2004) Fundamentals of ubiquitous tracking. In: Proceedings of the PERVASIVE 2004, Vienna, Austria, 18–23 April 2004" href="/article/10.1007/s10055-005-0006-2#ref-CR26" id="ref-link-section-d105871e1366">26</a>] which aims to provide an ubiquitous infrastructure service to AR applications. An application can register with a UbiTrack service and request tracking information on objects it is interested in. The service would then automatically compute a configuration based on the available tracking devices and send it to the application. The next version of OpenTracker will then use the configuration to provide the required tracking data to the application. The actual tracking devices and required configuration would be transparent to the application and could change at runtime as required.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="NTP (2004) The network time protocol. http://www.ntp.org/, 16 February 2004" /><span class="c-article-references__counter">1.</span><p class="c-article-references__text" id="ref-CR1">NTP (2004) The network time protocol. <a href="http://www.ntp.org/">http://www.ntp.org/</a>, 16 February 2004</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bauer M, Bruegge B, Klinker G, MacWilliams A, Reichner T, Riss S, Sandor C, Wagner M (2001) Design of a compon" /><span class="c-article-references__counter">2.</span><p class="c-article-references__text" id="ref-CR2">Bauer M, Bruegge B, Klinker G, MacWilliams A, Reichner T, Riss S, Sandor C, Wagner M (2001) Design of a component-based augmented reality framework. In: Proceedings of the ISAR 2001, New York, 29–30 October 2001. IEEE and ACM, pp 45–54</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bauer M, Hilliges O, MacWilliams A, Sandor C, Wagner M, Klinker G, Newman J, Reitmayr G, Fahmy T, Pintaric T, " /><span class="c-article-references__counter">3.</span><p class="c-article-references__text" id="ref-CR3">Bauer M, Hilliges O, MacWilliams A, Sandor C, Wagner M, Klinker G, Newman J, Reitmayr G, Fahmy T, Pintaric T, Schmalstieg D (2003) Integrating Studierstube and DWARF. In: Proceedings of the STARS 2003, Tokyo, Japan, 7 October 2003, pp 1–5</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bray T, Paoli J, Sperberg-McQueen CM et al (2000) Extensible markup language (XML) 1.0. http://www.w3.org/TR/R" /><span class="c-article-references__counter">4.</span><p class="c-article-references__text" id="ref-CR4">Bray T, Paoli J, Sperberg-McQueen CM et al (2000) Extensible markup language (XML) 1.0. <a href="http://www.w3.org/TR/REC-xml/">http://www.w3.org/TR/REC-xml/</a>, 6 October 2000</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Buschmann F, Meunier R, Rohnert H, Sommerlad P, Stal M (1996) Pattern-oriented software architecture—a system " /><span class="c-article-references__counter">5.</span><p class="c-article-references__text" id="ref-CR5">Buschmann F, Meunier R, Rohnert H, Sommerlad P, Stal M (1996) Pattern-oriented software architecture—a system of patterns, vol 1. Wiley, Great Britain</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Carey R, Bell G (1997) The annotated VRML 2.0 reference manual. Addison-Wesley, Reading" /><span class="c-article-references__counter">6.</span><p class="c-article-references__text" id="ref-CR6">Carey R, Bell G (1997) The annotated VRML 2.0 reference manual. Addison-Wesley, Reading</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="He T, Kaufman A (1993) Virtual input devices for 3D systems. In: Proceedings of the IEEE Visualization’93, IEE" /><span class="c-article-references__counter">7.</span><p class="c-article-references__text" id="ref-CR7">He T, Kaufman A (1993) Virtual input devices for 3D systems. In: Proceedings of the IEEE Visualization’93, IEEE, pp 142–148</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="IBM (2004) Xeena XML editor. http://www.alphaworks.ibm.com/tech/xeena, visited 20 February 2004" /><span class="c-article-references__counter">8.</span><p class="c-article-references__text" id="ref-CR8">IBM (2004) Xeena XML editor. <a href="http://www.alphaworks.ibm.com/tech/xeena">http://www.alphaworks.ibm.com/tech/xeena</a>, visited 20 February 2004</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Icon Information Systems GmbH (2004) XMLSpy. http://www.xmlspy.com, visited 20 February 2004" /><span class="c-article-references__counter">9.</span><p class="c-article-references__text" id="ref-CR9">Icon Information Systems GmbH (2004) XMLSpy. <a href="http://www.xmlspy.com">http://www.xmlspy.com</a>, visited 20 February 2004</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="ISO (1985) Graphical kernel system (GKS). IS 7942" /><span class="c-article-references__counter">10.</span><p class="c-article-references__text" id="ref-CR10">ISO (1985) Graphical kernel system (GKS). IS 7942</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Kato H, Billinghurst M (1999) Marker tracking and HMD calibration for a video-based augmented reality conferen" /><span class="c-article-references__counter">11.</span><p class="c-article-references__text" id="ref-CR11">Kato H, Billinghurst M (1999) Marker tracking and HMD calibration for a video-based augmented reality conferencing system. In: Proceedings of the IWAR 99, San Francisco, USA, October 1999</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="H. Kaufmann, D. Schmalstieg, " /><meta itemprop="datePublished" content="2003" /><meta itemprop="headline" content="Kaufmann H, Schmalstieg D (2003) Mathematics and geometry education with collaborative augmented reality. Comp" /><span class="c-article-references__counter">12.</span><p class="c-article-references__text" id="ref-CR12">Kaufmann H, Schmalstieg D (2003) Mathematics and geometry education with collaborative augmented reality. Comput Graph 27(3):339–345</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1016%2FS0097-8493%2803%2900028-1" aria-label="View reference 12">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 12 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Mathematics%20and%20geometry%20education%20with%20collaborative%20augmented%20reality&amp;journal=Comput%20Graph&amp;volume=27&amp;issue=3&amp;pages=339-345&amp;publication_year=2003&amp;author=Kaufmann%2CH&amp;author=Schmalstieg%2CD">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Newman J, Ingram D, Hopper A (2001) Augmented reality in a wide area sentient environment. In: Proceedings of " /><span class="c-article-references__counter">13.</span><p class="c-article-references__text" id="ref-CR13">Newman J, Ingram D, Hopper A (2001) Augmented reality in a wide area sentient environment. In: Proceedings of the ISAR 2001, New York, 29–30 October 2001. IEEE and ACM, pp 77–86</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Reitmayr G, Schmalstieg D (2001) Mobile collaborative augmented reality. In: Proceedings of the ISAR 2001, New" /><span class="c-article-references__counter">14.</span><p class="c-article-references__text" id="ref-CR14">Reitmayr G, Schmalstieg D (2001) Mobile collaborative augmented reality. In: Proceedings of the ISAR 2001, New York, 29–30 October 2001. IEEE, pp 114–123</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Reitmayr G, Schmalstieg D (2001) An open software architecture for virtual reality interaction. In: Proceeding" /><span class="c-article-references__counter">15.</span><p class="c-article-references__text" id="ref-CR15">Reitmayr G, Schmalstieg D (2001) An open software architecture for virtual reality interaction. In: Proceedings of the VRST 2001, Banff, Alberta, Canada, 15–17 November 2001. ACM, pp 47–54</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Reitmayr G, Schmalstieg D (2003) Location based applications for mobile augmented reality. In: Biddle R, Thoma" /><span class="c-article-references__counter">16.</span><p class="c-article-references__text" id="ref-CR16">Reitmayr G, Schmalstieg D (2003) Location based applications for mobile augmented reality. In: Biddle R, Thomas B (eds) Proceedings of the AUIC 2003, vol 25 (3) of Australian Computer Science Communications, Adelaide, Australia, 4 – 7 February 2003. ACS, pp 65–73</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="D. Schmalstieg, A. Fuhrmann, G. Hesina, Z. Szalavari, LM. Encarnacao, M. Gervautz, W. Purgathofer, " /><meta itemprop="datePublished" content="2002" /><meta itemprop="headline" content="Schmalstieg D, Fuhrmann A, Hesina G, Szalavari Z, Encarnacao LM, Gervautz M, Purgathofer W (2002) The Studiers" /><span class="c-article-references__counter">17.</span><p class="c-article-references__text" id="ref-CR17">Schmalstieg D, Fuhrmann A, Hesina G, Szalavari Z, Encarnacao LM, Gervautz M, Purgathofer W (2002) The Studierstube augmented reality project. PRESENCE - Teleoperators and Virtual Environments 11(1)</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 17 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=The%20Studierstube%20augmented%20reality%20project&amp;journal=PRESENCE%E2%80%94teleoperators%20and%20virtual%20environments&amp;volume=11&amp;issue=1&amp;publication_year=2002&amp;author=Schmalstieg%2CD&amp;author=Fuhrmann%2CA&amp;author=Hesina%2CG&amp;author=Szalavari%2CZ&amp;author=Encarnacao%2CLM&amp;author=Gervautz%2CM&amp;author=Purgathofer%2CW">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Schönfelder R, Wolf G, Reeßing M, Krüger R, Brüderlin B (2002) A pragmatic approach to a VR/AR component integ" /><span class="c-article-references__counter">18.</span><p class="c-article-references__text" id="ref-CR18">Schönfelder R, Wolf G, Reeßing M, Krüger R, Brüderlin B (2002) A pragmatic approach to a VR/AR component integration framework for rapid system setup. In: Proceedings of the 1. Paderborner Workshop “Augmented und Virtual Reality in der Produktentstehung”, Paderborn, Germany, 11–12 June 2002. Heinz Nixdorf Institut, pp 67–79</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="C. Shaw, M. Green, J. Liang, Y. Sun, " /><meta itemprop="datePublished" content="1993" /><meta itemprop="headline" content="Shaw C, Green M, Liang J, Sun Y (1993) Decoupled simulation in virtual reality with the MR toolkit. ACM Trans " /><span class="c-article-references__counter">19.</span><p class="c-article-references__text" id="ref-CR19">Shaw C, Green M, Liang J, Sun Y (1993) Decoupled simulation in virtual reality with the MR toolkit. ACM Trans Inform Syst 11(3):287–317</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1145%2F159161.173948" aria-label="View reference 19">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 19 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Decoupled%20simulation%20in%20virtual%20reality%20with%20the%20MR%20toolkit&amp;journal=ACM%20Trans%20Inform%20Syst&amp;volume=11&amp;issue=3&amp;pages=287-317&amp;publication_year=1993&amp;author=Shaw%2CC&amp;author=Green%2CM&amp;author=Liang%2CJ&amp;author=Sun%2CY">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Sokolewicz M, Wirth H, Böhm K, John W (1993) Using the GIVEN++ toolkit for system development in MuSE. In: 1st" /><span class="c-article-references__counter">20.</span><p class="c-article-references__text" id="ref-CR20">Sokolewicz M, Wirth H, Böhm K, John W (1993) Using the GIVEN++ toolkit for system development in MuSE. In: 1st Eurographics workshop on virtual environments, Barcelona, Spain, September 1993</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Strauss P, Carey R (1992) An object oriented 3D graphics toolkit. In: Proceedings of the ACM SIGGRAPH’92. ACM" /><span class="c-article-references__counter">21.</span><p class="c-article-references__text" id="ref-CR21">Strauss P, Carey R (1992) An object oriented 3D graphics toolkit. In: Proceedings of the ACM SIGGRAPH’92. ACM</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Taylor RM II, Hudson TC, Seeger A, Weber H, Juliano J, Helser AT (2001) VRPN: a device-independent, network-tr" /><span class="c-article-references__counter">22.</span><p class="c-article-references__text" id="ref-CR22">Taylor RM II, Hudson TC, Seeger A, Weber H, Juliano J, Helser AT (2001) VRPN: a device-independent, network-transparent VR peripheral system. In: Proceedings of the VRST 2001, Banff, Alberta, Canada, November 15–17 2001. ACM, pp 55–61</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="The Apache Software Foundation (2004) Xerces XML parser. http://xml.apache.org/xerces-c/index.html, visited 20" /><span class="c-article-references__counter">23.</span><p class="c-article-references__text" id="ref-CR23">The Apache Software Foundation (2004) Xerces XML parser. <a href="http://xml.apache.org/xerces-c/index.html">http://xml.apache.org/xerces-c/index.html</a>, visited 20 February 2004</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Veigl S, Kaltenbach A, Ledermann F, Reitmayr G, Schmalstieg D (2002) Two-handed direct interaction with artool" /><span class="c-article-references__counter">24.</span><p class="c-article-references__text" id="ref-CR24">Veigl S, Kaltenbach A, Ledermann F, Reitmayr G, Schmalstieg D (2002) Two-handed direct interaction with artoolkit. In: Proceedings of the ART’02, Darmstadt, Germany, 30 September 2002</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="VRCO (2004) Trackd. http://www.vrco.com/products/trackd/trackd.html, visited 2 March 2004" /><span class="c-article-references__counter">25.</span><p class="c-article-references__text" id="ref-CR25">VRCO (2004) Trackd. <a href="http://www.vrco.com/products/trackd/trackd.html">http://www.vrco.com/products/trackd/trackd.html</a>, visited 2 March 2004</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Wagner M, MacWilliams A, Bauer M, Klinker G, Newman J, Pintaric T, Schmalstieg D (2004) Fundamentals of ubiqui" /><span class="c-article-references__counter">26.</span><p class="c-article-references__text" id="ref-CR26">Wagner M, MacWilliams A, Bauer M, Klinker G, Newman J, Pintaric T, Schmalstieg D (2004) Fundamentals of ubiquitous tracking. In: Proceedings of the PERVASIVE 2004, Vienna, Austria, 18–23 April 2004</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Wood L, Hors AL, Apparao V, Byrne S, Champion M, Isaacs S, Jacobs I, Nicol G, Robie J, Sutor R, Wilson C (2004" /><span class="c-article-references__counter">27.</span><p class="c-article-references__text" id="ref-CR27">Wood L, Hors AL, Apparao V, Byrne S, Champion M, Isaacs S, Jacobs I, Nicol G, Robie J, Sutor R, Wilson C (2004) Document object model (DOM) level 1 specification (second edition). <a href="http://www.w3.org/TR/2000/WD-DOM-Level-1-20000929/">http://www.w3.org/TR/2000/WD-DOM-Level-1-20000929/</a>, 19 January 2004</p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-005-0006-2-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Ack1">Acknowledgements</h2><div class="c-article-section__content" id="Ack1-content"><p>The presented work was sponsored by the Austrian Science Foundation <i>FWF</i> under contracts no. P14470 and Y193, and Vienna University of Technology by Forschungsinfrastrukturvorhaben TUWP16/2002. We would like to thank Michael Knapp and the students of the Virtual Reality lab course for their dedicated work on the building model. OpenTracker is available as an Open Source software project from the web address <a href="http://www.studierstube.org/opentracker/">http://www.studierstube.org/opentracker/</a>
+                     </p></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">University of Cambridge, Cambridge, CB12PZ, UK</p><p class="c-article-author-affiliation__authors-list">Gerhard Reitmayr</p></li><li id="Aff2"><p class="c-article-author-affiliation__address">Graz University of Technology, 8010, Graz, Austria</p><p class="c-article-author-affiliation__authors-list">Dieter Schmalstieg</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Gerhard-Reitmayr"><span class="c-article-authors-search__title u-h3 js-search-name">Gerhard Reitmayr</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Gerhard+Reitmayr&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Gerhard+Reitmayr" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Gerhard+Reitmayr%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Dieter-Schmalstieg"><span class="c-article-authors-search__title u-h3 js-search-name">Dieter Schmalstieg</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Dieter+Schmalstieg&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Dieter+Schmalstieg" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Dieter+Schmalstieg%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-005-0006-2/email/correspondent/c1/new">Dieter Schmalstieg</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=OpenTracker%3A%20A%20flexible%20software%20design%20for%20three-dimensional%20interaction&amp;author=Gerhard%20Reitmayr%20et%20al&amp;contentID=10.1007%2Fs10055-005-0006-2&amp;publication=1359-4338&amp;publicationDate=2005-09-29&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Reitmayr, G., Schmalstieg, D. OpenTracker: A flexible software design for three-dimensional interaction.
+                    <i>Virtual Reality</i> <b>9, </b>79–92 (2005). https://doi.org/10.1007/s10055-005-0006-2</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-005-0006-2.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2005-05-04">04 May 2005</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2005-09-29">29 September 2005</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2005-12">December 2005</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-005-0006-2" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-005-0006-2</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Virtual Reality</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Source Node</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Augmented Reality</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Sink Node</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Tracking Data</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-005-0006-2.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=6;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

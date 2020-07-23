@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="Force modeling for tooth preparation in a dental training system"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="Feedback force is very important for novices to simulate tooth preparation by using the haptic interaction system (dental training system) in a virtual environment. In the process of haptic..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/12/3.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="Force modeling for tooth preparation in a dental training system"/>
+
+    <meta name="dc.source" content="Virtual Reality 2008 12:3"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2008-06-26"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2008 Springer-Verlag London Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="Feedback force is very important for novices to simulate tooth preparation by using the haptic interaction system (dental training system) in a virtual environment. In the process of haptic simulation, the fidelity of generated forces by a haptic device decides whether the simulation is successful. A force model computes feedback force, and we present an analytical force model to compute the force between a tooth and a dental pin during tooth preparation. The force between a tooth and a dental pin is modeled in two parts: (1) force to resist human&#8217;s operation and (2) friction to resist the rotation of the dental engine. The force to resist the human&#8217;s operation is divided into three parts in the coordinates that are constructed on the bottom center of the dental pin. In addition, we also consider the effects of dental-pin type, tooth stiffness, and contact geometry in the force model. To determine the parameters of the force model, we construct a measuring system by using machine vision and a force/torque sensor to track the human&#8217;s operations and measure the forces between the dental pins and teeth. Based on the measuring results, we construct the relation between the force and the human&#8217;s operation. The force model is implemented in the prototype of a dental training system that uses the Phantom as the haptic interface. Dentists performing virtual operations have confirmed the fidelity of feedback force."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2008-06-26"/>
+
+    <meta name="prism.volume" content="12"/>
+
+    <meta name="prism.number" content="3"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="125"/>
+
+    <meta name="prism.endingPage" content="136"/>
+
+    <meta name="prism.copyright" content="2008 Springer-Verlag London Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-008-0096-8"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-008-0096-8"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-008-0096-8.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-008-0096-8"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="Force modeling for tooth preparation in a dental training system"/>
+
+    <meta name="citation_volume" content="12"/>
+
+    <meta name="citation_issue" content="3"/>
+
+    <meta name="citation_publication_date" content="2008/09"/>
+
+    <meta name="citation_online_date" content="2008/06/26"/>
+
+    <meta name="citation_firstpage" content="125"/>
+
+    <meta name="citation_lastpage" content="136"/>
+
+    <meta name="citation_article_type" content="Original Article"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-008-0096-8"/>
+
+    <meta name="DOI" content="10.1007/s10055-008-0096-8"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-008-0096-8"/>
+
+    <meta name="description" content="Feedback force is very important for novices to simulate tooth preparation by using the haptic interaction system (dental training system) in a virtual env"/>
+
+    <meta name="dc.creator" content="Guanyang Liu"/>
+
+    <meta name="dc.creator" content="Yuru Zhang"/>
+
+    <meta name="dc.creator" content="William T. Townsend"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="Agus M, Giachetti A, Gobbetti E, Zanetti G, Zorcolo A (2002) Real-time haptic and visual simulation of bone dissection. In: IEEE virtual reality conference. IEEE Computer Society Press, pp 209&#8211;216"/>
+
+    <meta name="citation_reference" content="Agus M, Giachetti A, Gobbetti E, Zanetti G, Zorcolo A (2003) Adaptive techniques for real-time haptic and visual simulation of bone dissection. In: Proceedings of the IEEE virtual reality 2003 (VR&#8242;03)"/>
+
+    <meta name="citation_reference" content="Balijepalli A, Kesavadas T (2002) An exploratory haptic based robotic path planning and training tool. In: Robotics and automation, 2002. Proceedings. ICRA &#8216;02. IEEE international conference, vol 1, pp 438&#8211;443"/>
+
+    <meta name="citation_reference" content="Basdogan C, Ho C, Srinivasan (1999) Simulation of tissue cutting and bleeding for laparoscopic surgery using auxiliary surfaces. In: Proceedings of the Medicine Meets Virtual Reality VII conference"/>
+
+    <meta name="citation_reference" content="Chen L-Y, Fujimoto H, Miwa K, Abe T, Sumi A, Ito Y (2003) A dental training system using virtual reality. Computational Intelligence in Robotics and Automation, 2003. In: Proceedings, IEEE international symposium, vol 1, pp 430&#8211;434"/>
+
+    <meta name="citation_reference" content="Delingette H, Cotin S, Ayache N (1999) A hybrid elastic model allowing real-time cutting,deformations and force-feedback for surgery training and simulation. In: Computer animation, 1999. Proceedings, pp 70&#8211;81"/>
+
+    <meta name="citation_reference" content="Mahvash M, Hayward V (2001) Haptic rendering of cutting: a fracture mechanics approach. Haptics-e, vol 2, No. 3"/>
+
+    <meta name="citation_reference" content="Mahvash M, Hayward V (2003) Haptic simulation of a tool in contact with a nonlinear deformable body. In: International symposium on surgery simulation and soft tissue modelling lecture notes in computer science, pp 311&#8211;320"/>
+
+    <meta name="citation_reference" content="Okamura AM, Webster RJ III, Nolin JT, Johnson KW, Jafry H (2003) The haptic scissors: cutting in virtual environments. In: Robotics and automation, 2003, Proceedings. ICRA&#8242;03. IEEE international conference, vol 1"/>
+
+    <meta name="citation_reference" content="Tanaka A, Hirota K, Kaneko T (1998) Virtual cutting with force feedback. In: Proceedings on virtual reality annual international symposium, pp 71&#8211;78"/>
+
+    <meta name="citation_reference" content="Thomas G, Johnson L, Dow S, Stanford C (2000) The design and testing of a force feedback dental simulator. Comput Method Programs Biomed"/>
+
+    <meta name="citation_reference" content="Ranta JF, Aviles WA (1999) The virtual reality dental training system&#8212;simulating dental procedures for the purpose of training dental students using haptics. In: Proceedings of the fourth PHANTOM users group workshop"/>
+
+    <meta name="citation_author" content="Guanyang Liu"/>
+
+    <meta name="citation_author_email" content="gyliu@me.buaa.edu.cn"/>
+
+    <meta name="citation_author_institution" content="State Key Lab of Virtual Reality Technology and System, Beihang University, Beijing, China"/>
+
+    <meta name="citation_author_institution" content="Robotics Institute, School of Mechanical Engineering and Automation, Beihang University, Beijing, China"/>
+
+    <meta name="citation_author" content="Yuru Zhang"/>
+
+    <meta name="citation_author_institution" content="State Key Lab of Virtual Reality Technology and System, Beihang University, Beijing, China"/>
+
+    <meta name="citation_author_institution" content="Robotics Institute, School of Mechanical Engineering and Automation, Beihang University, Beijing, China"/>
+
+    <meta name="citation_author" content="William T. Townsend"/>
+
+    <meta name="citation_author_email" content="wt@barrett.com"/>
+
+    <meta name="citation_author_institution" content="Barrett Technology Inc., Boston, USA"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-008-0096-8&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2008/09/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-008-0096-8"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="Force modeling for tooth preparation in a dental training system"/>
+        <meta property="og:description" content="Feedback force is very important for novices to simulate tooth preparation by using the haptic interaction system (dental training system) in a virtual environment. In the process of haptic simulation, the fidelity of generated forces by a haptic device decides whether the simulation is successful. A force model computes feedback force, and we present an analytical force model to compute the force between a tooth and a dental pin during tooth preparation. The force between a tooth and a dental pin is modeled in two parts: (1) force to resist human’s operation and (2) friction to resist the rotation of the dental engine. The force to resist the human’s operation is divided into three parts in the coordinates that are constructed on the bottom center of the dental pin. In addition, we also consider the effects of dental-pin type, tooth stiffness, and contact geometry in the force model. To determine the parameters of the force model, we construct a measuring system by using machine vision and a force/torque sensor to track the human’s operations and measure the forces between the dental pins and teeth. Based on the measuring results, we construct the relation between the force and the human’s operation. The force model is implemented in the prototype of a dental training system that uses the Phantom as the haptic interface. Dentists performing virtual operations have confirmed the fidelity of feedback force."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>Force modeling for tooth preparation in a dental training system | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-008-0096-8","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Force model, Haptic interaction, Contact geometry, Force measure, Human’s operating tracking","kwrd":["Force_model","Haptic_interaction","Contact_geometry","Force_measure","Human’s_operating_tracking"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-008-0096-8","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-008-0096-8","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=96;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-008-0096-8">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            Force modeling for tooth preparation in a dental training system
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-008-0096-8.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-008-0096-8.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">Original Article</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2008-06-26" itemprop="datePublished">26 June 2008</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">Force modeling for tooth preparation in a dental training system</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Guanyang-Liu" data-author-popup="auth-Guanyang-Liu" data-corresp-id="c1">Guanyang Liu<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a>,<a href="#Aff2">2</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Beihang University" /><meta itemprop="address" content="grid.64939.31, 0000000099991211, State Key Lab of Virtual Reality Technology and System, Beihang University, Beijing, China" /></span><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Beihang University" /><meta itemprop="address" content="grid.64939.31, 0000000099991211, Robotics Institute, School of Mechanical Engineering and Automation, Beihang University, Beijing, China" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Yuru-Zhang" data-author-popup="auth-Yuru-Zhang">Yuru Zhang</a></span><sup class="u-js-hide"><a href="#Aff1">1</a>,<a href="#Aff2">2</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Beihang University" /><meta itemprop="address" content="grid.64939.31, 0000000099991211, State Key Lab of Virtual Reality Technology and System, Beihang University, Beijing, China" /></span><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Beihang University" /><meta itemprop="address" content="grid.64939.31, 0000000099991211, Robotics Institute, School of Mechanical Engineering and Automation, Beihang University, Beijing, China" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-William_T_-Townsend" data-author-popup="auth-William_T_-Townsend">William T. Townsend</a></span><sup class="u-js-hide"><a href="#Aff3">3</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Barrett Technology Inc." /><meta itemprop="address" content="grid.423180.c, Barrett Technology Inc., Boston, USA" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 12</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">125</span>–<span itemprop="pageEnd">136</span>(<span data-test="article-publication-year">2008</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">185 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">8 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                    
+                        <li class="c-article-metrics-bar__item">
+                            <p class="c-article-metrics-bar__count">0 <span class="c-article-metrics-bar__label">Altmetric</span></p>
+                        </li>
+                    
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-008-0096-8/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>Feedback force is very important for novices to simulate tooth preparation by using the haptic interaction system (dental training system) in a virtual environment. In the process of haptic simulation, the fidelity of generated forces by a haptic device decides whether the simulation is successful. A force model computes feedback force, and we present an analytical force model to compute the force between a tooth and a dental pin during tooth preparation. The force between a tooth and a dental pin is modeled in two parts: (1) force to resist human’s operation and (2) friction to resist the rotation of the dental engine. The force to resist the human’s operation is divided into three parts in the coordinates that are constructed on the bottom center of the dental pin. In addition, we also consider the effects of dental-pin type, tooth stiffness, and contact geometry in the force model. To determine the parameters of the force model, we construct a measuring system by using machine vision and a force/torque sensor to track the human’s operations and measure the forces between the dental pins and teeth. Based on the measuring results, we construct the relation between the force and the human’s operation. The force model is implemented in the prototype of a dental training system that uses the Phantom as the haptic interface. Dentists performing virtual operations have confirmed the fidelity of feedback force.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Introduction</h2><div class="c-article-section__content" id="Sec1-content"><p>Tooth preparation is the process of re-shaping a decayed tooth to restore it. The shape of the preparation must be correct in order to restore the tooth properly. Precise clinical execution of tooth preparation demands a high level of dexterity and the detailed anatomy of a tooth. Sufficient experience is very important for novices to become excellent dentists.</p><p>Novices currently use artificial teeth and jaws or removed teeth from patients to practice tooth preparation. However, the material property of artificial teeth is different from that of human teeth. They cannot provide realistic feedback force to operators in operations. Furthermore, the cost of artificial teeth is fairly high. Although removed teeth can meet the above requirements, the quantity is not enough for a large number of dentists to practice dental operations. Therefore, a haptic interaction system realistically mimicking tooth-specific operating environment would significantly contribute to the improvement of dental training.</p><p>The dental-training system is a haptic-interaction system with the capacity of a haptic-visual display. Dentists can use it to simulate tooth preparation in a virtual environment and can sense haptic-visual feedback that is similar to that of physical operations. Therefore, the force model, namely the haptic engine that is constructed to compute the feedback force is a critical component of the software of the haptic-interaction system. The fidelity of feedback force mostly depends on the force model if the haptic device has been chosen.</p><p>Some pioneering works have been done in haptic-based dental training. Ranta et al. introduced a Phantom-based dental training system (Ranta and Aviles <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Ranta JF, Aviles WA (1999) The virtual reality dental training system—simulating dental procedures for the purpose of training dental students using haptics. In: Proceedings of the fourth PHANTOM users group workshop" href="/article/10.1007/s10055-008-0096-8#ref-CR1" id="ref-link-section-d43522e351">1999</a>). Their demonstration shows that the Phantom<sup>®</sup> is capable of providing the level of haptic fidelity needed to equal the plastic teeth currently used. Thomas et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Thomas G, Johnson L, Dow S, Stanford C (2000) The design and testing of a force feedback dental simulator. Comput Method Programs Biomed" href="/article/10.1007/s10055-008-0096-8#ref-CR2" id="ref-link-section-d43522e356">2000</a>) developed a training system with Impulse2000 enabling the operator to practice the detection of carious lesions. Their systems focus on probing the tooth surface, while cutting simulation is not considered. Chen et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Chen L-Y, Fujimoto H, Miwa K, Abe T, Sumi A, Ito Y (2003) A dental training system using virtual reality. Computational Intelligence in Robotics and Automation, 2003. In: Proceedings, IEEE international symposium, vol 1, pp 430–434" href="/article/10.1007/s10055-008-0096-8#ref-CR3" id="ref-link-section-d43522e359">2003</a>) designed a dental training system that is used to practice touching operations. The system focused on teaching students to grasp the operating techniques in cavity preparation. The process of tooth preparation is not considered.</p><p>Tooth preparation demands removing some tissue from a tooth and reshaping it. Cutting and grinding are two types of operations in this process. A number of haptic-interaction systems that are constructed to simulate cutting, drilling and grinding stiff or elastic objects have been presented. The computational methods concern mostly record and play, physical models, and mathematics methods.</p><p>Agus et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Agus M, Giachetti A, Gobbetti E, Zanetti G, Zorcolo A (2002) Real-time haptic and visual simulation of bone dissection. In: IEEE virtual reality conference. IEEE Computer Society Press, pp 209–216" href="/article/10.1007/s10055-008-0096-8#ref-CR5" id="ref-link-section-d43522e368">2002</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Agus M, Giachetti A, Gobbetti E, Zanetti G, Zorcolo A (2003) Adaptive techniques for real-time haptic and visual simulation of bone dissection. In: Proceedings of the IEEE virtual reality 2003 (VR′03)" href="/article/10.1007/s10055-008-0096-8#ref-CR4" id="ref-link-section-d43522e371">2003</a>) built a haptic display system to simulate bone cutting. They estimated the elastic forces exerted within the bone by geometrically characterizing the region of bone intersected with an idealized sphere representing the burr tip. A measuring system was established to fit the model to experimental data. Although bone dissection has similar operations to that of tooth preparation, the spherical shaped surgical tool cannot represent the conical shaped dental pin.</p><p>Balijepalli and Kesavadas (Balijepalli et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Balijepalli A, Kesavadas T (2002) An exploratory haptic based robotic path planning and training tool. In: Robotics and automation, 2002. Proceedings. ICRA ‘02. IEEE international conference, vol 1, pp 438–443" href="/article/10.1007/s10055-008-0096-8#ref-CR6" id="ref-link-section-d43522e377">2002</a>) presented spring model for the path planning of robot. Mohsen Mahvash and Vincent Hayward presented a pre-calculation solution for haptic simulation of contact between a tool and a nonlinear deformable body. A fracture mechanics approach for sharp interaction was also presented (Mahvash and Hayward <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Mahvash M, Hayward V (2001) Haptic rendering of cutting: a fracture mechanics approach. Haptics-e, vol 2, No. 3" href="/article/10.1007/s10055-008-0096-8#ref-CR8" id="ref-link-section-d43522e380">2001</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Mahvash M, Hayward V (2003) Haptic simulation of a tool in contact with a nonlinear deformable body. In: International symposium on surgery simulation and soft tissue modelling lecture notes in computer science, pp 311–320" href="/article/10.1007/s10055-008-0096-8#ref-CR7" id="ref-link-section-d43522e383">2003</a>). The pre-calculation approach was based on the bookkeeping of force deflections curves stored at the nodes of a triangulated body surface. Tanaka et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1998" title="Tanaka A, Hirota K, Kaneko T (1998) Virtual cutting with force feedback. In: Proceedings on virtual reality annual international symposium, pp 71–78" href="/article/10.1007/s10055-008-0096-8#ref-CR9" id="ref-link-section-d43522e386">1998</a>) consider the cutting force to be a friction between the tool and the stiff body, which is computed by a damping model. Basdogan et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Basdogan C, Ho C, Srinivasan (1999) Simulation of tissue cutting and bleeding for laparoscopic surgery using auxiliary surfaces. In: Proceedings of the Medicine Meets Virtual Reality VII conference" href="/article/10.1007/s10055-008-0096-8#ref-CR10" id="ref-link-section-d43522e389">1999</a>) simulate the interaction force between the cutting tool and the body surface as a spring force that is proportional to indentation depth along surface normal and a damping force proportional to tangential velocity. Delingette et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Delingette H, Cotin S, Ayache N (1999) A hybrid elastic model allowing real-time cutting,deformations and force-feedback for surgery training and simulation. In: Computer animation, 1999. Proceedings, pp 70–81" href="/article/10.1007/s10055-008-0096-8#ref-CR11" id="ref-link-section-d43522e393">1999</a>) presented a tensor-mass force model. Above models are applied for simulations of cutting operations in which the tools do not rotate. However, the dental pin rotates at a high speed in tooth preparation.</p><p>Okamura et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Okamura AM, Webster RJ III, Nolin JT, Johnson KW, Jafry H (2003) The haptic scissors: cutting in virtual environments. In: Robotics and automation, 2003, Proceedings. ICRA′03. IEEE international conference, vol 1" href="/article/10.1007/s10055-008-0096-8#ref-CR12" id="ref-link-section-d43522e399">2003</a>) computed the cutting force in the haptic scissors by using the fundamental principle of record and play. They chose the rotational angle of the scissors as a basic variable and constructed a relation between the angle and the cutting force based on experimental data.</p><p>Force modeling for tooth preparation is complicated by many factors: tooth stiffness, dental pin type, and contact geometry between a tooth and a dental pin. Furthermore, a tooth is composed of different layers that have different stiffnesses. Tooth stiffness will also change with human age. Although some models have been proposed for dental cutting simulation, these models do not consider all the above factors which include the dental pin type and the contact geometry between a tooth and a dental pin. A new force model should be constructed to meet the special requirements of a dental-training system.</p><p>Furthermore, there are no publicly available data for tooth preparation. No measure system has been established to obtain the relation between cutting force and operating speed of dental pin. The relation between cutting force and all above affect factors has not been identified. In this paper, we present such a force model for tooth preparation. All the parameters should be identified based on a measure of dental operation.</p><p>This paper is organized as follows. In Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-008-0096-8#Sec2">2</a>, we present an analytical model. In Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-008-0096-8#Sec6">3</a>, a measuring system is constructed to determine parameters in the model. Section <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-008-0096-8#Sec9">4</a> introduces the model implementation in a dental-training system. At last, the evaluation by dentists and our future work are introduced.</p></div></div></section><section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">Model</h2><div class="c-article-section__content" id="Sec2-content"><h3 class="c-article__sub-heading" id="Sec3">Force analysis</h3><p>Tooth preparation is the process of cutting and grinding a decayed tooth to restore it. When a dentist operates the dental holder and uses the side surface of a rotary dental pin to cut or grind a tooth, the decayed tooth tissue will be removed. In the process, the dentist can feel the force <b>F</b> between the dental pin and the tooth. Therefore, when dentists move the tip of the Phantom to simulate dental operations in a virtual environment, they should also feel feedback force <b>F</b> generated by the Phantom. The force model takes the job of computing the force <b>F</b> based on the human’s operation.</p><p>The force <b>F</b> is composed of two components: one force component <b>N</b> to resist the force exerted by the dentist; the other <b>f</b> to resist the rotation of the dental pin.</p><div id="Equ1" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ {\mathbf{F}} = {\mathbf{N}} + {\mathbf{f}} $$</span></div><div class="c-article-equation__number">
+                    (1)
+                </div></div>
+                        <p>Dentists cannot explain the accurate direction of their exerting forces and it is difficult for us to measure them. Therefore, the force <b>F</b> should be analyzed directly. Because the haptic Phantom device that is chosen for the haptic interaction system can only output point-based feedback force to an operator, we consider the force <b>F</b> as a concentrated force that acts on the center of contact area of the dental pin.</p><p>We establish coordinates <i>OXYZ</i> whose origin is the center of the bottom of the dental pin and coordinates <i>O</i>
+                           <sup>1</sup>
+                           <i>X</i>
+                           <sup>1</sup>
+                           <i>Y</i>
+                           <sup>1</sup>
+                           <i>Z</i>
+                           <sup>1</sup> whose origin is at the tooth (Figs. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig1">1</a>, <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig2">2</a>). In coordinates <i>OXYZ</i>, the <i>x</i>-axis is defined along the axis vector of the dental pin. The <i>z</i>-axis is defined along the direction of grinding or cutting, and the translational velocity vector of the dental pin is always orthogonal to the axis vector of the dental pin in tooth preparation. The <i>y</i>-axis is orthogonal to both the <i>x</i> and <i>z</i>-axes. Because patients cannot move their teeth in the process of tooth preparation, the coordinates <i>O</i>
+                           <sup>1</sup>
+                           <i>X</i>
+                           <sup>1</sup>
+                           <i>Y</i>
+                           <sup>1</sup>
+                           <i>Z</i>
+                           <sup>1</sup> remain unaltered. On the contrary, the coordinates <i>OXYZ</i> should be rebuilt according to the human’s operation.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig1_HTML.gif?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig1_HTML.gif" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p>Force analysis of grinding operation</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig2_HTML.gif?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig2_HTML.gif" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p>Force analysis of cutting operation</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig3">3</a> shows the distinction between cutting and grinding. In the process of a cutting operation, the contact area between the tooth and the dental pin is half of a conical surface (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig4">4</a>). In grinding operations, the contact area is only a small part of a conical surface (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig5">5</a>). We consider cutting and grinding processes of continuous contacts between a rotary pin and a tooth. For stiff dental pins and teeth, the vector of force component <b>N</b> should be orthogonal to the surface normal vector of the dental pin (Figs. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig4">4</a>, <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig5">5</a>).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig3_HTML.gif?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig3_HTML.gif" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p>Distinction between cutting and grinding</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig4_HTML.gif?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig4_HTML.gif" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p>Contact area of cutting</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig5_HTML.gif?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig5_HTML.gif" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p>Contact area of grinding</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>In cutting operations, we divide the force <b>N</b> into two force components imposed on the center of the contact area (Figs. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig2">2</a>, <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig4">4</a>, and <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig7">7</a>): (1) resistant force <b>F</b>
+                           <sub>
+                    <b>r</b>
+                  </sub> (along <i>z</i>-axis in the coordinates <i>OXYZ</i>): against the translational velocity vector of the dental pin; (2) force <b>F</b>
+                           <sub>
+                    <b>a</b>
+                  </sub> (along <i>x</i>-axis in the coordinates <i>OXYZ</i>): along the axis vector of the dental pin. The relation of <b>F</b>
+                           <sub>
+                    <b>r</b>
+                  </sub> and <b>F</b>
+                           <sub>
+                    <b>a</b>
+                  </sub> can be seen in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig7">7</a>:</p><div id="Equ2" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ \left\| {{\mathbf{F}}_{{\mathbf{a}}} } \right\| = tg\frac{\varphi }{2}\left\| {{\mathbf{F}}_{{\mathbf{r}}} } \right\|, $$</span></div><div class="c-article-equation__number">
+                    (2)
+                </div></div>
+                        <p>where, the parameter <i>φ</i> is the top angle of the dental pin. Correspondingly, in grinding operations we divide the force <b>N</b> into three force components acting on the center of the contact area (Figs. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig1">1</a>, <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig5">5</a>, and <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig6">6</a>): (1) resistant force <b>F</b>
+                           <sub>
+                    <b>r</b>
+                  </sub> (along <i>z</i>-axis in the coordinates <i>OXYZ</i>): against the translational velocity vector of the dental pin; (2) force <b>F</b>
+                           <sub>
+                    <b>a</b>
+                  </sub> (along <i>x</i>-axis in the coordinates <i>OXYZ</i>): along the axis vector of the dental pin; (3) force <b>F</b>
+                           <sub>
+                    <b>c</b>
+                  </sub> (along <i>y</i>-axis in the coordinates <i>OXYZ</i>): orthogonal to both the axis vector and the translational velocity vector of the dental pin. The relation among these three force components can be seen in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig7">6</a>:</p><div id="Equ3" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ \left\| {{\mathbf{F}}_{{\mathbf{a}}} } \right\| = tg\frac{\varphi }{2}\left\| {{\mathbf{F}}_{{\mathbf{c}}} + {\mathbf{F}}_{{\mathbf{r}}} } \right\| $$</span></div><div class="c-article-equation__number">
+                    (3)
+                </div></div>
+                           <div id="Equ4" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ \left\| {{\mathbf{F}}_{{\mathbf{c}}} } \right\| = tg\frac{\phi }{2}\left\| {{\text{F}}_{{\mathbf{r}}} } \right\|, $$</span></div><div class="c-article-equation__number">
+                    (4)
+                </div></div>
+                           <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-6"><figure><figcaption><b id="Fig6" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 6</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/6" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig6_HTML.gif?as=webp"></source><img aria-describedby="figure-6-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig6_HTML.gif" alt="figure6" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-6-desc"><p>Relation among the force components in grinding operations</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/6" data-track-dest="link:Figure6 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-7"><figure><figcaption><b id="Fig7" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 7</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/7" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig7_HTML.gif?as=webp"></source><img aria-describedby="figure-7-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig7_HTML.gif" alt="figure7" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-7-desc"><p>Relation among the force components in grinding operations</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/7" data-track-dest="link:Figure7 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>where, <span class="mathjax-tex">\( \phi = \frac{w}{{ltg\frac{\varphi }{2}}} \)</span> is defined in Figs. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig5">5</a> and <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig7">6</a>. Therefore, the equation is obtained:</p><div id="Equ5" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ {\mathbf{F}} = \left\{ \begin{gathered} {\mathbf{F}}_{{\mathbf{r}}} + {\mathbf{F}}_{{\mathbf{a}}} + {\mathbf{F}}_{{\mathbf{c}}} + {\mathbf{f}}\quad {\text{grinding}} \hfill \\ {\mathbf{F}}_{{\mathbf{r}}} + {\mathbf{F}}_{{\mathbf{a}}} + {\mathbf{f}}\quad {\text{cutting}} \hfill \\ \end{gathered} \right. $$</span></div><div class="c-article-equation__number">
+                    (5)
+                </div></div>
+                        <h3 class="c-article__sub-heading" id="Sec4">Force computation</h3><p>Experienced dentists can move a dental holder to cut or grind teeth at a nearly constant speed. When dentists want to increase or decrease the translational velocity of the dental pin, they exert larger or smaller forces on the dental holder, and the resistant force <b>F</b>
+                           <sub>
+                    <b>r</b>
+                  </sub> increases or decreased accordingly. The translational velocity of the dental pin has the same change trend with that of the exerted force by dentist and the force between the tooth and the dental pin. Increasing translational velocity of a dental pin needs larger forces exerted by the dentist, and larger forces exerted by a dentist leads to increased forces between the tooth and the dental pin. Based on this phenomenon, we attempt to construct the relation between the force between tooth and dental pin and the translational velocity of the dental pin. A measuring system that will be introduced in the next section is established to construct the relation between the resistant force <b>F</b>
+                           <sub>
+                    <b>r</b>
+                  </sub> and the translational velocity of the dental pin <b>V</b>.</p><p>Three of total twelve dentists were first invited to use one same dental holder (pin) to cut the enamel layer of the same one tooth. For each dentist, the rotational speed of the dental pin was uniformly set at 3 × 10<sup>5</sup> rpm and the contact geometry between the dental pin and the tooth was kept to <span class="mathjax-tex">\( w = 1{\kern 1pt} \,{\text{mm}},\;l = 10\,{\text{mm}} \)</span> during the whole cutting process. The parameters <i>w</i> and <i>l</i> are defined in Figs. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig4">4</a> and <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig5">5</a>. The parameter <i>l</i> is the contact length along the axis of the dental pin. The parameter <i>w</i> is the maximum contact length along the circle of side surface. Before each dentist exerted larger forces to cut into the interior of the enamel layer, the dentist was required to hold the dental holder (pin) still for five seconds when the pin first contacted the tooth. Each dentist was asked to finish these cutting operations three times.</p><p>The measured maximum translational velocity of the dental pin can reach 0.35 mm/s and the measured maximum cutting force against the translational velocity vector can reach 1.98 N (Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-008-0096-8#Tab1">1</a>, Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig8">8</a>). The measure system and process are introduced in next section. We choose five checking points (translational velocities) and obtain forty-five points (force and velocity) in total in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig8">8</a>. For the forty-five points, the proportion of force to velocity is between 0.63 and 0.69 N s/mm. Therefore, we consider that resistant force <b>F</b>
+                           <sub>
+                    <b>r</b>
+                  </sub> is proportional to the translational velocity <b>V</b> if the pin (rotational speed), the tooth (the layers) and the contact geometry are not altered in the whole process. The error of proportional coefficient that is brought by velocity and force measuring is smaller than 0.06 N s/mm. Moreover, the value of the proportional coefficient does not depend on the operator (dentist). Therefore, we model the resistance <b>F</b>
+                           <sub>
+                    <b>r</b>
+                  </sub>:</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-1"><figure><figcaption class="c-article-table__figcaption"><b id="Tab1" data-test="table-caption">Table 1 Relation between the translational velocity and the resistant force for different dentists</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-008-0096-8/tables/1"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-8"><figure><figcaption><b id="Fig8" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 8</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/8" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig8_HTML.gif?as=webp"></source><img aria-describedby="figure-8-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig8_HTML.gif" alt="figure8" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-8-desc"><p>Relation between velocity and resistant force</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/8" data-track-dest="link:Figure8 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <div id="Equ6" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ {\mathbf{F}}_{{\mathbf{r}}} = - K(\alpha ,\beta ,\varepsilon )D(l,w){\mathbf{V}} $$</span></div><div class="c-article-equation__number">
+                    (6)
+                </div></div>
+                        <p>where, the parameter <i>K</i>(<i>α</i>, <i>β</i>, <i>ε</i>) is the proportional coefficient that reflects the following factors: tooth stiffness <i>α</i>, types of dental pins <i>β</i> and layers of tooth <i>ε</i>. <i>D</i>(<i>l</i>, <i>w</i>) is a function that reflects the effects of different contact geometry(<i>l</i>, <i>w</i>) in cutting or grinding.</p><p>Tooth crown consists of three layers named the enamel, the hard dentin and the soft pulp. Each layer has a different physical property and stiffness. From the exterior to the interior, the stiffness of tooth decreases. Some teeth crowns are attached by a layer of tooth attachment which is stiffer than the enamel layer of the same tooth. Furthermore, the human tooth changes with age. The teeth of old persons are stiffer and more fragile than those of young persons. The tooth stiffness can greatly affect the force sensed by the dentist. Therefore, the force model has to consider the effect of tooth stiffness (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig9">9</a>).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-9"><figure><figcaption><b id="Fig9" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 9</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/9" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig9_HTML.gif?as=webp"></source><img aria-describedby="figure-9-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig9_HTML.gif" alt="figure9" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-9-desc"><p>Dental pins and tooth crown</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/9" data-track-dest="link:Figure9 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>Several types of dental pins of different materials and shapes are used in tooth preparation. For different surgical purposes, dentists will decide which pin to use and what rotational speed to select. It can result in the distinction of a dentist’s feeling in dental surgery. Therefore, the effects of two typical dental pins that are chosen for the dental-training system should be determined.</p><p>The size of contact geometry between a tooth and a dental pin is the most important factor that affects the feedback in the process of tooth preparation. For the same layer of the same tooth, the distinction of contact area can lead to a large difference between the forces. For the same operating speed on the same layer of the same tooth, the maximum difference of feedback force caused by different contact areas can reach 1.5 N. In any case, the contact geometry is a critical parameter in the force model.</p><h3 class="c-article__sub-heading" id="Sec5">Force model</h3><p>Based on Eqs. (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0096-8#Equ2">2</a>) and (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0096-8#Equ6">6</a>), in cutting, the force component <b>F</b>
+                           <sub>
+                    <b>a</b>
+                  </sub> can be computed:</p><div id="Equ7" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ {\mathbf{F}}_{{\mathbf{a}}} = tg\frac{\varphi }{2}\left\| {{\mathbf{F}}_{{\mathbf{r}}} } \right\|{\mathbf{a}} $$</span></div><div class="c-article-equation__number">
+                    (7)
+                </div></div>
+                           <div id="Equ8" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ {\mathbf{F}}_{{\mathbf{a}}} = tg\frac{\varphi }{2}\left\| {K(\alpha ,\beta ,\varepsilon )D(l,w){\mathbf{V}}} \right\|{\mathbf{a}}, $$</span></div><div class="c-article-equation__number">
+                    (8)
+                </div></div>
+                        <p>where the unit vector <b>a</b> represents the axis vector of the dental pin.</p><p>For grinding operations, Figs. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig5">5</a> and <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig7">6</a> show the relation among the forces <b>F</b>
+                           <sub>
+                    <b>a</b>
+                  </sub>, <b>F</b>
+                           <sub>
+                    <b>c</b>
+                  </sub>, and <b>F</b>
+                           <sub>
+                    <b>r</b>
+                  </sub>. From Eqs. (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0096-8#Equ4">4</a>) and (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0096-8#Equ6">6</a>), the force component <b>F</b>
+                           <sub>
+                    <b>c</b>
+                  </sub>, which is orthogonal to the translational velocity vector and the axis vector of the dental pin, can be computed:</p><div id="Equ9" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ {\mathbf{F}}_{{\mathbf{c}}} = tg\frac{\phi }{2}\left\| {{\mathbf{F}}_{{\mathbf{r}}} } \right\|{\mathbf{n}} $$</span></div><div class="c-article-equation__number">
+                    (9)
+                </div></div>
+                           <div id="Equ10" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ {\mathbf{F}}_{{\mathbf{c}}} = tg\frac{\phi }{2}K(\alpha ,\beta ,\varepsilon )D(l,w)\left\| {\mathbf{V}} \right\|{\mathbf{n}} $$</span></div><div class="c-article-equation__number">
+                    (10)
+                </div></div>
+                           <div id="Equ11" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ {\mathbf{n}} = \left\{ {\begin{array}{*{20}c} {{\mathbf{a}} \times {\mathbf{V}}\quad j = 0} \\ { - {\mathbf{a}} \times {\mathbf{V}}\quad j = 1} \\ \end{array} ,} \right. $$</span></div><div class="c-article-equation__number">
+                    (11)
+                </div></div>
+                        <p>where the unit vector <b>n</b> should be judged by Eq. (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0096-8#Equ11">11</a>). If the angle of the average outside normal vector of contact area and the vector <b>a</b> × <b>V</b> is a sharp angle, the parameter <i>j</i> equals 0. It means the operation is cutting now. If the angle is an obtuse angle, the parameter <i>j</i> equals 1. It means the operation is grinding now.</p><p>The force <b>F</b>
+                           <sub>
+                    <b>a</b>
+                  </sub> of grinding can be computed:</p><div id="Equ12" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ {\mathbf{F}}_{{\mathbf{a}}} = tg\frac{\varphi }{2}(\left\| {{\mathbf{F}}_{{\mathbf{r}}} + {\mathbf{F}}_{{\mathbf{c}}} } \right\|){\mathbf{a}} $$</span></div><div class="c-article-equation__number">
+                    (12)
+                </div></div>
+                           <div id="Equ13" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ {\mathbf{F}}_{{\mathbf{a}}} = tg\frac{\varphi }{2}\left( {\left\| {\frac{{K(\alpha ,\beta ,\varepsilon )D(l,w){\mathbf{V}}}}{{\sin \frac{\phi }{2}}}} \right\|} \right){\mathbf{a}} $$</span></div><div class="c-article-equation__number">
+                    (13)
+                </div></div>
+                        <p>The friction <b>f</b> is considered to act on the center of contact area between the dental pin and the tooth. The direction of friction <b>f</b> should be orthogonal to the axis vector of dental pin and the force vector of <b>N</b> simultaneously. Based on above equations, Eqs. (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0096-8#Equ14">14</a>) and (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0096-8#Equ15">15</a>) are used to compute the friction in cutting and grinding operations.</p><div id="Equ14" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ {\mathbf{f}} = \left\{ \begin{gathered} \mu (\Phi )\left\| {{\mathbf{F}}_{{\mathbf{r}}} + {\mathbf{F}}_{{\mathbf{a}}} + {\mathbf{F}}_{{\mathbf{c}}} } \right\|\frac{{\left( {{\mathbf{V}}\sin \frac{\phi }{2} + {\mathbf{V}} \times {\mathbf{a}}\cos \frac{\phi }{2}} \right) \times {\mathbf{a}}}}{{\left\| {{\mathbf{V}} \times {\mathbf{a}}} \right\|}}\quad {\text{grinding}} \hfill \\ \mu (\Phi )\left\| {{\mathbf{F}}_{{\mathbf{r}}} + {\mathbf{F}}_{{\mathbf{a}}} } \right\|\frac{{{\mathbf{V}} \times {\mathbf{a}}}}{{\left\| {{\mathbf{V}} \times {\mathbf{a}}} \right\|}}\quad {\text{cutting}} \hfill \\ \end{gathered} \right. $$</span></div><div class="c-article-equation__number">
+                    (14)
+                </div></div>
+                           <div id="Equ15" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ {\mathbf{f}} = \left\{ \begin{gathered} \frac{{\mu (\Phi )K(\alpha ,\beta ,\varepsilon )D(l,w)}}{{\sin \frac{\phi }{2}\cos \frac{\varphi }{2}}}\frac{{\left( {{\mathbf{V}}\sin \frac{\phi }{2} + {\mathbf{V}} \times {\mathbf{a}}\cos \frac{\phi }{2}} \right) \times {\mathbf{a}}}}{{\left\| {{\mathbf{V}} \times {\mathbf{a}}} \right\|}}\quad {\text{grinding}} \hfill \\ \frac{{\mu (\Phi )K(\alpha ,\beta ,\varepsilon )D(l,w)}}{{\cos \frac{\varphi }{2}}}\frac{{{\mathbf{V}} \times {\mathbf{a}}}}{{\left\| {{\mathbf{V}} \times {\mathbf{a}}} \right\|}}\quad {\text{cutting}} \hfill \\ \end{gathered} \right., $$</span></div><div class="c-article-equation__number">
+                    (15)
+                </div></div>
+                        <p>where the parameter <i>μ</i>(Φ) is the frictional coefficient.</p><p>Equation (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0096-8#Equ5">5</a>) shows all the force components of feedback force <b>F</b>, and the above equations can be combined to obtain the force model for tooth preparation:</p><div id="Equ16" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ {\mathbf{F}} = \left\{ \begin{gathered} K(\alpha ,\beta ,\varepsilon )D(l,w)\left( { - {\mathbf{V}} + \frac{{\mu (\Phi )}}{{\cos \frac{\varphi }{2}}}\frac{{{\mathbf{V}} \times {\mathbf{a}}}}{{\left\| {{\mathbf{V}} \times {\mathbf{a}}} \right\|}} + tg\frac{\varphi }{2}\left\| {\mathbf{V}} \right\|{\mathbf{a}}} \right)\quad {\text{cutting}} \hfill \\ K(\alpha ,\beta ,\varepsilon )D(l,w)\left( { - {\mathbf{V}} + \frac{{\mu (\Phi )}}{{\sin \frac{\phi }{2}\cos \frac{\varphi }{2}}}\frac{{\left( {{\mathbf{V}}\sin \frac{\phi }{2} + {\mathbf{V}} \times {\mathbf{a}}\cos \frac{\phi }{2}} \right) \times {\mathbf{a}}}}{{\left\| {{\mathbf{V}} \times {\mathbf{a}}} \right\|}} + tg\frac{\phi }{2}n + \frac{{tg\frac{\varphi }{2}}}{{\sin \frac{\phi }{2}}}{\mathbf{a}}} \right)\quad {\text{grinding}} \hfill \\ \end{gathered} \right. $$</span></div><div class="c-article-equation__number">
+                    (16)
+                </div></div>
+                        </div></div></section><section aria-labelledby="Sec6"><div class="c-article-section" id="Sec6-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec6">Measure</h2><div class="c-article-section__content" id="Sec6-content"><h3 class="c-article__sub-heading" id="Sec7">System construction</h3><p>A measuring system was developed to verify our analysis and determine the parameters in Eq. (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0096-8#Equ16">16</a>). The measuring system was designed to have multiple capabilities such as: (1) measuring cutting or grinding forces, (2) recording positions of the human’s operation, and (3) computing orientations of the dental pin. The equipment consisted of a dental engine and two subsystems: a force measuring subsystem and an optical tracking subsystem. The first subsystem consisted of a 6-axis-force/torque sensor with a measuring resolution 0.1 N (manufactured by ATI Inc.), gypsum to fix the sensor on the test-bed and a mechanism to fix teeth on the surface of the force sensor. The optical tracking subsystem consisted of two digital cameras with a measuring resolution 0.06 mm (manufactured by Panasonic) and an image acquisition board. The two subsystems could acquire and process digital data by control programs respectively (Figs. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig10">10</a>, <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig11">11</a>, <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig12">12</a>, <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig13">13</a>, <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig14">14</a>).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-10"><figure><figcaption><b id="Fig10" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 10</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/10" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig10_HTML.jpg?as=webp"></source><img aria-describedby="figure-10-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig10_HTML.jpg" alt="figure10" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-10-desc"><p>Measuring system and dental engine</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/10" data-track-dest="link:Figure10 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-11"><figure><figcaption><b id="Fig11" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 11</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/11" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig11_HTML.jpg?as=webp"></source><img aria-describedby="figure-11-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig11_HTML.jpg" alt="figure11" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-11-desc"><p>Force measuring and the dental holder with marks</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/11" data-track-dest="link:Figure11 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-12"><figure><figcaption><b id="Fig12" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 12</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/12" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig12_HTML.jpg?as=webp"></source><img aria-describedby="figure-12-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig12_HTML.jpg" alt="figure12" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-12-desc"><p>Software interface for image processing</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/12" data-track-dest="link:Figure12 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-13"><figure><figcaption><b id="Fig13" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 13</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/13" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig13_HTML.jpg?as=webp"></source><img aria-describedby="figure-13-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig13_HTML.jpg" alt="figure13" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-13-desc"><p>Force sensor</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/13" data-track-dest="link:Figure13 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-14"><figure><figcaption><b id="Fig14" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 14</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/14" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig14_HTML.gif?as=webp"></source><img aria-describedby="figure-14-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig14_HTML.gif" alt="figure14" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-14-desc"><p>Contact geometry in measure</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/14" data-track-dest="link:Figure14 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>Firstly, a dental pin was attached to the handle of dental engine. Thus the dental pin could be driven by dental engine’s motor to rotate at a speed. Secondly, a tooth was fixed in a mechanism that was screwed to the force/torque sensor (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig11">11</a>). An anti-backlash nut was made to connect the mechanism to the force sensor. Finally, the force/torque sensor was mounted on the test-bed by gypsum. The assembly has been designed to transfer the force between a tooth and a dental pin to the measuring surface of force sensor through the mechanism. The controller board recorded the force/torque data from the force sensor at a certain sampling frequency (100 Hz).</p><p>Two CCD cameras were set on two tripods respectively that are placed on the two opposite sides of the force sensor (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig10">10</a>). The heights of two cameras and the distance between them were determined by a precise survey. The CCD cameras were calibrated using geometric invariants, and the camera coordinates were consistent with the sensor coordinates. Therefore, these two coordinates had the same origin and axes. In order to track the human’s operation and describe his behavior, two very small black balls were glued to the handle of dental engine which was wrapped by a piece of white paper. The same black ball could be easily found on the two images obtained by the CCD camera simultaneously (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig12">12</a>). A data line connected the two CCD cameras to a computer that is equipped with an image acquisition board. From a series of images obtained by the two cameras (frequency 25 Hz), the positions of the two black balls could be tracked and recorded to compute the translational velocity of dental pin <b>V</b>. The orientation of the handle, namely the axis vector of dental pin <b>a</b> could also be computed by using a beeline to connect the two black balls. The unit vector <b>n</b> that is orthogonal to vector <b>a</b> and vector <b>V</b> can also be determined (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig13">13</a>).</p><p>Twelve dentists were invited to take part in the measuring and used forty removed teeth from patients. In the first step, the relation among all the force components of force <b>F</b> should be constructed to verify the analytical model. Four dentists were required to cut or grind the enamel layer of the same tooth with two typical types of dental pins. In this process, the human’s operating positions and the forces between the dental pin and the tooth could be measured at a certain sampling frequency (25 Hz). Therefore, the coordinates <i>OXYZ</i> on the dental pin could be constructed through computing the axis vector of the dental pin and the translation velocity of the dental pin. The measured force between the dental pin and the tooth could be divided into these coordinates (Figs. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig1">1</a>, <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig2">2</a>).</p><p>For the shown data in Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-008-0096-8#Tab1">1</a>, one second is set to be the sampling period after the measuring resolution of the force sensor and the camera are considered. The position of first contact point should be measured by the dentist using the dental pin to contact the tooth first. In measuring process, at the time when the force sensor displays force signal, the dental pin reaches the contact point that has been measured. Therefore, the measured forces could be assigned to the measured positions and velocities.</p><p>For each sampling period (1 s) in the whole cutting process, if the change of cutting distance is smaller than 0.06 mm, the cutting is considered to be finished at the same speed. It requires the 12 dentists to have high quality to finish the cutting operations at the same speed. Therefore, only three experienced dentists can finish the cutting operation at different speed without speed change. The measured data of their operations have been shown in Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-008-0096-8#Tab1">1</a>. All other wrong data have been canceled.</p><p>Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-008-0096-8#Tab2">2</a> illustrates the relation among all measured force components. For a cylindrical dental pin, the force component <b>F</b>
+                           <sub>
+                    <b>a</b>
+                  </sub> does not exist in cutting and grinding operations. The relation between <b>F</b>
+                           <sub>
+                    <b>r</b>
+                  </sub> and <b>F</b>
+                           <sub>
+                    <b>c</b>
+                  </sub> can verify our proposed relation among all the force components between the tooth and the dental pin in cutting and grinding operations (Eqs. <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0096-8#Equ2">2</a>, <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0096-8#Equ3">3</a>, <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0096-8#Equ4">4</a>). For the conical dental pin, the force component <b>F</b>
+                           <sub>
+                    <b>c</b>
+                  </sub> does not exist in cutting operations and the relation among <b>F</b>
+                           <sub>
+                    <b>r</b>
+                  </sub>, <b>F</b>
+                           <sub>
+                    <b>c</b>
+                  </sub>, and <b>F</b>
+                           <sub>
+                    <b>a</b>
+                  </sub> can also verify our analytical model in grinding operations. The computing and measuring errors of force components in verifying the force model is smaller than 0.1 N.</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-2"><figure><figcaption class="c-article-table__figcaption"><b id="Tab2" data-test="table-caption">Table 2 Relation among the measured force components</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-008-0096-8/tables/2"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h3 class="c-article__sub-heading" id="Sec8">Steps</h3><p>Twelve dentists were required to finish the operations of tooth preparation with the contact geometry kept at <i>w </i>= 1, <i>l </i>= 10 (mm) between the dental pin and the tooth. In order to determine the parameter <i>K</i>(<i>α</i>, <i>β</i>, <i>ε</i>), the value of <i>D</i>(<i>l </i>= 10, <i>w </i>= 1) was defined as a basic value 1. Therefore, the parameters <i>K</i>(<i>α</i>, <i>β</i>, <i>ε</i>) could be computed by measured force component <b>F</b>
+                           <sub>
+                    <b>r</b>
+                  </sub> and measured translational velocity <b><i>V</i></b>:</p><div id="Equ17" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ K(\alpha ,\beta ,\varepsilon ) = \frac{{\left\|{{\mathbf{F}}_{{\mathbf{r}}}}\right\|}}{{\left\|V \right\|}} $$</span></div><div class="c-article-equation__number">
+                    (17)
+                </div></div>
+                        <p>When the contact area is kept constant <i>w </i>= 1, <i>l </i>= 10 (mm), the measuring results of the forty removed teeth showed that the value of <i>K</i>(<i>α</i>, <i>β</i>, <i>ε</i>) is between 6.1 and 11.3 N s/mm in the enamel layer (including stiffness tooth attachment) and is between 3.8 and 6.5 N s/mm in the layer of hard dentin.</p><p>The third step was to determine the function of contact geometry <i>D</i>(<i>l</i>,<i>w</i>). The removed teeth were shaped into cuboids (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig14">14</a>). A line marker was drawn on the top surface of each tooth, and the distance between the line marker and the edge is defined <i>d</i>. The relation between <i>d</i> and contact width <i>w</i>:</p><div id="Equ18" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ w = ltg\frac{\varphi }{2}\arcsin \frac{{ltg\frac{\varphi }{2} - d}}{{ltg\frac{\varphi }{2}}} $$</span></div><div class="c-article-equation__number">
+                    (18)
+                </div></div>
+                        <p>The other line marker was drawn on the dental pin to set the contact length <i>l</i>. Twelve experienced dentists were required to use the same dental pin to cut or grind the same layer of the same tooth with the preset contact geometry (<i>l</i>, <i>w</i>). In these operations, the contact geometry can be changed with the line markers on the tooth surface and the dental pin. Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-008-0096-8#Tab3">3</a> illustrates the average measuring results of 12 dentists.</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-3"><figure><figcaption class="c-article-table__figcaption"><b id="Tab3" data-test="table-caption">Table 3 Relation between the contact geometry and the force</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-008-0096-8/tables/3"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>For the same translational velocity, the change trend of force <b>F</b> is decided by the size of contact area. We try to construct a precise function to reflect the effect of contact geometry based on the measuring results. However, real-time computation and generation of feedback force should be guaranteed in haptic simulations. A fairly complex model would increase the computation load and destroy the balance between fidelity and real-time. In the above section, the value of function <i>D</i>(<i>l </i>= 10, <i>w </i>= 1) has been defined to be a basic value 1; therefore, the function <i>D</i>(<i>l</i>, <i>w</i>) could be computed:</p><div id="Equ19" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ D(l,w) = l \cdot w/10 $$</span></div><div class="c-article-equation__number">
+                    (19)
+                </div></div>
+                        <p>The final step is to determine the frictional coefficient <i>μ</i>(φ). In cutting operation, the frictional coefficient could be computed (Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-008-0096-8#Tab4">4</a>):</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-4"><figure><figcaption class="c-article-table__figcaption"><b id="Tab4" data-test="table-caption">Table 4 Determination of the frictional coefficient</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-008-0096-8/tables/4"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <div id="Equ20" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ \mu (\Phi ) = \frac{{\left\|{\mathbf{f}}\right\|}}{{\left\| {{\mathbf{F}}_{{\mathbf{r}}} + {\mathbf{F}}_{{\mathbf{a}}} } \right\|}} $$</span></div><div class="c-article-equation__number">
+                    (20)
+                </div></div>
+                        </div></div></section><section aria-labelledby="Sec9"><div class="c-article-section" id="Sec9-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec9">Implementation</h2><div class="c-article-section__content" id="Sec9-content"><p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig15">15</a> shows the developed prototype of a haptic-based dental-training system. The system consists of a single-processor PIV/2GHz with 512 MB PC133 RAM, an NVIDIA GeForce 4 Ti4600, and a Phantom Desktop for haptic interaction (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig16">16</a>).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-15"><figure><figcaption><b id="Fig15" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 15</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/15" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig15_HTML.jpg?as=webp"></source><img aria-describedby="figure-15-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig15_HTML.jpg" alt="figure15" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-15-desc"><p>Prototype of dental training system</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/15" data-track-dest="link:Figure15 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-16"><figure><figcaption><b id="Fig16" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 16</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/16" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig16_HTML.jpg?as=webp"></source><img aria-describedby="figure-16-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig16_HTML.jpg" alt="figure16" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-16-desc"><p>Mesh deformation to realize tooth tissue removal</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/16" data-track-dest="link:Figure16 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>To reduce the computation load, we model the dental pin and the tooth by using triangle meshes in the virtual environment. The tooth model consists of two layers representing the enamel and the hard dentin, respectively. The real-time display of tooth tissue removal is realized by mesh deformation (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig17">17</a>). The required update rate for the haptic display is 1 kHz.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-17"><figure><figcaption><b id="Fig17" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 17</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/17" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig17_HTML.gif?as=webp"></source><img aria-describedby="figure-17-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig17_HTML.gif" alt="figure17" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-17-desc"><p>World coordinates and dental pin coordinates in virtual environment</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/17" data-track-dest="link:Figure17 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>The implementation of the force model is divided into six steps:</p>
+                <h3 class="c-article__sub-heading">Step1: dental pin and tooth selection</h3>
+                <p>According to dentists’ requirements, the type of dental pin, rotational speed, and tooth (stiffness) are selected before simulation. The top angle φ of the dental pin can be determined. The values of parameters <i>K</i>(<i>α</i>, <i>β</i>, <i>ε</i>) and <i>μ</i>(φ) can be obtained from the measured results. For the dental simulation, the dental pin and the tooth should be preset together, therefore, the parameter <i>K</i>(<i>α</i>, <i>β</i>, <i>ε</i>) does not need to be decomposed. Furthermore, all normal vectors of the vertices of the tooth mesh are precomputed.</p>
+              
+                <h3 class="c-article__sub-heading">Step2: translational velocity computation</h3>
+                <p>By reading the position and orientation signals of the tip of the Phantom, the bottom center and axis vector of the dental pin model can be recorded. The sampling frequency of the position signal is set to 1 kHz; therefore, the translational velocity can be computed.</p>
+              
+                <h3 class="c-article__sub-heading">Step3: collision detection</h3>
+                <p>In the virtual environment (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig17">17</a>), the tooth mesh and the dental pin model are expressed in the world coordinates. Furthermore, we also construct coordinates for a dental pin <i>OXYZ</i> whose origin is at the center of the bottom of the dental-pin model and whose <i>z</i>-axis is along the axis vector <b>a</b>. A transition matrix connects these two coordinates by reading position and orientation signals of the tip of Phantom. The expressions of all vertices of the tooth model can be converted from world coordinates to the dental-pin coordinates.</p>
+                <p>When the type of dental pin is selected, the size (length and top angle) of dental pin is determined. That any vertex of the tooth mesh is enveloped by the dental-pin model can be easily detected in dental-pin coordinates. If any vertex of the tooth mesh is enveloped by the dental pin, the dental pin collides with the tooth model, otherwise, no collision occurs. If all enveloped vertices of the tooth mesh belong to the hard dentin layer, dentists are operating on the hard dentin layer of the tooth mesh, and the parameter <i>K</i>(<i>α</i>, <i>β</i>, <i>ε</i>) and <i>μ</i>(φ) should be changed according to the measured results.</p>
+              
+                <h3 class="c-article__sub-heading">Step4: operation identification (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig3">3</a>)</h3>
+                <p>Compute the relation between translational velocity of the virtual dental pin and the average normal vector of the enveloped vertices of the tooth mesh. If the angle of the velocity vector and average normal vector is close to a straight angle, dentists are making cutting operations. If the angle of the velocity vector and average normal vector is close to a right angle, dentists are making grinding operations. Based on the human’s operation, the force model (cutting or grinding) can be determined.</p>
+              
+                <h3 class="c-article__sub-heading">Step5: parameter <i>l</i>, <i>w</i> identification</h3>
+                <p>When the dental pin model collides with the tooth mesh in the virtual environment, from all the enveloped vertices of tooth mesh six vertices are selected (in dental pin coordinates):<dl class="c-abbreviation_list"><dt class="c-abbreviation_list__term"><dfn>
+                        <span class="mathjax-tex">\( {\mathbf{P}}^{{\mathbf{t}}} (P_{x}^{t} ,P_{y}^{t} ,P_{z}^{t} ) \)</span>
+                      :</dfn></dt><dd class="c-abbreviation_list__description">
+                        <p>: has biggest <i>z</i> coordinate</p>
+                      </dd><dt class="c-abbreviation_list__term"><dfn>
+                        <span class="mathjax-tex">\( {\mathbf{P}}^{{\mathbf{b}}} (P_{x}^{b} ,P_{y}^{b} ,P_{z}^{b} ) \)</span>
+                      :</dfn></dt><dd class="c-abbreviation_list__description">
+                        <p>: has smallest <i>z</i> coordinate</p>
+                      </dd><dt class="c-abbreviation_list__term"><dfn>
+                        <span class="mathjax-tex">\( {\mathbf{P}}^{{\mathbf{r}}} (P_{x}^{r} ,P_{y}^{r} ,P_{z}^{r} ) \)</span>
+                      :</dfn></dt><dd class="c-abbreviation_list__description">
+                        <p>: has biggest <i>y</i> coordinate</p>
+                      </dd><dt class="c-abbreviation_list__term"><dfn>
+                        <span class="mathjax-tex">\( {\mathbf{P}}^{{\mathbf{l}}} (P_{x}^{l} ,P_{y}^{l} ,P_{z}^{l} ) \)</span>
+                      :</dfn></dt><dd class="c-abbreviation_list__description">
+                        <p>: has smallest <i>y</i> coordinate</p>
+                      </dd><dt class="c-abbreviation_list__term"><dfn>
+                        <span class="mathjax-tex">\( {\mathbf{P}}^{{\mathbf{f}}} (P_{x}^{f} ,P_{y}^{f} ,P_{z}^{f} ) \)</span>
+                      :</dfn></dt><dd class="c-abbreviation_list__description">
+                        <p>: has biggest <i>x</i> coordinate</p>
+                      </dd><dt class="c-abbreviation_list__term"><dfn>
+                        <span class="mathjax-tex">\( {\mathbf{P}}^{{\mathbf{k}}} (P_{x}^{k} ,P_{y}^{k} ,P_{z}^{k} ) \)</span>
+                      :</dfn></dt><dd class="c-abbreviation_list__description">
+                        <p>: has smallest <i>x</i> coordinate</p>
+                      </dd></dl>
+                        </p>
+                <p>The parameter <i>l</i>, <i>w</i> can be computed:</p><div id="Equ21" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ l = \left| {P_{z}^{t} - P_{z}^{b} } \right| $$</span></div><div class="c-article-equation__number">
+                    (21)
+                </div></div>
+                           <div id="Equ22" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ w = \sqrt {(P_{y}^{r} - P_{y}^{l} )^{2} + (P_{x}^{f} - P_{x}^{k} )^{2} } $$</span></div><div class="c-article-equation__number">
+                    (22)
+                </div></div>
+                        
+                <p>With these two equations, the function <i>D</i>(<i>l</i>, <i>w</i>) and parameter <i>ϕ</i> can be applied in the simulation.</p>
+              
+                <h3 class="c-article__sub-heading">Step5: force generation and output (refresh)</h3>
+                <p>Refresh all the positions and normal vectors of the enveloped vertices. The frequency of the haptic loop is set to 1 kHz.</p>
+              <p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig18">18</a> shows the computed forces by using the force model when a dentist uses the dental-training system to simulate cutting from the tooth attachment to the enamel layer and hard dentin. The dentist attempts to move the tip of Phantom haptic device to cut the virtual tooth tissue at a constant speed. In this process, the dentist is required to keep the contact length between the dental pin and the tooth unaltered. The change trend of the generated force of Phantom correctly reflects the different stiffness of different tooth tissue.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-18"><figure><figcaption><b id="Fig18" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 18</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/18" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig18_HTML.gif?as=webp"></source><img aria-describedby="figure-18-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig18_HTML.gif" alt="figure18" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-18-desc"><p>Computed forces of cutting from tooth attachment to hard dentin</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/18" data-track-dest="link:Figure18 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig19">19</a> shows the computed forces when a dentist simulated cutting the enamel layer of the virtual tooth at different operating speeds. The contact length between the tooth and the dental pin is kept unaltered in the whole process. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0096-8#Fig20">20</a> shows the comparison between measured and computed force when a dentist simulates cutting the enamel layer of a tooth for a short distance. The measured force was obtained when the dentist cut the enamel layer along the <i>y</i>-axis of the sensor coordinates with the axis vector of the dental pin parallel to the <i>x</i>-axis. The computed force was obtained when the same dentist uses the Phantom haptic device to redo his former operation in a virtual environment. The cutting direction moved along the <i>y</i>-axis of the world coordinates, and the axis vector of the virtual dental pin was kept along the <i>x</i>-axis of world coordinates in the whole process. It is clear that the trajectory of the computed force is quite close to that of the force measured in real cutting.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-19"><figure><figcaption><b id="Fig19" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 19</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/19" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig19_HTML.gif?as=webp"></source><img aria-describedby="figure-19-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig19_HTML.gif" alt="figure19" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-19-desc"><p>Computed forces of different operating speed in the enamel layer</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/19" data-track-dest="link:Figure19 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-20"><figure><figcaption><b id="Fig20" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 20</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/20" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig20_HTML.gif?as=webp"></source><img aria-describedby="figure-20-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0096-8/MediaObjects/10055_2008_96_Fig20_HTML.gif" alt="figure20" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-20-desc"><p>Forces comparison for the same operation</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0096-8/figures/20" data-track-dest="link:Figure20 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>With the force model, we are able to simulate tooth preparation, such as grinding along the surface of the tooth and cutting into the interior of the tooth. Four dentists (two professors and two students) of Beijing stomatological hospital have used the prototype to simulate tooth preparations. They first point out that the value and direction of feedback force approach those of physical operations. The relation between exerted force by the operator and sensed feedback force could reflect the physical phenomenon that a larger or smaller exerted force could lead the feedback force to change correspondingly. When they exerted nearly the same forces on the Phantom to simulate cutting or grinding the tooth model, the change of contact geometry between the tooth mesh and the dental will lead to the change of feedback force. The different teeth (layers and stiffnesses) and dental pins could help operators to take sufficient practices and increase experience at low cost. Effects of contact geometry could train the operators to rectify their operations by sensing the feedback force.</p><p>One problem of our system simulation is random oscillation. It is an instability phenomenon, and will lead to failure of the haptic simulation. Oscillation often occurs when dentists simulate contacting tooth attachments at a high speed. The reason for oscillation is that the tooth attachment is too stiff; however, the output stiffness of the Phantom can only reach 3.5 N/mm. In order to avoid oscillation, we restrict the output stiffness of the Phantom to be smaller than 3 N/mm during the whole simulation process:</p><div id="Equ23" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ {\mathbf{F}}_{{\mathbf{i}}}^{{\mathbf{e}}} = \left\{ \begin{gathered} {\mathbf{F}}_{{{\mathbf{ic}}}}^{{\mathbf{e}}} \quad \frac{{\left\| {({\mathbf{F}}_{{{\mathbf{ic}}}}^{{\mathbf{e}}} - {\mathbf{F}}_{{{\mathbf{i - 1}}}}^{{\mathbf{e}}} ) \cdot ({\mathbf{p}}_{{\mathbf{i}}}^{{\mathbf{c}}} - {\mathbf{p}}_{{{\mathbf{i - 1}}}}^{{\mathbf{c}}} )} \right\|}}{{\left\| {({\mathbf{p}}_{{\mathbf{i}}}^{{\mathbf{c}}} - {\mathbf{p}}_{{{\mathbf{i - 1}}}}^{{\mathbf{c}}} )} \right\|^{2} }} &lt; 3 \hfill \\ {\mathbf{F}}_{{{\mathbf{i - 1}}}}^{{\mathbf{e}}} + 3 \cdot ({\mathbf{p}}_{{\mathbf{i}}}^{{\mathbf{c}}} - {\mathbf{p}}_{{{\mathbf{i - 1}}}}^{{\mathbf{c}}} )\quad \frac{{\left\| {({\mathbf{F}}_{{{\mathbf{ic}}}}^{{\mathbf{e}}} - {\mathbf{F}}_{{{\mathbf{i - 1}}}}^{{\mathbf{e}}} ) \cdot ({\mathbf{p}}_{{\mathbf{i}}}^{{\mathbf{c}}} - {\mathbf{p}}_{{{\mathbf{i - 1}}}}^{{\mathbf{c}}} )} \right\|}}{{\left\| {({\mathbf{p}}_{{\mathbf{i}}}^{{\mathbf{c}}} - {\mathbf{p}}_{{{\mathbf{i - 1}}}}^{{\mathbf{c}}} )} \right\|^{2} }} \ge 3 \hfill \\ \end{gathered} \right., $$</span></div><div class="c-article-equation__number">
+                    (23)
+                </div></div>
+                     <p>where <b>p</b>
+                        <sub>
+                  <b>i</b>
+                </sub>
+                        <sup><b>c</b></sup> is the position of the tip of the Phantom at each sampling period of the haptic loop, <b>F</b>
+                        <span class="c-stack">
+                  <sup><b>e</b></sup><sub>
+                    <b>ic</b>
+                  </sub>
+                  
+                </span> is the force computed by the force model during each period of haptic loop, and <b>F</b>
+                        <span class="c-stack">
+                  <sup><b>e</b></sup><sub>
+                    <b>i</b>
+                  </sub>
+                  
+                </span> is the force generated by the Phantom. In future work, we will attempt to solve the oscillation issue by using another haptic device.</p></div></div></section><section aria-labelledby="Sec10"><div class="c-article-section" id="Sec10-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec10">Conclusion</h2><div class="c-article-section__content" id="Sec10-content"><p>This paper introduces a force model for a haptic-based dental-training system. A measuring system combining vision tracking and force measuring is constructed to determine the values of all the parameters in the force model.</p><p>The force model makes it possible for the dental-training system to provide realistic feedback force for dentists in the haptic simulation of tooth preparation. Stable feedback force has been achieved by using a haptic-rendering algorithm, and dentists have confirmed the performance of the dental-training system.</p><p>We will focus on further improvement of the system performance and attempt using another haptic interface. The intrinsic tool vibration will be considered in the dental training system.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Agus M, Giachetti A, Gobbetti E, Zanetti G, Zorcolo A (2002) Real-time haptic and visual simulation of bone di" /><p class="c-article-references__text" id="ref-CR5">Agus M, Giachetti A, Gobbetti E, Zanetti G, Zorcolo A (2002) Real-time haptic and visual simulation of bone dissection. In: IEEE virtual reality conference. IEEE Computer Society Press, pp 209–216</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Agus M, Giachetti A, Gobbetti E, Zanetti G, Zorcolo A (2003) Adaptive techniques for real-time haptic and visu" /><p class="c-article-references__text" id="ref-CR4">Agus M, Giachetti A, Gobbetti E, Zanetti G, Zorcolo A (2003) Adaptive techniques for real-time haptic and visual simulation of bone dissection. In: Proceedings of the IEEE virtual reality 2003 (VR′03)</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Balijepalli A, Kesavadas T (2002) An exploratory haptic based robotic path planning and training tool. In: Rob" /><p class="c-article-references__text" id="ref-CR6">Balijepalli A, Kesavadas T (2002) An exploratory haptic based robotic path planning and training tool. In: Robotics and automation, 2002. Proceedings. ICRA ‘02. IEEE international conference, vol 1, pp 438–443</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Basdogan C, Ho C, Srinivasan (1999) Simulation of tissue cutting and bleeding for laparoscopic surgery using a" /><p class="c-article-references__text" id="ref-CR10">Basdogan C, Ho C, Srinivasan (1999) Simulation of tissue cutting and bleeding for laparoscopic surgery using auxiliary surfaces. In: Proceedings of the <i>Medicine Meets Virtual Reality</i> VII conference</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Chen L-Y, Fujimoto H, Miwa K, Abe T, Sumi A, Ito Y (2003) A dental training system using virtual reality. Comp" /><p class="c-article-references__text" id="ref-CR3">Chen L-Y, Fujimoto H, Miwa K, Abe T, Sumi A, Ito Y (2003) A dental training system using virtual reality. Computational Intelligence in Robotics and Automation, 2003. In: Proceedings, IEEE international symposium, vol 1, pp 430–434</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Delingette H, Cotin S, Ayache N (1999) A hybrid elastic model allowing real-time cutting,deformations and forc" /><p class="c-article-references__text" id="ref-CR11">Delingette H, Cotin S, Ayache N (1999) A hybrid elastic model allowing real-time cutting,deformations and force-feedback for surgery training and simulation. In: Computer animation, 1999. Proceedings, pp 70–81</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Mahvash M, Hayward V (2001) Haptic rendering of cutting: a fracture mechanics approach. Haptics-e, vol 2, No. " /><p class="c-article-references__text" id="ref-CR8">Mahvash M, Hayward V (2001) Haptic rendering of cutting: a fracture mechanics approach. Haptics-e, vol 2, No. 3</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Mahvash M, Hayward V (2003) Haptic simulation of a tool in contact with a nonlinear deformable body. In: Inter" /><p class="c-article-references__text" id="ref-CR7">Mahvash M, Hayward V (2003) Haptic simulation of a tool in contact with a nonlinear deformable body. In: International symposium on surgery simulation and soft tissue modelling lecture notes in computer science, pp 311–320</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Okamura AM, Webster RJ III, Nolin JT, Johnson KW, Jafry H (2003) The haptic scissors: cutting in virtual envir" /><p class="c-article-references__text" id="ref-CR12">Okamura AM, Webster RJ III, Nolin JT, Johnson KW, Jafry H (2003) The haptic scissors: cutting in virtual environments. In: Robotics and automation, 2003, Proceedings. ICRA′03. IEEE international conference, vol 1</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Tanaka A, Hirota K, Kaneko T (1998) Virtual cutting with force feedback. In: Proceedings on virtual reality an" /><p class="c-article-references__text" id="ref-CR9">Tanaka A, Hirota K, Kaneko T (1998) Virtual cutting with force feedback. In: Proceedings on virtual reality annual international symposium, pp 71–78</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Thomas G, Johnson L, Dow S, Stanford C (2000) The design and testing of a force feedback dental simulator. Com" /><p class="c-article-references__text" id="ref-CR2">Thomas G, Johnson L, Dow S, Stanford C (2000) The design and testing of a force feedback dental simulator. Comput Method Programs Biomed</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Ranta JF, Aviles WA (1999) The virtual reality dental training system—simulating dental procedures for the pur" /><p class="c-article-references__text" id="ref-CR1">Ranta JF, Aviles WA (1999) The virtual reality dental training system—simulating dental procedures for the purpose of training dental students using haptics. In: Proceedings of the fourth PHANTOM users group workshop</p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-008-0096-8-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Ack1">Acknowledgments</h2><div class="c-article-section__content" id="Ack1-content"><p>This research received support from the National Science Foundation of China under the grant No. 50575011.</p></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">State Key Lab of Virtual Reality Technology and System, Beihang University, Beijing, China</p><p class="c-article-author-affiliation__authors-list">Guanyang Liu &amp; Yuru Zhang</p></li><li id="Aff2"><p class="c-article-author-affiliation__address">Robotics Institute, School of Mechanical Engineering and Automation, Beihang University, Beijing, China</p><p class="c-article-author-affiliation__authors-list">Guanyang Liu &amp; Yuru Zhang</p></li><li id="Aff3"><p class="c-article-author-affiliation__address">Barrett Technology Inc., Boston, USA</p><p class="c-article-author-affiliation__authors-list">William T. Townsend</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Guanyang-Liu"><span class="c-article-authors-search__title u-h3 js-search-name">Guanyang Liu</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Guanyang+Liu&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Guanyang+Liu" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Guanyang+Liu%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Yuru-Zhang"><span class="c-article-authors-search__title u-h3 js-search-name">Yuru Zhang</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Yuru+Zhang&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Yuru+Zhang" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Yuru+Zhang%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-William_T_-Townsend"><span class="c-article-authors-search__title u-h3 js-search-name">William T. Townsend</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;William T.+Townsend&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=William T.+Townsend" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22William T.+Townsend%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-008-0096-8/email/correspondent/c1/new">Guanyang Liu</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=Force%20modeling%20for%20tooth%20preparation%20in%20a%20dental%20training%20system&amp;author=Guanyang%20Liu%20et%20al&amp;contentID=10.1007%2Fs10055-008-0096-8&amp;publication=1359-4338&amp;publicationDate=2008-06-26&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Liu, G., Zhang, Y. &amp; Townsend, W.T. Force modeling for tooth preparation in a dental training system.
+                    <i>Virtual Reality</i> <b>12, </b>125–136 (2008). https://doi.org/10.1007/s10055-008-0096-8</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-008-0096-8.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2008-04-01">01 April 2008</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2008-06-11">11 June 2008</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2008-06-26">26 June 2008</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2008-09">September 2008</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-008-0096-8" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-008-0096-8</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Force model</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Haptic interaction</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Contact geometry</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Force measure</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Human’s operating tracking</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-008-0096-8.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=96;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

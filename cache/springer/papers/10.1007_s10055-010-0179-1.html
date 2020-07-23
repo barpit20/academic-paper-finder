@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="User interface design for military AR applications"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="Designing a user interface for military situation awareness presents challenges for managing information in a useful and usable manner. We present an integrated set of functions for the..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/15/2.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="User interface design for military AR applications"/>
+
+    <meta name="dc.source" content="Virtual Reality 2010 15:2"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2010-12-12"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2010 Springer-Verlag (outside the USA)"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="Designing a user interface for military situation awareness presents challenges for managing information in a useful and usable manner. We present an integrated set of functions for the presentation of and interaction with information for a mobile augmented reality application for military applications. Our research has concentrated on four areas. We filter information based on relevance to the user (in turn based on location), evaluate methods for presenting information that represents entities occluded from the user&#8217;s view, enable interaction through a top-down map view metaphor akin to current techniques used in the military, and facilitate collaboration with other mobile users and/or a command center. In addition, we refined the user interface architecture to conform to requirements from subject matter experts. We discuss the lessons learned in our work and directions for future research."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2010-12-12"/>
+
+    <meta name="prism.volume" content="15"/>
+
+    <meta name="prism.number" content="2"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="175"/>
+
+    <meta name="prism.endingPage" content="184"/>
+
+    <meta name="prism.copyright" content="2010 Springer-Verlag (outside the USA)"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-010-0179-1"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-010-0179-1"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-010-0179-1.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-010-0179-1"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="User interface design for military AR applications"/>
+
+    <meta name="citation_volume" content="15"/>
+
+    <meta name="citation_issue" content="2"/>
+
+    <meta name="citation_publication_date" content="2011/06"/>
+
+    <meta name="citation_online_date" content="2010/12/12"/>
+
+    <meta name="citation_firstpage" content="175"/>
+
+    <meta name="citation_lastpage" content="184"/>
+
+    <meta name="citation_article_type" content="SI: Augmented Reality"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-010-0179-1"/>
+
+    <meta name="DOI" content="10.1007/s10055-010-0179-1"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-010-0179-1"/>
+
+    <meta name="description" content="Designing a user interface for military situation awareness presents challenges for managing information in a useful and usable manner. We present an integ"/>
+
+    <meta name="dc.creator" content="Mark A. Livingston"/>
+
+    <meta name="dc.creator" content="Zhuming Ai"/>
+
+    <meta name="dc.creator" content="Kevin Karsch"/>
+
+    <meta name="dc.creator" content="Gregory O. Gibson"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="Ai Z, Livingston MA (2009) Integration of georegistered information on a virtual globe. In: International symposium on mixed and augmented reality"/>
+
+    <meta name="citation_reference" content="Avery B, Sandor C, Thomas BH (2009) Improving spatial perception for augmented reality X-ray vision. In: IEEE virtual reality, pp 79&#8211;82"/>
+
+    <meta name="citation_reference" content="Azuma R, Neely III H, Daily M, Leonard J (2006) Performance analysis of an outdoor augmented reality tracking system that relies upon a few mobile beacons. In: International symposium on mixed and augmented reality (ISMAR), pp 101&#8211;104"/>
+
+    <meta name="citation_reference" content="Bajura M, Fuchs H, Ohbuchi R (1992) Merging virtual objects with the real world: seeing ultrasound imagery within the patient. In: Computer graphics (SIGGRAPH &#8217; 92 proceedings), vol 26, pp 203&#8211;210"/>
+
+    <meta name="citation_reference" content="Bane R, H&#246;llerer T (2004) Interactive tools for virtual x-ray vision in mobile augmented reality. In: International Symposium on Mixed and Augmented Reality, pp 231&#8211;239"/>
+
+    <meta name="citation_reference" content="Benford S, Fahlen L (1993) A spatial model of interaction in large virtual environments. In: Proceedings of ECSCW&#8217;93"/>
+
+    <meta name="citation_reference" content="Bolstad CA, Endsley MR (2002) Tools for supporting team sa and collaboration in army operations. Technical report, SA Technologies"/>
+
+    <meta name="citation_reference" content="Cutting J (2003) Reconceiving perceptual space. In: Perceiving pictures: an interdisciplinary approach to pictorial space. MIT Press, Cambrdige, pp 215&#8211;238"/>
+
+    <meta name="citation_reference" content="DISA Standards Management Branch (2008) Department of defense interface standard: common warfighting symbology. 
+                    http://assist.daps.dla.mil/quicksearch/basic_profile.cfm?ident_number=114934
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="citation_journal_title=Vis Comput; citation_title=Cutaways and ghosting: satisfying visibility constraints in dynamic 3D illustrations; citation_author=S Feiner, D Seligmann; citation_volume=8; citation_issue=5&#8211;6; citation_publication_date=1992; citation_pages=292-302; citation_doi=10.1007/BF01897116; citation_id=CR10"/>
+
+    <meta name="citation_reference" content="Feiner S, MacIntyre B, H&#246;llerer T, Webster A (1997) A touring machine: prototyping 3D mobile augmented reality systems for exploring the urban environment. In: First international symposium on wearable computing (ISWC), pp 74&#8211;81"/>
+
+    <meta name="citation_reference" content="Furness III LTA (1969) The application of head-mounted displays to airborne reconnaissance and weapon delivery. In: Proceedings of symposium for image display and recording, US Air Force Avionics Laboratory, Wright-Patterson AFB, OH"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comput Graph; citation_title=Exploring MARS: developing indoor and outdoor user interfaces to a mobile augmented reality system; citation_author=T H&#246;llerer, S Feiner, T Terauchi, G Rashid, D Hallaway; citation_volume=23; citation_issue=6; citation_publication_date=1999; citation_pages=779-785; citation_doi=10.1016/S0097-8493(99)00103-X; citation_id=CR13"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Comput Graph Appl; citation_title=Information filtering for mobile augmented reality; citation_author=S Julier, M Lanzagorta, Y Baillot, D Brown; citation_volume=22; citation_issue=5; citation_publication_date=2002; citation_pages=12-15; citation_doi=10.1109/MCG.2002.1028721; citation_id=CR14"/>
+
+    <meta name="citation_reference" content="Julier SJ, Livingston MA, Swan II JE, Baillot Y, Brown D (2003) Adaptive user interfaces in augmented reality. In: Workshop on software technology for augmented reality systems (STARS)"/>
+
+    <meta name="citation_reference" content="Livingston MA, Swan II JE, Gabbard JL, H&#246;llerer TH, Hix D, Julier SJ, Baillot Y, Brown D (2003) Resolving multiple occluded layers in augmented reality. In: IEEE and ACM international symposium on mixed and augmented reality (ISMAR 2003), pp 56&#8211;65"/>
+
+    <meta name="citation_reference" content="Livingston MA, Brown D, Julier SJ, Schmidt GS (2006) Military applications of augmented reality. In: NATO human factors and medicine panel workshop on virtual media for military applications"/>
+
+    <meta name="citation_reference" content="Piekarski W, Thomas BH (2002) The tinmith system&#8212;demonstrating new techniques for mobile augmented reality modelling. In: 3rd Australasian user interfaces conference, pp 61&#8211;70"/>
+
+    <meta name="citation_reference" content="Sandor C, Klinker G (2007) Lessons learned in designing ubiquitous augmented reality user interfaces. In: Emerging technologies of augmented reality: interfaces and design, chap XI. Idea Group Publishing, Hershey"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEICE Trans Inf Syst E; citation_title=Visualization methods for outdoor see-through vision; citation_author=T Tsuda, H Yamamoto, Y Kameda, Y Ohta; citation_volume=E89-D; citation_issue=6; citation_publication_date=2006; citation_pages=1781-1789; citation_doi=10.1093/ietisy/e89-d.6.1781; citation_id=CR20"/>
+
+    <meta name="citation_author" content="Mark A. Livingston"/>
+
+    <meta name="citation_author_email" content="mark.livingston@nrl.navy.mil"/>
+
+    <meta name="citation_author_institution" content="Naval Research Laboratory, Washington, USA"/>
+
+    <meta name="citation_author" content="Zhuming Ai"/>
+
+    <meta name="citation_author_institution" content="Naval Research Laboratory, Washington, USA"/>
+
+    <meta name="citation_author" content="Kevin Karsch"/>
+
+    <meta name="citation_author_institution" content="Naval Research Laboratory, Washington, USA"/>
+
+    <meta name="citation_author" content="Gregory O. Gibson"/>
+
+    <meta name="citation_author_institution" content="Naval Research Laboratory, Washington, USA"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-010-0179-1&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2011/06/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-010-0179-1"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="User interface design for military AR applications"/>
+        <meta property="og:description" content="Designing a user interface for military situation awareness presents challenges for managing information in a useful and usable manner. We present an integrated set of functions for the presentation of and interaction with information for a mobile augmented reality application for military applications. Our research has concentrated on four areas. We filter information based on relevance to the user (in turn based on location), evaluate methods for presenting information that represents entities occluded from the user’s view, enable interaction through a top-down map view metaphor akin to current techniques used in the military, and facilitate collaboration with other mobile users and/or a command center. In addition, we refined the user interface architecture to conform to requirements from subject matter experts. We discuss the lessons learned in our work and directions for future research."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>User interface design for military AR applications | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-010-0179-1","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Augmented reality, Mobile systems, User interface, Interaction, Evaluation","kwrd":["Augmented_reality","Mobile_systems","User_interface","Interaction","Evaluation"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-010-0179-1","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-010-0179-1","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=179;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-010-0179-1">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            User interface design for military AR applications
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-010-0179-1.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-010-0179-1.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">SI: Augmented Reality</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2010-12-12" itemprop="datePublished">12 December 2010</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">User interface design for military AR applications</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Mark_A_-Livingston" data-author-popup="auth-Mark_A_-Livingston" data-corresp-id="c1">Mark A. Livingston<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Naval Research Laboratory" /><meta itemprop="address" content="grid.89170.37, 0000000405910193, Naval Research Laboratory, Washington, DC, USA" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Zhuming-Ai" data-author-popup="auth-Zhuming-Ai">Zhuming Ai</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Naval Research Laboratory" /><meta itemprop="address" content="grid.89170.37, 0000000405910193, Naval Research Laboratory, Washington, DC, USA" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Kevin-Karsch" data-author-popup="auth-Kevin-Karsch">Kevin Karsch</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Naval Research Laboratory" /><meta itemprop="address" content="grid.89170.37, 0000000405910193, Naval Research Laboratory, Washington, DC, USA" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Gregory_O_-Gibson" data-author-popup="auth-Gregory_O_-Gibson">Gregory O. Gibson</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Naval Research Laboratory" /><meta itemprop="address" content="grid.89170.37, 0000000405910193, Naval Research Laboratory, Washington, DC, USA" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 15</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">175</span>–<span itemprop="pageEnd">184</span>(<span data-test="article-publication-year">2011</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">1129 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">23 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                    
+                        <li class="c-article-metrics-bar__item">
+                            <p class="c-article-metrics-bar__count">1 <span class="c-article-metrics-bar__label">Altmetric</span></p>
+                        </li>
+                    
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-010-0179-1/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>Designing a user interface for military situation awareness presents challenges for managing information in a useful and usable manner. We present an integrated set of functions for the presentation of and interaction with information for a mobile augmented reality application for military applications. Our research has concentrated on four areas. We filter information based on relevance to the user (in turn based on location), evaluate methods for presenting information that represents entities occluded from the user’s view, enable interaction through a top-down map view metaphor akin to current techniques used in the military, and facilitate collaboration with other mobile users and/or a command center. In addition, we refined the user interface architecture to conform to requirements from subject matter experts. We discuss the lessons learned in our work and directions for future research.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Introduction</h2><div class="c-article-section__content" id="Sec1-content"><p>Military operations in urban terrain (MOUT) require creative solutions to overcome fundamental difficulties faced by tactical leaders. Military personnel engaged in both combat and non-combat operations must understand a complex, dynamic environment, of which they often see only a small portion. This understanding should be customized so that each user sees exactly what he needs to know—no more and no less. The ability to change plans during an operation while maintaining situation awareness (SA) between small, dispersed units is an important and new requirement in recent operations.</p><p>One of the main considerations to making such a system be both usable and useful is the design of the user interface (UI). Key goals include the intuitive and focused display of information and a natural way to interact with that information. By intuitive, we mean metaphors for presentation that are easy to understand and integrate with the 3D environment and the user’s current understanding of that environment. By focused, we mean that the amount of information displayed is sufficient for the user to maintain situation awareness, but not so great that information is lost or obscured by other information. By natural, we mean interactions that are compatible with existing military information presentation and control, as well as being compatible with the other tasks expected from military personnel. These interactions must occur between multiple mobile systems and between mobile systems and command applications in fixed facilities.</p><p>In this manuscript, we focus on the methods of presenting, organizing, and interacting with information presented in a mobile augmented reality (AR) prototype for dismounted military users. The integration of, automation of, and interaction with the building blocks of our UI was an important step in moving our research program to an application prototype. We discuss our application context, feedback from domain experts, the integrated system design, and an initial evaluation of one aspect of the information presentation interface.</p><h3 class="c-article__sub-heading" id="Sec2">Related work</h3><p>The Touring Machine (Feiner et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="Feiner S, MacIntyre B, Höllerer T, Webster A (1997) A touring machine: prototyping 3D mobile augmented reality systems for exploring the urban environment. In: First international symposium on wearable computing (ISWC), pp 74–81" href="/article/10.1007/s10055-010-0179-1#ref-CR11" id="ref-link-section-d17e328">1997</a>) introduced several visual representations fundamental to SA. The UI was built on menus that could be engaged through a hand-held computer or through a see-through display. The software placed virtual labels on real buildings, which were selected by keeping them in the center of the display for one full second. Selection invoked additional menus which could be used to retrieve further information about that building. A compass pointer assisted the user in keeping a building in view and was especially useful for buildings selected via the hand-held computer’s menu.</p><p>The MARS project (Höllerer et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Höllerer T, Feiner S, Terauchi T, Rashid G, Hallaway D (1999) Exploring MARS: developing indoor and outdoor user interfaces to a mobile augmented reality system. Comput Graph 23(6):779–785" href="/article/10.1007/s10055-010-0179-1#ref-CR13" id="ref-link-section-d17e334">1999</a>) extended the UI to four possible configurations. The outdoor options included a head-worn display and a hand-held display; indoor options included desktop and immersive variations. For the outdoor UI, they separated objects into screen-fixed and world-fixed objects. The former included traditional UI widgets such as menus and selection cursors. The latter could include any model or label registered to the 3D environment. (Other objects had hybrid fixations, helping relate the UI widgets to world objects being affected.)</p><p>Tinmith (Piekarski and Thomas <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Piekarski W, Thomas BH (2002) The tinmith system—demonstrating new techniques for mobile augmented reality modelling. In: 3rd Australasian user interfaces conference, pp 61–70" href="/article/10.1007/s10055-010-0179-1#ref-CR18" id="ref-link-section-d17e340">2002</a>) incorporated a series of interaction tools to control and create virtual information within the surrounding environment. A glove-based series of gestures (tracked through a combination of a pinch detection and synthetic markers affixed to the glove) could be used to navigate menus, select graphical objects, or manipulate objects. Similarly, an eye cursor was also used for selection. Manipulation was restricted to the image plane, which reduced the complexity of the interface.</p><p>The design space for ubiquitous AR interfaces is quite large, and exploring the complete set of choices may not be feasible (Sandor and Klinker <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Sandor C, Klinker G (2007) Lessons learned in designing ubiquitous augmented reality user interfaces. In: Emerging technologies of augmented reality: interfaces and design, chap XI. Idea Group Publishing, Hershey" href="/article/10.1007/s10055-010-0179-1#ref-CR19" id="ref-link-section-d17e346">2007</a>). However, a disciplined approach for a specific application can help in analyzing the options available. In our case, we employed structured formative evaluations with subject matter experts.</p><h3 class="c-article__sub-heading" id="Sec3">Application context</h3><p>Over the course of an extended research program, we have conducted a series of interviews with subject matter experts (SMEs), both from the proposed military user community (officers with experience in dismounted infantry combat techniques) and from the military information management field. Three interview sessions were conducted. The first was a 1-h demonstration and discussion with a reserve officer with recent combat experience; this demonstration was of our previous system (Livingston et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Livingston MA, Brown D, Julier SJ, Schmidt GS (2006) Military applications of augmented reality. In: NATO human factors and medicine panel workshop on virtual media for military applications" href="/article/10.1007/s10055-010-0179-1#ref-CR17" id="ref-link-section-d17e358">2006</a>), and the interview focused on the SME’s opinions on how such a system might be useful and what information might be helpful for certain tasks. The second interview consisted of a day-long discussion with a recently retired combat officer, while the second was a half-day session with a panel of active duty dismounted infantry officers with combat experience; between eight and ten were in the room at any given time. Some discussions concentrated on general principles and designs for the application, and some focused on particular aspects of the interface. To assist the military users in understanding the capabilities of AR, in the second and third sessions, we showed concept sketches and snapshots from a prototype of the system; however, in these sessions, we did not have a completed system in which they could look through the HMD. Discussions with the military information management experts consisted of a series of discussions and emails over the course of the project and focused on assumptions that could be made about available information and what information potentially coordinated systems would make available. In this section, we discuss general guidelines elicited and/or confirmed in our most recent interviews; discussion of particular features in the user interface appears in the sections dealing with those features.</p><p>The first general question we asked of our military SMEs was what tasks they felt would benefit the most from an AR system. While we received a variety of answers, the most important (and consistent with previous interviews with other SMEs) piece of information was that knowing the locations of other friendly forces operating in the area would be extremely helpful. This is among the most fundamental aspects of SA in military operations (Bolstad and Endsley <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Bolstad CA, Endsley MR (2002) Tools for supporting team sa and collaboration in army operations. Technical report, SA Technologies" href="/article/10.1007/s10055-010-0179-1#ref-CR7" id="ref-link-section-d17e364">2002</a>). Other basic information, including building and street labels and a compass for knowing current orientation (relative to either a global or local coordinate frame), was also valued by the SMEs. Other suggestions were to incorporate route data (for the user and for other team members), event history data in recent days in the area of operations, rendezvous points, and objects tagged by other users in the system.</p><p>Our information management SMEs cautioned us against assuming that a precise model of the operating environment would be available prior to system initialization. Though this surprised us, we incorporated this constraint into our design process. A related constraint was imposed for outdoor AR tracking (Azuma et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Azuma R, Neely III H, Daily M, Leonard J (2006) Performance analysis of an outdoor augmented reality tracking system that relies upon a few mobile beacons. In: International symposium on mixed and augmented reality (ISMAR), pp 101–104" href="/article/10.1007/s10055-010-0179-1#ref-CR3" id="ref-link-section-d17e370">2006</a>). That research was primarily concerned with the registration requirements, but similarly eschewed a heavy infrastructure involving hundreds or thousands of tracking beacons.</p><p>A general reminder (also consistent with past interviews) was that the users’ hands would often be occupied with existing military equipment or procedures. This argues for simple interface designs and maintaining consistency with existing tools. Another general reminder was the expectation that the system would be used in a high-stress environment, also arguing for UI simplicity, but also specifically leading us to develop the filtering algorithm described below. A recommendation we considered in the past, but was this time more strenuously suggested, was the use of military standard symbols (DISA <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="DISA Standards Management Branch (2008) Department of defense interface standard: common warfighting symbology. &#xA;                    http://assist.daps.dla.mil/quicksearch/basic_profile.cfm?ident_number=114934&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-010-0179-1#ref-CR9" id="ref-link-section-d17e376">2008</a>) to represent objects whenever possible. These function much as textual labels might, but convey information in ways that are familiar to the intended users of our application.</p></div></div></section><section aria-labelledby="Sec4"><div class="c-article-section" id="Sec4-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec4">Information presentation for collaboration</h2><div class="c-article-section__content" id="Sec4-content"><p>Our domain analysis indicated several important requirements for leaders of small units (4–40 subordinates, depending on level in the hierarchy). One need was to focus only on information relevant to his team and its area of operation (which expands with the level of the hierarchy). In response, we developed an information filtering algorithm (Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0179-1#Sec5">2.1</a>) Another requirement was to be aware of the locations of friendly troops among urban infrastructure; this led us to investigate metaphors for depicting occluded objects or people (Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0179-1#Sec6">2.2</a>). Military users are accustomed to various implementations of maps (paper and electronic), and it was judged to be important to have this feature as part of our system (Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0179-1#Sec7">2.3</a>). Of course, enabling communication up-and-down the chain of command is always a critical element in military operations, so we provide a command-and-control console application (Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0179-1#Sec8">2.4</a>).</p><h3 class="c-article__sub-heading" id="Sec5">Information filtering</h3><p>With AR, by tracking the user’s position and orientation, complicated spatial information can be directly registered to the real world in the context where it applies. An urban combat environment is extremely complicated: the city is populated by large numbers of buildings, each of which can have numerous facts stored about it; friendly and hostile entities (people, vehicles) are constantly changing their positions. Therefore, it is very easy to cause the user to experience information overload. The display may include both relevant information and irrelevant information to a user’s task.</p><p>To overcome these problems, we have developed algorithms for information filtering. These tools automatically restrict the information which is displayed to minimize problems of information overload. The approaches are based on the Concept of Operations derived from our SMEs interviews; they include modifications from a region-based information filter proposed previously (Julier et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Julier S, Lanzagorta M, Baillot Y, Brown D (2002) Information filtering for mobile augmented reality. IEEE Comput Graph Appl 22(5):12–15" href="/article/10.1007/s10055-010-0179-1#ref-CR14" id="ref-link-section-d17e409">2002</a>). This new algorithm is a hybrid of the spatial model of interaction (Benford and Fahlen <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1993" title="Benford S, Fahlen L (1993) A spatial model of interaction in large virtual environments. In: Proceedings of ECSCW’93" href="/article/10.1007/s10055-010-0179-1#ref-CR6" id="ref-link-section-d17e412">1993</a>), the rule-based filtering, and the definition of an operation zone.</p><p>The spatial model of interaction is a more sophisticated version of distance-based filtering. The spatial model was first developed to consider the problems of spatial awareness and interaction in multi-user virtual environments, where awareness can be used to determine whether or not an object is visible to, or capable of interaction with, another object. In this model, each object (e.g., a user) is surrounded by a focus, specific to a medium, which defines the part of the environment of which the object is aware in that medium. Each object in the environment also has a medium-specific nimbus, which demarcates the space within which other objects can be aware of that object. The level of awareness that object A has of object B in medium M is some function of A’s focus on B in M and B’s nimbus on A in M. The spatial model has the advantage that it allows different objects to be demarcated at different ranges. The algorithm consists of the following steps.</p>
+                  <ol class="u-list-style-none">
+                    <li>
+                      <span class="u-custom-list-number">1.</span>
+                      
+                        <p>Define an operation zone.</p>
+                        <p>In the mission preparation stage, a operation zone should be defined. It could be a patrol route (perhaps crossed by phase lines), defense area (demarcated by lines of deconfliction), target area of attack, etc. The operation may be modified during the mission.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">2.</span>
+                      
+                        <p>User’s focus.</p>
+                        <p>Each user has at least two foci and could in theory have a third. One is the range his firearm can cover, the other is an interactively defined range in which the user wants to be aware of information. He may wish to define a focus in the time dimension as well.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">3.</span>
+                      
+                        <p>Calculate the impact zone for each object.</p>
+                        <p>An impact zone (nimbus) of an object is an extended region over which an object has a direct physical impact. An IED, for example, is effective over a larger distance if it is placed near a gas station. The impact zone can be represented as a sphere whose radius equals the maximum range of damage. Conversely, a more accurate representation could take account of the effects of buildings and terrain through modeling the impact zone as a series of interconnected volumes.</p>
+                        <p>The calculation of the impact zone is based on the properties of the object which include the object’s classification (for example whether it is a mosque or a gas station), its location, its size, and its shape. The impact zone is also determined by the task and the intelligence and can be updated when new information comes. Examples include possible sniper coverage areas on a high building, possible explosion damage areas surrounding a gas station, etc. This calculation is carried out whenever an object’s property changes or the user’s objective changes.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">4.</span>
+                      
+                        <p>Cull.</p>
+                        <p>Use the spatial model of interaction to determine which objects to hide and which to display. Those objects whose impact zone intersect with the operation zone are of interest. Those objects are not necessarily inside the operation zone. The following objects should be displayed, if
+</p><ul class="u-list-style-dash">
+                            <li>
+                              <p>its nimbus intersects with the operation zone, and
+</p><ul class="u-list-style-dash">
+                                  <li>
+                                    <p>it is within either of the user’s foci, or</p>
+                                  </li>
+                                  <li>
+                                    <p>its nimbus intersects with the user’s awareness focus.</p>
+                                  </li>
+                                </ul>
+                                             
+                            </li>
+                          </ul><p> This step is performed periodically when the user’s position and/or orientation has changed.</p>
+                      
+                    </li>
+                  </ol>
+                <p>The current implementation of the algorithm does not take the geometry of the buildings and terrain into account in calculating the impact zone, because such information could not be relied on in our applications. It is reasonable to assume that in the database we have the models (perhaps only 2D, perhaps with low fidelity or accuracy) of the objects that need to be displayed, such as buildings that might be used by snipers. Or these models can be represented by 3D icons that are designated on the scene by a user. However, according to our SMEs, we should not assume that we have a complete model of the environment.</p><p>In addition to this operation zone based filter, a rule-based filter ensures that all vital data, such as known enemy positions, IED positions, are always displayed. A filter manager initially sets the states of all the objects as “to be determined.” The rule-based filter changes the state to “show” for vital information, and the operation zone based filter changes the state to “hide” for objects that are filtered out. The same filter manager makes occlusion representation part of the filtering system, a key point in integrating our information presentation system. This information filtering system worked well in our tests. The left image in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0179-1#Fig1">1</a> shows the view when no filter is applied; the right image is a much cleaner view when the filters are applied. The user’s foci in the operation zone based filter can be adjusted interactively so that the amount of information displayed can be changed in real time. The user can adjust how much information he/she wants to see, the algorithm makes sure that the most important information is not missing from the view.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0179-1/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0179-1/MediaObjects/10055_2010_179_Fig1_HTML.jpg?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0179-1/MediaObjects/10055_2010_179_Fig1_HTML.jpg" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p>Examining the unfiltered view (<i>left</i>) and filtered view (<i>right</i>), it is easier to see the way-point icons (<i>center-left</i> and <i>center</i>) in the filtered view. Viewing through the HMD affords a larger angular size</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0179-1/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h3 class="c-article__sub-heading" id="Sec6">Occlusion</h3><p>“X-ray vision”—the ability to see virtual representations of objects whose positions are occluded by the real environment, registered to that real environment—has long been cited as a desired feature in augmented reality (AR) applications (Furness <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1969" title="Furness III LTA (1969) The application of head-mounted displays to airborne reconnaissance and weapon delivery. In: Proceedings of symposium for image display and recording, US Air Force Avionics Laboratory, Wright-Patterson AFB, OH" href="/article/10.1007/s10055-010-0179-1#ref-CR12" id="ref-link-section-d17e544">1969</a>). The problem that has faced AR designers regarding this capability may be seen by examining Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0179-1#Fig1">1</a>. Superposition of the graphics, even assuming perfect registration, does not convey the depth of the graphical entities relative to the real objects visible in the environment. Though a number of visual metaphors have been designed to display such information, there are few comparisons of how well the various techniques work for users in an application context. Using the information learned from our SMEs [as well as our own previous study in this area (Livingston et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Livingston MA, Swan II JE, Gabbard JL, Höllerer TH, Hix D, Julier SJ, Baillot Y, Brown D (2003) Resolving multiple occluded layers in augmented reality. In: IEEE and ACM international symposium on mixed and augmented reality (ISMAR 2003), pp 56–65" href="/article/10.1007/s10055-010-0179-1#ref-CR16" id="ref-link-section-d17e550">2003</a>)], we designed and implemented a user study to compare several existing techniques, as well as one new variation that adapted existing techniques to the constraints outlined by the SMEs (specifically, not to assume the existence of a complete model and to use standard military symbols).</p><p>Our implementations focused on the use of simple graphics, mostly line drawings, to convey depth ordering or metric depth information. Using custom shader programs, we implemented six occlusion representation techniques (depicted in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0179-1#Fig2">2</a>) in addition to a control condition with no changes in the representation based on the occlusion of the virtual objects by the real world.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0179-1/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0179-1/MediaObjects/10055_2010_179_Fig2_HTML.jpg?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0179-1/MediaObjects/10055_2010_179_Fig2_HTML.jpg" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p>Examples of the occlusion metaphors as implemented in our user study. <i>Top row</i> (<i>left-to-right</i>): Stipple, Opacity, and Ground Grid. <i>Bottom row</i>: Edge Map, Tunnel, and Virtual Wall. Note that for the Ground Grid, the first visible element of the circular grid is 20 m from the user; all images were cropped identically in order to see the details in all the designs</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0179-1/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        
+                  <ol class="u-list-style-none">
+                    <li>
+                      <span class="u-custom-list-number">1.</span>
+                      
+                        <p><i>Opacity</i> We used a discretized function of distance to set the virtual object’s opacity. This function maps more distant objects to lower opacity, which—when combined with a black rendering background—dims more distant objects, mimicking real-world behavior of distant objects.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">2.</span>
+                      
+                        <p><i>Stipple</i> Drawing inspiration from technical illustration, AR systems have used solid, dashed, and dotted lines to represent ordinal distance (Feiner and Seligmann <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1992" title="Feiner S, Seligmann D (1992) Cutaways and ghosting: satisfying visibility constraints in dynamic 3D illustrations. Vis Comput 8(5–6):292–302" href="/article/10.1007/s10055-010-0179-1#ref-CR10" id="ref-link-section-d17e615">1992</a>). Our shader implementation fixed the stipple in object space, rather than screen space.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">3.</span>
+                      
+                        <p><i>Ground grid</i> A virtual ground plane can help the user understand relationships to flat terrain (Tsuda et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Tsuda T, Yamamoto H, Kameda Y, Ohta Y (2006) Visualization methods for outdoor see-through vision. IEICE Trans Inf Syst E E89-D(6):1781–1789" href="/article/10.1007/s10055-010-0179-1#ref-CR20" id="ref-link-section-d17e631">2006</a>), building on the visual cues of relative size, texture gradient, and height in the visual field (Cutting <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Cutting J (2003) Reconceiving perceptual space. In: Perceiving pictures: an interdisciplinary approach to pictorial space. MIT Press, Cambrdige, pp 215–238" href="/article/10.1007/s10055-010-0179-1#ref-CR8" id="ref-link-section-d17e634">2003</a>). Explicit markers that tie an object to the ground assist in this visualization.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">4.</span>
+                      
+                        <p><i>Edge map</i> Virtual representations of occluding edges convey the depth order between a real surface and occluded virtual objects (Avery et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Avery B, Sandor C, Thomas BH (2009) Improving spatial perception for augmented reality X-ray vision. In: IEEE virtual reality, pp 79–82" href="/article/10.1007/s10055-010-0179-1#ref-CR2" id="ref-link-section-d17e650">2009</a>). This metaphor benefits greatly from video-mediated AR (to acquire edges from video) and precise registration of the virtual objects.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">5.</span>
+                      
+                        <p><i>Virtual wall</i> A simple version of an edge map uses synthetic edges with the density of edges increasing with increasing ordinal depth to the virtual object behind the virtual wall.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">6.</span>
+                      
+                        <p><i>Virtual tunnel</i> The <i>virtual hole</i> metaphor (Bajura et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1992" title="Bajura M, Fuchs H, Ohbuchi R (1992) Merging virtual objects with the real world: seeing ultrasound imagery within the patient. In: Computer graphics (SIGGRAPH ’ 92 proceedings), vol 26, pp 203–210" href="/article/10.1007/s10055-010-0179-1#ref-CR4" id="ref-link-section-d17e683">1992</a>) extends to multiple surfaces, creating a virtual tunnel (Bane and Höllerer <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Bane R, Höllerer T (2004) Interactive tools for virtual x-ray vision in mobile augmented reality. In: International Symposium on Mixed and Augmented Reality, pp 231–239" href="/article/10.1007/s10055-010-0179-1#ref-CR5" id="ref-link-section-d17e686">2004</a>). This technique works best for a single real surface, but with a model of the real environment, may apply to any number of virtual holes. Since we do not assume a complete model, we modify this technique to use squares to represent known occluding layers.</p>
+                      
+                    </li>
+                  </ol>
+                <p>Fourteen (14) total subjects (11 male, 3 female) drawn from the research and clerical staff of our lab completed a study comparing these seven metaphors (including a control “Empty” condition).
+<sup><a href="#Fn1"><span class="u-visually-hidden">Footnote </span>1</a></sup> Our volunteers were between age 20 and 48, received no compensation, and were heavy computer users (including five video game players). One other subject withdrew due to fatigue. Two subjects managed tracker errors by either waiting for it to subside (in one case) or simply ignoring it (in the other case) for the few trials in which it occurred. All users passed a stereo screening test. For each user, we calibrated IPD and height, then HMD orientation. The last of these could be repeated before any trial in the experiment, but users rarely felt the need to do so. Users stood in a position that gave rise to five depth “zones” (and were given a map showing these). They then attempted to correctly identify the zone for each of a pair of icons (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0179-1#Fig2">2</a>). Other tasks and responses were performed and recorded, but we report only the results of this task for space considerations. The independent variable of interest was the occlusion metaphor; its presentation was counterbalanced with a Latin square.</p><p>As seen in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0179-1#Fig3">3</a>, the Tunnel metaphor led to the lowest error, followed by the Virtual Wall and the Ground Grid. The Edge Map and the Empty design were the least helpful of the representations. This is the key result we sought in our experiment; it helps us identify which representations are worthy of further study and are most likely to be refined into a best method.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0179-1/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0179-1/MediaObjects/10055_2010_179_Fig3_HTML.gif?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0179-1/MediaObjects/10055_2010_179_Fig3_HTML.gif" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p>The graph of unsigned error (<i>light</i>) versus the occlusion metaphor shows that the Tunnel metaphor led to the least amount of error, followed by the Virtual Wall and the Ground Grid. The Edge Map led to the greatest amount of error, followed closely by no occlusion representation (“Empty”). Looking at the signed error (<i>dark</i>) shows that the Tunnel, Virtual Wall, and Edge Map led users to perceive the occluded object as closer than it really was (negative error)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0179-1/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>We gain further insight into the performance with these candidate designs when we turn to the graph of signed error (also in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0179-1#Fig3">3</a>), where a negative error indicates that the subjects perceived the icon to be closer than it really was. The Ground Grid metaphor had a signed error closest to zero. The Tunnel has a negative error. So while users tended to make the least errors with the Tunnel design, the direction of the errors that were made was in the negative direction; users perceived the icon correctly or as being closer than it was. The same can be said of the Virtual Wall; its error was also toward the negative. We also noted that users were fastest with the Empty design and the Virtual Tunnel design, while they were slowest with the Edge Map metaphor.</p><p>For the most part, the results of the study coincide with our intuition. The Empty and Edge Map metaphors provide the least additional information, resulting in a poor depth estimate. The Stipple and Opacity metaphors vary smoothly with distance, as does the size of the object for all metaphors. Thus, this information is somewhat redundant, but it is still better than no additional information. The Tunnel, Virtual Wall, and Ground Grid immediately narrow the range of depths that a user must consider, allowing for a quick and (more) accurate choice.</p><p>We asked users to indicate if they employed a particular strategy to solve the task. Four users indicated that they were trying to use the relative size of the object as a direct distance cue. One of these subjects conceived of the icon as having the height of a person; another tried to use a real object as a size cue.</p><p>The perceptual results from this pilot test will help us restrict the cases that we will present in a larger study once the application becomes adopted by our intended user community. We plan to eliminate the Edge Map and Empty designs as candidates. We also will explore the extensive parameter space on the remaining metaphors to enable us to compare the best implementation of each of those designs against each other.</p><h3 class="c-article__sub-heading" id="Sec7">Interaction through the map</h3><p>In addition to the head-up view, the AR system has a map view mode (Feiner et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="Feiner S, MacIntyre B, Höllerer T, Webster A (1997) A touring machine: prototyping 3D mobile augmented reality systems for exploring the urban environment. In: First international symposium on wearable computing (ISWC), pp 74–81" href="/article/10.1007/s10055-010-0179-1#ref-CR11" id="ref-link-section-d17e756">1997</a>), which is automatically activated when the user looks down while wearing the HMD (as sensed by the orientation tracker affixed to the HMD). The military community relies heavily on maps for planning and coordinating collaborative operations, so this was an important feature for our target users. The map mode is implemented by moving the view point to a very high position and looking downwards, centering at the current user position and orienting according to the user’s current orientation. This is not an AR view per se; instead it displays all the objects in the database from a bird’s-eye view, shown on top of the ground at the user’s feet. Since this usually limits the amount of background light, the AR graphics are generally visible in this merged image.</p><p>We use this mode not just as a visualization of the world from a traditional perspective, but also to provide an additional way for the user to interact with the system. Drawing in 3D can be very hard, especially when potential vertices correspond to locations that are hidden from the users’s view. Despite the promise shown by the representations of occluded locations in the previous section, we have not attempted to implement a general 3D drawing interface for a mobile user. We have implemented a GUI through which the user can create and edit routes by drawing on the map. The mobile user interacts with the system using a gyroscopic mouse or a handheld trackball. (We have used the center of the field of view as the cursor in past implementations.) When editing a route, the user can add a way-point simply by a mouse click. The 2D mouse position is transformed to the 3D world coordinate by assuming the way-point is on the ground (<i>z</i> = 0). The way-points are connected to form a route. This feature has been tested and used to create routes for our demonstrations. It is analogous to clicking on an electronic map or drawing points on paper maps, as are done currently.</p><p>These routes are then considered by the filtering algorithm (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0179-1#Fig4">4</a>, left). The map may also be used to preview the result of adjusting parameters of the filtering algorithm (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0179-1#Fig4">4</a>, right). This global view has gotten better feedback from our domain experts than adjusting the filtering in the head-up AR view.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0179-1/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0179-1/MediaObjects/10055_2010_179_Fig4_HTML.jpg?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0179-1/MediaObjects/10055_2010_179_Fig4_HTML.jpg" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p>Map view is useful for editing routes (<i>left</i>) and previewing filter (<i>right</i>)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0179-1/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h3 class="c-article__sub-heading" id="Sec8">Command and control console</h3><p>In collaborative missions, numerous sensors may collect data and relay that data to a command and control (C2) center. Integrating this geo-registered information becomes necessary to maintain SA of the environment. We have designed and implemented a system that integrates information from satellite/aerial images, 3D models, real-time video images, and other iconic information into a virtual globe application (Ai and Livingston <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Ai Z, Livingston MA (2009) Integration of georegistered information on a virtual globe. In: International symposium on mixed and augmented reality" href="/article/10.1007/s10055-010-0179-1#ref-CR1" id="ref-link-section-d17e808">2009</a>). Such an application enables a commander to view the environment from an arbitrary viewpoint, such as a bird’s-eye view to get a globe understanding of 3D relationships between personnel and routes, or from a particular user’s vantage, in order to work closely with that user on a specific task, such as altering a planned action to reduce risks.</p><p>We display multiple types of data in the C2 application. The basis for our implementation is the virtual global application, Google Earth. We also considered other virtual global applications such as NASA’s World Wind. Google Earth is chosen because it has the features we need, such as a 3D building layer and API, to quickly develop a prototype. This enables us to use satellite imagery and simple 3D models extracted from such imagery as an approximate model of the world. If no such 3D models are available, then the satellite imagery (along with geographic terrain data) can serve as the basic model of the environment. We then add simple icons representing the positions of users or labeled objects in the environment. This is relatively simple once the tracking of such personnel or specification of locations (not in itself a simple problem) has been addressed. Finally, we project 2D imagery acquired from surveillance cameras onto the environment. These sensors may be fixed or tracked within the environment, such as by GPS or some other globally registered system. This is a more complex operation and requires that we have at least a rough model of the environment in order to have accurate projection matrices. We restrict the projection of images to the ground or to large structures such as buildings, rather than attempt to project onto vehicles or personnel.</p><p>To display the images on Google Earth correctly, we need to create the projected texture maps on the ground and the buildings. This requires the projected images and location and orientation of the texture maps. We create textures in the frame-buffer from the images with OpenSceneGraph and render them onto rectangles whose position and orientation are calculated from the camera’s pose. When viewing from the camera position and using proper viewing and projection transformations, the needed texture maps are created by rendering the scene to the frame-buffer.</p><p>To create the texture map of the wall, an asymmetric perspective viewing volume is needed. The viewing direction is perpendicular to the wall. The viewing volume is a frustum which is formed with the camera position as the apex, and the wall (a rectangle) as the base. When projecting on the ground, we first divide the area of interest into grids of proper size. When each rectangular region of the grid is used instead of the wall, the same projection method for the wall described above is used to render the texture map in the frame-buffer. The zoom factor of the video camera is converted to the field of view. Together with the pose of the tracked camera, we calculate where to put the video images. The position and size of the image can be arbitrary, as long as it is along the camera viewing direction, with the right orientation and a proportional size. By integrating images, icons, and 3D models as shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0179-1#Fig5">5</a>, it is very easy for the command and control center to monitor what is happening live on the ground.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0179-1/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0179-1/MediaObjects/10055_2010_179_Fig5_HTML.jpg?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0179-1/MediaObjects/10055_2010_179_Fig5_HTML.jpg" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p>Recreated 3D scene viewed with 3D buildings on Google Earth. The two field operators’ icons and the video image are overlaid on Google Earth</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0179-1/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        </div></div></section><section aria-labelledby="Sec9"><div class="c-article-section" id="Sec9-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec9">Discussion</h2><div class="c-article-section__content" id="Sec9-content"><p>We redesigned and implemented the AR system to take advantage of the lessons we learned during years (Livingston et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Livingston MA, Brown D, Julier SJ, Schmidt GS (2006) Military applications of augmented reality. In: NATO human factors and medicine panel workshop on virtual media for military applications" href="/article/10.1007/s10055-010-0179-1#ref-CR17" id="ref-link-section-d17e848">2006</a>) in developing AR systems intended for military use. We describe our new implementation and some lessons learned over the course of this project.</p><h3 class="c-article__sub-heading" id="Sec10">Implementation</h3><p>The new system is written in C++; it currently runs on MS Windows systems. It is easy to port to other platforms, such as Linux, since all the development tools are multi-platform. The system supports the Lua scripting language
+<sup><a href="#Fn2"><span class="u-visually-hidden">Footnote </span>2</a></sup> so that displayed objects and many parts of the user interface can easily be controlled by scripting; it is particularly useful in designing user studies (including the one described in this manuscript). An input/output module reads 3D models and other information into an internal database, which is shared among users and may be modified interactively by the user. The information then is sent through a serious of filters and generates a scene graph that is displayed by a rendering control module. The system is designed for cooperative missions, the High Level Architecture (HLA) is used to distribute information among users over the network. The Google Earth C2 component is also connected to the system via HLA which supports network video cameras as well as cameras connected directly to the computer. OpenSceneGraph
+<sup><a href="#Fn3"><span class="u-visually-hidden">Footnote </span>3</a></sup> is used for graphics rendering, Delta3D
+<sup><a href="#Fn4"><span class="u-visually-hidden">Footnote </span>4</a></sup> is used for synthetic force simulation, and Qt
+<sup><a href="#Fn5"><span class="u-visually-hidden">Footnote </span>5</a></sup> is used for the GUI.</p><p>The system has a sensor control component that supports a variety of hardware and allows user to link a sensor (e.g., head position or orientation) to different hardware on the fly. Only commercial, off-the-shelf hardware products are used. The system can run on a mini-netbook with a head-mounted display (HMD).</p><h3 class="c-article__sub-heading" id="Sec11">Lessons learned</h3><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec12">UI architecture</h4><p>Previously, we argued for a “mediator” architecture to arbitrate between competing goals of UI control algorithms in AR (Julier et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Julier SJ, Livingston MA, Swan II JE, Baillot Y, Brown D (2003) Adaptive user interfaces in augmented reality. In: Workshop on software technology for augmented reality systems (STARS)" href="/article/10.1007/s10055-010-0179-1#ref-CR15" id="ref-link-section-d17e920">2003</a>). This assertion was based on an analysis of operations that UI elements might wish to perform: suppress the display of an object, require the display of an object, or alter the on-screen representation of an object. Some operations happened in 2D and some in 3D. Based on potential conflicts, we argued for this more complex architecture than the pipeline we had previously used.</p><p>Our new filtering algorithm abandons these complex concepts, which had been proving difficult to implement and control. Instead, the new algorithm concentrates on fewer factors directly related to mobile military AR applications. These important factors include an operation zone that is defined in the planning stage and may be modified during the mission, the user, and objects that have impacts on the operation zone and the user. This enabled us to return to the much simpler pipeline architecture (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0179-1#Fig6">6</a>). By incorporating the occlusion representation (Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0179-1#Sec6">2.2</a>) module into the information filter (Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0179-1#Sec5">2.1</a>), potential conflicts between these two features can be managed. The potential for conflict is reduced largely by reducing the use of the suppression by the filter. Because the user’s focus now includes larger regions that by definition include destinations and other potentially more distant objects of interest, the loss of this operation does not pose serious problems for the users. Also, the SMEs were much more concerned with visualizations of personnel (friendly forces and known enemy locations) and control measures (routes, phase lines for synchronization, areas of responsibility, and restricted fire areas) rather than geometry of the environment.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec13">Interaction modes</h4><p>Our interactions now occur in two modes. One is through the map view, as described above—a purely 2D operating mode. The other is through direct 3D interaction. Our SMEs noted the use of ranging devices in military operations and suggested the inclusion of one in the system into which prototype UI is envisioned to be incorporated. This simplifies some interaction, as we can now specify 3D locations (at least those that are visible to the user) with 3D input (2D cursor plus depth). Further, we have automated the interaction module’s needs to suppress or require the on-screen representation. This decision is now much more static, based on the user’s focus. Although this may in theory change during an operation, our SMEs do not foresee frequent changes or the need to change while moving through the environment. Thus, we have restricted our UI pipeline to an ordered set of 3D operations followed by potential 2D operations. Though we leave as future work re-implementing the error adaptation and label placement algorithms described as part of the past architecture, we can see based on the revised analysis here (combined with the unaltered portions of the previous analysis) that this architecture will work with a pipeline.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec14">Visualizations</h4><p>As noted above, our SMEs surprised us by recommending that we not count on having a world model. This heavily affects several aspects of an AR system, not the least of which is the assumptions a video-assisted tracking system might make. But it also affected the representations we used in the occlusion representations described above. We restricted ourselves to methods that required at most a sparse world model, knowing that little could be done with more than a single real surface without a rough world model. We were able to identify several potential designs that appear promising under this restriction, however. Further user studies will aim to find a best representation for our mobile application. The C2 application represents a somewhat different problem, however, and we may find that a different method might be appropriate for a C2 user than what is best for the mobile user. Note that the C2 application does make the assumption of a sparse 3D world model, and this user requires a more global view of the actions occurring in the world.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-6"><figure><figcaption><b id="Fig6" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 6</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0179-1/figures/6" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0179-1/MediaObjects/10055_2010_179_Fig6_HTML.gif?as=webp"></source><img aria-describedby="figure-6-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0179-1/MediaObjects/10055_2010_179_Fig6_HTML.gif" alt="figure6" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-6-desc"><p>Software structure of the AR system</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0179-1/figures/6" data-track-dest="link:Figure6 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <p>We learned from interface design reviews with our SMEs that filled shapes were not favored for this SA application. It was felt that the coloring of interior regions would potentially interfere with the users’ abilities to see the real environment, which is always a requirement. Thus, we restricted ourselves to line drawings for the representations of occluding surfaces. This in turn required modifications (described above) to some proposed occlusion metaphors.</p><p>The map view, a long-standing component of mobile AR applications, is very popular with military users; it is among the most familiar analogies our system can make with existing military equipment, either a paper or electronic map. Our SMEs expect such a view to assist in user acceptance of the prototype system. The use of military symbology also reflects this need for our system.</p></div></div></section><section aria-labelledby="Sec15"><div class="c-article-section" id="Sec15-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec15">Conclusions</h2><div class="c-article-section__content" id="Sec15-content"><p>We have refined the UI architecture for our mobile application, finding a way to merge diverse aspects and features from previous AR implementations. Our development process relies on interviews with SMEs to help ensure that our implementations align with the needs and requirements of military personnel, but also that we are able to take advantage of results in UI research. Our integrated architecture was made possible by a more refined understanding of the tasks of users, which resulted in some simplifying assumptions that reduced the complexities in the components of the UI. Though we must still implement some of the latter stages of the pipeline we envision, we have reason to believe that this simpler architecture than the previous proposal, based on a “mediator” module, will serve our users’ needs better and be much more successful at producing usable information presentation and interaction methods.</p><p>Other future work will include follow-up user studies to the pilot test described here. We see two needs: understanding the techniques with promise for the mobile user, and identifying appropriate techniques for the C2 user. Other user studies will focus on the interaction with the map view. A key component of this application’s success will be the ability to communicate with personnel who are not within line-of-sight contact. The map is envisioned to be a key method by which such interaction may occur. All such studies must also eventually be conducted with military personnel, which requires that the application be seen as valuable enough for such personnel to invest their time in volunteering in such studies. Finally, after-action review capabilities are an important tool to military personnel, and recording capabilities must be implemented in both applications. Playback will be a feature of the C2 application.</p><p>Our UI architecture has enabled us to take a significant step forward in simplifying the user interface, both from the programmer’s and the user’s perspective. This architecture thus brings us closer to realizing our goal of placing such systems in the hands of end users.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="notes"><div class="c-article-section" id="notes-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="notes">Notes</h2><div class="c-article-section__content" id="notes-content"><ol class="c-article-footnote c-article-footnote--listed"><li class="c-article-footnote--listed__item" id="Fn1"><span class="c-article-footnote--listed__index">1.</span><div class="c-article-footnote--listed__content"><p>In keeping with practice for psychophysical experiments, we did not attempt to find domain experts to serve as subjects. Depth perception and relative depth judgments do not require military experience to perceive.</p></div></li><li class="c-article-footnote--listed__item" id="Fn2"><span class="c-article-footnote--listed__index">2.</span><div class="c-article-footnote--listed__content"><p><a href="http://www.lua.org">http://www.lua.org</a>.</p></div></li><li class="c-article-footnote--listed__item" id="Fn3"><span class="c-article-footnote--listed__index">3.</span><div class="c-article-footnote--listed__content"><p><a href="http://www.openscenegraph.org/projects/osg">http://www.openscenegraph.org/projects/osg</a>.</p></div></li><li class="c-article-footnote--listed__item" id="Fn4"><span class="c-article-footnote--listed__index">4.</span><div class="c-article-footnote--listed__content"><p><a href="http://www.delta3d.org">http://www.delta3d.org</a>.</p></div></li><li class="c-article-footnote--listed__item" id="Fn5"><span class="c-article-footnote--listed__index">5.</span><div class="c-article-footnote--listed__content"><p><a href="http://qt.nokia.com/products">http://qt.nokia.com/products</a>.</p></div></li></ol></div></div></section><section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Ai Z, Livingston MA (2009) Integration of georegistered information on a virtual globe. In: International symp" /><p class="c-article-references__text" id="ref-CR1">Ai Z, Livingston MA (2009) Integration of georegistered information on a virtual globe. In: International symposium on mixed and augmented reality</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Avery B, Sandor C, Thomas BH (2009) Improving spatial perception for augmented reality X-ray vision. In: IEEE " /><p class="c-article-references__text" id="ref-CR2">Avery B, Sandor C, Thomas BH (2009) Improving spatial perception for augmented reality X-ray vision. In: IEEE virtual reality, pp 79–82</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Azuma R, Neely III H, Daily M, Leonard J (2006) Performance analysis of an outdoor augmented reality tracking " /><p class="c-article-references__text" id="ref-CR3">Azuma R, Neely III H, Daily M, Leonard J (2006) Performance analysis of an outdoor augmented reality tracking system that relies upon a few mobile beacons. In: International symposium on mixed and augmented reality (ISMAR), pp 101–104</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bajura M, Fuchs H, Ohbuchi R (1992) Merging virtual objects with the real world: seeing ultrasound imagery wit" /><p class="c-article-references__text" id="ref-CR4">Bajura M, Fuchs H, Ohbuchi R (1992) Merging virtual objects with the real world: seeing ultrasound imagery within the patient. In: Computer graphics (SIGGRAPH ’ 92 proceedings), vol 26, pp 203–210</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bane R, Höllerer T (2004) Interactive tools for virtual x-ray vision in mobile augmented reality. In: Internat" /><p class="c-article-references__text" id="ref-CR5">Bane R, Höllerer T (2004) Interactive tools for virtual x-ray vision in mobile augmented reality. In: International Symposium on Mixed and Augmented Reality, pp 231–239</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Benford S, Fahlen L (1993) A spatial model of interaction in large virtual environments. In: Proceedings of EC" /><p class="c-article-references__text" id="ref-CR6">Benford S, Fahlen L (1993) A spatial model of interaction in large virtual environments. In: Proceedings of ECSCW’93</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bolstad CA, Endsley MR (2002) Tools for supporting team sa and collaboration in army operations. Technical rep" /><p class="c-article-references__text" id="ref-CR7">Bolstad CA, Endsley MR (2002) Tools for supporting team sa and collaboration in army operations. Technical report, SA Technologies</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Cutting J (2003) Reconceiving perceptual space. In: Perceiving pictures: an interdisciplinary approach to pict" /><p class="c-article-references__text" id="ref-CR8">Cutting J (2003) Reconceiving perceptual space. In: Perceiving pictures: an interdisciplinary approach to pictorial space. MIT Press, Cambrdige, pp 215–238</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="DISA Standards Management Branch (2008) Department of defense interface standard: common warfighting symbology" /><p class="c-article-references__text" id="ref-CR9">DISA Standards Management Branch (2008) Department of defense interface standard: common warfighting symbology. <a href="http://assist.daps.dla.mil/quicksearch/basic_profile.cfm?ident_number=114934">http://assist.daps.dla.mil/quicksearch/basic_profile.cfm?ident_number=114934</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="S. Feiner, D. Seligmann, " /><meta itemprop="datePublished" content="1992" /><meta itemprop="headline" content="Feiner S, Seligmann D (1992) Cutaways and ghosting: satisfying visibility constraints in dynamic 3D illustrati" /><p class="c-article-references__text" id="ref-CR10">Feiner S, Seligmann D (1992) Cutaways and ghosting: satisfying visibility constraints in dynamic 3D illustrations. Vis Comput 8(5–6):292–302</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1007%2FBF01897116" aria-label="View reference 10">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 10 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Cutaways%20and%20ghosting%3A%20satisfying%20visibility%20constraints%20in%20dynamic%203D%20illustrations&amp;journal=Vis%20Comput&amp;volume=8&amp;issue=5%E2%80%936&amp;pages=292-302&amp;publication_year=1992&amp;author=Feiner%2CS&amp;author=Seligmann%2CD">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Feiner S, MacIntyre B, Höllerer T, Webster A (1997) A touring machine: prototyping 3D mobile augmented reality" /><p class="c-article-references__text" id="ref-CR11">Feiner S, MacIntyre B, Höllerer T, Webster A (1997) A touring machine: prototyping 3D mobile augmented reality systems for exploring the urban environment. In: First international symposium on wearable computing (ISWC), pp 74–81</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Furness III LTA (1969) The application of head-mounted displays to airborne reconnaissance and weapon delivery" /><p class="c-article-references__text" id="ref-CR12">Furness III LTA (1969) The application of head-mounted displays to airborne reconnaissance and weapon delivery. In: Proceedings of symposium for image display and recording, US Air Force Avionics Laboratory, Wright-Patterson AFB, OH</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="T. Höllerer, S. Feiner, T. Terauchi, G. Rashid, D. Hallaway, " /><meta itemprop="datePublished" content="1999" /><meta itemprop="headline" content="Höllerer T, Feiner S, Terauchi T, Rashid G, Hallaway D (1999) Exploring MARS: developing indoor and outdoor us" /><p class="c-article-references__text" id="ref-CR13">Höllerer T, Feiner S, Terauchi T, Rashid G, Hallaway D (1999) Exploring MARS: developing indoor and outdoor user interfaces to a mobile augmented reality system. Comput Graph 23(6):779–785</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1016%2FS0097-8493%2899%2900103-X" aria-label="View reference 13">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 13 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Exploring%20MARS%3A%20developing%20indoor%20and%20outdoor%20user%20interfaces%20to%20a%20mobile%20augmented%20reality%20system&amp;journal=Comput%20Graph&amp;volume=23&amp;issue=6&amp;pages=779-785&amp;publication_year=1999&amp;author=H%C3%B6llerer%2CT&amp;author=Feiner%2CS&amp;author=Terauchi%2CT&amp;author=Rashid%2CG&amp;author=Hallaway%2CD">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="S. Julier, M. Lanzagorta, Y. Baillot, D. Brown, " /><meta itemprop="datePublished" content="2002" /><meta itemprop="headline" content="Julier S, Lanzagorta M, Baillot Y, Brown D (2002) Information filtering for mobile augmented reality. IEEE Com" /><p class="c-article-references__text" id="ref-CR14">Julier S, Lanzagorta M, Baillot Y, Brown D (2002) Information filtering for mobile augmented reality. IEEE Comput Graph Appl 22(5):12–15</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2FMCG.2002.1028721" aria-label="View reference 14">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 14 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Information%20filtering%20for%20mobile%20augmented%20reality&amp;journal=IEEE%20Comput%20Graph%20Appl&amp;volume=22&amp;issue=5&amp;pages=12-15&amp;publication_year=2002&amp;author=Julier%2CS&amp;author=Lanzagorta%2CM&amp;author=Baillot%2CY&amp;author=Brown%2CD">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Julier SJ, Livingston MA, Swan II JE, Baillot Y, Brown D (2003) Adaptive user interfaces in augmented reality." /><p class="c-article-references__text" id="ref-CR15">Julier SJ, Livingston MA, Swan II JE, Baillot Y, Brown D (2003) Adaptive user interfaces in augmented reality. In: Workshop on software technology for augmented reality systems (STARS)</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Livingston MA, Swan II JE, Gabbard JL, Höllerer TH, Hix D, Julier SJ, Baillot Y, Brown D (2003) Resolving mult" /><p class="c-article-references__text" id="ref-CR16">Livingston MA, Swan II JE, Gabbard JL, Höllerer TH, Hix D, Julier SJ, Baillot Y, Brown D (2003) Resolving multiple occluded layers in augmented reality. In: IEEE and ACM international symposium on mixed and augmented reality (ISMAR 2003), pp 56–65</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Livingston MA, Brown D, Julier SJ, Schmidt GS (2006) Military applications of augmented reality. In: NATO huma" /><p class="c-article-references__text" id="ref-CR17">Livingston MA, Brown D, Julier SJ, Schmidt GS (2006) Military applications of augmented reality. In: NATO human factors and medicine panel workshop on virtual media for military applications</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Piekarski W, Thomas BH (2002) The tinmith system—demonstrating new techniques for mobile augmented reality mod" /><p class="c-article-references__text" id="ref-CR18">Piekarski W, Thomas BH (2002) The tinmith system—demonstrating new techniques for mobile augmented reality modelling. In: 3rd Australasian user interfaces conference, pp 61–70</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Sandor C, Klinker G (2007) Lessons learned in designing ubiquitous augmented reality user interfaces. In: Emer" /><p class="c-article-references__text" id="ref-CR19">Sandor C, Klinker G (2007) Lessons learned in designing ubiquitous augmented reality user interfaces. In: Emerging technologies of augmented reality: interfaces and design, chap XI. Idea Group Publishing, Hershey</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="T. Tsuda, H. Yamamoto, Y. Kameda, Y. Ohta, " /><meta itemprop="datePublished" content="2006" /><meta itemprop="headline" content="Tsuda T, Yamamoto H, Kameda Y, Ohta Y (2006) Visualization methods for outdoor see-through vision. IEICE Trans" /><p class="c-article-references__text" id="ref-CR20">Tsuda T, Yamamoto H, Kameda Y, Ohta Y (2006) Visualization methods for outdoor see-through vision. IEICE Trans Inf Syst E E89-D(6):1781–1789</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1093%2Fietisy%2Fe89-d.6.1781" aria-label="View reference 20">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 20 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Visualization%20methods%20for%20outdoor%20see-through%20vision&amp;journal=IEICE%20Trans%20Inf%20Syst%20E&amp;volume=E89-D&amp;issue=6&amp;pages=1781-1789&amp;publication_year=2006&amp;author=Tsuda%2CT&amp;author=Yamamoto%2CH&amp;author=Kameda%2CY&amp;author=Ohta%2CY">
+                    Google Scholar</a> 
+                </p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-010-0179-1-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Ack1">Acknowledgments</h2><div class="c-article-section__content" id="Ack1-content"><p>This work was supported in part by the NRL Base Program and in part by DARPA under the ULTRA-Vis Program for work as a performing member of the Lockheed Martin team, contract # FA8650-09-C-7908.</p></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">Naval Research Laboratory, Washington, DC, USA</p><p class="c-article-author-affiliation__authors-list">Mark A. Livingston, Zhuming Ai, Kevin Karsch &amp; Gregory O. Gibson</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Mark_A_-Livingston"><span class="c-article-authors-search__title u-h3 js-search-name">Mark A. Livingston</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Mark A.+Livingston&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Mark A.+Livingston" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Mark A.+Livingston%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Zhuming-Ai"><span class="c-article-authors-search__title u-h3 js-search-name">Zhuming Ai</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Zhuming+Ai&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Zhuming+Ai" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Zhuming+Ai%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Kevin-Karsch"><span class="c-article-authors-search__title u-h3 js-search-name">Kevin Karsch</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Kevin+Karsch&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Kevin+Karsch" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Kevin+Karsch%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Gregory_O_-Gibson"><span class="c-article-authors-search__title u-h3 js-search-name">Gregory O. Gibson</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Gregory O.+Gibson&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Gregory O.+Gibson" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Gregory O.+Gibson%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-010-0179-1/email/correspondent/c1/new">Mark A. Livingston</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=User%20interface%20design%20for%20military%20AR%20applications&amp;author=Mark%20A.%20Livingston%20et%20al&amp;contentID=10.1007%2Fs10055-010-0179-1&amp;publication=1359-4338&amp;publicationDate=2010-12-12&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Livingston, M.A., Ai, Z., Karsch, K. <i>et al.</i> User interface design for military AR applications.
+                    <i>Virtual Reality</i> <b>15, </b>175–184 (2011). https://doi.org/10.1007/s10055-010-0179-1</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-010-0179-1.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2009-11-23">23 November 2009</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2010-11-15">15 November 2010</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2010-12-12">12 December 2010</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2011-06">June 2011</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-010-0179-1" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-010-0179-1</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Augmented reality</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Mobile systems</span></li><li class="c-article-subject-list__subject"><span itemprop="about">User interface</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Interaction</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Evaluation</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-010-0179-1.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=179;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

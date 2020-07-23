@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="Factors affecting user performance in haptic assembly"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="Current computer-aided assembly systems provide engineers with a variety of spatial snapping and alignment techniques for interactively defining the positions and attachments of components. With..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/11/4.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="Factors affecting user performance in haptic assembly"/>
+
+    <meta name="dc.source" content="Virtual Reality 2007 11:4"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2007-04-24"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2007 Springer-Verlag London Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="Current computer-aided assembly systems provide engineers with a variety of spatial snapping and alignment techniques for interactively defining the positions and attachments of components. With the advent of haptics and its integration into virtual assembly systems, users now have the potential advantage of tactile information. This paper reports research that aims to quantify how the provision of haptic feedback in an assembly system can affect user performance. To investigate human&#8211;computer interaction processes in assembly modeling, performance of a peg-in-hole manipulation was studied to determine the extent to which haptics and stereovision may impact on task completion time. The results support two important conclusions: first, it is apparent that small (i.e. visually insignificant) assembly features (e.g. chamfers) affect the overall task completion at times only when haptic feedback is provided; and second, that the difference is approximately similar to the values reported for equivalent real world peg-in-hole assembly tasks."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2007-04-24"/>
+
+    <meta name="prism.volume" content="11"/>
+
+    <meta name="prism.number" content="4"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="241"/>
+
+    <meta name="prism.endingPage" content="252"/>
+
+    <meta name="prism.copyright" content="2007 Springer-Verlag London Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-007-0072-8"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-007-0072-8"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-007-0072-8.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-007-0072-8"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="Factors affecting user performance in haptic assembly"/>
+
+    <meta name="citation_volume" content="11"/>
+
+    <meta name="citation_issue" content="4"/>
+
+    <meta name="citation_publication_date" content="2007/10"/>
+
+    <meta name="citation_online_date" content="2007/04/24"/>
+
+    <meta name="citation_firstpage" content="241"/>
+
+    <meta name="citation_lastpage" content="252"/>
+
+    <meta name="citation_article_type" content="Original Article"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-007-0072-8"/>
+
+    <meta name="DOI" content="10.1007/s10055-007-0072-8"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-007-0072-8"/>
+
+    <meta name="description" content="Current computer-aided assembly systems provide engineers with a variety of spatial snapping and alignment techniques for interactively defining the positi"/>
+
+    <meta name="dc.creator" content="T. Lim"/>
+
+    <meta name="dc.creator" content="J. M. Ritchie"/>
+
+    <meta name="dc.creator" content="R. G. Dewar"/>
+
+    <meta name="dc.creator" content="J. R. Corney"/>
+
+    <meta name="dc.creator" content="P. Wilkinson"/>
+
+    <meta name="dc.creator" content="M. Calis"/>
+
+    <meta name="dc.creator" content="M. Desmulliez"/>
+
+    <meta name="dc.creator" content="J.-J. Fang"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="Amirabdollahian F, Gomes GT, Johnson GR (2005) The peg-in-hole: a VR-based haptic assessment for quantifying upper limb performance and skills. In: Proceedings of the 9th IEEE international conference on rehabilitation robotics, pp 422&#8211;425"/>
+
+    <meta name="citation_reference" content="Bashir AB, Bicker R, Taylor PM (2004) An investigation into different visual/tactual feedback modes for a virtual object manipulation task. In: Proceedings of the ACM SIGGRAPH international conference on virtual reality continuum and its applications in industry, pp 359&#8211;362"/>
+
+    <meta name="citation_reference" content="Boothroyd G, Dewhurst P, Knight W (2002) Product design for manufacture and assembly, 2nd edn. ISBN 0-8247-0584-X"/>
+
+    <meta name="citation_reference" content="Brooke J (1996) SUS&#8212;a quick and dirty usability scale. Redhatch Consulting Ltd., 12 Beaconsfield Way, Earley, Reading RG62UX, UK"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Proc IEEE Int Conf Robot Autom; citation_title=Efficient exploration and recognition of convex objects based on haptic perception.; citation_author=S Caselli, C Magnanini, F Zanichelli, E Caraffi; citation_volume=4; citation_publication_date=1996; citation_pages=3508-3513; citation_id=CR5"/>
+
+    <meta name="citation_reference" content="citation_journal_title=J Exp Psychol; citation_title=The information capacity of human motor systems in controlling the amplitude of a movement; citation_author=PM Fitts; citation_volume=47; citation_publication_date=1954; citation_pages=381-391; citation_doi=10.1037/h0055392; citation_id=CR6"/>
+
+    <meta name="citation_reference" content="Gerovichev O, Marayong P, Okamura AM (2002) The effect of visual and haptic feedback on manual and teleoperated needle insertion. In: Proceedings of the 5th international conference on medical image computing and computer-assisted intervention, Part I, vol 2488, pp 147&#8211;154"/>
+
+    <meta name="citation_reference" content="Gosset, William Sealy 1876-1937 (1970). In: Pearson ES, Kendall MG (eds) Studies in the history of statistics and probability, pp 355&#8211;404"/>
+
+    <meta name="citation_reference" content="citation_journal_title=CAD; citation_title=Prototyping and design for assembly analysis using multimodal virtual environments; citation_author=R Gupta, D Whitney, D Zeltzer; citation_volume=29; citation_issue=8; citation_publication_date=1997; citation_pages=585-597; citation_id=CR9"/>
+
+    <meta name="citation_reference" content="Haeusler J (1981) Design for assembly&#8212;state-of-the-art. In: Proceedings of the 2nd international conference on assembly automation, Brighton, pp 109&#8211;128. ISBN 0903608162"/>
+
+    <meta name="citation_reference" content="Hara K, Yokogawa R, Kai Y (1997) Evaluation of task-performance of a manipulator for a peg-in-hole task. In: Proceedings of IEEE international conference on robotics and automation, Albuquerque, New Mexico, pp 600&#8211;605"/>
+
+    <meta name="citation_reference" content="Ho C, Boothroyd G (1979) Design of chamfers for ease of assembly. In: Proceedings of the 7th manuf eng trans North AME metalwork res conf, pp 345&#8211;354"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Ind Robot; citation_title=Tactile sensing in intelligent robotic manipulation&#8212;a review; citation_author=T Johan, W Jan; citation_volume=32/1; citation_publication_date=2005; citation_pages=64-70; citation_id=CR13"/>
+
+    <meta name="citation_reference" content="Kim IW, Lim DJ, Kim KI (1999) Active peg-in-hole of chamferless parts using force/moment sensor. In: Proceedings of the IEEE/RSJ international conference on intelligent robots and systems, pp 948&#8211;953"/>
+
+    <meta name="citation_reference" content="Lim T, Dewar R, Calis M, Ritchie JM, Corney JR, Desmulliez M (2006) A structural assessment of haptic-based assembly processes. In: 1st international virtual manufacturing workshop (VirMan&#8217;06), 26 March 2006, Virginia, USA, vol 29"/>
+
+    <meta name="citation_reference" content="Massie T, Salisbury K (1994) The PHANTom haptic interface: a device for probing virtual objects. ASME Winter Annual Meeting, DSC, vol 55-1, pp 295&#8211;300"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Presence Teleoper Virtual Environ; citation_title=Sensory substitution for force feedback in teleoperation; citation_author=MJ Massimo, TB Sheridan; citation_volume=2; citation_issue=4; citation_publication_date=1993; citation_pages=344-352; citation_id=CR17"/>
+
+    <meta name="citation_reference" content="Okamura AM, Turner ML, Cutkosky MR (1997) Haptic exploration of objects with rolling and sliding. IEEE international conference on robotics and automation, Albuquerque, New Mexico, pp 2485&#8211;2490"/>
+
+    <meta name="citation_reference" content="Rosenberg, LB (1993) Virtual fixtures: perceptual tools for telerobotic manipulation. In: IEEE virtual reality annual international symposium, pp 76&#8211;82"/>
+
+    <meta name="citation_reference" content="Rosenberg L (1994) Virtual fixtures. PhD Dissertation, Stanford University"/>
+
+    <meta name="citation_reference" content="Sener B, Wormald P, Campbell I (2002) Evaluating a haptic modelling system with industrial designers. In: Proceedings of the EuroHaptics international conference, Edinburgh, Scotland, pp 165&#8211;170"/>
+
+    <meta name="citation_reference" content="citation_title=Telerobotics, automation and human supervisory control; citation_publication_date=1992; citation_id=CR22; citation_author=TB Sheridan; citation_publisher=MIT Press"/>
+
+    <meta name="citation_reference" content="Unger BJ, Nicoladis A, Berkelman PJ, Thompson A, Klatzky RL, Hollis RL (2001) Comparison of 3-D haptic peg-in-hole tasks in real and virtual environments. In: Proceedings of the IEEE/RSJ international conference on intelligent robots and systems, pp 1751&#8211;1756"/>
+
+    <meta name="citation_reference" content="Yoshikawa T, Kawai M, Yoshimoto K (2003) Toward observation of human assembly skill using virtual task space. Experimental Robotics VIII, STAR 5, pp 540&#8211;549"/>
+
+    <meta name="citation_author" content="T. Lim"/>
+
+    <meta name="citation_author_email" content="t.lim@hw.ac.uk"/>
+
+    <meta name="citation_author_institution" content="Scottish Manufacturing Institute, Heriot-Watt University, Edinburgh, Scotland, UK"/>
+
+    <meta name="citation_author" content="J. M. Ritchie"/>
+
+    <meta name="citation_author_institution" content="Scottish Manufacturing Institute, Heriot-Watt University, Edinburgh, Scotland, UK"/>
+
+    <meta name="citation_author" content="R. G. Dewar"/>
+
+    <meta name="citation_author_institution" content="Scottish Manufacturing Institute, Heriot-Watt University, Edinburgh, Scotland, UK"/>
+
+    <meta name="citation_author" content="J. R. Corney"/>
+
+    <meta name="citation_author_institution" content="Scottish Manufacturing Institute, Heriot-Watt University, Edinburgh, Scotland, UK"/>
+
+    <meta name="citation_author" content="P. Wilkinson"/>
+
+    <meta name="citation_author_institution" content="Scottish Manufacturing Institute, Heriot-Watt University, Edinburgh, Scotland, UK"/>
+
+    <meta name="citation_author" content="M. Calis"/>
+
+    <meta name="citation_author_institution" content="Scottish Manufacturing Institute, Heriot-Watt University, Edinburgh, Scotland, UK"/>
+
+    <meta name="citation_author" content="M. Desmulliez"/>
+
+    <meta name="citation_author_institution" content="Scottish Manufacturing Institute, Heriot-Watt University, Edinburgh, Scotland, UK"/>
+
+    <meta name="citation_author" content="J.-J. Fang"/>
+
+    <meta name="citation_author_institution" content="Department of Mechanical Engineering, National Cheng Kung University, Tainan, Taiwan"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-007-0072-8&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2007/10/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-007-0072-8"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="Factors affecting user performance in haptic assembly"/>
+        <meta property="og:description" content="Current computer-aided assembly systems provide engineers with a variety of spatial snapping and alignment techniques for interactively defining the positions and attachments of components. With the advent of haptics and its integration into virtual assembly systems, users now have the potential advantage of tactile information. This paper reports research that aims to quantify how the provision of haptic feedback in an assembly system can affect user performance. To investigate human–computer interaction processes in assembly modeling, performance of a peg-in-hole manipulation was studied to determine the extent to which haptics and stereovision may impact on task completion time. The results support two important conclusions: first, it is apparent that small (i.e. visually insignificant) assembly features (e.g. chamfers) affect the overall task completion at times only when haptic feedback is provided; and second, that the difference is approximately similar to the values reported for equivalent real world peg-in-hole assembly tasks."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>Factors affecting user performance in haptic assembly | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-007-0072-8","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Haptic assembly, Human–computer Interaction, Human factors, Design for assembly, Peg-in-hole metrics, Virtual reality","kwrd":["Haptic_assembly","Human–computer_Interaction","Human_factors","Design_for_assembly","Peg-in-hole_metrics","Virtual_reality"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-007-0072-8","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-007-0072-8","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=72;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-007-0072-8">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            Factors affecting user performance in haptic assembly
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-007-0072-8.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-007-0072-8.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">Original Article</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2007-04-24" itemprop="datePublished">24 April 2007</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">Factors affecting user performance in haptic assembly</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-T_-Lim" data-author-popup="auth-T_-Lim" data-corresp-id="c1">T. Lim<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Heriot-Watt University" /><meta itemprop="address" content="grid.9531.e, 0000000106567444, Scottish Manufacturing Institute, Heriot-Watt University, Riccarton, Edinburgh, EH14 4AS, Scotland, UK" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-J__M_-Ritchie" data-author-popup="auth-J__M_-Ritchie">J. M. Ritchie</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Heriot-Watt University" /><meta itemprop="address" content="grid.9531.e, 0000000106567444, Scottish Manufacturing Institute, Heriot-Watt University, Riccarton, Edinburgh, EH14 4AS, Scotland, UK" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-R__G_-Dewar" data-author-popup="auth-R__G_-Dewar">R. G. Dewar</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Heriot-Watt University" /><meta itemprop="address" content="grid.9531.e, 0000000106567444, Scottish Manufacturing Institute, Heriot-Watt University, Riccarton, Edinburgh, EH14 4AS, Scotland, UK" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-J__R_-Corney" data-author-popup="auth-J__R_-Corney">J. R. Corney</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Heriot-Watt University" /><meta itemprop="address" content="grid.9531.e, 0000000106567444, Scottish Manufacturing Institute, Heriot-Watt University, Riccarton, Edinburgh, EH14 4AS, Scotland, UK" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-P_-Wilkinson" data-author-popup="auth-P_-Wilkinson">P. Wilkinson</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Heriot-Watt University" /><meta itemprop="address" content="grid.9531.e, 0000000106567444, Scottish Manufacturing Institute, Heriot-Watt University, Riccarton, Edinburgh, EH14 4AS, Scotland, UK" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-M_-Calis" data-author-popup="auth-M_-Calis">M. Calis</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Heriot-Watt University" /><meta itemprop="address" content="grid.9531.e, 0000000106567444, Scottish Manufacturing Institute, Heriot-Watt University, Riccarton, Edinburgh, EH14 4AS, Scotland, UK" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-M_-Desmulliez" data-author-popup="auth-M_-Desmulliez">M. Desmulliez</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Heriot-Watt University" /><meta itemprop="address" content="grid.9531.e, 0000000106567444, Scottish Manufacturing Institute, Heriot-Watt University, Riccarton, Edinburgh, EH14 4AS, Scotland, UK" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-J__J_-Fang" data-author-popup="auth-J__J_-Fang">J.-J. Fang</a></span><sup class="u-js-hide"><a href="#Aff2">2</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="National Cheng Kung University" /><meta itemprop="address" content="grid.64523.36, 0000000405323255, Department of Mechanical Engineering, National Cheng Kung University, Tainan, Taiwan" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 11</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">241</span>–<span itemprop="pageEnd">252</span>(<span data-test="article-publication-year">2007</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">358 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">21 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                    
+                        <li class="c-article-metrics-bar__item">
+                            <p class="c-article-metrics-bar__count">0 <span class="c-article-metrics-bar__label">Altmetric</span></p>
+                        </li>
+                    
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-007-0072-8/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>Current computer-aided assembly systems provide engineers with a variety of spatial snapping and alignment techniques for interactively defining the positions and attachments of components. With the advent of haptics and its integration into virtual assembly systems, users now have the potential advantage of tactile information. This paper reports research that aims to quantify how the provision of haptic feedback in an assembly system can affect user performance. To investigate human–computer interaction processes in assembly modeling, performance of a <i>peg-in-hole</i> manipulation was studied to determine the extent to which haptics and stereovision may impact on task completion time. The results support two important conclusions: first, it is apparent that small (i.e. visually insignificant) assembly features (e.g. chamfers) affect the overall task completion at times only when haptic feedback is provided; and second, that the difference is approximately similar to the values reported for equivalent real world peg-in-hole assembly tasks.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Introduction</h2><div class="c-article-section__content" id="Sec1-content"><p>Investigation into virtual environments for design and assembly tasks has been carried out for many years. With the availability of moderately priced high-performance computing technology, many of these virtual manufacturing interfaces make extensive use of advanced computer graphics with some of them incorporating audio feedback. However, screen-based CAD/CAM, which only stimulates the visual senses, has made actual physical contact during product development an increasingly rare occurrence.</p><p>Engineers still find the sensation of handling a physical prototype or experiencing manufacturing processes useful and intuitive; indeed, hands-on experience reinforces the understanding of the physical, operational and visual aspects of engineered items. To enable this, the sense of touch and kinesthesia can be simulated through the provision of force cues and, in computer based design and manufacturing environments, haptic devices can provide these. A haptic device enables manual force-feedback interaction with virtual environments or teleoperated remote systems. Force feedback haptic devices generate computer-controlled forces to convey to the user a sense of the feel of the virtual environment and objects within it. Designers can acquire the benefits of a digital process and yet continue to be involved with tactile design modelling (Sener et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Rosenberg L (1994) Virtual fixtures. PhD Dissertation, Stanford University" href="/article/10.1007/s10055-007-0072-8#ref-CR20" id="ref-link-section-d1280e394">2002</a>).</p><p>Force feedback devices (such as SensAble’s Phantom Haptic Device, 15 Constitution Way Woburn, MA 01801, USA. <a href="http://www.sensable.com">http://www.sensable.com</a>) derived from telerobotic applications (Sheridan <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1992" title="Sener B, Wormald P, Campbell I (2002) Evaluating a haptic modelling system with industrial designers. In: Proceedings of the EuroHaptics international conference, Edinburgh, Scotland, pp 165–170" href="/article/10.1007/s10055-007-0072-8#ref-CR21" id="ref-link-section-d1280e407">1992</a>) have been a research topic in the development of advanced computer-aided design systems, gaming and other simulated environments. However, despite this potential, surprisingly little work has been done to develop new, haptic human–computer interface designs in these domains and quantify their impact on user behaviour.</p><p>Assembly is classically one of the most extensively studied manual processes in manufacturing. One strand of this work aims to quantify assemblies by analysis of the sequence of operations required to build a component. For example, Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0072-8#Fig1">1</a> illustrates the relative time required for manual insertion of a peg into a bore for various geometries.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0072-8/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0072-8/MediaObjects/10055_2007_72_Fig1_HTML.gif?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0072-8/MediaObjects/10055_2007_72_Fig1_HTML.gif" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p>Design for assembly (DFA). The diagram shows <i>pegs</i> and <i>holes</i> with varying feature shapes and relative assembly times (Haeusler <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1981" title="Gupta R, Whitney D, Zeltzer D (1997) Prototyping and design for assembly analysis using multimodal virtual environments. CAD 29(8):585–597" href="/article/10.1007/s10055-007-0072-8#ref-CR9" id="ref-link-section-d1280e432">1981</a>)]</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0072-8/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>Taking the insertion of a cylindrical peg into a round hole as its baseline time (i.e. 100%) Haeusler (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1981" title="Gupta R, Whitney D, Zeltzer D (1997) Prototyping and design for assembly analysis using multimodal virtual environments. CAD 29(8):585–597" href="/article/10.1007/s10055-007-0072-8#ref-CR9" id="ref-link-section-d1280e448">1981</a>) reports a German study that estimated the relative times required to assemble different geometries. He estimated that the insertion of a round peg into a chamfered hole took only 57% of the time required to complete the “nominal” case.</p><p>Design for assembly (DFA) methodologies have quantified the relative times of real-world assembly tasks: grasping, acquisition, manipulation, and insertion. Could haptic assembly performance be benchmarked against previously quantified assembly times? This forms the rationale for the <i>peg-in-hole</i> assembly task in this study. The assembly process can be subdivided into three states; picking, placing and motion.</p><p>This paper reports the results of a project to investigate these issues in which a novel test bed was developed for assembly whose performance can be compared with real world assembly performance for manual assembly tasks. This follows on from classic assembly work covered in Ho and Boothroyd (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1979" title="Hara K, Yokogawa R, Kai Y (1997) Evaluation of task-performance of a manipulator for a peg-in-hole task. In: Proceedings of IEEE international conference on robotics and automation, Albuquerque, New Mexico, pp 600–605" href="/article/10.1007/s10055-007-0072-8#ref-CR11" id="ref-link-section-d1280e460">1979</a>) and Boothroyd et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Boothroyd G, Dewhurst P, Knight W (2002) Product design for manufacture and assembly, 2nd edn. ISBN 0-8247-0584-X" href="/article/10.1007/s10055-007-0072-8#ref-CR3" id="ref-link-section-d1280e463">2002</a>).</p></div></div></section><section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">Background</h2><div class="c-article-section__content" id="Sec2-content"><p>Insertion operations are an important aspect of assembly. Tight tolerances between objects involved in the insertion, as well as positioning accuracies, require some level of compliance, trajectory and force control. Ho and Boothroyd (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1979" title="Hara K, Yokogawa R, Kai Y (1997) Evaluation of task-performance of a manipulator for a peg-in-hole task. In: Proceedings of IEEE international conference on robotics and automation, Albuquerque, New Mexico, pp 600–605" href="/article/10.1007/s10055-007-0072-8#ref-CR11" id="ref-link-section-d1280e474">1979</a>) studied the intraposition of a peg into a hole and the circumposition of a part with a hole onto a peg. Their objective was to elicit chamfer designs that will minimise insertion times and, hence, overall assembly times. There is a plethora of literature relating to peg-in-hole insertion tasks, often in association with sensory interpretation relating to robotic assembly (Hara et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="Haeusler J (1981) Design for assembly—state-of-the-art. In: Proceedings of the 2nd international conference on assembly automation, Brighton, pp 109–128. ISBN 0903608162" href="/article/10.1007/s10055-007-0072-8#ref-CR10" id="ref-link-section-d1280e477">1997</a>; Kim et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Johan T, Jan W (2005) Tactile sensing in intelligent robotic manipulation—a review. Ind Robot 32/1:64–70" href="/article/10.1007/s10055-007-0072-8#ref-CR13" id="ref-link-section-d1280e480">1999</a>; Johan and Jan <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Ho C, Boothroyd G (1979) Design of chamfers for ease of assembly. In: Proceedings of the 7th manuf eng trans North AME metalwork res conf, pp 345–354" href="/article/10.1007/s10055-007-0072-8#ref-CR12" id="ref-link-section-d1280e483">2005</a>). Jamming and wedging is a major problem in any assembly operation, initiating extensive research to peg-in-hole assembly. Active methods enable robots the capability to overcome these difficulties through force feedback, dealing with chamferless peg-in-hole set-ups and allowing a more compliant system (Kim et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Johan T, Jan W (2005) Tactile sensing in intelligent robotic manipulation—a review. Ind Robot 32/1:64–70" href="/article/10.1007/s10055-007-0072-8#ref-CR13" id="ref-link-section-d1280e486">1999</a>).</p><p>For human–computer interaction (HCI), Fitts’ Law (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1954" title="Caselli S, Magnanini C, Zanichelli F, Caraffi E (1996) Efficient exploration and recognition of convex objects based on haptic perception. Proc IEEE Int Conf Robot Autom 4:3508–3513" href="/article/10.1007/s10055-007-0072-8#ref-CR5" id="ref-link-section-d1280e492">1954</a>) has generally been used as a quantitative means with which to measure the performance of human motor control of simple task. Fitts derived a quantitative predictor for the movement time needed for the successful completion of 2D targeting peg-in-hole-type tasks. There was no consideration of shape at any stage.</p><p>Studies by Rosenberg (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1993" title="Okamura AM, Turner ML, Cutkosky MR (1997) Haptic exploration of objects with rolling and sliding. IEEE international conference on robotics and automation, Albuquerque, New Mexico, pp 2485–2490" href="/article/10.1007/s10055-007-0072-8#ref-CR18" id="ref-link-section-d1280e498">1993</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1994" title="Rosenberg, LB (1993) Virtual fixtures: perceptual tools for telerobotic manipulation. In: IEEE virtual reality annual international symposium, pp 76–82" href="/article/10.1007/s10055-007-0072-8#ref-CR19" id="ref-link-section-d1280e501">1994</a>) describe how virtual haptic overlays could enhance performance in teleoperator performance closely related to virtual reality. The experiments required subjects to telemanipulate pegs on a task board from a designated start hole to a designated target finish hole with and without the aid of virtual fixtures. Movement times were recorded and an index of performance was computed as defined by Fitts’ Law (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1954" title="Caselli S, Magnanini C, Zanichelli F, Caraffi E (1996) Efficient exploration and recognition of convex objects based on haptic perception. Proc IEEE Int Conf Robot Autom 4:3508–3513" href="/article/10.1007/s10055-007-0072-8#ref-CR5" id="ref-link-section-d1280e504">1954</a>). Massimo and Sheridan (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1993" title="Massie T, Salisbury K (1994) The PHANTom haptic interface: a device for probing virtual objects. ASME Winter Annual Meeting, DSC, vol 55-1, pp 295–300" href="/article/10.1007/s10055-007-0072-8#ref-CR16" id="ref-link-section-d1280e507">1993</a>) were interested in the capabilities of sensory substitution for force feedback through the tactile and auditory senses for teleoperation tasks. Their experiments consisted of peg-in-hole tasks of varying complexity with haptic vibration applied to different parts of the subject’s hand according to the direction of the reaction force.</p><p>Commercial force feedback interfaces have subsequently appeared, such as the Phantom arm (Massie and Salisbury <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1994" title="Lim T, Dewar R, Calis M, Ritchie JM, Corney JR, Desmulliez M (2006) A structural assessment of haptic-based assembly processes. In: 1st international virtual manufacturing workshop (VirMan’06), 26 March 2006, Virginia, USA, vol 29" href="/article/10.1007/s10055-007-0072-8#ref-CR15" id="ref-link-section-d1280e513">1994</a>), that allow user interaction with virtual environments through a stylus. Gupta et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="Gosset, William Sealy 1876-1937 (1970). In: Pearson ES, Kendall MG (eds) Studies in the history of statistics and probability, pp 355–404" href="/article/10.1007/s10055-007-0072-8#ref-CR8" id="ref-link-section-d1280e516">1997</a>), investigated the benefits of multimodal simulation using virtual environment (VE) technology for part handling and insertion compared to conventional table-based methods, as presented by Boothroyd et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Boothroyd G, Dewhurst P, Knight W (2002) Product design for manufacture and assembly, 2nd edn. ISBN 0-8247-0584-X" href="/article/10.1007/s10055-007-0072-8#ref-CR3" id="ref-link-section-d1280e519">2002</a>). The results showed that assembly task completion time increased in proportion to the complexity of the assembly operations required. However, the measured times were roughly double of those to carry out the operation in the real world. Although they employ two haptic arms their study is restricted to 2D simulations of the insertion operation. Significantly for the work reported in this paper the authors speculate that one of the contributory factors to task completion time was the lack of co-location.</p><p>Unger et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Sheridan TB (1992) Telerobotics, automation and human supervisory control. MIT Press, Cambridge" href="/article/10.1007/s10055-007-0072-8#ref-CR22" id="ref-link-section-d1280e526">2001</a>) described an experimental arrangement for comparing user performance during a real and virtual 3D peg-in-hole task. The task required inserting a square peg into a square hole via a 6 DOF magnetic levitation haptic device and visual feedback. The goal was to understand human manipulation strategies. Their results indicate that haptic senses can discriminate between very fine forces and positions; however, overall task performance with real objects is best. They further concluded, “… <i>in spite of differences in the perceived haptic sensation, peg-in-hole placement strategy is essentially fixed.</i>”</p><p>Yoshikawa et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Unger BJ, Nicoladis A, Berkelman PJ, Thompson A, Klatzky RL, Hollis RL (2001) Comparison of 3-D haptic peg-in-hole tasks in real and virtual environments. In: Proceedings of the IEEE/RSJ international conference on intelligent robots and systems, pp 1751–1756" href="/article/10.1007/s10055-007-0072-8#ref-CR23" id="ref-link-section-d1280e535">2003</a>) presented a methodology for observing human skill in a virtual space configured with haptic technology. A comparison between a real world square peg-in-hole task and a 2D simulation was performed. The virtual space incorporated dynamics and surface friction characteristics. Results indicated that stability of the haptic system could be improved with analogue circuitry so that human skills are better represented in the virtual environment. Bashir et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Bashir AB, Bicker R, Taylor PM (2004) An investigation into different visual/tactual feedback modes for a virtual object manipulation task. In: Proceedings of the ACM SIGGRAPH international conference on virtual reality continuum and its applications in industry, pp 359–362" href="/article/10.1007/s10055-007-0072-8#ref-CR2" id="ref-link-section-d1280e538">2004</a>) developed a system to assess the influence equipment and its arrangement on the force, visual and augmented feedback and how this influences task completion times. Their experiment involved picking an object, placing it against a vertical surface and inserting it into a hole with a sliding motion. The effects of mass and clearance were not considered. Their results indicated 45% prolonged completion times with force feedback compared to real tasks.</p><p>Amirabdollahian et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Amirabdollahian F, Gomes GT, Johnson GR (2005) The peg-in-hole: a VR-based haptic assessment for quantifying upper limb performance and skills. In: Proceedings of the 9th IEEE international conference on rehabilitation robotics, pp 422–425" href="/article/10.1007/s10055-007-0072-8#ref-CR1" id="ref-link-section-d1280e544">2005</a>) underlined the advantage of using assistive technologies to measure the effectiveness of a medical therapy regime. The peg-in-hole haptic assessment was the study of choice for quantifying upper limb skills. The set-up consists of a large virtual table with two identical cylindrical holes and a cylindrical peg that was to be repeatedly inserted by alternately moving between each of the holes with a Phantom device. Physical properties of the peg and hole such as diameter, peg weight and height, were taken into account. Position, velocity and reaction forces were logged at a sampling rate of 1000 Hz. Inconclusive results were obtained but further clinical trials are being undertaken to investigate the usefulness of the haptic system as a means of assessing human performance, in particular, arm skills and coordination.</p><p>In a similar context to haptic peg-in-hole experiments, Gerovichev et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Fitts PM (1954) The information capacity of human motor systems in controlling the amplitude of a movement. J Exp Psychol 47:381–391" href="/article/10.1007/s10055-007-0072-8#ref-CR6" id="ref-link-section-d1280e550">2002</a>) described the work on the evaluation of visual and haptic feedback for training needle insertion tasks in medicine. Promising results showed that the addition of force cues, along with real-time visual feedback, improved performance.</p><p>Most of the literature on the classical <i>peg-in-hole</i> problem concentrates on the insertion phase. Similar experiments conducted via HCI implementation have generally concentrated on investigating the effects of haptic/visual feedback on task completion time and accuracy as performance evaluation criteria.</p><p>There is evidence showing the potential for implementing haptic interfaces for various design, manufacturing and assembly applications. Several researchers including Caselli et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1996" title="Brooke J (1996) SUS—a quick and dirty usability scale. Redhatch Consulting Ltd., 12 Beaconsfield Way, Earley, Reading RG62UX, UK" href="/article/10.1007/s10055-007-0072-8#ref-CR4" id="ref-link-section-d1280e562">1996</a>), have developed exploratory strategies for determining object geometry with haptic sensing while others have focused on using minimal set of contacts to determine overall geometry (Okamura et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="Massimo MJ, Sheridan TB (1993) Sensory substitution for force feedback in teleoperation. Presence Teleoper Virtual Environ 2(4):344–352" href="/article/10.1007/s10055-007-0072-8#ref-CR17" id="ref-link-section-d1280e565">1997</a>). There is, however, a shortage of reported work that qualifies and contrasts both physical and virtual assembly operations where object geometry and features, even subtle ones, can affect the dynamics of assembly.</p><p>A successful pilot study by Lim et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Kim IW, Lim DJ, Kim KI (1999) Active peg-in-hole of chamferless parts using force/moment sensor. In: Proceedings of the IEEE/RSJ international conference on intelligent robots and systems, pp 948–953" href="/article/10.1007/s10055-007-0072-8#ref-CR14" id="ref-link-section-d1280e572">2006</a>), while statistically inconclusive, showed that DFA components had an impact on task completion time in the virtual environment. The initial study also exposed several inadequacies of the test bed, for example, its functionality and ease of use, and aspects of human factors such as how people perceive shapes in stereo and non-stereo modes. This has motivated the work reported in this paper.</p><p>With this in mind the objective was to carry out the human factors’ evaluation of a haptic assembly system via the use of a comparative assessment of virtual, virtual/haptic peg-in-hole assembly tasks against real world benchmarked equivalents.</p></div></div></section><section aria-labelledby="Sec3"><div class="c-article-section" id="Sec3-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec3">Experimental protocol</h2><div class="c-article-section__content" id="Sec3-content"><p>The peg-in-hole task requires inserting a peg into a block with a hole. Participants perform this both as a virtual 3D task where they are provided with different combinations of visual and force cues (through a haptic device) and the real world equivalent tasks.</p><p>The primary objective is to compare the time taken to carry out six different assembly tasks in a virtual environment with the following characteristics; rigid body dynamics, stereo display and haptic feedback, and so assess the relative impact of each technology on user performance.</p><h3 class="c-article__sub-heading" id="Sec4">Virtual task</h3><p>Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-007-0072-8#Tab1">1</a> presents the experimental design for the virtual task. A binary label was used to indicate whether collision detection and stereovision was switched <i>on</i> (1) or <i>off</i> (0). There are six primary experimental steps, which are ordered such that tests are performed with/without collision detection (C/D) and with/without stereovision. The key feature of this experimentation was that the participants were totally <i>unaware</i> of any geometrical differences within components during this experimental programme.
+</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-1"><figure><figcaption class="c-article-table__figcaption"><b id="Tab1" data-test="table-caption">Table 1 Experimental design</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-007-0072-8/tables/1"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec5">Allocation</h4>
+                    <ul class="u-list-style-bullet">
+                      <li>
+                        <p>Participants were randomly allocated to experiments 1, 2 or 3.</p>
+                      </li>
+                      <li>
+                        <p>Subsequently each was also randomly allocated to 4, 5, or 6.</p>
+                      </li>
+                      <li>
+                        <p>Each experiment had an equal number of participants.</p>
+                      </li>
+                    </ul>
+                  <h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec6">Training</h4>
+                    <ol class="u-list-style-none">
+                      <li>
+                        <span class="u-custom-list-number">1</span>
+                        
+                          <p>Each participant was given 5 min to briefly familiarise themselves with the virtual environment and haptic feedback.</p>
+                        
+                      </li>
+                      <li>
+                        <span class="u-custom-list-number">2</span>
+                        
+                          <p>Shape manipulation requirements:</p>
+                        
+                      </li>
+                    </ol>
+                    <ol class="u-list-style-none">
+                      <li>
+                        <span class="u-custom-list-number">–</span>
+                        
+                          <p>Pick and place a peg into a hole using the haptic device.</p>
+                        
+                      </li>
+                      <li>
+                        <span class="u-custom-list-number">–</span>
+                        
+                          <p>Applied force displacement with the picked object onto a stationary object to experience haptic feedback.</p>
+                        
+                      </li>
+                    </ol>
+                  <h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec7">Instruction</h4>
+                    <ul class="u-list-style-bullet">
+                      <li>
+                        <p>Each participant was asked to move a peg from its starting position to the block and insert it.</p>
+                      </li>
+                      <li>
+                        <p>The process was repeated three times.</p>
+                      </li>
+                      <li>
+                        <p>Each participant was then asked to complete a questionnaire after the experiment.</p>
+                      </li>
+                    </ul>
+                  <h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec8">Analysis</h4>
+                    <ul class="u-list-style-bullet">
+                      <li>
+                        <p>Log files recorded timestamps for the pickup of each peg until last release. This provided a task completion time (TCT) in seconds for each repetition.</p>
+                      </li>
+                      <li>
+                        <p>Log file names were uniquely defined for each participant.</p>
+                      </li>
+                      <li>
+                        <p>Perform error analysis.</p>
+                      </li>
+                      <li>
+                        <p>Video recording for each participant was taken to give more insight into both behaviour and errors.</p>
+                      </li>
+                      <li>
+                        <p>Statistical analysis was subsequently used to investigate the null hypothesis that: “<i>The performance between task pairs will be similar</i>.”</p>
+                      </li>
+                    </ul>
+                  <h3 class="c-article__sub-heading" id="Sec9">Real task</h3><p>A similar number of participants were tasked to perform manual peg-in-hole insertions. Four different insertion routines were carried out in the following order:</p><ol class="u-list-style-none">
+                    <li>
+                      <span class="u-custom-list-number">1.</span>
+                      
+                        <p>Flat peg/flat hole (FPFH)—subject inserts a flat end peg into a block with a chamferless hole.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">2.</span>
+                      
+                        <p>Chamfered peg/flat hole (CPFH)—subject inserts a peg with a 33° conical chamfered end into a block with a chamferless hole.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">3.</span>
+                      
+                        <p>Chamfered peg/chamfer hole (CPCH)—subject inserts a peg with a 33° conical chamfered end into a block with a corresponding chamfered hole.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">4.</span>
+                      
+                        <p>Flat peg/chamfer hole (FPCH)—subject inserts a flat end peg into a block with a 33° conical chamfered hole.</p>
+                      
+                    </li>
+                  </ol><p>Each routine was repeated six times. The setup (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0072-8#Fig2">2</a>) ensured that the distance between the peg and hole was fixed (at 40 mm from the centre of the peg to the centre of the hole in the block) and that each participant was positioned according to their comfort of reach and eye level.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0072-8/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0072-8/MediaObjects/10055_2007_72_Fig2_HTML.gif?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0072-8/MediaObjects/10055_2007_72_Fig2_HTML.gif" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p>Real-world experimental setup. The schematic is presented on the <i>right</i>
+                                    </p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0072-8/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>Timings were taken only when the peg was displaced from its holder and stopped once the subject released upon a successful insertion. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0072-8#Fig3">3</a> details the dimensions for the block and peg used in the virtual world and for the real world experiment.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0072-8/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0072-8/MediaObjects/10055_2007_72_Fig3_HTML.gif?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0072-8/MediaObjects/10055_2007_72_Fig3_HTML.gif" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p>Experimental block and peg (all dimensions in millimetres)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0072-8/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        </div></div></section><section aria-labelledby="Sec10"><div class="c-article-section" id="Sec10-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec10">Implementation</h2><div class="c-article-section__content" id="Sec10-content"><p>Virtual simulation quality depends both on the particular mechanical interface and on the equations used to model the dynamics of the virtual objects. The interaction force between objects depends on the physical properties of the object such as stiffness and friction, and on relative position and velocity. These requirements have been catered for with the implementation of the following components:</p><ul class="u-list-style-bullet">
+                  <li>
+                    <p>Haptics Interface: Sensable Technologies OpenHaptics<sup>®</sup> Toolkit (Sensable Technologies, Inc. 15 Constitution Way Woburn, MA 01801, USA. <a href="http://www.sensable.com">http://www.sensable.com</a>), which provides device control for the Phantom Desktop and Omni, and supports polygonal objects, material properties and force effects.</p>
+                  </li>
+                  <li>
+                    <p>Graphics Interface: The Visualization ToolKit (VTK, Kitware Inc., 28 Corporate Drive, Suite 204, Clifton Park, New York 12065, USA. <a href="http://www.kitware.com">http://www.kitware.com</a>) is used for rendering graphics, image processing, and visualization.</p>
+                  </li>
+                  <li>
+                    <p>Physics Interface: AGEIA PhysX™ (AGEIA, 82 Pioneer Way, Suite 118, Mountain View, CA 94041, USA. <a href="http://www.ageia.com">http://www.ageia.com</a>) technology provides the physics engine that includes an integrated solver for fluids, particles, cloth and rigid bodies.</p>
+                  </li>
+                </ul><p>The schematic in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0072-8#Fig4">4</a> is the architecture for a haptic-based assembly, machining and manufacturing system (HAMMS).
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0072-8/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0072-8/MediaObjects/10055_2007_72_Fig4_HTML.gif?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0072-8/MediaObjects/10055_2007_72_Fig4_HTML.gif" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p>The HAMMS schema</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0072-8/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>The objective of the assembly interface is to provide tools to investigate macro and micro assembly processes, geometry and shape features associated with DFA and the output of assembly and disassembly plans. The physics module currently defaults to the PhysX engine. Input to the system can be mesh, Octree, point cloud and B-Rep that is mapped to an internal data structure suitable for visualisation and haptic rendering.</p><p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0072-8#Fig5">5</a> shows the HAMMS user interface. The interface provides tools for logging the motions of the haptic device and records how the user interacts with the objects. Tools are available to change haptic feedback and affect parameters. Scene objects can be rendered in stereo with different levels of detail (LOD) and transparency. Dynamic and kinematic properties of the scene objects can also be altered in real time as can the viewing perspective (e.g. isometric view).
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0072-8/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0072-8/MediaObjects/10055_2007_72_Fig5_HTML.gif?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0072-8/MediaObjects/10055_2007_72_Fig5_HTML.gif" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p>The HAMMS graphical user interface. The docking window on the <i>right</i> logs the users interaction and assembly intent</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0072-8/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>The virtual peg and block were designed using the ACIS<sup>®</sup> geometric modelling kernel from Spatial Technology (242 55th Street Building A, Boulder, CO 80301-5740, USA. ACIS® Geometric Modeler, V7.0). The block models were then manufactured out of resin while the pegs were of stainless steel bars as shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0072-8#Fig3">3</a>.</p><p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0072-8#Fig6">6</a> presents the virtual experimental set-up and task procedure. The apparatus comprises a Phantom Omni (SensAble Technologies 15 Constitution Way Woburn, MA 01801, USA. <a href="http://www.sensable.com">http://www.sensable.com</a>) haptic device for interaction with the virtual environment, along with a pair of CrystalEyes<sup>®</sup> stereoscopic glasses (REAL D Corporate: Real D, 100 North Crescent Drive, Suite 120 Beverly Hills, CA 90210, USA. http://www.reald.com/scientific/) for stereo viewing.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-6"><figure><figcaption><b id="Fig6" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 6</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0072-8/figures/6" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0072-8/MediaObjects/10055_2007_72_Fig6_HTML.jpg?as=webp"></source><img aria-describedby="figure-6-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0072-8/MediaObjects/10055_2007_72_Fig6_HTML.jpg" alt="figure6" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-6-desc"><p>Virtual experiment. The <i>top left</i> shows the set-up. The <i>top right</i> illustrates the pick procedure while the <i>bottom</i> shows the peg in its final location</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0072-8/figures/6" data-track-dest="link:Figure6 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     </div></div></section><section aria-labelledby="Sec11"><div class="c-article-section" id="Sec11-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec11">Results and analysis</h2><div class="c-article-section__content" id="Sec11-content"><p>A total of 34 participants were recruited for the virtual and real world peg-in-hole task. Each subject was randomly allocated to two experiments listed in Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-007-0072-8#Tab1">1</a> and the results charted in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0072-8#Fig7">7</a>. As mentioned previously, the participants were <i>not</i> informed about chamfers being on the peg or hole.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-7"><figure><figcaption><b id="Fig7" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 7</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0072-8/figures/7" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0072-8/MediaObjects/10055_2007_72_Fig7_HTML.gif?as=webp"></source><img aria-describedby="figure-7-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0072-8/MediaObjects/10055_2007_72_Fig7_HTML.gif" alt="figure7" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-7-desc"><p>Virtual and real world peg-in-hole task completion time (TCT) comparison. TCT for each experiment is indicated at the <i>top</i> of each column</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0072-8/figures/7" data-track-dest="link:Figure7 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>
+                <i>Chamfered peg/chamfered hole (CPCH):</i>
+              </p><p>The results indicate the effects of augmented virtual environments through the use of force cues during an assembly task. Comparisons of stereo viewing show a gain of approximately 1.6 s on the overall task completion time (TCT). Where stereo is present but not the collision detection, it was observed that participants took longer to align and insert the peg into the hole. This is reflected in the results (see SNCD in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0072-8#Fig7">7</a>).</p><p>
+                <i>Flat peg/flat hole (FPFH):</i>
+              </p><p>This experiment also presents a similar trend to the CPCH experiment. Though less pronounced, comparisons against stereo viewing again show a reduction (approximately 1.2 s) for TCT.</p><p>Interestingly, TCT for both SNCD experiments are nearly identical. This was due to subjects spending the majority of time aligning the peg in the hole. Since no force cues were present to indicate that the peg was in contact with the sides of the hole, the subjects relied heavily on visual perception. As seen in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0072-8#Fig8">8</a>, the front view suggests that the peg is inline and properly inserted; however, this is not the case when viewed from the top or side-on.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-8"><figure><figcaption><b id="Fig8" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 8</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0072-8/figures/8" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0072-8/MediaObjects/10055_2007_72_Fig8_HTML.gif?as=webp"></source><img aria-describedby="figure-8-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0072-8/MediaObjects/10055_2007_72_Fig8_HTML.gif" alt="figure8" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-8-desc"><p>Transparent views of peg-in-hole results without haptic feedback</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0072-8/figures/8" data-track-dest="link:Figure8 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>Importantly, the virtual and real world experiments illustrate that shape is one predominant factor in reducing TCT. It appears that perception of size and shape, in addition to visual stimuli on haptic perception, has exposed the power of visual dominance over the other senses. It is also evident that manual manipulation of objects in virtual environments improves with haptic feedback.</p><p>
+                <i>Damping effects:</i>
+              </p><p>In order to consider the haptic equipment’s actual operational influence on performance, in a manner similar to that detected by Bashir et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Bashir AB, Bicker R, Taylor PM (2004) An investigation into different visual/tactual feedback modes for a virtual object manipulation task. In: Proceedings of the ACM SIGGRAPH international conference on virtual reality continuum and its applications in industry, pp 359–362" href="/article/10.1007/s10055-007-0072-8#ref-CR2" id="ref-link-section-d1280e1390">2004</a>, it was decided to investigate its inherent damping during operation. The architecture used for HAMMS meant that to approximate ‘reality’, phenomena such as gravity, restitution, material properties and friction were provided via a physics engine (AGEIA PhysX. AGEIA, 82 Pioneer Way, Suite 118, Mountain View, CA 94041, USA. <a href="http://www.ageia.com">http://www.ageia.com</a>), which added an operational delay into the system.</p><p>Haptic systems require two distinctively different runtime threads that have to communicate seamlessly in order to prevent force feedback delays and smooth graphic interaction. As a minimum, the haptic loop runs at 1 Khz while the graphics loop generally runs at 60 hz. The inclusion of real time rigid body dynamics adds further load to the system, and in the current development of HAMMS, generates a damped effect during object interaction (i.e. when using the haptic device to move an object). No motion-damping effect is present while the user is touching virtual shapes; the haptic cursor response was instantaneous.</p><p>Taking this into account, a series of displacement trials were carried out to establish a damping metric. This consisted of a single participant moving the peg from its holding position to a fixed location, a lateral distance of 40 mm corresponding to the real world experiment (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0072-8#Fig9">9</a>).
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-9"><figure><figcaption><b id="Fig9" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 9</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0072-8/figures/9" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0072-8/MediaObjects/10055_2007_72_Fig9_HTML.gif?as=webp"></source><img aria-describedby="figure-9-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0072-8/MediaObjects/10055_2007_72_Fig9_HTML.gif" alt="figure9" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-9-desc"><p>Peg displacement test to determine haptic motion damping</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0072-8/figures/9" data-track-dest="link:Figure9 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>A total of 30 repetitions were executed and the average taken. The procedure involves picking up the peg, bringing it forward and placing it on a pedestal. The objects are reset automatically to their origins after each placement. The movements were carried out as quickly as possible. Each cursor path was recorded by logging cursor position and system time whenever a haptic device button message was processed by the operating system. A sample of the log file is shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0072-8#Fig10">10</a>.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-10"><figure><figcaption><b id="Fig10" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 10</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0072-8/figures/10" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0072-8/MediaObjects/10055_2007_72_Fig10_HTML.gif?as=webp"></source><img aria-describedby="figure-10-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0072-8/MediaObjects/10055_2007_72_Fig10_HTML.gif" alt="figure10" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-10-desc"><p>Sample log file</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0072-8/figures/10" data-track-dest="link:Figure10 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0072-8#Fig11">11</a> presents the results after the effects of haptic damping (approximately 2 s) were removed from the original TCT. While the new figures are still a minimum of twice the real world experiment times, there is close correlation to real world assembly experience. This also supports the findings of Gupta et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="Gosset, William Sealy 1876-1937 (1970). In: Pearson ES, Kendall MG (eds) Studies in the history of statistics and probability, pp 355–404" href="/article/10.1007/s10055-007-0072-8#ref-CR8" id="ref-link-section-d1280e1457">1997</a> mentioned previously who measured times roughly double that in the real world. The results also show that the Haeusler factor (57% chamfered peg/hole to flat peg/hole; Haeusler <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1981" title="Gupta R, Whitney D, Zeltzer D (1997) Prototyping and design for assembly analysis using multimodal virtual environments. CAD 29(8):585–597" href="/article/10.1007/s10055-007-0072-8#ref-CR9" id="ref-link-section-d1280e1460">1981</a>) equates to 61% in the haptic domain and 78% in the real world. More improvements to the system on memory management and more efficient rigid body dynamic algorithms could potentially improve realism.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-11"><figure><figcaption><b id="Fig11" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 11</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0072-8/figures/11" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0072-8/MediaObjects/10055_2007_72_Fig11_HTML.gif?as=webp"></source><img aria-describedby="figure-11-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0072-8/MediaObjects/10055_2007_72_Fig11_HTML.gif" alt="figure11" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-11-desc"><p>Effect of virtual environment damping on task completion time (TCT). TCT for each experiment is indicated at the <i>top</i> of each column. The non-damping times have been superimposed to indicate the difference in TCT</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0072-8/figures/11" data-track-dest="link:Figure11 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <h3 class="c-article__sub-heading" id="Sec12">Statistical analysis</h3><p>Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-007-0072-8#Tab2">2</a> presents a comparison of TCT (less damping) for two geometry pairs namely, CPCH and FPFH, under the effects of stereovision and collision detection feedback. Real world (RW) results for the corresponding virtual task are also shown.
+</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-2"><figure><figcaption class="c-article-table__figcaption"><b id="Tab2" data-test="table-caption">Table 2 Comparison of geometry, stereovision and collision detection TCT (less damping)</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-007-0072-8/tables/2"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>How much does a change in geometry affect assembly tasks when both visual and haptic information is available? It was decided to statistically investigate the cause and effect relationships between tasks by investigating those trials where only one parameter was changed. Due to the sample size a one-tail Student’s <i>t</i> test (Gosset and William Sealy <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1876" title="Gerovichev O, Marayong P, Okamura AM (2002) The effect of visual and haptic feedback on manual and teleoperated needle insertion. In: Proceedings of the 5th international conference on medical image computing and computer-assisted intervention, Part I, vol 2488, pp 147–154" href="/article/10.1007/s10055-007-0072-8#ref-CR7" id="ref-link-section-d1280e1928">1876</a>) was chosen at a 1% level.</p><p>The null hypothesis (H<sub>0</sub>) applied was: “<i>The performance between task pairs will be the same</i>.”</p><p>The alternative hypothesis (H<sub>1</sub>) was: <i>“The factor changed in the experiment affected the outcome.”</i>
+                        </p><p>This test is designed for data that potentially alter under stereovision and/or collision feedback for CPCH or FPFH condition. The aim is to compare the amount of variability due to the predicted differences in scores between the two conditions as against the total variability in participants’ scores. The predicted differences are calculated as a difference between the mean scores for the two groups. This difference between the means has to be compared against the total variance in all scores. If there were only random differences between the scores in the two conditions the variance due to the predicted differences would be relatively small in relation to the total variability in scores. The <i>t</i> test results are shown in Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-007-0072-8#Tab3">3</a>.
+</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-3"><figure><figcaption class="c-article-table__figcaption"><b id="Tab3" data-test="table-caption">Table 3 The <i>t</i> test results (less damping) for the comparison between virtual and real TCT </b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-007-0072-8/tables/3"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec13">Virtual task comparison</h4><p>As can be seen in Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-007-0072-8#Tab3">3</a>, all of the pairings in column two proved to be statistically significant at the chosen level, meaning that in the case of each comparison the parameter changed must have led to a change in performance. A significance level of 1% (i.e. p&lt;&lt;0.01) was used.</p><ul class="u-list-style-bullet">
+                      <li>
+                        <p>In Pair 1 (p&lt;&lt;0.01) the task was carried out much quicker when collision detection was switched on; however, the variability in performance was more or less the same.</p>
+                      </li>
+                      <li>
+                        <p>For Pair 2 (p&lt;&lt;0.01), the effect of stereovision is observed through an improvement in TCT.</p>
+                      </li>
+                      <li>
+                        <p>Pair 3 compares how differing geometries affect assembly performance. A highly significant difference between the two populations (p&lt;&lt;0.01) indicates that chamfers <i>do</i> make a significant difference over TCT reduction. Further, it clearly shows the benefit of stereovision when coupled with collision detection.</p>
+                      </li>
+                      <li>
+                        <p>Pair 4 investigates the influence of stereovision on assembly performance between chamfered and non-chamfered tasks. The results indicate that without stereovision, TCT was fairly similar. It appears that there is no significant difference between the two populations (p &gt; 0.01). Therefore, in a virtual context collision detection did not make a significant impact, although by observation it seems to reduce TCT.</p>
+                      </li>
+                      <li>
+                        <p>Pair 5 (p&lt;&lt;0.01) shows a similar trend as in Pair 1 in that assembly performance was improved with collision detection switched on. Variability in performance was fairly similar.</p>
+                      </li>
+                      <li>
+                        <p>As with Pair 2, Pair 6 (p &lt; 0.05) indicates that with stereovision, task performance was improved.</p>
+                      </li>
+                    </ul>
+                           <h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec14">Real world task comparison</h4><p>Comparison of the real world experiments (Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-007-0072-8#Tab3">3</a>, Pair 7) indicates that behaviour in the real world was the same regardless of peg/hole type (p&lt;&lt;0.01).</p><p>Pairs 8 and 9 (p&lt;&lt;0.01) both show that behaviour in the real world and the virtual haptic world was the same regardless of peg/hole type. Note that, the participants were unaware of chamfers on either the peg or the hole for both virtual and real tasks.</p><p>Considering Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-007-0072-8#Tab3">3</a> we can see that even though the peg (and similarly, the hole) chamfers are almost imperceptible, they have a significant influence on TCT. This further justifies the work by Unger et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Sheridan TB (1992) Telerobotics, automation and human supervisory control. MIT Press, Cambridge" href="/article/10.1007/s10055-007-0072-8#ref-CR22" id="ref-link-section-d1280e2055">2001</a>) who showed that haptic senses could discriminate between very fine forces and positions and that real and virtual world placements strategies are essentially similar.</p><h3 class="c-article__sub-heading" id="Sec15">System usability</h3><p>Of interest in this work is the usability of HAMMS as a test bed for analysing assembly processes and ultimately DFA. The System Usability Scale (SUS; Brooke <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1996" title="Brooke J (1996) SUS—a quick and dirty usability scale. Redhatch Consulting Ltd., 12 Beaconsfield Way, Earley, Reading RG62UX, UK" href="/article/10.1007/s10055-007-0072-8#ref-CR4" id="ref-link-section-d1280e2067">1996</a>) has been used here to measure user reaction to the system being evaluated.</p><p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0072-8#Fig12">12</a> presents the individual subjective measures of usability based on participant response in of the SUS questionnaire (post-experiment). The usability scale rates from <i>strongly disagree</i> (0) to <i>strongly agree</i> (5). Judging from the results, it appears that the HAMMS interface is reasonably intuitive in that “…<i>most people would learn to use this system very quickly.”</i> (Brooke <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1996" title="Brooke J (1996) SUS—a quick and dirty usability scale. Redhatch Consulting Ltd., 12 Beaconsfield Way, Earley, Reading RG62UX, UK" href="/article/10.1007/s10055-007-0072-8#ref-CR4" id="ref-link-section-d1280e2085">1996</a>).
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-12"><figure><figcaption><b id="Fig12" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 12</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0072-8/figures/12" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0072-8/MediaObjects/10055_2007_72_Fig12_HTML.gif?as=webp"></source><img aria-describedby="figure-12-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0072-8/MediaObjects/10055_2007_72_Fig12_HTML.gif" alt="figure12" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-12-desc"><p>HAMMS user response</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0072-8/figures/12" data-track-dest="link:Figure12 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>It is important to note that SUS scores for individual items are not meaningful on their own. The scoring of SUS requires a composite measure of the overall usability. For HAMMS, with 34 participants, the SUS average is 74.7. While this is a respectable result, it suggests that improvements are necessary to reduce system-specific issues such as inconsistency and complexity.</p></div></div></section><section aria-labelledby="Sec16"><div class="c-article-section" id="Sec16-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec16">Conclusions</h2><div class="c-article-section__content" id="Sec16-content"><p>The overall objective of this work was to investigate the impact of a haptic environment on user productivity. In this context, the following observations support several important conclusions.</p><p>The experiments conducted have demonstrated that small shape-change can affect assembly times in virtual haptic environments; this is especially significant because the participants were unaware of any component shape changes. They have also shown that, in the case of chamfered features and flat features, the same relative reduction in TCT was recorded as the virtual technology used moves from stereo/no collision detection to stereo/full collision detection. In fact, with full stereo/haptics the best two computer-based performances were recorded for both chamfered and flat features.</p><p>The effect of chamfers can clearly be seen when compared against the non-chamfered results presented in Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-007-0072-8#Tab2">2</a>. It can be seen that although the absolute assembly time in the stereo/haptic environment is significantly greater than that of the real world task, the relative difference between chamfered and flat peg insertion times, 61%, compare with published data surprisingly well (i.e. 57% as reported by Haeusler <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1981" title="Gupta R, Whitney D, Zeltzer D (1997) Prototyping and design for assembly analysis using multimodal virtual environments. CAD 29(8):585–597" href="/article/10.1007/s10055-007-0072-8#ref-CR9" id="ref-link-section-d1280e2126">1981</a>).</p><p>The <i>t</i> test results (Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-007-0072-8#Tab3">3</a>, Pair 4) have also highlighted the benefits of stereovision in virtual assembly environments. In contrast to the real world, scalability is not an issue in virtual environments and subtle design alterations; even at micro level, it can be simulated when augmented with haptic feedback.</p><p>The peg-in-hole tests have also highlighted several areas of the HAMMS system that need to be improved. One such area is the damping affect caused by integrating various virtual engines. More efficient memory management and thread synchronization will be necessary to provide users with a better experience.</p><p>The subjective data on HAMMS system performance also indicates that the intuitive nature of such tools for product interaction, which combine more than one of the senses in an engineering experience, augers well for the future development of virtual engineering systems. Therefore, it can be tentatively concluded that emerging haptic technologies will lead to the creation of natural and intuitive computer-based product engineering tools that allow a tactile experience through a combination of vision and touch.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Amirabdollahian F, Gomes GT, Johnson GR (2005) The peg-in-hole: a VR-based haptic assessment for quantifying u" /><p class="c-article-references__text" id="ref-CR1">Amirabdollahian F, Gomes GT, Johnson GR (2005) The peg-in-hole: a VR-based haptic assessment for quantifying upper limb performance and skills. In: Proceedings of the 9th IEEE international conference on rehabilitation robotics, pp 422–425</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bashir AB, Bicker R, Taylor PM (2004) An investigation into different visual/tactual feedback modes for a virt" /><p class="c-article-references__text" id="ref-CR2">Bashir AB, Bicker R, Taylor PM (2004) An investigation into different visual/tactual feedback modes for a virtual object manipulation task. In: Proceedings of the ACM SIGGRAPH international conference on virtual reality continuum and its applications in industry, pp 359–362</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Boothroyd G, Dewhurst P, Knight W (2002) Product design for manufacture and assembly, 2nd edn. ISBN 0-8247-058" /><p class="c-article-references__text" id="ref-CR3">Boothroyd G, Dewhurst P, Knight W (2002) Product design for manufacture and assembly, 2nd edn. ISBN 0-8247-0584-X</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Brooke J (1996) SUS—a quick and dirty usability scale. Redhatch Consulting Ltd., 12 Beaconsfield Way, Earley, " /><p class="c-article-references__text" id="ref-CR4">Brooke J (1996) SUS—a quick and dirty usability scale. Redhatch Consulting Ltd., 12 Beaconsfield Way, Earley, Reading RG62UX, UK</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="S. Caselli, C. Magnanini, F. Zanichelli, E. Caraffi, " /><meta itemprop="datePublished" content="1996" /><meta itemprop="headline" content="Caselli S, Magnanini C, Zanichelli F, Caraffi E (1996) Efficient exploration and recognition of convex objects" /><p class="c-article-references__text" id="ref-CR5">Caselli S, Magnanini C, Zanichelli F, Caraffi E (1996) Efficient exploration and recognition of convex objects based on haptic perception. Proc IEEE Int Conf Robot Autom 4:3508–3513</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 5 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Efficient%20exploration%20and%20recognition%20of%20convex%20objects%20based%20on%20haptic%20perception.&amp;journal=Proc%20IEEE%20Int%20Conf%20Robot%20Autom&amp;volume=4&amp;pages=3508-3513&amp;publication_year=1996&amp;author=Caselli%2CS&amp;author=Magnanini%2CC&amp;author=Zanichelli%2CF&amp;author=Caraffi%2CE">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="PM. Fitts, " /><meta itemprop="datePublished" content="1954" /><meta itemprop="headline" content="Fitts PM (1954) The information capacity of human motor systems in controlling the amplitude of a movement. J " /><p class="c-article-references__text" id="ref-CR6">Fitts PM (1954) The information capacity of human motor systems in controlling the amplitude of a movement. J Exp Psychol 47:381–391</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1037%2Fh0055392" aria-label="View reference 6">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 6 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=The%20information%20capacity%20of%20human%20motor%20systems%20in%20controlling%20the%20amplitude%20of%20a%20movement&amp;journal=J%20Exp%20Psychol&amp;volume=47&amp;pages=381-391&amp;publication_year=1954&amp;author=Fitts%2CPM">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Gerovichev O, Marayong P, Okamura AM (2002) The effect of visual and haptic feedback on manual and teleoperate" /><p class="c-article-references__text" id="ref-CR7">Gerovichev O, Marayong P, Okamura AM (2002) The effect of visual and haptic feedback on manual and teleoperated needle insertion. In: Proceedings of the 5th international conference on medical image computing and computer-assisted intervention, Part I, vol 2488, pp 147–154</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Gosset, William Sealy 1876-1937 (1970). In: Pearson ES, Kendall MG (eds) Studies in the history of statistics " /><p class="c-article-references__text" id="ref-CR8">Gosset, William Sealy 1876-1937 (1970). In: Pearson ES, Kendall MG (eds) Studies in the history of statistics and probability, pp 355–404</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="R. Gupta, D. Whitney, D. Zeltzer, " /><meta itemprop="datePublished" content="1997" /><meta itemprop="headline" content="Gupta R, Whitney D, Zeltzer D (1997) Prototyping and design for assembly analysis using multimodal virtual env" /><p class="c-article-references__text" id="ref-CR9">Gupta R, Whitney D, Zeltzer D (1997) Prototyping and design for assembly analysis using multimodal virtual environments. CAD 29(8):585–597</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 9 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Prototyping%20and%20design%20for%20assembly%20analysis%20using%20multimodal%20virtual%20environments&amp;journal=CAD&amp;volume=29&amp;issue=8&amp;pages=585-597&amp;publication_year=1997&amp;author=Gupta%2CR&amp;author=Whitney%2CD&amp;author=Zeltzer%2CD">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Haeusler J (1981) Design for assembly—state-of-the-art. In: Proceedings of the 2nd international conference on" /><p class="c-article-references__text" id="ref-CR10">Haeusler J (1981) Design for assembly—state-of-the-art. In: Proceedings of the 2nd international conference on assembly automation, Brighton, pp 109–128. ISBN 0903608162</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Hara K, Yokogawa R, Kai Y (1997) Evaluation of task-performance of a manipulator for a peg-in-hole task. In: P" /><p class="c-article-references__text" id="ref-CR11">Hara K, Yokogawa R, Kai Y (1997) Evaluation of task-performance of a manipulator for a peg-in-hole task. In: Proceedings of IEEE international conference on robotics and automation, Albuquerque, New Mexico, pp 600–605</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Ho C, Boothroyd G (1979) Design of chamfers for ease of assembly. In: Proceedings of the 7th manuf eng trans N" /><p class="c-article-references__text" id="ref-CR12">Ho C, Boothroyd G (1979) Design of chamfers for ease of assembly. In: Proceedings of the 7th manuf eng trans North AME metalwork res conf, pp 345–354</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="T. Johan, W. Jan, " /><meta itemprop="datePublished" content="2005" /><meta itemprop="headline" content="Johan T, Jan W (2005) Tactile sensing in intelligent robotic manipulation—a review. Ind Robot 32/1:64–70" /><p class="c-article-references__text" id="ref-CR13">Johan T, Jan W (2005) Tactile sensing in intelligent robotic manipulation—a review. Ind Robot 32/1:64–70</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 13 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Tactile%20sensing%20in%20intelligent%20robotic%20manipulation%E2%80%94a%20review&amp;journal=Ind%20Robot&amp;volume=32%2F1&amp;pages=64-70&amp;publication_year=2005&amp;author=Johan%2CT&amp;author=Jan%2CW">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Kim IW, Lim DJ, Kim KI (1999) Active peg-in-hole of chamferless parts using force/moment sensor. In: Proceedin" /><p class="c-article-references__text" id="ref-CR14">Kim IW, Lim DJ, Kim KI (1999) Active peg-in-hole of chamferless parts using force/moment sensor. In: Proceedings of the IEEE/RSJ international conference on intelligent robots and systems, pp 948–953</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Lim T, Dewar R, Calis M, Ritchie JM, Corney JR, Desmulliez M (2006) A structural assessment of haptic-based as" /><p class="c-article-references__text" id="ref-CR15">Lim T, Dewar R, Calis M, Ritchie JM, Corney JR, Desmulliez M (2006) A structural assessment of haptic-based assembly processes. In: 1st international virtual manufacturing workshop (VirMan’06), 26 March 2006, Virginia, USA, vol 29</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Massie T, Salisbury K (1994) The PHANTom haptic interface: a device for probing virtual objects. ASME Winter A" /><p class="c-article-references__text" id="ref-CR16">Massie T, Salisbury K (1994) The PHANTom haptic interface: a device for probing virtual objects. ASME Winter Annual Meeting, DSC, vol 55-1, pp 295–300</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="MJ. Massimo, TB. Sheridan, " /><meta itemprop="datePublished" content="1993" /><meta itemprop="headline" content="Massimo MJ, Sheridan TB (1993) Sensory substitution for force feedback in teleoperation. Presence Teleoper Vir" /><p class="c-article-references__text" id="ref-CR17">Massimo MJ, Sheridan TB (1993) Sensory substitution for force feedback in teleoperation. Presence Teleoper Virtual Environ 2(4):344–352</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 17 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Sensory%20substitution%20for%20force%20feedback%20in%20teleoperation&amp;journal=Presence%20Teleoper%20Virtual%20Environ&amp;volume=2&amp;issue=4&amp;pages=344-352&amp;publication_year=1993&amp;author=Massimo%2CMJ&amp;author=Sheridan%2CTB">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Okamura AM, Turner ML, Cutkosky MR (1997) Haptic exploration of objects with rolling and sliding. IEEE interna" /><p class="c-article-references__text" id="ref-CR18">Okamura AM, Turner ML, Cutkosky MR (1997) Haptic exploration of objects with rolling and sliding. IEEE international conference on robotics and automation, Albuquerque, New Mexico, pp 2485–2490</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Rosenberg, LB (1993) Virtual fixtures: perceptual tools for telerobotic manipulation. In: IEEE virtual reality" /><p class="c-article-references__text" id="ref-CR19">Rosenberg, LB (1993) Virtual fixtures: perceptual tools for telerobotic manipulation. In: IEEE virtual reality annual international symposium, pp 76–82</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Rosenberg L (1994) Virtual fixtures. PhD Dissertation, Stanford University" /><p class="c-article-references__text" id="ref-CR20">Rosenberg L (1994) Virtual fixtures. PhD Dissertation, Stanford University</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Sener B, Wormald P, Campbell I (2002) Evaluating a haptic modelling system with industrial designers. In: Proc" /><p class="c-article-references__text" id="ref-CR21">Sener B, Wormald P, Campbell I (2002) Evaluating a haptic modelling system with industrial designers. In: Proceedings of the EuroHaptics international conference, Edinburgh, Scotland, pp 165–170</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="TB. Sheridan, " /><meta itemprop="datePublished" content="1992" /><meta itemprop="headline" content="Sheridan TB (1992) Telerobotics, automation and human supervisory control. MIT Press, Cambridge" /><p class="c-article-references__text" id="ref-CR22">Sheridan TB (1992) Telerobotics, automation and human supervisory control. MIT Press, Cambridge</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 22 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Telerobotics%2C%20automation%20and%20human%20supervisory%20control&amp;publication_year=1992&amp;author=Sheridan%2CTB">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Unger BJ, Nicoladis A, Berkelman PJ, Thompson A, Klatzky RL, Hollis RL (2001) Comparison of 3-D haptic peg-in-" /><p class="c-article-references__text" id="ref-CR23">Unger BJ, Nicoladis A, Berkelman PJ, Thompson A, Klatzky RL, Hollis RL (2001) Comparison of 3-D haptic peg-in-hole tasks in real and virtual environments. In: Proceedings of the IEEE/RSJ international conference on intelligent robots and systems, pp 1751–1756</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Yoshikawa T, Kawai M, Yoshimoto K (2003) Toward observation of human assembly skill using virtual task space. " /><p class="c-article-references__text" id="ref-CR24">Yoshikawa T, Kawai M, Yoshimoto K (2003) Toward observation of human assembly skill using virtual task space. Experimental Robotics VIII, STAR 5, pp 540–549</p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-007-0072-8-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><div class="c-article-section__content" id="Ack1-content"></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">Scottish Manufacturing Institute, Heriot-Watt University, Riccarton, Edinburgh, EH14 4AS, Scotland, UK</p><p class="c-article-author-affiliation__authors-list">T. Lim, J. M. Ritchie, R. G. Dewar, J. R. Corney, P. Wilkinson, M. Calis &amp; M. Desmulliez</p></li><li id="Aff2"><p class="c-article-author-affiliation__address">Department of Mechanical Engineering, National Cheng Kung University, Tainan, Taiwan</p><p class="c-article-author-affiliation__authors-list">J.-J. Fang</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-T_-Lim"><span class="c-article-authors-search__title u-h3 js-search-name">T. Lim</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;T.+Lim&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=T.+Lim" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22T.+Lim%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-J__M_-Ritchie"><span class="c-article-authors-search__title u-h3 js-search-name">J. M. Ritchie</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;J. M.+Ritchie&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=J. M.+Ritchie" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22J. M.+Ritchie%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-R__G_-Dewar"><span class="c-article-authors-search__title u-h3 js-search-name">R. G. Dewar</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;R. G.+Dewar&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=R. G.+Dewar" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22R. G.+Dewar%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-J__R_-Corney"><span class="c-article-authors-search__title u-h3 js-search-name">J. R. Corney</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;J. R.+Corney&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=J. R.+Corney" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22J. R.+Corney%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-P_-Wilkinson"><span class="c-article-authors-search__title u-h3 js-search-name">P. Wilkinson</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;P.+Wilkinson&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=P.+Wilkinson" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22P.+Wilkinson%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-M_-Calis"><span class="c-article-authors-search__title u-h3 js-search-name">M. Calis</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;M.+Calis&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=M.+Calis" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22M.+Calis%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-M_-Desmulliez"><span class="c-article-authors-search__title u-h3 js-search-name">M. Desmulliez</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;M.+Desmulliez&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=M.+Desmulliez" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22M.+Desmulliez%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-J__J_-Fang"><span class="c-article-authors-search__title u-h3 js-search-name">J.-J. Fang</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;J.-J.+Fang&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=J.-J.+Fang" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22J.-J.+Fang%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-007-0072-8/email/correspondent/c1/new">T. Lim</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=Factors%20affecting%20user%20performance%20in%20haptic%20assembly&amp;author=T.%20Lim%20et%20al&amp;contentID=10.1007%2Fs10055-007-0072-8&amp;publication=1359-4338&amp;publicationDate=2007-04-24&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Lim, T., Ritchie, J.M., Dewar, R.G. <i>et al.</i> Factors affecting user performance in haptic assembly.
+                    <i>Virtual Reality</i> <b>11, </b>241–252 (2007). https://doi.org/10.1007/s10055-007-0072-8</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-007-0072-8.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2006-07-28">28 July 2006</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2007-02-20">20 February 2007</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2007-04-24">24 April 2007</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2007-10">October 2007</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-007-0072-8" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-007-0072-8</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Haptic assembly</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Human–computer Interaction</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Human factors</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Design for assembly</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Peg-in-hole metrics</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Virtual reality</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-007-0072-8.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=72;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="Structure and motion in urban environments using upright panoramas"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="Image-based modeling of urban environments is a key component of enabling outdoor, vision-based augmented reality applications. The images used for modeling may come from off-line efforts, or..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/17/2.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="Structure and motion in urban environments using upright panoramas"/>
+
+    <meta name="dc.source" content="Virtual Reality 2012 17:2"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2012-02-12"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2012 Springer-Verlag London Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="Image-based modeling of urban environments is a key component of enabling outdoor, vision-based augmented reality applications. The images used for modeling may come from off-line efforts, or online user contributions. Panoramas have been used extensively in mapping cities and can be captured quickly by an end-user with a mobile phone. In this paper, we describe and evaluate a reconstruction pipeline for upright panoramas taken in an urban environment. We first describe how panoramas can be aligned to a common vertical orientation using vertical vanishing point detection, which we show to be robust for a range of inputs. The orientation sensors in modern cameras can also be used to correct the vertical orientation. Secondly, we introduce a pose estimation algorithm, which uses knowledge of a common vertical orientation as a simplifying constraint. This procedure is shown to reduce pose estimation error in comparison with the state of the art. Finally, we evaluate our reconstruction pipeline with several real-world examples."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2012-02-12"/>
+
+    <meta name="prism.volume" content="17"/>
+
+    <meta name="prism.number" content="2"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="147"/>
+
+    <meta name="prism.endingPage" content="156"/>
+
+    <meta name="prism.copyright" content="2012 Springer-Verlag London Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-012-0208-3"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-012-0208-3"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-012-0208-3.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-012-0208-3"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="Structure and motion in urban environments using upright panoramas"/>
+
+    <meta name="citation_volume" content="17"/>
+
+    <meta name="citation_issue" content="2"/>
+
+    <meta name="citation_publication_date" content="2013/06"/>
+
+    <meta name="citation_online_date" content="2012/02/12"/>
+
+    <meta name="citation_firstpage" content="147"/>
+
+    <meta name="citation_lastpage" content="156"/>
+
+    <meta name="citation_article_type" content="SI: Mixed and Augmented Reality"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-012-0208-3"/>
+
+    <meta name="DOI" content="10.1007/s10055-012-0208-3"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-012-0208-3"/>
+
+    <meta name="description" content="Image-based modeling of urban environments is a key component of enabling outdoor, vision-based augmented reality applications. The images used for modelin"/>
+
+    <meta name="dc.creator" content="Jonathan Ventura"/>
+
+    <meta name="dc.creator" content="Tobias H&#246;llerer"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Int J Comput Vis; citation_title=Scalable extrinsic calibration of omni-directional image networks; citation_author=M Antone, S Teller; citation_volume=49; citation_publication_date=2002; citation_pages=143-174; citation_doi=10.1023/A:1020141505696; citation_id=CR1"/>
+
+    <meta name="citation_reference" content="citation_title=Handling urban location recognition as a 2d homothetic problem; citation_inbook_title=Computer vision&#8212;ECCV 2010, lecture notes in computer science; citation_publication_date=2010; citation_pages=266-279; citation_id=CR2; citation_author=G Baatz; citation_author=K K&#246;ser; citation_author=D Chen; citation_author=R Grzeszczuk; citation_author=M Pollefeys; citation_publisher=Springer"/>
+
+    <meta name="citation_reference" content="Fraundorfer F, Tanskanen P, Pollefeys M (2010) A minimal case solution to the calibrated relative pose problem for the case of two known orientation angles. In: Proceedings of the 11th European conference on computer vision: part IV, ECCV&#8217;10, Springer, Berlin, pp 269&#8211;282"/>
+
+    <meta name="citation_reference" content="Gallagher AC (2005) Using vanishing points to correct camera rotation in images. In: Proceedings of the 2nd Canadian conference on computer and robot vision, CRV &#8217;05, IEEE Computer Society, Washington, pp 460&#8211;467"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Int J Comput Vis; citation_title=Review and analysis of solutions of the three point perspective pose estimation problem; citation_author=RM Haralick, CN Lee, K Ottenberg, M N&#246;lle; citation_volume=13; citation_publication_date=1994; citation_pages=331-356; citation_doi=10.1007/BF02028352; citation_id=CR5"/>
+
+    <meta name="citation_reference" content="Hartley RI, Zisserman A (2004) Multiple view geometry in computer vision, 2nd edn. Cambridge University Press, ISBN: 0521540518"/>
+
+    <meta name="citation_reference" content="citation_journal_title=J Opt Soc Am; citation_title=Closed-form solution of absolute orientation using orthonormal matrices; citation_author=BKP Horn, H Hilden, S Negahdaripour; citation_volume=5; citation_issue=7; citation_publication_date=1988; citation_pages=1127-1135; citation_doi=10.1364/JOSAA.5.001127; citation_id=CR7"/>
+
+    <meta name="citation_reference" content="Kosecka J, Zhang W (2002) Video compass. In: Proceedings of the 7th European conference on computer vision-part IV, ECCV &#8217;02, Springer, London, pp 476&#8211;490"/>
+
+    <meta name="citation_reference" content="Kukelova Z, Bujnak M, Pajdla T (2011) Closed-form solutions to minimal absolute pose problems with known vertical direction. In: Computer vision&#8212;ACCV 2010, lecture notes in computer science, vol 6493, pp 216&#8211;229"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Int J Comput Vis; citation_title=Epnp: An accurate o(n) solution to the pnp problem; citation_author=V Lepetit, F Moreno-Noguer, P Fua; citation_volume=81; citation_publication_date=2009; citation_pages=155-166; citation_doi=10.1007/s11263-008-0152-6; citation_id=CR10"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Int J Comput Vis; citation_title=Distinctive image features from scale-invariant keypoints; citation_author=DG Lowe; citation_volume=60; citation_publication_date=2004; citation_pages=91-110; citation_doi=10.1023/B:VISI.0000029664.99615.94; citation_id=CR11"/>
+
+    <meta name="citation_reference" content="Micusik B, Kosecka J (2009) Piecewise planar city 3d modeling from street view panoramic sequences. IEEE Conference on computer vision and pattern recognition (CVPR), Miami, USA, pp 2906&#8211;2912"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Trans Pattern Anal Mach Intell; citation_title=An efficient solution to the five-point relative pose problem; citation_author=D Nist&#233;r; citation_volume=26; citation_publication_date=2004; citation_pages=756-777; citation_doi=10.1109/TPAMI.2004.17; citation_id=CR13"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Int J Comput Vis; citation_title=Detailed real-time urban 3d reconstruction from video; citation_author=M Pollefeys, D Nist&#233;r, JM Frahm, A Akbarzadeh, P Mordohai, B Clipp, C Engels, D Gallup, SJ Kim, P Merrell, C Salmi, S Sinha, B Talton, L Wang, Q Yang, H Stew&#233;nius, R Yang, G Welch, H Towles; citation_volume=78; citation_publication_date=2008; citation_pages=143-167; citation_doi=10.1007/s11263-007-0086-4; citation_id=CR14"/>
+
+    <meta name="citation_reference" content="Robertson D, Cipolla R (2004) An image-based system for urban navigation. In: British machine vision conference, pp 819&#8211;828"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Image Vis Comput; citation_title=A new approach to vanishing point detection in architectural environments; citation_author=C Rother; citation_volume=20; citation_issue=9-10; citation_publication_date=2002; citation_pages=647-655; citation_doi=10.1016/S0262-8856(02)00054-9; citation_id=CR16"/>
+
+    <meta name="citation_reference" content="Snavely N, Seitz SM, Szeliski R (2006) Photo tourism: exploring photo collections in 3d. In: ACM SIGGRAPH 2006 papers, SIGGRAPH &#8217;06, ACM, New York, pp 835&#8211;846"/>
+
+    <meta name="citation_reference" content="Tardif JP, Pavlidis Y, Daniilidis K (2008) Monocular visual odometry in urban environments using an omnidirectional camera. In: IROS&#8217;08, pp 2531&#8211;2538"/>
+
+    <meta name="citation_reference" content="Torii A, Havlena M, Pajdla T (2009) From google street view to 3d city models. In: Computer vision workshops (ICCV Workshops), 2009 IEEE 12th international conference on 2009"/>
+
+    <meta name="citation_reference" content="Werner T, Pajdla T (2001) Cheirality in epipolar geometry. Computer vision, IEEE international conference on 1: 548"/>
+
+    <meta name="citation_author" content="Jonathan Ventura"/>
+
+    <meta name="citation_author_email" content="jventura@cs.ucsb.edu"/>
+
+    <meta name="citation_author_institution" content="Department of Computer Science, University of California, Santa Barbara, USA"/>
+
+    <meta name="citation_author" content="Tobias H&#246;llerer"/>
+
+    <meta name="citation_author_institution" content="Department of Computer Science, University of California, Santa Barbara, USA"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-012-0208-3&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2013/06/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-012-0208-3"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="Structure and motion in urban environments using upright panoramas"/>
+        <meta property="og:description" content="Image-based modeling of urban environments is a key component of enabling outdoor, vision-based augmented reality applications. The images used for modeling may come from off-line efforts, or online user contributions. Panoramas have been used extensively in mapping cities and can be captured quickly by an end-user with a mobile phone. In this paper, we describe and evaluate a reconstruction pipeline for upright panoramas taken in an urban environment. We first describe how panoramas can be aligned to a common vertical orientation using vertical vanishing point detection, which we show to be robust for a range of inputs. The orientation sensors in modern cameras can also be used to correct the vertical orientation. Secondly, we introduce a pose estimation algorithm, which uses knowledge of a common vertical orientation as a simplifying constraint. This procedure is shown to reduce pose estimation error in comparison with the state of the art. Finally, we evaluate our reconstruction pipeline with several real-world examples."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>Structure and motion in urban environments using upright panoramas | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-012-0208-3","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Structure and motion, Urban environments, Panoramas","kwrd":["Structure_and_motion","Urban_environments","Panoramas"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-012-0208-3","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-012-0208-3","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-5663397ef2.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-177af7d19e.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=208;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-012-0208-3">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            Structure and motion in urban environments using upright panoramas
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-012-0208-3.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-012-0208-3.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">SI: Mixed and Augmented Reality</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2012-02-12" itemprop="datePublished">12 February 2012</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">Structure and motion in urban environments using upright panoramas</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Jonathan-Ventura" data-author-popup="auth-Jonathan-Ventura" data-corresp-id="c1">Jonathan Ventura<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of California" /><meta itemprop="address" content="grid.133342.4, 0000000419369676, Department of Computer Science, University of California, Santa Barbara, CA, 93106-5110, USA" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Tobias-H_llerer" data-author-popup="auth-Tobias-H_llerer">Tobias Höllerer</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of California" /><meta itemprop="address" content="grid.133342.4, 0000000419369676, Department of Computer Science, University of California, Santa Barbara, CA, 93106-5110, USA" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 17</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">147</span>–<span itemprop="pageEnd">156</span>(<span data-test="article-publication-year">2013</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">327 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">6 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                    
+                        <li class="c-article-metrics-bar__item">
+                            <p class="c-article-metrics-bar__count">0 <span class="c-article-metrics-bar__label">Altmetric</span></p>
+                        </li>
+                    
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-012-0208-3/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>Image-based modeling of urban environments is a key component of enabling outdoor, vision-based augmented reality applications. The images used for modeling may come from off-line efforts, or online user contributions. Panoramas have been used extensively in mapping cities and can be captured quickly by an end-user with a mobile phone. In this paper, we describe and evaluate a reconstruction pipeline for upright panoramas taken in an urban environment. We first describe how panoramas can be aligned to a common vertical orientation using vertical vanishing point detection, which we show to be robust for a range of inputs. The orientation sensors in modern cameras can also be used to correct the vertical orientation. Secondly, we introduce a pose estimation algorithm, which uses knowledge of a common vertical orientation as a simplifying constraint. This procedure is shown to reduce pose estimation error in comparison with the state of the art. Finally, we evaluate our reconstruction pipeline with several real-world examples.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Introduction</h2><div class="c-article-section__content" id="Sec1-content"><p>In this paper, we consider the problem of image-based modeling with the constraint that all cameras have zero pitch and roll. We call this the ‘upright constraint.’ This constraint applies in two interesting scenarios for the creation of urban models for virtual environments. Firstly, panoramic captures of urban environments are typically made using a camera mounted above a moving platform, which ensures that the images are roughly upright most of the time. Secondly, modern smartphones include orientation sensors for determining the pitch and roll of the camera, which can then be removed from the image. Images captured by an outdoor augmented reality user, for example, can be rotated to upright using these sensors. We show in this paper that in either case, the upright constraint can be used to improve the robustness of structure from motion with panoramic imagery.</p><p>We show in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-012-0208-3#Sec4">4</a> how images that are approximately upright can be aligned to a common vertical orientation using vanishing point detection. We provide an evaluation of vanishing point detection on spherical panoramas, which have distorted line segments. Our evaluation shows that our method is typically accurate to 1° in spite of this distortion.</p><p>We also developed a novel algorithm for absolute pose estimation with the upright constraint (Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-012-0208-3#Sec5">5</a>). In comparison with the state of the art, our algorithm produces less estimation error in the face of image noise and is simpler to compute. This makes our method an attractive option for model-based tracking in outdoor augmented reality.</p><p>The image alignment and structure from motion procedures we describe can be combined into a reconstruction pipeline for urban environment modeling from panoramas (Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-012-0208-3#Sec9">6</a>). We prepared several test sequences to evaluate this pipeline, both using a camera on a tripod and using a handheld smartphone. We show that our methods lead to reconstructions with little drift for small datasets, even without bundle adjustment (Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-012-0208-3#Sec12">7</a>).</p><p>Algorithm <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-012-0208-3#Tab1">1</a> gives an overview description of the main steps in our approach to reconstructing urban environments from panoramas.</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-1"><figure><figcaption class="c-article-table__figcaption"><b id="Tab1" data-test="table-caption">Algorithm 1 Structure and motion from panoramas</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-012-0208-3/tables/1"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+              </div></div></section><section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">Related work</h2><div class="c-article-section__content" id="Sec2-content"><p>Vanishing point detection is a well-studied problem, and several robust methods have been proposed. Rother’s work (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Rother C (2002) A new approach to vanishing point detection in architectural environments. Image Vis Comput 20(9-10):647–655" href="/article/10.1007/s10055-012-0208-3#ref-CR16" id="ref-link-section-d72079e399">2002</a>) provides a good overview of approaches to the problem, which are generally based on either the Hough transform, RANSAC, or exhaustive search. In the context of image-based modeling, Antone and Teller (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Antone M, Teller S (2002) Scalable extrinsic calibration of omni-directional image networks. Int J Comput Vis 49:143–174" href="/article/10.1007/s10055-012-0208-3#ref-CR1" id="ref-link-section-d72079e402">2002</a>) used vanishing point detection on hemi-spherical images and matched between capture points to completely determine relative orientations. In our pipeline, we independently correct the orientation of each panorama to a common vertical and then use structure from motion methods to resolve the unknown yaw between cameras. This has the advantage that images can be pre-processed in parallel to bring them to a common orientation. The vertical and horizontal vanishing point can also be used to determine a homography, which rectifies the image of a building facade. This simplifies building recognition and the camera pose estimation (Baatz et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2010" title="Baatz G, Köser K, Chen D, Grzeszczuk R, Pollefeys M (2010) Handling urban location recognition as a 2d homothetic problem. In: Daniilidis K, Maragos P, Paragios N (eds) Computer vision—ECCV 2010, lecture notes in computer science, Springer, Berlin, pp 266–279" href="/article/10.1007/s10055-012-0208-3#ref-CR2" id="ref-link-section-d72079e405">2010</a>; Robertson and Cipolla <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Robertson D, Cipolla R (2004) An image-based system for urban navigation. In: British machine vision conference, pp 819–828" href="/article/10.1007/s10055-012-0208-3#ref-CR15" id="ref-link-section-d72079e408">2004</a>). However, in the case of significant occlusions, it may not be possible to reliably extract both vanishing points. The procedure described by Gallagher (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Gallagher AC (2005) Using vanishing points to correct camera rotation in images. In: Proceedings of the 2nd Canadian conference on computer and robot vision, CRV ’05, IEEE Computer Society, Washington, pp 460–467" href="/article/10.1007/s10055-012-0208-3#ref-CR4" id="ref-link-section-d72079e411">2005</a>) also used vertical vanishing point detection to correct for image roll, but did not compensate for both pitch and roll as is done here.</p><p>Much previous work has focused on urban modeling with images taken from a moving platform (Pollefeys et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Pollefeys M, Nistér D, Frahm JM, Akbarzadeh A, Mordohai P, Clipp B, Engels C, Gallup D, Kim SJ, Merrell P, Salmi C, Sinha S, Talton B, Wang L, Yang Q, Stewénius H, Yang R, Welch G, Towles H (2008) Detailed real-time urban 3d reconstruction from video. Int J Comput Vis 78:143–167" href="/article/10.1007/s10055-012-0208-3#ref-CR14" id="ref-link-section-d72079e417">2008</a>; Micusik and Kosecka <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Micusik B, Kosecka J (2009) Piecewise planar city 3d modeling from street view panoramic sequences. IEEE Conference on computer vision and pattern recognition (CVPR), Miami, USA, pp 2906–2912" href="/article/10.1007/s10055-012-0208-3#ref-CR12" id="ref-link-section-d72079e420">2009</a>; Torii et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Torii A, Havlena M, Pajdla T (2009) From google street view to 3d city models. In: Computer vision workshops (ICCV Workshops), 2009 IEEE 12th international conference on 2009" href="/article/10.1007/s10055-012-0208-3#ref-CR19" id="ref-link-section-d72079e423">2009</a>) or from community photo collections (Snavely et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Snavely N, Seitz SM, Szeliski R (2006) Photo tourism: exploring photo collections in 3d. In: ACM SIGGRAPH 2006 papers, SIGGRAPH ’06, ACM, New York, pp 835–846" href="/article/10.1007/s10055-012-0208-3#ref-CR17" id="ref-link-section-d72079e426">2006</a>). Here, we examine how the reconstruction problem is made simpler and more robust by using the upright constraint on camera poses. Previously, knowledge of two orientation angles has been used to constrain relative pose estimation (Fraundorfer et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2010" title="Fraundorfer F, Tanskanen P, Pollefeys M (2010) A minimal case solution to the calibrated relative pose problem for the case of two known orientation angles. In: Proceedings of the 11th European conference on computer vision: part IV, ECCV’10, Springer, Berlin, pp 269–282" href="/article/10.1007/s10055-012-0208-3#ref-CR3" id="ref-link-section-d72079e429">2010</a>). This special case leads to a simplified essential matrix that can be estimated using three-point correspondences at minimum, as opposed to the standard five-point algorithm (Nisté <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Nistér D (2004) An efficient solution to the five-point relative pose problem. IEEE Trans Pattern Anal Mach Intell 26:756–777" href="/article/10.1007/s10055-012-0208-3#ref-CR13" id="ref-link-section-d72079e433">2004</a>). Constrained absolute pose estimation has also been studied previously, leading to a minimal solution using two-point correspondences (Kukelova et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2011" title="Kukelova Z, Bujnak M, Pajdla T (2011) Closed-form solutions to minimal absolute pose problems with known vertical direction. In: Computer vision—ACCV 2010, lecture notes in computer science, vol 6493, pp 216–229" href="/article/10.1007/s10055-012-0208-3#ref-CR9" id="ref-link-section-d72079e436">2011</a>). In this work, we demonstrate a novel linear estimation algorithm for constrained absolute pose, which permits an overdetermined solution. The overdetermined solution is important when dealing with noisy measurements. Our evaluations show our algorithm to be more robust to image noise than current methods.</p></div></div></section><section aria-labelledby="Sec3"><div class="c-article-section" id="Sec3-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec3">Panoramic projection</h2><div class="c-article-section__content" id="Sec3-content"><p>Standard computer vision makes use of perspective projection, which maps a point in 3D space <span class="mathjax-tex">\(\mathbf{X}=[X\, Y\, Z\, 1]^T\)</span> to image coordinates (<i>x</i>, <i>y</i>) by projecting points onto the plane <i>Z</i> = 1:</p><div id="Equ1" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ x = \frac{X}{Z} $$</span></div><div class="c-article-equation__number">
+                    (1)
+                </div></div>
+                <div id="Equ2" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ y = \frac{Y}{Z} $$</span></div><div class="c-article-equation__number">
+                    (2)
+                </div></div>
+              <p>Perspective projection is not suitable for panoramic images, because of the singularity at <i>Z</i> = 0, and the fact that <span class="mathjax-tex">\(\mathbf{X}\)</span> and <span class="mathjax-tex">\(-\mathbf{X}\)</span> map to the same point. In this paper, we consider the equirectangular or spherical projection, where we project points onto the unit sphere (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-012-0208-3#Fig1">1</a>). The image is parameterized by the two angles θ and ϕ describing the ray from the origin to the point:</p><div id="Equ3" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ \theta = \rm{tan}^{-1}\left(\frac{X}{Z}\right) $$</span></div><div class="c-article-equation__number">
+                    (3)
+                </div></div>
+                <div id="Equ4" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ \phi = \rm{sin}^{-1}\left(\frac{Y}{||{\mathbf{X}}||}\right) $$</span></div><div class="c-article-equation__number">
+                    (4)
+                </div></div><p>Alternatively, the cylindrical projection can be used, which limits the vertical field of view but lessens compression of the image. Given coordinates (θ, ϕ) in the panoramic image, we can invert the projection to acquire the point where the sampled ray intersects the unit sphere.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-012-0208-3/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-012-0208-3/MediaObjects/10055_2012_208_Fig1_HTML.gif?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-012-0208-3/MediaObjects/10055_2012_208_Fig1_HTML.gif" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p>
+                        <b>a</b> Illustration of spherical projection. <b>b</b> mapping from angles to the 2D image</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-012-0208-3/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+              <p>We note that line segments in 3D space project to arcs on the unit sphere (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-012-0208-3#Fig2">2</a>). Given two end points <span class="mathjax-tex">\(\mathbf{x}_1\)</span> and <span class="mathjax-tex">\(\mathbf{x}_2\)</span> in homogeneous coordinates, the infinite line connecting them can be found using the cross-product.</p><div id="Equ5" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ {\mathbf{l}} = {\mathbf{x}}_1\times{\mathbf{x}}_2 $$</span></div><div class="c-article-equation__number">
+                    (5)
+                </div></div><p>This line represents a great circle on the sphere. The intersection point of two lines can be found also by using the cross-product.</p><div id="Equ6" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ {\mathbf{x}}={\mathbf{l}}_1\times {\mathbf{l}}_2 $$</span></div><div class="c-article-equation__number">
+                    (6)
+                </div></div><p>On the sphere, the second intersection point lies at <span class="mathjax-tex">\(-\mathbf{x}. \)</span> For parallel lines in 3D space, the intersection point maps to the vanishing point in the image (which may lie at infinity).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-012-0208-3/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-012-0208-3/MediaObjects/10055_2012_208_Fig2_HTML.gif?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-012-0208-3/MediaObjects/10055_2012_208_Fig2_HTML.gif" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p>Lines in 3D space project to arcs on the<i> sphere</i>. We find their intersection point by extending the arcs to great<i> circles</i>
+                      </p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-012-0208-3/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+              <p>The angular distance on the sphere between a point and a line is given by:</p><div id="Equ7" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ d({\mathbf{l}},{\mathbf{x}}) = \rm{sin}^{-1}({\mathbf{l}}\cdot{\mathbf{x}}) $$</span></div><div class="c-article-equation__number">
+                    (7)
+                </div></div><p>assuming that <span class="mathjax-tex">\(\mathbf{l}\)</span> and <span class="mathjax-tex">\(\mathbf{x}\)</span> have unit length.</p></div></div></section><section aria-labelledby="Sec4"><div class="c-article-section" id="Sec4-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec4">Rectification</h2><div class="c-article-section__content" id="Sec4-content"><p>We observe that with either perspective, spherical or cylindrical projection, vertically straight edges in 3D space are projected to vertical lines in image space. In other words, line segments where <i>X</i> and <i>Z</i> are constant project to imaged lines where <i>x</i> or θ is constant. Thus, we can bring any suitable image to a common upright orientation by rotating the projected lines to be vertically straight. Note that this is a 3D rotation that corrects for both pitch and roll. This rotation is equivalent to aligning the vertical axis of the camera with the vertical axis of the scene.</p><p>Using the spherical or cylindrical projection, non-vertical lines will appear curved. However, the distortion increases as the camera is rotated away from vertical. We make the assumption that the camera’s orientation is upright enough that we can still detect straight lines to be rectified.</p><p>We first detect lines using the method of Kosecka and Zhang (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Kosecka J, Zhang W (2002) Video compass. In: Proceedings of the 7th European conference on computer vision-part IV, ECCV ’02, Springer, London, pp 476–490" href="/article/10.1007/s10055-012-0208-3#ref-CR8" id="ref-link-section-d72079e728">2002</a>), which extracts Canny edges thresholded by length. Lines that are too short are discarded as noise. To obtain candidates for vertical segments, we filter the lines by their angle in the image, keeping only those within 45° of vertical. We assume that the line segments in the image represent projections of straight lines in 3D space.</p><p>We use a RANSAC procedure on line pairs to detect the vertical vanishing point in the image. Given a pair of lines <span class="mathjax-tex">\(\mathbf{l}_1\)</span> and <span class="mathjax-tex">\(\mathbf{l}_2\)</span>, we determine their intersection <span class="mathjax-tex">\(\mathbf{x}=\mathbf{l}_1\times \mathbf{l}_2\)</span>. Other lines are classified as inliers or outliers by thresholding <span class="mathjax-tex">\(|\mathbf{l}\cdot \mathbf{x}|\leq\tau\)</span> (where <span class="mathjax-tex">\(\mathbf{l}\)</span> and <span class="mathjax-tex">\(\mathbf{x}\)</span> are normalized). In our experiments, we used a threshold of <span class="mathjax-tex">\(\tau=\sin(2^{\circ})\)</span> corresponding to an angular error of 2 ° [see (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-012-0208-3#Equ7">7</a>)]. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-012-0208-3#Fig3">3</a> gives an example of the process.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-012-0208-3/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-012-0208-3/MediaObjects/10055_2012_208_Fig3_HTML.jpg?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-012-0208-3/MediaObjects/10055_2012_208_Fig3_HTML.jpg" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p>
+                        <b>a</b> A panorama which has been synthetically rotated away from upright, with detected line segments in<i> red</i>. <b>b</b> the panorama after rotation correction, with inliers to the vertical vanishing point detection process</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-012-0208-3/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+              <p>Once the vertical vanishing point has been determined, we calculate the rotation that brings the vertical vanishing point to the top of the sphere (see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-012-0208-3#Fig2">2</a>). The line detection and RANSAC procedure can optionally be iterated for more accuracy. Since the distortion of vertical lines is reduced after each iteration, by re-running the detection step we can extract more and longer vertical lines to be used in vanishing point detection.</p><p>We evaluated this method with a dataset of upright panoramas, which were taken using a digital SLR camera on a level tripod. We then generated synthetically rotated panoramas by applying a random rotation about the<i> Y</i>-axis followed by a rotation about a vector in the X–Z plane and ran our straightening algorithm to correct them (see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-012-0208-3#Fig3">3</a>). Using four different panoramas, we tested a rotation of 10, 20 and 30° with 25 trials each. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-012-0208-3#Fig4">4</a> shows the results of our experiment. On average, the algorithm corrects the panorama to within 1° of the original pose in one iteration.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-012-0208-3/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-012-0208-3/MediaObjects/10055_2012_208_Fig4_HTML.gif?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-012-0208-3/MediaObjects/10055_2012_208_Fig4_HTML.gif" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p>Remaining error in vertical orientation after the vanishing point detection and alignment process. We tested the accuracy of vanishing point alignment by synthetically introducing rotation to an upright panorama and then using our rectification technique to return the panorama to upright. The<i> box</i> plots shows the error in the rectified result over 100 trials for each amount of off-vertical rotation synthetically added</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-012-0208-3/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+              </div></div></section><section aria-labelledby="Sec5"><div class="c-article-section" id="Sec5-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec5">Upright pose estimation</h2><div class="c-article-section__content" id="Sec5-content"><p>The previous section presented a method to bring panoramas to a common vertical orientation based on vertical vanishing point detection. Alternatively, a measurement of the vertical orientation could be provided by sensors such as an accelerometer. In either case, we can reduce the rotation between panoramas to a single degree of freedom, the rotation about the vertical axis (the <i>Y</i>-axis). In this section, we discuss methods to determine the rotation and translation between upright panoramas based on the projections of mutually observed points in 3D space (see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-012-0208-3#Fig5">5</a>).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-012-0208-3/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-012-0208-3/MediaObjects/10055_2012_208_Fig5_HTML.gif?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-012-0208-3/MediaObjects/10055_2012_208_Fig5_HTML.gif" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p>Using correspondences between known 3D points and their projections on the<i> sphere</i>, the pose of the panorama can be determined</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-012-0208-3/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+              <p>We examine the pose estimation problem under the constraint that there is only rotation about the <i>Y</i>-axis between cameras. Consider two cameras, <i>P</i> = [<i>I</i>  |  0] and <span class="mathjax-tex">\(P'=[R\, |\, \mathbf{t}]\)</span>, where world points <span class="mathjax-tex">\(\mathbf{X}=[X\, Y\, Z\, 1]^T\)</span> are projected into the two images by <span class="mathjax-tex">\(\mathbf{x}=P\mathbf{X}\)</span> and <span class="mathjax-tex">\(\mathbf{x'}=P'\mathbf{X}\)</span>. According to our upright motion assumption, the rotation can be expressed in terms of a single parameter θ:</p><div id="Equ8" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ R(\theta) = \left[ \begin{array}{ccc} \rm{cos}(\theta)&amp; 0 &amp; \rm{sin}(\theta) \\ 0 &amp; 1 &amp; 0 \\ -\rm{sin}(\theta) &amp; 0 &amp; \rm{cos}(\theta) \end{array} \right] $$</span></div><div class="c-article-equation__number">
+                    (8)
+                </div></div>
+              <p>In this section, we review previous approaches to relative and absolute pose estimation using the upright constraint. In Section <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-012-0208-3#Sec7">5.2</a>, we present our novel absolute pose estimation method.</p><h3 class="c-article__sub-heading" id="Sec6">Relative pose</h3><p>Fraundorfer et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2010" title="Fraundorfer F, Tanskanen P, Pollefeys M (2010) A minimal case solution to the calibrated relative pose problem for the case of two known orientation angles. In: Proceedings of the 11th European conference on computer vision: part IV, ECCV’10, Springer, Berlin, pp 269–282" href="/article/10.1007/s10055-012-0208-3#ref-CR3" id="ref-link-section-d72079e1006">2010</a>) have analyzed this special case of essential matrix estimation and tested the linear five-point estimation algorithm described below, as well as polynomial four-point and three-point algorithms, which incorporate nonlinear constraints on the essential matrix. These are analogous to the familiar eight-point, seven-point, and five-point algorithms for general essential matrix estimation. Their evaluation shows that the linear five-point and the three-point algorithm are both more robust to image measurement noise than the standard five-point algorithm in the case of motion with only one unknown orientation angle.</p><p>We review the linear relative pose algorithm here. For relative pose estimation, epipolar constraints on point correspondences can be used to estimate the essential matrix <i>E</i>. The essential matrix represents the epipolar constraints <span class="mathjax-tex">\(\mathbf{x'}^TE\mathbf{x}=0\)</span>. Using the upright assumption, <span class="mathjax-tex">\(E=R[\mathbf{t}]_\times\)</span> has the form:</p><div id="Equ9" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ E = \left[ \begin{array}{ccc} -t_y\rm{sin}(\theta) &amp; t_x\rm{sin}(\theta) - t_z\rm{cos}(\theta) &amp; t_y\rm{cos}(\theta) \\ t_z &amp; 0 &amp; -t_x \\ -t_y\rm{cos}(\theta) &amp; t_x\rm{cos}(\theta) + t_z\rm{sin}(\theta) &amp; -t_y\rm{sin}(\theta) \\ \end{array} \right] $$</span></div><div class="c-article-equation__number">
+                    (9)
+                </div></div><p>From this, we can derive the following relations on the essential matrix:</p><div id="Equ10" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ E_{22}=0 $$</span></div><div class="c-article-equation__number">
+                    (10)
+                </div></div>
+                  <div id="Equ11" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ E_{11}=E_{33} $$</span></div><div class="c-article-equation__number">
+                    (11)
+                </div></div>
+                  <div id="Equ12" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ E_{13}=-E_{31} $$</span></div><div class="c-article-equation__number">
+                    (12)
+                </div></div><p>This leaves five unknowns in the essential matrix. Re-arranging the epipolar constraints <span class="mathjax-tex">\(\mathbf{x'}^TE\mathbf{x}=0\)</span> results in a linear system of rank four (since the essential matrix is only determined up to scale). This system can be solved using singular value decomposition (SVD), and a proper essential matrix can be extracted by constraining the singular values of <i>E</i> such that <i>s</i>
+                  <sub>1</sub> = <i>s</i>
+                  <sub>2</sub> = 1 and <i>s</i>
+                  <sub>3</sub> = 0.</p><h3 class="c-article__sub-heading" id="Sec7">Absolute pose</h3><p>Absolute pose estimation can also be constrained using the upright assumption. Kukelova et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2011" title="Kukelova Z, Bujnak M, Pajdla T (2011) Closed-form solutions to minimal absolute pose problems with known vertical direction. In: Computer vision—ACCV 2010, lecture notes in computer science, vol 6493, pp 216–229" href="/article/10.1007/s10055-012-0208-3#ref-CR9" id="ref-link-section-d72079e1129">2011</a>) presented a second-degree polynomial solution to the problem in the minimal case of two correspondences. Here, we present a linear solution requiring three correspondences. Our algorithm, although less exact in the minimal case, permits a solution to an overdetermined system. Solving the overdetermined system may reduce error in the estimate using multiple noisy correspondences.</p><p>We introduce here an accurate linear solution to the absolute pose problem using knowledge of two orientation angles. Given image observations <span class="mathjax-tex">\(\mathbf{x}\)</span> of world points <span class="mathjax-tex">\(\mathbf{X}, \)</span> we wish to solve for the camera’s extrinsic parameters <span class="mathjax-tex">\(P=[R\, |\, \mathbf{t}]\)</span> subject to the projection equations. This is also known as the Perspective-<i>n</i>-Point or P<i>n</i>P problem. The projective relations are as follows:</p><div id="Equ13" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ \frac{x}{w}=\frac{R_1{\mathbf{X}}+t_x}{R_3{\mathbf{X}}+t_z} $$</span></div><div class="c-article-equation__number">
+                    (13)
+                </div></div>
+                  <div id="Equ14" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ \frac{y}{w}=\frac{R_2{\mathbf{X}}+t_y}{R_3{\mathbf{X}}+t_z} $$</span></div><div class="c-article-equation__number">
+                    (14)
+                </div></div><p>Using the single parameter form of rotation given in (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-012-0208-3#Equ8">8</a>), the camera matrix has the form</p><div id="Equ15" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ P= \left[ \begin{array}{cccc} \rm{cos}(\theta)&amp; 0 &amp; \rm{sin}(\theta) &amp; t_x\\ 0 &amp; 1 &amp; 0 &amp; t_y\\ -\rm{sin}(\theta) &amp; 0 &amp; \rm{cos}(\theta) &amp; t_z \end{array} \right]. $$</span></div><div class="c-article-equation__number">
+                    (15)
+                </div></div><p>From this, we identify seven linear relations, leaving five unknowns in <i>P</i>.</p><div id="Equ16" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ P_{12}=P_{21}=P_{23}=P_{32}=0 $$</span></div><div class="c-article-equation__number">
+                    (16)
+                </div></div>
+                  <div id="Equ17" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ P_{22}=1$$</span></div><div class="c-article-equation__number">
+                    (17)
+                </div></div>
+                  <div id="Equ18" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ P_{11}=P_{33} $$</span></div><div class="c-article-equation__number">
+                    (18)
+                </div></div>
+                  <div id="Equ19" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ P_{13} =-P_{31} $$</span></div><div class="c-article-equation__number">
+                    (19)
+                </div></div><p>By re-arranging the projection equations, each 2D-3D correspondence gives two linear equations:</p><div id="Equ20" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ \left[ \begin{array}{cc} -wX+Zx &amp; Zy \\ -wZ-Xx &amp; -Xy \\ -wW &amp; 0 \\ 0 &amp; -Wy \\ 0 &amp; -wW \\ Wx &amp; Wy \end{array} \right]^T \left[ \begin{array}{c} P_{11}\\ P_{13}\\ P_{14}\\ P_{22}\\ P_{24}\\ P_{34} \end{array} \right] = 0. $$</span></div><div class="c-article-equation__number">
+                    (20)
+                </div></div><p>Note that we use the homogeneous coordinate <i>w</i> in the equations, rather than assuming <i>w</i> = 1. This is because in the case of panoramas with complete horizontal field of view, it is possible to have image coordinates where <i>w</i> is near zero.</p><p>We use <i>P</i>
+                  <sub>22</sub> as the free scale parameter, so the system has six unknowns, but has rank five. This means we need three correspondences for absolute pose estimation. (Actually only five equations are needed in the minimal case, so the y-coordinate can be disregarded from one correspondence). The standard direct linear transform (DLT) algorithm for general absolute pose estimation requires six correspondences (Hartley and Zisserman <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Hartley RI, Zisserman A (2004) Multiple view geometry in computer vision, 2nd edn. Cambridge University Press, ISBN: 0521540518" href="/article/10.1007/s10055-012-0208-3#ref-CR6" id="ref-link-section-d72079e1304">2004</a>).</p><p>This system of equations can be solved using the singular value decomposition (SVD). The resulting solution is normalized by dividing by <i>P</i>
+                  <sub>22</sub>. In the case of noisy measurements, this solution may not produce a true rotation matrix, which satisfies the quadratic constraint:</p><div id="Equ21" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ P_{11}^2 + P_{13}^2 = 1. $$</span></div><div class="c-article-equation__number">
+                    (21)
+                </div></div>
+                <p>The two solutions satisfying this constraint are found by normalizing <i>P</i>
+                  <sub>11</sub> and <i>P</i>
+                  <sub>13</sub> by <span class="mathjax-tex">\(\pm\sqrt{P_{11}^2+P_{13}^2}.\)</span>
+                </p><p>The general DLT algorithm is traditionally not used for absolute pose estimation, because it is not very robust to noise. Instead, most methods estimate the distance from the camera to the 3D points in the camera’s reference frame (Haralick et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1994" title="Haralick RM, Lee CN, Ottenberg K, Nölle M (1994) Review and analysis of solutions of the three point perspective pose estimation problem. Int J Comput Vis 13:331–356" href="/article/10.1007/s10055-012-0208-3#ref-CR5" id="ref-link-section-d72079e1356">1994</a>). Then, a standard algorithm is used to determine the rotation and translation between the camera’s coordinate system and the world coordinate system (Horn et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1988" title="Horn BKP, Hilden H, Negahdaripour S (1988) Closed-form solution of absolute orientation using orthonormal matrices. J Opt Soc Am 5(7):1127–1135" href="/article/10.1007/s10055-012-0208-3#ref-CR7" id="ref-link-section-d72079e1359">1988</a>). However, because of the upright constraint, we have less unknowns in our system, and thus can be more robust to noise, even when using the simple linear formulation.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec8">Synthetic evaluation</h4><p>We evaluated our algorithm in comparison with a recent non-iterative method called EP<i>n</i>P, which is accurate and fast for general absolute pose estimation (Lepetit et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Lepetit V, Moreno-Noguer F, Fua P (2009) Epnp: An accurate o(n) solution to the pnp problem. Int J Comput Vis 81:155–166" href="/article/10.1007/s10055-012-0208-3#ref-CR10" id="ref-link-section-d72079e1372">2009</a>). We generated synthetic test cases to evaluate the two methods. Our experimental setup replicated that of Lepetit et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Lepetit V, Moreno-Noguer F, Fua P (2009) Epnp: An accurate o(n) solution to the pnp problem. Int J Comput Vis 81:155–166" href="/article/10.1007/s10055-012-0208-3#ref-CR10" id="ref-link-section-d72079e1375">2009</a>). We sampled 3D points with <span class="mathjax-tex">\(X\in[-2, 2], Y\in[-2, 2]\)</span> and <span class="mathjax-tex">\(Z\in[4, 8]\)</span>. The image observations were generated using a focal length of <i>f</i> = 800 and the principal point at (320, 240). Gaussian noise of standard deviation σ<sub>im</sub> pixels was then added to the image coordinates.</p><p>The camera matrix was chosen as follows. Each component of the translation vector was uniformly sampled from [−1,1]. The rotation matrix models the case of upright motion contaminated by some small rotation noise, which tilts the up vector away from vertical. The rotation was computed as <i>R</i> = <i>R</i>
+                    <sub>
+                      <i>XZ</i>
+                    </sub>
+                    <i>R</i>
+                    <sub>
+                      <i>Y</i>
+                    </sub> where <i>R</i>
+                    <sub>
+                      <i>Y</i>
+                    </sub> is a random rotation about the Y axis with <span class="mathjax-tex">\(\theta_{Y}\in[-\frac{\pi}{4},\frac{\pi}{4}]\)</span> and <i>R</i>
+                    <sub>
+                      <i>XZ</i>
+                    </sub> is a random rotation about the vector [1  0  1]<sup><i>T</i></sup> with θ<sub>
+                      <i>XZ</i>
+                    </sub>∼<i>N</i>(0,σ<sub>
+                      <i>XZ</i>
+                    </sub>).</p><p>We ran two tests to evaluate the behavior of our linear algorithm and the EPnP algorithm. For each test, we ran 300 trials for each parameter setting. The rotation error was calculated as the angular magnitude of the minimal rotation between the estimated result and the correct result. The translation error was calculated as the percentage error between the estimated result and the correct result, given by <span class="mathjax-tex">\(||\mathbf{t}-\mathbf{t}_\text{ans}||/||\mathbf{t}_\text{ans}||\)</span>.</p><p>For our first test, we evaluated robustness to non-upright movement by increasing the off-vertical rotational noise σ<sub>
+                      <i>XZ</i>
+                    </sub> from 0 to 1°. For these tests, we used an image observation error of σ<sub>im</sub> = 0.5 pixels. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-012-0208-3#Fig6">6</a> plots the estimation error of the two algorithms. Clearly, our algorithm performs best when the amount of rotation away from vertical is minimal.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-6"><figure><figcaption><b id="Fig6" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 6</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-012-0208-3/figures/6" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-012-0208-3/MediaObjects/10055_2012_208_Fig6_HTML.gif?as=webp"></source><img aria-describedby="figure-6-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-012-0208-3/MediaObjects/10055_2012_208_Fig6_HTML.gif" alt="figure6" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-6-desc"><p>
+                            <i>Left column</i> rotation and translation error in absolute pose estimation as the camera is tilted away from vertical, with image observation noise of σ<sub>im</sub> = 0.5 pixels. <i>Middle and right column</i> rotation and translation error in absolute pose estimation as image observation noise is increased, with a random rotation away from vertical of σ<sub>
+                              <i>XZ</i>
+                            </sub> = 0.1° (<i>middle column</i>) and σ<sub>
+                              <i>XZ</i>
+                            </sub> = 0.5° (<i>right column</i>). Each data point represents the average of three hundred trials. One hundred 2D–3D correspondences were used for each trial</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-012-0208-3/figures/6" data-track-dest="link:Figure6 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                  <p>For our second test, we evaluated robustness to increasing image measurement noise assuming that the camera pose is roughly upright. We used a rotational noise of σ<sub>
+                      <i>XZ</i>
+                    </sub> = 0.1 and σ<sub>
+                      <i>XZ</i>
+                    </sub> = 0.5° and increased the image observation noise σ<sub>im</sub> from 0 to 10 pixels. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-012-0208-3#Fig6">6</a> plots the results. Our linear algorithm is shown to be more robust and stable than EPnP across a range of image noise. The average error is roughly constant for our algorithm, while the error of EPnP grows rapidly as image noise increases. This shows that the upright assumption can increase robustness to image noise when estimating absolute pose, even when the assumption is not perfectly true.</p></div></div></section><section aria-labelledby="Sec9"><div class="c-article-section" id="Sec9-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec9">Reconstruction pipeline</h2><div class="c-article-section__content" id="Sec9-content"><p>We assume here that we have a sequence of panoramas such that neighboring images have significant visual overlap.</p><h3 class="c-article__sub-heading" id="Sec10">Image pre-processing</h3><p>First, we ensure that all panoramas are upright by using our vanishing point alignment technique described in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-012-0208-3#Sec4">4</a>. Even when we have an orientation sensor, this step can compensate for noise in the sensor by verifying that vertical lines are straight.</p><h3 class="c-article__sub-heading" id="Sec11">Pose estimation</h3><p>Once we have straightened all panoramas in the sequence, we perform point-based structure and motion analysis to determine camera poses and a point cloud. We detect points using the SIFT detector (Lowe <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Lowe DG (2004) Distinctive image features from scale-invariant keypoints. Int J Comput Vis 60:91–110" href="/article/10.1007/s10055-012-0208-3#ref-CR11" id="ref-link-section-d72079e1603">2004</a>). Because we have removed all in-plane rotation from the images, we use the upright SIFT descriptor for feature matching. The upright descriptor has been shown to be more discriminative when matching images without in-plane rotation (Baatz et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2010" title="Baatz G, Köser K, Chen D, Grzeszczuk R, Pollefeys M (2010) Handling urban location recognition as a 2d homothetic problem. In: Daniilidis K, Maragos P, Paragios N (eds) Computer vision—ECCV 2010, lecture notes in computer science, Springer, Berlin, pp 266–279" href="/article/10.1007/s10055-012-0208-3#ref-CR2" id="ref-link-section-d72079e1606">2010</a>). We extract descriptors directly from the spherical panoramas. Although the panorama has some non-linear distortion due to the spherical projection, this distortion does not affect feature matching when the baseline between panoramas is small as in our datasets.</p><p>We perform relative pose estimation between the first and second panoramas in the sequence using the linear five-point essential matrix estimation algorithm (Fraundorfer et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2010" title="Fraundorfer F, Tanskanen P, Pollefeys M (2010) A minimal case solution to the calibrated relative pose problem for the case of two known orientation angles. In: Proceedings of the 11th European conference on computer vision: part IV, ECCV’10, Springer, Berlin, pp 269–282" href="/article/10.1007/s10055-012-0208-3#ref-CR3" id="ref-link-section-d72079e1612">2010</a>). The essential matrix can be decomposed into four possible poses, giving two rotations and translation vectors. The ambiguity in rotation is resolved by checking that the up vector stays upright. The ambiguity in translation is traditionally resolved by checking the cheirality of each solution, that is, the number of triangulated points that are in front of the both cameras (Hartley and Zisserman <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Hartley RI, Zisserman A (2004) Multiple view geometry in computer vision, 2nd edn. Cambridge University Press, ISBN: 0521540518" href="/article/10.1007/s10055-012-0208-3#ref-CR6" id="ref-link-section-d72079e1615">2004</a>). However, in the case of panoramas, points can equally be observed with a positive or negative<i> Z</i> value. Instead, we use a more general form of cheirality by checking that the observed ray is in the same direction as the triangulated point (Werner <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Werner T, Pajdla T (2001) Cheirality in epipolar geometry. Computer vision, IEEE international conference on 1: 548" href="/article/10.1007/s10055-012-0208-3#ref-CR20" id="ref-link-section-d72079e1621">2001</a>). More formally, given an observed ray <span class="mathjax-tex">\(\mathbf{x}\)</span> and the ray to the triangulated point <span class="mathjax-tex">\(\mathbf{x'}\)</span>, we desire that <span class="mathjax-tex">\(\mathbf{x}\cdot \mathbf{x'}&gt;0\)</span>. The solution with the higher number of points in agreement is selected.</p><p>After relative pose estimation, we triangulate 3D points using the first image pair and the DLT triangulation method. Then, for each remaining pano-rama we use our absolute pose estimation algorithm described in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-012-0208-3#Sec7">5.2</a> to determine the pose from observed points, and then re-triangulate points incorporating the new image. In previous work, the relative pose between each image was estimated, and then the scale for each pair was determined by aligning triangulated points (Tardif et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Tardif JP, Pavlidis Y, Daniilidis K (2008) Monocular visual odometry in urban environments using an omnidirectional camera. In: IROS’08, pp 2531–2538" href="/article/10.1007/s10055-012-0208-3#ref-CR18" id="ref-link-section-d72079e1664">2008</a>). However, we found that for small datasets, the upright assumption constrains the estimation enough that we can directly solve for the pose and scale without significant drift.</p></div></div></section><section aria-labelledby="Sec12"><div class="c-article-section" id="Sec12-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec12">Evaluation</h2><div class="c-article-section__content" id="Sec12-content"><p>We evaluated our reconstruction pipeline on real image sequences to test the usefulness of the upright constraint. Here, we present results on panoramas captured using several different methods. We tested the reconstruction pipeline both with and without the vanishing point alignment step to evaluate its benefit when the vertical orientation is known to varying degrees. An top-down view of the reconstructions is presented in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-012-0208-3#Fig9">9</a>, with recovered camera poses (in red) and 3D triangulated points (in blue).</p><h3 class="c-article__sub-heading" id="Sec13">Tripod panorama capture</h3><p>Our first evaluation uses sequences of panoramas taken precisely using a tripod and a pan-tilt-unit (PTU). The panoramas were captured by mounting a Point Grey Dragonfly2 camera to the PTU and panning in 1° increments. The camera had about a 45° field of view and was calibrated beforehand. The tripod was placed on the ground and checked with a bubble level. The panoramas were taken in a line by moving the tripod along a measuring tape affixed to the ground, so that each image has equal spacing (about .5 m) from the previous. We used panoramic sequences captured in two building courtyards on our campus.
+<sup><a href="#Fn1"><span class="u-visually-hidden">Footnote </span>1</a></sup>
+                </p><p>We ran our image-space leveling algorithm on each spherical panorama, and then ran the two sequences through the structure and motion pipeline described in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-012-0208-3#Sec9">6</a>. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-012-0208-3#Fig7">7</a> shows inlier correspondences to the absolute pose estimation process across two images, and Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-012-0208-3#Fig9">9</a> shows the reconstructions. Note that the camera moves in a straight path as expected.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-7"><figure><figcaption><b id="Fig7" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 7</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-012-0208-3/figures/7" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-012-0208-3/MediaObjects/10055_2012_208_Fig7_HTML.gif?as=webp"></source><img aria-describedby="figure-7-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-012-0208-3/MediaObjects/10055_2012_208_Fig7_HTML.gif" alt="figure7" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-7-desc"><p>
+                          <b>a</b> Two images from the Scene 1 sequence.<i> Red lines</i> indicate inlier correspondences from the absolute pose estimation procedure. <b>b</b> Images and inlier correspondences from the handheld sequence (color figure online)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-012-0208-3/figures/7" data-track-dest="link:Figure7 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>To check the validity of the structure and motion output, and to determine the drift of the solution, we plotted the distance of each camera from the first in each sequence. For each sequence, the translation in the initial pair was assumed to have unit length. This means that the distance from the first camera should increase linearly with the camera number, since the cameras were evenly spaced. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-012-0208-3#Fig8">8</a> plots the distances for the two sequences compared with ground truth. The reconstruction in both cases does not exhibit significant drift.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-8"><figure><figcaption><b id="Fig8" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 8</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-012-0208-3/figures/8" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-012-0208-3/MediaObjects/10055_2012_208_Fig8_HTML.gif?as=webp"></source><img aria-describedby="figure-8-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-012-0208-3/MediaObjects/10055_2012_208_Fig8_HTML.gif" alt="figure8" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-8-desc"><p>Plot of the distance to the first camera for both scenes. Ground truth was established by physically measuring the distance on the ground between capture points</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-012-0208-3/figures/8" data-track-dest="link:Figure8 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                  <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-9"><figure><figcaption><b id="Fig9" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 9</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-012-0208-3/figures/9" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-012-0208-3/MediaObjects/10055_2012_208_Fig9_HTML.gif?as=webp"></source><img aria-describedby="figure-9-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-012-0208-3/MediaObjects/10055_2012_208_Fig9_HTML.gif" alt="figure9" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-9-desc"><p>
+                          <i>Top-down</i> view of reconstructions. Each<i> row</i> presents a separate reconstruction from a panoramic sequence, with a sample panorama shown in the<i> left column</i>. The<i> middle column</i> shows the reconstruction without vanishing point alignment, and the<i> right column</i> shows the result with vanishing point alignment. Camera locations are shown as<i> red circles</i> and triangulated points as<i> blue dots</i>. <i>From top to bottom:</i> Scenes 1 and 2 from our campus; Google Street View dataset; handheld smartphone panorama sequence (color figure online)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-012-0208-3/figures/9" data-track-dest="link:Figure9 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <h3 class="c-article__sub-heading" id="Sec14">Handheld panoramas from a smartphone</h3><p>We also tested the system using panoramas created using a handheld smartphone. We used an iPhone 4 to create panoramas using the 360 Panorama software.
+<sup><a href="#Fn2"><span class="u-visually-hidden">Footnote </span>2</a></sup> This software uses the accelerometer and gyroscopes in the device to track rotation and establish orientation with respect to the ground. It also visually detects loop closures to reduce drift. The loop closure process, however, can adversely affect the vertical orientation estimate.</p><p>To create each panorama, we held the phone with two hands roughly upright and slowly spun once in a full circle with the phone held as tightly as possible to the axis of rotation. Using this method, we captured two panoramic sequences from outdoor scenes in a neighborhood with houses and trees, moving forward a few steps (about 1.5 m) between captures. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-012-0208-3#Fig7">7</a> shows the last two images from one sequence and the inlier correspondences found by RANSAC absolute pose estimation. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-012-0208-3#Fig9">9</a> shows the reconstruction results for another sequence of six handheld panoramas. Because of the error in vertical orientation caused by the loop closure problem, we found that the reconstruction benefited from use of the vanishing point alignment technique, despite the use of vertical orientation sensors during capture.</p><h3 class="c-article__sub-heading" id="Sec15">Google street view</h3><p>We also tested our algorithm on a subset of panoramas from the Google Street View Research Dataset. These panoramas are captured from a moving vehicle using a panoramic camera, which produces a spherical panorama with a very large vertical field of view. We used a set of thirty panoramas taken as the vehicle moved in a straight line down a city street, with about 1.5 meter spacing between panoramas. Although the camera is roughly upright, there can be variation in the vertical direction due to the orientation of the street and the movement of the vehicle.</p><p>In this case, we notice significant improvement to the reconstruction when using vertical vanishing point detection to align the panoramas beforehand (see the third row of Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-012-0208-3#Fig9">9</a>). The vertical vanishing point alignment decreased noise in point triangulation and led to a straighter camera pose path. In this reconstruction, we noticed some drift in the reconstruction, which suggests that the system would benefit from the use of bundle adjustment and loop closure when a larger number of panoramas are reconstructed.</p></div></div></section><section aria-labelledby="Sec16"><div class="c-article-section" id="Sec16-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec16">Conclusion</h2><div class="c-article-section__content" id="Sec16-content"><p>We have presented here methods for rotationally aligning images based on the vertical vanishing point, and reconstructing a sequence of images using the constraint that they have only rotation about the vertical axis between them. Using synthetic and real-world image sequences, we showed how our methods are robust to a variety of noise and improve upon the state of the art.</p><p>We believe these methods would be very useful in an outdoor augmented reality system using a smartphone. For example, in an unknown environment, a single person could capture several panoramas, which are combined to produce a complete visual model of the environment. This model can then be used immediately for visual tracking and scene annotation and can be stored and later combined with other reconstructions to improve outdoor AR experiences. We have shown that image-based modeling from user-contributed panoramas is improved by use of orientation sensors and image processing techniques. Our absolute pose estimation method is robust and accurate while being simple to compute and so would be useful for visual tracking on a mobile device with orientation sensors. Our evaluation shows that when using orientation sensors, some amount of filtering and correction is needed to maintain an accurate estimate of vertical orientation for pose estimation purposes. In the future, we would like to investigate the application of our methods to mobile localization and real-time tracking for outdoor augmented reality applications.</p><p>We also aim to investigate dense reconstruction using upright panoramas. For example, previously a piecewise planar reconstruction of urban environments has been produced using street-level panoramic sequences (Micusik and Kosecka <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Micusik B, Kosecka J (2009) Piecewise planar city 3d modeling from street view panoramic sequences. IEEE Conference on computer vision and pattern recognition (CVPR), Miami, USA, pp 2906–2912" href="/article/10.1007/s10055-012-0208-3#ref-CR12" id="ref-link-section-d72079e1863">2009</a>). The upright constraint and knowledge of the vertical vanishing point in all images might be used to simplify the reconstruction and make it more efficient.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="notes"><div class="c-article-section" id="notes-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="notes">Notes</h2><div class="c-article-section__content" id="notes-content"><ol class="c-article-footnote c-article-footnote--listed"><li class="c-article-footnote--listed__item" id="Fn1"><span class="c-article-footnote--listed__index">1.</span><div class="c-article-footnote--listed__content"><p>Panoramas available from: <a href="http://tracking.mat.ucsb.edu">http://tracking.mat.ucsb.edu</a>.</p></div></li><li class="c-article-footnote--listed__item" id="Fn2"><span class="c-article-footnote--listed__index">2.</span><div class="c-article-footnote--listed__content"><p>From Occipital Inc.: <a href="http://www.occipital.com/360">http://www.occipital.com/360</a>.</p></div></li></ol></div></div></section><section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="M. Antone, S. Teller, " /><meta itemprop="datePublished" content="2002" /><meta itemprop="headline" content="Antone M, Teller S (2002) Scalable extrinsic calibration of omni-directional image networks. Int J Comput Vis " /><p class="c-article-references__text" id="ref-CR1">Antone M, Teller S (2002) Scalable extrinsic calibration of omni-directional image networks. Int J Comput Vis 49:143–174</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="http://www.emis.de/MATH-item?1012.68771" aria-label="View reference 1 on MATH">MATH</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1023%2FA%3A1020141505696" aria-label="View reference 1">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 1 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Scalable%20extrinsic%20calibration%20of%20omni-directional%20image%20networks&amp;journal=Int%20J%20Comput%20Vis&amp;volume=49&amp;pages=143-174&amp;publication_year=2002&amp;author=Antone%2CM&amp;author=Teller%2CS">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="G. Baatz, K. Köser, D. Chen, R. Grzeszczuk, M. Pollefeys, " /><meta itemprop="datePublished" content="2010" /><meta itemprop="headline" content="Baatz G, Köser K, Chen D, Grzeszczuk R, Pollefeys M (2010) Handling urban location recognition as a 2d homothe" /><p class="c-article-references__text" id="ref-CR2">Baatz G, Köser K, Chen D, Grzeszczuk R, Pollefeys M (2010) Handling urban location recognition as a 2d homothetic problem. In: Daniilidis K, Maragos P, Paragios N (eds) Computer vision—ECCV 2010, lecture notes in computer science, Springer, Berlin, pp 266–279</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 2 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Computer%20vision%E2%80%94ECCV%202010%2C%20lecture%20notes%20in%20computer%20science&amp;pages=266-279&amp;publication_year=2010&amp;author=Baatz%2CG&amp;author=K%C3%B6ser%2CK&amp;author=Chen%2CD&amp;author=Grzeszczuk%2CR&amp;author=Pollefeys%2CM">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Fraundorfer F, Tanskanen P, Pollefeys M (2010) A minimal case solution to the calibrated relative pose problem" /><p class="c-article-references__text" id="ref-CR3">Fraundorfer F, Tanskanen P, Pollefeys M (2010) A minimal case solution to the calibrated relative pose problem for the case of two known orientation angles. In: Proceedings of the 11th European conference on computer vision: part IV, ECCV’10, Springer, Berlin, pp 269–282</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Gallagher AC (2005) Using vanishing points to correct camera rotation in images. In: Proceedings of the 2nd Ca" /><p class="c-article-references__text" id="ref-CR4">Gallagher AC (2005) Using vanishing points to correct camera rotation in images. In: Proceedings of the 2nd Canadian conference on computer and robot vision, CRV ’05, IEEE Computer Society, Washington, pp 460–467</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="RM. Haralick, CN. Lee, K. Ottenberg, M. Nölle, " /><meta itemprop="datePublished" content="1994" /><meta itemprop="headline" content="Haralick RM, Lee CN, Ottenberg K, Nölle M (1994) Review and analysis of solutions of the three point perspecti" /><p class="c-article-references__text" id="ref-CR5">Haralick RM, Lee CN, Ottenberg K, Nölle M (1994) Review and analysis of solutions of the three point perspective pose estimation problem. Int J Comput Vis 13:331–356</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1007%2FBF02028352" aria-label="View reference 5">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 5 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Review%20and%20analysis%20of%20solutions%20of%20the%20three%20point%20perspective%20pose%20estimation%20problem&amp;journal=Int%20J%20Comput%20Vis&amp;volume=13&amp;pages=331-356&amp;publication_year=1994&amp;author=Haralick%2CRM&amp;author=Lee%2CCN&amp;author=Ottenberg%2CK&amp;author=N%C3%B6lle%2CM">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Hartley RI, Zisserman A (2004) Multiple view geometry in computer vision, 2nd edn. Cambridge University Press," /><p class="c-article-references__text" id="ref-CR6">Hartley RI, Zisserman A (2004) Multiple view geometry in computer vision, 2nd edn. Cambridge University Press, ISBN: 0521540518</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="BKP. Horn, H. Hilden, S. Negahdaripour, " /><meta itemprop="datePublished" content="1988" /><meta itemprop="headline" content="Horn BKP, Hilden H, Negahdaripour S (1988) Closed-form solution of absolute orientation using orthonormal matr" /><p class="c-article-references__text" id="ref-CR7">Horn BKP, Hilden H, Negahdaripour S (1988) Closed-form solution of absolute orientation using orthonormal matrices. J Opt Soc Am 5(7):1127–1135</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="http://www.ams.org/mathscinet-getitem?mr=954318" aria-label="View reference 7 on MathSciNet">MathSciNet</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1364%2FJOSAA.5.001127" aria-label="View reference 7">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 7 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Closed-form%20solution%20of%20absolute%20orientation%20using%20orthonormal%20matrices&amp;journal=J%20Opt%20Soc%20Am&amp;volume=5&amp;issue=7&amp;pages=1127-1135&amp;publication_year=1988&amp;author=Horn%2CBKP&amp;author=Hilden%2CH&amp;author=Negahdaripour%2CS">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Kosecka J, Zhang W (2002) Video compass. In: Proceedings of the 7th European conference on computer vision-par" /><p class="c-article-references__text" id="ref-CR8">Kosecka J, Zhang W (2002) Video compass. In: Proceedings of the 7th European conference on computer vision-part IV, ECCV ’02, Springer, London, pp 476–490</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Kukelova Z, Bujnak M, Pajdla T (2011) Closed-form solutions to minimal absolute pose problems with known verti" /><p class="c-article-references__text" id="ref-CR9">Kukelova Z, Bujnak M, Pajdla T (2011) Closed-form solutions to minimal absolute pose problems with known vertical direction. In: Computer vision—ACCV 2010, lecture notes in computer science, vol 6493, pp 216–229</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="V. Lepetit, F. Moreno-Noguer, P. Fua, " /><meta itemprop="datePublished" content="2009" /><meta itemprop="headline" content="Lepetit V, Moreno-Noguer F, Fua P (2009) Epnp: An accurate o(n) solution to the pnp problem. Int J Comput Vis " /><p class="c-article-references__text" id="ref-CR10">Lepetit V, Moreno-Noguer F, Fua P (2009) Epnp: An accurate o(n) solution to the pnp problem. Int J Comput Vis 81:155–166</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1007%2Fs11263-008-0152-6" aria-label="View reference 10">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 10 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Epnp%3A%20An%20accurate%20o%28n%29%20solution%20to%20the%20pnp%20problem&amp;journal=Int%20J%20Comput%20Vis&amp;volume=81&amp;pages=155-166&amp;publication_year=2009&amp;author=Lepetit%2CV&amp;author=Moreno-Noguer%2CF&amp;author=Fua%2CP">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="DG. Lowe, " /><meta itemprop="datePublished" content="2004" /><meta itemprop="headline" content="Lowe DG (2004) Distinctive image features from scale-invariant keypoints. Int J Comput Vis 60:91–110" /><p class="c-article-references__text" id="ref-CR11">Lowe DG (2004) Distinctive image features from scale-invariant keypoints. Int J Comput Vis 60:91–110</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1023%2FB%3AVISI.0000029664.99615.94" aria-label="View reference 11">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 11 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Distinctive%20image%20features%20from%20scale-invariant%20keypoints&amp;journal=Int%20J%20Comput%20Vis&amp;volume=60&amp;pages=91-110&amp;publication_year=2004&amp;author=Lowe%2CDG">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Micusik B, Kosecka J (2009) Piecewise planar city 3d modeling from street view panoramic sequences. IEEE Confe" /><p class="c-article-references__text" id="ref-CR12">Micusik B, Kosecka J (2009) Piecewise planar city 3d modeling from street view panoramic sequences. IEEE Conference on computer vision and pattern recognition (CVPR), Miami, USA, pp 2906–2912</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="D. Nistér, " /><meta itemprop="datePublished" content="2004" /><meta itemprop="headline" content="Nistér D (2004) An efficient solution to the five-point relative pose problem. IEEE Trans Pattern Anal Mach In" /><p class="c-article-references__text" id="ref-CR13">Nistér D (2004) An efficient solution to the five-point relative pose problem. IEEE Trans Pattern Anal Mach Intell 26:756–777</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2FTPAMI.2004.17" aria-label="View reference 13">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 13 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=An%20efficient%20solution%20to%20the%20five-point%20relative%20pose%20problem&amp;journal=IEEE%20Trans%20Pattern%20Anal%20Mach%20Intell&amp;volume=26&amp;pages=756-777&amp;publication_year=2004&amp;author=Nist%C3%A9r%2CD">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="M. Pollefeys, D. Nistér, JM. Frahm, A. Akbarzadeh, P. Mordohai, B. Clipp, C. Engels, D. Gallup, SJ. Kim, P. Merrell, C. Salmi, S. Sinha, B. Talton, L. Wang, Q. Yang, H. Stewénius, R. Yang, G. Welch, H. Towles, " /><meta itemprop="datePublished" content="2008" /><meta itemprop="headline" content="Pollefeys M, Nistér D, Frahm JM, Akbarzadeh A, Mordohai P, Clipp B, Engels C, Gallup D, Kim SJ, Merrell P, Sal" /><p class="c-article-references__text" id="ref-CR14">Pollefeys M, Nistér D, Frahm JM, Akbarzadeh A, Mordohai P, Clipp B, Engels C, Gallup D, Kim SJ, Merrell P, Salmi C, Sinha S, Talton B, Wang L, Yang Q, Stewénius H, Yang R, Welch G, Towles H (2008) Detailed real-time urban 3d reconstruction from video. Int J Comput Vis 78:143–167</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1007%2Fs11263-007-0086-4" aria-label="View reference 14">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 14 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Detailed%20real-time%20urban%203d%20reconstruction%20from%20video&amp;journal=Int%20J%20Comput%20Vis&amp;volume=78&amp;pages=143-167&amp;publication_year=2008&amp;author=Pollefeys%2CM&amp;author=Nist%C3%A9r%2CD&amp;author=Frahm%2CJM&amp;author=Akbarzadeh%2CA&amp;author=Mordohai%2CP&amp;author=Clipp%2CB&amp;author=Engels%2CC&amp;author=Gallup%2CD&amp;author=Kim%2CSJ&amp;author=Merrell%2CP&amp;author=Salmi%2CC&amp;author=Sinha%2CS&amp;author=Talton%2CB&amp;author=Wang%2CL&amp;author=Yang%2CQ&amp;author=Stew%C3%A9nius%2CH&amp;author=Yang%2CR&amp;author=Welch%2CG&amp;author=Towles%2CH">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Robertson D, Cipolla R (2004) An image-based system for urban navigation. In: British machine vision conferenc" /><p class="c-article-references__text" id="ref-CR15">Robertson D, Cipolla R (2004) An image-based system for urban navigation. In: British machine vision conference, pp 819–828</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="C. Rother, " /><meta itemprop="datePublished" content="2002" /><meta itemprop="headline" content="Rother C (2002) A new approach to vanishing point detection in architectural environments. Image Vis Comput 20" /><p class="c-article-references__text" id="ref-CR16">Rother C (2002) A new approach to vanishing point detection in architectural environments. Image Vis Comput 20(9-10):647–655</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1016%2FS0262-8856%2802%2900054-9" aria-label="View reference 16">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 16 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=A%20new%20approach%20to%20vanishing%20point%20detection%20in%20architectural%20environments&amp;journal=Image%20Vis%20Comput&amp;volume=20&amp;issue=9-10&amp;pages=647-655&amp;publication_year=2002&amp;author=Rother%2CC">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Snavely N, Seitz SM, Szeliski R (2006) Photo tourism: exploring photo collections in 3d. In: ACM SIGGRAPH 2006" /><p class="c-article-references__text" id="ref-CR17">Snavely N, Seitz SM, Szeliski R (2006) Photo tourism: exploring photo collections in 3d. In: ACM SIGGRAPH 2006 papers, SIGGRAPH ’06, ACM, New York, pp 835–846</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Tardif JP, Pavlidis Y, Daniilidis K (2008) Monocular visual odometry in urban environments using an omnidirect" /><p class="c-article-references__text" id="ref-CR18">Tardif JP, Pavlidis Y, Daniilidis K (2008) Monocular visual odometry in urban environments using an omnidirectional camera. In: IROS’08, pp 2531–2538</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Torii A, Havlena M, Pajdla T (2009) From google street view to 3d city models. In: Computer vision workshops (" /><p class="c-article-references__text" id="ref-CR19">Torii A, Havlena M, Pajdla T (2009) From google street view to 3d city models. In: Computer vision workshops (ICCV Workshops), 2009 IEEE 12th international conference on 2009</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Werner T, Pajdla T (2001) Cheirality in epipolar geometry. Computer vision, IEEE international conference on 1" /><p class="c-article-references__text" id="ref-CR20">Werner T, Pajdla T (2001) Cheirality in epipolar geometry. Computer vision, IEEE international conference on 1: 548</p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-012-0208-3-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Ack1">Acknowledgments</h2><div class="c-article-section__content" id="Ack1-content"><p>Thanks to Chris Coffin and Sehwan Kim for preparing the tripod panorama datasets, and to Google, Inc. for providing the Street View datasets. This work was partially supported by NSF CAREER grant IIS-0747520.</p></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">Department of Computer Science, University of California, Santa Barbara, CA, 93106-5110, USA</p><p class="c-article-author-affiliation__authors-list">Jonathan Ventura &amp; Tobias Höllerer</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Jonathan-Ventura"><span class="c-article-authors-search__title u-h3 js-search-name">Jonathan Ventura</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Jonathan+Ventura&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Jonathan+Ventura" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Jonathan+Ventura%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Tobias-H_llerer"><span class="c-article-authors-search__title u-h3 js-search-name">Tobias Höllerer</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Tobias+H%C3%B6llerer&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Tobias+H%C3%B6llerer" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Tobias+H%C3%B6llerer%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-012-0208-3/email/correspondent/c1/new">Jonathan Ventura</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=Structure%20and%20motion%20in%20urban%20environments%20using%20upright%20panoramas&amp;author=Jonathan%20Ventura%20et%20al&amp;contentID=10.1007%2Fs10055-012-0208-3&amp;publication=1359-4338&amp;publicationDate=2012-02-12&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Ventura, J., Höllerer, T. Structure and motion in urban environments using upright panoramas.
+                    <i>Virtual Reality</i> <b>17, </b>147–156 (2013). https://doi.org/10.1007/s10055-012-0208-3</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-012-0208-3.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2011-03-14">14 March 2011</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2012-01-26">26 January 2012</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2012-02-12">12 February 2012</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2013-06">June 2013</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-012-0208-3" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-012-0208-3</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Structure and motion</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Urban environments</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Panoramas</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-012-0208-3.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=208;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

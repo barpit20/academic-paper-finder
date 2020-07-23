@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="Haptic modeling in the conceptual phases of product design"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="The paper presents the results of a research project aimed at developing an innovative system for modeling industrial products based on haptic technology. The system consists of a Computer Aided..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/9/2.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="Haptic modeling in the conceptual phases of product design"/>
+
+    <meta name="dc.source" content="Virtual Reality 2005 9:2"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2005-11-30"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2005 Springer-Verlag London Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="The paper presents the results of a research project aimed at developing an innovative system for modeling industrial products based on haptic technology. The system consists of a Computer Aided Design (CAD) system enhanced with intuitive designer-oriented interaction tools and modalities. The system integrates innovative six degrees of freedom (DOF) haptic tools for modeling digital shapes, with sweep operators applied to class-A surfaces and force computation models based on chip formation models. The system aims at exploiting designers&#8217; existing skills in modeling products, improving the products design process by reducing the necessity of building several physical models for evaluating and testing the product designs. The system requirements have been defined observing designers during their daily work and translating the way they model shapes using hands and craft tools into specifications for the modeling system and the haptic tool. The system prototype has been tested by designers who have found it intuitive and effective to use."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2005-11-30"/>
+
+    <meta name="prism.volume" content="9"/>
+
+    <meta name="prism.number" content="2"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="192"/>
+
+    <meta name="prism.endingPage" content="202"/>
+
+    <meta name="prism.copyright" content="2005 Springer-Verlag London Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-005-0013-3"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-005-0013-3"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-005-0013-3.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-005-0013-3"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="Haptic modeling in the conceptual phases of product design"/>
+
+    <meta name="citation_volume" content="9"/>
+
+    <meta name="citation_issue" content="2"/>
+
+    <meta name="citation_publication_date" content="2006/03"/>
+
+    <meta name="citation_online_date" content="2005/11/30"/>
+
+    <meta name="citation_firstpage" content="192"/>
+
+    <meta name="citation_lastpage" content="202"/>
+
+    <meta name="citation_article_type" content="Original Article"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-005-0013-3"/>
+
+    <meta name="DOI" content="10.1007/s10055-005-0013-3"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-005-0013-3"/>
+
+    <meta name="description" content="The paper presents the results of a research project aimed at developing an innovative system for modeling industrial products based on haptic technology. "/>
+
+    <meta name="dc.creator" content="M. Bordegoni"/>
+
+    <meta name="dc.creator" content="U. Cugini"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="citation_title=Principles of CAD/CAM/CAE systems; citation_publication_date=1999; citation_id=CR1; citation_author=K Lee; citation_publisher=Addison-Wesley Wokingham"/>
+
+    <meta name="citation_reference" content="citation_title=Virtual reality technology; citation_publication_date=2003; citation_id=CR2; citation_author=GG Burdea; citation_author=P Coiffet; citation_publisher=Wiley"/>
+
+    <meta name="citation_reference" content="citation_title=3D User interfaces &#8211; theory and practice; citation_publication_date=2003; citation_id=CR3; citation_author=DA Bowman; citation_author=E Kruijff; citation_author=JJ LaViola; citation_author=I Poupyrev; citation_publisher=Addison-Wesley"/>
+
+    <meta name="citation_reference" content="Yamada Y (1997) Clay Modeling: techniques forgiving three-dimensional form to idea. San&#8217;ei Shobo Publishing Co"/>
+
+    <meta name="citation_reference" content="Cheshire DG, Evans MA, Dean CJ (2001) Haptic modeling &#8211; An alternative industrial design methodology? In: Proceedings of the EuroHaptics 2001, Birmingham, UK, 2001"/>
+
+    <meta name="citation_reference" content="Wiegers T, Vergeest JSM (2001) Extraction of CAD tool requirements from industry and from experimental design projects. In: Proceedings of the ASME DETC&#8217;01/DAC, Pittburgh USA, 2001"/>
+
+    <meta name="citation_reference" content="citation_title=Force and touch feedback for virtual reality; citation_publication_date=1996; citation_id=CR7; citation_author=GC Burdea; citation_publisher=Wiley"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comput Graph; citation_title=Haptics in virtual environments: taxonomy, research status, and challenges; citation_author=M Srinivasan, C Basdogan; citation_volume=21; citation_issue=4; citation_publication_date=1997; citation_pages=393-404; citation_doi=10.1016/S0097-8493(97)00030-7; citation_id=CR8"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comput Graph Forum; citation_title=Recent developments and applications of haptic devices; citation_author=SD Laycock, AM Day; citation_volume=22; citation_issue=2; citation_publication_date=2003; citation_pages=117-132; citation_doi=10.1111/1467-8659.00654; citation_id=CR9"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Sensor Review; citation_title=Haptic interfaces and devices; citation_author=V Hayward, OR Astley, M Cruz-Hernandez, D Grant, G Robles-De-La-Torre; citation_volume=24; citation_issue=1; citation_publication_date=2004; citation_pages=16-29; citation_doi=10.1108/02602280410515770; citation_id=CR10"/>
+
+    <meta name="citation_reference" content="Bordegoni M et al (2004) Deliverable D1 Hardware and software technology and cognitive ergonomics update. T&#8217;nD project public report, www.kaemart.it/touch-and-design"/>
+
+    <meta name="citation_reference" content="HapticMaster, Tsukuba University, V.R Lab, http://intron.kz.tsukuba.ac.jp/vrlab_web/hapticmaster/hapticmaster_e.html"/>
+
+    <meta name="citation_reference" content="Iwata H, Yano H, Nakaizumi F, Kawamura R (2001) Project FEELEX: adding haptic surface to graphics. In: Proceedings of the SIGGRAPH 2001. Los Angeles, CA, USA. 469&#8211;475"/>
+
+    <meta name="citation_reference" content="citation_title=Modeling inelastic deformation: viscoelasticity, plasticity, fracture; citation_publication_date=1988; citation_id=CR14; citation_author=D Terzopoulos; citation_author=K Fl`eischer; citation_publisher=SIGGRAPH 1988"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Computer Graphics; citation_title=Deformable curve and surface finite-elements for freeform shape design,; citation_author=G Celniker, D Gossard; citation_volume=25; citation_issue=4; citation_publication_date=1991; citation_pages=257-266; citation_id=CR15"/>
+
+    <meta name="citation_reference" content="Celniker G, Welch W (1992) Linear constraints for deformable B-spline surfaces. In: Proceedings of the symposium on interactive 3D graphics, ACM, New York, 165&#8211;170"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Computer-Aided Design; citation_title=A novel haptics-based interface and sculpting system for physics-based geometric design; citation_author=F Dachille, H Qin, A Kaufman; citation_volume=33; citation_publication_date=2001; citation_pages=403-420; citation_doi=10.1016/S0010-4485(00)00131-7; citation_id=CR17"/>
+
+    <meta name="citation_reference" content="McDonnell KT, Qin H, Wlodarczyk RA (2001) Virtual clay: a real-time sculpting system with haptic toolkits. ACM SI3D 2001, 179&#8211;190"/>
+
+    <meta name="citation_reference" content="Wang S, Kaufman A (1995) Volume Sculpting. In: Proceedings of the symposium on interactive 3D, 151&#8211;156"/>
+
+    <meta name="citation_reference" content="Iwata H, Noma H (1993) Volume haptization. In: Proceedings of the IEEE symposium on research frontiers in virtual reality, 16&#8211;23"/>
+
+    <meta name="citation_reference" content="Avila RS., Sobierajski LM (1996) A haptic interaction method for volume visualization. In: Proceedings of the visualization 1996. IEEE-CS Press, 197&#8211;204"/>
+
+    <meta name="citation_reference" content="Dewaele G, Cani J-P (2003) Interactive global and local deformations for virtual Clay. In: Proceedings of the pacific conference on computer graphics and applications, 131&#8211;140"/>
+
+    <meta name="citation_reference" content="Zilles C, Salisbury K (1995) A constraint-based god object method for haptics display. In: Proceedings of EEE/RSJ international conference on intelligent robotics and systems, vol. 3, 146&#8211;151"/>
+
+    <meta name="citation_reference" content="Abdel-Malek K, Blackmore D, Joy K (2004) Swept volumes: foundations, perspectives, and applications. Submitted to Intl J Shape Modeling"/>
+
+    <meta name="citation_reference" content="Baraff D, Witkin A, Anderson J, Kass M (2003) Physically-based modeling. siggraph 2003 Course Notes, n. 12"/>
+
+    <meta name="citation_reference" content="citation_journal_title=J. App. Mech. Transaction ASME; citation_title=Basic mechanics of the metal cutting process; citation_author=ME Merchant; citation_volume=66; citation_publication_date=1944; citation_pages=168-175; citation_id=CR26"/>
+
+    <meta name="citation_author" content="M. Bordegoni"/>
+
+    <meta name="citation_author_email" content="monica.bordegoni@polimi.it"/>
+
+    <meta name="citation_author_institution" content="Politecnico di Milano, Milano, Italy"/>
+
+    <meta name="citation_author" content="U. Cugini"/>
+
+    <meta name="citation_author_institution" content="Politecnico di Milano, Milano, Italy"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-005-0013-3&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2006/03/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-005-0013-3"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="Haptic modeling in the conceptual phases of product design"/>
+        <meta property="og:description" content="The paper presents the results of a research project aimed at developing an innovative system for modeling industrial products based on haptic technology. The system consists of a Computer Aided Design (CAD) system enhanced with intuitive designer-oriented interaction tools and modalities. The system integrates innovative six degrees of freedom (DOF) haptic tools for modeling digital shapes, with sweep operators applied to class-A surfaces and force computation models based on chip formation models. The system aims at exploiting designers’ existing skills in modeling products, improving the products design process by reducing the necessity of building several physical models for evaluating and testing the product designs. The system requirements have been defined observing designers during their daily work and translating the way they model shapes using hands and craft tools into specifications for the modeling system and the haptic tool. The system prototype has been tested by designers who have found it intuitive and effective to use."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>Haptic modeling in the conceptual phases of product design | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-005-0013-3","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Virtual prototyping, Product design, Haptics, Haptic modeling","kwrd":["Virtual_prototyping","Product_design","Haptics","Haptic_modeling"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-005-0013-3","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-005-0013-3","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=13;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-005-0013-3">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            Haptic modeling in the conceptual phases of product design
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-005-0013-3.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-005-0013-3.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">Original Article</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2005-11-30" itemprop="datePublished">30 November 2005</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">Haptic modeling in the conceptual phases of product design</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-M_-Bordegoni" data-author-popup="auth-M_-Bordegoni" data-corresp-id="c1">M. Bordegoni<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Politecnico di Milano" /><meta itemprop="address" content="grid.4643.5, 0000000419370327, Politecnico di Milano, Via La Masa 34, Milano, Italy" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-U_-Cugini" data-author-popup="auth-U_-Cugini">U. Cugini</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Politecnico di Milano" /><meta itemprop="address" content="grid.4643.5, 0000000419370327, Politecnico di Milano, Via La Masa 34, Milano, Italy" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 9</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">192</span>–<span itemprop="pageEnd">202</span>(<span data-test="article-publication-year">2006</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">460 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">28 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-005-0013-3/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>The paper presents the results of a research project aimed at developing an innovative system for modeling industrial products based on haptic technology. The system consists of a Computer Aided Design (CAD) system enhanced with intuitive designer-oriented interaction tools and modalities. The system integrates innovative six degrees of freedom (DOF) haptic tools for modeling digital shapes, with sweep operators applied to class-A surfaces and force computation models based on chip formation models. The system aims at exploiting designers’ existing skills in modeling products, improving the products design process by reducing the necessity of building several physical models for evaluating and testing the product designs. The system requirements have been defined observing designers during their daily work and translating the way they model shapes using hands and craft tools into specifications for the modeling system and the haptic tool. The system prototype has been tested by designers who have found it intuitive and effective to use.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Introduction</h2><div class="c-article-section__content" id="Sec1-content"><p>Virtual Prototyping (VP) is becoming a commonly adopted design and validation practice in several industrial sectors. Companies are moving from expensive physical models of designs to digital (virtual) models. Compared to physical models, virtual prototypes are in general less expensive, easily configurable and support variants, and allow for several simulations to run on a single model. Moreover, tests are repeatable, and the results of validation are often immediately available for product design review. Virtual prototypes often provide insights that physical testing would not reveal. Even if VP does not completely substitute physical models, it helps optimizing and eliminating redundancy in test facilities, accelerating life testing, and reducing the overall number of physical models used in the product lifecycle. Today, VP has its main focus on the late concept and engineering analysis stages of the product development process [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1" title="Lee K (1999) Principles of CAD/CAM/CAE systems. Addison-Wesley Wokingham, UK" href="/article/10.1007/s10055-005-0013-3#ref-CR1" id="ref-link-section-d10226e288">1</a>].</p><p>Recent trend aims at also using VP earlier in the concept stages, when product design is not too much detailed and changes do not heavily impact on the product development process. Used in the conceptual phase, VPs offer the possibility of evaluating as many concepts as possible, improving the product quality, and better exploiting designers’ activities. For these reasons, this practice is rapidly catching on in engineering design as well as industrial design. Most advanced VP systems are based on Virtual Reality (VR) technologies. Visual techniques have rapidly evolved in the last decades, providing new devices supporting realistic rendering, stereo viewing, and immersive experiences [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2" title="Burdea GG, Coiffet P (2003) Virtual reality technology. Wiley, New York" href="/article/10.1007/s10055-005-0013-3#ref-CR2" id="ref-link-section-d10226e294">2</a>]. Conversely, research and development of interactive devices have provided less innovative and effective solutions. The three dimensional (3D) devices, like 3D mice and joysticks, support a more realistic and intuitive interaction with 3D models [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 3" title="Bowman DA, Kruijff E, LaViola JJ, Poupyrev I (2003) 3D User interfaces – theory and practice. Addison-Wesley, Wokingham, UK" href="/article/10.1007/s10055-005-0013-3#ref-CR3" id="ref-link-section-d10226e297">3</a>]. Since a few years, some digital design tools allow users to physically get in touch with the design while working on a computer through haptic technologies. Haptic technology offers a revolutionary approach for combining physical and digital aspects to be exploited in various phases of product development. Haptics allow users to experience a sensation of touch and physical properties when they interact with virtual objects. Haptic devices can be used to interact intuitively with virtual models in 3D space by moving the 3D virtual model into the users’ physical workspace, allowing hands and eyes to work together with the model. Integrating haptic technologies within applications combines the benefits of more natural ways of working. In fact, existing haptic technology allows combining the capabilities of computer systems with the traditional skills and working methods of modelers and designers. Hands and direct modeling become the means of interaction with digital models. Physical interaction with the new product is considered important because designers can explore the product’s shape and style, and evaluate proportions. It is an intuitive modality for modeling new shapes, and for testing and evaluating product functionality and ergonomics [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 4" title="Yamada Y (1997) Clay Modeling: techniques forgiving three-dimensional form to idea. San’ei Shobo Publishing Co" href="/article/10.1007/s10055-005-0013-3#ref-CR4" id="ref-link-section-d10226e300">4</a>].</p><p>New modeling systems are being developed which allow designers to use their existing manual skills while working in the virtual environment. The potential of such technologies that allow a less constrained, more natural and intuitive interaction with virtual models has increased the drive towards computer support for the whole design process, in particular for conceptual design [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 5" title="Cheshire DG, Evans MA, Dean CJ (2001) Haptic modeling – An alternative industrial design methodology? In: Proceedings of the EuroHaptics 2001, Birmingham, UK, 2001" href="/article/10.1007/s10055-005-0013-3#ref-CR5" id="ref-link-section-d10226e306">5</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 6" title="Wiegers T, Vergeest JSM (2001) Extraction of CAD tool requirements from industry and from experimental design projects. In: Proceedings of the ASME DETC’01/DAC, Pittburgh USA, 2001" href="/article/10.1007/s10055-005-0013-3#ref-CR6" id="ref-link-section-d10226e309">6</a>]. The idea of bridging physical and virtual modeling by maintaining the effective and performing aspects of digital modeling, and enriching tools with some new modalities of interaction more oriented to exploit designers’ skills is at the basis of the research work described in this paper.</p><p>This paper presents the results of the research project T’nD – Touch and Design (www.kaemart.it/touch-and-design) that aims at developing a system that allows the generation of digital shapes in a natural and intuitive way for the modelers by manipulating haptic tools that closely resemble the physical tools they use in everyday work. The project is financially supported by FP6 IST Programme of the European Union. The project is coordinated by Politecnico di Milano (expert in shape modeling, haptics, and system integration), and involves two technology providers, think3 (provider of shape modeling technology) and FCS-CS (provider of FCS-HapticMaster system), two academic partners, Universitè Aix-Marseille I (expert in cognitive ergonomics) and Universitat de Girona (expert in product design sector), and three end-users, Pininfarina (end-user operating in car design sector), Alessi, and Eiger (end-users operating in the domestic appliances and household articles design sector). The most innovative aspects of the research concerns the development of designer-oriented haptic tools resembling craft tools like rakes and sandpapers, and of a physics-based shape modeling tool based on chip removal theories, and sweep operators computed on class A surfaces. The last feature allows us to use the sculpted digital model directly within the downstream design process activities without any further surface mathematic manipulation and reconstruction.</p><p>Section 2 presents the state of the art and related works concerning haptic technology, physics-based modeling, and haptic modeling. Section 3 describes how designers’ existing manual skills have been captured and analyzed in order to translate them into interaction tools and modalities within the system. Section 4 describes the haptic modeling system developed, presenting its features, the haptic tools and the shape modeling operators, and the physics-based model. Section 5 presents the system prototype and testing results. Finally, section 6 draws some conclusions and describes future directions of the research.</p></div></div></section><section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">Related works</h2><div class="c-article-section__content" id="Sec2-content"><h3 class="c-article__sub-heading" id="Sec3">Haptic technology</h3><p>Haptic devices allow users to experience a sensation of touch and force feedback when they interact with virtual material. The sense of touch in virtual environment is provided by haptic devices [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 7" title="Burdea GC (1996) Force and touch feedback for virtual reality. Wiley, New York" href="/article/10.1007/s10055-005-0013-3#ref-CR7" id="ref-link-section-d10226e329">7</a>]. Haptic devices are subdivided into force feedback devices and tactile devices. Within the context of our project, only force feedback devices were considered for the moment. A review of haptic literature can be found in [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 8" title="Srinivasan M, Basdogan C (1997) Haptics in virtual environments: taxonomy, research status, and challenges. Comput Graph 21(4):393–404" href="/article/10.1007/s10055-005-0013-3#ref-CR8" id="ref-link-section-d10226e332">8</a>]. A wide range of commercial force feedback devices is on the market today, but it is still an active research topic. In order to check if any force feedback device satisfies our system requirements, an overview of state-of-the-art haptic devices has been performed, also considering recent developments of haptics and applications [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 9" title="Laycock SD, Day AM (2003) Recent developments and applications of haptic devices. Comput Graph Forum, 22(2):117–132" href="/article/10.1007/s10055-005-0013-3#ref-CR9" id="ref-link-section-d10226e335">9</a>]. Some benchmarkings have been performed on current available technology, considering haptic performance indicators such as workspace, position resolution, stiffness, nominal forces, and tip inertia, and also some non-dimensional performance indicators [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 10" title="Hayward V, Astley OR, Cruz-Hernandez M, Grant D, Robles-De-La-Torre G (2004) Haptic interfaces and devices. Sensor Review, 24(1):16–29" href="/article/10.1007/s10055-005-0013-3#ref-CR10" id="ref-link-section-d10226e338">10</a>]. Details of the state-of-the-art analysis can be found in [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 11" title="Bordegoni M et al (2004) Deliverable D1 Hardware and software technology and cognitive ergonomics update. T’nD project public report, www.kaemart.it/touch-and-design" href="/article/10.1007/s10055-005-0013-3#ref-CR11" id="ref-link-section-d10226e341">11</a>]. Several devices are for general purpose; others are developed for specific applications, for example for medical applications or video games. The latter types of devices seem to be more effective in that they resemble real physical tools that users are used to.</p><p>The PHANTOM<sup>®</sup> devices produced by SensAble Technologies, Inc. (www.sensable.com) are the first commercial haptic products and are still the most popular devices. They are point-based devices having from three to six degrees of freedom (DOF) and using stylus or thimble as haptic interface. The working space is rather limited, at least in the standard model, and the maximum feedback force is low (10 N). Some other similar devices have been developed, like the HapticMaster device developed at the University of Tsukuba actuating three fingers [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 12" title="HapticMaster, Tsukuba University, V.R Lab, http://intron.kz.tsukuba.ac.jp/vrlab_web/hapticmaster/hapticmaster_e.html" href="/article/10.1007/s10055-005-0013-3#ref-CR12" id="ref-link-section-d10226e349">12</a>]. Rather recent, more industrial oriented point-based devices are the HapticMaster produced by FCS-CS (www.fcs-robotics.com) and the VIRTUOSE device produced by Haption (www.haption.com). The FCS-HapticMaster is a bi-directional three DOF I/O device. The feedback force supported is high (250 N) and its working space is much larger than the one supported by most of the competitors’ commercial products. Thanks to these features, the device is used in industrial oriented applications like the welding application developed by FCS-CS in a research project (see www.fcs-robotics.com for details). A different class of devices includes exoskeletons, like the Sarcos Dextrous Arm Master (www.sarcos.com), the PERCRO device (www.percro.org), and actuated gloves like the CyberForce device produced by Immersion Corp. (www.immersion.com). Actually, these devices are quite cumbersome, difficult to wear and to operate, and therefore little effective and seldom used in industrial applications. An interesting technology based on full hand contact has been recently developed. It consists of tactile devices, and haptic windows are at the moment only available as academic prototypes [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 13" title="Iwata H, Yano H, Nakaizumi F, Kawamura R (2001) Project FEELEX: adding haptic surface to graphics. In: Proceedings of the SIGGRAPH 2001. Los Angeles, CA, USA. 469–475" href="/article/10.1007/s10055-005-0013-3#ref-CR13" id="ref-link-section-d10226e352">13</a>].</p><h3 class="c-article__sub-heading" id="Sec4">Physics-based modeling</h3><p>In order for the haptic device to exert appropriate force in response to users’ actions, the virtual object and its properties are simulated by means of a physics-based model. Various physics-based modeling techniques have been developed. Terzopoulous and Fleisher provide a basis for physics-based design supporting simple interactive sculpting using viscoelastic and plastic models [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 14" title="Terzopoulos D, Fl`eischer K (1988) Modeling inelastic deformation: viscoelasticity, plasticity, fracture. SIGGRAPH 1988, Atlanta, USA 269–278" href="/article/10.1007/s10055-005-0013-3#ref-CR14" id="ref-link-section-d10226e363">14</a>]. Celniker and Gossard have developed a prototype system for interactive design based on finite-element optimization of energy functionals [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 15" title="Celniker G, Gossard D (1991) Deformable curve and surface finite-elements for freeform shape design, Computer Graphics, 25(4):257–266" href="/article/10.1007/s10055-005-0013-3#ref-CR15" id="ref-link-section-d10226e366">15</a>]. Celniker and Welch have investigated deformable B-splines with linear constraints [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 16" title="Celniker G, Welch W (1992) Linear constraints for deformable B-spline surfaces. In: Proceedings of the symposium on interactive 3D graphics, ACM, New York, 165–170" href="/article/10.1007/s10055-005-0013-3#ref-CR16" id="ref-link-section-d10226e369">16</a>]. Other methods implement dynamic sculpting with haptics spline models controlled by physical laws subject to various constraints [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 17" title="Dachille F, Qin H, Kaufman A (2001) A novel haptics-based interface and sculpting system for physics-based geometric design. Computer-Aided Design, 33:403–420" href="/article/10.1007/s10055-005-0013-3#ref-CR17" id="ref-link-section-d10226e372">17</a>]. Interactive sculpting framework based on subdivision solids and physics-based modeling has been proposed in [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 18" title="McDonnell KT, Qin H, Wlodarczyk RA (2001) Virtual clay: a real-time sculpting system with haptic toolkits. ACM SI3D 2001, 179–190" href="/article/10.1007/s10055-005-0013-3#ref-CR18" id="ref-link-section-d10226e375">18</a>].</p><h3 class="c-article__sub-heading" id="Sec5">Haptic modeling</h3><p>Haptic modeling is concerned with modeling of virtual shapes using haptic technologies. Haptic modeling systems allow users to touch, feel, manipulate, and model objects in a 3D environment that is similar to a natural setting. Most of the applications are based on volume representation [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 19" title="Wang S, Kaufman A (1995) Volume Sculpting. In: Proceedings of the symposium on interactive 3D, 151–156" href="/article/10.1007/s10055-005-0013-3#ref-CR19" id="ref-link-section-d10226e386">19</a>]. Some applications have been developed with the aim of providing haptic interaction with volume dataset, without actually providing realistic force feedback [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 20" title="Iwata H, Noma H (1993) Volume haptization. In: Proceedings of the IEEE symposium on research frontiers in virtual reality, 16–23" href="/article/10.1007/s10055-005-0013-3#ref-CR20" id="ref-link-section-d10226e389">20</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 21" title="Avila RS., Sobierajski LM (1996) A haptic interaction method for volume visualization. In: Proceedings of the visualization 1996. IEEE-CS Press, 197–204" href="/article/10.1007/s10055-005-0013-3#ref-CR21" id="ref-link-section-d10226e392">21</a>]. Some other applications are more related to physics-based shape modeling. Some sculpting systems have been developed based on haptic force associated with dynamic subdivision of solids, which give users the illusion of manipulating semi-elastic virtual clay [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 17" title="Dachille F, Qin H, Kaufman A (2001) A novel haptics-based interface and sculpting system for physics-based geometric design. Computer-Aided Design, 33:403–420" href="/article/10.1007/s10055-005-0013-3#ref-CR17" id="ref-link-section-d10226e395">17</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 18" title="McDonnell KT, Qin H, Wlodarczyk RA (2001) Virtual clay: a real-time sculpting system with haptic toolkits. ACM SI3D 2001, 179–190" href="/article/10.1007/s10055-005-0013-3#ref-CR18" id="ref-link-section-d10226e398">18</a>]. They are both based on the use of the point-based PHANTOM<sup>®</sup> stylus for interacting with the virtual clay.</p><p>The only physically-based shape modeling system commercially available is the FreeForm<sup>®</sup> by SenSable Technologies Inc. (www.sensable.com/freeform/freeform.html), which is based on the PHANTOM<sup>®</sup> haptic device. Users work directly with the digital clay using the PHANTOM<sup>®</sup> stylus as a modeling tool. Hardness and surface smoothness of the clay can be varied, and different modeling tools can be selected. The material can be removed using some carving operators, but the user can also work from inside out pulling and deforming the shape. The main problem designers have reported concerns the difficulty in getting used to the tool and to the forces required for removing material with a constant depth. In addition, the fact that the application uses a voxel model does not allow them to have a high quality surface that can be immediately re-used in the downstream activities of product development.</p></div></div></section><section aria-labelledby="Sec6"><div class="c-article-section" id="Sec6-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec6">Users’ skills analysis</h2><div class="c-article-section__content" id="Sec6-content"><p>The aim of the research work presented in this paper is to develop a system supporting ways of interaction that are easy, intuitive, and pleasant to use for product designers so as to convince them to adopt the system as a daily working tool. Therefore, great attention has been given to the usability and intuitive aspects of the interaction modalities with virtual models [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 3" title="Bowman DA, Kruijff E, LaViola JJ, Poupyrev I (2003) 3D User interfaces – theory and practice. Addison-Wesley, Wokingham, UK" href="/article/10.1007/s10055-005-0013-3#ref-CR3" id="ref-link-section-d10226e422">3</a>].</p><p>The target users of our system are designers who are used to modeling physical prototypes of product by hands, or designers with some experience using computer aided design (CAD) and Computer Aided Industrial Design (CAID) tools (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0013-3#Fig1">1</a>). These users have motor and tactile capabilities that are well exploited during manual modeling of plastic materials. The existing skills they have in their hands allow them to intuitively create physical models from ideas, and to check surface quality by just passing their hands over the newly created shape. Physical modeling is a very common practice in the industrial design field, even if it shows some critical aspects. First, the physical models produced are often rough, not precise and of the right dimension, and not symmetrical. In addition, the digitalization of the physical models required for subsequent product development phases is complex and costly.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0013-3/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0013-3/MediaObjects/10055_2005_13_Fig1_HTML.gif?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0013-3/MediaObjects/10055_2005_13_Fig1_HTML.gif" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p>Physical and digital modeling of products</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0013-3/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+            <p>Computer-aided tools offer a nice set of functions that allow designers to perform on the digital model what is not possible to do in real world – such as undo, copy and paste, and mirror operations, and also the very useful “reflection lines” function that allows designers to test the surface quality. Several surveys demonstrate that designers are not fully comfortable using these tools since they often find them too technical and much more oriented towards engineers than creative people. Another major criticism concerns the lack of physical contact and continuous tactile interaction with objects that are being modeled.</p><p>The idea of this research work is to provide a system that offers all the good features of CAD/CAID tools with improved user interface and interaction modalities that preserve and exploit designers’ existing manual skills. Different from other research works related to haptic modeling and virtual clay modeling [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 5" title="Cheshire DG, Evans MA, Dean CJ (2001) Haptic modeling – An alternative industrial design methodology? In: Proceedings of the EuroHaptics 2001, Birmingham, UK, 2001" href="/article/10.1007/s10055-005-0013-3#ref-CR5" id="ref-link-section-d10226e454">5</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 17" title="Dachille F, Qin H, Kaufman A (2001) A novel haptics-based interface and sculpting system for physics-based geometric design. Computer-Aided Design, 33:403–420" href="/article/10.1007/s10055-005-0013-3#ref-CR17" id="ref-link-section-d10226e457">17</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 22" title="Dewaele G, Cani J-P (2003) Interactive global and local deformations for virtual Clay. In: Proceedings of the pacific conference on computer graphics and applications, 131–140" href="/article/10.1007/s10055-005-0013-3#ref-CR22" id="ref-link-section-d10226e460">22</a>], the aim of this work is to develop new haptic tools and modeling modalities that are dedicated to, and directly specified and evaluated by designers. Therefore, the initial activity of the research has consisted in observing designers while modeling physical prototypes of products in order to derive some specifications for the system user interface.</p><p>Cognitive psychologists participating in the research project have observed and analyzed the modelers while modeling physical prototypes using their hands and craft tools (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0013-3#Fig2">2</a>). Modelers of industrial partners of the project have been video recorded and interviewed while creating physical models of some selected objects (a vacuum cleaner and a car C-pillar) by working malleable materials (like clay, foam material, etc.) with their hands and tools like rakes, sandpaper, templates, cutters. Subsequently, the collected data have been quantitatively and qualitatively analyzed in order to understand the advantages derived from operating manually when creating shapes, and to understand the modelers’ skill that is in their hands. The analysis of hand gestures has highlighted the fact that visual, tactile, and kinesthetic feedbacks are equally important in the shape creation and evaluation process. The skilled hand motions performed by the modelers allow for a precise creation of the shape; the tactile interaction with the object helps in comparing adequacy of the physical prototype with the drawings, in providing early clues about shape features, and in improving the 3D mental representation of the shape.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0013-3/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0013-3/MediaObjects/10055_2005_13_Fig2_HTML.jpg?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0013-3/MediaObjects/10055_2005_13_Fig2_HTML.jpg" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p>Physical modeling tasks and tools (Images by courtesy of Alessi and Pininfarina)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0013-3/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+            <p>The analysis of the acquired data has lead to the identification and classification of the tools used (manual tools, machines) and of the gestures and hand motions performed (for shaping the object, for feeling the surface quality, etc.). From this analysis, we have pointed out the most recurrent, common, and effective users’ hand operations. These are the actions that are going to be reproduced in the system: <i>scraping, surface quality testing</i>, and <i>finishing</i>. Scraping is usually performed using rakes, surface quality testing using hands directly, and surface finishing using sandpaper.</p></div></div></section><section aria-labelledby="Sec7"><div class="c-article-section" id="Sec7-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec7">Haptic modeling system</h2><div class="c-article-section__content" id="Sec7-content"><h3 class="c-article__sub-heading" id="Sec8">System overview</h3><p>The system has been designed considering the following three main requirements:</p><ul class="u-list-style-dash">
+                    <li>
+                      <p>The system should provide haptic tools and modeling operators for scraping, finishing a surface, and for checking its quality.</p>
+                    </li>
+                    <li>
+                      <p>The system is oriented towards the creation of industrial design models; therefore, it should support the generation of high quality class-A surfaces.</p>
+                    </li>
+                    <li>
+                      <p>The system should render real-time forces that simulate contact and force response with plastic materials like clay.</p>
+                    </li>
+                  </ul><p>According to the first requirement, the system is expected to provide an interface that allows designers to interact haptically and graphically with virtual models of products including a true size car body. Therefore, purely point-based haptic interaction that is provided by most of the haptic devices is not sufficient to appreciate and modify the surfaces in an intuitive way. Satisfactory full hand interfaces, such as haptic gloves, have not been built so far, despite a number of attempts and the commercial product Immersion CyberGlove (www.immersion.com). On the basis of the force feedback devices overview reported previously, the final conclusion we draw is that an extended version of the FCS-HapticMaster is the most appropriate hardware solution for the project. In fact, the device provides an adequate workspace (66 litres) and rendered forces (250 N). Currently, the device provides from three- to four-DOF. Within the context of the project, the FCS-HapticMaster is used as basic platform, equipped with a strong and stiff six DOF device carrying simulated clay modeling tools.</p><p>For what concerns the mathematical description of products, approximated models of shapes, like the ones supported by voxel-based techniques, do not satisfy the second point requiring high precision representation of the created shape. Therefore, we have developed a technique that is based on tessellated model representations used during the material removal operations, and that uses generic sweeping motions of profiles operators at the end of the removal operation in order to compute a precise high-quality surface.</p><p>Finally, the system is required to compute and render the geometric and haptic model of the sculpted object in real-time. Virtual objects must behave credibly, and interaction must take place in real-time. Therefore, the system should be able to simulate properties and behaviors, and at the same time satisfy the real-time constraints. For what concerns the physics-based model used for computing and rendering the forces in accordance to the type of plastic material simulated, we have adopted a solution based on the well-known theory of chip removal.</p><p>Several problems arise in haptic applications supporting interaction with deformable objects: costly computational time, numerical instability in the integration of body dynamics and collision detection, time delays, etc. It is well known that haptic systems require high simulation rates (about 1 kHz) to obtain realistic force feedback. The update rates of the physical objects being simulated are normally of the order of 20–150 Hz. In order to satisfy haptic simulation rate, we have designed a system architecture based on parallel computation loops, and we have developed force computation algorithms based on data interpolation and prediction.</p><h3 class="c-article__sub-heading" id="Sec9">System architecture</h3><p>The architecture of the system is shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0013-3#Fig3">3</a>. It consists of the following main components:</p><ul class="u-list-style-dash">
+                    <li>
+                      <p>The FCS-HapticMaster that is operated by the user. The device has been equipped with innovative haptic tools that are oriented towards design and modeling operations. In response to the collision with the virtual object, the device renders appropriate contact and reaction forces. The rendered forces depend on the type of collision and on the type of material being simulated.</p>
+                    </li>
+                    <li>
+                      <p>The haptic rendering system includes a collision detection module for detecting contacts between the virtual representation of haptic interface (avatar) at position X and the virtual object; a force response module that returns the interaction force between the avatar and the virtual object; and the control module that returns a contact force to the user (i.e., the ideal interaction force approximated to the haptic device capabilities).</p>
+                    </li>
+                    <li>
+                      <p>The simulation system updates the geometric and haptic model of the object on the basis of the shape, position, and speed of the haptic tool. The simulation engine operates on a simplified geometry that is converted into a smooth shape at the end of the interactive session.</p>
+                    </li>
+                  </ul>
+<div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0013-3/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0013-3/MediaObjects/10055_2005_13_Fig3_HTML.gif?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0013-3/MediaObjects/10055_2005_13_Fig3_HTML.gif" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p>System architecture</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0013-3/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <h3 class="c-article__sub-heading" id="Sec10">Haptic tool</h3><p>The design of the haptic tools has started from the collected users and technical requirements. Given the target products and the modeling functions addressed by the project, the haptic tool interface developed in the project is a dedicated tool that physically simulates one or more of the craft tools used in actual clay work. Two tools have been studied: a scraping tool for material removal, and a sandpaper tool, which allows virtual sanding of a gently curved surface with touch feedback of the curvature achieved.</p><p>Much of the existing work on haptics has focused on three-DOF haptic interfaces [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 23" title="Zilles C, Salisbury K (1995) A constraint-based god object method for haptics display. In: Proceedings of EEE/RSJ international conference on intelligent robotics and systems, vol. 3, 146–151" href="/article/10.1007/s10055-005-0013-3#ref-CR23" id="ref-link-section-d10226e590">23</a>]. Actually, complex interaction modalities require six-DOF object manipulation capabilities with force-and-torque feedback. In this type of operation, the interaction generally cannot be modelled by a point-surface contact, which is typically supported by available point-based force feedback devices. The only device available at the moment which can render the forces required in a workspace similar to the reach of the human arm is the FCS-HapticMaster (HM). The HM is used as the basis for a five-DOF powered six DOF moving virtual tools interface.</p><p>The first tool implemented is a <i>scraping tool</i> resembling a real rake (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0013-3#Fig4">4</a>). The tool consists of a strip of metal, which is typically handled by the user by gripping it between the thumb and fingers in two places, with both hands. Movement and force feedback on the tool is needed in at least all the three translational DOF that a body has: fore-aft, left-right, and up-down. The workspace needed is on the order of the reach of the human arm, or the size of a quarter of a 40% car model. Movement and force feedbacks are preferably available also in one or more of the three rotational DOF that a body in space has. The tool needs to be powered in only two of the three axes of rotation available to any body in space, provided the correct order of rotations is chosen. The resistance of the tool perceived by the user must be either the same as using the actual physical tool on real clay, or the differences must be acceptable and easily accustomed to. Tool forces presented to the user when moving free of the virtual clay surface are as light as possible.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0013-3/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0013-3/MediaObjects/10055_2005_13_Fig4_HTML.jpg?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0013-3/MediaObjects/10055_2005_13_Fig4_HTML.jpg" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p>Haptic virtual rake: (a) real rake used by designers for clay modeling; (b) virtual rake; (c) rake mounted on a six DOF haptic system</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0013-3/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>Since the scraping tool requires six DOF, a single HM device that supports three DOF is not enough. A higher number of DOF requires more than one HM. The solution currently implemented consists of two HMs that are (conceptually) connected to the scraping tool by means of spherical joints as shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0013-3#Fig4">4</a>c, with the joints axis coincident to the lower tool edge. The scraping tool has five fully measured and actuated DOF (three translational plus two rotational). It also has one further DOF, which is free; but, due to the way the tool is used, it can produce a feedback torque consistent with the simulation. The scraping tool is equipped with some buttons on its back side that allow the user to change some physical parameters of the models, as shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0013-3#Fig4">4</a>b. The two buttons placed on the right hand side of the tool allow users to set the stiffness of the material. The two buttons on the left hand side allow changing the resistance of the material when scraped.</p><p>To summarize, in this “5+1 DOF” configuration the tool can reach any position in its workspace and can be rotated by a certain extent. Relative to the scraping simulation purpose, it can be considered a reasonably good approximation of a full six-DOF device, which is simpler to implement both on hardware and software side.</p><p>The project is also developing a <i>sanding tool</i>, which is more appropriate to finish a surface. Sanding tools may require more DOF in the tool handle because the curvature of the surface can be felt through an unsupported piece of sandpaper. The haptic device will be a versatile platform for these kinds of tools, ideally with higher haptic quality than current haptic technology, and will perform better, especially in the range of forces and torques that can be rendered faithfully and without introducing artifacts such as spurious frictional and mass forces on the simulated tool.</p><h3 class="c-article__sub-heading" id="Sec11">Shape modeling methods</h3><p>As already mentioned, for what concerns the mathematical model of shapes, approximated models like voxel-based techniques do not satisfy the requirement for high precision shape representation. Therefore, our research has focused on the study of generic sweeping motions of profiles [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 24" title="Abdel-Malek K, Blackmore D, Joy K (2004) Swept volumes: foundations, perspectives, and applications. Submitted to Intl J Shape Modeling" href="/article/10.1007/s10055-005-0013-3#ref-CR24" id="ref-link-section-d10226e646">24</a>]. Six meaningful motions used in the shop floors by modelers when scraping clay using shaped templates have been considered: “constant”, “constant axis”, “Frenet”, “enhanced Frenet”, “along a plane”, and “surface based”. These motions are independent from the profile and cover several cases of actual sweeping. The users’ haptic-based motions are supported by a tessellated model for flexibility reasons. In fact, tessellation is used in several contexts where the treatment of such elementary elements makes computation faster than other mathematical representations. The shape representation is then translated into NURBS data so as to be used straightforward for downstream product development activities.</p><p>The shape tessellation supports high frequency rendering loop (around 50 Hz) required by the real time interaction of the users with the virtual shape. The computational loop consists of the following tasks:</p><ul class="u-list-style-dash">
+                    <li>
+                      <p>Detection of collision, computed as intersection between the tessellated shapes and the tessellated tools.</p>
+                    </li>
+                    <li>
+                      <p>Computation of the resulting haptic forces, using geometric computation of the collisions based on tessellation (scraped volume, area of collision). The system provides contact feedback to the users according to the physics-based model, simulating the real clay [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 25" title="Baraff D, Witkin A, Anderson J, Kass M (2003) Physically-based modeling. siggraph 2003 Course Notes, n. 12" href="/article/10.1007/s10055-005-0013-3#ref-CR25" id="ref-link-section-d10226e663">25</a>] and the action performed.</p>
+                    </li>
+                    <li>
+                      <p>Visualization of the resulting scraped surface, using the above tessellations to render in the graphic module.</p>
+                    </li>
+                  </ul><p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0013-3#Fig5">5</a> shows the resulting scraped surface obtained when the tool follows the shown curve. The scraped surface is computed by cutting and updating only a tessellated model of the surface. The bold segments are the intersections of the tool displacement between two subsequent positions.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0013-3/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0013-3/MediaObjects/10055_2005_13_Fig5_HTML.jpg?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0013-3/MediaObjects/10055_2005_13_Fig5_HTML.jpg" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p>Model representation of a scraped surface (computed by the think3 system)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0013-3/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <h3 class="c-article__sub-heading" id="Sec12">Cutting forces computation</h3><p>This section describes the theory and issues related to the computation of forces to be applied when a collision between the tool and the model is detected. The computation of forces is built on the well-known theory of chip removal based on the Merchant model [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 26" title="Merchant ME (1944) Basic mechanics of the metal cutting process. J. App. Mech. Transaction ASME, 66:168–175" href="/article/10.1007/s10055-005-0013-3#ref-CR26" id="ref-link-section-d10226e704">26</a>].</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec13">Cutting forces theory and issues</h4><p>Despite the fact that there is a wide range of different tools used in clay modeling, almost all of them can be modeled as a blade. Hence, the cutting process is mainly dependent on three specific angles (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0013-3#Fig6">6</a>): the rake angle (<i>γ</i>), the clearance angle (<i>θ</i>), and the setting angle (ζ).
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-6"><figure><figcaption><b id="Fig6" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 6</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0013-3/figures/6" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0013-3/MediaObjects/10055_2005_13_Fig6_HTML.gif?as=webp"></source><img aria-describedby="figure-6-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0013-3/MediaObjects/10055_2005_13_Fig6_HTML.gif" alt="figure6" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-6-desc"><p>Tool angles: <i>ζ</i>, setting angle; <i>γ</i>, rake angle; <i>θ</i>, clearance angle</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0013-3/figures/6" data-track-dest="link:Figure6 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                    <p>There are three regions of interest in the cutting process. The first area, shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0013-3#Fig7">7</a>, extends along the shear plane, and is the boundary between the deformed and non deformed material or the chip and the work. The second area includes the interface between the chip and the tool face, while the third area includes the finished surface and the material adjacent to the surface. Cutting forces are dominated primarily from what happens in the first area, and secondarily from the friction and wear between the tool and the work in the second area. The third area basically influences the roughness and integrity of the worked surface.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-7"><figure><figcaption><b id="Fig7" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 7</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0013-3/figures/7" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0013-3/MediaObjects/10055_2005_13_Fig7_HTML.gif?as=webp"></source><img aria-describedby="figure-7-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0013-3/MediaObjects/10055_2005_13_Fig7_HTML.gif" alt="figure7" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-7-desc"><p>Depth of cut (<i>h</i>) and chip thickness (<i>h</i>
+                                        <sub>c</sub>)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0013-3/figures/7" data-track-dest="link:Figure7 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                    <p>The cutting process involves concentrated shear along a rather distinct shear plane. As the material approaches the shear plane, it does not deform until the shear plane is reached. It then undergoes a substantial amount of simple shear as it crosses a thin primary shear zone. There is essentially no further plastic flow as the chip proceeds up the face of the tool. The small amount of secondary shear along the tool face is generally ignored in a first study of the cutting process, and we do the same, and the motion of the chip along the tool face is considered to be similar to that of a friction slider of constant coefficient from A to O (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0013-3#Fig7">7</a>). In order to evaluate the shear angle, generally a method is used that relies on the experimental observation that there is no change in density; hence being <i>l</i> and <i>L</i>, respectively, the length and the width of the chip before the separation from the work, and <i>l</i>
+                        <sub>c</sub> and <i>L</i>
+                        <sub>c</sub>, the length and width of the chip after the separation we can write: </p><div id="Equ1" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ lLh = l_{{\text{c}}} L_{{\text{c}}} h_{{\text{c}}} . $$</span></div><div class="c-article-equation__number">
+                    (1)
+                </div></div>
+                    <p>Once the thickness of chip is calculated, we can directly evaluate the shear angle, given the rake angle and the cutting ratio.</p><p>The expression of the <i>force in the cutting direction</i> (<i>F</i>
+                        <sub>1</sub>) is the following: </p><div id="Equ2" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ F_{1} = Lh\tau _{0} \frac{{\cot \varphi + \tan (Cost - \varphi )}} {{1 - \xi \tan (Cost - \varphi )}}. $$</span></div><div class="c-article-equation__number">
+                    (2)
+                </div></div>
+                    <p>From this, it is possible to draw some considerations:</p><ol class="u-list-style-none">
+                      <li>
+                        <span class="u-custom-list-number">1.</span>
+                        
+                          <p>The cutting force is proportional to the cutting area.</p>
+                        
+                      </li>
+                      <li>
+                        <span class="u-custom-list-number">2.</span>
+                        
+                          <p>The properties of the material directly affect the value of the cutting force.</p>
+                        
+                      </li>
+                      <li>
+                        <span class="u-custom-list-number">3.</span>
+                        
+                          <p>An increase in the friction coefficient (tied to <i>μ</i>) is associated with a decrease in the shear plane angle (<i>ϕ</i>), hence leads to an increase in the cutting force.</p>
+                        
+                      </li>
+                      <li>
+                        <span class="u-custom-list-number">4.</span>
+                        
+                          <p>An increase in the rake angle <i>γ</i> also leads to an increase in the shear plane angle, hence the cutting force decreases.</p>
+                        
+                      </li>
+                    </ol><p>The material characteristics require to be computed experimentally. In many cases, the dependence of the force from the material is concentrated in a single coefficient called <i>cutting pressure</i> (<i>k</i>
+                        <sub>p</sub>) defined as follows: </p><div id="Equ3" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ k_{{\text{p}}} = \frac{{F_{1} }} {s}, $$</span></div><div class="c-article-equation__number">
+                    (3)
+                </div></div><p> where <i>s</i> is the area calculated as the width (<i>L</i>) of chip times its thickness (<i>h</i>).</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec14">Cutting forces computation algorithm</h4><p>According to the previous discussion, it follows that in order to simulate the forces exerted during clay cutting operations, several levels of accuracy can be adopted depending on the formula chosen to compute them. According to Eq. 2, it is necessary to know the values of material constants ξ, τ<sub>0</sub>, Const that can only be obtained experimentally. The effort required to separately evaluate the values of these three constants is repaid by the possibility of using a more accurate model that allows us to assess the difference in force due to variations in the rake angle or in the magnitude of friction. Conversely, using the cutting pressure, as from Eq. 3, it is possible to simplify the experimental activity of material characterization with the penalty of having a less accurate model that does not take into account variations of tool angle and friction. Since the aim of our system is to obtain a global good level of correspondence between real and virtual clay modeling experience, this simplified method based on cutting pressure is used. The advantage of this choice is that it requires a simpler experimental phase and reduces the computational time. Also, since human capability in force discrimination depending on kinesthetic perception is not very accurate, a “precise” model is not required.</p><p>The implemented algorithm works as follows. The scraping operation consists of the tool cutting away material from the clay model. In geometrical modeling terms, it is represented as a sweeping operation along a trajectory of a two dimensional (2D) shape (the rake) intersecting the solid. Referring to Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0013-3#Fig8">8</a>, the intersecting area can be considered to be approximated by a discrete number of thin slices.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-8"><figure><figcaption><b id="Fig8" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 8</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0013-3/figures/8" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0013-3/MediaObjects/10055_2005_13_Fig8_HTML.gif?as=webp"></source><img aria-describedby="figure-8-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0013-3/MediaObjects/10055_2005_13_Fig8_HTML.gif" alt="figure8" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-8-desc"><p>Tool during cutting operation</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0013-3/figures/8" data-track-dest="link:Figure8 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                    <p>For each slice, the cutting process is orthogonal to the sweep trajectory, allowing the computation of the cutting force <i>F</i>
+                        <sub>i</sub>, as previously described. The sum of the forces <i>F</i>
+                        <sub>i</sub> is equivalent to a force (<i>F</i>
+                        <sub>tot</sub>) applied in a particular point of the surface, and a torque corresponding to two forces positioned at two different lines of action. The tool is actuated by means of the two FCS-HapticMaster devices as described previously. Therefore, it is convenient to transform the force system in the equivalent system made of two forces, each positioned in correspondence of the FCS-HapticMaster end-effector. In order to analytically solve the problem, it is then necessary to perform the following steps (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0013-3#Fig9">9</a>):</p><ol class="u-list-style-none">
+                      <li>
+                        <span class="u-custom-list-number">1.</span>
+                        
+                          <p>Calculate the forces along the cutting surface to find the resultant force (<i>F</i>
+                                        <sub>cr</sub>).</p>
+                        
+                      </li>
+                      <li>
+                        <span class="u-custom-list-number">2.</span>
+                        
+                          <p>Approximate this force with a force (<i>F</i>
+                                        <sub>ch</sub>) that lies to the bottom line of the tool where the HM devices are jointed.</p>
+                        
+                      </li>
+                      <li>
+                        <span class="u-custom-list-number">3.</span>
+                        
+                          <p>Decompose this force into two forces F<sub>HM1</sub> and F<sub>HM2</sub>. In this way we do not simulate the torque due to the fact that the center of gravity of the area (and then the application point of <i>F</i>
+                                        <sub>cr</sub>) does not belong to the bottom line of the tool. The approximation due to this simplification has negligible effects on the realism of the simulation due to the fact that the distance between the center of gravity and the bottom line is generally irrelevant if compared with the height of the tool.</p>
+                        
+                      </li>
+                      <li>
+                        <span class="u-custom-list-number">4.</span>
+                        
+                          <p>Control the two HM devices in an appropriate way in order to make them exert these forces on the user.</p>
+                        
+                      </li>
+                    </ol><p>Steps 1–4 need to be continuously computed at a frequency high enough to be suitable for haptic rendering (~1 kHz).
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-9"><figure><figcaption><b id="Fig9" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 9</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0013-3/figures/9" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0013-3/MediaObjects/10055_2005_13_Fig9_HTML.gif?as=webp"></source><img aria-describedby="figure-9-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0013-3/MediaObjects/10055_2005_13_Fig9_HTML.gif" alt="figure9" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-9-desc"><p>Force computation algorithm</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0013-3/figures/9" data-track-dest="link:Figure9 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                    <p>Being the force for every slice proportional to the area (<i>A</i>) of the slice itself, <i>F</i>
+                        <sub>tot</sub> can be computed as follows: </p><div id="Equ4" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ F_{{{\text{tot}}}} = {\int\limits_{{\text{AREA}}} {k_{{\text{p}}} {\kern 1pt} {\text{d}}A} } = k_{{\text{p}}} {\int\limits_{{\text{AREA}}} {{\text{d}}A} } = k_{{\text{p}}} \cdot {\text{Area}}{\text{.}} $$</span></div><div class="c-article-equation__number">
+                    (4)
+                </div></div>
+                    <p>In other words, the system corresponds to just one force if the origin of the reference frame corresponds to the center of gravity of the intersection area. Moreover, the intensity of this force is proportional to the value of the area itself. In order to compute the two forces applied in correspondence with the two HapticMaster end effectors, it is then sufficient to use the lever principle referred to the center of gravity of the area. In this way we just take into account the force component in the cutting direction. The same consideration can be done for forces orthogonal to it. The only necessary information other than material characteristics is the value of the intersection area and the position of its center of gravity referred to a known frame. It is also necessary to know the rake angle and the direction of cutting, but it is possible to directly measure it.</p><h3 class="c-article__sub-heading" id="Sec15">Haptic rendering</h3><p>As we have seen in previous sections, the forces to exert on the user are computed on the basis of the geometrical data provided by the collision detection module. These data are provided with a relatively slow rate (between 5 and 30 Hz) because of the complexity of the computation. If the haptic forces were updated at the same rate, haptic simulation would not be very realistic, and the user would experience a very bouncy surface and abruptly changing forces. To mitigate this phenomenon due to low forces refresh rate, we have decoupled the haptic and the simulation loops. The system includes an internal loop – named <i>haptic loop</i> – that operates in such a way as to compensate the effects of data provision delay.</p><p>The haptic loop operates at a frequency in the range 50–700 Hz and performs the following steps (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0013-3#Fig10">10</a>):</p><ol class="u-list-style-none">
+                    <li>
+                      <span class="u-custom-list-number">1.</span>
+                      
+                        <p>It receives intersection data from the geometric modeling module in an asynchronous way.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">2.</span>
+                      
+                        <p>It applies to these data a time delay compensation algorithm that allows the system to reconstruct, with a certain degree of uncertainty, geometrical data between two consecutive intersection steps. In this way, the system is able to compute forces with a higher rate compared with the one of the geometric module. The FCS-HapticMaster has an internal high frequency loop (2,500 Hz) that continuously adapts the force to the actual end-effector position.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">3.</span>
+                      
+                        <p>It sends to the haptic system the appropriate parameters to exert the computed forces.</p>
+                      
+                    </li>
+                  </ol><p>Step 2 of the haptic loop includes a time delay compensation algorithm, which computes the missing data (between two consecutive geometrical intersection computations) by linearly interpolating the already known ones. In this way, it is possible to avoid the problem of step changes in the exerted forces, and then partially solve problems related to the low rate of the geometric modeling loop.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-10"><figure><figcaption><b id="Fig10" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 10</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0013-3/figures/10" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0013-3/MediaObjects/10055_2005_13_Fig10_HTML.gif?as=webp"></source><img aria-describedby="figure-10-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0013-3/MediaObjects/10055_2005_13_Fig10_HTML.gif" alt="figure10" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-10-desc"><p>Loops for forces computation and exertion</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0013-3/figures/10" data-track-dest="link:Figure10 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                </div></div></section><section aria-labelledby="Sec16"><div class="c-article-section" id="Sec16-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec16">System prototype and testing</h2><div class="c-article-section__content" id="Sec16-content"><p>The idea of using a haptic tool for modeling shapes in the industrial design field is quite new. Therefore, we have considered as very important testing the concepts and interaction modalities proposed by the research with designers in order not to build a system that users will not like, and consequently will not use. Therefore, in order to test the concept of haptic “scraping” in the virtual environment, we have developed a prototype for being evaluated by end-users.</p><p>The system set-up consists of an initial version of the scraping haptic tool driven by two integrated FCS-HapticMaster devices of the product (a car body in the example), and a monitor showing the object virtual model (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0013-3#Fig11">11</a>). The user handles the haptic tool with two hands like in the real case when using a scraping tool, and moves it for removing material. When the haptic tool gets in contact with the virtual object, it gives back the user a haptic feedback. The tool is equipped with some buttons on its backside that allow the user to change the stiffness of the material and the resistance of the material when scraped.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-11"><figure><figcaption><b id="Fig11" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 11</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0013-3/figures/11" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0013-3/MediaObjects/10055_2005_13_Fig11_HTML.jpg?as=webp"></source><img aria-describedby="figure-11-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0013-3/MediaObjects/10055_2005_13_Fig11_HTML.jpg" alt="figure11" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-11-desc"><p>System prototype tested by a user</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0013-3/figures/11" data-track-dest="link:Figure11 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+            <p>About ten designers and CAD engineers have been invited to try and evaluate the prototype. They all agree on the fact that the system is suitable for rough shape creation. In general, all the testers have expressed the opinion that the system might be a very helpful tool both for modelers and designers. They all seem quite positive on the possibility of integrating this new tool with other modeling tools within the design process. At the moment, testers do not see the possibility of replacing 2D sketching or 3D CAID tools, but rather they confirm the effective use of this tool for substituting the physical model making. Concerning the system usability, they all agreed in confirming its extreme intuitiveness for creating shapes, also because of the intrinsic naturalness of the hand gesture. An important achievement to be noted is that all participants considered the motion they were making and the forces implied of extreme good quality, absolutely similar to the ones of the physical clay model making.</p></div></div></section><section aria-labelledby="Sec17"><div class="c-article-section" id="Sec17-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec17">Conclusions</h2><div class="c-article-section__content" id="Sec17-content"><p>The paper has presented the results of the research project T’nD funded by the European Union. The paper has described the motivations that justify the project, the objectives and relevance of the research topics in the industrial design sector, the requirements collected by interviewing and observing designers at work, and the analysis performed for designing the system. Furthermore, the paper has presented the first achieved results that consist in the identification of the system functionalities resembling ways of operating of designers and modelers, the study of the haptic tools and of the shape modeling techniques, and the system architecture. Finally, the first system prototype has been presented. On the basis of the evaluation results carried out on the system prototype, a new version of the system is being developed, and a sandpaper tool is going to be integrated. Besides, the visualization capabilities of the system are going to be improved integrating stereo viewing provided through a stereo Head Mounted Display. The system is expected to be a major improvement for industrial design companies that will be able to shorten product design lifecycle, improve design quality, while preserving valuable skills of operators.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="K. Lee, " /><meta itemprop="datePublished" content="1999" /><meta itemprop="headline" content="Lee K (1999) Principles of CAD/CAM/CAE systems. Addison-Wesley Wokingham, UK" /><span class="c-article-references__counter">1.</span><p class="c-article-references__text" id="ref-CR1">Lee K (1999) Principles of CAD/CAM/CAE systems. Addison-Wesley Wokingham, UK</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 1 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Principles%20of%20CAD%2FCAM%2FCAE%20systems&amp;publication_year=1999&amp;author=Lee%2CK">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="GG. Burdea, P. Coiffet, " /><meta itemprop="datePublished" content="2003" /><meta itemprop="headline" content="Burdea GG, Coiffet P (2003) Virtual reality technology. Wiley, New York" /><span class="c-article-references__counter">2.</span><p class="c-article-references__text" id="ref-CR2">Burdea GG, Coiffet P (2003) Virtual reality technology. Wiley, New York</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 2 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Virtual%20reality%20technology&amp;publication_year=2003&amp;author=Burdea%2CGG&amp;author=Coiffet%2CP">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="DA. Bowman, E. Kruijff, JJ. LaViola, I. Poupyrev, " /><meta itemprop="datePublished" content="2003" /><meta itemprop="headline" content="Bowman DA, Kruijff E, LaViola JJ, Poupyrev I (2003) 3D User interfaces – theory and practice. Addison-Wesley, " /><span class="c-article-references__counter">3.</span><p class="c-article-references__text" id="ref-CR3">Bowman DA, Kruijff E, LaViola JJ, Poupyrev I (2003) 3D User interfaces – theory and practice. Addison-Wesley, Wokingham, UK</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 3 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=3D%20User%20interfaces%20%E2%80%93%20theory%20and%20practice&amp;publication_year=2003&amp;author=Bowman%2CDA&amp;author=Kruijff%2CE&amp;author=LaViola%2CJJ&amp;author=Poupyrev%2CI">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Yamada Y (1997) Clay Modeling: techniques forgiving three-dimensional form to idea. San’ei Shobo Publishing Co" /><span class="c-article-references__counter">4.</span><p class="c-article-references__text" id="ref-CR4">Yamada Y (1997) Clay Modeling: techniques forgiving three-dimensional form to idea. San’ei Shobo Publishing Co</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Cheshire DG, Evans MA, Dean CJ (2001) Haptic modeling – An alternative industrial design methodology? In: Proc" /><span class="c-article-references__counter">5.</span><p class="c-article-references__text" id="ref-CR5">Cheshire DG, Evans MA, Dean CJ (2001) Haptic modeling – An alternative industrial design methodology? In: Proceedings of the EuroHaptics 2001, Birmingham, UK, 2001</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Wiegers T, Vergeest JSM (2001) Extraction of CAD tool requirements from industry and from experimental design " /><span class="c-article-references__counter">6.</span><p class="c-article-references__text" id="ref-CR6">Wiegers T, Vergeest JSM (2001) Extraction of CAD tool requirements from industry and from experimental design projects. In: Proceedings of the ASME DETC’01/DAC, Pittburgh USA, 2001</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="GC. Burdea, " /><meta itemprop="datePublished" content="1996" /><meta itemprop="headline" content="Burdea GC (1996) Force and touch feedback for virtual reality. Wiley, New York" /><span class="c-article-references__counter">7.</span><p class="c-article-references__text" id="ref-CR7">Burdea GC (1996) Force and touch feedback for virtual reality. Wiley, New York</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 7 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Force%20and%20touch%20feedback%20for%20virtual%20reality&amp;publication_year=1996&amp;author=Burdea%2CGC">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="M. Srinivasan, C. Basdogan, " /><meta itemprop="datePublished" content="1997" /><meta itemprop="headline" content="Srinivasan M, Basdogan C (1997) Haptics in virtual environments: taxonomy, research status, and challenges. Co" /><span class="c-article-references__counter">8.</span><p class="c-article-references__text" id="ref-CR8">Srinivasan M, Basdogan C (1997) Haptics in virtual environments: taxonomy, research status, and challenges. Comput Graph 21(4):393–404</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1016%2FS0097-8493%2897%2900030-7" aria-label="View reference 8">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 8 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Haptics%20in%20virtual%20environments%3A%20taxonomy%2C%20research%20status%2C%20and%20challenges&amp;journal=Comput%20Graph&amp;volume=21&amp;issue=4&amp;pages=393-404&amp;publication_year=1997&amp;author=Srinivasan%2CM&amp;author=Basdogan%2CC">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="SD. Laycock, AM. Day, " /><meta itemprop="datePublished" content="2003" /><meta itemprop="headline" content="Laycock SD, Day AM (2003) Recent developments and applications of haptic devices. Comput Graph Forum, 22(2):11" /><span class="c-article-references__counter">9.</span><p class="c-article-references__text" id="ref-CR9">Laycock SD, Day AM (2003) Recent developments and applications of haptic devices. Comput Graph Forum, 22(2):117–132</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1111%2F1467-8659.00654" aria-label="View reference 9">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 9 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Recent%20developments%20and%20applications%20of%20haptic%20devices&amp;journal=Comput%20Graph%20Forum&amp;volume=22&amp;issue=2&amp;pages=117-132&amp;publication_year=2003&amp;author=Laycock%2CSD&amp;author=Day%2CAM">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="V. Hayward, OR. Astley, M. Cruz-Hernandez, D. Grant, G. Robles-De-La-Torre, " /><meta itemprop="datePublished" content="2004" /><meta itemprop="headline" content="Hayward V, Astley OR, Cruz-Hernandez M, Grant D, Robles-De-La-Torre G (2004) Haptic interfaces and devices. Se" /><span class="c-article-references__counter">10.</span><p class="c-article-references__text" id="ref-CR10">Hayward V, Astley OR, Cruz-Hernandez M, Grant D, Robles-De-La-Torre G (2004) Haptic interfaces and devices. Sensor Review, 24(1):16–29</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1108%2F02602280410515770" aria-label="View reference 10">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 10 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Haptic%20interfaces%20and%20devices&amp;journal=Sensor%20Review&amp;volume=24&amp;issue=1&amp;pages=16-29&amp;publication_year=2004&amp;author=Hayward%2CV&amp;author=Astley%2COR&amp;author=Cruz-Hernandez%2CM&amp;author=Grant%2CD&amp;author=Robles-De-La-Torre%2CG">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bordegoni M et al (2004) Deliverable D1 Hardware and software technology and cognitive ergonomics update. T’nD" /><span class="c-article-references__counter">11.</span><p class="c-article-references__text" id="ref-CR11">Bordegoni M et al (2004) Deliverable D1 Hardware and software technology and cognitive ergonomics update. T’nD project public report, www.kaemart.it/touch-and-design</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="HapticMaster, Tsukuba University, V.R Lab, http://intron.kz.tsukuba.ac.jp/vrlab_web/hapticmaster/hapticmaster_" /><span class="c-article-references__counter">12.</span><p class="c-article-references__text" id="ref-CR12">HapticMaster, Tsukuba University, V.R Lab, http://intron.kz.tsukuba.ac.jp/vrlab_web/hapticmaster/hapticmaster_e.html</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Iwata H, Yano H, Nakaizumi F, Kawamura R (2001) Project FEELEX: adding haptic surface to graphics. In: Proceed" /><span class="c-article-references__counter">13.</span><p class="c-article-references__text" id="ref-CR13">Iwata H, Yano H, Nakaizumi F, Kawamura R (2001) Project FEELEX: adding haptic surface to graphics. In: Proceedings of the SIGGRAPH 2001. Los Angeles, CA, USA. 469–475</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="D. Terzopoulos, K. Fl`eischer, " /><meta itemprop="datePublished" content="1988" /><meta itemprop="headline" content="Terzopoulos D, Fl`eischer K (1988) Modeling inelastic deformation: viscoelasticity, plasticity, fracture. SIGG" /><span class="c-article-references__counter">14.</span><p class="c-article-references__text" id="ref-CR14">Terzopoulos D, Fl`eischer K (1988) Modeling inelastic deformation: viscoelasticity, plasticity, fracture. SIGGRAPH 1988, Atlanta, USA 269–278</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 14 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Modeling%20inelastic%20deformation%3A%20viscoelasticity%2C%20plasticity%2C%20fracture&amp;pages=269-278&amp;publication_year=1988&amp;author=Terzopoulos%2CD&amp;author=Fl%60eischer%2CK">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="G. Celniker, D. Gossard, " /><meta itemprop="datePublished" content="1991" /><meta itemprop="headline" content="Celniker G, Gossard D (1991) Deformable curve and surface finite-elements for freeform shape design, Computer " /><span class="c-article-references__counter">15.</span><p class="c-article-references__text" id="ref-CR15">Celniker G, Gossard D (1991) Deformable curve and surface finite-elements for freeform shape design, Computer Graphics, 25(4):257–266</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 15 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Deformable%20curve%20and%20surface%20finite-elements%20for%20freeform%20shape%20design%2C&amp;journal=Computer%20Graphics&amp;volume=25&amp;issue=4&amp;pages=257-266&amp;publication_year=1991&amp;author=Celniker%2CG&amp;author=Gossard%2CD">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Celniker G, Welch W (1992) Linear constraints for deformable B-spline surfaces. In: Proceedings of the symposi" /><span class="c-article-references__counter">16.</span><p class="c-article-references__text" id="ref-CR16">Celniker G, Welch W (1992) Linear constraints for deformable B-spline surfaces. In: Proceedings of the symposium on interactive 3D graphics, ACM, New York, 165–170</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="F. Dachille, H. Qin, A. Kaufman, " /><meta itemprop="datePublished" content="2001" /><meta itemprop="headline" content="Dachille F, Qin H, Kaufman A (2001) A novel haptics-based interface and sculpting system for physics-based geo" /><span class="c-article-references__counter">17.</span><p class="c-article-references__text" id="ref-CR17">Dachille F, Qin H, Kaufman A (2001) A novel haptics-based interface and sculpting system for physics-based geometric design. Computer-Aided Design, 33:403–420</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1016%2FS0010-4485%2800%2900131-7" aria-label="View reference 17">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 17 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=A%20novel%20haptics-based%20interface%20and%20sculpting%20system%20for%20physics-based%20geometric%20design&amp;journal=Computer-Aided%20Design&amp;volume=33&amp;pages=403-420&amp;publication_year=2001&amp;author=Dachille%2CF&amp;author=Qin%2CH&amp;author=Kaufman%2CA">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="McDonnell KT, Qin H, Wlodarczyk RA (2001) Virtual clay: a real-time sculpting system with haptic toolkits. ACM" /><span class="c-article-references__counter">18.</span><p class="c-article-references__text" id="ref-CR18">McDonnell KT, Qin H, Wlodarczyk RA (2001) Virtual clay: a real-time sculpting system with haptic toolkits. ACM SI3D 2001, 179–190</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Wang S, Kaufman A (1995) Volume Sculpting. In: Proceedings of the symposium on interactive 3D, 151–156" /><span class="c-article-references__counter">19.</span><p class="c-article-references__text" id="ref-CR19">Wang S, Kaufman A (1995) Volume Sculpting. In: Proceedings of the symposium on interactive 3D, 151–156</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Iwata H, Noma H (1993) Volume haptization. In: Proceedings of the IEEE symposium on research frontiers in virt" /><span class="c-article-references__counter">20.</span><p class="c-article-references__text" id="ref-CR20">Iwata H, Noma H (1993) Volume haptization. In: Proceedings of the IEEE symposium on research frontiers in virtual reality, 16–23</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Avila RS., Sobierajski LM (1996) A haptic interaction method for volume visualization. In: Proceedings of the " /><span class="c-article-references__counter">21.</span><p class="c-article-references__text" id="ref-CR21">Avila RS., Sobierajski LM (1996) A haptic interaction method for volume visualization. In: Proceedings of the visualization 1996. IEEE-CS Press, 197–204</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Dewaele G, Cani J-P (2003) Interactive global and local deformations for virtual Clay. In: Proceedings of the " /><span class="c-article-references__counter">22.</span><p class="c-article-references__text" id="ref-CR22">Dewaele G, Cani J-P (2003) Interactive global and local deformations for virtual Clay. In: Proceedings of the pacific conference on computer graphics and applications, 131–140</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Zilles C, Salisbury K (1995) A constraint-based god object method for haptics display. In: Proceedings of EEE/" /><span class="c-article-references__counter">23.</span><p class="c-article-references__text" id="ref-CR23">Zilles C, Salisbury K (1995) A constraint-based god object method for haptics display. In: Proceedings of EEE/RSJ international conference on intelligent robotics and systems, vol. 3, 146–151</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Abdel-Malek K, Blackmore D, Joy K (2004) Swept volumes: foundations, perspectives, and applications. Submitted" /><span class="c-article-references__counter">24.</span><p class="c-article-references__text" id="ref-CR24">Abdel-Malek K, Blackmore D, Joy K (2004) Swept volumes: foundations, perspectives, and applications. Submitted to Intl J Shape Modeling</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Baraff D, Witkin A, Anderson J, Kass M (2003) Physically-based modeling. siggraph 2003 Course Notes, n. 12" /><span class="c-article-references__counter">25.</span><p class="c-article-references__text" id="ref-CR25">Baraff D, Witkin A, Anderson J, Kass M (2003) Physically-based modeling. siggraph 2003 Course Notes, n. 12</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="ME. Merchant, " /><meta itemprop="datePublished" content="1944" /><meta itemprop="headline" content="Merchant ME (1944) Basic mechanics of the metal cutting process. J. App. Mech. Transaction ASME, 66:168–175" /><span class="c-article-references__counter">26.</span><p class="c-article-references__text" id="ref-CR26">Merchant ME (1944) Basic mechanics of the metal cutting process. J. App. Mech. Transaction ASME, 66:168–175</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 26 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Basic%20mechanics%20of%20the%20metal%20cutting%20process&amp;journal=J.%20App.%20Mech.%20Transaction%20ASME&amp;volume=66&amp;pages=168-175&amp;publication_year=1944&amp;author=Merchant%2CME">
+                    Google Scholar</a> 
+                </p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-005-0013-3-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Ack1">Acknowledgments</h2><div class="c-article-section__content" id="Ack1-content"><p>The research work presented in this paper is supported by the European Commission, under the FP6 IST-2002-001996 T’nD – Touch and Design project (www.kaemart.it/touch-and-design). The authors would like to thank all project partners for their contributions to the research, and in particular, Franco De Angelis and Luca Formentini of Politecnico di Milano for their contribution in developing the system prototype.</p></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">Politecnico di Milano, Via La Masa 34, Milano, Italy</p><p class="c-article-author-affiliation__authors-list">M. Bordegoni &amp; U. Cugini</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-M_-Bordegoni"><span class="c-article-authors-search__title u-h3 js-search-name">M. Bordegoni</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;M.+Bordegoni&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=M.+Bordegoni" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22M.+Bordegoni%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-U_-Cugini"><span class="c-article-authors-search__title u-h3 js-search-name">U. Cugini</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;U.+Cugini&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=U.+Cugini" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22U.+Cugini%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-005-0013-3/email/correspondent/c1/new">M. Bordegoni</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=Haptic%20modeling%20in%20the%20conceptual%20phases%20of%20product%20design&amp;author=M.%20Bordegoni%20et%20al&amp;contentID=10.1007%2Fs10055-005-0013-3&amp;publication=1359-4338&amp;publicationDate=2005-11-30&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Bordegoni, M., Cugini, U. Haptic modeling in the conceptual phases of product design.
+                    <i>Virtual Reality</i> <b>9, </b>192–202 (2006). https://doi.org/10.1007/s10055-005-0013-3</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-005-0013-3.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2005-07-29">29 July 2005</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2005-10-07">07 October 2005</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2005-11-30">30 November 2005</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2006-03">March 2006</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-005-0013-3" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-005-0013-3</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Virtual prototyping</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Product design</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Haptics</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Haptic modeling</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-005-0013-3.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=13;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

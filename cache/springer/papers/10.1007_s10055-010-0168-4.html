@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="Dynamic defocus and occlusion compensation of projected imagery by mod"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="This paper presents a novel model-based approach of dynamic defocus and occlusion compensation method in a multi-projection environment. Conventional defocus compensation research applies..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/15/2.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="Dynamic defocus and occlusion compensation of projected imagery by model-based optimal projector selection in multi-projection environment"/>
+
+    <meta name="dc.source" content="Virtual Reality 2010 15:2"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2010-08-18"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2010 Springer-Verlag London Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="This paper presents a novel model-based approach of dynamic defocus and occlusion compensation method in a multi-projection environment. Conventional defocus compensation research applies appearance-based method, which needs a point spread function (PSF) calibration when either position or orientation of an object to be projected is changed, thus cannot be applied to interactive applications in which the object dynamically moves. On the other hand, we propose a model-based method in which PSF and geometric calibrations are required only once in advance, and projector&#8217;s PSF is computed online based on geometric relationship between the projector and the object without any additional calibrations. We propose to distinguish the oblique blur (loss of high-spatial-frequency components according to the incidence angle of the projection light) from the defocus blur and to introduce it to the PSF computation. For each part of the object surfaces, we select an optimal projector that preserves the largest amount of high-spatial-frequency components of the original image to realize defocus-free projection. The geometric relationship can also be used to eliminate the cast shadows of the projection images in multi-projection environment. Our method is particularly useful in the interactive systems because the movement of the object (consequently geometric relationship between each projector and the object) is usually measured by an attached tracking sensor. This paper describes details about the proposed approach and a prototype implementation. We performed two proof-of-concept experiments to show the feasibility of our approach."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2010-08-18"/>
+
+    <meta name="prism.volume" content="15"/>
+
+    <meta name="prism.number" content="2"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="119"/>
+
+    <meta name="prism.endingPage" content="132"/>
+
+    <meta name="prism.copyright" content="2010 Springer-Verlag London Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-010-0168-4"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-010-0168-4"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-010-0168-4.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-010-0168-4"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="Dynamic defocus and occlusion compensation of projected imagery by model-based optimal projector selection in multi-projection environment"/>
+
+    <meta name="citation_volume" content="15"/>
+
+    <meta name="citation_issue" content="2"/>
+
+    <meta name="citation_publication_date" content="2011/06"/>
+
+    <meta name="citation_online_date" content="2010/08/18"/>
+
+    <meta name="citation_firstpage" content="119"/>
+
+    <meta name="citation_lastpage" content="132"/>
+
+    <meta name="citation_article_type" content="SI: Augmented Reality"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-010-0168-4"/>
+
+    <meta name="DOI" content="10.1007/s10055-010-0168-4"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-010-0168-4"/>
+
+    <meta name="description" content="This paper presents a novel model-based approach of dynamic defocus and occlusion compensation method in a multi-projection environment. Conventional defoc"/>
+
+    <meta name="dc.creator" content="Momoyo Nagase"/>
+
+    <meta name="dc.creator" content="Daisuke Iwai"/>
+
+    <meta name="dc.creator" content="Kosuke Sato"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="Audet S, Cooperstock J (2007) Shadow removal in front projection environments using object tracking. In: Proceedings of IEEE CVPR &#8217;07, pp 1&#8211;8"/>
+
+    <meta name="citation_reference" content="Bandyopadhyay D, Raskar R, Fuchs H (2001) Dynamic shader lamps: painting on movable objects. In: Proceedings of IEEE/ACM ISAR &#8217;01, pp 207&#8211;216"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Transactions on Visualization and Computer Graphics; citation_title=Multifocal Projection: A Multiprojector Technique for Increasing Focal Depth; citation_author=O Bimber, A Emmerling; citation_volume=12; citation_issue=4; citation_publication_date=2006; citation_pages=658-667; citation_doi=10.1109/TVCG.2006.75; citation_id=CR3"/>
+
+    <meta name="citation_reference" content="citation_title=Spatial Augmented Reality: Merging Real and Virtual Worlds; citation_publication_date=2005; citation_id=CR4; citation_author=O Bimber; citation_author=R Raskar; citation_publisher=A. K. Peters Ltd."/>
+
+    <meta name="citation_reference" content="citation_journal_title=Computer Graphics Forum; citation_title=The visual computing of Projector-Camera Systems; citation_author=O Bimber, D Iwai, G Wetzstein, A Grundh&#246;fer; citation_volume=27; citation_issue=8; citation_publication_date=2008; citation_pages=2219-2254; citation_doi=10.1111/j.1467-8659.2008.01175.x; citation_id=CR5"/>
+
+    <meta name="citation_reference" content="Brown MS, Song P, Cham TJ (2006) Image pre-conditioning for out-of-focus projector blur. In: Proceedings of IEEE CVPR &#8217;06, vol II, pp 1956&#8211;1963"/>
+
+    <meta name="citation_reference" content="Cham TJ, Rehg JM, Sukthankar R, Sukthankar G (2003) Shadow elimination and occluder light suppression for multi-projector displays. In: Proceedings of IEEE CVPR &#8217;03, pp 513&#8211;520"/>
+
+    <meta name="citation_reference" content="Grosse M, Bimber O (2008) Coded aperture projection. In: Proceedings of ACM EDT-IPT &#8217;08, pp 13:1&#8211;13:4"/>
+
+    <meta name="citation_reference" content="Gupta S, Jaynes C (2006) The universal media book: tracking and augmenting moving surface with projected information. In: Proceedings of IEEE/ACM ISMAR &#8217;06, pp 177&#8211;180"/>
+
+    <meta name="citation_reference" content="citation_title=Multiple View Geometry in Computer Vision; citation_publication_date=2004; citation_id=CR10; citation_author=RI Hartley; citation_author=A Zisserman; citation_publisher=Cambridge University Press"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Transactions on Visualization and Computer Graphics; citation_title=Camera-Based Detection and Removal of Shadows from Interactive Multiprojector Displays; citation_author=C Jaynes, S Webb, RM Steele; citation_volume=10; citation_issue=3; citation_publication_date=2004; citation_pages=290-301; citation_doi=10.1109/TVCG.2004.1272728; citation_id=CR11"/>
+
+    <meta name="citation_reference" content="Kondo D, Kijima R (2002) Proposal of a free form projection display using the principle of duality rendering. In: Proceedings of VSMM &#8217;02, pp 346&#8211;352"/>
+
+    <meta name="citation_reference" content="Kondo D, Shiwaku Y, Kijima R (2008) Free form projection display and application. In: Proceedings of IEEE/ACM PROCAMS &#8217;08, pp 31&#8211;32"/>
+
+    <meta name="citation_reference" content="citation_journal_title=ACM Transactions on Graphics; citation_title=Synthetic Aperture Confocal Imaging; citation_author=M Levoy, B Chen, V Vaish, M Horowitz, I McDowall, M Bolas; citation_volume=23; citation_issue=3; citation_publication_date=2004; citation_pages=825-834; citation_doi=10.1145/1015706.1015806; citation_id=CR14"/>
+
+    <meta name="citation_reference" content="Low KL, Welch G, Lastra A, Fuchs H (2001) Life-sized projector-based dioramas. In: Proceedings of ACM VRST &#8217;01, pp 93&#8211;101"/>
+
+    <meta name="citation_reference" content="citation_title=Practical Multi-Projector Display Design; citation_publication_date=2007; citation_id=CR16; citation_author=A Majumder; citation_author=MS Brown; citation_publisher=A. K. Peters"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Lecture Notes in Computer Science; citation_title=Defocus Blur Correcting Projector-Camera System; citation_author=Y Oyamada, H Saito; citation_volume=5259; citation_publication_date=2008; citation_pages=453-464; citation_doi=10.1007/978-3-540-88458-3_41; citation_id=CR17"/>
+
+    <meta name="citation_reference" content="Park H, Lee MH, Kim SJ, Park JI (2006) Surface-independent direct-projected augmented reality. In: Proceedings of ACCV &#8217;06, vol 2, pp 892&#8211;901"/>
+
+    <meta name="citation_reference" content="Raskar R, Welch G, Low KL, Bandyopadhyay D (2001) Shader lamps: animating real objects with image-based illumination. In: Proceedings of Eurographics EGWR &#8217;01, pp 89&#8211;102"/>
+
+    <meta name="citation_reference" content="Sato K, Inokuchi S (1987) Range-imaging system utilizing nematic liquid crystal mask. In: Proceedings of IEEE ICCV &#8217;87, pp 657&#8211;661"/>
+
+    <meta name="citation_reference" content="Sukthankar R, Cham TJ, Sukthankar G (2001) Dynamic shadow elimination for multi-projector displays. In: Proceedings of IEEE CVPR &#8217;01, vol II, pp 151&#8211;157"/>
+
+    <meta name="citation_reference" content="citation_journal_title=ACM Transactions on Graphics; citation_title=Projection Defocus Analysis for Scene Capture and Image Display; citation_author=L Zhang, S Nayar; citation_volume=25; citation_issue=3; citation_publication_date=2006; citation_pages=907-915; citation_doi=10.1145/1141911.1141974; citation_id=CR22"/>
+
+    <meta name="citation_author" content="Momoyo Nagase"/>
+
+    <meta name="citation_author_institution" content="Graduate School of Engineering Science, Osaka University, Toyonaka, Japan"/>
+
+    <meta name="citation_author" content="Daisuke Iwai"/>
+
+    <meta name="citation_author_email" content="daisuke.iwai@sys.es.osaka-u.ac.jp"/>
+
+    <meta name="citation_author_institution" content="Graduate School of Engineering Science, Osaka University, Toyonaka, Japan"/>
+
+    <meta name="citation_author" content="Kosuke Sato"/>
+
+    <meta name="citation_author_institution" content="Graduate School of Engineering Science, Osaka University, Toyonaka, Japan"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-010-0168-4&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2011/06/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-010-0168-4"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="Dynamic defocus and occlusion compensation of projected imagery by model-based optimal projector selection in multi-projection environment"/>
+        <meta property="og:description" content="This paper presents a novel model-based approach of dynamic defocus and occlusion compensation method in a multi-projection environment. Conventional defocus compensation research applies appearance-based method, which needs a point spread function (PSF) calibration when either position or orientation of an object to be projected is changed, thus cannot be applied to interactive applications in which the object dynamically moves. On the other hand, we propose a model-based method in which PSF and geometric calibrations are required only once in advance, and projector’s PSF is computed online based on geometric relationship between the projector and the object without any additional calibrations. We propose to distinguish the oblique blur (loss of high-spatial-frequency components according to the incidence angle of the projection light) from the defocus blur and to introduce it to the PSF computation. For each part of the object surfaces, we select an optimal projector that preserves the largest amount of high-spatial-frequency components of the original image to realize defocus-free projection. The geometric relationship can also be used to eliminate the cast shadows of the projection images in multi-projection environment. Our method is particularly useful in the interactive systems because the movement of the object (consequently geometric relationship between each projector and the object) is usually measured by an attached tracking sensor. This paper describes details about the proposed approach and a prototype implementation. We performed two proof-of-concept experiments to show the feasibility of our approach."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>Dynamic defocus and occlusion compensation of projected imagery by model-based optimal projector selection in multi-projection environment | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-010-0168-4","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Projection-based mixed reality, Multi-projection environment, Defocus compensation, Shadow removal, PSF computation","kwrd":["Projection-based_mixed_reality","Multi-projection_environment","Defocus_compensation","Shadow_removal","PSF_computation"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-010-0168-4","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-010-0168-4","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-5663397ef2.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-177af7d19e.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=168;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-010-0168-4">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            Dynamic defocus and occlusion compensation of projected imagery by model-based optimal projector selection in multi-projection environment
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-010-0168-4.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-010-0168-4.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">SI: Augmented Reality</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2010-08-18" itemprop="datePublished">18 August 2010</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">Dynamic defocus and occlusion compensation of projected imagery by model-based optimal projector selection in multi-projection environment</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Momoyo-Nagase" data-author-popup="auth-Momoyo-Nagase">Momoyo Nagase</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Osaka University" /><meta itemprop="address" content="grid.136593.b, 0000000403733971, Graduate School of Engineering Science, Osaka University, 1-3-D554, Machikaneyama, Toyonaka, 560-8531, Osaka, Japan" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Daisuke-Iwai" data-author-popup="auth-Daisuke-Iwai" data-corresp-id="c1">Daisuke Iwai<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Osaka University" /><meta itemprop="address" content="grid.136593.b, 0000000403733971, Graduate School of Engineering Science, Osaka University, 1-3-D554, Machikaneyama, Toyonaka, 560-8531, Osaka, Japan" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Kosuke-Sato" data-author-popup="auth-Kosuke-Sato">Kosuke Sato</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Osaka University" /><meta itemprop="address" content="grid.136593.b, 0000000403733971, Graduate School of Engineering Science, Osaka University, 1-3-D554, Machikaneyama, Toyonaka, 560-8531, Osaka, Japan" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 15</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">119</span>–<span itemprop="pageEnd">132</span>(<span data-test="article-publication-year">2011</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">427 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">20 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                    
+                        <li class="c-article-metrics-bar__item">
+                            <p class="c-article-metrics-bar__count">3 <span class="c-article-metrics-bar__label">Altmetric</span></p>
+                        </li>
+                    
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-010-0168-4/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>This paper presents a novel model-based approach of dynamic defocus and occlusion compensation method in a multi-projection environment. Conventional defocus compensation research applies appearance-based method, which needs a point spread function (PSF) calibration when either position or orientation of an object to be projected is changed, thus cannot be applied to interactive applications in which the object dynamically moves. On the other hand, we propose a model-based method in which PSF and geometric calibrations are required only once in advance, and projector’s PSF is computed online based on geometric relationship between the projector and the object without any additional calibrations. We propose to distinguish the oblique blur (loss of high-spatial-frequency components according to the incidence angle of the projection light) from the defocus blur and to introduce it to the PSF computation. For each part of the object surfaces, we select an optimal projector that preserves the largest amount of high-spatial-frequency components of the original image to realize defocus-free projection. The geometric relationship can also be used to eliminate the cast shadows of the projection images in multi-projection environment. Our method is particularly useful in the interactive systems because the movement of the object (consequently geometric relationship between each projector and the object) is usually measured by an attached tracking sensor. This paper describes details about the proposed approach and a prototype implementation. We performed two proof-of-concept experiments to show the feasibility of our approach.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Introduction and motivation</h2><div class="c-article-section__content" id="Sec1-content"><p>Projection-based mixed reality (MR) technologies are widely applied to interactive systems in which users interact with real objects that are visually augmented by projection images, such as a real object painting system (Bandyopadhyay et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Bandyopadhyay D, Raskar R, Fuchs H (2001) Dynamic shader lamps: painting on movable objects. In: Proceedings of IEEE/ACM ISAR ’01, pp 207–216" href="/article/10.1007/s10055-010-0168-4#ref-CR2" id="ref-link-section-d10176e314">2001</a>) and an interactive book (Gupta and Jaynes <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Gupta S, Jaynes C (2006) The universal media book: tracking and augmenting moving surface with projected information. In: Proceedings of IEEE/ACM ISMAR ’06, pp 177–180" href="/article/10.1007/s10055-010-0168-4#ref-CR9" id="ref-link-section-d10176e317">2006</a>). In addition, recent reduction in size and price of video projectors could lead to many other interactive applications. One important advantage of projection-based MR over other types of MR technologies is that users do not have to wear any special and annoying devices such as a head-mounted display (Bimber and Raskar <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Bimber O, Raskar R (2005) Spatial augmented reality: merging real and virtual worlds. A. K. Peters Ltd, USA" href="/article/10.1007/s10055-010-0168-4#ref-CR4" id="ref-link-section-d10176e320">2005</a>). However, video projectors that emit images through an optical lens inherit three problems (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig1">1</a>). First, <b>defocus blur</b> degrades high-spatial-frequency components of the original image. Second, the high-spatial-frequency component also attenuates when the incidence angle of the projection light is not perpendicular to the surface. In this paper, we refer to this effect as <b>oblique blur</b>. The last problem is the <b>cast shadow</b> of the projection light.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0168-4/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0168-4/MediaObjects/10055_2010_168_Fig1_HTML.gif?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0168-4/MediaObjects/10055_2010_168_Fig1_HTML.gif" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p>Inherent optical problems of video projectors and their multi-projector solution. <b>a</b> In a single-projector setup, the image quality of the displayed content is decreased by (1) defocus blur, (2) oblique blur, and (3) cast shadows. <b>b</b> The proposed approach applies multiple projectors to solve the above issues to improve the image quality</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0168-4/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>Apertures of video projectors are designed to be wide, such as F1.4, to ensure a large amount of light throughput. Such large stops result in a narrow depth-of-field. Once the projection surface moves along the optical axis even for a short distance, the displayed contents are not always in focus. Oblique blur makes the projected pixel spread anisotropically on the surface. In interactive systems, these defocus and oblique blurs occur frequently because projection objects are dynamically moved by users’ actions. Furthermore, when projection light is blocked by an object that exists between the projector and the surface, a shadow casts on the surface. Therefore, users should not enter any objects between the projector and the surface. However, this constraint is generally unfavorable for interactive systems.</p><p>In this study, we propose a novel model-based approach of dynamic defocus and occlusion compensation method in a multi-projection environment, which simultaneously takes into account the oblique blur. We assume that geometric information (initial relative rigid-body transforms among the projectors and the object, and the shape of the object) is calibrated in advance, and that 6-DOF motion of the moving object is measured online. Note that this is a general assumption of most interactive systems (Bandyopadhyay et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Bandyopadhyay D, Raskar R, Fuchs H (2001) Dynamic shader lamps: painting on movable objects. In: Proceedings of IEEE/ACM ISAR ’01, pp 207–216" href="/article/10.1007/s10055-010-0168-4#ref-CR2" id="ref-link-section-d10176e366">2001</a>; Low et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Low KL, Welch G, Lastra A, Fuchs H (2001) Life-sized projector-based dioramas. In: Proceedings of ACM VRST ’01, pp 93–101" href="/article/10.1007/s10055-010-0168-4#ref-CR15" id="ref-link-section-d10176e369">2001</a>; Kondo and Kijima <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Kondo D, Kijima R (2002) Proposal of a free form projection display using the principle of duality rendering. In: Proceedings of VSMM ’02, pp 346–352" href="/article/10.1007/s10055-010-0168-4#ref-CR12" id="ref-link-section-d10176e372">2002</a>; Gupta and Jaynes <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Gupta S, Jaynes C (2006) The universal media book: tracking and augmenting moving surface with projected information. In: Proceedings of IEEE/ACM ISMAR ’06, pp 177–180" href="/article/10.1007/s10055-010-0168-4#ref-CR9" id="ref-link-section-d10176e375">2006</a>; Park et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Park H, Lee MH, Kim SJ, Park JI (2006) Surface-independent direct-projected augmented reality. In: Proceedings of ACCV ’06, vol 2, pp 892–901" href="/article/10.1007/s10055-010-0168-4#ref-CR18" id="ref-link-section-d10176e378">2006</a>; Kondo et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Kondo D, Shiwaku Y, Kijima R (2008) Free form projection display and application. In: Proceedings of IEEE/ACM PROCAMS ’08, pp 31–32" href="/article/10.1007/s10055-010-0168-4#ref-CR13" id="ref-link-section-d10176e382">2008</a>). Once the geometric calibration is performed, the proposed method provides online defocus- and occlusion-free projection without any additional calibration even when the object moves.</p><p>For each point of the object surface, the proposed system calculates a point spread function (PSF) for each projector based on the relative rigid-body transform of the projector to the point. In the PSF calculation, the system simultaneously deals with the defocus and the oblique blurs. Then, it analyzes the PSFs and selects the optimal one that preserves the largest amount of high-spatial-frequency components of the original image. Consequently, high-spatial resolution images are displayed from the selected optimal projector on the point. Furthermore, a visibility test that checks whether the point is visible from each projector is also operated with the geometric information. The result of the visibility test is used to achieve occlusion-free projection.</p><p>Specifically, we make the following contributions:
+</p><ul class="u-list-style-dash">
+                  <li>
+                    <p>dynamic defocus and occlusion compensation of projected imagery in which no online calibration is needed</p>
+                  </li>
+                  <li>
+                    <p>a novel model-based PSF computation based on geometric relationship between target surface and projector</p>
+                  </li>
+                  <li>
+                    <p>the introduction of the oblique blur to improve the PSF computation</p>
+                  </li>
+                </ul>
+                     <p>The remainder of the paper is organized as follows. The subsequent section briefly describes related studies. Section <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0168-4#Sec6">3</a> presents the detailed principles of the proposed dynamic defocus and occlusion compensation method. Section <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0168-4#Sec14">4</a> describes the detailed implementation of the proposed system and shows proof-of-concept experiments. In Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0168-4#Sec18">5</a>, we briefly discuss advantages and limitations of the proposed method and directions for future work, and we conclude the paper in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0168-4#Sec23">6</a>.</p></div></div></section><section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">Related work</h2><div class="c-article-section__content" id="Sec2-content"><p>Two research areas are closely related to our approach: defocus compensation and occlusion compensation of projected imagery.</p><h3 class="c-article__sub-heading" id="Sec3">Defocus compensation</h3><p>Several approaches for deblurring unfocused projections using a single or multiple projectors have been proposed in the field of projector-camera systems (Bimber et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Bimber O, Iwai D, Wetzstein G, Grundhöfer A (2008) The visual computing of projector-camera systems. Comput Graph Forum 27(8):2219–2254" href="/article/10.1007/s10055-010-0168-4#ref-CR5" id="ref-link-section-d10176e438">2008</a>).</p><p>Single-projector approaches digitally sharpen the original image before projection, so that an optically defocused projection appears close to the original (i.e., un-blurred) image. Defocus blur of a projection image results from a convolution of a PSF and the original image. If the PSF of the projector on the object surface is correctly estimated, a defocus-free image can be displayed by the Wiener filter calculation in the frequency domain (Brown et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Brown MS, Song P, Cham TJ (2006) Image pre-conditioning for out-of-focus projector blur. In: Proceedings of IEEE CVPR ’06, vol II, pp 1956–1963" href="/article/10.1007/s10055-010-0168-4#ref-CR6" id="ref-link-section-d10176e444">2006</a>). Zhang and Nayar formulated the image correction as a constrained optimization problem in the spatial domain using a convolution matrix (Zhang and Nayar <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Zhang L, Nayar S (2006) Projection defocus analysis for scene capture and image display. ACM Trans Graph 25(3):907–915" href="/article/10.1007/s10055-010-0168-4#ref-CR22" id="ref-link-section-d10176e447">2006</a>). They estimated the PSF by projecting pattern images such as 2D array of dots or crosses and capturing the displayed images in advance. In addition to the deconvolution process, Grosse and Bimber proposed to increase the optical depth-of-field of a projector by applying a coded aperture (Grosse and Bimber <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Grosse M, Bimber O (2008) Coded aperture projection. In: Proceedings of ACM EDT-IPT ’08, pp 13:1–13:4" href="/article/10.1007/s10055-010-0168-4#ref-CR8" id="ref-link-section-d10176e450">2008</a>). However, these approaches cannot be applied to interactive systems because they need to project pattern images when the objects move, and they consequently disturb users’ natural interactions. To solve this problem, Oyamada and Saito estimated the PSF just by observing the displayed content so that they did not need to project special pattern images (Oyamada and Saito <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Oyamada Y, Saito H (2008) Defocus blur correcting projector-camera system. Lect Notes Comput Sci 5259:453–464" href="/article/10.1007/s10055-010-0168-4#ref-CR17" id="ref-link-section-d10176e453">2008</a>). However, the defocus blur cannot always be compensated through digital processing alone. Because the PSF of a normal circular aperture contains many zeros in the frequency domain, high-spatial-frequency components are lost in out-of-focus regions. Consequently, ringing artifacts are often led when direct inverse methods such as Wiener deconvolution are applied to compensate the optically low-pass-filtered projected light. Furthermore, a single-projector approach cannot realize occlusion-free projection.</p><p>On the other hand, Bimber and Emmerling applied multiple projectors, each of which has the focal plane at a unique position, to realize multifocal, or defocus-free, projection (Bimber and Emmerling <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Bimber O, Emmerling A (2006) Multifocal projection: a multiprojector technique for increasing focal depth. IEEE Trans Visualization Comput Graph 12(4):658–667" href="/article/10.1007/s10055-010-0168-4#ref-CR3" id="ref-link-section-d10176e459">2006</a>). For each point of the object surface, they selected an optimal projector that could display the finest image on the point. Their multi-projector approach does not need to perform the deconvolution as do the above single-projector approaches. However, it also needs to project special pattern images on the surface to estimate the PSF from every projector when the object moves and thus is not suitable for interactive systems.</p><h3 class="c-article__sub-heading" id="Sec4">Occlusion compensation</h3><p>Occlusion-free projection is achieved using multiple projectors. Most of the previous methods applied appearance-based approaches where cameras were used to detect shadows on the projection screen (Sukthankar et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Sukthankar R, Cham TJ, Sukthankar G (2001) Dynamic shadow elimination for multi-projector displays. In: Proceedings of IEEE CVPR ’01, vol II, pp 151–157" href="/article/10.1007/s10055-010-0168-4#ref-CR21" id="ref-link-section-d10176e470">2001</a>; Cham et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Cham TJ, Rehg JM, Sukthankar R, Sukthankar G (2003) Shadow elimination and occluder light suppression for multi-projector displays. In: Proceedings of IEEE CVPR ’03, pp 513–520" href="/article/10.1007/s10055-010-0168-4#ref-CR7" id="ref-link-section-d10176e473">2003</a>; Jaynes et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Jaynes C, Webb S, Steele RM (2004) Camera-based detection and removal of shadows from interactive multiprojector displays. IEEE Trans Vis Comput Graph 10(3):290–301" href="/article/10.1007/s10055-010-0168-4#ref-CR11" id="ref-link-section-d10176e476">2004</a>). On the other hand, a model-based approach was also proposed by Raskar et al. where geometric information of the projectors and the object surfaces (relative rigid-body transforms among the projectors and the surfaces, and shapes of the surfaces) is assumed to be known (Raskar et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Raskar R, Welch G, Low KL, Bandyopadhyay D (2001) Shader lamps: animating real objects with image-based illumination. In: Proceedings of Eurographics EGWR ’01, pp 89–102" href="/article/10.1007/s10055-010-0168-4#ref-CR19" id="ref-link-section-d10176e479">2001</a>). Then, a visibility test is performed for each point of the object surfaces from each projector. Consequently, occlusion (i.e., cast shadow) can be removed because images are displayed from a projector that is visible from the point. When the position of the object is measured online, cast shadows can be removed even for the dynamic objects, as proposed in (Audet and Cooperstock <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Audet S, Cooperstock J (2007) Shadow removal in front projection environments using object tracking. In: Proceedings of IEEE CVPR ’07, pp 1–8" href="/article/10.1007/s10055-010-0168-4#ref-CR1" id="ref-link-section-d10176e482">2007</a>). These studies, however, did not merge the shadow removal techniques with defocus compensation.</p><h3 class="c-article__sub-heading" id="Sec5">Our approach</h3><p>We apply a multi-projector approach to achieve defocus compensation of projection images where any digital deconvolution processing is not needed, as in (Bimber and Emmerling <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Bimber O, Emmerling A (2006) Multifocal projection: a multiprojector technique for increasing focal depth. IEEE Trans Visualization Comput Graph 12(4):658–667" href="/article/10.1007/s10055-010-0168-4#ref-CR3" id="ref-link-section-d10176e493">2006</a>). For each point of the object surface, our approach selects the optimal projector that can project the finest image on the point, and the selected projector displays images there. Furthermore, we apply an occlusion compensation approach and merge it with the defocus compensation of projected imagery.</p><p>Unlike the previous work (Bimber and Emmerling <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Bimber O, Emmerling A (2006) Multifocal projection: a multiprojector technique for increasing focal depth. IEEE Trans Visualization Comput Graph 12(4):658–667" href="/article/10.1007/s10055-010-0168-4#ref-CR3" id="ref-link-section-d10176e499">2006</a>), which is an appearance-based approach where PSFs are measured by a camera, our method is a model-based approach where PSFs are computed by geometric information of the projectors and the objects. Our method does not need to project special calibration pattern images on the object surface for the PSF computation; therefore, it can be applied to interactive systems in which the object surface frequently moves. Furthermore, our method computes the shape of the PSF by considering that the frequency property of the PSF depends on the surface orientation while the above previous deblurring techniques did not.</p></div></div></section><section aria-labelledby="Sec6"><div class="c-article-section" id="Sec6-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec6">Defocus and occlusion compensation method</h2><div class="c-article-section__content" id="Sec6-content"><p>This section describes our dynamic defocus and occlusion compensation approach in a multi-projector environment. For each point of the object surface, our approach selects an optimal device that projects the finest images on the point by analyzing PSFs of all the projectors. Therefore, selection of the optimal projector is synonymous with defocus compensation in our context.</p><p>In Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0168-4#Sec7">3.1</a>, we explain how to select the optimal projector that can display the finest images on the object surface. In Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0168-4#Sec8">3.2</a>, we describe a PSF model of projected pixels and explain how to apply the model to the proposed projector selection method. In Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0168-4#Sec12">3.3</a>, we show how to integrate an occlusion compensation method into our defocus compensation approach. Section <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0168-4#Sec13">3.4</a> describes a feathering technique for seamless merging of images from multiple projectors.</p><h3 class="c-article__sub-heading" id="Sec7">Spatial frequency analysis of PSF and optimal projector selection</h3><p>A projected image is defocused on the object surface according to its PSF. The process described below is for a point of the object surface. The same process is also applied to the other points. Suppose that the PSF of a projector <i>p</i> is represented as <i>PSF</i>
+                           <sub>
+                    <i>II</i>
+                  </sub>(<i>p</i>), and that the original image is represented as <i>i</i>. When <i>i</i> is projected onto the point, the displayed result <i>o</i> is calculated by the following function:
+</p><div id="Equ1" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ o = i \ast PSF_{II}(p), $$</span></div><div class="c-article-equation__number">
+                    (1)
+                </div></div><p>where * represents a convolution operation, and <i>II</i> means that the PSF is a two-dimensional (2D) function.</p><p>A PSF of defocus blur can be considered as a low-pass filter because it attenuates high-spatial-frequency components of the original image. Thus, we focus on its frequency property, particularly the cutoff frequency, and define the optimal projector as one whose PSF’s cutoff frequency is the highest.</p><p>A PSF is transformed into the optical transfer function (OTF) in the frequency domain. Suppose that the Fourier transforms of <i>PSF</i>
+                           <sub>
+                    <i>II</i>
+                  </sub>(<i>p</i>), the original image <i>i</i>, and the displayed image <i>o</i> are denoted by <i>OTF</i>
+                           <sub>
+                    <i>II</i>
+                  </sub>(<i>p</i>), <i>I</i>, and <i>O</i>, respectively. The convolution of (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-010-0168-4#Equ1">1</a>) is transformed into a simple multiplication in the frequency domain:
+</p><div id="Equ2" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ O = I\cdot OTF_{II}(p). $$</span></div><div class="c-article-equation__number">
+                    (2)
+                </div></div>
+                        <p>Although the OTF contains both the magnitude and phase components, we consider only the magnitude that is known as the modulation transfer function (MTF). The cutoff frequency, which is a term used in physics and electrical engineering, means a boundary in a system’s frequency response at which energy flowing through the system begins to be attenuated rather than passing through. In the case of a low-pass filter, more than 50% of the signal is attenuated when the frequency is higher than the cutoff frequency. This means that we can know that at least 50% of the contrast of the original is preserved in a frequency band that is lower than the cutoff frequency by analyzing the MTF.</p><p>Suppose that the cutoff frequency of a projector <i>p</i> is represented as <i>f</i>
+                           <sub>
+                    <i>c</i>
+                  </sub>(<i>p</i>). We define the optimal projector as one whose cutoff frequency is the highest. Thus, the optimal projector <i>p</i>
+                           <sub>opt</sub> is selected as:
+</p><div id="Equ3" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ p_{\rm opt} = \mathop{\arg\max}\limits_{p} \, f_c(p). $$</span></div><div class="c-article-equation__number">
+                    (3)
+                </div></div>
+                        <p>The incidence angle of projection light is not always perpendicular to the object surface. When it is not perpendicular, the PSF becomes anisotropic (i.e., the oblique blur). Thus, the one-dimensional (1D) projection of the PSF changes according to the direction of the projection θ. The MTF of the 1D projection of the PSF and its cutoff frequency also change according to θ. The 1D projection of the PSF, its MTF, and its cutoff frequency are represented as <i>PSF</i>
+                           <sub>
+                    <i>I</i>
+                  </sub> (<i>p</i>, θ), <i>MTF</i>
+                           <sub>
+                    <i>I</i>
+                  </sub> (<i>p</i>, θ), and <i>f</i>
+                           <sub>
+                    <i>c</i>
+                  </sub> (<i>p</i>, θ), respectively. We search for a 1D projection of the PSF whose cutoff frequency is the lowest, and define it as the cutoff frequency of the projector <i>p</i> as:
+</p><div id="Equ4" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ f_c(p) = \min_\theta \, f_c(p, \theta). $$</span></div><div class="c-article-equation__number">
+                    (4)
+                </div></div>
+                        <p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig2">2</a> illustrates an example of an anisotropic frequency characteristic of a PSF from a projector <i>p</i>
+                           <sub>1</sub>. Two MTFs, <i>MTF</i>
+                           <sub>
+                    <i>I</i>
+                  </sub> (<i>p</i>
+                           <sub>1</sub>, θ<sub>1</sub>) and <i>MTF</i>
+                           <sub>
+                    <i>I</i>
+                  </sub> (<i>p</i>
+                           <sub>1</sub>, θ<sub>2</sub>), are shown in the right of the figure. They are Fourier transforms of the 1D projections of the anisotropic PSF with the different projection directions θ<sub>1</sub> and θ<sub>2</sub>. As shown in the figure, the cutoff frequency of <i>MTF</i>
+                           <sub>
+                    <i>I</i>
+                  </sub>(<i>p</i>
+                           <sub>1</sub>, θ<sub>1</sub>) is higher than the other; thus, <i>f</i>
+                           <sub>
+                    <i>c</i>
+                  </sub>(<i>p</i>
+                           <sub>1</sub>, θ<sub>1</sub>) &gt; <i>f</i>
+                           <sub>
+                    <i>c</i>
+                  </sub>(<i>p</i>
+                           <sub>1</sub>, θ<sub>2</sub>). In this way, we compare the cutoff frequencies for all the projection directions, determine the lowest one, and designate it as the cutoff frequency of the projector <i>p</i>
+                           <sub>1</sub> (i.e., <i>f</i>
+                           <sub>
+                    <i>c</i>
+                  </sub>(<i>p</i>
+                           <sub>1</sub>)).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0168-4/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0168-4/MediaObjects/10055_2010_168_Fig2_HTML.gif?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0168-4/MediaObjects/10055_2010_168_Fig2_HTML.gif" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p>Anisotropic frequency characteristic of a PSF of a projected pixel</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0168-4/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>The basic principle of our approach is summarized as follows:</p><p>For each point of the surfaces, </p><ol class="u-list-style-none">
+                    <li>
+                      <span class="u-custom-list-number">1.</span>
+                      
+                        <p>Compute the lowest cutoff frequency of each projector (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-010-0168-4#Equ4">4</a>)</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">2.</span>
+                      
+                        <p>Find the optimal projector that gives the highest cutoff frequency among the computed lowest cutoff frequencies (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-010-0168-4#Equ3">3</a>)</p>
+                      
+                    </li>
+                  </ol>
+                        <h3 class="c-article__sub-heading" id="Sec8">PSF model</h3><p>We introduce a PSF model based on lens optics, and then apply it to our optimal projector selection approach described in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0168-4#Sec7">3.1</a>.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec9">Geometry of defocus blur and oblique blur</h4><p>In a projector’s optical system, the focal plane is perpendicular to the lens axis situated at the focal-length distance from the lens. Suppose that an infinitesimal point light source on the projector plane is projected through the lens onto a surface perpendicular to the lens axis. The radius <i>R</i>(<i>u</i>) of the blur circle on the projection surface is calculated as:
+</p><div id="Equ5" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ R(u) = \left|D\left(\frac{u}{f}-1\right)\right|, $$</span></div><div class="c-article-equation__number">
+                    (5)
+                </div></div><p>where <i>f</i> is the projector focal length, <i>D</i> is the radius of the projector lens, and <i>u</i> is the distance of the surface from the lens.</p><p>In practice, projectors cannot produce infinitesimally small light sources. If instead we project a circle whose radius is <i>r</i> (in the projector plane), the radius <i>R</i>(<i>u</i>) of the blurred circle on the surface is calculated as:
+</p><div id="Equ6" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ R(u) = \left|D\left(\frac{u}{f}-1\right)\right|+\frac{ru}{v}, $$</span></div><div class="c-article-equation__number">
+                    (6)
+                </div></div><p>where <i>v</i> is the distance of the projector plane from the lens (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig3">3</a>a).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0168-4/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0168-4/MediaObjects/10055_2010_168_Fig3_HTML.gif?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0168-4/MediaObjects/10055_2010_168_Fig3_HTML.gif" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p>Lens optics of a projector. <b>a</b> A circle whose radius is <i>r</i> (in the projector plane) is projected on a surface perpendicular to the lens axis. <b>b</b> The circle is projected on the surface by a different incidence angle. <b>c</b> PSF ellipse</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0168-4/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <p>In the case that the incidence angle of the projection light is not perpendicular to the surface as shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig3">3</a>b, the projected pixel forms an ellipse (the intersection of a cone with a plane). Suppose that the distance of the surface from the projector lens is sufficiently longer than the radius of the lens; we approximate the cone as a cylinder. Thus, the projected pixel on the surface forms an ellipse that is the intersection of the cylinder and the surface (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig3">3</a>c). The radius of the cylinder’s bottom circle is <i>R</i>(<i>u</i>). Consequently, the length of the semi-major axis <i>e</i>
+                              <sub>
+                      <i>a</i>
+                    </sub> and one of the semi-minor axis <i>e</i>
+                              <sub>
+                      <i>b</i>
+                    </sub> is:
+</p><div id="Equ7" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ e_a=\frac{R(u)}{\cos\alpha},\, e_b=R(u), $$</span></div><div class="c-article-equation__number">
+                    (7)
+                </div></div><p>where α is the incidence angle. We refer to this ellipse as the <b>PSF ellipse</b> in this paper.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec10">Intensity roll-off</h4><p>In general, the intensity of a blurred pixel decreases from the center to the edge of the PSF ellipse. While the PSF depends on the lens system, it can be reasonably modeled as a 2D Gaussian distribution (Brown et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Brown MS, Song P, Cham TJ (2006) Image pre-conditioning for out-of-focus projector blur. In: Proceedings of IEEE CVPR ’06, vol II, pp 1956–1963" href="/article/10.1007/s10055-010-0168-4#ref-CR6" id="ref-link-section-d10176e1070">2006</a>). We apply a PSF model that approximates the PSF as an anisotropic 2D Gaussian distribution whose level set forms the PSF ellipse. The 2D Gaussian distribution is defined by two variances: we refer to the greater one as the <b>major variance</b> and the other as the <b>minor variance</b> because they correspond to the major axis and the minor axis of the ellipse, respectively. Suppose that the major and the minor variances of a projector <i>p</i> are represented as σ<sub>
+                      <i>a</i>
+                    </sub>(<i>p</i>) and σ<sub>
+                      <i>b</i>
+                    </sub>(<i>p</i>), respectively, the PSF is modeled as:
+</p><div id="Equ8" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ PSF_{II}(x, y| p) = l(p)\exp\left\{-\frac{1}{2}\left(\frac{x^2}{\sigma_a^2(p)}+\frac{y^2}{\sigma_b^2(p)}\right)\right\}, $$</span></div><div class="c-article-equation__number">
+                    (8)
+                </div></div><p>where <i>l</i>(<i>p</i>) represents the intensity value at the center. Suppose that <i>e</i>
+                              <sub>
+                      <i>a</i>
+                    </sub>(<i>p</i>) and <i>e</i>
+                              <sub>
+                      <i>b</i>
+                    </sub>(<i>p</i>) represent the length of the semi-major and the semi-minor axes of the PSF ellipse of the projector <i>p</i>, respectively. Note that σ<sub>
+                      <i>a</i>
+                    </sub>(<i>p</i>) is greater than σ<sub>
+                      <i>b</i>
+                    </sub>(<i>p</i>), and σ<sub>
+                      <i>a</i>
+                    </sub>(<i>p</i>) and σ<sub>
+                      <i>b</i>
+                    </sub>(<i>p</i>) are proportional to <i>e</i>
+                              <sub>
+                      <i>a</i>
+                    </sub>(<i>p</i>) and <i>e</i>
+                              <sub>
+                      <i>b</i>
+                    </sub>(<i>p</i>), respectively:
+</p><div id="Equ9" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ \sigma_a(p) = k(p)e_a(p), \, \sigma_b(p) = k(p)e_b(p). $$</span></div><div class="c-article-equation__number">
+                    (9)
+                </div></div><p>where <i>k</i>(<i>p</i>) is a proportionality coefficient.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec11">Optimal projector selection</h4><p>The normalized MTF of the PSF introduced in (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-010-0168-4#Equ8">8</a>) is:
+</p><div id="Equ10" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ MTF_{II}(w_x, w_y | p) = \exp\left\{-\frac{1}{2}\left(\frac{w_x^2} {\sigma_a^{-2}(p)}+\frac{w_y^2}{\sigma_b^{-2}(p)}\right)\right\}, $$</span></div><div class="c-article-equation__number">
+                    (10)
+                </div></div><p>where <i>w</i>
+                              <sub>
+                      <i>x</i>
+                    </sub> = 2π<i>f</i>
+                              <sub>
+                      <i>x</i>
+                    </sub> and <i>w</i>
+                              <sub>
+                      <i>y</i>
+                    </sub> = 2π<i>f</i>
+                              <sub>
+                      <i>y</i>
+                    </sub>.</p><p>We apply this MTF to the optimal projector selection proposed in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0168-4#Sec7">3.1</a>. According to the central slice theorem of computed tomography, a Fourier transform of the 1D projection of a 2D function is same as the 1D slice of the 2D Fourier transform of the function (the slice crosses the center and its direction is perpendicular to the direction of the projection). From (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-010-0168-4#Equ10">10</a>), the MTF is also a 2D Gaussian distribution whose level set forms an ellipse. The cutoff frequency of the 1D slice of the MTF becomes the lowest when the direction of the slice is along the minor axis of the ellipse. The 1D slice is represented as:
+</p><div id="Equ11" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ MTF_{I}(w | p) = \exp\left(-\frac{w^2}{2\sigma_a^{-2}(p)}\right). $$</span></div><div class="c-article-equation__number">
+                    (11)
+                </div></div><p>Equation (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-010-0168-4#Equ11">11</a>) indicates that the lowest cutoff frequency increases as the major variance σ<sub>
+                      <i>a</i>
+                    </sub>(<i>p</i>) decreases.</p><p>According to the basic principle described in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0168-4#Sec7">3.1</a>, we at first compute the major variance that is related to the lowest cutoff frequency of each projector <i>p</i>. Then, we find the optimal projector whose computed major variance is the minimum among all the projectors, since the minimum major variance gives the highest cutoff frequency. So now, (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-010-0168-4#Equ3">3</a>) is rewritten as:
+</p><div id="Equ12" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ p_{\rm opt} = \mathop{\arg\min}\limits_{p} \, \sigma_a(p). $$</span></div><div class="c-article-equation__number">
+                    (12)
+                </div></div>
+                           <h3 class="c-article__sub-heading" id="Sec12">Occlusion compensation</h3><p>When multiple projectors exist, we can remove the cast shadows by displaying images on the shadow areas from projectors that are visible from the areas. This is accomplished when the geometric information (rigid-body transforms of the projectors and shape of the target object) is known. Because our approach assumes that there are multiple projectors in the system and the geometric information is calibrated in advance, occlusion-free projection can be performed.</p><p>For each point of the object surface, our system determines whether each projector casts a shadow on the point by a visibility test (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig4">4</a>). First, our system performs offscreen rendering of the projection scene from each projector viewpoint and stores the generated depth buffer. Next, it computes the distance of each point of the surface from each projector and compares it with the corresponding depth value stored in the depth buffer. If these two values are not the same, the point of the surface is determined as a shadow area from the projector (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig4">4</a>).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0168-4/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0168-4/MediaObjects/10055_2010_168_Fig4_HTML.gif?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0168-4/MediaObjects/10055_2010_168_Fig4_HTML.gif" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p>Shadow area detection. (<i>left</i>) A sample projection scene. (<i>right</i>) A point <i>A</i> is recognized as a shadow area and a point <i>B</i> is not</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0168-4/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>We integrate a shadow removal process into the optimal projector selection method introduced in Sects. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0168-4#Sec7">3.1</a> and <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0168-4#Sec8">3.2</a>. For each point of the object surface, our approach selects the optimal projector according to (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-010-0168-4#Equ12">12</a>) among the projectors that do not cast shadows on the point. Consequently, defocus and occlusion compensation can be simultaneously realized.</p><h3 class="c-article__sub-heading" id="Sec13">Feathering of multiple projector contribution</h3><p>A feathering technique is used to merge seamlessly images from multiple projectors. It is needed because of the lack of color equivalence among the projectors due to manufacturing processes and temperature color drift during their use, and because of our desire to minimize the sensitivity to small errors in the estimated geometric calibration parameters. Thus, we apply one of the feathering techniques that has been already proposed by several researchers (Raskar et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Raskar R, Welch G, Low KL, Bandyopadhyay D (2001) Shader lamps: animating real objects with image-based illumination. In: Proceedings of Eurographics EGWR ’01, pp 89–102" href="/article/10.1007/s10055-010-0168-4#ref-CR19" id="ref-link-section-d10176e1420">2001</a>; Bimber and Emmerling <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Bimber O, Emmerling A (2006) Multifocal projection: a multiprojector technique for increasing focal depth. IEEE Trans Visualization Comput Graph 12(4):658–667" href="/article/10.1007/s10055-010-0168-4#ref-CR3" id="ref-link-section-d10176e1423">2006</a>; Majumder and Brown <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Majumder A, Brown MS (2007) Practical multi-projector display design. A K Peters, USA" href="/article/10.1007/s10055-010-0168-4#ref-CR16" id="ref-link-section-d10176e1426">2007</a>).</p></div></div></section><section aria-labelledby="Sec14"><div class="c-article-section" id="Sec14-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec14">Experiment</h2><div class="c-article-section__content" id="Sec14-content"><p>We conducted three experiments. The projector used in the following experiments was EPSON EMP-1710 (resolution: 1024 × 768 pixels, aperture: F1.6). A PC (CPU: 3.4 GHz, RAM: 2.0 GB) was used to control the devices. First, we measured the actual variances of the PSFs by changing the distance of the projector from the projection surface. Second, we validated the feasibility of our dynamic defocus compensation approach by comparing it with another that does not explicitly deal with the oblique blur. Third, we performed another proof-of-concept experiment to confirm whether defocus and occlusion compensation was simultaneously achieved for a dynamic scene.</p><h3 class="c-article__sub-heading" id="Sec15">PSF calibration</h3><p>The major variance σ<sub>
+                    <i>a</i>
+                  </sub> of a PSF is needed in the optimal projector selection, as shown in (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-010-0168-4#Equ12">12</a>). Because there are several unknown parameters in (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-010-0168-4#Equ6">6</a>) such as <i>D</i>, <i>f</i>, <i>r</i>, and <i>v</i>, we measured actual PSFs that will be used in the following experiment.</p><p>We placed a projector on a slide stage that moved along its optical axis, a planar surface that was perpendicular to the axis, and a camera that was directed at the surface in a dark room (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig5">5</a>). The projector projected a white pixel on the surface from different distances, and the camera captured the projected pixel. The distance of the projector lens from the surface was varied from 450 mm to 1,200 mm at 25 mm intervals. Several captured results are shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig6">6</a>a. These captured pixels were approximated as 2D Gaussian distributions, and their variances are plotted in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig6">6</a>b.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0168-4/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0168-4/MediaObjects/10055_2010_168_Fig5_HTML.gif?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0168-4/MediaObjects/10055_2010_168_Fig5_HTML.gif" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p>PSF calibration. <b>a</b> Diagram. <b>b</b> Actual configuration</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0168-4/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-6"><figure><figcaption><b id="Fig6" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 6</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0168-4/figures/6" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0168-4/MediaObjects/10055_2010_168_Fig6_HTML.gif?as=webp"></source><img aria-describedby="figure-6-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0168-4/MediaObjects/10055_2010_168_Fig6_HTML.gif" alt="figure6" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-6-desc"><p>Calibration result. <b>a</b> Captured pixel. <b>b</b> Variance of the captured pixel that is approximated as 2D Gaussian distribution</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0168-4/figures/6" data-track-dest="link:Figure6 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>The measured variances were linearly interpolated to fill the missing values within the measured range. The missing values outside the range were linearly extrapolated by the least-squares method because the variance of a PSF linearly decreases until the focal plane and then increases (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig6">6</a>b). From the result, we defined the focal distance of the projector as 850 mm, where the variance is minimum.</p><p>The obtained variance was the minor variance of the PSF, σ<sub>
+                    <i>b</i>
+                  </sub>. In the optimal projector selection, the major variance σ<sub>
+                    <i>a</i>
+                  </sub> is needed in (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-010-0168-4#Equ12">12</a>), and is therefore calculated by (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-010-0168-4#Equ7">7</a>) and (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-010-0168-4#Equ9">9</a>):
+</p><div id="Equ13" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ \sigma_a = \frac{\sigma_b}{\cos\alpha}. $$</span></div><div class="c-article-equation__number">
+                    (13)
+                </div></div><p>In the following experiment, we computed the major variance of the PSF from the measured and interpolated/extrapolated data shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig6">6</a>b and (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-010-0168-4#Equ13">13</a>). Note that the PSF calibration has to be performed for every projector in advance.</p><h3 class="c-article__sub-heading" id="Sec16">Significance of oblique blur in defocus compensation</h3><p>One of the most important contributions of our approach is that it explicitly considers the oblique blur, in addition to the defocus blur. Thus, we conducted an experiment to validate its effectiveness by comparing our approach with another that deals with defocus blur but not oblique blur (we refer to this as naïve approach). For each point on the surface, naïve approach selects the optimal projector so that its focal plane is the nearest to the point.</p><p>We located two projectors and the projection object, as illustrated in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig7">7</a>. The object consisted of two planar and uniform white surfaces that were connected so that they shared one edge. The projectors projected images of a picture book. The angle of the surfaces β was set to be 90°. Shapes of the surfaces and relative rigid-body transforms of the projectors to the surfaces were calibrated in advance.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-7"><figure><figcaption><b id="Fig7" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 7</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0168-4/figures/7" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0168-4/MediaObjects/10055_2010_168_Fig7_HTML.gif?as=webp"></source><img aria-describedby="figure-7-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0168-4/MediaObjects/10055_2010_168_Fig7_HTML.gif" alt="figure7" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-7-desc"><p>Experimental setup. <b>a</b> Diagram. <b>b</b> Actual configuration</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0168-4/figures/7" data-track-dest="link:Figure7 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig8">8</a>a shows the result of naïve approach. For each point of the projection surface, distances of the point from the focal planes of the projectors were calculated (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig8">8</a>a-1), and a projector whose distance was shorter was selected (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig8">8</a>a-2). The images that the two projectors displayed are shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig8">8</a>a-3. As shown in the projection result (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig8">8</a>a-4), the displayed content was highly blurred.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-8"><figure><figcaption><b id="Fig8" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 8</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0168-4/figures/8" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0168-4/MediaObjects/10055_2010_168_Fig8_HTML.gif?as=webp"></source><img aria-describedby="figure-8-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0168-4/MediaObjects/10055_2010_168_Fig8_HTML.gif" alt="figure8" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-8-desc"><p>Experimental result. <b>a</b> Naïve approach: the oblique blur was not considered. <b>b</b> The proposed approach: both the defocus blur and oblique blur were explicitly dealt with</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0168-4/figures/8" data-track-dest="link:Figure8 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig8">8</a>b shows the result of our approach. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig8">8</a>b-1 shows the calculated major variances of the PSFs of both the projectors for each point of the surface. The optimal projectors were selected based on (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-010-0168-4#Equ12">12</a>) as shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig8">8</a>b-2. The projection images are shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig8">8</a>b-3. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig8">8</a>b-4 shows the projection result. Comparing Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig8">8</a>a-4 with Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig8">8</a>b-4, we could confirm that our approach that explicitly deals with the oblique blur in addition to the defocus blur gave a better result.</p><h3 class="c-article__sub-heading" id="Sec17">Dynamic defocus and occlusion compensation</h3><p>We conducted an experiment to confirm whether our approach could realize dynamic defocus and occlusion compensation. In this experiment, we used a 3 × 4 mirror array and a projector (parent projector) to practically realize 12 projectors (child projectors) as shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig9">9</a>. The image resolution of each child projector was 225 × 200 pixels. The similar system configuration was proposed in (Levoy et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Levoy M, Chen B, Vaish V, Horowitz M, McDowall I, Bolas M (2004) Synthetic aperture confocal imaging. ACM Trans Graph 23(3):825–834" href="/article/10.1007/s10055-010-0168-4#ref-CR14" id="ref-link-section-d10176e1702">2004</a>). Unlike the previous configuration where the focal planes of the child projectors were set at the same position, we adjusted the mirrors so that the focal planes of the child projectors differed each other. Two projection objects were located in front of the child projectors. One of the objects was a planar surface, and the other was a cube that could be translated in one direction by a slide stage (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig9">9</a>). Their shapes were known and represented by 11,000 vertices total.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-9"><figure><figcaption><b id="Fig9" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 9</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0168-4/figures/9" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0168-4/MediaObjects/10055_2010_168_Fig9_HTML.jpg?as=webp"></source><img aria-describedby="figure-9-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0168-4/MediaObjects/10055_2010_168_Fig9_HTML.jpg" alt="figure9" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-9-desc"><p>Experimental setup</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0168-4/figures/9" data-track-dest="link:Figure9 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>Geometric calibration of the child projectors was performed through a gray-code pattern projection method by using a camera (Point Grey Research, Scorpion, SCOR-20SOM-CS, 1,280 × 960 [pixel]) (Sato and Inokuchi <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1987" title="Sato K, Inokuchi S (1987) Range-imaging system utilizing nematic liquid crystal mask. In: Proceedings of IEEE ICCV ’87, pp 657–661" href="/article/10.1007/s10055-010-0168-4#ref-CR20" id="ref-link-section-d10176e1729">1987</a>). The position and orientation of the surface and the movement direction of the slide stage were also measured with the camera (see "<a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0168-4#Sec24">Appendix</a>" for details).</p><p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig10">10</a> shows the projection results of a single child projector (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig10">10</a>a), of 12 child projectors (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig10">10</a>b), and of 12 child projectors after the cube was translated (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig10">10</a>c). Note again that any additional calibrations were not performed in the experiment. In the case of a single child projector, the image quality in the region (1) of Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig10">10</a>a was degraded by the oblique blur while a fine image was displayed in the region (2). Furthermore, not all of the image contents were displayed because of the cast shadow. On the other hand, in the case of 12 child projectors, fine images were displayed both in the region (1) and (2), and shadows were successfully removed in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig10">10</a>b.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-10"><figure><figcaption><b id="Fig10" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 10</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0168-4/figures/10" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0168-4/MediaObjects/10055_2010_168_Fig10_HTML.jpg?as=webp"></source><img aria-describedby="figure-10-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0168-4/MediaObjects/10055_2010_168_Fig10_HTML.jpg" alt="figure10" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-10-desc"><p>Experimental result of defocus-free and occlusion-free projection (<i>left</i>: overall view, <i>right</i>: close-up). <b>a</b> Projection result by a single child projector. <b>b</b> Projection result by 12 child projectors. <b>c</b> Projection result by 12 child projectors after the cube was translated</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0168-4/figures/10" data-track-dest="link:Figure10 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>When the target moved on the slide stage, defocus and occlusion compensation was also realized as shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig10">10</a>c. The system selected the optimal projector according to the recalculated major variance of the PSF for each point of the surface and generated the projection image. Consequently, the image quality of the projection result was not degraded. From the result, we confirmed that our approach could keep displaying fine images on the moving surface without any additional calibrations when the 6-DOF movement was known.</p><p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig11">11</a> shows the selected projectors for every point of the target surfaces and the raw projection image from the parent projector. Figures <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig11">11</a>a and b show the data of the initial setup and after the cube was translated, respectively. We could confirm that the optimal projector selection and the projection image were updated.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-11"><figure><figcaption><b id="Fig11" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 11</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0168-4/figures/11" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0168-4/MediaObjects/10055_2010_168_Fig11_HTML.gif?as=webp"></source><img aria-describedby="figure-11-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0168-4/MediaObjects/10055_2010_168_Fig11_HTML.gif" alt="figure11" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-11-desc"><p>Child projector contribution. (<i>left</i>) Selected projectors for each point of the projection surfaces (each color corresponds to each child projector). (<i>right</i>) Projection images from the parent projector. Each small rectangle corresponds to each child projector</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0168-4/figures/11" data-track-dest="link:Figure11 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        </div></div></section><section aria-labelledby="Sec18"><div class="c-article-section" id="Sec18-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec18">Discussion</h2><div class="c-article-section__content" id="Sec18-content"><p>This section briefly discusses advantages and limitations of the proposed method and directions for future work.</p><h3 class="c-article__sub-heading" id="Sec19">Limitation of defocus compensation</h3><p>One of the limitations of the proposed method is that a defocus-free projection cannot always be guaranteed because of the relatively short focal depth of video projectors. Although adding more projectors leads to minimize the problem, in practice there are still some areas where not a single projector is able to project completely in focus. It would occur especially in larger and more complicated scenes than our prototype.</p><h3 class="c-article__sub-heading" id="Sec20">Photometric correction</h3><p>Photometric compensation is needed to correct color differences of results displayed by different projectors. Once initial photometric calibrations are performed, projectors’ inherent color properties such as brightness, gamma, and white balance can be compensated through an open-loop process. However, intensity differences occur when the incidence angles or the distances of the projectors to the projection surface are different. Because these are dynamically changed, a closed-loop process is needed to correct projection images. We can apply the following optical models to solve this problem. First, the intensity of the reflection of the projection light is inversely proportional to the square of the distance from the projector to the surface. Second, suppose the surface exhibits Lambertian reflectance; then radiant intensity observed from the surface is directly proportional to the cosine of the incidence angle. Because we already have geometric information of the projectors and the surface, we can calculate the final intensity values displayed on the surface by these models before projection. Thus, we can perform photometric correction to compensate intensity variations among projectors.</p><h3 class="c-article__sub-heading" id="Sec21">Performance</h3><p>Although we built 12 child projectors with a mirror array and a parent projector in the experiment of Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0168-4#Sec17">4.3</a>, 12 is not an inevitable number. As shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig12">12</a>, the displayed image’s quality was not greatly improved with more than 6 projectors. Therefore, 5 projectors are sufficient in this case. Further projectors would simply increase the cost and the processing time. Thus, one of our future works would be to develop an algorithm that automatically calculates the minimum number and optimal positions of projectors based on information about the projection object such as the number, shape, and range of movement so that the worst image quality that is specified in advance is guaranteed.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-12"><figure><figcaption><b id="Fig12" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 12</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0168-4/figures/12" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0168-4/MediaObjects/10055_2010_168_Fig12_HTML.gif?as=webp"></source><img aria-describedby="figure-12-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0168-4/MediaObjects/10055_2010_168_Fig12_HTML.gif" alt="figure12" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-12-desc"><p>System performance: average of variances of the PSF of the projected pixels, and percentage of the entire projection area of the shadow area</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0168-4/figures/12" data-track-dest="link:Figure12 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h3 class="c-article__sub-heading" id="Sec22">Optimal projector selection criteria</h3><p>The previous defocus compensation method compares the areas of the measured PSFs for the optimal projector selection (Bimber and Emmerling <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Bimber O, Emmerling A (2006) Multifocal projection: a multiprojector technique for increasing focal depth. IEEE Trans Visualization Comput Graph 12(4):658–667" href="/article/10.1007/s10055-010-0168-4#ref-CR3" id="ref-link-section-d10176e1894">2006</a>). On the other hand, our method selects a projector whose major variance of the PSF is minimum as the optimal one. We evaluated both the criteria through a psychophysical study.</p><p>In the study, participants observed blurred images synthesized with different PSFs and compared the perceived image qualities. We prepared ten different original images (1 English text and 9 color natural images, 512 × 512 pixels) and three PSFs [(a1) 10 × 10, (a2) 16 × 16, and (b) 5 × 18 pixels]. For each original image, three blurred images were synthesized with the PSFs (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig13">13</a>). Consequently, 30 blurred images were synthesized. Each participant observed a set of two synthesized images [(a1) and (b), or (a2) and (b)] and their original image on an LCD monitor. Then, he (or she) judged which synthesized image has a better image quality. Each participant performed 20 trials (2 sets, 10 original images). Ten participants (7M, 3F) took part in the study. All the participants were naïve to the purpose of the experiment and had normal or corrected to normal vision. As a result, the participants judged that the image quality of (a1) was better than (b) in 89% of all the trials and the image quality of (b) was better than (a2) in 89% of all the trials.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-13"><figure><figcaption><b id="Fig13" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 13</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0168-4/figures/13" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0168-4/MediaObjects/10055_2010_168_Fig13_HTML.jpg?as=webp"></source><img aria-describedby="figure-13-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0168-4/MediaObjects/10055_2010_168_Fig13_HTML.jpg" alt="figure13" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-13-desc"><p>Example of stimuli. <b>a</b> English text. <b>b</b> Lenna (a natural color image). <b>c</b> Magnified view of Lenna’s right eye</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0168-4/figures/13" data-track-dest="link:Figure13 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>From the result, it is confirmed that when there are two projectors whose PSFs are (a1) and (b), respectively, the projector whose PSF is (a1) should be selected as the optimal projector. On the other hand, when there are two projectors whose PSFs are (a2) and (b), respectively, the projector whose PSF is (b) should be selected. In the first case, our method could select the correct projector because it compares the major variance (i.e., the length of the major axis) of the PSF. On the other hand, the previous method could not select the correct one because the area of the PSF (a1) is larger than that of (b). However, our method could not select the correct one in the second case while the previous method could.</p><p>It was indicated that when the areas of the PSFs greatly differ, it would be better to compare the areas for optimal projector selection. On the other hand, when the difference is small, the major variances of the PSFs should be compared. This means that not a single criterion (either major variance or area) but the both are needed in the optimal projector selection. Our model-based method can compute and compare both the criteria, because it computes the shape of the PSF by taking into account the oblique blur. On the other hand, the previous appearance-based (or camera-based) approach cannot compute the exact shape of the PSF, so only the area of the PSF can be compared.</p><p>The best solution would be to select the optimal criterion according to the shapes of the compared PSFs. One of our future works would be to investigate the optimal projector selection method, which considers both the major variance and the area of the PSF.</p></div></div></section><section aria-labelledby="Sec23"><div class="c-article-section" id="Sec23-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec23">Conclusion</h2><div class="c-article-section__content" id="Sec23-content"><p>We presented a novel dynamic defocus and occlusion compensation approach in a multi-projector environment. Our approach compensates for defocus blur, oblique blur, and cast shadows of the projected images based on geometric information on projectors and projection surfaces as well as frequency analysis of the PSFs. Our approach achieves online and continuous image corrections while the target object moves. In the first proof-of-concept experiment, we confirmed that our approach that considers the both defocus and oblique blurs could display images with a much better quality than another naïve approach that considers only defocus blur to select the optimal projector. The result of the second experiment showed that the proposed approach could realize defocus and occlusion compensation simultaneously for a dynamic scene.</p><p>In this paper, we assume that all the projectors are static, or have no pan-tilt-zoom (PTZ) mechanisms. A user can adjust the projecting direction and spatial resolution of the projected image with PTZ projectors. Therefore, as a future work, we will investigate the potentials and possibilities of dynamic occlusion- and defocus-free projection by multiple PTZ projectors.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Audet S, Cooperstock J (2007) Shadow removal in front projection environments using object tracking. In: Proce" /><p class="c-article-references__text" id="ref-CR1">Audet S, Cooperstock J (2007) Shadow removal in front projection environments using object tracking. In: Proceedings of IEEE CVPR ’07, pp 1–8</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bandyopadhyay D, Raskar R, Fuchs H (2001) Dynamic shader lamps: painting on movable objects. In: Proceedings o" /><p class="c-article-references__text" id="ref-CR2">Bandyopadhyay D, Raskar R, Fuchs H (2001) Dynamic shader lamps: painting on movable objects. In: Proceedings of IEEE/ACM ISAR ’01, pp 207–216</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="O. Bimber, A. Emmerling, " /><meta itemprop="datePublished" content="2006" /><meta itemprop="headline" content="Bimber O, Emmerling A (2006) Multifocal projection: a multiprojector technique for increasing focal depth. IEE" /><p class="c-article-references__text" id="ref-CR3">Bimber O, Emmerling A (2006) Multifocal projection: a multiprojector technique for increasing focal depth. IEEE Trans Visualization Comput Graph 12(4):658–667</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2FTVCG.2006.75" aria-label="View reference 3">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 3 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Multifocal%20Projection%3A%20A%20Multiprojector%20Technique%20for%20Increasing%20Focal%20Depth&amp;journal=IEEE%20Transactions%20on%20Visualization%20and%20Computer%20Graphics&amp;volume=12&amp;issue=4&amp;pages=658-667&amp;publication_year=2006&amp;author=Bimber%2CO&amp;author=Emmerling%2CA">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="O. Bimber, R. Raskar, " /><meta itemprop="datePublished" content="2005" /><meta itemprop="headline" content="Bimber O, Raskar R (2005) Spatial augmented reality: merging real and virtual worlds. A. K. Peters Ltd, USA" /><p class="c-article-references__text" id="ref-CR4">Bimber O, Raskar R (2005) Spatial augmented reality: merging real and virtual worlds. A. K. Peters Ltd, USA</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 4 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Spatial%20Augmented%20Reality%3A%20Merging%20Real%20and%20Virtual%20Worlds&amp;publication_year=2005&amp;author=Bimber%2CO&amp;author=Raskar%2CR">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="O. Bimber, D. Iwai, G. Wetzstein, A. Grundhöfer, " /><meta itemprop="datePublished" content="2008" /><meta itemprop="headline" content="Bimber O, Iwai D, Wetzstein G, Grundhöfer A (2008) The visual computing of projector-camera systems. Comput Gr" /><p class="c-article-references__text" id="ref-CR5">Bimber O, Iwai D, Wetzstein G, Grundhöfer A (2008) The visual computing of projector-camera systems. Comput Graph Forum 27(8):2219–2254</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1111%2Fj.1467-8659.2008.01175.x" aria-label="View reference 5">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 5 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=The%20visual%20computing%20of%20Projector-Camera%20Systems&amp;journal=Computer%20Graphics%20Forum&amp;volume=27&amp;issue=8&amp;pages=2219-2254&amp;publication_year=2008&amp;author=Bimber%2CO&amp;author=Iwai%2CD&amp;author=Wetzstein%2CG&amp;author=Grundh%C3%B6fer%2CA">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Brown MS, Song P, Cham TJ (2006) Image pre-conditioning for out-of-focus projector blur. In: Proceedings of IE" /><p class="c-article-references__text" id="ref-CR6">Brown MS, Song P, Cham TJ (2006) Image pre-conditioning for out-of-focus projector blur. In: Proceedings of IEEE CVPR ’06, vol II, pp 1956–1963</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Cham TJ, Rehg JM, Sukthankar R, Sukthankar G (2003) Shadow elimination and occluder light suppression for mult" /><p class="c-article-references__text" id="ref-CR7">Cham TJ, Rehg JM, Sukthankar R, Sukthankar G (2003) Shadow elimination and occluder light suppression for multi-projector displays. In: Proceedings of IEEE CVPR ’03, pp 513–520</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Grosse M, Bimber O (2008) Coded aperture projection. In: Proceedings of ACM EDT-IPT ’08, pp 13:1–13:4" /><p class="c-article-references__text" id="ref-CR8">Grosse M, Bimber O (2008) Coded aperture projection. In: Proceedings of ACM EDT-IPT ’08, pp 13:1–13:4</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Gupta S, Jaynes C (2006) The universal media book: tracking and augmenting moving surface with projected infor" /><p class="c-article-references__text" id="ref-CR9">Gupta S, Jaynes C (2006) The universal media book: tracking and augmenting moving surface with projected information. In: Proceedings of IEEE/ACM ISMAR ’06, pp 177–180</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="RI. Hartley, A. Zisserman, " /><meta itemprop="datePublished" content="2004" /><meta itemprop="headline" content="Hartley RI, Zisserman A (2004) Multiple view geometry in computer vision. Cambridge University Press, Cambridg" /><p class="c-article-references__text" id="ref-CR10">Hartley RI, Zisserman A (2004) Multiple view geometry in computer vision. Cambridge University Press, Cambridge</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 10 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Multiple%20View%20Geometry%20in%20Computer%20Vision&amp;publication_year=2004&amp;author=Hartley%2CRI&amp;author=Zisserman%2CA">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="C. Jaynes, S. Webb, RM. Steele, " /><meta itemprop="datePublished" content="2004" /><meta itemprop="headline" content="Jaynes C, Webb S, Steele RM (2004) Camera-based detection and removal of shadows from interactive multiproject" /><p class="c-article-references__text" id="ref-CR11">Jaynes C, Webb S, Steele RM (2004) Camera-based detection and removal of shadows from interactive multiprojector displays. IEEE Trans Vis Comput Graph 10(3):290–301</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2FTVCG.2004.1272728" aria-label="View reference 11">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 11 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Camera-Based%20Detection%20and%20Removal%20of%20Shadows%20from%20Interactive%20Multiprojector%20Displays&amp;journal=IEEE%20Transactions%20on%20Visualization%20and%20Computer%20Graphics&amp;volume=10&amp;issue=3&amp;pages=290-301&amp;publication_year=2004&amp;author=Jaynes%2CC&amp;author=Webb%2CS&amp;author=Steele%2CRM">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Kondo D, Kijima R (2002) Proposal of a free form projection display using the principle of duality rendering. " /><p class="c-article-references__text" id="ref-CR12">Kondo D, Kijima R (2002) Proposal of a free form projection display using the principle of duality rendering. In: Proceedings of VSMM ’02, pp 346–352</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Kondo D, Shiwaku Y, Kijima R (2008) Free form projection display and application. In: Proceedings of IEEE/ACM " /><p class="c-article-references__text" id="ref-CR13">Kondo D, Shiwaku Y, Kijima R (2008) Free form projection display and application. In: Proceedings of IEEE/ACM PROCAMS ’08, pp 31–32</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="M. Levoy, B. Chen, V. Vaish, M. Horowitz, I. McDowall, M. Bolas, " /><meta itemprop="datePublished" content="2004" /><meta itemprop="headline" content="Levoy M, Chen B, Vaish V, Horowitz M, McDowall I, Bolas M (2004) Synthetic aperture confocal imaging. ACM Tran" /><p class="c-article-references__text" id="ref-CR14">Levoy M, Chen B, Vaish V, Horowitz M, McDowall I, Bolas M (2004) Synthetic aperture confocal imaging. ACM Trans Graph 23(3):825–834</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1145%2F1015706.1015806" aria-label="View reference 14">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 14 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Synthetic%20Aperture%20Confocal%20Imaging&amp;journal=ACM%20Transactions%20on%20Graphics&amp;volume=23&amp;issue=3&amp;pages=825-834&amp;publication_year=2004&amp;author=Levoy%2CM&amp;author=Chen%2CB&amp;author=Vaish%2CV&amp;author=Horowitz%2CM&amp;author=McDowall%2CI&amp;author=Bolas%2CM">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Low KL, Welch G, Lastra A, Fuchs H (2001) Life-sized projector-based dioramas. In: Proceedings of ACM VRST ’01" /><p class="c-article-references__text" id="ref-CR15">Low KL, Welch G, Lastra A, Fuchs H (2001) Life-sized projector-based dioramas. In: Proceedings of ACM VRST ’01, pp 93–101</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="A. Majumder, MS. Brown, " /><meta itemprop="datePublished" content="2007" /><meta itemprop="headline" content="Majumder A, Brown MS (2007) Practical multi-projector display design. A K Peters, USA" /><p class="c-article-references__text" id="ref-CR16">Majumder A, Brown MS (2007) Practical multi-projector display design. A K Peters, USA</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 16 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Practical%20Multi-Projector%20Display%20Design&amp;publication_year=2007&amp;author=Majumder%2CA&amp;author=Brown%2CMS">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="Y. Oyamada, H. Saito, " /><meta itemprop="datePublished" content="2008" /><meta itemprop="headline" content="Oyamada Y, Saito H (2008) Defocus blur correcting projector-camera system. Lect Notes Comput Sci 5259:453–464" /><p class="c-article-references__text" id="ref-CR17">Oyamada Y, Saito H (2008) Defocus blur correcting projector-camera system. Lect Notes Comput Sci 5259:453–464</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1007%2F978-3-540-88458-3_41" aria-label="View reference 17">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 17 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Defocus%20Blur%20Correcting%20Projector-Camera%20System&amp;journal=Lecture%20Notes%20in%20Computer%20Science&amp;volume=5259&amp;pages=453-464&amp;publication_year=2008&amp;author=Oyamada%2CY&amp;author=Saito%2CH">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Park H, Lee MH, Kim SJ, Park JI (2006) Surface-independent direct-projected augmented reality. In: Proceedings" /><p class="c-article-references__text" id="ref-CR18">Park H, Lee MH, Kim SJ, Park JI (2006) Surface-independent direct-projected augmented reality. In: Proceedings of ACCV ’06, vol 2, pp 892–901</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Raskar R, Welch G, Low KL, Bandyopadhyay D (2001) Shader lamps: animating real objects with image-based illumi" /><p class="c-article-references__text" id="ref-CR19">Raskar R, Welch G, Low KL, Bandyopadhyay D (2001) Shader lamps: animating real objects with image-based illumination. In: Proceedings of Eurographics EGWR ’01, pp 89–102</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Sato K, Inokuchi S (1987) Range-imaging system utilizing nematic liquid crystal mask. In: Proceedings of IEEE " /><p class="c-article-references__text" id="ref-CR20">Sato K, Inokuchi S (1987) Range-imaging system utilizing nematic liquid crystal mask. In: Proceedings of IEEE ICCV ’87, pp 657–661</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Sukthankar R, Cham TJ, Sukthankar G (2001) Dynamic shadow elimination for multi-projector displays. In: Procee" /><p class="c-article-references__text" id="ref-CR21">Sukthankar R, Cham TJ, Sukthankar G (2001) Dynamic shadow elimination for multi-projector displays. In: Proceedings of IEEE CVPR ’01, vol II, pp 151–157</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="L. Zhang, S. Nayar, " /><meta itemprop="datePublished" content="2006" /><meta itemprop="headline" content="Zhang L, Nayar S (2006) Projection defocus analysis for scene capture and image display. ACM Trans Graph 25(3)" /><p class="c-article-references__text" id="ref-CR22">Zhang L, Nayar S (2006) Projection defocus analysis for scene capture and image display. ACM Trans Graph 25(3):907–915</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1145%2F1141911.1141974" aria-label="View reference 22">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 22 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Projection%20Defocus%20Analysis%20for%20Scene%20Capture%20and%20Image%20Display&amp;journal=ACM%20Transactions%20on%20Graphics&amp;volume=25&amp;issue=3&amp;pages=907-915&amp;publication_year=2006&amp;author=Zhang%2CL&amp;author=Nayar%2CS">
+                    Google Scholar</a> 
+                </p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-010-0168-4-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><div class="c-article-section__content" id="Ack1-content"></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">Graduate School of Engineering Science, Osaka University, 1-3-D554, Machikaneyama, Toyonaka, 560-8531, Osaka, Japan</p><p class="c-article-author-affiliation__authors-list">Momoyo Nagase, Daisuke Iwai &amp; Kosuke Sato</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Momoyo-Nagase"><span class="c-article-authors-search__title u-h3 js-search-name">Momoyo Nagase</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Momoyo+Nagase&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Momoyo+Nagase" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Momoyo+Nagase%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Daisuke-Iwai"><span class="c-article-authors-search__title u-h3 js-search-name">Daisuke Iwai</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Daisuke+Iwai&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Daisuke+Iwai" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Daisuke+Iwai%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Kosuke-Sato"><span class="c-article-authors-search__title u-h3 js-search-name">Kosuke Sato</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Kosuke+Sato&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Kosuke+Sato" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Kosuke+Sato%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-010-0168-4/email/correspondent/c1/new">Daisuke Iwai</a>.</p></div></div></section><section aria-labelledby="appendices"><div class="c-article-section" id="appendices-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="appendices">Appendix: Geometric calibration of projector</h2><div class="c-article-section__content" id="appendices-content"><h3 class="c-article__sub-heading u-visually-hidden" id="Appa">Appendix: Geometric calibration of projector</h3><p>We apply a geometric calibration method based on gray-code projection, which was proposed by Sato and Inokuchi (Sato and Inokuchi <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1987" title="Sato K, Inokuchi S (1987) Range-imaging system utilizing nematic liquid crystal mask. In: Proceedings of IEEE ICCV ’87, pp 657–661" href="/article/10.1007/s10055-010-0168-4#ref-CR20" id="ref-link-section-d10176e1964">1987</a>).</p><p>Suppose that a 3D point (<i>X</i>, <i>Y</i>, <i>Z</i>) in a world coordinate system is projected onto a 2D image plane (<i>x</i>, <i>y</i>). According to the pinhole camera model, the projection can be described by the perspective equation with the 3 × 4 perspective projection matrix <b>C</b>:
+</p><div id="Equ14" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ h [ x \, y \, 1 ] ^t = {\bf C} [ X \, Y \, Z \, 1 ]^t, $$</span></div><div class="c-article-equation__number">
+                    (14)
+                </div></div><p>where
+</p><div id="Equ15" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ {\bf C}= \left[\begin{array}{cccc} C_{11} &amp; C_{12} &amp; C_{13} &amp; C_{14}\\ C_{21} &amp; C_{22} &amp; C_{23} &amp; C_{24}\\ C_{31} &amp; C_{32} &amp; C_{33} &amp; 1 \end{array} \right]. $$</span></div><div class="c-article-equation__number">
+                    (15)
+                </div></div><p>
+                           <b>C</b> is determined up to a scale factor <i>h</i> and has eleven unknown parameters. Because two equations are derived from (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-010-0168-4#Equ14">14</a>), the unknown parameters of <b>C</b> can be solved using a least-squares method with six or more correspondences between the 3D world and the 2D screen coordinate systems. The perspective projection matrix can be decomposed to intrinsic and extrinsic matrices (Hartley and Zisserman <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Hartley RI, Zisserman A (2004) Multiple view geometry in computer vision. Cambridge University Press, Cambridge" href="/article/10.1007/s10055-010-0168-4#ref-CR10" id="ref-link-section-d10176e2028">2004</a>). Once the extrinsic matrix is calculated, a 3D rigid-body transform of the pinhole camera device (camera and projector in our case) in the world coordinate system can be computed. The basic idea of geometric registration of each child projector to target objects is to use a camera to determine the relationship (i.e., perspective projection matrix or extrinsic matrix) between the object and the projector.</p><p>In the actual calibration process, we position a reference cube (50 [mm] on a side) with spatially known feature points on the slide stage within the intersection of view frusta of the projector and the camera. The fiducial cube determines the world coordinate system (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig14">14</a>a). First, the camera captures the fiducial cube, and the fiducial points are automatically extracted in the captured image. Then, intersection points of two grid line segments each of which connects two fiducial points are calculated as shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig14">14</a>b. The number of the intersection points is 147 in total. With 147 correspondences between the world coordinate value (<i>X</i>, <i>Y</i>, <i>Z</i>) and the camera screen coordinate value (<i>x</i>
+                           <sub>
+                    <i>c</i>
+                  </sub>, <i>y</i>
+                           <sub>
+                    <i>c</i>
+                  </sub>), a perspective projection matrix <b>C</b> is calculated using a least-squares method.
+</p><div id="Equ16" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ h [ x_c \, y_c \, 1 ]^t = {\bf C} [ X \, Y \, Z \, 1 ]^t. $$</span></div><div class="c-article-equation__number">
+                    (16)
+                </div></div>
+                           <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-14"><figure><figcaption><b id="Fig14" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 14</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0168-4/figures/14" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0168-4/MediaObjects/10055_2010_168_Fig14_HTML.jpg?as=webp"></source><img aria-describedby="figure-14-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0168-4/MediaObjects/10055_2010_168_Fig14_HTML.jpg" alt="figure14" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-14-desc"><p>Fiducial cube. <b>a</b> Spatially known feature points are printed on it. <b>b</b> Grid line segments each of which connects detected two fiducial points</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0168-4/figures/14" data-track-dest="link:Figure14 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>In the geometric calibration of each child projector, horizontal and vertical gray-code patterns are projected onto the fiducial cube from each child projector to compute the perspective projection matrix <b>P</b>
+                           <sub>
+                    <b>i</b>
+                  </sub> (<i>i</i> = 1, ..., 12). The projected scenes are captured by the camera (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig15">15</a>). The captured images are processed and correspondences between camera screen and projector screen coordinate values <span class="mathjax-tex">\(((x_c, y_c)\leftrightarrow(x_{pi}, y_{pi}))\)</span> are obtained. Correspondences between world and camera screen coordinate values <span class="mathjax-tex">\(((X, Y, Z)\leftrightarrow(x_c, y_c))\)</span> were already obtained in the camera calibration. Therefore, correspondences between world and projector screen coordinate values <span class="mathjax-tex">\(((X, Y, Z)\leftrightarrow(x_{pi}, y_{pi}))\)</span> are derived from these two correspondences (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0168-4#Fig15">15</a>). With the 147 correspondences, the perspective projection matrix of each child projector <b>P</b>
+                           <sub>
+                    <b>i</b>
+                  </sub> is calculated.
+</p><div id="Equ17" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ h [ x_{pi} \, y_{pi} \, 1 ]^t = {\bf P}_{\bf i} [ X \, Y \, Z \, 1 ]^t. $$</span></div><div class="c-article-equation__number">
+                    (17)
+                </div></div>
+                           <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-15"><figure><figcaption><b id="Fig15" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 15</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0168-4/figures/15" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0168-4/MediaObjects/10055_2010_168_Fig15_HTML.gif?as=webp"></source><img aria-describedby="figure-15-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0168-4/MediaObjects/10055_2010_168_Fig15_HTML.gif" alt="figure15" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-15-desc"><p><i>Gray-code</i> projection to obtain geometric correspondences between the world and the projector screen coordinate systems via camera screen coordinate system</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0168-4/figures/15" data-track-dest="link:Figure15 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>Because only a part of child projectors is focused on the fiducial cube, we translate it by using the slide stage so that other child projectors focus on the cube. Then, the camera captures the cube again, and the perspective projection matrix <b>C</b>′ is computed. Comparing the extrinsic matrices of <b>C</b> and <b>C</b>′, we can compute the rigid-body transform (i.e., translation vector) of the cube. Then, we calibrate the uncalibrated child projectors one by one with the same method as mentioned above by taking into account the translation vector of the cube. If there are still defocused child projectors, we move the cube again and repeat the calibration process.</p><p>We use the fiducial cube as an projection object. In addition, we place a planar surface behind the cube, on which spatially known lines are drawn. The system takes a picture of the surface by the camera and recognizes the lines automatically. Because the intrinsic parameter of the camera is derived from <b>C</b>, we can compute the rigid-body transform of the surface from the camera. Consequently, position and orientation of the surface in the world coordinate system is calculated. When the cube is translated by the slide stage, the system captures it and automatically compute the position and orientation of the cube in the world coordinate system.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=Dynamic%20defocus%20and%20occlusion%20compensation%20of%20projected%20imagery%20by%20model-based%20optimal%20projector%20selection%20in%20multi-projection%20environment&amp;author=Momoyo%20Nagase%20et%20al&amp;contentID=10.1007%2Fs10055-010-0168-4&amp;publication=1359-4338&amp;publicationDate=2010-08-18&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Nagase, M., Iwai, D. &amp; Sato, K. Dynamic defocus and occlusion compensation of projected imagery by model-based optimal projector selection in multi-projection environment.
+                    <i>Virtual Reality</i> <b>15, </b>119–132 (2011). https://doi.org/10.1007/s10055-010-0168-4</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-010-0168-4.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2009-11-27">27 November 2009</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2010-07-29">29 July 2010</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2010-08-18">18 August 2010</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2011-06">June 2011</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-010-0168-4" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-010-0168-4</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Projection-based mixed reality</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Multi-projection environment</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Defocus compensation</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Shadow removal</span></li><li class="c-article-subject-list__subject"><span itemprop="about">PSF computation</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-010-0168-4.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=168;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

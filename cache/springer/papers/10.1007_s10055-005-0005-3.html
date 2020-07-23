@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="Neural network-based calibration of electromagnetic tracking systems"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="Electromagnetic tracking systems are a common component of many virtual reality installations. Their accuracy, however, suffers from the distortions of the electromagnetic field used in calculating..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/9/1.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="Neural network-based calibration of electromagnetic tracking systems"/>
+
+    <meta name="dc.source" content="Virtual Reality 2005 9:1"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2005-09-27"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2005 Springer-Verlag London Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="Electromagnetic tracking systems are a common component of many virtual reality installations. Their accuracy, however, suffers from the distortions of the electromagnetic field used in calculating the tracker sensor&#8217;s position. We have developed a tracker calibration technique based on a neural network that effectively compensates for the errors in both tracked location and orientation. This case study discusses our implementation of the calibration algorithm and compares the results with traditional calibration methods."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2005-09-27"/>
+
+    <meta name="prism.volume" content="9"/>
+
+    <meta name="prism.number" content="1"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="70"/>
+
+    <meta name="prism.endingPage" content="78"/>
+
+    <meta name="prism.copyright" content="2005 Springer-Verlag London Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-005-0005-3"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-005-0005-3"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-005-0005-3.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-005-0005-3"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="Neural network-based calibration of electromagnetic tracking systems"/>
+
+    <meta name="citation_volume" content="9"/>
+
+    <meta name="citation_issue" content="1"/>
+
+    <meta name="citation_publication_date" content="2005/12"/>
+
+    <meta name="citation_online_date" content="2005/09/27"/>
+
+    <meta name="citation_firstpage" content="70"/>
+
+    <meta name="citation_lastpage" content="78"/>
+
+    <meta name="citation_article_type" content="Original Article"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-005-0005-3"/>
+
+    <meta name="DOI" content="10.1007/s10055-005-0005-3"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-005-0005-3"/>
+
+    <meta name="description" content="Electromagnetic tracking systems are a common component of many virtual reality installations. Their accuracy, however, suffers from the distortions of the"/>
+
+    <meta name="dc.creator" content="Volodymyr V. Kindratenko"/>
+
+    <meta name="dc.creator" content="William R. Sherman"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Presence; citation_title=A survey of position trackers; citation_author=K Meyer, H Applewhite, F Biocca; citation_volume=1; citation_issue=2; citation_publication_date=1992; citation_pages=173-200; citation_id=CR1"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Presence; citation_title=The effects of metals and interfering fields on electromagnetic trackers; citation_author=M Nixon, B McCallum, W Fright, N Price; citation_volume=7; citation_issue=2; citation_publication_date=1998; citation_pages=204-218; citation_doi=10.1162/105474698565587; citation_id=CR2"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Trans Aerospace Electron Syst; citation_title=Magnetic position and orientation tracking system; citation_author=F Raab, E Blood, T Steioner, H Jones; citation_volume=15; citation_issue=5; citation_publication_date=1979; citation_pages=709-718; citation_doi=10.1109/TAES.1979.308860; citation_id=CR3"/>
+
+    <meta name="citation_reference" content="citation_title=Neural networks for pattern recognition; citation_publication_date=1995; citation_id=CR4; citation_author=CM Bishop; citation_publisher=Oxford University Press"/>
+
+    <meta name="citation_reference" content="Bryson S (1992) Measurement and calibration of static distortion of position data from 3D trackers. In: Proceedings of SPIE conference on stereoscopic displays and applications III, San Jose, CA, pp 244&#8211;255"/>
+
+    <meta name="citation_reference" content="Ghazisaedy M, Adamczyk D, Sandin D, Kenyon, DeFanti T (1995) Ultrasonic calibration of a magnetic tracker in a virtual reality space. In: Proceedings of the IEEE virtual reality annual international symposium (VRAIS &#8217;95), Research Triangle Park, NC, pp 179&#8211;188"/>
+
+    <meta name="citation_reference" content="Czernuszenko M, Sandin D, DeFanti T (1998) Line of sight method for tracker calibration in projection-based VR systems. In: Proceedings of 2nd international immersive projection technology workshop, Ames, Iowa, pp 11&#8211;12, CD-ROM"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Presence; citation_title=Magnetic tracker calibration for improved augmented reality registration; citation_author=M Livingston, A State; citation_volume=6; citation_issue=5; citation_publication_date=1997; citation_pages=532-546; citation_id=CR8"/>
+
+    <meta name="citation_reference" content="Zachmann G (1997) Distortion correction of magnetic fields for position tracking. In: Proceedings of computer graphics international (CGI&#8217;97), Hasselt, Belgium, pp 23&#8211;27"/>
+
+    <meta name="citation_reference" content="Briggs W (1999) Magnetic calibration by tetrahedral interpolation. In: Proceedings of NIST-ASME industrial virtual reality symposium, Chicago, IL, November 1999, MH-Vol. 5/MED-Vol. 9:27&#8211;32"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Virtual Reality Res Dev Appl; citation_title=Calibration of electromagnetic tracking devices; citation_author=V Kindratenko; citation_volume=4; citation_publication_date=1999; citation_pages=139-150; citation_doi=10.1007/BF01408592; citation_id=CR11"/>
+
+    <meta name="citation_reference" content="Ikits M, Brederson JD, Hansen C, Hollerbach J (2001) An improved calibration framework for electromagnetic tracking devices. IEEE Virtual Reality"/>
+
+    <meta name="citation_reference" content="Kindratenko V, Bennett A (2000) Evaluation of rotation correction techniques for electromagnetic position tracking systems. In: Proceedings of the virtual environments 2000 eurographics workshop, Amsterdam, The Netherlands, pp 13&#8211;22"/>
+
+    <meta name="citation_reference" content="citation_title=Neural networks, an introduction; citation_publication_date=1995; citation_id=CR14; citation_author=B M&#252;ller; citation_author=J Reinhardt; citation_author=MT Strickland; citation_publisher=Springer"/>
+
+    <meta name="citation_reference" content="Foresee FD, Hagan MT (1997) Gauss-Newton approximation to Bayesian regularization. In: Proceedings of the 1997 international joint conference on neural networks"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Virtual Reality Res Dev Appl; citation_title=A survey of electromagnetic position tracker calibration techniques; citation_author=V Kindratenko; citation_volume=5; citation_publication_date=2000; citation_pages=169-182; citation_doi=10.1007/BF01409422; citation_id=CR16"/>
+
+    <meta name="citation_reference" content="Student (1908) On the probable error of the mean. Biometrika 6:1&#8211;25"/>
+
+    <meta name="citation_reference" content="Saleh T, Kindratenko V, Sherman W (2000) On using neural networks to calibrate electromagnetic tracking systems, NCSA Technical Report, December 7"/>
+
+    <meta name="citation_author" content="Volodymyr V. Kindratenko"/>
+
+    <meta name="citation_author_email" content="kindr@ncsa.uiuc.edu"/>
+
+    <meta name="citation_author_institution" content="National Center for Supercomputing Applications (NCSA), University of Illinois at Urbana-Champaign (UIUC), Urbana, USA"/>
+
+    <meta name="citation_author" content="William R. Sherman"/>
+
+    <meta name="citation_author_institution" content="National Center for Supercomputing Applications (NCSA), University of Illinois at Urbana-Champaign (UIUC), Urbana, USA"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-005-0005-3&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2005/12/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-005-0005-3"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="Neural network-based calibration of electromagnetic tracking systems"/>
+        <meta property="og:description" content="Electromagnetic tracking systems are a common component of many virtual reality installations. Their accuracy, however, suffers from the distortions of the electromagnetic field used in calculating the tracker sensor’s position. We have developed a tracker calibration technique based on a neural network that effectively compensates for the errors in both tracked location and orientation. This case study discusses our implementation of the calibration algorithm and compares the results with traditional calibration methods."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>Neural network-based calibration of electromagnetic tracking systems | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-005-0005-3","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Tracker calibration, Electromagnetic tracker, Neural network, Virtual reality","kwrd":["Tracker_calibration","Electromagnetic_tracker","Neural_network","Virtual_reality"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-005-0005-3","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-005-0005-3","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=5;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-005-0005-3">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            Neural network-based calibration of electromagnetic tracking systems
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-005-0005-3.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-005-0005-3.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">Original Article</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2005-09-27" itemprop="datePublished">27 September 2005</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">Neural network-based calibration of electromagnetic tracking systems</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Volodymyr_V_-Kindratenko" data-author-popup="auth-Volodymyr_V_-Kindratenko" data-corresp-id="c1">Volodymyr V. Kindratenko<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of Illinois at Urbana-Champaign (UIUC)" /><meta itemprop="address" content="grid.35403.31, 0000000419369991, National Center for Supercomputing Applications (NCSA), University of Illinois at Urbana-Champaign (UIUC), 405 N. Mathews Avenue, Urbana, IL, 61801, USA" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-William_R_-Sherman" data-author-popup="auth-William_R_-Sherman">William R. Sherman</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of Illinois at Urbana-Champaign (UIUC)" /><meta itemprop="address" content="grid.35403.31, 0000000419369991, National Center for Supercomputing Applications (NCSA), University of Illinois at Urbana-Champaign (UIUC), 405 N. Mathews Avenue, Urbana, IL, 61801, USA" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 9</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">70</span>–<span itemprop="pageEnd">78</span>(<span data-test="article-publication-year">2005</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">211 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">13 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                    
+                        <li class="c-article-metrics-bar__item">
+                            <p class="c-article-metrics-bar__count">3 <span class="c-article-metrics-bar__label">Altmetric</span></p>
+                        </li>
+                    
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-005-0005-3/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>Electromagnetic tracking systems are a common component of many virtual reality installations. Their accuracy, however, suffers from the distortions of the electromagnetic field used in calculating the tracker sensor’s position. We have developed a tracker calibration technique based on a neural network that effectively compensates for the errors in both tracked location and orientation. This case study discusses our implementation of the calibration algorithm and compares the results with traditional calibration methods.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Introduction</h2><div class="c-article-section__content" id="Sec1-content"><p>The definition of virtual reality requires that the computational system tracks the users in order to replace or augment one or more of their sensory inputs in accordance with their movement. Many developers of virtual reality systems have found that electromagnetic tracking systems (Raab et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1979" title="Raab F, Blood E, Steioner T, Jones H (1979) Magnetic position and orientation tracking system. IEEE Trans Aerospace Electron Syst 15(5):709–718" href="/article/10.1007/s10055-005-0005-3#ref-CR3" id="ref-link-section-d35257e298">1979</a>) are a reasonable solution for implementing this essential part of the medium.</p><p>The popularity of electromagnetic tracking in VR systems stems from the many benefits provided by this technology. Unlike position tracking systems based on sonic and visual means of sensing movement, electromagnetic tracking systems are not limited by the line-of-sight. This allows the tracker transmitter to be hidden from the user, perhaps on the opposite side of large screens, and it allows many people to stand in close proximity without affecting the ability to track. Electromagnetic tracking also avoids problems due to inertia or requirements caused by physical connections between the tracked object and the tracking system as are the case with mechanical linkage-based tracking systems (Meyer et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1992" title="Meyer K, Applewhite H, Biocca F (1992) A survey of position trackers. Presence 1(2):173–200" href="/article/10.1007/s10055-005-0005-3#ref-CR1" id="ref-link-section-d35257e304">1992</a>). The sensors that accompany electromagnetic tracking systems are fairly easy to utilize, are relatively small and can be easily mounted on the body or objects to be tracked. Interfacing with several sensors associated with a single system is straightforward too.</p><p>Electromagnetic tracking systems, however, do have some serious deficiencies. In particular, tracking accuracy falls off rapidly with very limited overall range—typically within about 8 ft. Nixon et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1998" title="Nixon M, McCallum B, Fright W, Price N (1998) The effects of metals and interfering fields on electromagnetic trackers. Presence 7(2):204–218" href="/article/10.1007/s10055-005-0005-3#ref-CR2" id="ref-link-section-d35257e310">1998</a>) found that tracking error increases at a rate proportional to the fourth power of the distance between the transmitter and receiver units. Another major problem is that any magnetically active material in the vicinity can cause the tracked results to be warped (Nixon et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1998" title="Nixon M, McCallum B, Fright W, Price N (1998) The effects of metals and interfering fields on electromagnetic trackers. Presence 7(2):204–218" href="/article/10.1007/s10055-005-0005-3#ref-CR2" id="ref-link-section-d35257e313">1998</a>). This problem, however, can often be corrected via an analytical procedure referred to as <i>tracker calibration</i>.</p><p>Raab et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1979" title="Raab F, Blood E, Steioner T, Jones H (1979) Magnetic position and orientation tracking system. IEEE Trans Aerospace Electron Syst 15(5):709–718" href="/article/10.1007/s10055-005-0005-3#ref-CR3" id="ref-link-section-d35257e322">1979</a>) foresaw the need for calibration and suggested that the correction of the distorted measurements can take the form of additive vectors for location error correction and a sequence of rotations for orientation error correction and can be stored either in a look-up table or as polynomials in the position space. Most of the work undertaken after Raab’s report implements a variation of one of these two approaches. We have sought to apply and evaluate a neural network-based approach as an alternative to the way most electromagnetic tracking calibration has thus far been implemented.</p></div></div></section><section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">Related work</h2><div class="c-article-section__content" id="Sec2-content"><p>A detailed survey of various tracker calibration techniques can be found in Kindratenko (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Kindratenko V (2000) A survey of electromagnetic position tracker calibration techniques. Virtual Reality Res Dev Appl 5:169–182" href="/article/10.1007/s10055-005-0005-3#ref-CR16" id="ref-link-section-d35257e333">2000</a>); here we only briefly describe some of them.</p><p>Ghazisaedy et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1995" title="Ghazisaedy M, Adamczyk D, Sandin D, Kenyon, DeFanti T (1995) Ultrasonic calibration of a magnetic tracker in a virtual reality space. In: Proceedings of the IEEE virtual reality annual international symposium (VRAIS ’95), Research Triangle Park, NC, pp 179–188" href="/article/10.1007/s10055-005-0005-3#ref-CR6" id="ref-link-section-d35257e339">1995</a>) and Czernusenko et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1998" title="Czernuszenko M, Sandin D, DeFanti T (1998) Line of sight method for tracker calibration in projection-based VR systems. In: Proceedings of 2nd international immersive projection technology workshop, Ames, Iowa, pp 11–12, CD-ROM" href="/article/10.1007/s10055-005-0005-3#ref-CR7" id="ref-link-section-d35257e342">1998</a>) applied tri-linear interpolation to compensate for the errors in tracked location. Livingston and State (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="Livingston M, State A (1997) Magnetic tracker calibration for improved augmented reality registration. Presence 6(5):532–546" href="/article/10.1007/s10055-005-0005-3#ref-CR8" id="ref-link-section-d35257e345">1997</a>) used tri-linear interpolation for correcting the errors in the tracked location and a sequence of spherical linear interpolations between the quaternions representing the tracked orientation to correct the errors in the orientation.</p><p>Bryson (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1992" title="Bryson S (1992) Measurement and calibration of static distortion of position data from 3D trackers. In: Proceedings of SPIE conference on stereoscopic displays and applications III, San Jose, CA, pp 244–255" href="/article/10.1007/s10055-005-0005-3#ref-CR5" id="ref-link-section-d35257e351">1992</a>) used a weighted look-up table method to compensate the errors in the tracked location. Kindratenko and Bennett (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Kindratenko V, Bennett A (2000) Evaluation of rotation correction techniques for electromagnetic position tracking systems. In: Proceedings of the virtual environments 2000 eurographics workshop, Amsterdam, The Netherlands, pp 13–22" href="/article/10.1007/s10055-005-0005-3#ref-CR13" id="ref-link-section-d35257e354">2000</a>) extended this technique to compensate the errors in both the tracked location and orientation. Briggs (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Briggs W (1999) Magnetic calibration by tetrahedral interpolation. In: Proceedings of NIST-ASME industrial virtual reality symposium, Chicago, IL, November 1999, MH-Vol. 5/MED-Vol. 9:27–32" href="/article/10.1007/s10055-005-0005-3#ref-CR10" id="ref-link-section-d35257e357">1999</a>) used a look-up table interpolation scheme to correct the errors in the tracked location similar to the one described in Livingston and State (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="Livingston M, State A (1997) Magnetic tracker calibration for improved augmented reality registration. Presence 6(5):532–546" href="/article/10.1007/s10055-005-0005-3#ref-CR8" id="ref-link-section-d35257e360">1997</a>). The difference between Briggs’s and Livingston’s methods is in the way the look-up tables are re-sampled from the measurements taken on an irregular grid.</p><p>Several researchers have used high-order polynomial fit. Bryson (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1992" title="Bryson S (1992) Measurement and calibration of static distortion of position data from 3D trackers. In: Proceedings of SPIE conference on stereoscopic displays and applications III, San Jose, CA, pp 244–255" href="/article/10.1007/s10055-005-0005-3#ref-CR5" id="ref-link-section-d35257e366">1992</a>) applied fourth-order polynomials to compensate for the errors in the tracker’s location. Kindratenko (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Kindratenko V (1999) Calibration of electromagnetic tracking devices. Virtual Reality Res Dev Appl 4:139–150" href="/article/10.1007/s10055-005-0005-3#ref-CR11" id="ref-link-section-d35257e369">1999</a>) and Ikits et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Ikits M, Brederson JD, Hansen C, Hollerbach J (2001) An improved calibration framework for electromagnetic tracking devices. IEEE Virtual Reality" href="/article/10.1007/s10055-005-0005-3#ref-CR12" id="ref-link-section-d35257e372">2001</a>) extended this technique to correct the errors in the tracker orientation as well. Kindratenko (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Kindratenko V (1999) Calibration of electromagnetic tracking devices. Virtual Reality Res Dev Appl 4:139–150" href="/article/10.1007/s10055-005-0005-3#ref-CR11" id="ref-link-section-d35257e375">1999</a>) used Euler angles, whereas Ikits et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Ikits M, Brederson JD, Hansen C, Hollerbach J (2001) An improved calibration framework for electromagnetic tracking devices. IEEE Virtual Reality" href="/article/10.1007/s10055-005-0005-3#ref-CR12" id="ref-link-section-d35257e378">2001</a>) used quaternionial representation for orientation.</p><p>Zachmann (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="Zachmann G (1997) Distortion correction of magnetic fields for position tracking. In: Proceedings of computer graphics international (CGI’97), Hasselt, Belgium, pp 23–27" href="/article/10.1007/s10055-005-0005-3#ref-CR9" id="ref-link-section-d35257e385">1997</a>) proposed a scattered data interpolation scheme using Hardy’s Multi-Quadric method with LU matrix decomposition to solve the interpolation equations. The rationale for using this approach is that Hardy’s Multi-Quadric polynomials oscillate less than Newton or Lagrange interpolation polynomials.</p><p>It is usually assumed that the error in tracked location and orientation is a function of the tracker location only. Livingston and State (Livingston and State <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="Livingston M, State A (1997) Magnetic tracker calibration for improved augmented reality registration. Presence 6(5):532–546" href="/article/10.1007/s10055-005-0005-3#ref-CR8" id="ref-link-section-d35257e391">1997</a>) suggested that the tracker orientation plays a role as well; however, we have not seen any other reports in the literature researching this conclusion. Moreover, Ikits et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Ikits M, Brederson JD, Hansen C, Hollerbach J (2001) An improved calibration framework for electromagnetic tracking devices. IEEE Virtual Reality" href="/article/10.1007/s10055-005-0005-3#ref-CR12" id="ref-link-section-d35257e394">2001</a>) pointed out that the rotation error definition used in Livingston and State (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="Livingston M, State A (1997) Magnetic tracker calibration for improved augmented reality registration. Presence 6(5):532–546" href="/article/10.1007/s10055-005-0005-3#ref-CR8" id="ref-link-section-d35257e397">1997</a>) is orientation dependent, which may explain the rotation error dependence on the orientation observed by the researchers. Therefore, in thus study, we assume that the error in tracked location and orientation is the function of the tracked location only.</p><p>Thus far, most of the calibration techniques reported in the literature are based either on an interpolation scheme (tri-linear or look-up table) or on a polynomial fit (high-order polynomials or Hardy’s Multi-Quadric polynomials). Both approaches require a relatively dense calibration table, otherwise they may not provide the desirable accuracy. The polynomials are quite good at capturing the overall shape of the distorted field; however, they miss smaller details, e.g., when sudden but small localized changes to the electromagnetic field occur. The lower the order of the fitting polynomial, the greater the error. However, as the order increases, the polynomial oscillations occur. This results in additional errors, particularly at the locations where the errors were initially low (Kindratenko <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Kindratenko V (1999) Calibration of electromagnetic tracking devices. Virtual Reality Res Dev Appl 4:139–150" href="/article/10.1007/s10055-005-0005-3#ref-CR11" id="ref-link-section-d35257e403">1999</a>).</p><p>Interpolation-based calibration techniques attempt to linearly interpolate the error value at each location based on the error values of nearby locations. However, the actual errors change nonlinearly. As a result, interpolation techniques perform well in the presence of small error changes and perform relatively poor when the electromagnetic field warps substantially.</p></div></div></section><section aria-labelledby="Sec3"><div class="c-article-section" id="Sec3-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec3">Proposed method</h2><div class="c-article-section__content" id="Sec3-content"><p>We propose to use a feed-forward neural network (Bishop <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1995" title="Bishop CM (1995) Neural networks for pattern recognition. Oxford University Press, New York" href="/article/10.1007/s10055-005-0005-3#ref-CR4" id="ref-link-section-d35257e416">1995</a>; Müller et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1995" title="Müller B, Reinhardt J, Strickland MT (1995) Neural Networks, an Introduction, 2nd edn. Springer, Berlin Heidelberg New York" href="/article/10.1007/s10055-005-0005-3#ref-CR14" id="ref-link-section-d35257e419">1995</a>) to approximate the shape of the distorted electromagnetic field, and thus, to predict the receiver’s actual position (both location and orientation) from its reported position. The entire calibration procedure consists of obtaining an appropriate training set (calibration table) and training the network until the overall network output error reaches a desirable level of accuracy. Once the network is trained, it can be used to correct the tracker errors.</p><h3 class="c-article__sub-heading" id="Sec4">Calibration table measurements</h3><p>The main use of the calibration table is to establish a correspondence between the true position and the position reported by the tracking system. In practice, this requires an alternative location sensing tool and usually can be achieved only at some limited number of locations. As we move the tracker sensor, the electromagnetic tracking system reports tracker sensor position relative to the origin of the tracker transmitter. Our goal therefore is to measure the actual physical position of the tracker sensor relative to the origin of the tracker transmitter. Several techniques have been proposed in the literature; we use the calibration table measurement technique described in Kindratenko (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Kindratenko V (1999) Calibration of electromagnetic tracking devices. Virtual Reality Res Dev Appl 4:139–150" href="/article/10.1007/s10055-005-0005-3#ref-CR11" id="ref-link-section-d35257e429">1999</a>) and Kindratenko and Bennett (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Kindratenko V, Bennett A (2000) Evaluation of rotation correction techniques for electromagnetic position tracking systems. In: Proceedings of the virtual environments 2000 eurographics workshop, Amsterdam, The Netherlands, pp 13–22" href="/article/10.1007/s10055-005-0005-3#ref-CR13" id="ref-link-section-d35257e432">2000</a>). The procedure consists of moving the receiver on a regularly spaced grid with known coordinates and with a known constant orientation and recording both the known true position of the tracker sensor and the position reported by the tracking system. The resulting table contains tracker readings that are taken on the regular grid in the undistorted true space.</p><p>It is important to avoid any further magnetic field distortions while measuring the exact location of the sensor with the help of an alternative measuring technique. To achieve this, a simple sensor holder was built consisting of a 1×1×0.1 foot wooden platform with a housing attached at the top and a set of plastic pipes of the length 2, 3, 4, 5, 6, and 7 ft that can be plugged into the housing (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0005-3#Fig1">1</a>a). Moving the platform on the regular grid marked on the floor (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0005-3#Fig1">1</a>b) and changing the pipes allows the placement of the sensor at the points whose locations can be precisely determined. After a very careful alignment, the precision of this measuring technique is ±0.01 m, ±1°.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0005-3/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0005-3/MediaObjects/10055_2005_5_Fig1_HTML.jpg?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0005-3/MediaObjects/10055_2005_5_Fig1_HTML.jpg" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p>Calibration table acquisition device used in this study. Two-dimensional grid (<b>b</b>) is laid on the floor in front of the I-Desk; sensor holder (<b>a</b>) is moved on the grid</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0005-3/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>The main advantage of this approach is its simplicity and a very low cost. However, this is a time-consuming technique and it requires a special care to ensure the desirable degree of accuracy. Also, the relation (transformation from one system to another) between the grid-based coordinate system and the electromagnetic tracker coordinate system needs to be known.</p><p>The data measurement procedure is repeated twice, once on the grid and once in-between the grid, resulting in two different datasets. The first dataset (calibration table) is used to train the network whereas the second dataset (validation table) is used to verify the quality of the calibration once the network is trained.</p><h3 class="c-article__sub-heading" id="Sec5">Neural network design considerations</h3><p>Our goal is to devise a neural network capable of predicting the true tracker sensor position based on its tracked position. It has been shown that a feed-forward neural network with hidden layers can represent any smooth continuous function <i>R</i>
+                           <sup><i>n</i></sup> → <i>R</i>
+                           <sup><i>m</i></sup> (Bishop <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1995" title="Bishop CM (1995) Neural networks for pattern recognition. Oxford University Press, New York" href="/article/10.1007/s10055-005-0005-3#ref-CR4" id="ref-link-section-d35257e495">1995</a>; Müller et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1995" title="Müller B, Reinhardt J, Strickland MT (1995) Neural Networks, an Introduction, 2nd edn. Springer, Berlin Heidelberg New York" href="/article/10.1007/s10055-005-0005-3#ref-CR14" id="ref-link-section-d35257e499">1995</a>). This is achieved by training the neural network with an error back-propagation algorithm by presenting examples of known function values for known function arguments (the calibration table). In our case, we assume that the error in the tracked location and orientation is the function of the tracked location only. Therefore, the neural network designed for location error correction should accept three inputs—<i>x</i>, <i>y</i> and <i>z</i> coordinates of the tracked location—and should produce three outputs: <i>x</i>, <i>y</i> and <i>z</i> coordinates of the corrected location. In this study, we use Euler angles to represent the tracker orientation. Therefore, in order to compensate for the errors in the tracked orientation, the neural network should accept three inputs—<i>x</i>, <i>y</i> and <i>z</i> coordinates of the tracked location—and should produce three outputs: rotation error for yaw, pitch and roll. These rotation errors are then used to rotate the actual tracked rotation to compensate for the field distortion as described in Kindratenko (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Kindratenko V (1999) Calibration of electromagnetic tracking devices. Virtual Reality Res Dev Appl 4:139–150" href="/article/10.1007/s10055-005-0005-3#ref-CR11" id="ref-link-section-d35257e530">1999</a>).</p><p>Thus, we need to implement two separate neural networks. The first neural network is used to directly predict the true location based on the tracked location, and the second neural network is used to predict rotation errors for a given tracked location. We do not attempt to merge these two networks into one because the functions that they represent behave quite differently and are defined on different domains. We also do not attempt to directly predict the corrected Euler angles because we would need to supply the network with both the tracked location and orientation, which is a mixed domain data.</p><p>We still need to decide on the network architecture (number of hidden layers, number of neurons in each layer, type of transfer functions, etc.) and on the type and parameters of the error back-propagation training algorithm. There is no precise recipe about selecting the right network complexity for a given problem and the optimal solution can often be found only experimentally. The number of hidden layers and number of neurons in each layer is related to the complexity of the function to be represented by the network. The larger the number of local minima and maxima in the function, the more likely it will require a network with higher complexity. However, higher complexity may also lead to a network which is not able to generalize well enough and/or will require a lengthy training procedure.</p><p>In this study, we use a <i>single hidden-layer network</i> architecture with tan-sigmoid transfer functions for the neurons in the hidden layer and linear transfer functions for the neurons in the output layer (Bishop <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1995" title="Bishop CM (1995) Neural networks for pattern recognition. Oxford University Press, New York" href="/article/10.1007/s10055-005-0005-3#ref-CR4" id="ref-link-section-d35257e543">1995</a>; Müller et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1995" title="Müller B, Reinhardt J, Strickland MT (1995) Neural Networks, an Introduction, 2nd edn. Springer, Berlin Heidelberg New York" href="/article/10.1007/s10055-005-0005-3#ref-CR14" id="ref-link-section-d35257e546">1995</a>). The exact number of hidden-layer neurons required for an optimal solution is determined experimentally by training networks of different sizes and identifying the one with the best overall performance.</p><p>Various error back-propagation training algorithms can be employed to train a feed-forward neural network (Bishop <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1995" title="Bishop CM (1995) Neural networks for pattern recognition. Oxford University Press, New York" href="/article/10.1007/s10055-005-0005-3#ref-CR4" id="ref-link-section-d35257e553">1995</a>; Müller et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1995" title="Müller B, Reinhardt J, Strickland MT (1995) Neural Networks, an Introduction, 2nd edn. Springer, Berlin Heidelberg New York" href="/article/10.1007/s10055-005-0005-3#ref-CR14" id="ref-link-section-d35257e556">1995</a>). Ideally, we would like the training procedure to be fast (the network should converge in a small number of iterations), and we would like to have an obvious training termination criterion. We evaluated several such techniques and selected <i>Bayesian regularization in combination with Levenberg-Marquardt training</i> (Foresee and Hagan <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="Foresee FD, Hagan MT (1997) Gauss-Newton approximation to Bayesian regularization. In: Proceedings of the 1997 international joint conference on neural networks" href="/article/10.1007/s10055-005-0005-3#ref-CR15" id="ref-link-section-d35257e562">1997</a>). Bayesian regularization minimizes a linear combination of squared errors and weights. It also modifies the linear combination, so that at the end of training the resulting network has good generalization abilities.</p><p>The neural network architecture and training procedure used in this study were selected after evaluating a number of other network configurations. For example, we considered a multilayer neural network with the standard back-propagation training, but were not able to achieve a desirable degree of performance (Saleh et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Saleh T, Kindratenko V, Sherman W (2000) On using neural networks to calibrate electromagnetic tracking systems, NCSA Technical Report, December 7" href="/article/10.1007/s10055-005-0005-3#ref-CR18" id="ref-link-section-d35257e568">2000</a>). This points out the main difficulty when using a neural network-based approach: there is no precise recipe about the network architecture and training procedure. One should consider several alternatives before settling down with a particular technique.</p></div></div></section><section aria-labelledby="Sec6"><div class="c-article-section" id="Sec6-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec6">Experimental results and discussion</h2><div class="c-article-section__content" id="Sec6-content"><p>The proposed calibration technique was tested with three tracking systems: Ascension Technology Flock of Birds installed in a CAVE<sup>TM</sup>-like environment (referred to as <i>FoB1</i>), Ascension Technology SpacePad used with an ImmersaDesk<sup>TM</sup> (<i>SpacePad</i>) and Ascension Technology Flock of Birds installed in the CAVE (<i>FoB2</i>). The size of the tracked volume and the number of measurements used in the calibration and validation tables are given in Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-005-0005-3#Tab1">1</a>. Errors in tracked location and orientation are given in Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-005-0005-3#Tab2">2</a>. Note that FoB2 dataset is very sparse; the measurements for the calibration table were taken 2 ft apart. Therefore, we expect that look-up table interpolation calibration technique should perform poorly as compared, for example, to the high-order polynomial fit calibration technique.</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-1"><figure><figcaption class="c-article-table__figcaption"><b id="Tab1" data-test="table-caption">Table 1 Dimensions of the calibration and validation datasets</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-005-0005-3/tables/1"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-2"><figure><figcaption class="c-article-table__figcaption"><b id="Tab2" data-test="table-caption">Table 2 Error statistics for uncalibrated tracking systems</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-005-0005-3/tables/2"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>Our first task is to find the optimal number of neurons in the hidden layer for each dataset. The approach that we have chosen consists of training neural networks with 3 to 21 neurons in the hidden layer using data from the calibration datasets and validating their performance using data from the validation datasets. Once a particular network is trained, we present the corresponding validation dataset to the network and compute the network’s output, which is then used to compute the average error between the expected true position stored in the validation file and the calibrated position. The results are shown in Figs. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0005-3#Fig2">2</a> and <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0005-3#Fig3">3</a>. On the basis of these results, we select the most appropriate number of hidden-layer neurons for a given dataset and a given calibration domain (location and orientation). Thus, in essence, we calibrate the tracking system with different networks and pick up the one that produces the best results. As seen from the plots, an optimal solution for each dataset in each calibration domain typically requires a different number of neurons. For example, FoB2 dataset requires the network with 11 neurons in the hidden layer in order to produce the best location calibration results and requires the network with 12 neurons in order to produce the best orientation calibration results. Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-005-0005-3#Tab3">3</a> summarizes our final findings for all three datasets.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0005-3/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0005-3/MediaObjects/10055_2005_5_Fig2_HTML.gif?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0005-3/MediaObjects/10055_2005_5_Fig2_HTML.gif" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p>Average location error after the calibration as a function of the number of neurons in the hidden layer. Errors in the calibrated location are measured as the distance between the calibrated location and the actual true location of the tracker sensor</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0005-3/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0005-3/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0005-3/MediaObjects/10055_2005_5_Fig3_HTML.gif?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0005-3/MediaObjects/10055_2005_5_Fig3_HTML.gif" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p>Average orientation error after the calibration as a function of the number of neurons in the hidden layer. Errors in the calibrated orientation are measured as the angle between the direction of the calibrated orientation and the actual true orientation of the tracker sensor</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0005-3/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-3"><figure><figcaption class="c-article-table__figcaption"><b id="Tab3" data-test="table-caption">Table 3 Summary of the neural network training and optimal number of neurons in the hidden-layer selection procedures for all three datasets</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-005-0005-3/tables/3"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>Once we know which network performs best, we can use it to calibrate the system. Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-005-0005-3#Tab4">4</a> summarizes the results of the calibration based on the data from the validation tables. For example, the average tracked location error for FoB1 validation dataset is 0.161±0.111 m (Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-005-0005-3#Tab2">2</a>), whereas the average location error after the calibration is 0.025±0.01 m (Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-005-0005-3#Tab4">4</a>)—almost an order of magnitude improvement. Likewise, the average tracked orientation error for FoB1 dataset is 8.8±5.8° (Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-005-0005-3#Tab2">2</a>), whereas the average orientation error after the calibration is 1.9±1.3° (Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-005-0005-3#Tab4">4</a>)—a fourfold improvement over the uncalibrated orientation. Similar results were obtained for two other tracking systems. Thus, in all cases the neural network-based calibration technique was able to significantly decrease errors in both the tracked location and the tracked orientation.</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-4"><figure><figcaption class="c-article-table__figcaption"><b id="Tab4" data-test="table-caption">Table 4 Error statistics for the calibrated tracking systems</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-005-0005-3/tables/4"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>Our second task is to analyze the performance of the neural network-based calibration as compared to other calibration techniques found in the literature. In particular, we are interested in the overall performance and its statistical (in)significance. The overall performance can be measured using first- and second-order statistics (mean, standard deviation, etc.) about the difference between the true tracker sensor position and the position obtained as the result of calibration using different calibration techniques. The statistical significance of the differences in performance can be verified with paired two sample <i>t</i> test (“Student” <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1908" title="Student (1908) On the probable error of the mean. Biometrika 6:1–25" href="/article/10.1007/s10055-005-0005-3#ref-CR17" id="ref-link-section-d35257e1959">1908</a>). In our case, this test is used to determine whether the calibration results obtained with two different calibration techniques are likely to have distributions with equal average values, or, in other words, there is no statistically significant difference between the results obtained with different calibration techniques. When the <i>t</i> test value is closer to 0 than the <i>t</i> critical value for the corresponding degrees of freedom at 95% confidence level, the initial hypothesis that there is no statistical difference between the calibration results obtained with two different calibration procedures is true.</p><p>We compare the calibration improvements obtained with the proposed method with the improvements obtained with the fourth-order polynomial fit calibration technique (Kindratenko <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Kindratenko V (1999) Calibration of electromagnetic tracking devices. Virtual Reality Res Dev Appl 4:139–150" href="/article/10.1007/s10055-005-0005-3#ref-CR11" id="ref-link-section-d35257e1972">1999</a>) and the interpolation-based calibration scheme (Kindratenko and Bennett <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Kindratenko V, Bennett A (2000) Evaluation of rotation correction techniques for electromagnetic position tracking systems. In: Proceedings of the virtual environments 2000 eurographics workshop, Amsterdam, The Netherlands, pp 13–22" href="/article/10.1007/s10055-005-0005-3#ref-CR13" id="ref-link-section-d35257e1975">2000</a>) based on the same calibration and validation datasets used in this study. The results are shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-005-0005-3#Fig4">4</a> and Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-005-0005-3#Tab5">5</a>. On the basis of the comparison of the mean errors, the neural network calibration technique outperformed two other calibration techniques when applied to correct tracked locations. However, we obtained mixed results while attempting to correct the errors in the tracked orientation: the interpolation-based method outperformed the neural network-based technique in two out of three cases. It is interesting to note that the neural network-based approach outperformed two other techniques both in location and orientation calibration when applied to FoB2 dataset, which is a sparse dataset as compared to two other datasets. This indicates that the neural network-based calibration approach may require a smaller calibration dataset.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-005-0005-3/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0005-3/MediaObjects/10055_2005_5_Fig4_HTML.gif?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-005-0005-3/MediaObjects/10055_2005_5_Fig4_HTML.gif" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p>Comparison of the results for location (<b>a</b>) and orientation (<b>b</b>) calibration by fourth-order polynomial fit, look-up table interpolation and the neural network-based calibration techniques. <i>Vertical bars</i> represent average error, whereas <i>error bars</i> indicate standard deviation about the average error (see Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-005-0005-3#Tab5">5</a> for numerical values)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-005-0005-3/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-5"><figure><figcaption class="c-article-table__figcaption"><b id="Tab5" data-test="table-caption">Table 5 Calibrated location and orientation errors after the calibration with three different calibration techniques</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-005-0005-3/tables/5"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>Most of the improvements on FoB1 and FoB2 datasets achieved when using the neural network-based calibration technique compared to other calibration methods are statistically significant as verified with paired two sample Student’s <i>t</i> test (Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-005-0005-3#Tab6">6</a>). The improvements for SpacePad dataset in most cases are not statistically significant. However, the practical significance of the improved calibration results depends on the application in which the tracker system is used. For example, in an architectural walk-through application, the difference between 0.063 and 0.04 m (calibrated FoB2 dataset) is negligible. However, the same error may be very significant in a medical application in which medical devices are tracked and remotely controlled. Therefore, the importance of the improvements obtained with the neural network calibration technique should be judged in the context of the actual application for which the calibration is being performed.</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-6"><figure><figcaption class="c-article-table__figcaption"><b id="Tab6" data-test="table-caption">Table 6 
+                                    <i>t</i> test results</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-005-0005-3/tables/6"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     </div></div></section><section aria-labelledby="Sec7"><div class="c-article-section" id="Sec7-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec7">Conclusions</h2><div class="c-article-section__content" id="Sec7-content"><p>In this study, we applied a single-layer feed-forward neural network to calibrate the location and orientation errors typically present in electromagnetic tracking devices. We evaluated the proposed technique with three different tracking systems and found that it can be used to significantly improve their tracking accuracy. We also found that this method produces results that are often better than the results produced by two other well-known techniques. In particular, we were able to achieve lower overall errors while calibrating tracked location. However, look-up table rotation interpolation outperformed the neural network location calibration technique in two out of three cases. We also found some indications that the neural network-based calibration approach may require a smaller calibration table, although a more detailed study is required to verify this observation. Even though the improvements obtained with the proposed calibration technique can be statistically significant, the benefits of this approach should be considered within the framework of the actual application for which the calibration is thought to be applied.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="K. Meyer, H. Applewhite, F. Biocca, " /><meta itemprop="datePublished" content="1992" /><meta itemprop="headline" content="Meyer K, Applewhite H, Biocca F (1992) A survey of position trackers. Presence 1(2):173–200" /><p class="c-article-references__text" id="ref-CR1">Meyer K, Applewhite H, Biocca F (1992) A survey of position trackers. Presence 1(2):173–200</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 1 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=A%20survey%20of%20position%20trackers&amp;journal=Presence&amp;volume=1&amp;issue=2&amp;pages=173-200&amp;publication_year=1992&amp;author=Meyer%2CK&amp;author=Applewhite%2CH&amp;author=Biocca%2CF">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="M. Nixon, B. McCallum, W. Fright, N. Price, " /><meta itemprop="datePublished" content="1998" /><meta itemprop="headline" content="Nixon M, McCallum B, Fright W, Price N (1998) The effects of metals and interfering fields on electromagnetic " /><p class="c-article-references__text" id="ref-CR2">Nixon M, McCallum B, Fright W, Price N (1998) The effects of metals and interfering fields on electromagnetic trackers. Presence 7(2):204–218</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1162%2F105474698565587" aria-label="View reference 2">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 2 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=The%20effects%20of%20metals%20and%20interfering%20fields%20on%20electromagnetic%20trackers&amp;journal=Presence&amp;volume=7&amp;issue=2&amp;pages=204-218&amp;publication_year=1998&amp;author=Nixon%2CM&amp;author=McCallum%2CB&amp;author=Fright%2CW&amp;author=Price%2CN">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="F. Raab, E. Blood, T. Steioner, H. Jones, " /><meta itemprop="datePublished" content="1979" /><meta itemprop="headline" content="Raab F, Blood E, Steioner T, Jones H (1979) Magnetic position and orientation tracking system. IEEE Trans Aero" /><p class="c-article-references__text" id="ref-CR3">Raab F, Blood E, Steioner T, Jones H (1979) Magnetic position and orientation tracking system. IEEE Trans Aerospace Electron Syst 15(5):709–718</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2FTAES.1979.308860" aria-label="View reference 3">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 3 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Magnetic%20position%20and%20orientation%20tracking%20system&amp;journal=IEEE%20Trans%20Aerospace%20Electron%20Syst&amp;volume=15&amp;issue=5&amp;pages=709-718&amp;publication_year=1979&amp;author=Raab%2CF&amp;author=Blood%2CE&amp;author=Steioner%2CT&amp;author=Jones%2CH">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="CM. Bishop, " /><meta itemprop="datePublished" content="1995" /><meta itemprop="headline" content="Bishop CM (1995) Neural networks for pattern recognition. Oxford University Press, New York" /><p class="c-article-references__text" id="ref-CR4">Bishop CM (1995) Neural networks for pattern recognition. Oxford University Press, New York</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 4 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Neural%20networks%20for%20pattern%20recognition&amp;publication_year=1995&amp;author=Bishop%2CCM">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bryson S (1992) Measurement and calibration of static distortion of position data from 3D trackers. In: Procee" /><p class="c-article-references__text" id="ref-CR5">Bryson S (1992) Measurement and calibration of static distortion of position data from 3D trackers. In: Proceedings of SPIE conference on stereoscopic displays and applications III, San Jose, CA, pp 244–255</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Ghazisaedy M, Adamczyk D, Sandin D, Kenyon, DeFanti T (1995) Ultrasonic calibration of a magnetic tracker in a" /><p class="c-article-references__text" id="ref-CR6">Ghazisaedy M, Adamczyk D, Sandin D, Kenyon, DeFanti T (1995) Ultrasonic calibration of a magnetic tracker in a virtual reality space. In: Proceedings of the IEEE virtual reality annual international symposium (VRAIS ’95), Research Triangle Park, NC, pp 179–188</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Czernuszenko M, Sandin D, DeFanti T (1998) Line of sight method for tracker calibration in projection-based VR" /><p class="c-article-references__text" id="ref-CR7">Czernuszenko M, Sandin D, DeFanti T (1998) Line of sight method for tracker calibration in projection-based VR systems. In: Proceedings of 2nd international immersive projection technology workshop, Ames, Iowa, pp 11–12, CD-ROM</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="M. Livingston, A. State, " /><meta itemprop="datePublished" content="1997" /><meta itemprop="headline" content="Livingston M, State A (1997) Magnetic tracker calibration for improved augmented reality registration. Presenc" /><p class="c-article-references__text" id="ref-CR8">Livingston M, State A (1997) Magnetic tracker calibration for improved augmented reality registration. Presence 6(5):532–546</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 8 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Magnetic%20tracker%20calibration%20for%20improved%20augmented%20reality%20registration&amp;journal=Presence&amp;volume=6&amp;issue=5&amp;pages=532-546&amp;publication_year=1997&amp;author=Livingston%2CM&amp;author=State%2CA">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Zachmann G (1997) Distortion correction of magnetic fields for position tracking. In: Proceedings of computer " /><p class="c-article-references__text" id="ref-CR9">Zachmann G (1997) Distortion correction of magnetic fields for position tracking. In: Proceedings of computer graphics international (CGI’97), Hasselt, Belgium, pp 23–27</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Briggs W (1999) Magnetic calibration by tetrahedral interpolation. In: Proceedings of NIST-ASME industrial vir" /><p class="c-article-references__text" id="ref-CR10">Briggs W (1999) Magnetic calibration by tetrahedral interpolation. In: Proceedings of NIST-ASME industrial virtual reality symposium, Chicago, IL, November 1999, MH-Vol. 5/MED-Vol. 9:27–32</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="V. Kindratenko, " /><meta itemprop="datePublished" content="1999" /><meta itemprop="headline" content="Kindratenko V (1999) Calibration of electromagnetic tracking devices. Virtual Reality Res Dev Appl 4:139–150" /><p class="c-article-references__text" id="ref-CR11">Kindratenko V (1999) Calibration of electromagnetic tracking devices. Virtual Reality Res Dev Appl 4:139–150</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1007%2FBF01408592" aria-label="View reference 11">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 11 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Calibration%20of%20electromagnetic%20tracking%20devices&amp;journal=Virtual%20Reality%20Res%20Dev%20Appl&amp;volume=4&amp;pages=139-150&amp;publication_year=1999&amp;author=Kindratenko%2CV">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Ikits M, Brederson JD, Hansen C, Hollerbach J (2001) An improved calibration framework for electromagnetic tra" /><p class="c-article-references__text" id="ref-CR12">Ikits M, Brederson JD, Hansen C, Hollerbach J (2001) An improved calibration framework for electromagnetic tracking devices. IEEE Virtual Reality</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Kindratenko V, Bennett A (2000) Evaluation of rotation correction techniques for electromagnetic position trac" /><p class="c-article-references__text" id="ref-CR13">Kindratenko V, Bennett A (2000) Evaluation of rotation correction techniques for electromagnetic position tracking systems. In: Proceedings of the virtual environments 2000 eurographics workshop, Amsterdam, The Netherlands, pp 13–22</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="B. Müller, J. Reinhardt, MT. Strickland, " /><meta itemprop="datePublished" content="1995" /><meta itemprop="headline" content="Müller B, Reinhardt J, Strickland MT (1995) Neural Networks, an Introduction, 2nd edn. Springer, Berlin Heidel" /><p class="c-article-references__text" id="ref-CR14">Müller B, Reinhardt J, Strickland MT (1995) Neural Networks, an Introduction, 2nd edn. Springer, Berlin Heidelberg New York</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 14 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Neural%20networks%2C%20an%20introduction&amp;publication_year=1995&amp;author=M%C3%BCller%2CB&amp;author=Reinhardt%2CJ&amp;author=Strickland%2CMT">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Foresee FD, Hagan MT (1997) Gauss-Newton approximation to Bayesian regularization. In: Proceedings of the 1997" /><p class="c-article-references__text" id="ref-CR15">Foresee FD, Hagan MT (1997) Gauss-Newton approximation to Bayesian regularization. In: Proceedings of the 1997 international joint conference on neural networks</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="V. Kindratenko, " /><meta itemprop="datePublished" content="2000" /><meta itemprop="headline" content="Kindratenko V (2000) A survey of electromagnetic position tracker calibration techniques. Virtual Reality Res " /><p class="c-article-references__text" id="ref-CR16">Kindratenko V (2000) A survey of electromagnetic position tracker calibration techniques. Virtual Reality Res Dev Appl 5:169–182</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1007%2FBF01409422" aria-label="View reference 16">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 16 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=A%20survey%20of%20electromagnetic%20position%20tracker%20calibration%20techniques&amp;journal=Virtual%20Reality%20Res%20Dev%20Appl&amp;volume=5&amp;pages=169-182&amp;publication_year=2000&amp;author=Kindratenko%2CV">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Student (1908) On the probable error of the mean. Biometrika 6:1–25" /><p class="c-article-references__text" id="ref-CR17">Student (1908) On the probable error of the mean. Biometrika 6:1–25</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Saleh T, Kindratenko V, Sherman W (2000) On using neural networks to calibrate electromagnetic tracking system" /><p class="c-article-references__text" id="ref-CR18">Saleh T, Kindratenko V, Sherman W (2000) On using neural networks to calibrate electromagnetic tracking systems, NCSA Technical Report, December 7</p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-005-0005-3-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Ack1">Acknowledgements</h2><div class="c-article-section__content" id="Ack1-content"><p>Partial funding for this study was provided by NSF PACI REU program.</p></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">National Center for Supercomputing Applications (NCSA), University of Illinois at Urbana-Champaign (UIUC), 405 N. Mathews Avenue, Urbana, IL, 61801, USA</p><p class="c-article-author-affiliation__authors-list">Volodymyr V. Kindratenko &amp; William R. Sherman</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Volodymyr_V_-Kindratenko"><span class="c-article-authors-search__title u-h3 js-search-name">Volodymyr V. Kindratenko</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Volodymyr V.+Kindratenko&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Volodymyr V.+Kindratenko" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Volodymyr V.+Kindratenko%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-William_R_-Sherman"><span class="c-article-authors-search__title u-h3 js-search-name">William R. Sherman</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;William R.+Sherman&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=William R.+Sherman" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22William R.+Sherman%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-005-0005-3/email/correspondent/c1/new">Volodymyr V. Kindratenko</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=Neural%20network-based%20calibration%20of%20electromagnetic%20tracking%20systems&amp;author=Volodymyr%20V.%20Kindratenko%20et%20al&amp;contentID=10.1007%2Fs10055-005-0005-3&amp;publication=1359-4338&amp;publicationDate=2005-09-27&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Kindratenko, V.V., Sherman, W.R. Neural network-based calibration of electromagnetic tracking systems.
+                    <i>Virtual Reality</i> <b>9, </b>70–78 (2005). https://doi.org/10.1007/s10055-005-0005-3</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-005-0005-3.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2002-02-22">22 February 2002</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2005-04-20">20 April 2005</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2005-09-27">27 September 2005</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2005-12">December 2005</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-005-0005-3" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-005-0005-3</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Tracker calibration</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Electromagnetic tracker</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Neural network</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Virtual reality</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-005-0005-3.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=5;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

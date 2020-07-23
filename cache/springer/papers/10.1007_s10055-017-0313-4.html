@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="Evaluation of visual feedback techniques for virtual grasping with bar"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="Bare hand interaction (BHI) allows users to use their hands and fingers to interact with digital content without any attached devices or accessories. For BHI to realize widespread adoption,..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/22/1.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="Evaluation of visual feedback techniques for virtual grasping with bare hands using Leap Motion and Oculus Rift"/>
+
+    <meta name="dc.source" content="Virtual Reality 2017 22:1"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2017-05-04"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2017 Springer-Verlag London"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="Bare hand interaction (BHI) allows users to use their hands and fingers to interact with digital content without any attached devices or accessories. For BHI to realize widespread adoption, interaction techniques for fundamental operations, like grasp-and-release, need to be identified and optimized. This paper presents a controlled usability evaluation of four common visual feedback techniques in grasp-and-release tasks using bare hand interaction (BHI). The techniques are &#8216;object coloring,&#8217; &#8216;connecting line,&#8217; &#8216;shadow&#8217; and &#8216;object halo.&#8217; The usability was examined in terms of task time, accuracy, errors and user satisfaction. A software test bed was developed for two interface configurations: using the Leap Motion controller alone (desktop configuration) and using the Leap with Oculus Rift (virtual reality (VR) configuration). Participants (n 32) performed four trials&#160;&#215;&#160;five feedback techniques&#160;&#215;&#160;two UI (user interface) configurations, i.e., a total of 1280 trials. The results can be summarized into: (a) user performance is significantly better in the VR configuration compared to the desktop; (b) coloring techniques for visual feedback (&#8216;object coloring&#8217; and &#8216;object halo&#8217;) are more usable than &#8216;connecting line&#8217; regardless of UI; (c) in the VR, coloring techniques remain more usable, while in the desktop interface the &#8216;shadow&#8217; technique is also usable and preferred by users, (d) the &#8216;connecting line&#8217; technique often distracts users from grasp-and-release tasks on static targets. (e) Some visual feedback is always preferred by users than none in both VR and desktop. We discuss these findings in terms of design recommendations for bare hands interactions that involve grasp-and-release tasks."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2017-05-04"/>
+
+    <meta name="prism.volume" content="22"/>
+
+    <meta name="prism.number" content="1"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="47"/>
+
+    <meta name="prism.endingPage" content="62"/>
+
+    <meta name="prism.copyright" content="2017 Springer-Verlag London"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-017-0313-4"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-017-0313-4"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-017-0313-4.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-017-0313-4"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer London"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="Evaluation of visual feedback techniques for virtual grasping with bare hands using Leap Motion and Oculus Rift"/>
+
+    <meta name="citation_volume" content="22"/>
+
+    <meta name="citation_issue" content="1"/>
+
+    <meta name="citation_publication_date" content="2018/03"/>
+
+    <meta name="citation_online_date" content="2017/05/04"/>
+
+    <meta name="citation_firstpage" content="47"/>
+
+    <meta name="citation_lastpage" content="62"/>
+
+    <meta name="citation_article_type" content="Original Article"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-017-0313-4"/>
+
+    <meta name="DOI" content="10.1007/s10055-017-0313-4"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-017-0313-4"/>
+
+    <meta name="description" content="Bare hand interaction (BHI) allows users to use their hands and fingers to interact with digital content without any attached devices or accessories. For B"/>
+
+    <meta name="dc.creator" content="Spyros Vosinakis"/>
+
+    <meta name="dc.creator" content="Panayiotis Koutsabasis"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="Albert W, Tullis T (2013) Measuring the user experience: collecting, analyzing, and presenting usability metrics. Morgan Kaufmann"/>
+
+    <meta name="citation_reference" content="Apostolellis P, Bortz B, Peng M, Polys N, Hoegh A (2014, March). Poster: exploring the integrality and separability of the Leap Motion Controller for direct manipulation 3D interaction. In: 3D User Interfaces (3DUI), IEEE Symposium on 2014. IEEE pp 153&#8211;154"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Sensors; citation_title=Evaluation of the Leap Motion controller as a new contact-free pointing device; citation_author=D Bachmann, F Weichert, G Rinkenauer; citation_volume=15; citation_issue=1; citation_publication_date=2014; citation_pages=214-233; citation_doi=10.3390/s150100214; citation_id=CR3"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Proced Technol; citation_title=Taking the LEAP with the Oculus HMD and CAD-Plucking at thin Air?; citation_author=N Beattie, B Horan, S McKenzie; citation_volume=20; citation_publication_date=2015; citation_pages=149-154; citation_doi=10.1016/j.protcy.2015.07.025; citation_id=CR4"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Presence; citation_title=Testbed evaluation of virtual environment interaction techniques; citation_author=DA Bowman, DB Johnson, LF Hodges; citation_volume=10; citation_issue=1; citation_publication_date=2001; citation_pages=75-95; citation_doi=10.1162/105474601750182333; citation_id=CR5"/>
+
+    <meta name="citation_reference" content="Caggianese G, Gallo L, Neroni P (2016, June) An investigation of leap motion based 3D manipulation techniques for use in egocentric viewpoint. In: International conference on augmented reality, virtual reality and computer graphics, Springer, pp 318&#8211;330"/>
+
+    <meta name="citation_reference" content="Codd-Downey R, Stuerzlinger W (2014) LeapLook: a free-hand gestural travel technique using the Leap Motion finger tracker. In: Proceedings of the 2nd ACM symposium on Spatial user interaction, ACM, 2014, pp 153&#8211;153"/>
+
+    <meta name="citation_reference" content="Coelho JC, Verbeek FJ (2014) Pointing task evaluation of Leap Motion controller in 3D virtual environment. In: CHI Sparks&#8217;14 Creating the Difference, pp 78&#8211;85"/>
+
+    <meta name="citation_reference" content="citation_title=Whole body interaction: an introduction; citation_inbook_title=Whole body interaction; citation_publication_date=2011; citation_pages=1-5; citation_id=CR9; citation_author=D England; citation_publisher=Springer"/>
+
+    <meta name="citation_reference" content="Song P, Goh WB, Hutama W, Fu, CW, Liu X (2012) A handle bar metaphor for virtual object manipulation with mid-air interaction. In: Proceedings of the SIGCHI conference on human factors in computing systems, ACM, 2012&#160;pp 1297&#8211;1306"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Sensors; citation_title=An analysis of the precision and reliability of the Leap Motion sensor and its suitability for static and dynamic tracking; citation_author=J Guna, G Jakus, M Poga&#269;nik, S Toma&#382;i&#269;, J Sodnik; citation_volume=14; citation_issue=2; citation_publication_date=2014; citation_pages=3702-3720; citation_doi=10.3390/s140203702; citation_id=CR11"/>
+
+    <meta name="citation_reference" content="Hu HH, Gooch AA, Thompson WB, Smits BE, Rieser JJ, Shirley P (2000) Visual cues for imminent object contact in realistic virtual environment. In: Proceedings of the conference on visualization&#8217;00. IEEE Computer Society Press, pp 179&#8211;185"/>
+
+    <meta name="citation_reference" content="Jayakumar A, Mathew B, Uma N, Nedungadi P (2015). Interactive gesture based cataract surgery simulation. In: Proceedings of the 2015 fifth international conference on advances in computing and communications (ICACC). IEEE, pp 350&#8211;353"/>
+
+    <meta name="citation_reference" content="Khademi M, Mousavi Hondori H, McKenzie A, Dodakian L, Lopes CV, Cramer SC (2014) Free-hand interaction with Leap Motion controller for stroke rehabilitation. In: Proceedings of the extended abstracts of the 32nd annual ACM conference on human factors in computing systems, ACM, pp 1663&#8211;1668"/>
+
+    <meta name="citation_reference" content="Koutsabasis P, Domouzis C (2016) Mid-Air browsing and selection in image collections. In: International working conference on advanced visual interfaces (AVI) 2016, Bari (Italy), ACM, 2016, 7&#8211;10 June 2016"/>
+
+    <meta name="citation_reference" content="Lin J, Yang W, Gao X, Liao M (2015) Learning to assemble building blocks with a Leap Motion controller. In: International conference on web-based learning, Springer, pp 258&#8211;263"/>
+
+    <meta name="citation_reference" content="Marin G, Dominio F, Zanuttigh P (2014) Hand gesture recognition with Leap Motion and kinect devices. In: 2014 IEEE international conference on image processing (ICIP), IEEE, pp 1565&#8211;1569"/>
+
+    <meta name="citation_reference" content="Nabiyouni M, Bireswar L, Bowman DA (2014) Poster: designing effective travel techniques with bare-hand interaction. In 3D user interfaces (3DUI), symposium on 2014 IEEE, IEEE, 2014, pp 139&#8211;140"/>
+
+    <meta name="citation_reference" content="Parkin S (retrieved 16 March 2016) Oculus Rift: Thirty years after virtual-reality goggles and immersive virtual worlds made their debut, the technology finally seems poised for widespread use. 
+                    https://www.technologyreview.com/s/526531/oculus-rift/
+                    
+                  
+                "/>
+
+    <meta name="citation_reference" content="Poupyrev I, Ichikawa T, Weghorst S, Billinghurst M (1998) Egocentric object manipulation in virtual environments: Empirical evaluation of interaction techniques. Comput Graph Forum 17(3):41&#8211;52"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Trans Vis Comput Graph; citation_title=Design and evaluation of visual interpenetration cues in virtual grasping; citation_author=M Prachyabrued, CW Borst; citation_volume=22; citation_issue=6; citation_publication_date=2016; citation_pages=1718-1731; citation_doi=10.1109/TVCG.2015.2456917; citation_id=CR21"/>
+
+    <meta name="citation_reference" content="citation_journal_title=ACM Comput Surv (CSUR); citation_title=The perception of egocentric distances in virtual environments-a review; citation_author=RS Renner, BM Velichkovsky, JR Helmert; citation_volume=46; citation_issue=2; citation_publication_date=2013; citation_pages=23; citation_doi=10.1145/2543581.2543590; citation_id=CR22"/>
+
+    <meta name="citation_reference" content="Sauro J (2012) 10 things to know about confidence intervals. Available at: 
+                    https://measuringu.com/ci-10things/
+                    
+                  . Accessed 2 May 2017"/>
+
+    <meta name="citation_reference" content="Seixas M, Cardoso J, Dias MTG (2015) One hand or two hands? 2D selection tasks with the Leap Motion device. In: ACHI 2015: the eighth international conference on advances in computer&#8211;human interactions. IARIA, 2015, Lisbon, Portugal. 22&#8211;27 February 2015"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Trans Vis Comput Graph; citation_title=Using visual cues of contact to improve interactive manipulation of virtual objects in industrial assembly/maintenance simulations; citation_author=J Sreng, A L&#233;cuyer, C M&#233;gard, C Andriot; citation_volume=12; citation_issue=5; citation_publication_date=2006; citation_pages=1013-1020; citation_doi=10.1109/TVCG.2006.189; citation_id=CR24"/>
+
+    <meta name="citation_reference" content="Teather RJ, Stuerzlinger W (2007) Guidelines for 3D positioning techniques. In: Proceedings of the 2007 conference on future play, ACM, pp 61&#8211;68"/>
+
+    <meta name="citation_reference" content="Von Hardenberg C, B&#233;rard F (2001, November) Bare-hand human&#8211;computer interaction. In: Proceedings of the 2001 workshop on perceptive user interfaces, ACM, pp 1&#8211;8)"/>
+
+    <meta name="citation_reference" content="Vosinakis S, Koutsabasis P, Makris D, Sagia E (2016) A kinesthetic approach to digital heritage using Leap Motion: the cycladic sculpture application. In: 8th international conference on games and virtual worlds for serious applications (VS-GAMES), 2016"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Sensors; citation_title=Analysis of the accuracy and robustness of the Leap Motion controller; citation_author=F Weichert, D Bachmann, B Rudak, D Fisseler; citation_volume=13; citation_issue=5; citation_publication_date=2013; citation_pages=6380-6393; citation_doi=10.3390/s130506380; citation_id=CR28"/>
+
+    <meta name="citation_author" content="Spyros Vosinakis"/>
+
+    <meta name="citation_author_email" content="spyrosv@aegean.gr"/>
+
+    <meta name="citation_author_institution" content="Department of Product and Systems Design Engineering, Interactive Systems Design Lab, University of the Aegean, Hermoupolis, Syros, Greece"/>
+
+    <meta name="citation_author" content="Panayiotis Koutsabasis"/>
+
+    <meta name="citation_author_email" content="kgp@aegean.gr"/>
+
+    <meta name="citation_author_institution" content="Department of Product and Systems Design Engineering, Interactive Systems Design Lab, University of the Aegean, Hermoupolis, Syros, Greece"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-017-0313-4&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2018/03/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-017-0313-4"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="Evaluation of visual feedback techniques for virtual grasping with bare hands using Leap Motion and Oculus Rift"/>
+        <meta property="og:description" content="Bare hand interaction (BHI) allows users to use their hands and fingers to interact with digital content without any attached devices or accessories. For BHI to realize widespread adoption, interaction techniques for fundamental operations, like grasp-and-release, need to be identified and optimized. This paper presents a controlled usability evaluation of four common visual feedback techniques in grasp-and-release tasks using bare hand interaction (BHI). The techniques are ‘object coloring,’ ‘connecting line,’ ‘shadow’ and ‘object halo.’ The usability was examined in terms of task time, accuracy, errors and user satisfaction. A software test bed was developed for two interface configurations: using the Leap Motion controller alone (desktop configuration) and using the Leap with Oculus Rift (virtual reality (VR) configuration). Participants (n 32) performed four trials&amp;nbsp;×&amp;nbsp;five feedback techniques&amp;nbsp;×&amp;nbsp;two UI (user interface) configurations, i.e., a total of 1280 trials. The results can be summarized into: (a) user performance is significantly better in the VR configuration compared to the desktop; (b) coloring techniques for visual feedback (‘object coloring’ and ‘object halo’) are more usable than ‘connecting line’ regardless of UI; (c) in the VR, coloring techniques remain more usable, while in the desktop interface the ‘shadow’ technique is also usable and preferred by users, (d) the ‘connecting line’ technique often distracts users from grasp-and-release tasks on static targets. (e) Some visual feedback is always preferred by users than none in both VR and desktop. We discuss these findings in terms of design recommendations for bare hands interactions that involve grasp-and-release tasks."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>Evaluation of visual feedback techniques for virtual grasping with bare hands using Leap Motion and Oculus Rift | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-017-0313-4","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Virtual grasping, Visual feedback techniques, Bare hand interaction, Leap Motion, Oculus Rift, Usability evaluation","kwrd":["Virtual_grasping","Visual_feedback_techniques","Bare_hand_interaction","Leap_Motion","Oculus_Rift","Usability_evaluation"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-017-0313-4","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-017-0313-4","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-b0018c9f69.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-c02f1b37f0.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=313;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-017-0313-4">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            Evaluation of visual feedback techniques for virtual grasping with bare hands using Leap Motion and Oculus Rift
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-017-0313-4.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-017-0313-4.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">Original Article</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2017-05-04" itemprop="datePublished">04 May 2017</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">Evaluation of visual feedback techniques for virtual grasping with bare hands using Leap Motion and Oculus Rift</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Spyros-Vosinakis" data-author-popup="auth-Spyros-Vosinakis" data-corresp-id="c1">Spyros Vosinakis<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><span class="u-js-hide"> 
+            <a class="js-orcid" itemprop="url" href="http://orcid.org/0000-0003-1735-4297"><span class="u-visually-hidden">ORCID: </span>orcid.org/0000-0003-1735-4297</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of the Aegean" /><meta itemprop="address" content="0000 0004 0622 2931, grid.7144.6, Department of Product and Systems Design Engineering, Interactive Systems Design Lab, University of the Aegean, Hermoupolis, Syros, 84100, Greece" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Panayiotis-Koutsabasis" data-author-popup="auth-Panayiotis-Koutsabasis">Panayiotis Koutsabasis</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of the Aegean" /><meta itemprop="address" content="0000 0004 0622 2931, grid.7144.6, Department of Product and Systems Design Engineering, Interactive Systems Design Lab, University of the Aegean, Hermoupolis, Syros, 84100, Greece" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 22</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">47</span>–<span itemprop="pageEnd">62</span>(<span data-test="article-publication-year">2018</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">1204 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">9 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-017-0313-4/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>Bare hand interaction (BHI) allows users to use their hands and fingers to interact with digital content without any attached devices or accessories. For BHI to realize widespread adoption, interaction techniques for fundamental operations, like grasp-and-release, need to be identified and optimized. This paper presents a controlled usability evaluation of four common visual feedback techniques in grasp-and-release tasks using bare hand interaction (BHI). The techniques are ‘object coloring,’ ‘connecting line,’ ‘shadow’ and ‘object halo.’ The usability was examined in terms of task time, accuracy, errors and user satisfaction. A software test bed was developed for two interface configurations: using the Leap Motion controller alone (desktop configuration) and using the Leap with Oculus Rift (virtual reality (VR) configuration). Participants (n 32) performed four trials × five feedback techniques × two UI (user interface) configurations, i.e., a total of 1280 trials. The results can be summarized into: (a) user performance is significantly better in the VR configuration compared to the desktop; (b) coloring techniques for visual feedback (‘object coloring’ and ‘object halo’) are more usable than ‘connecting line’ regardless of UI; (c) in the VR, coloring techniques remain more usable, while in the desktop interface the ‘shadow’ technique is also usable and preferred by users, (d) the ‘connecting line’ technique often distracts users from grasp-and-release tasks on static targets. (e) Some visual feedback is always preferred by users than none in both VR and desktop. We discuss these findings in terms of design recommendations for bare hands interactions that involve grasp-and-release tasks.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Introduction</h2><div class="c-article-section__content" id="Sec1-content"><p>Over the last few years, the release of affordable hand tracking sensors like Leap Motion controller and Myo armband has made it feasible to interact with the computer with bare hands. Bare hand interaction (BHI) (Von Hardenberg and Bérard <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Von Hardenberg C, Bérard F (2001, November) Bare-hand human–computer interaction. In: Proceedings of the 2001 workshop on perceptive user interfaces, ACM, pp 1–8)" href="/article/10.1007/s10055-017-0313-4#ref-CR26" id="ref-link-section-d54304e304">2001</a>) allows users to use their hands and fingers, with no other devices or accessories, in order to interact with digital content typically with the exercise of particular gestures or postures. BHI focuses on the use of the hand, palm and fingers, and it is therefore different from the styles of whole-body interaction (England <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2011" title="England D (2011) Whole body interaction: an introduction. Whole body interaction. Springer, London, pp 1–5" href="/article/10.1007/s10055-017-0313-4#ref-CR9" id="ref-link-section-d54304e307">2011</a>), which refers to the use of body movements and postures, or midair interaction (e.g., Koutsabasis and Domouzis <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2016" title="Koutsabasis P, Domouzis C (2016) Mid-Air browsing and selection in image collections. In: International working conference on advanced visual interfaces (AVI) 2016, Bari (Italy), ACM, 2016, 7–10 June 2016" href="/article/10.1007/s10055-017-0313-4#ref-CR15" id="ref-link-section-d54304e310">2016</a>), which emphasizes the use of (whole) hand gestures in the midair to interact with distant displays.</p><p>At the same time, we are witnessing the release of a new generation of affordable head-mounted displays (HMDs) for immersive VR, based on PCs or mobile devices, such as Oculus Rift, Google Cardboard, HTC Vive. It is anticipated that the engaging experiences produced by these devices will open up a market for several industries in fields such as entertainment, rehabilitation, teleconferencing, online shopping and social networking (Parkin <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2016" title="Parkin S (retrieved 16 March 2016) Oculus Rift: Thirty years after virtual-reality goggles and immersive virtual worlds made their debut, the technology finally seems poised for widespread use. &#xA;                    https://www.technologyreview.com/s/526531/oculus-rift/&#xA;                    &#xA;                  &#xA;                " href="/article/10.1007/s10055-017-0313-4#ref-CR19" id="ref-link-section-d54304e316">2016</a>). Some of these displays can be effectively combined with hand tracking sensors to allow for BHI with the virtual content while immersed in the 3D environment.</p><p>The accessory-free nature of emerging hand tracking sensors has significant differences from existing VR technology that required users to wear data gloves, possibly with haptic or force feedback. In BHI users can exercise an unconstrained set of gestures (provided the hand remains in the field of view of the sensor), as well as switch between bare hand manipulations and the mouse. They can also use both hands to interact with the environment instead of one, which was the common helmet and glove VR configuration. However, no force or haptic feedback is available for bare hands. These differences from traditional VR technology make the design of effective interaction techniques for bare hands unclear (Nabiyouni et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2014" title="Nabiyouni M, Bireswar L, Bowman DA (2014) Poster: designing effective travel techniques with bare-hand interaction. In 3D user interfaces (3DUI), symposium on 2014 IEEE, IEEE, 2014, pp 139–140" href="/article/10.1007/s10055-017-0313-4#ref-CR18" id="ref-link-section-d54304e322">2014</a>), indicating a need for further exploration of possible interaction and feedback techniques.</p><p>Controlled usability evaluation studies of BHI can inform the identification and optimization of effective interaction techniques for the most basic operations, which are essential for its widespread adoption. Recently, a number of such studies have been conducted to inform the design of BHI applications. These follow a test bed approach (Bowman et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Bowman DA, Johnson DB, Hodges LF (2001) Testbed evaluation of virtual environment interaction techniques. Presence 10(1):75–95" href="/article/10.1007/s10055-017-0313-4#ref-CR5" id="ref-link-section-d54304e328">2001</a>) to evaluate alternative interaction techniques for a particular task such as object selection or pointing (Seixas et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2015" title="Seixas M, Cardoso J, Dias MTG (2015) One hand or two hands? 2D selection tasks with the Leap Motion device. In: ACHI 2015: the eighth international conference on advances in computer–human interactions. IARIA, 2015, Lisbon, Portugal. 22–27 February 2015" href="/article/10.1007/s10055-017-0313-4#ref-CR23" id="ref-link-section-d54304e331">2015</a>; Coelho and Verbeek <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2014" title="Coelho JC, Verbeek FJ (2014) Pointing task evaluation of Leap Motion controller in 3D virtual environment. In: CHI Sparks’14 Creating the Difference, pp 78–85" href="/article/10.1007/s10055-017-0313-4#ref-CR8" id="ref-link-section-d54304e334">2014</a>), manipulation (Song et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2012" title="Song P, Goh WB, Hutama W, Fu, CW, Liu X (2012) A handle bar metaphor for virtual object manipulation with mid-air interaction. In: Proceedings of the SIGCHI conference on human factors in computing systems, ACM, 2012 pp 1297–1306" href="/article/10.1007/s10055-017-0313-4#ref-CR10" id="ref-link-section-d54304e337">2012</a>) and travel (Codd-Downey and Stuerzlinger <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2014" title="Codd-Downey R, Stuerzlinger W (2014) LeapLook: a free-hand gestural travel technique using the Leap Motion finger tracker. In: Proceedings of the 2nd ACM symposium on Spatial user interaction, ACM, 2014, pp 153–153" href="/article/10.1007/s10055-017-0313-4#ref-CR7" id="ref-link-section-d54304e340">2014</a>).</p><p>Until now, there are no studies of BHI visual feedback techniques for grasping tasks, although (a) there are already several applications in the Leap Motion app store (10 out of 97 free apps require holding a virtual object) as well as in the scientific literature (e.g., Vosinakis et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2016" title="Vosinakis S, Koutsabasis P, Makris D, Sagia E (2016) A kinesthetic approach to digital heritage using Leap Motion: the cycladic sculpture application. In: 8th international conference on games and virtual worlds for serious applications (VS-GAMES), 2016" href="/article/10.1007/s10055-017-0313-4#ref-CR27" id="ref-link-section-d54304e347">2016</a>; Jayakumar et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2015" title="Jayakumar A, Mathew B, Uma N, Nedungadi P (2015). Interactive gesture based cataract surgery simulation. In: Proceedings of the 2015 fifth international conference on advances in computing and communications (ICACC). IEEE, pp 350–353" href="/article/10.1007/s10055-017-0313-4#ref-CR13" id="ref-link-section-d54304e350">2015</a>) and (b) the issue has been investigated in glove-based VR configurations (e.g., Prachyabrued and Borst <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2016" title="Prachyabrued M, Borst CW (2016) Design and evaluation of visual interpenetration cues in virtual grasping. IEEE Trans Vis Comput Graph 22(6):1718–1731" href="/article/10.1007/s10055-017-0313-4#ref-CR21" id="ref-link-section-d54304e353">2016</a>). The problem with interactions such as selecting or grasping is that the absence of haptic feedback makes it difficult for users to understand whether their hand is in an appropriate position to interact with a virtual object. This issue becomes more intense if target objects are placed at different depths with respect to the users’ view, and the rendered scene does not include adequate depth cues. In such cases, it is possible that some form of additional visual feedback might improve the task by providing further cues.</p><p>This paper investigates the usability of four feedback techniques for virtual grasping with bare hands in two interface configurations; the techniques are: (1) object coloring, (2) connecting line, (3) shadows and (4) object halo; the configurations are: (a) the Leap Motion controller alone (desktop configuration) and (b) a combination of Leap Motion and Oculus Rift in a VR (virtual reality) configuration. We compare the overall usability of techniques between and within each configuration in terms of task time, errors, accuracy and user preference with a controlled usability test (<i>n</i> = 32). The results concern both usability of each interface configurations as well as each particular visual feedback technique and contribute to an improved understanding of bare hands interaction design issues.</p></div></div></section><section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">Background and related work</h2><div class="c-article-section__content" id="Sec2-content"><h3 class="c-article__sub-heading" id="Sec3">Overview of the Leap Motion and Oculus Rift</h3><p>The Leap Motion sensor can track the position, shape and motion of bare hands. As such, it can be used for natural interactions with a 3D environment within a restricted area. The device is using three infrared emitters and two infrared cameras to track the image of the hand, and it extracts information such as palm and fingers position and orientation. The extracted data are transmitted at high frequencies to the attached computer and, using the SDK provided, it can be used in real-time applications. The hand information can be utilized for recognizing gestures (e.g., controlling an application using designated gestures), providing continuous input (e.g., navigation in 3D by pointing to the desired direction), or introducing a respective ‘virtual hand’ in the application and letting it interact directly with the contents (e.g., pushing or grasping virtual objects). Given its low cost and its fast and accurate hand tracking, the Leap Motion controller has been used in a variety of applications, including cultural heritage (Vosinakis et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2016" title="Vosinakis S, Koutsabasis P, Makris D, Sagia E (2016) A kinesthetic approach to digital heritage using Leap Motion: the cycladic sculpture application. In: 8th international conference on games and virtual worlds for serious applications (VS-GAMES), 2016" href="/article/10.1007/s10055-017-0313-4#ref-CR27" id="ref-link-section-d54304e374">2016</a>), education (Lin et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2015" title="Lin J, Yang W, Gao X, Liao M (2015) Learning to assemble building blocks with a Leap Motion controller. In: International conference on web-based learning, Springer, pp 258–263" href="/article/10.1007/s10055-017-0313-4#ref-CR16" id="ref-link-section-d54304e377">2015</a>), rehabilitation (Khademi et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2014" title="Khademi M, Mousavi Hondori H, McKenzie A, Dodakian L, Lopes CV, Cramer SC (2014) Free-hand interaction with Leap Motion controller for stroke rehabilitation. In: Proceedings of the extended abstracts of the 32nd annual ACM conference on human factors in computing systems, ACM, pp 1663–1668" href="/article/10.1007/s10055-017-0313-4#ref-CR14" id="ref-link-section-d54304e380">2014</a>) and entertainment (a total of 228 apps are available in the Leap Motion app store<sup><a href="#Fn1"><span class="u-visually-hidden">Footnote </span>1</a></sup>).</p><p>Several studies have attempted to measure the quality of tracking of Leap Motion with generally positive results. In a study by Martin et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2014" title="Marin G, Dominio F, Zanuttigh P (2014) Hand gesture recognition with Leap Motion and kinect devices. In: 2014 IEEE international conference on image processing (ICIP), IEEE, pp 1565–1569" href="/article/10.1007/s10055-017-0313-4#ref-CR17" id="ref-link-section-d54304e399">2014</a>), it has shown an accuracy of over 80% in the recognition of hand gestures of the American Sign Language. In another study (Coelho and Verbeek <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2014" title="Coelho JC, Verbeek FJ (2014) Pointing task evaluation of Leap Motion controller in 3D virtual environment. In: CHI Sparks’14 Creating the Difference, pp 78–85" href="/article/10.1007/s10055-017-0313-4#ref-CR8" id="ref-link-section-d54304e402">2014</a>) that compared Leap Motion to a mouse for pointing tasks in 3D environments, Leap Motion had significantly better performance in a single pointing task. However, in a second task which involved successive pointing of two targets with different depth, the mouse outperformed Leap Motion. This inconsistency has been attributed to the additional degree of freedom and the lack of accuracy in finger tracking. In another comparative study between Leap Motion and the mouse (Apostolellis et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2014" title="Apostolellis P, Bortz B, Peng M, Polys N, Hoegh A (2014, March). Poster: exploring the integrality and separability of the Leap Motion Controller for direct manipulation 3D interaction. In: 3D User Interfaces (3DUI), IEEE Symposium on 2014. IEEE pp 153–154" href="/article/10.1007/s10055-017-0313-4#ref-CR2" id="ref-link-section-d54304e405">2014</a>), the two devices have been used in a complex task of positioning, rotating and changing the intensity of a spotlight in a 3D scene. Leap was found to be more effective than the mouse for positioning and setting the desired intensity, and less effective for positioning and orienting the spotlight. Two problems of the Leap controller that have been reported are inaccurate finger tracking and user fatigue caused by continuous hand movements. Further studies on the tracking accuracy of Leap Motion (Weichert et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2013" title="Weichert F, Bachmann D, Rudak B, Fisseler D (2013) Analysis of the accuracy and robustness of the Leap Motion controller. Sensors 13(5):6380–6393" href="/article/10.1007/s10055-017-0313-4#ref-CR28" id="ref-link-section-d54304e408">2013</a>; Guna et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2014" title="Guna J, Jakus G, Pogačnik M, Tomažič S, Sodnik J (2014) An analysis of the precision and reliability of the Leap Motion sensor and its suitability for static and dynamic tracking. Sensors 14(2):3702–3720" href="/article/10.1007/s10055-017-0313-4#ref-CR11" id="ref-link-section-d54304e411">2014</a>) revealed that it is highly accurate in static scenarios (less than a mm), while in dynamic scenarios its accuracy drops, especially when the hand’s distance from the controller increases. In another study (Bachmann et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2014" title="Bachmann D, Weichert F, Rinkenauer G (2014) Evaluation of the Leap Motion controller as a new contact-free pointing device. Sensors 15(1):214–233" href="/article/10.1007/s10055-017-0313-4#ref-CR3" id="ref-link-section-d54304e415">2014</a>), the error rate of Leap Motion controller as a pointing device was found to be three times higher than the standard mouse. However, comparable error rates have been reported with target widths of 40–20 mm and target distances up to 80 mm.</p><p>Oculus Rift is an affordable head-mounted display (HMD), which can be combined with Leap Motion to enhance the immersive experience with bare hand tracking. It needs to be connected to a high-end PC and offers high-quality stereoscopic rendering of 3D scenes. Furthermore, it allows for real-time orientation tracking using a variety of sensors (gyroscope, accelerometer and magnetometer) and provides positional tracking within a limited area through a dedicated IR camera. Recently the makers of Leap Motion started to offer special support for the combination of their controller with Oculus Rift. They provide a mount specifically designed to attach the controller to the front face of Oculus Rift, and they also extended their SDK to support improved hand tracking while attached to an HMD. With this configuration, the virtual hands of the user are introduced in the scene whenever her real hands are in the field of view of the leap controller, i.e., when the user’s head is oriented toward them, thus leading to more natural and immersive experiences. The integration of the two devices has been used for the implementation of applications that offer affordable VR experiences (Beattie et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2015" title="Beattie N, Horan B, McKenzie S (2015) Taking the LEAP with the Oculus HMD and CAD-Plucking at thin Air? Proced Technol 20:149–154" href="/article/10.1007/s10055-017-0313-4#ref-CR4" id="ref-link-section-d54304e421">2015</a>).</p><h3 class="c-article__sub-heading" id="Sec4">Related studies and BHI applications</h3><p>Leap Motion can theoretically support many bare hand interaction techniques, like those already implemented for data gloves in traditional, high-end VR systems. However, the absence of any haptics makes it difficult for users to get feedback on their actions, e.g., to know whether their virtual hand is touching an object or not. Especially in the desktop configuration, where the scene is possibly displayed at a smaller scale, it is difficult for the user to get a good sense of depth and to understand the relative location of her virtual hand with respect to other objects of the scene (Teather and Stuerzlinger <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Teather RJ, Stuerzlinger W (2007) Guidelines for 3D positioning techniques. In: Proceedings of the 2007 conference on future play, ACM, pp 61–68" href="/article/10.1007/s10055-017-0313-4#ref-CR25" id="ref-link-section-d54304e432">2007</a>). Therefore, an additional form of feedback may improve the efficiency of user interactions. The most common feedback is the visual one, in which additional visual information is presented in some abstract or concrete form to guide the user in her actions. Common visual feedback techniques include changes in object coloring (Poupyrev et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1998" title="Poupyrev I, Ichikawa T, Weghorst S, Billinghurst M (1998) Egocentric object manipulation in virtual environments: Empirical evaluation of interaction techniques. Comput Graph Forum 17(3):41–52" href="/article/10.1007/s10055-017-0313-4#ref-CR20" id="ref-link-section-d54304e435">1998</a>), use of shadows to display relative distance (Hu et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Hu HH, Gooch AA, Thompson WB, Smits BE, Rieser JJ, Shirley P (2000) Visual cues for imminent object contact in realistic virtual environment. In: Proceedings of the conference on visualization’00. IEEE Computer Society Press, pp 179–185" href="/article/10.1007/s10055-017-0313-4#ref-CR12" id="ref-link-section-d54304e438">2000</a>), illumination of nearby collision areas (Sreng et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Sreng J, Lécuyer A, Mégard C, Andriot C (2006) Using visual cues of contact to improve interactive manipulation of virtual objects in industrial assembly/maintenance simulations. IEEE Trans Vis Comput Graph 12(5):1013–1020" href="/article/10.1007/s10055-017-0313-4#ref-CR24" id="ref-link-section-d54304e441">2006</a>) and vibration of the virtual hand when touching an object (Prachyabrued and Borst <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2016" title="Prachyabrued M, Borst CW (2016) Design and evaluation of visual interpenetration cues in virtual grasping. IEEE Trans Vis Comput Graph 22(6):1718–1731" href="/article/10.1007/s10055-017-0313-4#ref-CR21" id="ref-link-section-d54304e444">2016</a>).</p><p>To identify current practices of visual feedback in virtual grasping tasks, we undertook an examination of free Leap Motion apps (97 apps are free from 229 in total). We found ten (10) apps that involve holding a virtual object, which we examined in more detail. From these ten apps, four apps make use of a tracked virtual hand representation, two apps make use of tracked hand points, and the remaining four use a pointer. Obviously, the hand representation is critical for the visual feedback technique that may be applied for a virtual grasping task. Regarding the main grasping technique, four out of five apps use the pinch gesture and only one adopts the hand grasp. Regarding visual feedback techniques, we found that four apps provide some feedback of virtual grasping, while the remaining six apps do not provide any feedback at all. The ‘robot chess app’<sup><a href="#Fn2"><span class="u-visually-hidden">Footnote </span>2</a></sup> makes use of visual arrows or targets to help the user understand depth as well as the chessboard square under the virtual hand at any point of interaction. This app also supports coloring of chess pieces as the virtual hand approaches the piece. The ‘Autonomous’ game<sup><a href="#Fn3"><span class="u-visually-hidden">Footnote </span>3</a></sup> uses coloring when the virtual hand approaches a target object. The ‘Cyber science motion 3D’<sup><a href="#Fn4"><span class="u-visually-hidden">Footnote </span>4</a></sup> uses tooltips when the user hand is near the virtual object and when the user grasps the object it changes color. The ‘Playground’<sup><a href="#Fn5"><span class="u-visually-hidden">Footnote </span>5</a></sup> demo adopts the ‘connecting line’ to position an object onto a moving target.</p><p>A recent study by Prachyabrued and Borst (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2016" title="Prachyabrued M, Borst CW (2016) Design and evaluation of visual interpenetration cues in virtual grasping. IEEE Trans Vis Comput Graph 22(6):1718–1731" href="/article/10.1007/s10055-017-0313-4#ref-CR21" id="ref-link-section-d54304e505">2016</a>) examined various interpenetration cues for virtual object grasping with the use of a data glove and a VR head set. The techniques included changes in the color or transparency of the virtual hand or object, as well as a two-hand visualization, which showed both the actual shape of the user’s hand and an ‘ideal’ shape of the virtual hand grasping the object. The results indicate that the two-hand technique improves performance, although users’ subjective preference was on two coloring techniques used, i.e., coloring the target object or the virtual hand’s fingers. Prachyabrued and Borst (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2016" title="Prachyabrued M, Borst CW (2016) Design and evaluation of visual interpenetration cues in virtual grasping. IEEE Trans Vis Comput Graph 22(6):1718–1731" href="/article/10.1007/s10055-017-0313-4#ref-CR21" id="ref-link-section-d54304e508">2016</a>) identify the need for more focused studies of specific visual cues (our work addresses this dimension for BHI) and for choosing conditions in comparisons to other feedback modes, such as haptic, audio or multimodal.</p><p>Another recent study (Caggianese et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2016" title="Caggianese G, Gallo L, Neroni P (2016, June) An investigation of leap motion based 3D manipulation techniques for use in egocentric viewpoint. In: International conference on augmented reality, virtual reality and computer graphics, Springer, pp 318–330" href="/article/10.1007/s10055-017-0313-4#ref-CR6" id="ref-link-section-d54304e514">2016</a>) investigated canonical manipulation of virtual objects which includes the selection, positioning and rotation of objects with BHI with the use of Leap Motion and the Oculus Rift. Two different approaches were tested that allowed a direct or constrained manipulation of the virtual object and the evaluation investigated the perceived usability with a standardized usability questionnaire only. Until now, there are no studies that examine both performance and satisfaction of alternative visual feedback techniques for virtual grasping with BHI in a desktop or immersive environment.</p></div></div></section><section aria-labelledby="Sec5"><div class="c-article-section" id="Sec5-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec5">Techniques and test bed</h2><div class="c-article-section__content" id="Sec5-content"><h3 class="c-article__sub-heading" id="Sec6">Feedback techniques</h3><p>Based on the commonly used techniques for grasping and releasing virtual objects in related research, we have selected and adapted four visual feedback techniques for the test bed environment: ‘object coloring,’ ‘connecting line,’ ‘object halo,’ and ‘shadow.’ The absence of any feedback (‘no feedback’) has been added as a fifth technique in the test bed. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-017-0313-4#Fig1">1</a> shows screenshots from the implementation of these techniques in the test bed environment.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-017-0313-4/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-017-0313-4/MediaObjects/10055_2017_313_Fig1_HTML.jpg?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-017-0313-4/MediaObjects/10055_2017_313_Fig1_HTML.jpg" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p>Screenshots of the test bed environment; from <i>upper left</i> to <i>lower right</i>: familiarization phase; no feedback; object coloring; connecting line; object halo; shadow</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-017-0313-4/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+<p>
+                    <i>No feedback</i> The environment provides no additional visual indication of the distance between the virtual hand and the target. In some VR applications, the stereoscopic vision and the natural cues provided by the environment (e.g., occlusion, shadows, relative size) may be adequate for proper hand placement without any additional feedback. However, in desktop BHI environments the lack of stereo vision might impede depth understanding, and some kind of feedback is necessary.</p><p>
+                    <i>Object coloring</i> The main idea of the coloring technique is to change the color of an object, when the user’s hand approaches it. A gradual change in coloring based on distance can provide an additional cue on the hand’s proximity to the object. This technique may be designed with variations, for example, to change the color of the user hand, or of the fingertips. According to the results of the study of Prachyabrued and Borst (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2016" title="Prachyabrued M, Borst CW (2016) Design and evaluation of visual interpenetration cues in virtual grasping. IEEE Trans Vis Comput Graph 22(6):1718–1731" href="/article/10.1007/s10055-017-0313-4#ref-CR21" id="ref-link-section-d54304e570">2016</a>), users prefer the coloring technique for grasping tasks (with data glove, VR configuration only).</p><p>
+                    <i>Connecting line</i> The main idea of the connecting line technique is to display a line that connects the user hand with an object that can be grasped. Two variations of this technique are to draw the distance to target dynamically onto the line, or to change the line color based on hand’s proximity to the target object. From our experience, the connecting line technique seems intuitive mainly at release tasks, especially when the release is to be made onto/inside a moving target.</p><p>
+                    <i>Object halo</i> The main idea of the halo technique is similar to coloring: When the target object is gradually approached by the user hand, a glowing halo appears around the object with its size increasing as the hand moves closer. The halo technique is commonly used in games and it does not change the look of the object itself (in contrast to the coloring technique described before). As such, it might be more appropriate in cases where it is significant that the objects’ appearance or color must not change at all.</p><p>
+                    <i>Shadow</i> The shadows of the virtual hand and object are visible on a flat horizontal surface in the environment to provide an extra cue of the distance between them. The shadow technique is more natural and intuitive, as it neither adds any additional abstract representations in the scene, nor distorts the realism of the environment. However, the scene arrangement and lighting should be carefully prepared, so that shadows are always visible and easily identifiable, to serve as an effective depth cue.</p><h3 class="c-article__sub-heading" id="Sec7">The test bed environment</h3><p>The test bed application (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-017-0313-4#Fig1">1</a>) is a simple 3D world with geometric primitives, in which the user is asked to complete a series of grasp-and-release tasks using her virtual hands. The application can work in two configurations: the <i>desktop configuration</i> that requires the Leap Controller alone, placed on a flat surface in front of the user, and the <i>VR configuration</i>, in which users wear the Oculus Rift HMD and Leap Motion is mounted on it (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-017-0313-4#Fig2">2</a>).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-017-0313-4/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-017-0313-4/MediaObjects/10055_2017_313_Fig2_HTML.jpg?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-017-0313-4/MediaObjects/10055_2017_313_Fig2_HTML.jpg" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p>User interactions with the desktop (<i>left</i>) and VR (<i>right</i>) interface configurations</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-017-0313-4/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+<p>The test bed environment has been developed in Unity 3D using the Orion SDK provided by Leap Motion and has been compiled in two variations, one for each configuration. The only difference between the two executables was in the support of Oculus.</p><p>The test bed environment displays the virtual hands of the user, a sphere, a cube and a ground plane. The aim of the user is to grasp the sphere with his right hand and to place it inside the cube. Physics are disabled, so there is neither gravity nor collisions in the environment. The sphere diameter and the edge of the cube had a length of 7 cm.</p><p>The visual feedback techniques have been implemented as follows (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-017-0313-4#Fig1">1</a>):</p><ul class="u-list-style-bullet">
+                    <li>
+                      <p>
+                                <i>Object coloring</i>: For the grasp phase, when the virtual hand approaches (reaches a threshold distance) the sphere, the color of the sphere changes instantly to red. If the hand continues to approach, the sphere color linearly changes from to red to green. When the color is green, the object can be grasped. For the release phase, the same technique is applied between the virtual sphere and the cube.</p>
+                    </li>
+                    <li>
+                      <p>
+                                <i>Connecting line</i>: For the grasp phase, when the target object is approached, a line connects the center of the palm of the virtual hand with the sphere. The distance in cm between the target object and the hand is displayed in text. The target object can be grasped at a distance lower than the radius of the sphere, i.e., 3.5 cm. For the release phase, the same technique is applied between the virtual sphere and the cube.</p>
+                    </li>
+                    <li>
+                      <p>
+                                <i>Object halo</i>: For the grasp phase, when the target object is approached (reaches a threshold distance), its outline is glowing. The halo is progressively enlarged and brightened as the user approaches the object. If the user hand passes through the sphere without grasping, the halo becomes smaller and less intense. For the release phase, the same technique is applied between the virtual sphere and the cube.</p>
+                    </li>
+                    <li>
+                      <p>
+                                <i>Shadow</i>: vertical shadows of the virtual hand, the sphere and the cube are displayed on the ground to provide a relative sense of distance.</p>
+                    </li>
+                  </ul>
+<p>The test bed environment also includes an initial familiarization phase, during which the user can freely interact with physical primitives using her bare hands to familiarize herself with the interface (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-017-0313-4#Fig1">1</a>, upper left).</p><p>Finally, a logging mechanism has been implemented to keep track of task-related events, errors and timestamps during the user tasks.</p></div></div></section><section aria-labelledby="Sec8"><div class="c-article-section" id="Sec8-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec8">The experiment</h2><div class="c-article-section__content" id="Sec8-content"><h3 class="c-article__sub-heading" id="Sec9">Research questions and hypotheses</h3><p>The experiment addresses the following research questions and hypotheses:<dl class="c-abbreviation_list"><dt class="c-abbreviation_list__term"><dfn>Q1:</dfn></dt><dd class="c-abbreviation_list__description">
+                        <p>Is there a difference in usability of grasp-and-release tasks with bare hands between the UI configurations (VR, desktop)?</p>
+                      </dd><dt class="c-abbreviation_list__term"><dfn>Q2:</dfn></dt><dd class="c-abbreviation_list__description">
+                        <p>Is there a difference in usability between the feedback techniques (none, coloring, line, halo and shadow)?</p>
+                      </dd><dt class="c-abbreviation_list__term"><dfn>Q3:</dfn></dt><dd class="c-abbreviation_list__description">
+                        <p>Is there a difference in usability within each condition of UI configuration × feedback technique (VR × feedback, desktop × feedback)?</p>
+                      </dd></dl>
+</p><p>Based on previous work and our experience, we have the following hypotheses with respect to Q1, Q2:</p>
+                  <h3 class="c-article__sub-heading">
+                    <b>Hypothesis 1 (H1)</b>
+                  </h3>
+                  <p>The VR configuration is more usable than desktop configuration.</p>
+                
+                  <h3 class="c-article__sub-heading">
+                    <b>Hypothesis 2 (H2)</b>
+                  </h3>
+                  <p>The ‘no feedback’ would be less usable than any other feedback technique within each configuration.</p>
+                <p>Regarding Q3, since there is no previous evidence about the comparative usability of visual feedback techniques for BHI grasp-and-release tasks, we did not make any a priori assumptions about which might be more usable than another.</p><p>According to ISO 9241, usability is defined as ‘<i>the extent to which a product can be used by specified users to achieve specified goals with effectiveness, efficiency and satisfaction in a specified context of use</i>.’ Put simply, effectiveness refers to whether users can achieve their goals and perform tasks successfully with the system, efficiency refers to performance issues (e.g., time, without errors) and satisfaction refers to the subjective opinion of users about (perceived) usability.</p><h3 class="c-article__sub-heading" id="Sec10">Measures</h3><p>There are many measures or metrics about usability (for a review see Albert and Tullis <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2013" title="Albert W, Tullis T (2013) Measuring the user experience: collecting, analyzing, and presenting usability metrics. Morgan Kaufmann" href="/article/10.1007/s10055-017-0313-4#ref-CR1" id="ref-link-section-d54304e792">2013</a>) and the most common in controlled usability evaluations are task time, errors, accuracy and user satisfaction. These four measures are employed in this study.</p><p>The first three measures were automatically collected by the test bed application. The following event types were recorded by the test bed app: grasp, failed grasp, release and failed release. Each of the recorded events had an associated time from the beginning of the experiment. The release event was triggered when the user placed the sphere inside the cube at a distance between their centers less or equal than the radius of the sphere (3.5 cm). This would be approximately 50% or more overlap between the two primitives.</p><p>Failed grasp and failed release were treated as errors, while the release event marked the success of a trial.</p><p>At the successful release, the accuracy of placement (a) was calculated as follows:</p><div id="Equa" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$a = \frac{R - d}{R},$$</span></div></div><p>where R is the radius of the sphere and d is the Euclidean distance between the sphere and the cube.</p><p>The fourth measure was user satisfaction. To obtain participant opinions, we asked them to fill in an online questionnaire after they finished with each user interface condition. The questionnaire consisted of four statements: (a) the technique was comfortable; (b) the technique was precise; (c) the technique was intuitive; (d) I liked the technique. Users provided their answers in a 5-point Likert scale (1 = strongly disagree; … 5 = strongly agree).</p><h3 class="c-article__sub-heading" id="Sec11">Experimental design and data analysis</h3><p>The experiment was with a [2 × 5] within-subjects design. The first factor was the UI (user interface configuration) with 2 levels: VR and desktop. The second factor was the feedback technique with five levels: none, coloring, line, halo, shadow.</p><p> We analyzed the data by comparing means. The data analysis was performed in SPSS. All data were analyzed using 95% confidence intervals to provide the range that estimates the true population value for each measure. Confidence intervals are extremely valuable for any usability test (Albert and Tullis <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2013" title="Albert W, Tullis T (2013) Measuring the user experience: collecting, analyzing, and presenting usability metrics. Morgan Kaufmann" href="/article/10.1007/s10055-017-0313-4#ref-CR1" id="ref-link-section-d54304e859">2013</a>) and according to Sauro (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2012" title="Sauro J (2012) 10 things to know about confidence intervals. Available at: &#xA;                    https://measuringu.com/ci-10things/&#xA;                    &#xA;                  . Accessed 2 May 2017" href="/article/10.1007/s10055-017-0313-4#ref-CR001" id="ref-link-section-d54304e862">2012</a>) ‘<i>if the intervals do not overlap then you can be at least 95% confident there is a difference… the intervals can actually overlap by as much as 25% and still be statistically significant.</i>’</p><p>Furthermore, we conducted a repeated measures factorial analysis of variance (ANOVA) to identify statistically significant differences for the three measures of task time, accuracy and errors. When such differences were observed, we conducted pairwise comparisons with Bonferroni corrections. A full factorial analysis provides the effect of each factor (UI, feedback) on the independent variables (usability measures: task time, accuracy, errors), as well as the effects of interactions between factors on the variables.</p><p>User satisfaction was collected with Likert scale data that is not normally distributed. Since that there is not a nonparametric equivalent for full factorial ANOVA, we conducted a Friedman’s test which is the nonparametric test for two-way ANOVA; however, this test does not include interactions (there is not a nonparametric equivalent of the full factorial ANOVA). We also conducted post hoc analysis using Wilcoxon signed-rank test for pairwise comparisons with Bonferroni corrections among conditions of UI × feedback.</p><h3 class="c-article__sub-heading" id="Sec12">Participants, tasks and procedure</h3><p>Thirty-two (32) users participated in the evaluation on a voluntary basis: twenty (20) men; aged 19–44 years (average 25.1). Twenty-five (25) participants were students and seven academic research staff. Six participants had limited experience with the Leap Motion and three with the Oculus Rift. We excluded six participants (from originally recruited 38). Three of them have been excluded because they were left-handed and, given that the system has been implemented for the right hand only, they would not use their dominant hand in the tasks. The other three had low vision and reported discomfort when wearing the Oculus Rift headset.</p><p>During the experiment, participants had to complete four trials of grasping and releasing in each feedback technique, i.e., 20 trials for each UI configuration, 40 in total for each user, 1280 for all participants. For each trial, the user had to grasp a sphere with the right hand, move it toward a transparent cube and release it inside it. Each trial was therefore inherently split in:</p><ul class="u-list-style-bullet">
+                    <li>
+                      <p>The <i>grasp phase:</i> the user had to successfully grasp the sphere by placing her virtual hand on it performing a grasp gesture. The user had to use all fingers to grasp the sphere and not just pinch it. For the software to identify the grasp gesture, some virtual hand penetration to the sphere had to be tracked.</p>
+                    </li>
+                    <li>
+                      <p>The <i>release phase:</i> the user had to bring the sphere to the semitransparent cube using her virtual hand and release it as close to its center as possible. While the user was moving the sphere, her hand had to remain in a grasping gesture (with some tolerance). If the user opened the palm, the sphere was released. If the released sphere was not placed inside the cube (over 50% degree of penetration of the sphere into the cube), the user would have to grasp the sphere again (from the point the sphere was dropped) and then retry the release phase.</p>
+                    </li>
+                  </ul>
+<p>We have treated each set of four trials as a single task, i.e., ‘successively place the sphere into the cube by using the A/B/C/D/E feedback technique.’ After the end of each trial, the user had to press the space bar to see the next placement of the sphere and the cube (i.e., users could take their time to move to the next trial). During all trials with a particular feedback technique, the participant would see its name on the top of the screen. After the user finished with the task, she moved to the next feedback technique. For each one of the four trials, the initial placement of the sphere and cube were different; these were in counterbalanced order for each participant to minimize the learning effect. The feedback techniques were also presented in counterbalanced order.</p><p>The procedure of the experiment was as follows:</p><ol class="u-list-style-none">
+                    <li>
+                      <span class="u-custom-list-number">1.</span>
+                      
+                        <p>Welcoming. Users were introduced to the purpose of the test.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">2.</span>
+                      
+                        <p>First user interface condition (desktop or VR, counterbalanced). As they came along, users were appointed to one interface condition.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">3.</span>
+                      
+                        <p>Familiarization. Users used their hands to interact with 3D objects (primitives) in order to get familiar with each configuration (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-017-0313-4#Fig1">1</a>, upper left).</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">4.</span>
+                      
+                        <p>Task performance. For each UI, for each feedback technique in counterbalanced order, users performed grasp-and-release tasks.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">5.</span>
+                      
+                        <p>Questionnaire. Users filled in the questionnaire.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">6.</span>
+                      
+                        <p>Steps 2–5 were repeated for the second user interface condition.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">7.</span>
+                      
+                        <p>End. Wrap-up.</p>
+                      
+                    </li>
+                  </ol>
+<h3 class="c-article__sub-heading" id="Sec13">Apparatus</h3><p>In the desktop configuration, the environment was running on a laptop with i7 2.50 GHz CPU, 16 GB Ram, nVidia GTX 850 M graphics card and 15.6″ display. The Leap Motion controller was positioned in front of the user at the center of the desk.</p><p>For the VR configuration, we used a laptop with i7 2.60 GHz CPU, 16 GB Ram and an nVidia GTX 970 M graphics card (this card is the minimum required for Oculus). The Oculus Rift DK2 was attached to the laptop, and the Leap Motion controller has been mounted on the front face of the HMD using the VR developer mount provided by Leap Motion. We have used a slightly higher CPU for the VR configuration to compensate for the extra computing requirements of the Oculus Rift. Prior tests ensured that there was no difference in observable user performance (both setups had mean refresh rate above 70 FPS).</p><p>In both configurations, users were seated during the test.</p></div></div></section><section aria-labelledby="Sec14"><div class="c-article-section" id="Sec14-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec14">Results</h2><div class="c-article-section__content" id="Sec14-content"><h3 class="c-article__sub-heading" id="Sec15">Between user interfaces</h3><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec16">Task time</h4><p>UI has a significant effect on task time [<i>F</i>
+                        <sub>4.17</sub> = 81.143, <i>p</i> = 0.000 &lt; 0.05, Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-017-0313-4#Tab1">1</a> (row 1)], i.e., users who perform grasp-and-release tasks with the VR configuration are faster than with the desktop. This is clear for any feedback technique applied (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-017-0313-4#Fig3">3</a>).</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-1"><figure><figcaption class="c-article-table__figcaption"><b id="Tab1" data-test="table-caption">Table 1 Two-way repeated measures ANOVA test of within-subjects effects</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-017-0313-4/tables/1"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div> <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-017-0313-4/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-017-0313-4/MediaObjects/10055_2017_313_Fig3_HTML.gif?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-017-0313-4/MediaObjects/10055_2017_313_Fig3_HTML.gif" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p>Mean task time (sec), with 95% confidence intervals</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-017-0313-4/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                    <h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec17">Accuracy</h4><p>UI has significant effect on accuracy (<i>F</i>
+                        <sub>4.17</sub> = 30.562, <i>p</i> = 0.000 &lt; 0.05, Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-017-0313-4#Tab2">2</a>, row 1), i.e., users who perform grasp-and-release tasks with the VR configuration are more accurate than with the desktop. This is clear for any feedback technique (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-017-0313-4#Fig4">4</a>).</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-2"><figure><figcaption class="c-article-table__figcaption"><b id="Tab2" data-test="table-caption">Table 2 Two-way repeated measures ANOVA tests of within-subjects effects</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-017-0313-4/tables/2"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div> <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-017-0313-4/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-017-0313-4/MediaObjects/10055_2017_313_Fig4_HTML.gif?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-017-0313-4/MediaObjects/10055_2017_313_Fig4_HTML.gif" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p>Mean accuracy, with 95% confidence intervals</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-017-0313-4/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                    <h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec18">Errors</h4><p>UI has significant effect on errors (<i>F</i>
+                        <sub>4.17</sub> = 10.147, <i>p</i> = 0.003 &lt; 0.05, Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-017-0313-4#Tab3">3</a>, row 1), i.e., users who perform grasp-and-release tasks with the VR configuration make fewer errors than with the desktop. This is clear for any feedback technique (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-017-0313-4#Fig5">5</a>).</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-3"><figure><figcaption class="c-article-table__figcaption"><b id="Tab3" data-test="table-caption">Table 3 Two-way repeated measures ANOVA tests of within-subjects effects</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-017-0313-4/tables/3"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div> <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-017-0313-4/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-017-0313-4/MediaObjects/10055_2017_313_Fig5_HTML.gif?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-017-0313-4/MediaObjects/10055_2017_313_Fig5_HTML.gif" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p>Mean errors, with 95% confidence intervals</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-017-0313-4/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                    <h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec19">User satisfaction</h4><p>UI has significant effect on user satisfaction. A nonparametric Friedman test of differences among repeated measures was conducted and rendered a Chi-square value of 27.545 which was significant (Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-017-0313-4#Tab4">4</a>), i.e., users who perform grasp-and-release tasks with the VR configuration are more satisfied than with the desktop, for any feedback technique (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-017-0313-4#Fig6">6</a>).</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-4"><figure><figcaption class="c-article-table__figcaption"><b id="Tab4" data-test="table-caption">Table 4 Nonparametric Friedman test statistics</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-017-0313-4/tables/4"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div> <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-6"><figure><figcaption><b id="Fig6" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 6</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-017-0313-4/figures/6" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-017-0313-4/MediaObjects/10055_2017_313_Fig6_HTML.gif?as=webp"></source><img aria-describedby="figure-6-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-017-0313-4/MediaObjects/10055_2017_313_Fig6_HTML.gif" alt="figure6" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-6-desc"><p>User preference, with 95% confidence intervals</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-017-0313-4/figures/6" data-track-dest="link:Figure6 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                    <p>These results are confirmatory to the first hypothesis (H1) of the experiment, i.e., that VR configuration would be more usable than the desktop. This applies for all four measures of usability examined.</p><h3 class="c-article__sub-heading" id="Sec20">Among visual feedback techniques</h3><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec21">Task time</h4><p>Feedback (technique) has significant effect on task time [<i>F</i>
+                        <sub>2.69</sub> = 4.65, <i>p</i> = 0.002 &lt; 0.05, Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-017-0313-4#Tab1">1</a> (row 2)], i.e., users who perform grasp-and-release tasks with at least one of the feedback techniques examined are faster to those who make use of at least one other technique.</p><p>Pairwise comparisons (Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-017-0313-4#Tab5">5</a>) reveal statistically significant differences in means between:</p><ul class="u-list-style-bullet">
+                      <li>
+                        <p>Coloring and line (<i>p</i> = 0.02 &lt; 0.05; Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-017-0313-4#Tab5">5</a>, lines 6, 10), i.e., users who perform grasp-and-release tasks with Coloring are faster than with Line.</p>
+                      </li>
+                      <li>
+                        <p>Halo and line (<i>p</i> = 0.016 &lt; 0.05; Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-017-0313-4#Tab5">5</a>, lines 11, 15), i.e., users who perform grasp-and-release tasks with Halo are faster than with Line.</p>
+                      </li>
+                    </ul>
+<div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-5"><figure><figcaption class="c-article-table__figcaption"><b id="Tab5" data-test="table-caption">Table 5 Two-way repeated measures ANOVA pairwise comparisons between conditions for feedback</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-017-0313-4/tables/5"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+<h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec22">Accuracy and errors</h4><p>No other significant effects were found, i.e., there is not any feedback technique that has a significant effect on accuracy and errors.</p><p>These results do not confirm our second hypothesis (H2), i.e., that ‘no feedback’ would be less usable than any other feedback technique within each configuration.</p><h3 class="c-article__sub-heading" id="Sec23">Among conditions of UI × feedback</h3><p>The interaction of UI × feedback has significant effect on task time [<i>F</i>
+                    <sub>2.69</sub> = 5.223, <i>p</i> = 0.001 &lt; 0.05, Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-017-0313-4#Tab1">1</a> (row 3)]. To further identify these effects, we have performed pairwise comparisons for VR and desktop interfaces.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec24">Task time</h4><p>Pairwise comparisons of UI × feedback (Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-017-0313-4#Tab6">6</a>) reveal some significant effect between:</p><ul class="u-list-style-bullet">
+                      <li>
+                        <p>VR × None and VR × Coloring (<i>p</i> = 0.019 &lt; 0.05, Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-017-0313-4#Tab6">6</a>, rows 1, 5), i.e., users who perform grasp-and-release manipulations in the VR with coloring are faster than with no feedback.</p>
+                      </li>
+                      <li>
+                        <p>Desktop × line and desktop × halo (<i>p</i> = 0.016 &lt; 0.05, Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-017-0313-4#Tab6">6</a>, rows 31, 35), i.e., users who perform grasp-and-release manipulations in the desktop with halo visual feedback are faster than with line feedback.</p>
+                      </li>
+                      <li>
+                        <p>Desktop × line and desktop × shadow (<i>p</i> = 0.02 &lt; 0.05, Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-017-0313-4#Tab6">6</a>, rows 32, 39), i.e., users who perform grasp-and-release manipulations in the desktop with shadow visual feedback are faster than with line feedback.</p>
+                      </li>
+                    </ul>
+<div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-6"><figure><figcaption class="c-article-table__figcaption"><b id="Tab6" data-test="table-caption">Table 6 Two-way repeated measures ANOVA pairwise comparisons for interactions UI × feedback</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-017-0313-4/tables/6"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+<h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec25">Accuracy</h4><p>No significant effects were found, i.e., there is not one condition of UI × feedback technique that has a significant effect on accuracy.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec26">Errors</h4><p>The interaction between UI × feedback significantly affects errors. Respective pairwise comparisons (Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-017-0313-4#Tab7">7</a>) show a statistically significant difference in mean number of errors between:</p><ul class="u-list-style-bullet">
+                      <li>
+                        <p>VR × no feedback and VR × coloring (<i>p</i> = 0.028 &lt; 0.05, Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-017-0313-4#Tab7">7</a>, rows 1, 5), i.e., users who perform grasp-and-release manipulations in the VR with coloring make fewer errors than with no feedback.</p>
+                      </li>
+                      <li>
+                        <p>VR × coloring and VR × halo (<i>p</i> = 0.008 &lt; 0.05, Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-017-0313-4#Tab7">7</a>, rows 8, 14), i.e., users who perform grasp-and-release manipulations in the VR with coloring make fewer errors than with halo feedback.</p>
+                      </li>
+                    </ul>
+<div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-7"><figure><figcaption class="c-article-table__figcaption"><b id="Tab7" data-test="table-caption">Table 7 Pairwise comparisons for interactions UI × feedback</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-017-0313-4/tables/7"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+<h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec27">User satisfaction</h4><p> Pairwise comparisons of UI × feedback (Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-017-0313-4#Tab8">8</a>) reveal some significant differences in user satisfaction between:</p><ul class="u-list-style-bullet">
+                      <li>
+                        <p>Desktop × none and desktop × halo (<i>p</i> = 0.008 &lt; 0.01, Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-017-0313-4#Tab8">8</a>, row 3), i.e., users who perform grasp-and-release manipulations in the desktop with the halo feedback technique are more satisfied than with no feedback.</p>
+                      </li>
+                      <li>
+                        <p>Desktop × none and desktop × shadow (<i>p</i> = 0.006 &lt; 0.01, Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-017-0313-4#Tab8">8</a>, row 4), i.e., users who perform grasp-and-release manipulations in the desktop with the shadow feedback technique are more satisfied than with no feedback (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-017-0313-4#Fig6">6</a>).</p>
+                      </li>
+                      <li>
+                        <p>Desktop × halo and desktop × coloring (<i>p</i> = 0.003 &lt; 0.01, Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-017-0313-4#Tab8">8</a>, row 6), i.e., users who perform grasp-and-release manipulations in the desktop with the halo feedback technique are more satisfied than with the coloring technique.</p>
+                      </li>
+                    </ul> <div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-8"><figure><figcaption class="c-article-table__figcaption"><b id="Tab8" data-test="table-caption">Table 8 Pairwise comparisons for interactions UI × feedback (desktop)</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-017-0313-4/tables/8"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                    <p>Since that we had made no prior assumptions or hypotheses about conditions of UI × feedback, these results can inform the design of BHI in each particular condition.</p></div></div></section><section aria-labelledby="Sec28"><div class="c-article-section" id="Sec28-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec28">Discussion</h2><div class="c-article-section__content" id="Sec28-content"><p>We can identify several design issues and recommendations based on the research questions and hypotheses, and we discuss them in terms of previous work and experience.</p><p>The first research question (Q1) of the experiment was if there is a difference in usability of grasp-and-release tasks with bare hands between the UI configurations (VR × desktop). We had assumed that there would be a significant difference (H1). We found that the VR interface outperforms the desktop in all aspects of usability regarding grasp-and-release tasks for any feedback technique. There are significant effects in all measures: task time, errors, accuracy and user satisfaction (Sect. 6.1). Therefore, applications that require grasp-and-release operations are more usable in the VR than in a desktop interface. This is true for any feedback technique, even when the desktop × ‘any feedback’ condition is compared to VR × none for almost all measures (but for a couple of comparisons about user satisfaction, see Figs. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-017-0313-4#Fig3">3</a>–<a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-017-0313-4#Fig6">6</a>). Apparently, the affordances of VR like the stereoscopic view and increased presence contribute to this result.</p><p>This result is in alignment with Renner et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2013" title="Renner RS, Velichkovsky BM, Helmert JR (2013) The perception of egocentric distances in virtual environments-a review. ACM Comput Surv (CSUR) 46(2):23" href="/article/10.1007/s10055-017-0313-4#ref-CR22" id="ref-link-section-d54304e6907">2013</a>) who denote that ‘<i>for shorter distances, missing binocular disparity impairs distance perception</i>.’ In addition, we have seen in previous work (on qualitative think aloud studies of bare hand interactions in gamified applications of virtual sculpting, Vosinakis et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2016" title="Vosinakis S, Koutsabasis P, Makris D, Sagia E (2016) A kinesthetic approach to digital heritage using Leap Motion: the cycladic sculpture application. In: 8th international conference on games and virtual worlds for serious applications (VS-GAMES), 2016" href="/article/10.1007/s10055-017-0313-4#ref-CR27" id="ref-link-section-d54304e6913">2016</a>) that the desktop interface for BHI yields many usability issues, not only about visual (and audio) feedback but also about look and feel, hand tracking, gesturing, user orientation, visibility and control/reach. Therefore, there are various issues that impede the user experience in desktop configurations of BHI, and visual feedback techniques alone do not suffice for improving user performance.</p><p>The second research question (Q2) of the experiment was if there is a difference in usability between the feedback techniques (no feedback, object coloring, connecting line, object halo and shadow) regardless of UI condition. Based on our experience, we assumed that the situation of ‘no feedback’ would be less usable than any other feedback technique within each configuration (H2). We have found little evidence to support this hypothesis. Some feedback techniques are more usable than others regarding particular measures only, i.e., (a) the ‘object halo’ technique is preferred by users in comparison with ‘no feedback’ (user satisfaction) and (b) the ‘object coloring’ and ‘object halo’ techniques are faster (task time) than the ‘connecting line’ technique.</p><p>If we consider that the ‘object coloring’ and ‘object halo’ techniques are similar to the extent that they artificially augment the appearance of virtual objects with a strong visual indication of proximity, we can reach to a recommendation that both these proximity-based coloring techniques present particular advantages for usability. However, since that this recommendation is not fully backed up by this experiment, it is up to the designer to consider this in relation to other design issues related to application and context. Coloring techniques of visual feedback were also preferred by users in the study of Prachyabrued and Borst (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2016" title="Prachyabrued M, Borst CW (2016) Design and evaluation of visual interpenetration cues in virtual grasping. IEEE Trans Vis Comput Graph 22(6):1718–1731" href="/article/10.1007/s10055-017-0313-4#ref-CR21" id="ref-link-section-d54304e6923">2016</a>), which examined interpenetration cues in grasping and release tasks with a data glove in VR.</p><p>We also found that the ‘connecting line’ technique seems to impede user performance (task time) and distract users. For most measures, this technique was worse in usability, even when compared to ‘no feedback.’ This technique is certainly the most intrusive for the design of the grasp-and-release interactions. Nevertheless, it is intuitive for moving targets (like for example in the game Playground of the Leap Motion app store).</p><p>The third research question (Q3) of the experiment was if there is difference in usability within each condition of UI configuration × feedback technique (VR × feedback, desktop × feedback). We did not make any a priori assumptions about which technique might be more usable than another. We have found few conditions (UI × technique) that are more usable than others for some measures (reported in Sect. 6.3).</p><p>For the VR interface, user performance is significantly improved with the ‘object coloring’ technique in comparison with the ‘no feedback’ in task time and errors. In the VR, ‘object coloring’ is also significantly different than ‘object halo’ in terms of user errors. These results are again in favor of the ‘object coloring’ technique for visual feedback particularly for VR interfaces. For the desktop interface, we have found that the ‘connecting line’ technique is significantly slower than ‘object halo’ and ‘shadow.’ In addition, users prefer the ‘halo’ and ‘shadow’ techniques to ‘no feedback’ as well as the ‘object halo’ technique to ‘object coloring.’</p><p>Based on these results, we identify the following recommendations:</p><ol class="u-list-style-none">
+                  <li>
+                    <span class="u-custom-list-number">1.</span>
+                    
+                      <p>If possible, prefer the VR interface over the desktop for BHI of grasp-and-release.</p>
+                    
+                  </li>
+                  <li>
+                    <span class="u-custom-list-number">2.</span>
+                    
+                      <p>Prefer proximity-based coloring techniques (object coloring and halo) for feedback. Depending on the application goals, use ‘object coloring’ for better performance and ‘object halo’ for better user satisfaction.</p>
+                    
+                  </li>
+                  <li>
+                    <span class="u-custom-list-number">3.</span>
+                    
+                      <p>Alternatively, prefer ‘shadow’ technique, especially in the desktop interface, as it is more natural and usable compared to ‘connecting line’ and no feedback.</p>
+                    
+                  </li>
+                  <li>
+                    <span class="u-custom-list-number">4.</span>
+                    
+                      <p>Avoid using the ‘connecting line’ technique, unless there are important contextual factors involved, like for example if the release is to be made onto moving targets or if increased release precision is required.</p>
+                    
+                  </li>
+                  <li>
+                    <span class="u-custom-list-number">5.</span>
+                    
+                      <p>Prefer using any form of visual feedback in both VR and desktop interfaces to no feedback at all.</p>
+                    
+                  </li>
+                </ol>
+<p>This study has a number of limitations. First of all, it examined four selected feedback techniques. Although these techniques are quite popular in VR and game implementations, one may easily find alternative configurations or combinations of them that were not included in the study. Then, the equipment used in the two UI configurations was different. As reported in Sect. 4.5 (Apparatus), we have used a slightly higher CPU for the VR configuration to compensate for the extra computing requirements of the Oculus Rift. Also, there was a gender imbalance of the participants in this study (20 men and 12 women). Furthermore, we have not included additional measures for the quality of performance, such as trajectory and velocity shape. Finally, given that the study is a test bed evaluation, it does not take into account any external conditions that might affect task performance in specific applications, such as size and appearance of objects, moving targets, lighting and scene complexity.</p><p>Finally, we report on some issues that require attention about the technical performance of the interface configurations. A problem that appeared a few times with the VR configuration was that the users’ hands were standing between the HMD and the IR camera for positional tracking, causing some short but unexpected distortions in the view. Also, we noticed some tracking interferences of the Leap Motion Controller for users who wore metallic jewelry on their hands, wrist watches as well as leather jackets. In general, Leap Motion produced quite often tracking errors or misinterpretations of hand gestures, which were responsible for a significant percentage of the identified user errors.</p></div></div></section><section aria-labelledby="Sec29"><div class="c-article-section" id="Sec29-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec29">Summary and conclusions</h2><div class="c-article-section__content" id="Sec29-content"><p>This paper presented a controlled usability evaluation of four common visual feedback techniques in grasp-and-release tasks using bare hands: object coloring, connecting line, shadows and object halo, in the interface configurations of the Leap Motion controller alone (desktop configuration) and a combination of Leap Motion and Oculus Rift (VR configuration). The VR configuration is more usable than the desktop for grasp-and-release tasks with bare hands. Coloring feedback techniques (with a color or halo) are more usable than shadowing and no feedback, while the line technique often distracted users rather than contributed to usability.</p><p>For BHI to realize widespread adoption, there is a need for identification and optimization of effective interaction techniques for fundamental operations. This study was sharply focused on a particular aspect of BHI design, i.e., visual feedback techniques for grasp-and-release tasks. It contributes to the growing corpus of usability studies in BHI and makes respective recommendations about visual feedback techniques. Interaction designers and developers should consider these recommendations in relation to the context and requirements of particular applications. Future work includes investigations of BHI interaction techniques not only in experimental setups but also in field settings to contribute to a better understanding of design issues and options.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="notes"><div class="c-article-section" id="notes-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="notes">Notes</h2><div class="c-article-section__content" id="notes-content"><ol class="c-article-footnote c-article-footnote--listed"><li class="c-article-footnote--listed__item" id="Fn1"><span class="c-article-footnote--listed__index">1.</span><div class="c-article-footnote--listed__content"><p>Leap Motion app store: <a href="https://apps.leapmotion.com/">https://apps.leapmotion.com/</a>.</p></div></li><li class="c-article-footnote--listed__item" id="Fn2"><span class="c-article-footnote--listed__index">2.</span><div class="c-article-footnote--listed__content"><p>
+                            <a href="https://apps.leapmotion.com/apps/robot-chess/windows">https://apps.leapmotion.com/apps/robot-chess/windows</a>.</p></div></li><li class="c-article-footnote--listed__item" id="Fn3"><span class="c-article-footnote--listed__index">3.</span><div class="c-article-footnote--listed__content"><p>
+                            <a href="https://apps.leapmotion.com/apps/autonomous/windows">https://apps.leapmotion.com/apps/autonomous/windows</a>.</p></div></li><li class="c-article-footnote--listed__item" id="Fn4"><span class="c-article-footnote--listed__index">4.</span><div class="c-article-footnote--listed__content"><p>
+                            <a href="https://apps.leapmotion.com/apps/cyber-science-motion-zoology/windows">https://apps.leapmotion.com/apps/cyber-science-motion-zoology/windows</a>.</p></div></li><li class="c-article-footnote--listed__item" id="Fn5"><span class="c-article-footnote--listed__index">5.</span><div class="c-article-footnote--listed__content"><p>
+                            <a href="https://developer.leapmotion.com/gallery/v2-playground">https://developer.leapmotion.com/gallery/v2-playground</a>.</p></div></li></ol></div></div></section><section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Albert W, Tullis T (2013) Measuring the user experience: collecting, analyzing, and presenting usability metri" /><p class="c-article-references__text" id="ref-CR1">Albert W, Tullis T (2013) Measuring the user experience: collecting, analyzing, and presenting usability metrics. Morgan Kaufmann</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Apostolellis P, Bortz B, Peng M, Polys N, Hoegh A (2014, March). Poster: exploring the integrality and separab" /><p class="c-article-references__text" id="ref-CR2">Apostolellis P, Bortz B, Peng M, Polys N, Hoegh A (2014, March). Poster: exploring the integrality and separability of the Leap Motion Controller for direct manipulation 3D interaction. In: 3D User Interfaces (3DUI), IEEE Symposium on 2014. IEEE pp 153–154</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="D. Bachmann, F. Weichert, G. Rinkenauer, " /><meta itemprop="datePublished" content="2014" /><meta itemprop="headline" content="Bachmann D, Weichert F, Rinkenauer G (2014) Evaluation of the Leap Motion controller as a new contact-free poi" /><p class="c-article-references__text" id="ref-CR3">Bachmann D, Weichert F, Rinkenauer G (2014) Evaluation of the Leap Motion controller as a new contact-free pointing device. Sensors 15(1):214–233</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.3390%2Fs150100214" aria-label="View reference 3">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 3 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Evaluation%20of%20the%20Leap%20Motion%20controller%20as%20a%20new%20contact-free%20pointing%20device&amp;journal=Sensors&amp;volume=15&amp;issue=1&amp;pages=214-233&amp;publication_year=2014&amp;author=Bachmann%2CD&amp;author=Weichert%2CF&amp;author=Rinkenauer%2CG">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="N. Beattie, B. Horan, S. McKenzie, " /><meta itemprop="datePublished" content="2015" /><meta itemprop="headline" content="Beattie N, Horan B, McKenzie S (2015) Taking the LEAP with the Oculus HMD and CAD-Plucking at thin Air? Proced" /><p class="c-article-references__text" id="ref-CR4">Beattie N, Horan B, McKenzie S (2015) Taking the LEAP with the Oculus HMD and CAD-Plucking at thin Air? Proced Technol 20:149–154</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1016%2Fj.protcy.2015.07.025" aria-label="View reference 4">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 4 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Taking%20the%20LEAP%20with%20the%20Oculus%20HMD%20and%20CAD-Plucking%20at%20thin%20Air%3F&amp;journal=Proced%20Technol&amp;volume=20&amp;pages=149-154&amp;publication_year=2015&amp;author=Beattie%2CN&amp;author=Horan%2CB&amp;author=McKenzie%2CS">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="DA. Bowman, DB. Johnson, LF. Hodges, " /><meta itemprop="datePublished" content="2001" /><meta itemprop="headline" content="Bowman DA, Johnson DB, Hodges LF (2001) Testbed evaluation of virtual environment interaction techniques. Pres" /><p class="c-article-references__text" id="ref-CR5">Bowman DA, Johnson DB, Hodges LF (2001) Testbed evaluation of virtual environment interaction techniques. Presence 10(1):75–95</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1162%2F105474601750182333" aria-label="View reference 5">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 5 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Testbed%20evaluation%20of%20virtual%20environment%20interaction%20techniques&amp;journal=Presence&amp;volume=10&amp;issue=1&amp;pages=75-95&amp;publication_year=2001&amp;author=Bowman%2CDA&amp;author=Johnson%2CDB&amp;author=Hodges%2CLF">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Caggianese G, Gallo L, Neroni P (2016, June) An investigation of leap motion based 3D manipulation techniques " /><p class="c-article-references__text" id="ref-CR6">Caggianese G, Gallo L, Neroni P (2016, June) An investigation of leap motion based 3D manipulation techniques for use in egocentric viewpoint. In: International conference on augmented reality, virtual reality and computer graphics, Springer, pp 318–330</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Codd-Downey R, Stuerzlinger W (2014) LeapLook: a free-hand gestural travel technique using the Leap Motion fin" /><p class="c-article-references__text" id="ref-CR7">Codd-Downey R, Stuerzlinger W (2014) LeapLook: a free-hand gestural travel technique using the Leap Motion finger tracker. In: Proceedings of the 2nd ACM symposium on Spatial user interaction, ACM, 2014, pp 153–153</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Coelho JC, Verbeek FJ (2014) Pointing task evaluation of Leap Motion controller in 3D virtual environment. In:" /><p class="c-article-references__text" id="ref-CR8">Coelho JC, Verbeek FJ (2014) Pointing task evaluation of Leap Motion controller in 3D virtual environment. In: CHI Sparks’14 Creating the Difference, pp 78–85</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="D. England, " /><meta itemprop="datePublished" content="2011" /><meta itemprop="headline" content="England D (2011) Whole body interaction: an introduction. Whole body interaction. Springer, London, pp 1–5" /><p class="c-article-references__text" id="ref-CR9">England D (2011) Whole body interaction: an introduction. Whole body interaction. Springer, London, pp 1–5</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 9 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Whole%20body%20interaction&amp;pages=1-5&amp;publication_year=2011&amp;author=England%2CD">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Song P, Goh WB, Hutama W, Fu, CW, Liu X (2012) A handle bar metaphor for virtual object manipulation with mid-" /><p class="c-article-references__text" id="ref-CR10">Song P, Goh WB, Hutama W, Fu, CW, Liu X (2012) A handle bar metaphor for virtual object manipulation with mid-air interaction. In: Proceedings of the SIGCHI conference on human factors in computing systems, ACM, 2012 pp 1297–1306</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="J. Guna, G. Jakus, M. Pogačnik, S. Tomažič, J. Sodnik, " /><meta itemprop="datePublished" content="2014" /><meta itemprop="headline" content="Guna J, Jakus G, Pogačnik M, Tomažič S, Sodnik J (2014) An analysis of the precision and reliability of the Le" /><p class="c-article-references__text" id="ref-CR11">Guna J, Jakus G, Pogačnik M, Tomažič S, Sodnik J (2014) An analysis of the precision and reliability of the Leap Motion sensor and its suitability for static and dynamic tracking. Sensors 14(2):3702–3720</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.3390%2Fs140203702" aria-label="View reference 11">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 11 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=An%20analysis%20of%20the%20precision%20and%20reliability%20of%20the%20Leap%20Motion%20sensor%20and%20its%20suitability%20for%20static%20and%20dynamic%20tracking&amp;journal=Sensors&amp;volume=14&amp;issue=2&amp;pages=3702-3720&amp;publication_year=2014&amp;author=Guna%2CJ&amp;author=Jakus%2CG&amp;author=Poga%C4%8Dnik%2CM&amp;author=Toma%C5%BEi%C4%8D%2CS&amp;author=Sodnik%2CJ">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Hu HH, Gooch AA, Thompson WB, Smits BE, Rieser JJ, Shirley P (2000) Visual cues for imminent object contact in" /><p class="c-article-references__text" id="ref-CR12">Hu HH, Gooch AA, Thompson WB, Smits BE, Rieser JJ, Shirley P (2000) Visual cues for imminent object contact in realistic virtual environment. In: Proceedings of the conference on visualization’00. IEEE Computer Society Press, pp 179–185</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Jayakumar A, Mathew B, Uma N, Nedungadi P (2015). Interactive gesture based cataract surgery simulation. In: P" /><p class="c-article-references__text" id="ref-CR13">Jayakumar A, Mathew B, Uma N, Nedungadi P (2015). Interactive gesture based cataract surgery simulation. In: Proceedings of the 2015 fifth international conference on advances in computing and communications (ICACC). IEEE, pp 350–353</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Khademi M, Mousavi Hondori H, McKenzie A, Dodakian L, Lopes CV, Cramer SC (2014) Free-hand interaction with Le" /><p class="c-article-references__text" id="ref-CR14">Khademi M, Mousavi Hondori H, McKenzie A, Dodakian L, Lopes CV, Cramer SC (2014) Free-hand interaction with Leap Motion controller for stroke rehabilitation. In: Proceedings of the extended abstracts of the 32nd annual ACM conference on human factors in computing systems, ACM, pp 1663–1668</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Koutsabasis P, Domouzis C (2016) Mid-Air browsing and selection in image collections. In: International workin" /><p class="c-article-references__text" id="ref-CR15">Koutsabasis P, Domouzis C (2016) Mid-Air browsing and selection in image collections. In: International working conference on advanced visual interfaces (AVI) 2016, Bari (Italy), ACM, 2016, 7–10 June 2016</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Lin J, Yang W, Gao X, Liao M (2015) Learning to assemble building blocks with a Leap Motion controller. In: In" /><p class="c-article-references__text" id="ref-CR16">Lin J, Yang W, Gao X, Liao M (2015) Learning to assemble building blocks with a Leap Motion controller. In: International conference on web-based learning, Springer, pp 258–263</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Marin G, Dominio F, Zanuttigh P (2014) Hand gesture recognition with Leap Motion and kinect devices. In: 2014 " /><p class="c-article-references__text" id="ref-CR17">Marin G, Dominio F, Zanuttigh P (2014) Hand gesture recognition with Leap Motion and kinect devices. In: 2014 IEEE international conference on image processing (ICIP), IEEE, pp 1565–1569</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Nabiyouni M, Bireswar L, Bowman DA (2014) Poster: designing effective travel techniques with bare-hand interac" /><p class="c-article-references__text" id="ref-CR18">Nabiyouni M, Bireswar L, Bowman DA (2014) Poster: designing effective travel techniques with bare-hand interaction. In 3D user interfaces (3DUI), symposium on 2014 IEEE, IEEE, 2014, pp 139–140</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Parkin S (retrieved 16 March 2016) Oculus Rift: Thirty years after virtual-reality goggles and immersive virtu" /><p class="c-article-references__text" id="ref-CR19">Parkin S (retrieved 16 March 2016) Oculus Rift: Thirty years after virtual-reality goggles and immersive virtual worlds made their debut, the technology finally seems poised for widespread use. <a href="https://www.technologyreview.com/s/526531/oculus-rift/">https://www.technologyreview.com/s/526531/oculus-rift/</a>
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Poupyrev I, Ichikawa T, Weghorst S, Billinghurst M (1998) Egocentric object manipulation in virtual environmen" /><p class="c-article-references__text" id="ref-CR20">Poupyrev I, Ichikawa T, Weghorst S, Billinghurst M (1998) Egocentric object manipulation in virtual environments: Empirical evaluation of interaction techniques. Comput Graph Forum 17(3):41–52</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="M. Prachyabrued, CW. Borst, " /><meta itemprop="datePublished" content="2016" /><meta itemprop="headline" content="Prachyabrued M, Borst CW (2016) Design and evaluation of visual interpenetration cues in virtual grasping. IEE" /><p class="c-article-references__text" id="ref-CR21">Prachyabrued M, Borst CW (2016) Design and evaluation of visual interpenetration cues in virtual grasping. IEEE Trans Vis Comput Graph 22(6):1718–1731</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2FTVCG.2015.2456917" aria-label="View reference 21">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 21 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Design%20and%20evaluation%20of%20visual%20interpenetration%20cues%20in%20virtual%20grasping&amp;journal=IEEE%20Trans%20Vis%20Comput%20Graph&amp;volume=22&amp;issue=6&amp;pages=1718-1731&amp;publication_year=2016&amp;author=Prachyabrued%2CM&amp;author=Borst%2CCW">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="RS. Renner, BM. Velichkovsky, JR. Helmert, " /><meta itemprop="datePublished" content="2013" /><meta itemprop="headline" content="Renner RS, Velichkovsky BM, Helmert JR (2013) The perception of egocentric distances in virtual environments-a" /><p class="c-article-references__text" id="ref-CR22">Renner RS, Velichkovsky BM, Helmert JR (2013) The perception of egocentric distances in virtual environments-a review. ACM Comput Surv (CSUR) 46(2):23</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1145%2F2543581.2543590" aria-label="View reference 22">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 22 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=The%20perception%20of%20egocentric%20distances%20in%20virtual%20environments-a%20review&amp;journal=ACM%20Comput%20Surv%20%28CSUR%29&amp;volume=46&amp;issue=2&amp;publication_year=2013&amp;author=Renner%2CRS&amp;author=Velichkovsky%2CBM&amp;author=Helmert%2CJR">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Sauro J (2012) 10 things to know about confidence intervals. Available at: https://measuringu.com/ci-10things/" /><p class="c-article-references__text" id="ref-CR001">Sauro J (2012) 10 things to know about confidence intervals. Available at: <a href="https://measuringu.com/ci-10things/">https://measuringu.com/ci-10things/</a>. Accessed 2 May 2017</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Seixas M, Cardoso J, Dias MTG (2015) One hand or two hands? 2D selection tasks with the Leap Motion device. In" /><p class="c-article-references__text" id="ref-CR23">Seixas M, Cardoso J, Dias MTG (2015) One hand or two hands? 2D selection tasks with the Leap Motion device. In: ACHI 2015: the eighth international conference on advances in computer–human interactions. IARIA, 2015, Lisbon, Portugal. 22–27 February 2015</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="J. Sreng, A. Lécuyer, C. Mégard, C. Andriot, " /><meta itemprop="datePublished" content="2006" /><meta itemprop="headline" content="Sreng J, Lécuyer A, Mégard C, Andriot C (2006) Using visual cues of contact to improve interactive manipulatio" /><p class="c-article-references__text" id="ref-CR24">Sreng J, Lécuyer A, Mégard C, Andriot C (2006) Using visual cues of contact to improve interactive manipulation of virtual objects in industrial assembly/maintenance simulations. IEEE Trans Vis Comput Graph 12(5):1013–1020</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2FTVCG.2006.189" aria-label="View reference 25">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 25 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Using%20visual%20cues%20of%20contact%20to%20improve%20interactive%20manipulation%20of%20virtual%20objects%20in%20industrial%20assembly%2Fmaintenance%20simulations&amp;journal=IEEE%20Trans%20Vis%20Comput%20Graph&amp;volume=12&amp;issue=5&amp;pages=1013-1020&amp;publication_year=2006&amp;author=Sreng%2CJ&amp;author=L%C3%A9cuyer%2CA&amp;author=M%C3%A9gard%2CC&amp;author=Andriot%2CC">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Teather RJ, Stuerzlinger W (2007) Guidelines for 3D positioning techniques. In: Proceedings of the 2007 confer" /><p class="c-article-references__text" id="ref-CR25">Teather RJ, Stuerzlinger W (2007) Guidelines for 3D positioning techniques. In: Proceedings of the 2007 conference on future play, ACM, pp 61–68</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Von Hardenberg C, Bérard F (2001, November) Bare-hand human–computer interaction. In: Proceedings of the 2001 " /><p class="c-article-references__text" id="ref-CR26">Von Hardenberg C, Bérard F (2001, November) Bare-hand human–computer interaction. In: Proceedings of the 2001 workshop on perceptive user interfaces, ACM, pp 1–8)</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Vosinakis S, Koutsabasis P, Makris D, Sagia E (2016) A kinesthetic approach to digital heritage using Leap Mot" /><p class="c-article-references__text" id="ref-CR27">Vosinakis S, Koutsabasis P, Makris D, Sagia E (2016) A kinesthetic approach to digital heritage using Leap Motion: the cycladic sculpture application. In: 8th international conference on games and virtual worlds for serious applications (VS-GAMES), 2016</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="F. Weichert, D. Bachmann, B. Rudak, D. Fisseler, " /><meta itemprop="datePublished" content="2013" /><meta itemprop="headline" content="Weichert F, Bachmann D, Rudak B, Fisseler D (2013) Analysis of the accuracy and robustness of the Leap Motion " /><p class="c-article-references__text" id="ref-CR28">Weichert F, Bachmann D, Rudak B, Fisseler D (2013) Analysis of the accuracy and robustness of the Leap Motion controller. Sensors 13(5):6380–6393</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.3390%2Fs130506380" aria-label="View reference 29">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 29 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Analysis%20of%20the%20accuracy%20and%20robustness%20of%20the%20Leap%20Motion%20controller&amp;journal=Sensors&amp;volume=13&amp;issue=5&amp;pages=6380-6393&amp;publication_year=2013&amp;author=Weichert%2CF&amp;author=Bachmann%2CD&amp;author=Rudak%2CB&amp;author=Fisseler%2CD">
+                    Google Scholar</a> 
+                </p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-017-0313-4-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Ack1">Acknowledgements</h2><div class="c-article-section__content" id="Ack1-content"><p>We thank the anonymous reviewers for their comments and suggestions that have helped us improve the content and presentation of our work.</p></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">Department of Product and Systems Design Engineering, Interactive Systems Design Lab, University of the Aegean, Hermoupolis, Syros, 84100, Greece</p><p class="c-article-author-affiliation__authors-list">Spyros Vosinakis &amp; Panayiotis Koutsabasis</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Spyros-Vosinakis"><span class="c-article-authors-search__title u-h3 js-search-name">Spyros Vosinakis</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Spyros+Vosinakis&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Spyros+Vosinakis" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Spyros+Vosinakis%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Panayiotis-Koutsabasis"><span class="c-article-authors-search__title u-h3 js-search-name">Panayiotis Koutsabasis</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Panayiotis+Koutsabasis&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Panayiotis+Koutsabasis" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Panayiotis+Koutsabasis%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-017-0313-4/email/correspondent/c1/new">Spyros Vosinakis</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=Evaluation%20of%20visual%20feedback%20techniques%20for%20virtual%20grasping%20with%20bare%20hands%20using%20Leap%20Motion%20and%20Oculus%20Rift&amp;author=Spyros%20Vosinakis%20et%20al&amp;contentID=10.1007%2Fs10055-017-0313-4&amp;publication=1359-4338&amp;publicationDate=2017-05-04&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="u-hide-print c-bibliographic-information__column c-bibliographic-information__column--border"><a data-crossmark="10.1007/s10055-017-0313-4" target="_blank" rel="noopener" href="https://crossmark.crossref.org/dialog/?doi=10.1007/s10055-017-0313-4" data-track="click" data-track-action="Click Crossmark" data-track-label="link" data-test="crossmark"><img width="57" height="81" alt="Verify currency and authenticity via CrossMark" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjgxIiB3aWR0aD0iNTciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJtMTcuMzUgMzUuNDUgMjEuMy0xNC4ydi0xNy4wM2gtMjEuMyIgZmlsbD0iIzk4OTg5OCIvPjxwYXRoIGQ9Im0zOC42NSAzNS40NS0yMS4zLTE0LjJ2LTE3LjAzaDIxLjMiIGZpbGw9IiM3NDc0NzQiLz48cGF0aCBkPSJtMjggLjVjLTEyLjk4IDAtMjMuNSAxMC41Mi0yMy41IDIzLjVzMTAuNTIgMjMuNSAyMy41IDIzLjUgMjMuNS0xMC41MiAyMy41LTIzLjVjMC02LjIzLTIuNDgtMTIuMjEtNi44OC0xNi42Mi00LjQxLTQuNC0xMC4zOS02Ljg4LTE2LjYyLTYuODh6bTAgNDEuMjVjLTkuOCAwLTE3Ljc1LTcuOTUtMTcuNzUtMTcuNzVzNy45NS0xNy43NSAxNy43NS0xNy43NSAxNy43NSA3Ljk1IDE3Ljc1IDE3Ljc1YzAgNC43MS0xLjg3IDkuMjItNS4yIDEyLjU1cy03Ljg0IDUuMi0xMi41NSA1LjJ6IiBmaWxsPSIjNTM1MzUzIi8+PHBhdGggZD0ibTQxIDM2Yy01LjgxIDYuMjMtMTUuMjMgNy40NS0yMi40MyAyLjktNy4yMS00LjU1LTEwLjE2LTEzLjU3LTcuMDMtMjEuNWwtNC45Mi0zLjExYy00Ljk1IDEwLjctMS4xOSAyMy40MiA4Ljc4IDI5LjcxIDkuOTcgNi4zIDIzLjA3IDQuMjIgMzAuNi00Ljg2eiIgZmlsbD0iIzljOWM5YyIvPjxwYXRoIGQ9Im0uMiA1OC40NWMwLS43NS4xMS0xLjQyLjMzLTIuMDFzLjUyLTEuMDkuOTEtMS41Yy4zOC0uNDEuODMtLjczIDEuMzQtLjk0LjUxLS4yMiAxLjA2LS4zMiAxLjY1LS4zMi41NiAwIDEuMDYuMTEgMS41MS4zNS40NC4yMy44MS41IDEuMS44MWwtLjkxIDEuMDFjLS4yNC0uMjQtLjQ5LS40Mi0uNzUtLjU2LS4yNy0uMTMtLjU4LS4yLS45My0uMi0uMzkgMC0uNzMuMDgtMS4wNS4yMy0uMzEuMTYtLjU4LjM3LS44MS42Ni0uMjMuMjgtLjQxLjYzLS41MyAxLjA0LS4xMy40MS0uMTkuODgtLjE5IDEuMzkgMCAxLjA0LjIzIDEuODYuNjggMi40Ni40NS41OSAxLjA2Ljg4IDEuODQuODguNDEgMCAuNzctLjA3IDEuMDctLjIzcy41OS0uMzkuODUtLjY4bC45MSAxYy0uMzguNDMtLjguNzYtMS4yOC45OS0uNDcuMjItMSAuMzQtMS41OC4zNC0uNTkgMC0xLjEzLS4xLTEuNjQtLjMxLS41LS4yLS45NC0uNTEtMS4zMS0uOTEtLjM4LS40LS42Ny0uOS0uODgtMS40OC0uMjItLjU5LS4zMy0xLjI2LS4zMy0yLjAyem04LjQtNS4zM2gxLjYxdjIuNTRsLS4wNSAxLjMzYy4yOS0uMjcuNjEtLjUxLjk2LS43MnMuNzYtLjMxIDEuMjQtLjMxYy43MyAwIDEuMjcuMjMgMS42MS43MS4zMy40Ny41IDEuMTQuNSAyLjAydjQuMzFoLTEuNjF2LTQuMWMwLS41Ny0uMDgtLjk3LS4yNS0xLjIxLS4xNy0uMjMtLjQ1LS4zNS0uODMtLjM1LS4zIDAtLjU2LjA4LS43OS4yMi0uMjMuMTUtLjQ5LjM2LS43OC42NHY0LjhoLTEuNjF6bTcuMzcgNi40NWMwLS41Ni4wOS0xLjA2LjI2LTEuNTEuMTgtLjQ1LjQyLS44My43MS0xLjE0LjI5LS4zLjYzLS41NCAxLjAxLS43MS4zOS0uMTcuNzgtLjI1IDEuMTgtLjI1LjQ3IDAgLjg4LjA4IDEuMjMuMjQuMzYuMTYuNjUuMzguODkuNjdzLjQyLjYzLjU0IDEuMDNjLjEyLjQxLjE4Ljg0LjE4IDEuMzIgMCAuMzItLjAyLjU3LS4wNy43NmgtNC4zNmMuMDcuNjIuMjkgMS4xLjY1IDEuNDQuMzYuMzMuODIuNSAxLjM4LjUuMjkgMCAuNTctLjA0LjgzLS4xM3MuNTEtLjIxLjc2LS4zN2wuNTUgMS4wMWMtLjMzLjIxLS42OS4zOS0xLjA5LjUzLS40MS4xNC0uODMuMjEtMS4yNi4yMS0uNDggMC0uOTItLjA4LTEuMzQtLjI1LS40MS0uMTYtLjc2LS40LTEuMDctLjctLjMxLS4zMS0uNTUtLjY5LS43Mi0xLjEzLS4xOC0uNDQtLjI2LS45NS0uMjYtMS41MnptNC42LS42MmMwLS41NS0uMTEtLjk4LS4zNC0xLjI4LS4yMy0uMzEtLjU4LS40Ny0xLjA2LS40Ny0uNDEgMC0uNzcuMTUtMS4wNy40NS0uMzEuMjktLjUuNzMtLjU4IDEuM3ptMi41LjYyYzAtLjU3LjA5LTEuMDguMjgtMS41My4xOC0uNDQuNDMtLjgyLjc1LTEuMTNzLjY5LS41NCAxLjEtLjcxYy40Mi0uMTYuODUtLjI0IDEuMzEtLjI0LjQ1IDAgLjg0LjA4IDEuMTcuMjNzLjYxLjM0Ljg1LjU3bC0uNzcgMS4wMmMtLjE5LS4xNi0uMzgtLjI4LS41Ni0uMzctLjE5LS4wOS0uMzktLjE0LS42MS0uMTQtLjU2IDAtMS4wMS4yMS0xLjM1LjYzLS4zNS40MS0uNTIuOTctLjUyIDEuNjcgMCAuNjkuMTcgMS4yNC41MSAxLjY2LjM0LjQxLjc4LjYyIDEuMzIuNjIuMjggMCAuNTQtLjA2Ljc4LS4xNy4yNC0uMTIuNDUtLjI2LjY0LS40MmwuNjcgMS4wM2MtLjMzLjI5LS42OS41MS0xLjA4LjY1LS4zOS4xNS0uNzguMjMtMS4xOC4yMy0uNDYgMC0uOS0uMDgtMS4zMS0uMjQtLjQtLjE2LS43NS0uMzktMS4wNS0uN3MtLjUzLS42OS0uNy0xLjEzYy0uMTctLjQ1LS4yNS0uOTYtLjI1LTEuNTN6bTYuOTEtNi40NWgxLjU4djYuMTdoLjA1bDIuNTQtMy4xNmgxLjc3bC0yLjM1IDIuOCAyLjU5IDQuMDdoLTEuNzVsLTEuNzctMi45OC0xLjA4IDEuMjN2MS43NWgtMS41OHptMTMuNjkgMS4yN2MtLjI1LS4xMS0uNS0uMTctLjc1LS4xNy0uNTggMC0uODcuMzktLjg3IDEuMTZ2Ljc1aDEuMzR2MS4yN2gtMS4zNHY1LjZoLTEuNjF2LTUuNmgtLjkydi0xLjJsLjkyLS4wN3YtLjcyYzAtLjM1LjA0LS42OC4xMy0uOTguMDgtLjMxLjIxLS41Ny40LS43OXMuNDItLjM5LjcxLS41MWMuMjgtLjEyLjYzLS4xOCAxLjA0LS4xOC4yNCAwIC40OC4wMi42OS4wNy4yMi4wNS40MS4xLjU3LjE3em0uNDggNS4xOGMwLS41Ny4wOS0xLjA4LjI3LTEuNTMuMTctLjQ0LjQxLS44Mi43Mi0xLjEzLjMtLjMxLjY1LS41NCAxLjA0LS43MS4zOS0uMTYuOC0uMjQgMS4yMy0uMjRzLjg0LjA4IDEuMjQuMjRjLjQuMTcuNzQuNCAxLjA0Ljcxcy41NC42OS43MiAxLjEzYy4xOS40NS4yOC45Ni4yOCAxLjUzcy0uMDkgMS4wOC0uMjggMS41M2MtLjE4LjQ0LS40Mi44Mi0uNzIgMS4xM3MtLjY0LjU0LTEuMDQuNy0uODEuMjQtMS4yNC4yNC0uODQtLjA4LTEuMjMtLjI0LS43NC0uMzktMS4wNC0uN2MtLjMxLS4zMS0uNTUtLjY5LS43Mi0xLjEzLS4xOC0uNDUtLjI3LS45Ni0uMjctMS41M3ptMS42NSAwYzAgLjY5LjE0IDEuMjQuNDMgMS42Ni4yOC40MS42OC42MiAxLjE4LjYyLjUxIDAgLjktLjIxIDEuMTktLjYyLjI5LS40Mi40NC0uOTcuNDQtMS42NiAwLS43LS4xNS0xLjI2LS40NC0xLjY3LS4yOS0uNDItLjY4LS42My0xLjE5LS42My0uNSAwLS45LjIxLTEuMTguNjMtLjI5LjQxLS40My45Ny0uNDMgMS42N3ptNi40OC0zLjQ0aDEuMzNsLjEyIDEuMjFoLjA1Yy4yNC0uNDQuNTQtLjc5Ljg4LTEuMDIuMzUtLjI0LjctLjM2IDEuMDctLjM2LjMyIDAgLjU5LjA1Ljc4LjE0bC0uMjggMS40LS4zMy0uMDljLS4xMS0uMDEtLjIzLS4wMi0uMzgtLjAyLS4yNyAwLS41Ni4xLS44Ni4zMXMtLjU1LjU4LS43NyAxLjF2NC4yaC0xLjYxem0tNDcuODcgMTVoMS42MXY0LjFjMCAuNTcuMDguOTcuMjUgMS4yLjE3LjI0LjQ0LjM1LjgxLjM1LjMgMCAuNTctLjA3LjgtLjIyLjIyLS4xNS40Ny0uMzkuNzMtLjczdi00LjdoMS42MXY2Ljg3aC0xLjMybC0uMTItMS4wMWgtLjA0Yy0uMy4zNi0uNjMuNjQtLjk4Ljg2LS4zNS4yMS0uNzYuMzItMS4yNC4zMi0uNzMgMC0xLjI3LS4yNC0xLjYxLS43MS0uMzMtLjQ3LS41LTEuMTQtLjUtMi4wMnptOS40NiA3LjQzdjIuMTZoLTEuNjF2LTkuNTloMS4zM2wuMTIuNzJoLjA1Yy4yOS0uMjQuNjEtLjQ1Ljk3LS42My4zNS0uMTcuNzItLjI2IDEuMS0uMjYuNDMgMCAuODEuMDggMS4xNS4yNC4zMy4xNy42MS40Ljg0LjcxLjI0LjMxLjQxLjY4LjUzIDEuMTEuMTMuNDIuMTkuOTEuMTkgMS40NCAwIC41OS0uMDkgMS4xMS0uMjUgMS41Ny0uMTYuNDctLjM4Ljg1LS42NSAxLjE2LS4yNy4zMi0uNTguNTYtLjk0LjczLS4zNS4xNi0uNzIuMjUtMS4xLjI1LS4zIDAtLjYtLjA3LS45LS4ycy0uNTktLjMxLS44Ny0uNTZ6bTAtMi4zYy4yNi4yMi41LjM3LjczLjQ1LjI0LjA5LjQ2LjEzLjY2LjEzLjQ2IDAgLjg0LS4yIDEuMTUtLjYuMzEtLjM5LjQ2LS45OC40Ni0xLjc3IDAtLjY5LS4xMi0xLjIyLS4zNS0xLjYxLS4yMy0uMzgtLjYxLS41Ny0xLjEzLS41Ny0uNDkgMC0uOTkuMjYtMS41Mi43N3ptNS44Ny0xLjY5YzAtLjU2LjA4LTEuMDYuMjUtMS41MS4xNi0uNDUuMzctLjgzLjY1LTEuMTQuMjctLjMuNTgtLjU0LjkzLS43MXMuNzEtLjI1IDEuMDgtLjI1Yy4zOSAwIC43My4wNyAxIC4yLjI3LjE0LjU0LjMyLjgxLjU1bC0uMDYtMS4xdi0yLjQ5aDEuNjF2OS44OGgtMS4zM2wtLjExLS43NGgtLjA2Yy0uMjUuMjUtLjU0LjQ2LS44OC42NC0uMzMuMTgtLjY5LjI3LTEuMDYuMjctLjg3IDAtMS41Ni0uMzItMi4wNy0uOTVzLS43Ni0xLjUxLS43Ni0yLjY1em0xLjY3LS4wMWMwIC43NC4xMyAxLjMxLjQgMS43LjI2LjM4LjY1LjU4IDEuMTUuNTguNTEgMCAuOTktLjI2IDEuNDQtLjc3di0zLjIxYy0uMjQtLjIxLS40OC0uMzYtLjctLjQ1LS4yMy0uMDgtLjQ2LS4xMi0uNy0uMTItLjQ1IDAtLjgyLjE5LTEuMTMuNTktLjMxLjM5LS40Ni45NS0uNDYgMS42OHptNi4zNSAxLjU5YzAtLjczLjMyLTEuMy45Ny0xLjcxLjY0LS40IDEuNjctLjY4IDMuMDgtLjg0IDAtLjE3LS4wMi0uMzQtLjA3LS41MS0uMDUtLjE2LS4xMi0uMy0uMjItLjQzcy0uMjItLjIyLS4zOC0uM2MtLjE1LS4wNi0uMzQtLjEtLjU4LS4xLS4zNCAwLS42OC4wNy0xIC4ycy0uNjMuMjktLjkzLjQ3bC0uNTktMS4wOGMuMzktLjI0LjgxLS40NSAxLjI4LS42My40Ny0uMTcuOTktLjI2IDEuNTQtLjI2Ljg2IDAgMS41MS4yNSAxLjkzLjc2cy42MyAxLjI1LjYzIDIuMjF2NC4wN2gtMS4zMmwtLjEyLS43NmgtLjA1Yy0uMy4yNy0uNjMuNDgtLjk4LjY2cy0uNzMuMjctMS4xNC4yN2MtLjYxIDAtMS4xLS4xOS0xLjQ4LS41Ni0uMzgtLjM2LS41Ny0uODUtLjU3LTEuNDZ6bTEuNTctLjEyYzAgLjMuMDkuNTMuMjcuNjcuMTkuMTQuNDIuMjEuNzEuMjEuMjggMCAuNTQtLjA3Ljc3LS4ycy40OC0uMzEuNzMtLjU2di0xLjU0Yy0uNDcuMDYtLjg2LjEzLTEuMTguMjMtLjMxLjA5LS41Ny4xOS0uNzYuMzFzLS4zMy4yNS0uNDEuNGMtLjA5LjE1LS4xMy4zMS0uMTMuNDh6bTYuMjktMy42M2gtLjk4di0xLjJsMS4wNi0uMDcuMi0xLjg4aDEuMzR2MS44OGgxLjc1djEuMjdoLTEuNzV2My4yOGMwIC44LjMyIDEuMi45NyAxLjIuMTIgMCAuMjQtLjAxLjM3LS4wNC4xMi0uMDMuMjQtLjA3LjM0LS4xMWwuMjggMS4xOWMtLjE5LjA2LS40LjEyLS42NC4xNy0uMjMuMDUtLjQ5LjA4LS43Ni4wOC0uNCAwLS43NC0uMDYtMS4wMi0uMTgtLjI3LS4xMy0uNDktLjMtLjY3LS41Mi0uMTctLjIxLS4zLS40OC0uMzctLjc4LS4wOC0uMy0uMTItLjY0LS4xMi0xLjAxem00LjM2IDIuMTdjMC0uNTYuMDktMS4wNi4yNy0xLjUxcy40MS0uODMuNzEtMS4xNGMuMjktLjMuNjMtLjU0IDEuMDEtLjcxLjM5LS4xNy43OC0uMjUgMS4xOC0uMjUuNDcgMCAuODguMDggMS4yMy4yNC4zNi4xNi42NS4zOC44OS42N3MuNDIuNjMuNTQgMS4wM2MuMTIuNDEuMTguODQuMTggMS4zMiAwIC4zMi0uMDIuNTctLjA3Ljc2aC00LjM3Yy4wOC42Mi4yOSAxLjEuNjUgMS40NC4zNi4zMy44Mi41IDEuMzguNS4zIDAgLjU4LS4wNC44NC0uMTMuMjUtLjA5LjUxLS4yMS43Ni0uMzdsLjU0IDEuMDFjLS4zMi4yMS0uNjkuMzktMS4wOS41M3MtLjgyLjIxLTEuMjYuMjFjLS40NyAwLS45Mi0uMDgtMS4zMy0uMjUtLjQxLS4xNi0uNzctLjQtMS4wOC0uNy0uMy0uMzEtLjU0LS42OS0uNzItMS4xMy0uMTctLjQ0LS4yNi0uOTUtLjI2LTEuNTJ6bTQuNjEtLjYyYzAtLjU1LS4xMS0uOTgtLjM0LTEuMjgtLjIzLS4zMS0uNTgtLjQ3LTEuMDYtLjQ3LS40MSAwLS43Ny4xNS0xLjA4LjQ1LS4zMS4yOS0uNS43My0uNTcgMS4zem0zLjAxIDIuMjNjLjMxLjI0LjYxLjQzLjkyLjU3LjMuMTMuNjMuMi45OC4yLjM4IDAgLjY1LS4wOC44My0uMjNzLjI3LS4zNS4yNy0uNmMwLS4xNC0uMDUtLjI2LS4xMy0uMzctLjA4LS4xLS4yLS4yLS4zNC0uMjgtLjE0LS4wOS0uMjktLjE2LS40Ny0uMjNsLS41My0uMjJjLS4yMy0uMDktLjQ2LS4xOC0uNjktLjMtLjIzLS4xMS0uNDQtLjI0LS42Mi0uNHMtLjMzLS4zNS0uNDUtLjU1Yy0uMTItLjIxLS4xOC0uNDYtLjE4LS43NSAwLS42MS4yMy0xLjEuNjgtMS40OS40NC0uMzggMS4wNi0uNTcgMS44My0uNTcuNDggMCAuOTEuMDggMS4yOS4yNXMuNzEuMzYuOTkuNTdsLS43NC45OGMtLjI0LS4xNy0uNDktLjMyLS43My0uNDItLjI1LS4xMS0uNTEtLjE2LS43OC0uMTYtLjM1IDAtLjYuMDctLjc2LjIxLS4xNy4xNS0uMjUuMzMtLjI1LjU0IDAgLjE0LjA0LjI2LjEyLjM2cy4xOC4xOC4zMS4yNmMuMTQuMDcuMjkuMTQuNDYuMjFsLjU0LjE5Yy4yMy4wOS40Ny4xOC43LjI5cy40NC4yNC42NC40Yy4xOS4xNi4zNC4zNS40Ni41OC4xMS4yMy4xNy41LjE3LjgyIDAgLjMtLjA2LjU4LS4xNy44My0uMTIuMjYtLjI5LjQ4LS41MS42OC0uMjMuMTktLjUxLjM0LS44NC40NS0uMzQuMTEtLjcyLjE3LTEuMTUuMTctLjQ4IDAtLjk1LS4wOS0xLjQxLS4yNy0uNDYtLjE5LS44Ni0uNDEtMS4yLS42OHoiIGZpbGw9IiM1MzUzNTMiLz48L2c+PC9zdmc+" /></a></div><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Vosinakis, S., Koutsabasis, P. Evaluation of visual feedback techniques for virtual grasping with bare hands using Leap Motion and Oculus Rift.
+                    <i>Virtual Reality</i> <b>22, </b>47–62 (2018). https://doi.org/10.1007/s10055-017-0313-4</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-017-0313-4.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2016-07-12">12 July 2016</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2017-04-24">24 April 2017</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2017-05-04">04 May 2017</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2018-03">March 2018</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-017-0313-4" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-017-0313-4</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Virtual grasping</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Visual feedback techniques</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Bare hand interaction</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Leap Motion</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Oculus Rift</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Usability evaluation</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-017-0313-4.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=313;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

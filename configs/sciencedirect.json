@@ -1,0 +1,38 @@
+{
+    "name": "sciencedirect",
+    "urls": {
+        "list": {
+            "_url": "http://localhost:8000/sciencedirect",
+            "url": "https://www.sciencedirect.com/search",
+            "per-page": 100,
+            "params": {
+                "page": "offset",
+                "per-page": "show",
+                "offset": true
+            }
+        },
+        "paper": {
+            "_url": "http://localhost:8000/sciencedirect/{identifier}",
+            "url": "https://www.sciencedirect.com/science/article/pii/{identifier}"
+        },
+        "pdf": "https://www.sciencedirect.com/science/article/pii/{identifier}/pdfft"
+    },
+    "sleep_between_requests": 0.1,
+    "regex": {
+        "list": {
+            "identifiers": "<input type=\"checkbox\" id=\"([^\"]+)\" class=\"checkbox-input select-result show-from-md checkbox-small\"",
+            "total_number_of_results": "<span class=\"search-body-results-text\">(\\d+) results<\/span>"
+        },
+        "paper": {
+            "authors": "<a class=\"author size-m workspace-trigger\" name=\"baep-author-id\\d+\" href=\"#!\">([\\S\\s]+?)<\/a>",
+            "keywords": "",
+            "title": "<span class=\"title-text\">([^<]+)<\/span><\/h1>",
+            "abstract": "<div id=\"aep-abstract-sec-id\\d+\">([\\s\\S]+?)<\/div>",
+            "published_in": "<a class=\"publication-title-link\" title=\"[^\"]+\" href=\"[^\"]+\">([^<]+)<\/a>",
+            "publication_date": "<meta name=\"citation_publication_date\" content=\"([^\"]+)\" \/>",
+            "doi": "<meta name=\"citation_doi\" content=\"([^\"]+)\" \/>",
+            "citations": "",
+            "isbn": ""
+        }
+    }
+}

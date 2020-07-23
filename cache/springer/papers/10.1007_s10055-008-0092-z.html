@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="Computer game engines for developing first-person virtual environments"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="Building realistic virtual environments is a complex, expensive and time consuming process. Although virtual environment development toolkits are available, many only provide a subset of the tools..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/12/3.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="Computer game engines for developing first-person virtual environments"/>
+
+    <meta name="dc.source" content="Virtual Reality 2008 12:3"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2008-03-28"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2008 Springer-Verlag London Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="Building realistic virtual environments is a complex, expensive and time consuming process. Although virtual environment development toolkits are available, many only provide a subset of the tools needed to build complete virtual worlds. One alternative is the reuse of computer game technology. The current generation of computer games present realistic virtual worlds featuring user friendly interaction and the simulation of real world phenomena. Using computer games as the basis for virtual environment development has a number of advantages. Computer games are robust and extensively tested, both for usability and performance, work on off-the-shelf systems and can be easily disseminated, for example via online communities. Additionally, a number of computer game developers provide tools, documentation and source code, either with the game itself or separately available, so that end-users can create new content. This short report overviews several currently available game engines that are suitable for prototyping virtual environments."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2008-03-28"/>
+
+    <meta name="prism.volume" content="12"/>
+
+    <meta name="prism.number" content="3"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="181"/>
+
+    <meta name="prism.endingPage" content="187"/>
+
+    <meta name="prism.copyright" content="2008 Springer-Verlag London Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-008-0092-z"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-008-0092-z"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-008-0092-z.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-008-0092-z"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="Computer game engines for developing first-person virtual environments"/>
+
+    <meta name="citation_volume" content="12"/>
+
+    <meta name="citation_issue" content="3"/>
+
+    <meta name="citation_publication_date" content="2008/09"/>
+
+    <meta name="citation_online_date" content="2008/03/28"/>
+
+    <meta name="citation_firstpage" content="181"/>
+
+    <meta name="citation_lastpage" content="187"/>
+
+    <meta name="citation_article_type" content="Original Article"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-008-0092-z"/>
+
+    <meta name="DOI" content="10.1007/s10055-008-0092-z"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-008-0092-z"/>
+
+    <meta name="description" content="Building realistic virtual environments is a complex, expensive and time consuming process. Although virtual environment development toolkits are available"/>
+
+    <meta name="dc.creator" content="David Trenholme"/>
+
+    <meta name="dc.creator" content="Shamus P. Smith"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="Allbeck JM, Badler NI (2002) Embodied autonomous agents. In: Stanney KM (ed) Handbook of virtual environments. Lawrence Erlbaum Associates, pp 313&#8211;332"/>
+
+    <meta name="citation_reference" content=" Bell JT, Fogler HS (2003) Implementing virtual reality laboratory accidents using the Half-Life game engine, WorldUp, and Java3D. In: 2003 American society for engineering education annual conference &amp; exposition. American Society for Engineering Education"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Virtual Real; citation_title=Open new dimensions for e-Tourism; citation_author=H Berger, D Merkl, S Simoff; citation_volume=11; citation_publication_date=2007; citation_pages=75-87; citation_doi=10.1007/s10055-006-0057-z; citation_id=CR3"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Technol Health Care; citation_title=Effectiveness of virtual reality exposure in the treatment of arachnophobia using 3D games; citation_author=S Bouchard, S C&#244;t&#233;, J St-Jacques, G Robillard, P Renaud; citation_volume=14; citation_publication_date=2006; citation_pages=19-27; citation_id=CR4"/>
+
+    <meta name="citation_reference" content="citation_title=3D User interfaces: Theory and Practise; citation_publication_date=2005; citation_id=CR5; citation_author=DA Bowman; citation_author=E Kruijff; citation_author=JJ LaViola; citation_author=I Poupyrev; citation_publisher=Addison Wesley"/>
+
+    <meta name="citation_reference" content="Bylund M, Espinoza F (2001) Using Quake III Arena to simulate sensors and actuators when evaluating and testing mobile services. In: Extended abstracts of the ACM conference on human factors in computing systems (CHI 2001). ACM, pp 241&#8211;242"/>
+
+    <meta name="citation_reference" content="Cavazza M, Charles F, Mead SJ (2002) Emergent situations in interactive storytelling. In: Proceedings of the 2002 ACM symposium on applied computing, ACM, pp 1080&#8211;1085"/>
+
+    <meta name="citation_reference" content="DeLeon V, Berry R Jr (2000) Bringing VR to the desktop: are you game? IEEE MultiMedia, April&#8211;June, pp 68&#8211;72"/>
+
+    <meta name="citation_reference" content="citation_title=3D game engine design: a practical approach to real-time computer graphics; citation_publication_date=2007; citation_id=CR9; citation_author=DH Eberly; citation_publisher=Morgan Kaufmann Publishers"/>
+
+    <meta name="citation_reference" content="citation_title=Computer graphics: principles and practice.; citation_publication_date=1990; citation_id=CR10; citation_author=JD Foley; citation_author=A Dam; citation_author=SK Feiner; citation_author=JF Hughes; citation_publisher=Addison-Wesley"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comp Human Behav; citation_title=The use of virtual environments based on a modification of the computer game Quake III Arena in psychological experimenting; citation_author=A Frey, J Hartig, A Ketzel, A Zinkernagel, H Moosbrugger; citation_volume=23; citation_publication_date=2007; citation_pages=2026-2039; citation_doi=10.1016/j.chb.2006.02.010; citation_id=CR11"/>
+
+    <meta name="citation_reference" content="Gershon N, Sawyer B, Parker JR (2006) Games and technology: developing synergy. IEEE Computer, December, pp 129&#8211;130"/>
+
+    <meta name="citation_reference" content="Guilfoyle E (2007) Half-Life 2 mods for dummies. Wiley, London"/>
+
+    <meta name="citation_reference" content="Herwig A, Paar P (2002) Game engines: tools for landscape visualization and planning? In: Trends in GIS and virtualization in environmental planning and design, Wichmann Verlag, pp 161&#8211;172"/>
+
+    <meta name="citation_reference" content="Jacobson J (2003) Using &#8220;CaveUT&#8221; to build immersive displays with the Unreal Tournament engine and a PC cluster. In ACM symposium on interactive 3D graphics. ACM Press, pp 221&#8211;222"/>
+
+    <meta name="citation_reference" content="Kessler GD (2002) Virtual environment models. In: Stanney KM (ed) Handbook of virtual environments. Lawrence Erlbaum Associates, pp 255&#8211;276"/>
+
+    <meta name="citation_reference" content="Kot B, Wuensche B, Grundy J, Hosking J (2005) Information visualisation utilising 3D computer game engines case study: a source code comprehension tool. In 6th ACM SIGCHI New Zealand chapter international conference on computer-human interaction (CHINZ 2005), ACM, pp 53&#8211;60"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Commun ACM; citation_title=Research in human-level AI using computer games; citation_author=JE Laird; citation_volume=45; citation_issue=1; citation_publication_date=2002; citation_pages=32-35; citation_doi=10.1145/502269.502290; citation_id=CR18"/>
+
+    <meta name="citation_reference" content="Laird JE, Assanie M, Bachelor B, Benninghoff N, Enam S, Jones B, Kerfoot A, Lauver C, Magerko B, Sheiman J, Stokes D, Wallace S (2002) A test bed for developing intelligent synthetic characters. In: Artificial intelligence and interactive entertainment: papers from the 2002 AAAI Spring Symposium, AAAI, pp 52&#8211;56"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Virtual Real; citation_title=Virtual museums for all: employing game technology for edutainment; citation_author=G Lepouras, C Vassilakis; citation_volume=8; citation_publication_date=2005; citation_pages=96-106; citation_doi=10.1007/s10055-004-0141-1; citation_id=CR20"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Commun ACM; citation_title=Game engines in scientific research; citation_author=M Lewis, J Jacobson; citation_volume=45; citation_issue=1; citation_publication_date=2002; citation_pages=27-31; citation_id=CR21"/>
+
+    <meta name="citation_reference" content="citation_journal_title=J Cogn Eng Deci Making; citation_title=USARSim: simulation for the study of human-robot interaction; citation_author=M Lewis, J Wang, S Hughes; citation_volume=1; citation_issue=1; citation_publication_date=2007; citation_pages=98-120; citation_id=CR22"/>
+
+    <meta name="citation_reference" content="Mac Namee B, Rooney P, Lindstrom P, Ritchie A, Boylan F, Burke G (2006) Serious Gordon: using serious games to teach food safety in the kitchen. In: 9th international conference on computer games: AI, animation, mobile, educational &amp; serious games CGAMES06"/>
+
+    <meta name="citation_reference" content="O&#8217;Neill E, Lewis D, McGlinn K, Dobson S (2007) Rapid user-centred evaluation for context-aware systems. In: Doherty G, Blandford A (eds) Interactive systems. Design, specification and verification. 13th interactional workshop, DSVIS 2006, vol LNCS 4323, Springer, Heidelberg, pp 220&#8211;233"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Commun ACM; citation_title=ARQuake: the outdoor augmented reality gaming system; citation_author=W Piekarski, B Thomas; citation_volume=45; citation_issue=1; citation_publication_date=2002; citation_pages=36-38; citation_doi=10.1145/502269.502291; citation_id=CR25"/>
+
+    <meta name="citation_reference" content="Popescu GV, Burdea GC, Trefftz H (2002) Multimodal interaction modelling. In: Stanney KM (ed) Handbook of virtual environments. Lawrence Erlbaum Associates, pp 435&#8211;454"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Presence; citation_title=Enhanced environments: large-scale, real-time ecosystems; citation_author=ST Refsland, T Ojika, R Berry; citation_volume=11; citation_issue=3; citation_publication_date=2002; citation_pages=221-246; citation_doi=10.1162/105474602317473196; citation_id=CR27"/>
+
+    <meta name="citation_reference" content="citation_journal_title=CyberPsychol Behav; citation_title=Anxiety and presence using VR immersion: a comparative study of the reactions of phobic and non-phobic participants in therapeutic virtual environments derived from computer games; citation_author=G Robillard, S Bouchard, T Fournier, P Renaud; citation_volume=6; citation_issue=5; citation_publication_date=2003; citation_pages=467-475; citation_doi=10.1089/109493103769710497; citation_id=CR28"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Presence; citation_title=Human behaviour models for agents in simulators and games: Part II: Gamebot engineering with PMFserv; citation_author=BG Silverman, G Bharathy, K O&#8217;Brien, J Cornwell; citation_volume=15; citation_issue=2; citation_publication_date=2006; citation_pages=163-185; citation_doi=10.1162/pres.2006.15.2.163; citation_id=CR29"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comput Graph Forum; citation_title=Binding virtual environments to toolkit capabilities; citation_author=SP Smith, DJ Duke; citation_volume=19; citation_issue=3; citation_publication_date=2000; citation_pages=C-81-C-89; citation_doi=10.1111/1467-8659.00400; citation_id=CR30"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Int J Hum Comput Stud; citation_title=Editorial: user centred design and implementation of virtual environments; citation_author=SP Smith, MD Harrison; citation_volume=55; citation_issue=2; citation_publication_date=2001; citation_pages=109-114; citation_doi=10.1006/ijhc.2001.0476; citation_id=CR31"/>
+
+    <meta name="citation_reference" content="Smith SP, Hart J (2006) Evaluating distributed cognitive resources for wayfinding in a desktop virtual environment. In: Kitamura Y, Bowman D, Fr&#246;hlich B, St&#252;rzlinger W (eds) IEEE symposium on 3D user interfaces 2006. IEEE, pp 3&#8211;10"/>
+
+    <meta name="citation_reference" content="Smith SP, Willans JS (2006) Virtual object specification for usable virtual environments. In: Annual conference of the Australian computer-human interaction special interest group (OzCHI 2006). ACM"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Presence; citation_title=Enabling scalability by partitioning virtual environments using frontier sets; citation_author=A Steed, C Angus; citation_volume=15; citation_issue=1; citation_publication_date=2006; citation_pages=77-92; citation_doi=10.1162/pres.2006.15.1.77; citation_id=CR34"/>
+
+    <meta name="citation_reference" content="Wang J, Lewis M, Gennari J (2003) USAR : a game based simulation for teleoperation. In: 47th annual meeting of the human factors and ergonomics society, Denver, CO"/>
+
+    <meta name="citation_reference" content="Zyda M (2005) From visual simulation to virtual reality to games. IEEE Computer, September, pp 25&#8211;32"/>
+
+    <meta name="citation_author" content="David Trenholme"/>
+
+    <meta name="citation_author_institution" content="Durham University, Durham, UK"/>
+
+    <meta name="citation_author" content="Shamus P. Smith"/>
+
+    <meta name="citation_author_email" content="shamus.smith@durham.ac.uk"/>
+
+    <meta name="citation_author_institution" content="Durham University, Durham, UK"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-008-0092-z&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2008/09/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-008-0092-z"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="Computer game engines for developing first-person virtual environments"/>
+        <meta property="og:description" content="Building realistic virtual environments is a complex, expensive and time consuming process. Although virtual environment development toolkits are available, many only provide a subset of the tools needed to build complete virtual worlds. One alternative is the reuse of computer game technology. The current generation of computer games present realistic virtual worlds featuring user friendly interaction and the simulation of real world phenomena. Using computer games as the basis for virtual environment development has a number of advantages. Computer games are robust and extensively tested, both for usability and performance, work on off-the-shelf systems and can be easily disseminated, for example via online communities. Additionally, a number of computer game developers provide tools, documentation and source code, either with the game itself or separately available, so that end-users can create new content. This short report overviews several currently available game engines that are suitable for prototyping virtual environments."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>Computer game engines for developing first-person virtual environments | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-008-0092-z","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Virtual environments, Computer game technology, Game engines, Reuse, Prototyping","kwrd":["Virtual_environments","Computer_game_technology","Game_engines","Reuse","Prototyping"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-008-0092-z","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-008-0092-z","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=92;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-008-0092-z">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            Computer game engines for developing first-person virtual environments
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-008-0092-z.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-008-0092-z.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">Original Article</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2008-03-28" itemprop="datePublished">28 March 2008</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">Computer game engines for developing first-person virtual environments</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-David-Trenholme" data-author-popup="auth-David-Trenholme">David Trenholme</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Durham University" /><meta itemprop="address" content="grid.8250.f, 0000000087000572, Durham University, Durham, DH1 3LE, UK" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Shamus_P_-Smith" data-author-popup="auth-Shamus_P_-Smith" data-corresp-id="c1">Shamus P. Smith<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Durham University" /><meta itemprop="address" content="grid.8250.f, 0000000087000572, Durham University, Durham, DH1 3LE, UK" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 12</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">181</span>–<span itemprop="pageEnd">187</span>(<span data-test="article-publication-year">2008</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">1672 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">50 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                    
+                        <li class="c-article-metrics-bar__item">
+                            <p class="c-article-metrics-bar__count">0 <span class="c-article-metrics-bar__label">Altmetric</span></p>
+                        </li>
+                    
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-008-0092-z/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>Building realistic virtual environments is a complex, expensive and time consuming process. Although virtual environment development toolkits are available, many only provide a subset of the tools needed to build complete virtual worlds. One alternative is the reuse of computer game technology. The current generation of computer games present realistic virtual worlds featuring user friendly interaction and the simulation of real world phenomena. Using computer games as the basis for virtual environment development has a number of advantages. Computer games are robust and extensively tested, both for usability and performance, work on off-the-shelf systems and can be easily disseminated, for example via online communities. Additionally, a number of computer game developers provide tools, documentation and source code, either with the game itself or separately available, so that end-users can create new content. This short report overviews several currently available game engines that are suitable for prototyping virtual environments.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Introduction</h2><div class="c-article-section__content" id="Sec1-content"><p>Building realistic virtual environments is a complex, expensive and time consuming process (Laird <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Laird JE (2002) Research in human-level AI using computer games. Commun ACM 45(1):32–35" href="/article/10.1007/s10055-008-0092-z#ref-CR18" id="ref-link-section-d76868e296">2002</a>; Robillard et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Robillard G, Bouchard S, Fournier T, Renaud P (2003) Anxiety and presence using VR immersion: a comparative study of the reactions of phobic and non-phobic participants in therapeutic virtual environments derived from computer games. CyberPsychol Behav 6(5):467–475" href="/article/10.1007/s10055-008-0092-z#ref-CR28" id="ref-link-section-d76868e299">2003</a>; Smith and Duke <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Smith SP, Duke DJ (2000) Binding virtual environments to toolkit capabilities. Comput Graph Forum 19(3):C-81–C-89" href="/article/10.1007/s10055-008-0092-z#ref-CR30" id="ref-link-section-d76868e302">2000</a>; Smith and Harrison <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Smith SP, Harrison MD (2001) Editorial: user centred design and implementation of virtual environments. Int J Hum Comput Stud 55(2):109–114" href="/article/10.1007/s10055-008-0092-z#ref-CR31" id="ref-link-section-d76868e305">2001</a>). Lepuras and Vassilakis (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Lepouras G, Vassilakis C (2005) Virtual museums for all: employing game technology for edutainment. Virtual Real 8:96–106" href="/article/10.1007/s10055-008-0092-z#ref-CR20" id="ref-link-section-d76868e308">2005</a>) note that state-of-the-art virtual environments are both costly to build and to maintain. In addition to generating virtual object models (Kessler <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Kessler GD (2002) Virtual environment models. In: Stanney KM (ed) Handbook of virtual environments. Lawrence Erlbaum Associates, pp 255–276" href="/article/10.1007/s10055-008-0092-z#ref-CR16" id="ref-link-section-d76868e312">2002</a>; Smith and Willans <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Smith SP, Willans JS (2006) Virtual object specification for usable virtual environments. In: Annual conference of the Australian computer-human interaction special interest group (OzCHI 2006). ACM" href="/article/10.1007/s10055-008-0092-z#ref-CR33" id="ref-link-section-d76868e315">2006</a>), for example buildings and scenery, a developer must also manage support for user interaction (Bowman et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Bowman DA, Kruijff E, LaViola JJ Jr, Poupyrev I (2005) 3D user interfaces: theory and practise. Addison Wesley, USA" href="/article/10.1007/s10055-008-0092-z#ref-CR5" id="ref-link-section-d76868e318">2005</a>; Smith and Hart <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Smith SP, Hart J (2006) Evaluating distributed cognitive resources for wayfinding in a desktop virtual environment. In: Kitamura Y, Bowman D, Fröhlich B, Stürzlinger W (eds) IEEE symposium on 3D user interfaces 2006. IEEE, pp 3–10" href="/article/10.1007/s10055-008-0092-z#ref-CR32" id="ref-link-section-d76868e321">2006</a>), any environment and object behaviours that are required, for example collision detection, and any non-visual features of the virtual world, for example audio cues and haptic feedback (Popescu et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Popescu GV, Burdea GC, Trefftz H (2002) Multimodal interaction modelling. In: Stanney KM (ed) Handbook of virtual environments. Lawrence Erlbaum Associates, pp 435–454" href="/article/10.1007/s10055-008-0092-z#ref-CR26" id="ref-link-section-d76868e324">2002</a>). Although virtual environment development toolkits are available, many only provide a subset of the tools needed to build complete virtual worlds. Some features of virtual worlds such as wind, fire, smoke and water, and the provision for embodied autonomous agents (Allbeck and Badler <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Allbeck JM, Badler NI (2002) Embodied autonomous agents. In: Stanney KM (ed) Handbook of virtual environments. Lawrence Erlbaum Associates, pp 313–332" href="/article/10.1007/s10055-008-0092-z#ref-CR1" id="ref-link-section-d76868e327">2002</a>), are particularly hard to simulate. In addition, virtual environment toolkits often require additional programming skills and a substantial time investment on the part of the developer.</p><p>The current generation of computer games present realistic virtual worlds featuring user friendly interaction and the simulation of real world phenomena, for example gravity. Using computer games as the basis for virtual environment development has a number of advantages. Computer games are robust and extensively tested (Lepouras and Vassilakis <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Lepouras G, Vassilakis C (2005) Virtual museums for all: employing game technology for edutainment. Virtual Real 8:96–106" href="/article/10.1007/s10055-008-0092-z#ref-CR20" id="ref-link-section-d76868e333">2005</a>), both for usability and performance, work on off-the-shelf systems (Robillard et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Robillard G, Bouchard S, Fournier T, Renaud P (2003) Anxiety and presence using VR immersion: a comparative study of the reactions of phobic and non-phobic participants in therapeutic virtual environments derived from computer games. CyberPsychol Behav 6(5):467–475" href="/article/10.1007/s10055-008-0092-z#ref-CR28" id="ref-link-section-d76868e336">2003</a>) and can be easily disseminated, for example via online communities. Many computer game developers support modification of their game environments by releasing level editors, for example to modify the game environment, and tools to edit the game behaviour. This allows the reuse of the underlining game engine technology, including 3D rendering, 2D drawing, sound, user input and world physics/dynamics (Lewis and Jacobson <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Lewis M, Jacobson J (2002) Game engines in scientific research. Commun ACM 45(1):27–31" href="/article/10.1007/s10055-008-0092-z#ref-CR21" id="ref-link-section-d76868e339">2002</a>). Therefore computer games can provide inexpensive state-of-the-art 3D virtual worlds that can be customised to experimental requirements in a short amount of time without extensive programming. This is a promising area of research that has seen game technology used in a variety of virtual environment domains including context-aware system evaluation (Bylund and Espinoza <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Bylund M, Espinoza F (2001) Using Quake III Arena to simulate sensors and actuators when evaluating and testing mobile services. In: Extended abstracts of the ACM conference on human factors in computing systems (CHI 2001). ACM, pp 241–242" href="/article/10.1007/s10055-008-0092-z#ref-CR6" id="ref-link-section-d76868e342">2001</a>; O’Neill et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="O’Neill E, Lewis D, McGlinn K, Dobson S (2007) Rapid user-centred evaluation for context-aware systems. In: Doherty G, Blandford A (eds) Interactive systems. Design, specification and verification. 13th interactional workshop, DSVIS 2006, vol LNCS 4323, Springer, Heidelberg, pp 220–233" href="/article/10.1007/s10055-008-0092-z#ref-CR24" id="ref-link-section-d76868e345">2007</a>), e-Tourism
+<sup><a href="#Fn1"><span class="u-visually-hidden">Footnote </span>1</a></sup> (Berger et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Berger H, Merkl D, Simoff S (2007) Open new dimensions for e-Tourism. Virtual Real 11:75–87" href="/article/10.1007/s10055-008-0092-z#ref-CR3" id="ref-link-section-d76868e365">2007</a>), human behaviour model testing (Silverman et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Silverman BG, Bharathy G, O’Brien K, Cornwell J (2006) Human behaviour models for agents in simulators and games: Part II: Gamebot engineering with PMFserv. Presence 15(2):163–185" href="/article/10.1007/s10055-008-0092-z#ref-CR29" id="ref-link-section-d76868e368">2006</a>), human-level AI research (Laird <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Laird JE (2002) Research in human-level AI using computer games. Commun ACM 45(1):32–35" href="/article/10.1007/s10055-008-0092-z#ref-CR18" id="ref-link-section-d76868e371">2002</a>; Laird et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Laird JE, Assanie M, Bachelor B, Benninghoff N, Enam S, Jones B, Kerfoot A, Lauver C, Magerko B, Sheiman J, Stokes D, Wallace S (2002) A test bed for developing intelligent synthetic characters. In: Artificial intelligence and interactive entertainment: papers from the 2002 AAAI Spring Symposium, AAAI, pp 52–56" href="/article/10.1007/s10055-008-0092-z#ref-CR19" id="ref-link-section-d76868e374">2002</a>), human-robot interaction simulation (Lewis et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Lewis M, Wang J, Hughes S (2007) USARSim: simulation for the study of human-robot interaction. J Cogn Eng Deci Making 1(1):98–120" href="/article/10.1007/s10055-008-0092-z#ref-CR22" id="ref-link-section-d76868e377">2007</a>; Wang et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Wang J, Lewis M, Gennari J (2003) USAR : a game based simulation for teleoperation. In: 47th annual meeting of the human factors and ergonomics society, Denver, CO" href="/article/10.1007/s10055-008-0092-z#ref-CR35" id="ref-link-section-d76868e381">2003</a>), information visualisation (Kot et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Kot B, Wuensche B, Grundy J, Hosking J (2005) Information visualisation utilising 3D computer game engines case study: a source code comprehension tool. In 6th ACM SIGCHI New Zealand chapter international conference on computer-human interaction (CHINZ 2005), ACM, pp 53–60" href="/article/10.1007/s10055-008-0092-z#ref-CR17" id="ref-link-section-d76868e384">2005</a>), interactive storytelling (Cavazza et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Cavazza M, Charles F, Mead SJ (2002) Emergent situations in interactive storytelling. In: Proceedings of the 2002 ACM symposium on applied computing, ACM, pp 1080–1085" href="/article/10.1007/s10055-008-0092-z#ref-CR7" id="ref-link-section-d76868e387">2002</a>), laboratory accident simulation (Bell and Fogler <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title=" Bell JT, Fogler HS (2003) Implementing virtual reality laboratory accidents using the Half-Life game engine, WorldUp, and Java3D. In: 2003 American society for engineering education annual conference &amp; exposition. American Society for Engineering Education" href="/article/10.1007/s10055-008-0092-z#ref-CR2" id="ref-link-section-d76868e390">2003</a>), landscape visualisation (Herwig and Paar <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Herwig A, Paar P (2002) Game engines: tools for landscape visualization and planning? In: Trends in GIS and virtualization in environmental planning and design, Wichmann Verlag, pp 161–172" href="/article/10.1007/s10055-008-0092-z#ref-CR14" id="ref-link-section-d76868e393">2002</a>), large-scale real-time ecosystem simulation (Refsland et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Refsland ST, Ojika T, Berry R Jr (2002) Enhanced environments: large-scale, real-time ecosystems. Presence 11(3):221–246" href="/article/10.1007/s10055-008-0092-z#ref-CR27" id="ref-link-section-d76868e396">2002</a>), phobia therapy (Bouchard et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Bouchard S, Côté S, St-Jacques J, Robillard G, Renaud P (2006) Effectiveness of virtual reality exposure in the treatment of arachnophobia using 3D games. Technol Health Care 14:19–27" href="/article/10.1007/s10055-008-0092-z#ref-CR4" id="ref-link-section-d76868e400">2006</a>; Robillard et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Robillard G, Bouchard S, Fournier T, Renaud P (2003) Anxiety and presence using VR immersion: a comparative study of the reactions of phobic and non-phobic participants in therapeutic virtual environments derived from computer games. CyberPsychol Behav 6(5):467–475" href="/article/10.1007/s10055-008-0092-z#ref-CR28" id="ref-link-section-d76868e403">2003</a>), photorealistic environment walk-throughs (DeLeon and Berry <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="DeLeon V, Berry R Jr (2000) Bringing VR to the desktop: are you game? IEEE MultiMedia, April–June, pp 68–72" href="/article/10.1007/s10055-008-0092-z#ref-CR8" id="ref-link-section-d76868e406">2000</a>), psychological experimenting (Frey et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Frey A, Hartig J, Ketzel A, Zinkernagel A, Moosbrugger H (2007) The use of virtual environments based on a modification of the computer game Quake III Arena in psychological experimenting. Comp Human Behav 23:2026–2039" href="/article/10.1007/s10055-008-0092-z#ref-CR11" id="ref-link-section-d76868e409">2007</a>), serious games (Mac Namee et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Mac Namee B, Rooney P, Lindstrom P, Ritchie A, Boylan F, Burke G (2006) Serious Gordon: using serious games to teach food safety in the kitchen. In: 9th international conference on computer games: AI, animation, mobile, educational &amp; serious games CGAMES06" href="/article/10.1007/s10055-008-0092-z#ref-CR23" id="ref-link-section-d76868e412">2006</a>) and virtual museums (Lepouras and Vassilakis <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Lepouras G, Vassilakis C (2005) Virtual museums for all: employing game technology for edutainment. Virtual Real 8:96–106" href="/article/10.1007/s10055-008-0092-z#ref-CR20" id="ref-link-section-d76868e415">2005</a>).</p><p>A number of computer game developers provide tools, documentation and source code, either with the game itself or separately available, so that end-users can create new content for the game called a <i>mod</i> or <i>modification</i> (Guilfoyle <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Guilfoyle E (2007) Half-Life 2 mods for dummies. Wiley, London" href="/article/10.1007/s10055-008-0092-z#ref-CR13" id="ref-link-section-d76868e427">2007</a>). For example, users can create new levels, maps, items or characters and add them into the game, known as a <i>partial conversion</i>, or create an entirely new game by altering the game’s source code, known as a <i>total conversion</i>.</p><p>This report overviews several currently available game engines that are suitable for prototyping virtual environments. Modern game engines have a modular structure so that they can be reused for different games (Lewis and Jacobson <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Lewis M, Jacobson J (2002) Game engines in scientific research. Commun ACM 45(1):27–31" href="/article/10.1007/s10055-008-0092-z#ref-CR21" id="ref-link-section-d76868e439">2002</a>). Therefore, a game produced using an engine can be modified using the development tools provided with it in order to produce a virtual environment. Computer games in the First Person Shooter (FPS) genre tend to have the greatest capability and resources for modification, so this report will examine game engines for this game genre. There is a wide selection of 3D game engines available for potential reuse.<sup><a href="#Fn2"><span class="u-visually-hidden">Footnote </span>2</a></sup> Lewis and Jacobson (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Lewis M, Jacobson J (2002) Game engines in scientific research. Commun ACM 45(1):27–31" href="/article/10.1007/s10055-008-0092-z#ref-CR21" id="ref-link-section-d76868e455">2002</a>) observe that there are more than 600 commercial game engines. However, the game engines considered here are those used in the most recently available commercial computer games, thus representing more advanced technology which usually results in more realistic environments. The Quake III Arena engine (see Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-008-0092-z#Sec3">3</a>), although not as recent as the others, is also considered as it is different to the engine used for Quake IV, now the Doom 3 engine (see Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-008-0092-z#Sec4">4</a>) and is still popular for modding.</p></div></div></section><section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">CryENGINE</h2><div class="c-article-section__content" id="Sec2-content"><p>The <i>CryENGINE</i> was created by software developers Crytek<sup><a href="#Fn3"><span class="u-visually-hidden">Footnote </span>3</a></sup> and used in the game Far Cry<sup><a href="#Fn4"><span class="u-visually-hidden">Footnote </span>4</a></sup> released in 2004.</p><p>The CryENGINE supports a number of features that are useful for creating immersive and realistic games and virtual environments, such as a real-time editor, bump mapping, dynamic lights, a network system, an integrated physics system, shaders, shadow support and a dynamic music system. The necessary development tools are integrated with the engine itself, including the <i>CryENGINE Sandbox</i> world editing system. The engine supports all currently available hardware and it is updated with further hardware support when it becomes available. Licensed developers receive full source code and documentation for the engine and tools.<sup><a href="#Fn5"><span class="u-visually-hidden">Footnote </span>5</a></sup>
+                     </p><p>Advantages to using the CryENGINE include the fact that the engine produces very high quality graphics and visuals. The necessary development tools are provided with the engine and so can be accessed from games that use the engine, such as Far Cry. Also, the Sandbox editor is a very intuitive tool as it edits levels in real time, offering <i>what you see is what you play</i> feedback. Partial source code and documentation is included with a freely downloadable SDK.<sup><a href="#Fn6"><span class="u-visually-hidden">Footnote </span>6</a></sup> Disadvantages with this engine include that it has high demands on supporting hardware requirements for the high quality visual and audio components and that there is only a small amount of fan-based community written documentation available. This has implications for getting support if this engine is used in virtual environment development. However, there is a growing mod community at the official <i>Crymod Modding Portal</i>.<sup><a href="#Fn7"><span class="u-visually-hidden">Footnote </span>7</a></sup>
+                     </p></div></div></section><section aria-labelledby="Sec3"><div class="c-article-section" id="Sec3-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec3">id Tech 3 engine</h2><div class="c-article-section__content" id="Sec3-content"><p>The <i>id Tech 3 engine</i> is a game engine developed by id Software<sup><a href="#Fn8"><span class="u-visually-hidden">Footnote </span>8</a></sup> and was first used in the game Quake III Arena,<sup><a href="#Fn9"><span class="u-visually-hidden">Footnote </span>9</a></sup> released in 1999. It was previously known as the Quake III engine. The engine was the successor to the Quake<sup><a href="#Fn10"><span class="u-visually-hidden">Footnote </span>10</a></sup> and Quake II<sup><a href="#Fn11"><span class="u-visually-hidden">Footnote </span>11</a></sup> engines, but much of the code is either new or has been re-written. Designed to be the ultimate multiplayer experience, QUAKE III Arena has become a defacto standard for professional gamers and is the common choice for gaming tournaments around the world.<sup><a href="#Fn12"><span class="u-visually-hidden">Footnote </span>12</a></sup> This game engine has been succeeded by the Doom 3 engine (see Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-008-0092-z#Sec4">4</a>).</p><p>The id Tech 3 engine supports 3D models in the MD3 file format, which uses per-vertex animation to store movement information, instead of skeletal animation. The MD3 format defines models in three separate parts, e.g. head, torso and legs, so that each part can move independently. Each part of the model has its own texture set. Character models are lit and shaded using gouraud shading<sup><a href="#Fn13"><span class="u-visually-hidden">Footnote </span>13</a></sup> while the map levels use lightmaps or gouraud shading, depending on the user’s preference. Three different kinds of shadow are supported: <i>blob shadow</i>, a circle with faded edges at the feet of a character, and two other modes, which project an accurate shadow on the floor—the difference being that one mode is opaque while the other mode attempts to project shadow volumes in a medium-transparent black. However, none of these techniques clip shadow volumes, resulting in shadows passing through geometry. A high-level shader language is also included, as well as a method for rendering effects such as volumetric fog.<sup><a href="#Fn14"><span class="u-visually-hidden">Footnote </span>14</a></sup>
+                     </p><p>One of the advantages of using this engine is that in addition to the Quake III game source code, the engine source code has been released under the GNU General Public License (GPL). The availability of the full source code provides more flexibility in the customisation of game environments. Additionally there is a large number of tutorials and articles that have been written for this engine and with the release of the source code<sup><a href="#Fn15"><span class="u-visually-hidden">Footnote </span>15</a></sup> in 2005, there is still an active development community. One disadvantage of using this engine is that game engine technology has progressed greatly since its original release in 1999, and more advanced engines are available for use (Kot et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Kot B, Wuensche B, Grundy J, Hosking J (2005) Information visualisation utilising 3D computer game engines case study: a source code comprehension tool. In 6th ACM SIGCHI New Zealand chapter international conference on computer-human interaction (CHINZ 2005), ACM, pp 53–60" href="/article/10.1007/s10055-008-0092-z#ref-CR17" id="ref-link-section-d76868e674">2005</a>). The more advanced engines can help with realism and immersion in a virtual environment because of their greater graphical capabilities, for example, in the generation of realistic shadows and lighting effects, and in game customisation with more developer-oriented support tools.</p><p>Virtual environments developed using this engine include environments for context-aware system evaluation (Bylund and Espinoza <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Bylund M, Espinoza F (2001) Using Quake III Arena to simulate sensors and actuators when evaluating and testing mobile services. In: Extended abstracts of the ACM conference on human factors in computing systems (CHI 2001). ACM, pp 241–242" href="/article/10.1007/s10055-008-0092-z#ref-CR6" id="ref-link-section-d76868e680">2001</a>), information visualisation (Kot et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Kot B, Wuensche B, Grundy J, Hosking J (2005) Information visualisation utilising 3D computer game engines case study: a source code comprehension tool. In 6th ACM SIGCHI New Zealand chapter international conference on computer-human interaction (CHINZ 2005), ACM, pp 53–60" href="/article/10.1007/s10055-008-0092-z#ref-CR17" id="ref-link-section-d76868e683">2005</a>) and psychological experimenting (Frey et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Frey A, Hartig J, Ketzel A, Zinkernagel A, Moosbrugger H (2007) The use of virtual environments based on a modification of the computer game Quake III Arena in psychological experimenting. Comp Human Behav 23:2026–2039" href="/article/10.1007/s10055-008-0092-z#ref-CR11" id="ref-link-section-d76868e686">2007</a>).</p></div></div></section><section aria-labelledby="Sec4"><div class="c-article-section" id="Sec4-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec4">id Tech 4 engine</h2><div class="c-article-section__content" id="Sec4-content"><p>The <i>id Tech 4 engine</i> is a game engine developed by id Software and was first used in the game Doom 3.<sup><a href="#Fn16"><span class="u-visually-hidden">Footnote </span>16</a></sup> id Tech 4 was previously known as the Doom 3 engine. The Doom 3 engine began as an enhancement of the Quake III engine, which consisted of a complete rewrite of the renderer. However, it was decided to change from the C programming language to C++, which required a complete restructuring and rewrite of the rest of the engine.<sup><a href="#Fn17"><span class="u-visually-hidden">Footnote </span>17</a></sup>
+                     </p><p>The id Tech 4 engine provides several unique features, such as a unified lighting paradigm, where every surface uses the same rendering pipeline, leading to visual consistency and fully dynamic shadows. An in-game GUI feature is also provided, which enables interactive, resolution-independent surfaces, such as the computer screens in Doom 3. The engine also makes short map compilation times possible. The level editor for this engine is built into games that use it and so can be accessed by anyone who owns any of these games. Greater flexibility is enabled when modding by the use of non-proprietary formats. Finally, the engine uses a strong and flexible scripting language, which can accomplish effects from changing entity behaviour to modifying variables in real time.<sup><a href="#Fn18"><span class="u-visually-hidden">Footnote </span>18</a></sup>
+                     </p><p>The main advantage of using the Doom 3 engine is that it is a very powerful engine, capable of producing realistic environments. Also, there is a large modding community, with a large number of tutorials and articles available. However, similar to CryENGINE (Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-008-0092-z#Sec2">2</a>), the hardware requirements of the engine are high, for example requirements for Doom 3 include: 100% DirectX 9.0b compatible 64MB hardware accelerated video card, Pentium IV 1.5 GHz or Athlon XP 1500+ processor or higher, 384MB RAM, 2.2GB of uncompressed free hard disk space (plus 400MB for Windows swap file) and 100% DirectX 9.0b compatible 16-bit sound card.</p></div></div></section><section aria-labelledby="Sec5"><div class="c-article-section" id="Sec5-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec5">Jupiter Extended (EX)</h2><div class="c-article-section__content" id="Sec5-content"><p>
+                        <i>Jupiter EX</i> is the latest version of a multi-platform game engine and development kit, developed by Touchdown Entertainment
+<sup><a href="#Fn19"><span class="u-visually-hidden">Footnote </span>19</a></sup> and used for the game F.E.A.R.<sup><a href="#Fn20"><span class="u-visually-hidden">Footnote </span>20</a></sup>
+                     </p><p>Visual technologies used in the engine include a DirectX 9 based renderer that uses materials for all objects. Shaders are associated with each material and provide editable parameters, including texture maps, colours and numeric constants. For lighting, Jupiter EX uses a unified Blinn-Phong per-pixel lighting model,<sup><a href="#Fn21"><span class="u-visually-hidden">Footnote </span>21</a></sup> which allows each light to generate both diffuse and specular lighting consistently across all solid objects in the environment. The lighting pipeline uses three passes: emissive, lighting and translucency. The engine also supports a data driven visual effects system, which allows the creation of key-framed effects that can be comprised of dynamic lights, particle systems, models and sounds. For example, particle effects such as fire, steam and smoke can be produced. Havok physics<sup><a href="#Fn22"><span class="u-visually-hidden">Footnote </span>22</a></sup> have been incorporated into this version of the engine to simulate realistic physics and the Havok Vehicle Kit is included to support vehicles and simulate vehicle behaviour. A flexible animation system allows control of character movement and facial expressions.<sup><a href="#Fn23"><span class="u-visually-hidden">Footnote </span>23</a></sup>
+                     </p><p>Jupiter EX includes a set of content creation tools, each with a different purpose. <i>WorldEdit</i> allows designers to create 3D environments and add objects and lighting. The results can be viewed in real time. <i>ModelEdit</i> allows the designer to optimise models so that they interact correctly with the environment and other objects. It is also possible to define specific properties, assign texture IDs, attach objects to models and manipulate animation data. <i>FxEdit</i> can create and modify visual effects, without requiring re-compilation of the game, which increases the efficiency of the implement/test cycle for special effects.<sup><a href="#Fn24"><span class="u-visually-hidden">Footnote </span>24</a></sup> Other tools include <i>ArchiveEdit</i>, a tool used to package game assets into one archive for distribution, <i>GDBEdit</i>, the game database editor for changing things such as weapon damage, the interface, etc. without changing source code, <i>StringEdit</i>, used to store and modify all strings that need to be localised and a number of plug-ins for importing/exporting to modelling applications.<sup><a href="#Fn25"><span class="u-visually-hidden">Footnote </span>25</a></sup>
+                     </p><p>The advantages of modifying games that use the Jupiter EX engine include the high level of graphical fidelity that can be achieved, which will improve realism and immersion. Also, the tools required for modifying Jupiter EX games are logically separated into different applications and come with documentation. The main disadvantage is that the modding community is not as large for F.E.A.R, the most popular Jupiter EX game, as it is for other games such as Half-Life 2 (see Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-008-0092-z#Sec6">6</a>) or Unreal Tournament 2003/2004 (see Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-008-0092-z#Sec7">7</a>). Therefore there are fewer community websites and fan written tutorials available. Although documentation is included with the F.E.A.R SDK, it is not comprehensive, and this has time implications for learning how to create environments and achieve certain modifications.</p></div></div></section><section aria-labelledby="Sec6"><div class="c-article-section" id="Sec6-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec6">Source engine</h2><div class="c-article-section__content" id="Sec6-content"><p>The <i>Source engine</i> was developed by Valve Corporation<sup><a href="#Fn26"><span class="u-visually-hidden">Footnote </span>26</a></sup> and is most notably used in games such as Half-Life 2<sup><a href="#Fn27"><span class="u-visually-hidden">Footnote </span>27</a></sup> and Counter-Strike: Source.<sup><a href="#Fn28"><span class="u-visually-hidden">Footnote </span>28</a></sup> The Source engine features include a high degree of modularity and flexibility, lip synchronisation and facial expression technology and a realistic physics system.</p><p>The engine also supports particle effects, volumetric smoke and environmental effects such as fog or rain. An advanced artificial intelligence system is provided which enables sophisticated character navigation, enabling characters to run, jump, climb stairs, etc. The source code is written in C/C++ and classes can be modified or derived to create new entities, allowing a finer degree of control over modifications. A high level of graphical fidelity can be achieved using the Source engine because of its advanced rendering features and detailed characters. Also, the materials system can be used to define not only what texture an item uses, but also what it is made from, which will affect the sound it makes when moved and its mass. All these features will improve the realism of a virtual environment.<sup><a href="#Fn29"><span class="u-visually-hidden">Footnote </span>29</a></sup>
+                     </p><p>The level editor that is used to produce levels for games using the Source engine is the <i>Valve Hammer Editor</i>, commonly referred to as <i>Hammer</i>. The editor uses brushes, called primitives, to construct a level. Apart from the construction of level architecture, Hammer is also used for creating level events and scripting.<sup><a href="#Fn30"><span class="u-visually-hidden">Footnote </span>30</a></sup> Hammer is an additive-based level editor and uses CSG (constructive solid geometry) operations to add geometry to a void.</p><p>Documentation for the Source SDK is provided on the Valve Developer Community<sup><a href="#Fn31"><span class="u-visually-hidden">Footnote </span>31</a></sup> wiki, which was created by Valve and is the definitive and most comprehensive source of information on using the Source engine. All the necessary tools for creating a mod and game content, e.g. via Hammer, are included with the Source SDK, which is available after purchasing a Source-based game, i.e. Half-Life 2, and can be downloaded using Valve’s digital content delivery service called <i>Steam</i>.<sup><a href="#Fn32"><span class="u-visually-hidden">Footnote </span>32</a></sup> The Source SDK also provides a <i>Create a Mod</i> option, which copies the necessary source code and resources to a working directory. A large number of other websites provide their own discussion forums and tutorials, which range from general introductions to the Source SDK tools to more specific tasks, see for example <i>Interlopers.net</i>,<sup><a href="#Fn33"><span class="u-visually-hidden">Footnote </span>33</a></sup> for design resources and Half-Life 2 tutorials, and <i>Edit Life</i>,<sup><a href="#Fn34"><span class="u-visually-hidden">Footnote </span>34</a></sup> for Half-Life 2 Source mapping tutorials.</p><p>The main advantage of the Source engine is that it has been designed from the ground up to be highly modular, which means that modification of games developed using the Source engine can be done to a very fine degree. Also, the popularity of the Source engine for game modding has led to a very large community of licensees and independent developers, who participate in forum discussions, write articles and create tutorials for the rest of the community to learn from. The Valve Developer Community provides tutorials and technical references relevant to developing mods for Source-based games, such as Half-Life 2. One of the disadvantages of the using the Source engine is that the user will have to have a Steam account to be able to use the mod. However, Steam accounts are free but initially require an internet connection.</p><p>Virtual environments developed using the Half-Life and Source engines include systems to evaluate adaptive context-aware services (O’Neill et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="O’Neill E, Lewis D, McGlinn K, Dobson S (2007) Rapid user-centred evaluation for context-aware systems. In: Doherty G, Blandford A (eds) Interactive systems. Design, specification and verification. 13th interactional workshop, DSVIS 2006, vol LNCS 4323, Springer, Heidelberg, pp 220–233" href="/article/10.1007/s10055-008-0092-z#ref-CR24" id="ref-link-section-d76868e1033">2007</a>), arachnophobia therapy (Bouchard et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Bouchard S, Côté S, St-Jacques J, Robillard G, Renaud P (2006) Effectiveness of virtual reality exposure in the treatment of arachnophobia using 3D games. Technol Health Care 14:19–27" href="/article/10.1007/s10055-008-0092-z#ref-CR4" id="ref-link-section-d76868e1036">2006</a>; Robillard et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Robillard G, Bouchard S, Fournier T, Renaud P (2003) Anxiety and presence using VR immersion: a comparative study of the reactions of phobic and non-phobic participants in therapeutic virtual environments derived from computer games. CyberPsychol Behav 6(5):467–475" href="/article/10.1007/s10055-008-0092-z#ref-CR28" id="ref-link-section-d76868e1039">2003</a>), laboratory accident simulation (Bell and Fogler <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title=" Bell JT, Fogler HS (2003) Implementing virtual reality laboratory accidents using the Half-Life game engine, WorldUp, and Java3D. In: 2003 American society for engineering education annual conference &amp; exposition. American Society for Engineering Education" href="/article/10.1007/s10055-008-0092-z#ref-CR2" id="ref-link-section-d76868e1042">2003</a>) and serious games to teach food safety (Mac Namee et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Mac Namee B, Rooney P, Lindstrom P, Ritchie A, Boylan F, Burke G (2006) Serious Gordon: using serious games to teach food safety in the kitchen. In: 9th international conference on computer games: AI, animation, mobile, educational &amp; serious games CGAMES06" href="/article/10.1007/s10055-008-0092-z#ref-CR23" id="ref-link-section-d76868e1045">2006</a>).</p></div></div></section><section aria-labelledby="Sec7"><div class="c-article-section" id="Sec7-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec7">Unreal engine 2</h2><div class="c-article-section__content" id="Sec7-content"><p>The <i>Unreal engine</i> is a powerful and widely used game engine developed by Epic Games,
+<sup><a href="#Fn35"><span class="u-visually-hidden">Footnote </span>35</a></sup> the second version of which was used to develop Unreal Tournament 2003
+<sup><a href="#Fn36"><span class="u-visually-hidden">Footnote </span>36</a></sup> and its successor, Unreal Tournament 2004.<sup><a href="#Fn37"><span class="u-visually-hidden">Footnote </span>37</a></sup> The core code is written in C++ and has been used in games on several platforms. <i>UnrealEd 3</i>, the level editor, is included with Unreal Tournament 2003/2004.</p><p>The engine supports high performance rendering, advanced animation features and high-quality dynamic lighting. Supported effects include a particle system for particles composed of sprites, meshes, lines and beams. The particle system supports various lifetime, texture, movement and collision options. All particle features can be manipulated in real time in the editor. The texturing features of the engine include a material system that supports alpha-blending, i.e. transparency and blending of multiple layers of textures. High resolution textures that use efficient compression are also supported, which can help improve realism. The Unreal Editor, <i>UnrealEd</i>, is a <i>what you see is what you get</i> content creation tool.<sup><a href="#Fn38"><span class="u-visually-hidden">Footnote </span>38</a></sup>
+                     </p><p>In contrast with other game engine level editors, UnrealEd regards the game virtual world as a solid mass. UnrealEd is therefore a subtractive-based level editor where virtual worlds are carved from the solid mass. This has the advantage of removing any possibility of BSP
+<sup><a href="#Fn39"><span class="u-visually-hidden">Footnote </span>39</a></sup> leaks, caused by gaps between geometric primitives, when constructing environment spaces, as can happen when using Valve’s Hammer, as the UnrealEd virtual world is totally encapsulated. Modification of games based on the Unreal engine 2 is further supported by inclusion of sample content and the source code for the engine and editor. The engine source code is written in C++. The engine also includes a scripting language, <i>UnrealScript</i>, which can modify various aspects of the gameplay.
+<sup><a href="#Fn40"><span class="u-visually-hidden">Footnote </span>40</a></sup>
+                     </p><p>Many resources are available for modifying Unreal engine based games, including Epic’s <i>Unreal Developer Network (UDN)</i>,
+<sup><a href="#Fn41"><span class="u-visually-hidden">Footnote </span>41</a></sup> which is the official support site for licensees and mod developers and provides technical documentation as well as tutorials for the Unreal engine and UnrealEd. There are also a number of community websites that provide discussion forums and tutorials, for example <i>Architectonic UT2003 Editing and Inspiration</i>
+                        <sup><a href="#Fn42"><span class="u-visually-hidden">Footnote </span>42</a></sup> and <i>UnrealWiki</i>.
+<sup><a href="#Fn43"><span class="u-visually-hidden">Footnote </span>43</a></sup>
+                     </p><p>The main advantage of the Unreal engine 2 is that it has been available for a few years so there are a considerable number of tutorials and articles on editing games that have been developed using it. The main disadvantage is that there are now more recent engines with more advanced graphics technology that will help to improve the realism of developed virtual environments.</p><p>Virtual environments developed with the Unreal engine include systems for acrophobia and claustrophobia therapy (Robillard et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Robillard G, Bouchard S, Fournier T, Renaud P (2003) Anxiety and presence using VR immersion: a comparative study of the reactions of phobic and non-phobic participants in therapeutic virtual environments derived from computer games. CyberPsychol Behav 6(5):467–475" href="/article/10.1007/s10055-008-0092-z#ref-CR28" id="ref-link-section-d76868e1209">2003</a>), virtual museums (Lepouras and Vassilakis <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Lepouras G, Vassilakis C (2005) Virtual museums for all: employing game technology for edutainment. Virtual Real 8:96–106" href="/article/10.1007/s10055-008-0092-z#ref-CR20" id="ref-link-section-d76868e1212">2005</a>), interactive storytelling (Cavazza et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Cavazza M, Charles F, Mead SJ (2002) Emergent situations in interactive storytelling. In: Proceedings of the 2002 ACM symposium on applied computing, ACM, pp 1080–1085" href="/article/10.1007/s10055-008-0092-z#ref-CR7" id="ref-link-section-d76868e1215">2002</a>), landscape visualisation (Herwig and Paar <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Herwig A, Paar P (2002) Game engines: tools for landscape visualization and planning? In: Trends in GIS and virtualization in environmental planning and design, Wichmann Verlag, pp 161–172" href="/article/10.1007/s10055-008-0092-z#ref-CR14" id="ref-link-section-d76868e1218">2002</a>), large-scale real-time ecosystem simulation (Refsland et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Refsland ST, Ojika T, Berry R Jr (2002) Enhanced environments: large-scale, real-time ecosystems. Presence 11(3):221–246" href="/article/10.1007/s10055-008-0092-z#ref-CR27" id="ref-link-section-d76868e1221">2002</a>), human behaviour model testing (Silverman et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Silverman BG, Bharathy G, O’Brien K, Cornwell J (2006) Human behaviour models for agents in simulators and games: Part II: Gamebot engineering with PMFserv. Presence 15(2):163–185" href="/article/10.1007/s10055-008-0092-z#ref-CR29" id="ref-link-section-d76868e1225">2006</a>), human-level AI research (Laird <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Laird JE (2002) Research in human-level AI using computer games. Commun ACM 45(1):32–35" href="/article/10.1007/s10055-008-0092-z#ref-CR18" id="ref-link-section-d76868e1228">2002</a>; Laird et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Laird JE, Assanie M, Bachelor B, Benninghoff N, Enam S, Jones B, Kerfoot A, Lauver C, Magerko B, Sheiman J, Stokes D, Wallace S (2002) A test bed for developing intelligent synthetic characters. In: Artificial intelligence and interactive entertainment: papers from the 2002 AAAI Spring Symposium, AAAI, pp 52–56" href="/article/10.1007/s10055-008-0092-z#ref-CR19" id="ref-link-section-d76868e1231">2002</a>), human-robot interaction simulation (Lewis et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Lewis M, Wang J, Hughes S (2007) USARSim: simulation for the study of human-robot interaction. J Cogn Eng Deci Making 1(1):98–120" href="/article/10.1007/s10055-008-0092-z#ref-CR22" id="ref-link-section-d76868e1234">2007</a>; Wang et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Wang J, Lewis M, Gennari J (2003) USAR : a game based simulation for teleoperation. In: 47th annual meeting of the human factors and ergonomics society, Denver, CO" href="/article/10.1007/s10055-008-0092-z#ref-CR35" id="ref-link-section-d76868e1237">2003</a>), photorealistic walk-throughs of the Florida Everglades and the Notre Dame Cathedral (DeLeon and Berry <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="DeLeon V, Berry R Jr (2000) Bringing VR to the desktop: are you game? IEEE MultiMedia, April–June, pp 68–72" href="/article/10.1007/s10055-008-0092-z#ref-CR8" id="ref-link-section-d76868e1240">2000</a>) and a low cost CAVE (Jacobson <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Jacobson J (2003) Using “CaveUT” to build immersive displays with the Unreal Tournament engine and a PC cluster. In ACM symposium on interactive 3D graphics. ACM Press, pp 221–222" href="/article/10.1007/s10055-008-0092-z#ref-CR15" id="ref-link-section-d76868e1244">2003</a>).</p></div></div></section><section aria-labelledby="Sec8"><div class="c-article-section" id="Sec8-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec8">Summary</h2><div class="c-article-section__content" id="Sec8-content"><p>Much of the research and development being conducted in the gaming industry parallels ongoing work in the virtual environment community (Zyda <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Zyda M (2005) From visual simulation to virtual reality to games. IEEE Computer, September, pp 25–32" href="/article/10.1007/s10055-008-0092-z#ref-CR36" id="ref-link-section-d76868e1255">2005</a>). Gershon et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Gershon N, Sawyer B, Parker JR (2006) Games and technology: developing synergy. IEEE Computer, December, pp 129–130" href="/article/10.1007/s10055-008-0092-z#ref-CR12" id="ref-link-section-d76868e1258">2006</a>) observe that computer games fuse software engineering, architecture, artificial intelligence, 3D graphics, art and sound effects with dramatic performances, music and storytelling. Many of these features are required in virtual environments and reusable game engines have the potential to support this transition of technology.</p><p>All the engines considered in this report are suitable for developing non-game virtual environments. Lewis and Jacobson (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Lewis M, Jacobson J (2002) Game engines in scientific research. Commun ACM 45(1):27–31" href="/article/10.1007/s10055-008-0092-z#ref-CR21" id="ref-link-section-d76868e1264">2002</a>) note that in many cases it would be hard to imagine an application for which one game engine would be suited and others not. All the engines listed provide some source code to users. This is usually partial source code that can be altered and recompiled to affect the gameplay. Full source code, e.g. code for the engine, is typically only available to commercial licensees. However, this does change over time as new game engines are developed and older engines are released as open source projects. The existence of a strong and active online modding community, particularly with official developer support, is an important consideration, as is the minimum required specification for off-the-shelf hardware. Appendix A compares and contrasts some of the important features that relate to modification and editing of games using the engines considered in this report.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="notes"><div class="c-article-section" id="notes-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="notes">Notes</h2><div class="c-article-section__content" id="notes-content"><ol class="c-article-footnote c-article-footnote--listed"><li class="c-article-footnote--listed__item" id="Fn1"><span class="c-article-footnote--listed__index">1.</span><div class="c-article-footnote--listed__content"><p>The e-Tourism environment developed by Berger et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Berger H, Merkl D, Simoff S (2007) Open new dimensions for e-Tourism. Virtual Real 11:75–87" href="/article/10.1007/s10055-008-0092-z#ref-CR3" id="ref-link-section-d76868e353">2007</a>) uses the Torque Game Engine [see <a href="http://www.garagegames.com/">http://www.garagegames.com/</a> (last access 17/7/07)]. However, this game engine requires a commercial licence for non-game development and will not be discussed here further.</p></div></li><li class="c-article-footnote--listed__item" id="Fn2"><span class="c-article-footnote--listed__index">2.</span><div class="c-article-footnote--listed__content"><p>For a comprehensive database of 3D engines see <a href="http://www.devmaster.net/engines/">http://www.devmaster.net/engines/</a> (last access 17/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn3"><span class="c-article-footnote--listed__index">3.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://www.crytek.com">http://www.crytek.com</a> (last access 14/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn4"><span class="c-article-footnote--listed__index">4.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://www.farcry-thegame.com">http://www.farcry-thegame.com</a> (last access 14/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn5"><span class="c-article-footnote--listed__index">5.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://www.crytek.com/technology/index.php">http://www.crytek.com/technology/index.php</a> (last access 14/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn6"><span class="c-article-footnote--listed__index">6.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://crymod.com/filebase.php">http://crymod.com/filebase.php</a> (last access 18/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn7"><span class="c-article-footnote--listed__index">7.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://crymod.com/">http://crymod.com/</a> (last access 18/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn8"><span class="c-article-footnote--listed__index">8.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://www.idsoftware.com">http://www.idsoftware.com</a> (last access 14/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn9"><span class="c-article-footnote--listed__index">9.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://www.idsoftware.com/games/quake/quake3-arena/">http://www.idsoftware.com/games/quake/quake3-arena/</a> (last access 14/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn10"><span class="c-article-footnote--listed__index">10.</span><div class="c-article-footnote--listed__content"><p>An augmented reality gaming system based on the Quake engine is described in (Piekarski and Thomas <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Piekarski W, Thomas B (2002) ARQuake: the outdoor augmented reality gaming system. Commun ACM 45(1):36–38" href="/article/10.1007/s10055-008-0092-z#ref-CR25" id="ref-link-section-d76868e596">2002</a>).</p></div></li><li class="c-article-footnote--listed__item" id="Fn11"><span class="c-article-footnote--listed__index">11.</span><div class="c-article-footnote--listed__content"><p>Network simulations using code based on the Quake II engine are described in (Steed and Angus <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Steed A, Angus C (2006) Enabling scalability by partitioning virtual environments using frontier sets. Presence 15(1):77–92" href="/article/10.1007/s10055-008-0092-z#ref-CR34" id="ref-link-section-d76868e605">2006</a>). Research into human-level AI using Quake II is described in (Laird <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Laird JE (2002) Research in human-level AI using computer games. Commun ACM 45(1):32–35" href="/article/10.1007/s10055-008-0092-z#ref-CR18" id="ref-link-section-d76868e608">2002</a>).</p></div></li><li class="c-article-footnote--listed__item" id="Fn12"><span class="c-article-footnote--listed__index">12.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://www.idsoftware.com/business/history/">http://www.idsoftware.com/business/history/</a> (last access 14/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn13"><span class="c-article-footnote--listed__index">13.</span><div class="c-article-footnote--listed__content"><p>Gouraud shading is a method used in computer graphics to simulate the differing effects of light and colour across the surface of an object to eliminate intensity discontinuities (Foley et al. <a data-track="click" data-track-label="link" data-track-action="" href="/article/10.1007/s10055-008-0092-z#CR10">1990</a>, p 736).</p></div></li><li class="c-article-footnote--listed__item" id="Fn14"><span class="c-article-footnote--listed__index">14.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://en.wikipedia.org/wiki/Quake_III_engine">http://en.wikipedia.org/wiki/Quake_III_engine</a> (last access 14/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn15"><span class="c-article-footnote--listed__index">15.</span><div class="c-article-footnote--listed__content"><p>The Quake III source code and development tools are available at <a href="http://www.idsoftware.com/business/techdownloads/">http://www.idsoftware.com/business/techdownloads/</a> (last access 14/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn16"><span class="c-article-footnote--listed__index">16.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://www.idsoftware.com/games/doom/doom3/">http://www.idsoftware.com/games/doom/doom3/</a> (last access 14/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn17"><span class="c-article-footnote--listed__index">17.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://en.wikipedia.org/wiki/Doom_3_Engine">http://en.wikipedia.org/wiki/Doom_3_Engine</a> (last access 14/7/07)</p></div></li><li class="c-article-footnote--listed__item" id="Fn18"><span class="c-article-footnote--listed__index">18.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://www.modwiki.net/wiki/Doom_3_engine">http://www.modwiki.net/wiki/Doom_3_engine</a> (14/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn19"><span class="c-article-footnote--listed__index">19.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://www.touchdownentertainment.com/">http://www.touchdownentertainment.com/</a> (last access 14/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn20"><span class="c-article-footnote--listed__index">20.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://www.whatisfear.com">http://www.whatisfear.com</a> (last access 14/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn21"><span class="c-article-footnote--listed__index">21.</span><div class="c-article-footnote--listed__content"><p>For details on <i>Blinn</i> and <i>Phong</i> lighting models see [Eberly (<a data-track="click" data-track-label="link" data-track-action="" href="/article/10.1007/s10055-008-0092-z#CR9">2007</a>), pp 96–97].</p></div></li><li class="c-article-footnote--listed__item" id="Fn22"><span class="c-article-footnote--listed__index">22.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://www.havok.com/">http://www.havok.com/</a> (last access 18/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn23"><span class="c-article-footnote--listed__index">23.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://www.touchdownentertainment.com/jupiterEX.htm">http://www.touchdownentertainment.com/jupiterEX.htm</a> (last access 14/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn24"><span class="c-article-footnote--listed__index">24.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://www.touchdownentertainment.com/jupiterEX.htm">http://www.touchdownentertainment.com/jupiterEX.htm</a> (last access 14/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn25"><span class="c-article-footnote--listed__index">25.</span><div class="c-article-footnote--listed__content"><p>ftp://ftp.sierra.com/pub/sierra/fear/updates/ (last access 14/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn26"><span class="c-article-footnote--listed__index">26.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://www.valvesoftware.com">http://www.valvesoftware.com</a> (last access 15/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn27"><span class="c-article-footnote--listed__index">27.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://www.Half-Life2.com/">http://www.Half-Life2.com/</a> (last access 15/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn28"><span class="c-article-footnote--listed__index">28.</span><div class="c-article-footnote--listed__content"><p>http://counter-strike.net/ (last access 15/7/07)</p></div></li><li class="c-article-footnote--listed__item" id="Fn29"><span class="c-article-footnote--listed__index">29.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://www.valvesoftware.com/files/SOURCE_InfoSheet.pdf">http://www.valvesoftware.com/files/SOURCE_InfoSheet.pdf</a> (last access 15/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn30"><span class="c-article-footnote--listed__index">30.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://developer.valvesoftware.com/wiki/Hammer">http://developer.valvesoftware.com/wiki/Hammer</a> (last access 15/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn31"><span class="c-article-footnote--listed__index">31.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://developer.valvesoftware.com/">http://developer.valvesoftware.com/</a> (last access 15/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn32"><span class="c-article-footnote--listed__index">32.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://www.steampowered.com">http://www.steampowered.com</a> (last access 15/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn33"><span class="c-article-footnote--listed__index">33.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://www.interlopers.net/">http://www.interlopers.net/</a> (last access 15/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn34"><span class="c-article-footnote--listed__index">34.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://www.editlife.net/">http://www.editlife.net/</a> (last access 15/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn35"><span class="c-article-footnote--listed__index">35.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://www.epicgames.com/">http://www.epicgames.com/</a> (last access 16/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn36"><span class="c-article-footnote--listed__index">36.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://www.unrealtournament3.com/">http://www.unrealtournament3.com/</a> (last access 16/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn37"><span class="c-article-footnote--listed__index">37.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://www.unrealtournament.com/">http://www.unrealtournament.com/</a> (last access 16/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn38"><span class="c-article-footnote--listed__index">38.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://www.unrealtechnology.com/html/technology/ue2.shtml">http://www.unrealtechnology.com/html/technology/ue2.shtml</a> (last access 16/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn39"><span class="c-article-footnote--listed__index">39.</span><div class="c-article-footnote--listed__content"><p>
+                              <i>Binary space partitioning</i> [Eberly (2007), p 354].</p></div></li><li class="c-article-footnote--listed__item" id="Fn40"><span class="c-article-footnote--listed__index">40.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://www.unrealtechnology.com/html/technology/ue2. shtml">http://www.unrealtechnology.com/html/technology/ue2. shtml</a> (last access 16/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn41"><span class="c-article-footnote--listed__index">41.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://udn.epicgames.com">http://udn.epicgames.com</a> (last access 16/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn42"><span class="c-article-footnote--listed__index">42.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://architectonic.planetunreal.gamespy.com/">http://architectonic.planetunreal.gamespy.com/</a> (last access 16/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn43"><span class="c-article-footnote--listed__index">43.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://wiki.beyondunreal.com/">http://wiki.beyondunreal.com/</a> (last access 16/7/07).</p></div></li><li class="c-article-footnote--listed__item" id="Fn44"><span class="c-article-footnote--listed__index">44.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://www.nuffieldfoundation.org/">http://www.nuffieldfoundation.org/</a> (last access 15/7/07).</p></div></li></ol></div></div></section><section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Allbeck JM, Badler NI (2002) Embodied autonomous agents. In: Stanney KM (ed) Handbook of virtual environments." /><p class="c-article-references__text" id="ref-CR1">Allbeck JM, Badler NI (2002) Embodied autonomous agents. In: Stanney KM (ed) Handbook of virtual environments. Lawrence Erlbaum Associates, pp 313–332</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content=" Bell JT, Fogler HS (2003) Implementing virtual reality laboratory accidents using the Half-Life game engine, " /><p class="c-article-references__text" id="ref-CR2"> Bell JT, Fogler HS (2003) Implementing virtual reality laboratory accidents using the Half-Life game engine, WorldUp, and Java3D. In: 2003 American society for engineering education annual conference &amp; exposition. American Society for Engineering Education</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="H. Berger, D. Merkl, S. Simoff, " /><meta itemprop="datePublished" content="2007" /><meta itemprop="headline" content="Berger H, Merkl D, Simoff S (2007) Open new dimensions for e-Tourism. Virtual Real 11:75–87" /><p class="c-article-references__text" id="ref-CR3">Berger H, Merkl D, Simoff S (2007) Open new dimensions for e-Tourism. Virtual Real 11:75–87</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1007%2Fs10055-006-0057-z" aria-label="View reference 3">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 3 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Open%20new%20dimensions%20for%20e-Tourism&amp;journal=Virtual%20Real&amp;volume=11&amp;pages=75-87&amp;publication_year=2007&amp;author=Berger%2CH&amp;author=Merkl%2CD&amp;author=Simoff%2CS">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="S. Bouchard, S. Côté, J. St-Jacques, G. Robillard, P. Renaud, " /><meta itemprop="datePublished" content="2006" /><meta itemprop="headline" content="Bouchard S, Côté S, St-Jacques J, Robillard G, Renaud P (2006) Effectiveness of virtual reality exposure in th" /><p class="c-article-references__text" id="ref-CR4">Bouchard S, Côté S, St-Jacques J, Robillard G, Renaud P (2006) Effectiveness of virtual reality exposure in the treatment of arachnophobia using 3D games. Technol Health Care 14:19–27</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 4 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Effectiveness%20of%20virtual%20reality%20exposure%20in%20the%20treatment%20of%20arachnophobia%20using%203D%20games&amp;journal=Technol%20Health%20Care&amp;volume=14&amp;pages=19-27&amp;publication_year=2006&amp;author=Bouchard%2CS&amp;author=C%C3%B4t%C3%A9%2CS&amp;author=St-Jacques%2CJ&amp;author=Robillard%2CG&amp;author=Renaud%2CP">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="DA. Bowman, E. Kruijff, JJ. LaViola, I. Poupyrev, " /><meta itemprop="datePublished" content="2005" /><meta itemprop="headline" content="Bowman DA, Kruijff E, LaViola JJ Jr, Poupyrev I (2005) 3D user interfaces: theory and practise. Addison Wesley" /><p class="c-article-references__text" id="ref-CR5">Bowman DA, Kruijff E, LaViola JJ Jr, Poupyrev I (2005) 3D user interfaces: theory and practise. Addison Wesley, USA</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 5 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=3D%20User%20interfaces%3A%20Theory%20and%20Practise&amp;publication_year=2005&amp;author=Bowman%2CDA&amp;author=Kruijff%2CE&amp;author=LaViola%2CJJ&amp;author=Poupyrev%2CI">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bylund M, Espinoza F (2001) Using Quake III Arena to simulate sensors and actuators when evaluating and testin" /><p class="c-article-references__text" id="ref-CR6">Bylund M, Espinoza F (2001) Using Quake III Arena to simulate sensors and actuators when evaluating and testing mobile services. In: Extended abstracts of the ACM conference on human factors in computing systems (CHI 2001). ACM, pp 241–242</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Cavazza M, Charles F, Mead SJ (2002) Emergent situations in interactive storytelling. In: Proceedings of the 2" /><p class="c-article-references__text" id="ref-CR7">Cavazza M, Charles F, Mead SJ (2002) Emergent situations in interactive storytelling. In: Proceedings of the 2002 ACM symposium on applied computing, ACM, pp 1080–1085</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="DeLeon V, Berry R Jr (2000) Bringing VR to the desktop: are you game? IEEE MultiMedia, April–June, pp 68–72" /><p class="c-article-references__text" id="ref-CR8">DeLeon V, Berry R Jr (2000) Bringing VR to the desktop: are you game? IEEE MultiMedia, April–June, pp 68–72</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="DH. Eberly, " /><meta itemprop="datePublished" content="2007" /><meta itemprop="headline" content="Eberly DH (2007) 3D game engine design: a practical approach to real-time computer graphics. 2nd edn. Morgan K" /><p class="c-article-references__text" id="ref-CR9">Eberly DH (2007) 3D game engine design: a practical approach to real-time computer graphics. 2nd edn. Morgan Kaufmann Publishers, Amsterdam</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 9 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=3D%20game%20engine%20design%3A%20a%20practical%20approach%20to%20real-time%20computer%20graphics&amp;publication_year=2007&amp;author=Eberly%2CDH">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="JD. Foley, A. Dam, SK. Feiner, JF. Hughes, " /><meta itemprop="datePublished" content="1990" /><meta itemprop="headline" content="Foley JD, van Dam A, Feiner SK, Hughes JF (1990) Computer graphics: principles and practice. 2nd edn. Addison-" /><p class="c-article-references__text" id="ref-CR10">Foley JD, van Dam A, Feiner SK, Hughes JF (1990) Computer graphics: principles and practice. 2nd edn. Addison-Wesley, Reading</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 10 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Computer%20graphics%3A%20principles%20and%20practice.&amp;publication_year=1990&amp;author=Foley%2CJD&amp;author=Dam%2CA&amp;author=Feiner%2CSK&amp;author=Hughes%2CJF">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="A. Frey, J. Hartig, A. Ketzel, A. Zinkernagel, H. Moosbrugger, " /><meta itemprop="datePublished" content="2007" /><meta itemprop="headline" content="Frey A, Hartig J, Ketzel A, Zinkernagel A, Moosbrugger H (2007) The use of virtual environments based on a mod" /><p class="c-article-references__text" id="ref-CR11">Frey A, Hartig J, Ketzel A, Zinkernagel A, Moosbrugger H (2007) The use of virtual environments based on a modification of the computer game Quake III Arena in psychological experimenting. Comp Human Behav 23:2026–2039</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1016%2Fj.chb.2006.02.010" aria-label="View reference 11">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 11 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=The%20use%20of%20virtual%20environments%20based%20on%20a%20modification%20of%20the%20computer%20game%20Quake%20III%20Arena%20in%20psychological%20experimenting&amp;journal=Comp%20Human%20Behav&amp;volume=23&amp;pages=2026-2039&amp;publication_year=2007&amp;author=Frey%2CA&amp;author=Hartig%2CJ&amp;author=Ketzel%2CA&amp;author=Zinkernagel%2CA&amp;author=Moosbrugger%2CH">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Gershon N, Sawyer B, Parker JR (2006) Games and technology: developing synergy. IEEE Computer, December, pp 12" /><p class="c-article-references__text" id="ref-CR12">Gershon N, Sawyer B, Parker JR (2006) Games and technology: developing synergy. IEEE Computer, December, pp 129–130</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Guilfoyle E (2007) Half-Life 2 mods for dummies. Wiley, London" /><p class="c-article-references__text" id="ref-CR13">Guilfoyle E (2007) Half-Life 2 mods for dummies. Wiley, London</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Herwig A, Paar P (2002) Game engines: tools for landscape visualization and planning? In: Trends in GIS and vi" /><p class="c-article-references__text" id="ref-CR14">Herwig A, Paar P (2002) Game engines: tools for landscape visualization and planning? In: Trends in GIS and virtualization in environmental planning and design, Wichmann Verlag, pp 161–172</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Jacobson J (2003) Using “CaveUT” to build immersive displays with the Unreal Tournament engine and a PC cluste" /><p class="c-article-references__text" id="ref-CR15">Jacobson J (2003) Using “CaveUT” to build immersive displays with the Unreal Tournament engine and a PC cluster. In ACM symposium on interactive 3D graphics. ACM Press, pp 221–222</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Kessler GD (2002) Virtual environment models. In: Stanney KM (ed) Handbook of virtual environments. Lawrence E" /><p class="c-article-references__text" id="ref-CR16">Kessler GD (2002) Virtual environment models. In: Stanney KM (ed) Handbook of virtual environments. Lawrence Erlbaum Associates, pp 255–276</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Kot B, Wuensche B, Grundy J, Hosking J (2005) Information visualisation utilising 3D computer game engines cas" /><p class="c-article-references__text" id="ref-CR17">Kot B, Wuensche B, Grundy J, Hosking J (2005) Information visualisation utilising 3D computer game engines case study: a source code comprehension tool. In 6th ACM SIGCHI New Zealand chapter international conference on computer-human interaction (CHINZ 2005), ACM, pp 53–60</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="JE. Laird, " /><meta itemprop="datePublished" content="2002" /><meta itemprop="headline" content="Laird JE (2002) Research in human-level AI using computer games. Commun ACM 45(1):32–35" /><p class="c-article-references__text" id="ref-CR18">Laird JE (2002) Research in human-level AI using computer games. Commun ACM 45(1):32–35</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1145%2F502269.502290" aria-label="View reference 18">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 18 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Research%20in%20human-level%20AI%20using%20computer%20games&amp;journal=Commun%20ACM&amp;volume=45&amp;issue=1&amp;pages=32-35&amp;publication_year=2002&amp;author=Laird%2CJE">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Laird JE, Assanie M, Bachelor B, Benninghoff N, Enam S, Jones B, Kerfoot A, Lauver C, Magerko B, Sheiman J, St" /><p class="c-article-references__text" id="ref-CR19">Laird JE, Assanie M, Bachelor B, Benninghoff N, Enam S, Jones B, Kerfoot A, Lauver C, Magerko B, Sheiman J, Stokes D, Wallace S (2002) A test bed for developing intelligent synthetic characters. In: Artificial intelligence and interactive entertainment: papers from the 2002 AAAI Spring Symposium, AAAI, pp 52–56</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="G. Lepouras, C. Vassilakis, " /><meta itemprop="datePublished" content="2005" /><meta itemprop="headline" content="Lepouras G, Vassilakis C (2005) Virtual museums for all: employing game technology for edutainment. Virtual Re" /><p class="c-article-references__text" id="ref-CR20">Lepouras G, Vassilakis C (2005) Virtual museums for all: employing game technology for edutainment. Virtual Real 8:96–106</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1007%2Fs10055-004-0141-1" aria-label="View reference 20">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 20 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Virtual%20museums%20for%20all%3A%20employing%20game%20technology%20for%20edutainment&amp;journal=Virtual%20Real&amp;volume=8&amp;pages=96-106&amp;publication_year=2005&amp;author=Lepouras%2CG&amp;author=Vassilakis%2CC">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="M. Lewis, J. Jacobson, " /><meta itemprop="datePublished" content="2002" /><meta itemprop="headline" content="Lewis M, Jacobson J (2002) Game engines in scientific research. Commun ACM 45(1):27–31" /><p class="c-article-references__text" id="ref-CR21">Lewis M, Jacobson J (2002) Game engines in scientific research. Commun ACM 45(1):27–31</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 21 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Game%20engines%20in%20scientific%20research&amp;journal=Commun%20ACM&amp;volume=45&amp;issue=1&amp;pages=27-31&amp;publication_year=2002&amp;author=Lewis%2CM&amp;author=Jacobson%2CJ">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="M. Lewis, J. Wang, S. Hughes, " /><meta itemprop="datePublished" content="2007" /><meta itemprop="headline" content="Lewis M, Wang J, Hughes S (2007) USARSim: simulation for the study of human-robot interaction. J Cogn Eng Deci" /><p class="c-article-references__text" id="ref-CR22">Lewis M, Wang J, Hughes S (2007) USARSim: simulation for the study of human-robot interaction. J Cogn Eng Deci Making 1(1):98–120</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 22 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=USARSim%3A%20simulation%20for%20the%20study%20of%20human-robot%20interaction&amp;journal=J%20Cogn%20Eng%20Deci%20Making&amp;volume=1&amp;issue=1&amp;pages=98-120&amp;publication_year=2007&amp;author=Lewis%2CM&amp;author=Wang%2CJ&amp;author=Hughes%2CS">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Mac Namee B, Rooney P, Lindstrom P, Ritchie A, Boylan F, Burke G (2006) Serious Gordon: using serious games to" /><p class="c-article-references__text" id="ref-CR23">Mac Namee B, Rooney P, Lindstrom P, Ritchie A, Boylan F, Burke G (2006) Serious Gordon: using serious games to teach food safety in the kitchen. In: 9th international conference on computer games: AI, animation, mobile, educational &amp; serious games CGAMES06</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="O’Neill E, Lewis D, McGlinn K, Dobson S (2007) Rapid user-centred evaluation for context-aware systems. In: Do" /><p class="c-article-references__text" id="ref-CR24">O’Neill E, Lewis D, McGlinn K, Dobson S (2007) Rapid user-centred evaluation for context-aware systems. In: Doherty G, Blandford A (eds) Interactive systems. Design, specification and verification. 13th interactional workshop, DSVIS 2006, vol LNCS 4323, Springer, Heidelberg, pp 220–233</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="W. Piekarski, B. Thomas, " /><meta itemprop="datePublished" content="2002" /><meta itemprop="headline" content="Piekarski W, Thomas B (2002) ARQuake: the outdoor augmented reality gaming system. Commun ACM 45(1):36–38" /><p class="c-article-references__text" id="ref-CR25">Piekarski W, Thomas B (2002) ARQuake: the outdoor augmented reality gaming system. Commun ACM 45(1):36–38</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1145%2F502269.502291" aria-label="View reference 25">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 25 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=ARQuake%3A%20the%20outdoor%20augmented%20reality%20gaming%20system&amp;journal=Commun%20ACM&amp;volume=45&amp;issue=1&amp;pages=36-38&amp;publication_year=2002&amp;author=Piekarski%2CW&amp;author=Thomas%2CB">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Popescu GV, Burdea GC, Trefftz H (2002) Multimodal interaction modelling. In: Stanney KM (ed) Handbook of virt" /><p class="c-article-references__text" id="ref-CR26">Popescu GV, Burdea GC, Trefftz H (2002) Multimodal interaction modelling. In: Stanney KM (ed) Handbook of virtual environments. Lawrence Erlbaum Associates, pp 435–454</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="ST. Refsland, T. Ojika, R. Berry, " /><meta itemprop="datePublished" content="2002" /><meta itemprop="headline" content="Refsland ST, Ojika T, Berry R Jr (2002) Enhanced environments: large-scale, real-time ecosystems. Presence 11(" /><p class="c-article-references__text" id="ref-CR27">Refsland ST, Ojika T, Berry R Jr (2002) Enhanced environments: large-scale, real-time ecosystems. Presence 11(3):221–246</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1162%2F105474602317473196" aria-label="View reference 27">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 27 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Enhanced%20environments%3A%20large-scale%2C%20real-time%20ecosystems&amp;journal=Presence&amp;volume=11&amp;issue=3&amp;pages=221-246&amp;publication_year=2002&amp;author=Refsland%2CST&amp;author=Ojika%2CT&amp;author=Berry%2CR">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="G. Robillard, S. Bouchard, T. Fournier, P. Renaud, " /><meta itemprop="datePublished" content="2003" /><meta itemprop="headline" content="Robillard G, Bouchard S, Fournier T, Renaud P (2003) Anxiety and presence using VR immersion: a comparative st" /><p class="c-article-references__text" id="ref-CR28">Robillard G, Bouchard S, Fournier T, Renaud P (2003) Anxiety and presence using VR immersion: a comparative study of the reactions of phobic and non-phobic participants in therapeutic virtual environments derived from computer games. CyberPsychol Behav 6(5):467–475</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1089%2F109493103769710497" aria-label="View reference 28">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 28 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Anxiety%20and%20presence%20using%20VR%20immersion%3A%20a%20comparative%20study%20of%20the%20reactions%20of%20phobic%20and%20non-phobic%20participants%20in%20therapeutic%20virtual%20environments%20derived%20from%20computer%20games&amp;journal=CyberPsychol%20Behav&amp;volume=6&amp;issue=5&amp;pages=467-475&amp;publication_year=2003&amp;author=Robillard%2CG&amp;author=Bouchard%2CS&amp;author=Fournier%2CT&amp;author=Renaud%2CP">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="BG. Silverman, G. Bharathy, K. O’Brien, J. Cornwell, " /><meta itemprop="datePublished" content="2006" /><meta itemprop="headline" content="Silverman BG, Bharathy G, O’Brien K, Cornwell J (2006) Human behaviour models for agents in simulators and gam" /><p class="c-article-references__text" id="ref-CR29">Silverman BG, Bharathy G, O’Brien K, Cornwell J (2006) Human behaviour models for agents in simulators and games: Part II: Gamebot engineering with PMFserv. Presence 15(2):163–185</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1162%2Fpres.2006.15.2.163" aria-label="View reference 29">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 29 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Human%20behaviour%20models%20for%20agents%20in%20simulators%20and%20games%3A%20Part%20II%3A%20Gamebot%20engineering%20with%20PMFserv&amp;journal=Presence&amp;volume=15&amp;issue=2&amp;pages=163-185&amp;publication_year=2006&amp;author=Silverman%2CBG&amp;author=Bharathy%2CG&amp;author=O%E2%80%99Brien%2CK&amp;author=Cornwell%2CJ">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="SP. Smith, DJ. Duke, " /><meta itemprop="datePublished" content="2000" /><meta itemprop="headline" content="Smith SP, Duke DJ (2000) Binding virtual environments to toolkit capabilities. Comput Graph Forum 19(3):C-81–C" /><p class="c-article-references__text" id="ref-CR30">Smith SP, Duke DJ (2000) Binding virtual environments to toolkit capabilities. Comput Graph Forum 19(3):C-81–C-89</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1111%2F1467-8659.00400" aria-label="View reference 30">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 30 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Binding%20virtual%20environments%20to%20toolkit%20capabilities&amp;journal=Comput%20Graph%20Forum&amp;volume=19&amp;issue=3&amp;pages=C-81-C-89&amp;publication_year=2000&amp;author=Smith%2CSP&amp;author=Duke%2CDJ">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="SP. Smith, MD. Harrison, " /><meta itemprop="datePublished" content="2001" /><meta itemprop="headline" content="Smith SP, Harrison MD (2001) Editorial: user centred design and implementation of virtual environments. Int J " /><p class="c-article-references__text" id="ref-CR31">Smith SP, Harrison MD (2001) Editorial: user centred design and implementation of virtual environments. Int J Hum Comput Stud 55(2):109–114</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1006%2Fijhc.2001.0476" aria-label="View reference 31">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 31 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Editorial%3A%20user%20centred%20design%20and%20implementation%20of%20virtual%20environments&amp;journal=Int%20J%20Hum%20Comput%20Stud&amp;volume=55&amp;issue=2&amp;pages=109-114&amp;publication_year=2001&amp;author=Smith%2CSP&amp;author=Harrison%2CMD">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Smith SP, Hart J (2006) Evaluating distributed cognitive resources for wayfinding in a desktop virtual environ" /><p class="c-article-references__text" id="ref-CR32">Smith SP, Hart J (2006) Evaluating distributed cognitive resources for wayfinding in a desktop virtual environment. In: Kitamura Y, Bowman D, Fröhlich B, Stürzlinger W (eds) IEEE symposium on 3D user interfaces 2006. IEEE, pp 3–10</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Smith SP, Willans JS (2006) Virtual object specification for usable virtual environments. In: Annual conferenc" /><p class="c-article-references__text" id="ref-CR33">Smith SP, Willans JS (2006) Virtual object specification for usable virtual environments. In: Annual conference of the Australian computer-human interaction special interest group (OzCHI 2006). ACM</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="A. Steed, C. Angus, " /><meta itemprop="datePublished" content="2006" /><meta itemprop="headline" content="Steed A, Angus C (2006) Enabling scalability by partitioning virtual environments using frontier sets. Presenc" /><p class="c-article-references__text" id="ref-CR34">Steed A, Angus C (2006) Enabling scalability by partitioning virtual environments using frontier sets. Presence 15(1):77–92</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1162%2Fpres.2006.15.1.77" aria-label="View reference 34">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 34 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Enabling%20scalability%20by%20partitioning%20virtual%20environments%20using%20frontier%20sets&amp;journal=Presence&amp;volume=15&amp;issue=1&amp;pages=77-92&amp;publication_year=2006&amp;author=Steed%2CA&amp;author=Angus%2CC">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Wang J, Lewis M, Gennari J (2003) USAR : a game based simulation for teleoperation. In: 47th annual meeting of" /><p class="c-article-references__text" id="ref-CR35">Wang J, Lewis M, Gennari J (2003) USAR : a game based simulation for teleoperation. In: 47th annual meeting of the human factors and ergonomics society, Denver, CO</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Zyda M (2005) From visual simulation to virtual reality to games. IEEE Computer, September, pp 25–32" /><p class="c-article-references__text" id="ref-CR36">Zyda M (2005) From visual simulation to virtual reality to games. IEEE Computer, September, pp 25–32</p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-008-0092-z-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Ack1">Acknowledgments</h2><div class="c-article-section__content" id="Ack1-content"><p>This work was funded in part by the Nuffield Foundation (Grant URB/34118).
+<sup><a href="#Fn44"><span class="u-visually-hidden">Footnote </span>44</a></sup>
+                     </p></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">Durham University, Durham, DH1 3LE, UK</p><p class="c-article-author-affiliation__authors-list">David Trenholme &amp; Shamus P. Smith</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-David-Trenholme"><span class="c-article-authors-search__title u-h3 js-search-name">David Trenholme</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;David+Trenholme&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=David+Trenholme" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22David+Trenholme%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Shamus_P_-Smith"><span class="c-article-authors-search__title u-h3 js-search-name">Shamus P. Smith</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Shamus P.+Smith&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Shamus P.+Smith" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Shamus P.+Smith%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-008-0092-z/email/correspondent/c1/new">Shamus P. Smith</a>.</p></div></div></section><section aria-labelledby="appendices"><div class="c-article-section" id="appendices-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="appendices">Appendix: Engine comparison</h2><div class="c-article-section__content" id="appendices-content"><h3 class="c-article__sub-heading u-visually-hidden" id="App1">Appendix: Engine comparison</h3><p>Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-008-0092-z#Tab1">1</a> compares and contrasts some of the important features that relate to modification and editing of games using the engines considered in this report.</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-1"><figure><figcaption class="c-article-table__figcaption"><b id="Tab1" data-test="table-caption">Table 1 Game engine comparison</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-008-0092-z/tables/1"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        </div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=Computer%20game%20engines%20for%20developing%20first-person%20virtual%20environments&amp;author=David%20Trenholme%20et%20al&amp;contentID=10.1007%2Fs10055-008-0092-z&amp;publication=1359-4338&amp;publicationDate=2008-03-28&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Trenholme, D., Smith, S.P. Computer game engines for developing first-person virtual environments.
+                    <i>Virtual Reality</i> <b>12, </b>181–187 (2008). https://doi.org/10.1007/s10055-008-0092-z</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-008-0092-z.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2007-07-23">23 July 2007</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2008-02-12">12 February 2008</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2008-03-28">28 March 2008</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2008-09">September 2008</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-008-0092-z" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-008-0092-z</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Virtual environments</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Computer game technology</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Game engines</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Reuse</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Prototyping</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-008-0092-z.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=92;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

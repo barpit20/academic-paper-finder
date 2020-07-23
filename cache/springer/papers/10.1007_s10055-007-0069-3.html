@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="Desktop haptic virtual assembly using physically based modelling"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="This research investigates the feasibility of using a desktop haptic virtual environment as a design tool for evaluating assembly operations. Bringing virtual reality characteristics to the..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/11/4.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="Desktop haptic virtual assembly using physically based modelling"/>
+
+    <meta name="dc.source" content="Virtual Reality 2007 11:4"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2007-06-14"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2007 Springer-Verlag London Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="This research investigates the feasibility of using a desktop haptic virtual environment as a design tool for evaluating assembly operations. Bringing virtual reality characteristics to the desktop, such as stereo vision, further promotes the use of this technology into the every day engineering design process. In creating such a system, the affordability and availability of hardware/software tools is taken into consideration. The resulting application combines several software packages including VR Juggler, open dynamics engine (ODE)/open physics abstraction layer (OPAL), OpenHaptics, and OpenGL/GLM/GLUT libraries to explore the benefits and limitations of combining haptics with physically based modelling. The equipment used to display stereo graphics includes a Stereographics emitter, Crystal Eyes shutter glasses, and a high refresh rate CRT Monitor. One or two-handed force feedback is obtained from various PHANTOM haptic devices from SensAble Technologies Inc. The application&#8217;s ability to handle complex part interactions is tested using two different computer systems, which approximate the higher and lower end of a typical engineer&#8217;s workstation. Different test scenarios are analyzed and results presented."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2007-06-14"/>
+
+    <meta name="prism.volume" content="11"/>
+
+    <meta name="prism.number" content="4"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="207"/>
+
+    <meta name="prism.endingPage" content="215"/>
+
+    <meta name="prism.copyright" content="2007 Springer-Verlag London Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-007-0069-3"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-007-0069-3"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-007-0069-3.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-007-0069-3"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="Desktop haptic virtual assembly using physically based modelling"/>
+
+    <meta name="citation_volume" content="11"/>
+
+    <meta name="citation_issue" content="4"/>
+
+    <meta name="citation_publication_date" content="2007/10"/>
+
+    <meta name="citation_online_date" content="2007/06/14"/>
+
+    <meta name="citation_firstpage" content="207"/>
+
+    <meta name="citation_lastpage" content="215"/>
+
+    <meta name="citation_article_type" content="Original Article"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-007-0069-3"/>
+
+    <meta name="DOI" content="10.1007/s10055-007-0069-3"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-007-0069-3"/>
+
+    <meta name="description" content="This research investigates the feasibility of using a desktop haptic virtual environment as a design tool for evaluating assembly operations. Bringing virt"/>
+
+    <meta name="dc.creator" content="Brad M. Howard"/>
+
+    <meta name="dc.creator" content="Judy M. Vance"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="citation_journal_title=J Comput Inform Sci Eng; citation_title=Value-addition of Haptics in Operator Training for Complex Machining Tasks; citation_author=A Balijepalli, T Kesavadas; citation_volume=4; citation_publication_date=2004; citation_pages=91-97; citation_doi=10.1115/1.1739240; citation_id=CR1"/>
+
+    <meta name="citation_reference" content="Bierbaum A, Just C, Hartling P, Meinert K, Baker A, Cruz-Neira C (2001) VR Juggler: a virtual platform for virtual ready appliation development. In: IEEE Virtual Reality 2001, Yokohama, Japan"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Comput Graph Appl; citation_title=A large haptic device for aircraft engine maintainability; citation_author=D Borro, J Savall, A Amundarain, JJ Gil, A Garia-Alonso, L Matey; citation_volume=24; citation_publication_date=2004; citation_pages=70-74; citation_doi=10.1109/MCG.2004.45; citation_id=CR3"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Trans Rob Autom; citation_title=Invited review: the synergy between virtual reality and robotics; citation_author=GC Burdea; citation_volume=15; citation_publication_date=1999; citation_pages=400-410; citation_doi=10.1109/70.768174; citation_id=CR4"/>
+
+    <meta name="citation_reference" content="Coutee AS, Bras B (2002) Collision detection for virtual objects in a haptic assembly and disassembly simulation environment. In: Proceedings of ASME design engineering technical conferences and computer and information in engineering conference, Montreal, Quebec, Canada"/>
+
+    <meta name="citation_reference" content="citation_journal_title=ASME J Comput Inform Sci Eng; citation_title=A haptic assembly and disassembly simulation environment and associated computational load optimization techniques; citation_author=AS Coutee, SD McDermott, B Bras; citation_volume=1; citation_publication_date=2001; citation_pages=113-122; citation_doi=10.1115/1.1389085; citation_id=CR6"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comput Graph (Pergamon); citation_title=Virtual reality as a tool for verification of assembly and maintenance processes; citation_author=AG Sa, G Zachmann; citation_volume=23; citation_publication_date=1999; citation_pages=389-403; citation_doi=10.1016/S0097-8493(99)00047-3; citation_id=CR7"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comput Aided Des; citation_title=Prototyping and design for assembly analysis using multimodal virtual environments; citation_author=R Gupta, D Whiney, D Zeltzer; citation_volume=29; citation_publication_date=1997; citation_pages=585-597; citation_doi=10.1016/S0010-4485(96)00093-0; citation_id=CR8"/>
+
+    <meta name="citation_reference" content="Gutierrez T, Barbero JI, Aizpitarte M, Carrillo AR, Eguidazu A (1998) Assembly simulation through haptic virtual prototypes. In: Proceedings of the third PHANTOM users group workshop, Cambridge, Massachusetts"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Comput Graph Appl; citation_title=VADE: A Virtual Assembly Design Environment; citation_author=S Jayaram, U Jayaram, Y Wang, H Tirumali, K Lyons, P Hart; citation_volume=19; citation_publication_date=1999; citation_pages=44-50; citation_doi=10.1109/38.799739; citation_id=CR10"/>
+
+    <meta name="citation_reference" content="Johnson TC, Vance JM (2001) The use of the Voxmap pointshell method of collision detection in virtual assembly methods planning. In: Proceedings of the ASME design engineering technical conference, Pittsburgh, PA"/>
+
+    <meta name="citation_reference" content="Kim CE, Vance JM (2003) Using VPS (Voxmap PointShell) as the basis for interaction in a virtual assembly environment. In: ASME design engineering technical conferences and computers and information in engineering conference, Chicago, IL, United States"/>
+
+    <meta name="citation_reference" content="Kim CE, Vance JM (2004) Development of a networked haptic environment in VR to facilitate collaborative design using voxmap pointshell (VPS) software. In: ASME design engineering technical conferences and computers and information in engineering conference, Salt Lake City, UT, United States"/>
+
+    <meta name="citation_reference" content="McDermott SD, Bras B (1999) Development of a haptically enabled dis/re-assembly simulation environment. In: Proceedings of ASME design engineering technical conference, Las Vegas, Nevada"/>
+
+    <meta name="citation_reference" content="McNeely WA, Puterbaugh KD, James TJ (1999) Six degree-of-freedom haptic rendering using voxel sampling. In: Proceedings of the 1999 annual conference&#8212;SIGGRAPH 99, Los Angeles, CA, USA"/>
+
+    <meta name="citation_reference" content="Pere E, Langrana N, Gomez D, Burdea GC (1996) Virtual mechanical assembly on a PC-based system. In: Proceedings of the ASME design engineering technical conference and computers in engineering, Irvine, California"/>
+
+    <meta name="citation_reference" content="Savall J, Borro D, Gil JJ, Matey L (2002) Description of a haptic system for virtual maintainability in aeronautics. In: Proceeding of 2002 IEEE/RSJ international conference on intelligent robots and systems, Lausanne, Switzerland"/>
+
+    <meta name="citation_reference" content="Smith R (2005) Open dynamic engine, vol 2005"/>
+
+    <meta name="citation_reference" content="Streeter T, Fischer A, Reinot A (2005) OPAL homepage"/>
+
+    <meta name="citation_reference" content="Terdiman P (2001) Memory-optimzed bounding-volume Hierarchies, p 10"/>
+
+    <meta name="citation_reference" content="citation_journal_title=J Comput Inform Sci Eng; citation_title=Effectiveness of haptic sensation for the evaluation of virtual prototypes; citation_author=SA Volkov, JM Vance; citation_volume=123; citation_publication_date=2001; citation_pages=123-128; citation_doi=10.1115/1.1384566; citation_id=CR21"/>
+
+    <meta name="citation_reference" content="Wan H, Gao S, Peng Q, Dai G, Zhang F (2004) MIVAS: a multi-modal immersive virtual assembly system. In: Proceedings of the ASME design engineering technical conference, Salt Lake City, UT"/>
+
+    <meta name="citation_reference" content="Zhu Z, Gao S, Wan H, Luo Y, Yang W (2004) Grasp identification and multi-finger haptic feedback for virtual assembly. In: Proceedings of the ASME design engineering technical conference, Salt Lake City, UT"/>
+
+    <meta name="citation_author" content="Brad M. Howard"/>
+
+    <meta name="citation_author_institution" content="Virtual Reality Application Center, Iowa State University, Ames, USA"/>
+
+    <meta name="citation_author" content="Judy M. Vance"/>
+
+    <meta name="citation_author_email" content="jmvance@iastate.edu"/>
+
+    <meta name="citation_author_institution" content="Virtual Reality Application Center, Iowa State University, Ames, USA"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-007-0069-3&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2007/10/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-007-0069-3"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="Desktop haptic virtual assembly using physically based modelling"/>
+        <meta property="og:description" content="This research investigates the feasibility of using a desktop haptic virtual environment as a design tool for evaluating assembly operations. Bringing virtual reality characteristics to the desktop, such as stereo vision, further promotes the use of this technology into the every day engineering design process. In creating such a system, the affordability and availability of hardware/software tools is taken into consideration. The resulting application combines several software packages including VR Juggler, open dynamics engine (ODE)/open physics abstraction layer (OPAL), OpenHaptics, and OpenGL/GLM/GLUT libraries to explore the benefits and limitations of combining haptics with physically based modelling. The equipment used to display stereo graphics includes a Stereographics emitter, Crystal Eyes shutter glasses, and a high refresh rate CRT Monitor. One or two-handed force feedback is obtained from various PHANTOM haptic devices from SensAble Technologies Inc. The application’s ability to handle complex part interactions is tested using two different computer systems, which approximate the higher and lower end of a typical engineer’s workstation. Different test scenarios are analyzed and results presented."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>Desktop haptic virtual assembly using physically based modelling | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-007-0069-3","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Haptic I/O, Computer-aided design, Physically based modelling, Virtual reality","kwrd":["Haptic_I/O","Computer-aided_design","Physically_based_modelling","Virtual_reality"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-007-0069-3","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-007-0069-3","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=69;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-007-0069-3">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            Desktop haptic virtual assembly using physically based modelling
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-007-0069-3.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-007-0069-3.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">Original Article</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2007-06-14" itemprop="datePublished">14 June 2007</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">Desktop haptic virtual assembly using physically based modelling</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Brad_M_-Howard" data-author-popup="auth-Brad_M_-Howard">Brad M. Howard</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Iowa State University" /><meta itemprop="address" content="grid.34421.30, 0000000419367312, Virtual Reality Application Center, Iowa State University, 2274 Howe Hall, Ames, IA, 50011, USA" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Judy_M_-Vance" data-author-popup="auth-Judy_M_-Vance" data-corresp-id="c1">Judy M. Vance<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Iowa State University" /><meta itemprop="address" content="grid.34421.30, 0000000419367312, Virtual Reality Application Center, Iowa State University, 2274 Howe Hall, Ames, IA, 50011, USA" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 11</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">207</span>–<span itemprop="pageEnd">215</span>(<span data-test="article-publication-year">2007</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">610 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">40 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                    
+                        <li class="c-article-metrics-bar__item">
+                            <p class="c-article-metrics-bar__count">0 <span class="c-article-metrics-bar__label">Altmetric</span></p>
+                        </li>
+                    
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-007-0069-3/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>This research investigates the feasibility of using a desktop haptic virtual environment as a design tool for evaluating assembly operations. Bringing virtual reality characteristics to the desktop, such as stereo vision, further promotes the use of this technology into the every day engineering design process. In creating such a system, the affordability and availability of hardware/software tools is taken into consideration. The resulting application combines several software packages including VR Juggler, open dynamics engine (ODE)/open physics abstraction layer (OPAL), OpenHaptics, and OpenGL/GLM/GLUT libraries to explore the benefits and limitations of combining haptics with physically based modelling. The equipment used to display stereo graphics includes a Stereographics emitter, Crystal Eyes shutter glasses, and a high refresh rate CRT Monitor. One or two-handed force feedback is obtained from various PHANTOM haptic devices from SensAble Technologies Inc. The application’s ability to handle complex part interactions is tested using two different computer systems, which approximate the higher and lower end of a typical engineer’s workstation. Different test scenarios are analyzed and results presented.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Introduction</h2><div class="c-article-section__content" id="Sec1-content"><p>Virtual reality (VR) is becoming a popular engineering design tool because of its ability to provide intuitive interaction with computer-generated models and data. VR refers to an immersive, computer-generated three-dimensional (3D) environment that allows direct manipulation of virtual objects. The immersive aspects of VR offer more intuitive methods to interact with 3D data than the conventional two-dimensional (2D) mouse and keyboard input devices.</p><p>Full scale VR systems, if totally immersive, typically require a large amount of space and rather expensive hardware. Such systems are better suited for design reviews where a group of engineers need to collaborate as opposed for use as a primary engineering design tool. For a typical design engineer concerned with assembly and maintenance tasks, bringing some of the immersive qualities of VR to the desktop will greatly enhance his/her ability to evaluate potential designs. This research investigates the feasibility of using a desktop haptic virtual environment as a design tool for evaluating assembly operations on virtual prototypes.</p><p>Virtual prototyping refers to the use of virtual reality to obtain design evaluations while a product is still in the digital form. With virtual prototypes, the VR environment simulates the relevant characteristics of a product’s design as realistically as possible in areas relating to design/engineering, manufacturing, and maintenance (de Sa and Zachmann <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="de Sa AG, Zachmann G (1999) Virtual reality as a tool for verification of assembly and maintenance processes. Comput Graph (Pergamon) 23:389–403" href="/article/10.1007/s10055-007-0069-3#ref-CR7" id="ref-link-section-d68845e299">1999</a>). The idea is to replace, at least partly, the need for a physical prototype with a virtual prototype. With virtual prototyping, many alternative designs can be explored while data is still in digital form ultimately leading to a better final design. Dealing with vital decisions and making changes before the design is finalized can substantially reduce the product development life cycle. Eliminating a physical prototype will also result in substantial cost savings in the overall design process (Savall et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Savall J, Borro D, Gil JJ, Matey L (2002) Description of a haptic system for virtual maintainability in aeronautics. In: Proceeding of 2002 IEEE/RSJ international conference on intelligent robots and systems, Lausanne, Switzerland" href="/article/10.1007/s10055-007-0069-3#ref-CR17" id="ref-link-section-d68845e302">2002</a>).</p><p>While many VR systems have targeted feedback for the senses of sight and sound, adding the sense of touch or “haptic” feedback is one interaction method gaining more popularity. Manufacturing assembly, maintenance disassembly, and the ergonomic aspects of a product are all key design considerations that must be examined. Given that the sense of touch is vital to performing these tasks, force feedback is important when interacting with virtual prototypes. Research has shown that adding force feedback to virtual assembly environments increases task efficiency times (Burdea <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Burdea GC (1999) Invited review: the synergy between virtual reality and robotics. IEEE Trans Rob Autom 15:400–410" href="/article/10.1007/s10055-007-0069-3#ref-CR4" id="ref-link-section-d68845e308">1999</a>; Volkov and Vance <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Volkov SA, Vance JM (2001) Effectiveness of haptic sensation for the evaluation of virtual prototypes. J Comput Inform Sci Eng 123:123–128" href="/article/10.1007/s10055-007-0069-3#ref-CR21" id="ref-link-section-d68845e311">2001</a>). Training for operations that require the sense of touch are also more accurately simulated by implementing haptic feedback. Testing on subjects has shown that trained operators feel more secure and can relate better to the real world process when trained on a simulator with haptic feedback than those trained on a simulator with no haptic feedback (Balijepalli and Kesavadas <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Balijepalli A, Kesavadas T (2004) Value-addition of Haptics in Operator Training for Complex Machining Tasks. J Comput Inform Sci Eng 4:91–97" href="/article/10.1007/s10055-007-0069-3#ref-CR1" id="ref-link-section-d68845e314">2004</a>).</p><p>Current computer aided design (CAD) software packages do provide some tools to evaluate assembly and maintenance operations such as sophisticated animations for planning part dis/assembly sequences. However, these features do not help identify awkward reach angles, insufficient tooling clearance, or the need for additional fixturing. For virtual assembly to be successful at identifying these dis/assembly issues, digital parts need to react similar to real parts<b>.</b> The two basic methods for simulating physical part behavior are physically based modelling and constraint-based modelling. Physically based modelling uses Newtonian physics to describe the motion of objects while constraint-based modelling uses assembly constraints related to the geometric properties of objects.</p></div></div></section><section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">Literature review</h2><div class="c-article-section__content" id="Sec2-content"><p>The literature review is divided into two sections: full scale VR assembly applications and haptic desktop VR assembly applications. Full-scale VR assembly applications are those systems, which provide a high sense of immersion but have some limiting factor that makes them unsuitable for operation on a desktop personal computer (PC) system. Desktop assembly applications are such a broad topic that the scope was limited to those systems, which are haptically enabled.</p><h3 class="c-article__sub-heading" id="Sec3">Full-scale VR assembly applications</h3><p>Jayaram et al. (Jayaram et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Jayaram S, Jayaram U, Wang Y, Tirumali H, Lyons K, Hart P (1999) VADE: A Virtual Assembly Design Environment. IEEE Comput Graph Appl 19:44–50" href="/article/10.1007/s10055-007-0069-3#ref-CR10" id="ref-link-section-d68845e338">1999</a>) have developed a well-known VR assembly application called Virtual Assembly Design Environment (VADE) at Washington State University. One or two-handed assembly operations are performed using position tracking and CyberGlove<sup>®</sup>/s. VADE models part behavior by importing constraints and model data from the CAD packages. Since constraints are used to model part behavior, no reaction forces are calculated and haptic behavior between parts is not achieved. Similar research has been conducted at Zhejiang University by Wan et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Wan H, Gao S, Peng Q, Dai G, Zhang F (2004) MIVAS: a multi-modal immersive virtual assembly system. In: Proceedings of the ASME design engineering technical conference, Salt Lake City, UT" href="/article/10.1007/s10055-007-0069-3#ref-CR22" id="ref-link-section-d68845e343">2004</a>) and Zhu et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Zhu Z, Gao S, Wan H, Luo Y, Yang W (2004) Grasp identification and multi-finger haptic feedback for virtual assembly. In: Proceedings of the ASME design engineering technical conference, Salt Lake City, UT" href="/article/10.1007/s10055-007-0069-3#ref-CR23" id="ref-link-section-d68845e346">2004</a>) in creating MIVAS (A Multi-Modal Immersive Virtual Assembly System). MIVAS provides additional fidelity by allowing the user to feel the size and shape of a part by providing force feedback from a CyberGrasp<sup>TM</sup> haptic device. Both VADE and MIVAS can display graphics using single and multiple projection screen systems.</p><p>Johnson and Vance at Iowa State University developed another VR assembly application called VEGAS (Virtual Environment for General Assembly) (Johnson and Vance <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Johnson TC, Vance JM (2001) The use of the Voxmap pointshell method of collision detection in virtual assembly methods planning. In: Proceedings of the ASME design engineering technical conference, Pittsburgh, PA" href="/article/10.1007/s10055-007-0069-3#ref-CR11" id="ref-link-section-d68845e354">2001</a>). VEGAS uses Voxmap PointShell<sup>TM </sup>(VPS) from Boeing Corporation, however, no haptics are implemented. Kim and Vance (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Kim CE, Vance JM (2003) Using VPS (Voxmap PointShell) as the basis for interaction in a virtual assembly environment. In: ASME design engineering technical conferences and computers and information in engineering conference, Chicago, IL, United States" href="/article/10.1007/s10055-007-0069-3#ref-CR12" id="ref-link-section-d68845e359">2003</a>) expanded the functionality of VEGAS by adding data glove interaction and implementing physically-based modelling for parts using VPS. Similar research by Kim and Vance (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Kim CE, Vance JM (2004) Development of a networked haptic environment in VR to facilitate collaborative design using voxmap pointshell (VPS) software. In: ASME design engineering technical conferences and computers and information in engineering conference, Salt Lake City, UT, United States" href="/article/10.1007/s10055-007-0069-3#ref-CR13" id="ref-link-section-d68845e362">2004</a>) has resulted in NHE (Network Haptic Environment) to enable assembly tasks to be evaluated by individuals in remote locations. Force feedback is achieved by using several SensAble PHANTOM<sup>TM</sup> haptic devices and the GHOST<sup>®</sup> SDK software library. A combination of server-client and peer-to-peer system architecture is used to consistently keep track of data.</p><p>CEIT, a Spanish non-profit research organization, has created a virtual system called REVIMA (Virtual Reality for Maintainability) (Borro et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Borro D, Savall J, Amundarain A, Gil JJ, Garia-Alonso A, Matey L (2004) A large haptic device for aircraft engine maintainability. IEEE Comput Graph Appl 24:70–74" href="/article/10.1007/s10055-007-0069-3#ref-CR3" id="ref-link-section-d68845e373">2004</a>; Savall et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Savall J, Borro D, Gil JJ, Matey L (2002) Description of a haptic system for virtual maintainability in aeronautics. In: Proceeding of 2002 IEEE/RSJ international conference on intelligent robots and systems, Lausanne, Switzerland" href="/article/10.1007/s10055-007-0069-3#ref-CR17" id="ref-link-section-d68845e376">2002</a>) to investigate maintenance and assembly operations for aircraft engines. The group developed a hardware device called LHIfAM (Large Haptic Interface for Aeronautic Maintainability), which can measure 6 degree-of-freedom (DOF) input while providing 3 DOF force feedback to the entire length of a virtual aircraft engine. A voxel-based method is used for collision detection and graphics are displayed on a single projection screen without stereo.</p><h3 class="c-article__sub-heading" id="Sec4">Haptic desktop VR assembly applications</h3><p>Gupta et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="Gupta R, Whiney D, Zeltzer D (1997) Prototyping and design for assembly analysis using multimodal virtual environments. Comput Aided Des 29:585–597" href="/article/10.1007/s10055-007-0069-3#ref-CR8" id="ref-link-section-d68845e387">1997</a>) at the Massachusetts Institute of Technology have developed a desktop system called the virtual environment for design assembly (VEDA). Haptic force feedback is implemented using a dual PHANTOM setup but the virtual environment and haptic feedback are limited to two dimensions. VEDA uses force feedback, physically based modelling, sound cues, and stereo vision to provide a more realistic virtual assembly experience. Similar research has been conducted by McDermott and Bras (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="McDermott SD, Bras B (1999) Development of a haptically enabled dis/re-assembly simulation environment. In: Proceedings of ASME design engineering technical conference, Las Vegas, Nevada" href="/article/10.1007/s10055-007-0069-3#ref-CR14" id="ref-link-section-d68845e390">1999</a>), Coutee and Bras (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Coutee AS, Bras B (2002) Collision detection for virtual objects in a haptic assembly and disassembly simulation environment. In: Proceedings of ASME design engineering technical conferences and computer and information in engineering conference, Montreal, Quebec, Canada" href="/article/10.1007/s10055-007-0069-3#ref-CR5" id="ref-link-section-d68845e393">2002</a>) and Coutee et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Coutee AS, McDermott SD, Bras B (2001) A haptic assembly and disassembly simulation environment and associated computational load optimization techniques. ASME J Comput Inform Sci Eng 1:113–122" href="/article/10.1007/s10055-007-0069-3#ref-CR6" id="ref-link-section-d68845e396">2001</a>) at the Georgia Institute of Technology in creating haptic integrated dis/re-assembly analysis (HIDRA). The same dual PHANTOM setup as VEDA is used but the virtual environment and haptic feedback is extended to three dimensions. Simplified rigid body dynamics, constraint maintenance, and velocity slow down compensation all help speed up the simulation calculations but distract from the application’s realism.</p><p>Pere et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1996" title="Pere E, Langrana N, Gomez D, Burdea GC (1996) Virtual mechanical assembly on a PC-based system. In: Proceedings of the ASME design engineering technical conference and computers in engineering, Irvine, California" href="/article/10.1007/s10055-007-0069-3#ref-CR16" id="ref-link-section-d68845e402">1996</a>) at Rutgers University developed a haptic device called the Rutgers Master II (RMII) for performing assembly tasks in a desktop based virtual assembly workshop called VShop. Objects in VShop can be touched or grasped while force feedback is provided by the RMII. Gravity and collision detection are also implemented but with minimal fidelity.</p><p>The European research group LABEIN has developed a haptic CAD environment by integrating dual PHANTOM interaction with the CAD software DATum (Gutierrez et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1998" title="Gutierrez T, Barbero JI, Aizpitarte M, Carrillo AR, Eguidazu A (1998) Assembly simulation through haptic virtual prototypes. In: Proceedings of the third PHANTOM users group workshop, Cambridge, Massachusetts" href="/article/10.1007/s10055-007-0069-3#ref-CR9" id="ref-link-section-d68845e408">1998</a>). Within the application a user can touch, move, and detect collisions between parts in order to simulate assembly and maintenance tasks. However, no real time physics or dynamics are applied in the application.</p><p>Boeing’s Mathematics and Computing Technologies Division (M&amp;CT) has also teamed up with SensAble to produce a desktop virtual prototyping application to test the PHANTOM 3.0/6DOF with VPS collision and contact response software (McNeely et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="McNeely WA, Puterbaugh KD, James TJ (1999) Six degree-of-freedom haptic rendering using voxel sampling. In: Proceedings of the 1999 annual conference—SIGGRAPH 99, Los Angeles, CA, USA" href="/article/10.1007/s10055-007-0069-3#ref-CR15" id="ref-link-section-d68845e414">1999</a>). When testing the application, a model teapot was manipulated in a complex scene of several thousand polygons while the user received both force and torque feedback.</p><p>The previous applications all seem to lack characteristics in one area or another for the ideal haptically enabled desktop VR application. The full-scale systems tend to have a custom made or expensive equipment while the haptic desktop systems appear to fall short in realistic part interaction. This research attempts to create an application by utilizing affordable equipment while still providing realistic part representation.</p></div></div></section><section aria-labelledby="Sec5"><div class="c-article-section" id="Sec5-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec5">Hardware and software tools</h2><div class="c-article-section__content" id="Sec5-content"><h3 class="c-article__sub-heading" id="Sec6">Hardware tools</h3><p>Factors such as cost, size, availability, and adaptability were all taken into consideration when selecting equipment. One or two handed force feedback is provided by various PHANTOM (Personal HAptic iNTerface Mechanism) haptic devices from SensAble Technologies Inc. Body-grounded devices such as MIVAS’s CyberGrasp<sup>TM</sup> (Wan et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Wan H, Gao S, Peng Q, Dai G, Zhang F (2004) MIVAS: a multi-modal immersive virtual assembly system. In: Proceedings of the ASME design engineering technical conference, Salt Lake City, UT" href="/article/10.1007/s10055-007-0069-3#ref-CR22" id="ref-link-section-d68845e435">2004</a>; Zhu et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Zhu Z, Gao S, Wan H, Luo Y, Yang W (2004) Grasp identification and multi-finger haptic feedback for virtual assembly. In: Proceedings of the ASME design engineering technical conference, Salt Lake City, UT" href="/article/10.1007/s10055-007-0069-3#ref-CR23" id="ref-link-section-d68845e438">2004</a>) and VShop’s Rutgers Master II (Pere et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1996" title="Pere E, Langrana N, Gomez D, Burdea GC (1996) Virtual mechanical assembly on a PC-based system. In: Proceedings of the ASME design engineering technical conference and computers in engineering, Irvine, California" href="/article/10.1007/s10055-007-0069-3#ref-CR16" id="ref-link-section-d68845e441">1996</a>) provide natural forces for griping objects, but lack the ability to provide force feedback when parts collide. The PHANTOM devices are desktop-grounded which allows gravity and collision forces to be simulated. The newest and most cost effective device from SensAble, the PHANTOM Omni<sup>TM</sup>, was selected as the primary haptic device for this research although all PHANTOM devices are easily used. The Omni can input 6 DOF (<i>x</i>, <i>y</i>, <i>z</i>, roll, pitch, yaw) data to the simulation while providing 3 DOF (<i>x</i>, <i>y</i>, <i>z</i>) force feedback to the user.</p><p>Visualizing and interacting with complex 3D CAD data on a 2D monitor can be a difficult task. Stereo or 3D imaging provides the user with a more intuitive interface by conveying depth perception and spatial cues. Quad-buffered page-flipping was used to provide active stereo with Crystal Eyes<sup>®</sup> shutter glasses. A high refresh rate CRT Monitor is used for the display device.</p><p>Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-007-0069-3#Tab1">1</a> provides a summary of the two computer systems used to analyze application performance. The systems approximate the higher and lower ends of an engineer’s typical industry workstation for processor speed, memory, and graphics cards. A Dell<sup>TM</sup> Inspiron 8600 laptop was used to represent the lower end machine while a dual processor Dell Precision 670 approximated the higher end.
+</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-1"><figure><figcaption class="c-article-table__figcaption"><b id="Tab1" data-test="table-caption">Table 1 Computer specifications</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-007-0069-3/tables/1"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h3 class="c-article__sub-heading" id="Sec7">Software tools</h3><p>When selecting the software tools, factors such as cost, ease of programming, and robustness were all taken into consideration. Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-007-0069-3#Tab2">2</a> gives the name and functionality of the software libraries used to create the application. C++ was used as the programming language and Microsoft Visual Studio .NET 2003 as the development environment. Object oriented programming concepts were used to combine the functionality of each library.
+</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-2"><figure><figcaption class="c-article-table__figcaption"><b id="Tab2" data-test="table-caption">Table 2 Software libraries</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-007-0069-3/tables/2"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>VR Juggler, an open source library for creating virtual environments, provides the application platform for this research. The VR Juggler API hides many of the lower-level programming details required to develop, test, and debug VR applications (Bierbaum et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Bierbaum A, Just C, Hartling P, Meinert K, Baker A, Cruz-Neira C (2001) VR Juggler: a virtual platform for virtual ready appliation development. In: IEEE Virtual Reality 2001, Yokohama, Japan" href="/article/10.1007/s10055-007-0069-3#ref-CR2" id="ref-link-section-d68845e686">2001</a>). OpenHaptics<sup>TM</sup> SDK toolkit, the newest generation of API and device drivers from SensAble, was used to drive the PHANTOM haptic device/s. The toolkit allows both lower-level and higher-level programming access to the PHANTOMs.</p><p>Open Dynamics Engine<sup>TM</sup> (ODE) (Smith <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Smith R (2005) Open dynamic engine, vol 2005" href="/article/10.1007/s10055-007-0069-3#ref-CR18" id="ref-link-section-d68845e696">2005</a>), a stable open source physics engine, provides the physically based modelling of parts for the application. Realistic physical behavior is simulated by creating hard contacts or non-penetration constraints whenever bodies collide with one another. ODE detects collisions for models represented by either geometric primitives or arbitrary triangle meshes using an open source library called Optimized Collision Detection (OPCODE) (Terdiman <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Terdiman P (2001) Memory-optimzed bounding-volume Hierarchies, p 10" href="/article/10.1007/s10055-007-0069-3#ref-CR20" id="ref-link-section-d68845e699">2001</a>). OPCODE uses a memory-optimized bounding-volume hierarchy of axis-aligned bounding boxes to detect when and where objects collide with a mesh. Open Physics Abstraction Layer (OPAL) (Streeter et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Streeter T, Fischer A, Reinot A (2005) OPAL homepage" href="/article/10.1007/s10055-007-0069-3#ref-CR19" id="ref-link-section-d68845e702">2005</a>), an open source higher-level API for lower-level physics engines, was used to implement ODE. OPAL simplifies required programming by providing intuitive data structures and setting defaults for many ODE simulation parameters. Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-007-0069-3#Tab3">3</a> provides the functionality and hierarchy of the different physics engine components.
+</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-3"><figure><figcaption class="c-article-table__figcaption"><b id="Tab3" data-test="table-caption">Table 3 Physics simulation libraries</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-007-0069-3/tables/3"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>GLUT is used to display the graphics for models represented by geometric primitives while triangle meshes are displayed using the GLM OBJ loader. The OBJ file format was selected as a relatively standard way of storing displaying triangle mesh data. ODE’s triangle mesh shape class also conveniently uses the same polygonal data as the OBJ format. This allows the same information to be used for both the physics and graphical models.</p></div></div></section><section aria-labelledby="Sec8"><div class="c-article-section" id="Sec8-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec8">System architecture</h2><div class="c-article-section__content" id="Sec8-content"><h3 class="c-article__sub-heading" id="Sec9">Configuration and model types</h3><p>The application uses two file formats to store model data: XML files and OBJ files. The XML file format, provided by OPAL, contains all the physical properties of an object such as initial position/orientation, density, surface friction, surface hardness, etc. The OBJ files contain all the polygonal data for displaying graphics and for creating ODE tri-mesh collision shapes.</p><p>Two model classes were developed using the OBJ and XML file types: primitive and mesh. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0069-3#Fig1">1</a> shows primitive and OBJ approximations of the same original CAD parts while Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-007-0069-3#Tab4">4</a> provides the required file types, physical representation, and graphical representation of each class. Shapes were manually placed for the primitive class representation using a 3DSMax plug-in supplied by OPAL. However, placing primitive requires large amounts of preprocessing and the fidelity of such parts is limited to the accuracy in which the primitives represent the original CAD model. The user can set an object’s physical properties by editing the XML file or allow OPAL to assign default values. The mesh model class requires an associated OBJ file to define its collision shape and render a graphical representation; however, an XML is still required to define its physical properties.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0069-3/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0069-3/MediaObjects/10055_2007_69_Fig1_HTML.jpg?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0069-3/MediaObjects/10055_2007_69_Fig1_HTML.jpg" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p>CAD models represented as a combination of geometric primitives (<i>top</i>) or triangular meshes (<i>bottom</i>)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0069-3/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-4"><figure><figcaption class="c-article-table__figcaption"><b id="Tab4" data-test="table-caption">Table 4 Class characteristics</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-007-0069-3/tables/4"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h3 class="c-article__sub-heading" id="Sec10">Virtual coupling</h3><p>A commonly used method known as “virtual coupling” was implemented to exchange forces between the haptic device and the dynamic simulation. Virtual coupling provides a layer of indirection between the device and the simulation. This layer of indirection is necessary since the PHANTOMs are impendence style haptic devices and forces are not directly available as inputs to the simulation (Jayaram et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Jayaram S, Jayaram U, Wang Y, Tirumali H, Lyons K, Hart P (1999) VADE: A Virtual Assembly Design Environment. IEEE Comput Graph Appl 19:44–50" href="/article/10.1007/s10055-007-0069-3#ref-CR10" id="ref-link-section-d68845e949">1999</a>). The coupling is most commonly applied using a spring damper system shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0069-3#Fig2">2</a>. The forces are calculated using the following damped linear and angular spring formulas: </p><div id="Equ1" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">
+$$ F = k_{{\text{L}}} d - \delta _{{\text{L}}} v{\text{ }} $$</span></div><div class="c-article-equation__number">
+                    (1)
+                </div></div>
+                           <div id="Equ2" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">
+$$ \tau = k_{{\text{R}}} \theta - \delta _{{\text{R}}} \omega $$</span></div><div class="c-article-equation__number">
+                    (2)
+                </div></div><p>where,<dl class="c-abbreviation_list"><dt class="c-abbreviation_list__term"><dfn>
+                                    <i>k</i>
+                                    <sub>L</sub>, <i>δ</i>
+                                    <sub>L</sub>
+                                 :</dfn></dt><dd class="c-abbreviation_list__description">
+                        <p> = linear spring’s stiffness and damping constants</p>
+                      </dd><dt class="c-abbreviation_list__term"><dfn>
+                                    <i>k</i>
+                                    <sub>R</sub>, <i>δ</i>
+                                    <sub>R</sub>
+                                 :</dfn></dt><dd class="c-abbreviation_list__description">
+                        <p> = rotational spring’s stiffness and damping constants</p>
+                      </dd><dt class="c-abbreviation_list__term"><dfn>
+                                    <i>d</i>, <i>θ</i>
+                                 :</dfn></dt><dd class="c-abbreviation_list__description">
+                        <p> = spring offsets for linear distance and rotational angle</p>
+                      </dd><dt class="c-abbreviation_list__term"><dfn>
+                                    <i>ν</i>, <i>ω</i>
+                                 :</dfn></dt><dd class="c-abbreviation_list__description">
+                        <p> = dynamic object’s relative linear and angular velocity.</p>
+                      </dd></dl>A nice feature of the virtual coupling method is that the spring and damper constants can be tweaked separately for the physics simulation and the haptic device. The haptic device spring stiffness is adjusted to scale the strength of the force feedback. Higher haptic spring stiffness corresponds to sharper force feedback when objects collide but more drag when freely manipulating objects. The virtual spring stiffness is set as high as possible while still maintaining a stable simulation with realistic behavior. The virtual spring constants require some trial and error to obtain desired results, however, initial worked showed linear spring constants 10 times greater than angular spring constants produced the most stable results.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0069-3/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0069-3/MediaObjects/10055_2007_69_Fig2_HTML.gif?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0069-3/MediaObjects/10055_2007_69_Fig2_HTML.gif" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p>Virtual coupling</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0069-3/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h3 class="c-article__sub-heading" id="Sec11">Mapping the haptic device</h3><p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0069-3#Fig3">3</a> provides the transformation pipeline, used in this research, for mapping the original device coordinates (<i>x</i>
+                           <sub>0</sub>, <i>y</i>
+                           <sub>0</sub>, <i>z</i>
+                           <sub>0</sub>) to the simulated camera view coordinates (<i>x</i>
+                           <sub>c</sub>, <i>y</i>
+                           <sub>c</sub>, <i>z</i>
+                           <sub>c</sub>). The first transformation matrix M1 is applied to the original device coordinates (<i>x</i>
+                           <sub>0</sub>, <i>y</i>
+                           <sub>0</sub>, <i>z</i>
+                           <sub>0</sub>) to account for the difference in the millimeter units of the device workspace and the default feet units of the VR Juggler environment coordinates (<i>x</i>
+                           <sub>VE</sub>, <i>y</i>
+                           <sub>VE</sub>, <i>z</i>
+                           <sub>VE</sub>). The M1 transformation is applied so that motion of the haptic device is restricted to graphics view frustum or the user’s view. Separate scale and translation factors are used for the different haptic devices to create approximately the same virtual workspace.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0069-3/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0069-3/MediaObjects/10055_2007_69_Fig3_HTML.gif?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0069-3/MediaObjects/10055_2007_69_Fig3_HTML.gif" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p>Transformation pipeline</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0069-3/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>The virtual coordinates (<i>x</i>
+                           <sub>VE</sub>, <i>y</i>
+                           <sub>VE</sub>, <i>z</i>
+                           <sub>VE</sub>) are then multiplied by the camera position matrix M2 to yield the virtual workspace in camera view coordinates (<i>x</i>
+                           <sub>c</sub>, <i>y</i>
+                           <sub>c</sub>, <i>z</i>
+                           <sub>c</sub>). Naviagtion within the application is achieved using keyboard interaction. Without this second M2 transformation, traversing the virtual environment leaves the virtual workspace in its initially placed position/orientation. The transformation ensures the virtual haptic workspace always stays within the user’s view.</p><h3 class="c-article__sub-heading" id="Sec12">Application flowchart</h3><p>After loading the appropriate model and configuration files, the application is then launched into three separate threads (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0069-3#Fig4">4</a>): haptics, physics, and graphics. The OpenHaptics<sup>TM</sup> toolkit launches a separate high priority, high frequency (∼1,000 Hz) haptic thread, which is responsible for communicating with the PHANTOM device/s. Only a single thread is required for multiple devices. With every pass of the haptic loop the application steps through each device executing its haptic frame. Synchronous callbacks are used to take thread safe snapshots of the haptic data for use in the other threads.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0069-3/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0069-3/MediaObjects/10055_2007_69_Fig4_HTML.gif?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0069-3/MediaObjects/10055_2007_69_Fig4_HTML.gif" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p>Application flowchart</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0069-3/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>The physics thread uses OPAL/ODE to perform all the collision detection and dynamics calculations for simulating realistic part behavior. These calculations provide the graphics loop with part position/orientation information used to display visual feedback and the haptics loop with a force vector used to render force feedback. By default, OPAL does not perform physics calculations in a separate thread from the main application. In an attempt to free the physics calculations from graphic delays, a separate physics thread was created using the VR Juggler Portable Runtime library (VaPoR). The VaPoR library also provides Mutex synchronization to keep the shared data thread safe. Mutexes were used to lock access while a particular thread is reading or writing to shared data. After one thread is finished, access is unlocked so other threads can use the same data. The speed and accuracy of the physics thread is controlled by the integration time step size. A smaller step size results in a more accurate simulation but can take up more computational resources. Integration values ranging from 100 to 1,000 Hz were tested.</p><p>VR Juggler is responsible for launching the graphics thread, which operates as fast as the PC system can render the entire graphics scene. Each time through the graphics loop, collision checking is performed in VR Juggler’s preframe to detect intersections of the haptic handle with virtual objects. Querying of the environment is done using an OPAL volume sensor based on the haptic device’s position information from the synchronous callback invoked in the physics thread. If the sphere shaped volume sensor intersects an object, the object’s colour is changed to notify the user.</p></div></div></section><section aria-labelledby="Sec13"><div class="c-article-section" id="Sec13-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec13">Models and interaction</h2><div class="c-article-section__content" id="Sec13-content"><h3 class="c-article__sub-heading" id="Sec14">CAD model preparation</h3><p>Before the application can load and interact with CAD geometry, the model data must first be formatted to an XML file and an OBJ file. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0069-3#Fig5">5</a> illustrates the three CAD-to-OBJ conversion paths used in this research. Model translation was developed to convert JT files, SolidWorks CAD files, and Pro/Engineer CAD files. Nugraf<sup>®</sup> and Vis Mockup offer many model translation options, including the ability to reduce the number of polyons in a file. Although the following conversions were used, any conversion path is allowed that results in producing OBJ geometry files.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0069-3/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0069-3/MediaObjects/10055_2007_69_Fig5_HTML.gif?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0069-3/MediaObjects/10055_2007_69_Fig5_HTML.gif" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p>OBJ Model conversion paths</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0069-3/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h3 class="c-article__sub-heading" id="Sec15">Model interaction</h3><p>Models the user wishes to interact with must be referenced in a configuration file, which is initialized before the application is launched. After the application has started, the user is able to select and haptically manipulate parts loaded into the virtual environment. The user controls the location of the virtual haptic handle, represented by a sphere, using the haptic stylist or handle. Movement in the virtual environment corresponds to device motion with the mappping method described in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-007-0069-3#Sec10">4.3</a>. An object can be selected while intersecting the haptic handle by pressing button one of the PHANTOM Omni device. A part can have three different states, each of which is represented by a different color (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0069-3#Fig6">6</a>):</p><ol class="u-list-style-none">
+                    <li>
+                      <span class="u-custom-list-number">1.</span>
+                      
+                        <p>unselected—neutral gray;</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">2.</span>
+                      
+                        <p>intersected by haptic handle—bright green;</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">3.</span>
+                      
+                        <p>selected—dark green.</p>
+                      
+                    </li>
+                  </ol><p>Once an object is selected, the haptic handle and virtual object are connected together using the virtual spring coupling method. Forces are then sent back and forth between the PHANTOM device and the manipulated object to simulate the part’s interaction with the virtual environment. More than one device can be simultaneously coupled to a single part or multiple separate parts (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0069-3#Fig7">7</a>). Force feedback is separately sent to each PHANTOM in order to simulate forces generated by the adjacent device and the manipulated part’s interaction with the simulation environment.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-6"><figure><figcaption><b id="Fig6" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 6</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0069-3/figures/6" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0069-3/MediaObjects/10055_2007_69_Fig6_HTML.jpg?as=webp"></source><img aria-describedby="figure-6-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0069-3/MediaObjects/10055_2007_69_Fig6_HTML.jpg" alt="figure6" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-6-desc"><p>A virtual wrench before colliding with haptic handle (<i>left</i>), while colliding with haptic handle (<i>middle</i>), and after being selected (<i>right</i>)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0069-3/figures/6" data-track-dest="link:Figure6 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-7"><figure><figcaption><b id="Fig7" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 7</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0069-3/figures/7" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0069-3/MediaObjects/10055_2007_69_Fig7_HTML.jpg?as=webp"></source><img aria-describedby="figure-7-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0069-3/MediaObjects/10055_2007_69_Fig7_HTML.jpg" alt="figure7" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-7-desc"><p>Dual haptic interaction with multiple parts</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0069-3/figures/7" data-track-dest="link:Figure7 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h3 class="c-article__sub-heading" id="Sec16">Interaction modes</h3><p>ODE has the ability to create both static and dynamic objects. Static objects have a collision shape but no associated dynamics body. Dynamic objects can still interact and collide with static objects but a static object itself always remains immobile. The two interaction modes explored in this research were:</p><ul class="u-list-style-bullet">
+                    <li>
+                      <p>Mode 1 (dynamic mode)—all bodies are considered dynamic throughout length of the simulation.</p>
+                    </li>
+                    <li>
+                      <p>Mode 2 (static mode)—all bodies are set to static until selected, after which, an object is then changed to dynamic. Upon releasing the object it is returned to static.</p>
+                    </li>
+                  </ul><p>While the dynamic mode provides the most realistic physics simulation, it does not necessarily provide the most intuitive interaction for virtual assembly. For example, as parts collide with a manipulated object, they can reach undesired positions and/or orientations leading to situations that complicate assembly. The static mode alleviates these problems by allowing a part to be positioned in a desired manner and then held static while other parts are assembled to it. Gravity is still simulated in the static mode by the manipulated object’s weight. The second mode also allows more complex assemblies to be analyzed since the amount of physics calculations are much less for static objects than dynamic ones.</p></div></div></section><section aria-labelledby="Sec17"><div class="c-article-section" id="Sec17-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec17">System analysis</h2><div class="c-article-section__content" id="Sec17-content"><h3 class="c-article__sub-heading" id="Sec18">General assembly testing</h3><p>Different assembly scenarios were developed, using both primitive and mesh parts, to evaluate the application’s collision detection and physical response accuracies. Results of primitive-to-primitive assembly showed accurate collision detection with very realistic physical responses. Primitive-to-mesh assembly interactions also demonstrated accurate collision detection with moderately accurate physical responses. Mesh-to-mesh assembly presented accurate collision detection while most of the time realistic physical responses were not demonstrated. Problems with physical responses occurred most frequently when mesh objects had continuous contact with each other, while situations with momentary contacts were occasionally simulated correctly. Error prone behavior included excessive surface stickiness between colliding meshes and occurrences where mesh shapes sank into one another.</p><p>The assembly scenario of placing a primitive-modeled square bolt into a primitive-modeled square hole was used to test the value provided by haptic force feedback. Primitive interactions were used since they provided the most realistic physical responses. In general, assembly with force feedback offered more natural interaction by providing instantaneous cues of part collisions. Without force feedback, the user was limited to delayed visual cues that a part had stopped following the device’s motion. Force feedback also helped guide the user’s motion once a bolt had been partly inserted into the hole.</p><h3 class="c-article__sub-heading" id="Sec19">Collision detection testing</h3><p>A “drop test” (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0069-3#Fig8">8</a>) was developed to evaluate ODE’s ability to detect collisions between various sized bolts and a block with a hole. The block was kept static while the dynamic bolt dropped into the hole. The worst case collision detection scenario was tested by perfectly aligning the bolts position and orientation required for assembly with respect to the hole. While being the easiest case for assembly, the smallest amount of gap required to detect a collision could be evaluated.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-8"><figure><figcaption><b id="Fig8" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 8</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0069-3/figures/8" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0069-3/MediaObjects/10055_2007_69_Fig8_HTML.gif?as=webp"></source><img aria-describedby="figure-8-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0069-3/MediaObjects/10055_2007_69_Fig8_HTML.gif" alt="figure8" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-8-desc"><p>Bolt drop test</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0069-3/figures/8" data-track-dest="link:Figure8 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>Separate tests were performed to evaluate collision detection for primitive-to-primitive, primitive-to-mesh, and mesh-to-mesh scenarios. The amount of clearance was calculated by the difference in the hole thickness <i>T</i> and the bolt thickness <i>t.</i>
+                        </p><p>To determine the minimum clearance for a collision to be detected, a hole with a 1 unit thickness was held constant while the bolt’s thickness increased until a collision registered. Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-007-0069-3#Tab5">5</a> presents the collision results for both float and double precision numbers.
+</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-5"><figure><figcaption class="c-article-table__figcaption"><b id="Tab5" data-test="table-caption">Table 5 Clearance results for bolt drop test</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-007-0069-3/tables/5"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>Analysis of Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-007-0069-3#Tab5">5</a> shows ODE’s collision detection to be quite accurate. The square hole/bolt clearance results vary a small amount but overall demonstrate collision detection accuracy to almost exact float or double precision. The lower accuracy shown by the circular hole/bolt is due to some precision loss when converting the original CAD data to the OBJ triangle mesh data format. This is because the OBJ circular hole is only a polygonal approximation of the original CAD NURBS (Non-Uniform Rational B-splines) curved surface representation of the hole.</p><h3 class="c-article__sub-heading" id="Sec20">Model loading testing</h3><p>Large complex mesh models were loaded to test the applications interaction capabilities and identify limiting areas of the system. Single PHANTOM testing occurred on both the Dell<sup>TM</sup> Inspiron 8600 laptop and the Dell<sup>TM</sup> Precision 670 PC while stereo vision was only implemented using the Precision PC. Frame rates were taken from each of the graphics, physics, and haptics loops to determine which thread was the limiting factor for different scenarios. The graphics and haptics threads were determined to fail if either fell below the rates required by the human body’s senses of sight (30 Hz) and touch (1,000 Hz), respectively. The physics loop was determined to fail if its frame rate went below the integration time step size, which was set at 0.01 s (100 Hz) for this testing.</p><p>Testing results without stereo showed the Precision PC could handle models up to 300,000 triangles while the Inspiron laptop could handle models up to 60,000 triangles. For models larger than these, the graphics thread could not render the scene at the required rate of 30 Hz. Implementing stereo vision cut the model size that could be graphically rendered by the Precision PC directly in half to around 150,000 triangles. Dual haptic manipulation dropped the maximum number of rendered polygons a marginal amount. Testing of larger models, up to 1,000,000 polygons, still maintained the required physics and haptic frame rates even though graphic rates could not be completed quickly enough.</p><p>Although the graphics thread was identified as the limiting factor for previous examples, other scenarios provided circumstances where the physics loop fell below acceptable rates. The ability of the physics thread to maintain desired integration speeds was identified to directly relate to the number of contact points generated for colliding objects. Scenes with many dynamic objects were not necessarily required to overwhelm the physics thread with contact calculations. For instance, a single complicated mesh can easily create enough contact points with primitives or another mesh shape to slow the integration speed. While ODE does allow the number the number of contacts to be directly quired, OPAL does not so analysis on the exact number of contacts required to slow system performance was not achieved. Since the haptics thread is only responsible for a minimal amount of tasks and is given the highest priority thread, it was not identified as the limiting factor for any test scenarios.</p></div></div></section><section aria-labelledby="Sec21"><div class="c-article-section" id="Sec21-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec21">Conclusions</h2><div class="c-article-section__content" id="Sec21-content"><p>This research investigated the feasibility of an affordable haptic desktop system for evaluating assembly operations. The application combines several software packages including VR Juggler, OPAL/ODE, OpenHaptics<sup>TM</sup>, and OpenGL/GLM to explore the benefits and limitations of combining physically based modelling with haptic force feedback. After using the application with different scenarios, some conclusions can be drawn about the system as a means for evaluating assembly operations and the tools used to create it.</p><p>ODE appears to detect collisions quite well as testing showed primitive-to-primitive, primitive-to-mesh, and mesh-to-mesh collisions were detected with almost exact float or double precision. However, problems sometimes did occur in simulating the correct physical response after detecting collisions, especially with mesh-to-mesh interactions. While primitive-to-primitive and primitive-to-mesh physical responses were fairly realistic, accurately representing CAD geometry with completely with geometric primitives requires a large amount of preprocessing work.</p><p>Although the application cannot accurately simulate physical responses between colliding mesh geometries, the system can still be used to evaluate the feasibility of some assembly and maintenance operations. A single mesh shape can be used to represent a rather complex part or subassembly while primitives used to approximate smaller parts and/or tooling. For example, Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0069-3#Fig6">6</a> illustrates a primitive representation of a wrench that can be used to evaluate awkward reach angles around the complicated mesh hitch assembly.</p><p>As expected, the graphics loop limitation occurred when the number of polygons reached a number where the system could no longer render the scene at the required rate of 30 Hz. The physics thread’s ability to maintain the requested integration speed was found to directly relate to the number of contacts generated between colliding geometry. Testing did not identify any scenario where the haptics thread was a limiting factor.</p><p>An interaction mode where parts are kept static until selected was identified as the most natural and computationally efficient. Dynamically simulating every part in a virtual scene creates the most realistic physics simulation but can complicate part assembly operations and slow system performance.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="A. Balijepalli, T. Kesavadas, " /><meta itemprop="datePublished" content="2004" /><meta itemprop="headline" content="Balijepalli A, Kesavadas T (2004) Value-addition of Haptics in Operator Training for Complex Machining Tasks. " /><p class="c-article-references__text" id="ref-CR1">Balijepalli A, Kesavadas T (2004) Value-addition of Haptics in Operator Training for Complex Machining Tasks. J Comput Inform Sci Eng 4:91–97</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1115%2F1.1739240" aria-label="View reference 1">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 1 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Value-addition%20of%20Haptics%20in%20Operator%20Training%20for%20Complex%20Machining%20Tasks&amp;journal=J%20Comput%20Inform%20Sci%20Eng&amp;volume=4&amp;pages=91-97&amp;publication_year=2004&amp;author=Balijepalli%2CA&amp;author=Kesavadas%2CT">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bierbaum A, Just C, Hartling P, Meinert K, Baker A, Cruz-Neira C (2001) VR Juggler: a virtual platform for vir" /><p class="c-article-references__text" id="ref-CR2">Bierbaum A, Just C, Hartling P, Meinert K, Baker A, Cruz-Neira C (2001) VR Juggler: a virtual platform for virtual ready appliation development. In: IEEE Virtual Reality 2001, Yokohama, Japan</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="D. Borro, J. Savall, A. Amundarain, JJ. Gil, A. Garia-Alonso, L. Matey, " /><meta itemprop="datePublished" content="2004" /><meta itemprop="headline" content="Borro D, Savall J, Amundarain A, Gil JJ, Garia-Alonso A, Matey L (2004) A large haptic device for aircraft eng" /><p class="c-article-references__text" id="ref-CR3">Borro D, Savall J, Amundarain A, Gil JJ, Garia-Alonso A, Matey L (2004) A large haptic device for aircraft engine maintainability. IEEE Comput Graph Appl 24:70–74</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2FMCG.2004.45" aria-label="View reference 3">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 3 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=A%20large%20haptic%20device%20for%20aircraft%20engine%20maintainability&amp;journal=IEEE%20Comput%20Graph%20Appl&amp;volume=24&amp;pages=70-74&amp;publication_year=2004&amp;author=Borro%2CD&amp;author=Savall%2CJ&amp;author=Amundarain%2CA&amp;author=Gil%2CJJ&amp;author=Garia-Alonso%2CA&amp;author=Matey%2CL">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="GC. Burdea, " /><meta itemprop="datePublished" content="1999" /><meta itemprop="headline" content="Burdea GC (1999) Invited review: the synergy between virtual reality and robotics. IEEE Trans Rob Autom 15:400" /><p class="c-article-references__text" id="ref-CR4">Burdea GC (1999) Invited review: the synergy between virtual reality and robotics. IEEE Trans Rob Autom 15:400–410</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2F70.768174" aria-label="View reference 4">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 4 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Invited%20review%3A%20the%20synergy%20between%20virtual%20reality%20and%20robotics&amp;journal=IEEE%20Trans%20Rob%20Autom&amp;volume=15&amp;pages=400-410&amp;publication_year=1999&amp;author=Burdea%2CGC">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Coutee AS, Bras B (2002) Collision detection for virtual objects in a haptic assembly and disassembly simulati" /><p class="c-article-references__text" id="ref-CR5">Coutee AS, Bras B (2002) Collision detection for virtual objects in a haptic assembly and disassembly simulation environment. In: Proceedings of ASME design engineering technical conferences and computer and information in engineering conference, Montreal, Quebec, Canada</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="AS. Coutee, SD. McDermott, B. Bras, " /><meta itemprop="datePublished" content="2001" /><meta itemprop="headline" content="Coutee AS, McDermott SD, Bras B (2001) A haptic assembly and disassembly simulation environment and associated" /><p class="c-article-references__text" id="ref-CR6">Coutee AS, McDermott SD, Bras B (2001) A haptic assembly and disassembly simulation environment and associated computational load optimization techniques. ASME J Comput Inform Sci Eng 1:113–122</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1115%2F1.1389085" aria-label="View reference 6">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 6 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=A%20haptic%20assembly%20and%20disassembly%20simulation%20environment%20and%20associated%20computational%20load%20optimization%20techniques&amp;journal=ASME%20J%20Comput%20Inform%20Sci%20Eng&amp;volume=1&amp;pages=113-122&amp;publication_year=2001&amp;author=Coutee%2CAS&amp;author=McDermott%2CSD&amp;author=Bras%2CB">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="AG. Sa, G. Zachmann, " /><meta itemprop="datePublished" content="1999" /><meta itemprop="headline" content="de Sa AG, Zachmann G (1999) Virtual reality as a tool for verification of assembly and maintenance processes. " /><p class="c-article-references__text" id="ref-CR7">de Sa AG, Zachmann G (1999) Virtual reality as a tool for verification of assembly and maintenance processes. Comput Graph (Pergamon) 23:389–403</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1016%2FS0097-8493%2899%2900047-3" aria-label="View reference 7">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 7 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Virtual%20reality%20as%20a%20tool%20for%20verification%20of%20assembly%20and%20maintenance%20processes&amp;journal=Comput%20Graph%20%28Pergamon%29&amp;volume=23&amp;pages=389-403&amp;publication_year=1999&amp;author=Sa%2CAG&amp;author=Zachmann%2CG">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="R. Gupta, D. Whiney, D. Zeltzer, " /><meta itemprop="datePublished" content="1997" /><meta itemprop="headline" content="Gupta R, Whiney D, Zeltzer D (1997) Prototyping and design for assembly analysis using multimodal virtual envi" /><p class="c-article-references__text" id="ref-CR8">Gupta R, Whiney D, Zeltzer D (1997) Prototyping and design for assembly analysis using multimodal virtual environments. Comput Aided Des 29:585–597</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1016%2FS0010-4485%2896%2900093-0" aria-label="View reference 8">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 8 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Prototyping%20and%20design%20for%20assembly%20analysis%20using%20multimodal%20virtual%20environments&amp;journal=Comput%20Aided%20Des&amp;volume=29&amp;pages=585-597&amp;publication_year=1997&amp;author=Gupta%2CR&amp;author=Whiney%2CD&amp;author=Zeltzer%2CD">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Gutierrez T, Barbero JI, Aizpitarte M, Carrillo AR, Eguidazu A (1998) Assembly simulation through haptic virtu" /><p class="c-article-references__text" id="ref-CR9">Gutierrez T, Barbero JI, Aizpitarte M, Carrillo AR, Eguidazu A (1998) Assembly simulation through haptic virtual prototypes. In: Proceedings of the third PHANTOM users group workshop, Cambridge, Massachusetts</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="S. Jayaram, U. Jayaram, Y. Wang, H. Tirumali, K. Lyons, P. Hart, " /><meta itemprop="datePublished" content="1999" /><meta itemprop="headline" content="Jayaram S, Jayaram U, Wang Y, Tirumali H, Lyons K, Hart P (1999) VADE: A Virtual Assembly Design Environment. " /><p class="c-article-references__text" id="ref-CR10">Jayaram S, Jayaram U, Wang Y, Tirumali H, Lyons K, Hart P (1999) VADE: A Virtual Assembly Design Environment. IEEE Comput Graph Appl 19:44–50</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2F38.799739" aria-label="View reference 10">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 10 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=VADE%3A%20A%20Virtual%20Assembly%20Design%20Environment&amp;journal=IEEE%20Comput%20Graph%20Appl&amp;volume=19&amp;pages=44-50&amp;publication_year=1999&amp;author=Jayaram%2CS&amp;author=Jayaram%2CU&amp;author=Wang%2CY&amp;author=Tirumali%2CH&amp;author=Lyons%2CK&amp;author=Hart%2CP">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Johnson TC, Vance JM (2001) The use of the Voxmap pointshell method of collision detection in virtual assembly" /><p class="c-article-references__text" id="ref-CR11">Johnson TC, Vance JM (2001) The use of the Voxmap pointshell method of collision detection in virtual assembly methods planning. In: Proceedings of the ASME design engineering technical conference, Pittsburgh, PA</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Kim CE, Vance JM (2003) Using VPS (Voxmap PointShell) as the basis for interaction in a virtual assembly envir" /><p class="c-article-references__text" id="ref-CR12">Kim CE, Vance JM (2003) Using VPS (Voxmap PointShell) as the basis for interaction in a virtual assembly environment. In: ASME design engineering technical conferences and computers and information in engineering conference, Chicago, IL, United States</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Kim CE, Vance JM (2004) Development of a networked haptic environment in VR to facilitate collaborative design" /><p class="c-article-references__text" id="ref-CR13">Kim CE, Vance JM (2004) Development of a networked haptic environment in VR to facilitate collaborative design using voxmap pointshell (VPS) software. In: ASME design engineering technical conferences and computers and information in engineering conference, Salt Lake City, UT, United States</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="McDermott SD, Bras B (1999) Development of a haptically enabled dis/re-assembly simulation environment. In: Pr" /><p class="c-article-references__text" id="ref-CR14">McDermott SD, Bras B (1999) Development of a haptically enabled dis/re-assembly simulation environment. In: Proceedings of ASME design engineering technical conference, Las Vegas, Nevada</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="McNeely WA, Puterbaugh KD, James TJ (1999) Six degree-of-freedom haptic rendering using voxel sampling. In: Pr" /><p class="c-article-references__text" id="ref-CR15">McNeely WA, Puterbaugh KD, James TJ (1999) Six degree-of-freedom haptic rendering using voxel sampling. In: Proceedings of the 1999 annual conference—SIGGRAPH 99, Los Angeles, CA, USA</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Pere E, Langrana N, Gomez D, Burdea GC (1996) Virtual mechanical assembly on a PC-based system. In: Proceeding" /><p class="c-article-references__text" id="ref-CR16">Pere E, Langrana N, Gomez D, Burdea GC (1996) Virtual mechanical assembly on a PC-based system. In: Proceedings of the ASME design engineering technical conference and computers in engineering, Irvine, California</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Savall J, Borro D, Gil JJ, Matey L (2002) Description of a haptic system for virtual maintainability in aerona" /><p class="c-article-references__text" id="ref-CR17">Savall J, Borro D, Gil JJ, Matey L (2002) Description of a haptic system for virtual maintainability in aeronautics. In: Proceeding of 2002 IEEE/RSJ international conference on intelligent robots and systems, Lausanne, Switzerland</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Smith R (2005) Open dynamic engine, vol 2005" /><p class="c-article-references__text" id="ref-CR18">Smith R (2005) Open dynamic engine, vol 2005</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Streeter T, Fischer A, Reinot A (2005) OPAL homepage" /><p class="c-article-references__text" id="ref-CR19">Streeter T, Fischer A, Reinot A (2005) OPAL homepage</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Terdiman P (2001) Memory-optimzed bounding-volume Hierarchies, p 10" /><p class="c-article-references__text" id="ref-CR20">Terdiman P (2001) Memory-optimzed bounding-volume Hierarchies, p 10</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="SA. Volkov, JM. Vance, " /><meta itemprop="datePublished" content="2001" /><meta itemprop="headline" content="Volkov SA, Vance JM (2001) Effectiveness of haptic sensation for the evaluation of virtual prototypes. J Compu" /><p class="c-article-references__text" id="ref-CR21">Volkov SA, Vance JM (2001) Effectiveness of haptic sensation for the evaluation of virtual prototypes. J Comput Inform Sci Eng 123:123–128</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1115%2F1.1384566" aria-label="View reference 21">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 21 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Effectiveness%20of%20haptic%20sensation%20for%20the%20evaluation%20of%20virtual%20prototypes&amp;journal=J%20Comput%20Inform%20Sci%20Eng&amp;volume=123&amp;pages=123-128&amp;publication_year=2001&amp;author=Volkov%2CSA&amp;author=Vance%2CJM">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Wan H, Gao S, Peng Q, Dai G, Zhang F (2004) MIVAS: a multi-modal immersive virtual assembly system. In: Procee" /><p class="c-article-references__text" id="ref-CR22">Wan H, Gao S, Peng Q, Dai G, Zhang F (2004) MIVAS: a multi-modal immersive virtual assembly system. In: Proceedings of the ASME design engineering technical conference, Salt Lake City, UT</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Zhu Z, Gao S, Wan H, Luo Y, Yang W (2004) Grasp identification and multi-finger haptic feedback for virtual as" /><p class="c-article-references__text" id="ref-CR23">Zhu Z, Gao S, Wan H, Luo Y, Yang W (2004) Grasp identification and multi-finger haptic feedback for virtual assembly. In: Proceedings of the ASME design engineering technical conference, Salt Lake City, UT</p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-007-0069-3-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Ack1">Acknowledgments</h2><div class="c-article-section__content" id="Ack1-content"><p>The authors would like to thank John Deere and Company for funding this research. Also, special thinks to the authors of the different opensource libraries used in this research: ODE, OPAL, OPCODE, and VR Juggler. Their work is greatly appreciated. </p></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">Virtual Reality Application Center, Iowa State University, 2274 Howe Hall, Ames, IA, 50011, USA</p><p class="c-article-author-affiliation__authors-list">Brad M. Howard &amp; Judy M. Vance</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Brad_M_-Howard"><span class="c-article-authors-search__title u-h3 js-search-name">Brad M. Howard</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Brad M.+Howard&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Brad M.+Howard" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Brad M.+Howard%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Judy_M_-Vance"><span class="c-article-authors-search__title u-h3 js-search-name">Judy M. Vance</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Judy M.+Vance&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Judy M.+Vance" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Judy M.+Vance%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-007-0069-3/email/correspondent/c1/new">Judy M. Vance</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=Desktop%20haptic%20virtual%20assembly%20using%20physically%20based%20modelling&amp;author=Brad%20M.%20Howard%20et%20al&amp;contentID=10.1007%2Fs10055-007-0069-3&amp;publication=1359-4338&amp;publicationDate=2007-06-14&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Howard, B.M., Vance, J.M. Desktop haptic virtual assembly using physically based modelling.
+                    <i>Virtual Reality</i> <b>11, </b>207–215 (2007). https://doi.org/10.1007/s10055-007-0069-3</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-007-0069-3.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2006-07-02">02 July 2006</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2007-03-16">16 March 2007</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2007-06-14">14 June 2007</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2007-10">October 2007</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-007-0069-3" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-007-0069-3</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Haptic I/O</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Computer-aided design</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Physically based modelling</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Virtual reality</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-007-0069-3.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=69;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

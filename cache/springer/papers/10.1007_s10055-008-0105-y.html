@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="GLSV: Graphics library stereo vision for OpenGL"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="This work proposes the development of an auxiliary library for use with OpenGL, to facilitate the creation of graphic applications incorporating stereoscopic representation. This library,..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/13/1.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="GLSV: Graphics library stereo vision for OpenGL"/>
+
+    <meta name="dc.source" content="Virtual Reality 2008 13:1"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2008-10-31"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2008 Springer-Verlag London Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="This work proposes the development of an auxiliary library for use with OpenGL, to facilitate the creation of graphic applications incorporating stereoscopic representation. This library, christened graphics library stereo vision (GLSV), is designed to remove all calculations involving knowledge of stereo vision theory from the task performed by the programmer without the latter having to change the way he/she has been working with the OpenGL library. The GLSV is distributed under the terms of the GNU Library General Public License agreement."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2008-10-31"/>
+
+    <meta name="prism.volume" content="13"/>
+
+    <meta name="prism.number" content="1"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="51"/>
+
+    <meta name="prism.endingPage" content="57"/>
+
+    <meta name="prism.copyright" content="2008 Springer-Verlag London Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-008-0105-y"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-008-0105-y"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-008-0105-y.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-008-0105-y"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="GLSV: Graphics library stereo vision for OpenGL"/>
+
+    <meta name="citation_volume" content="13"/>
+
+    <meta name="citation_issue" content="1"/>
+
+    <meta name="citation_publication_date" content="2009/03"/>
+
+    <meta name="citation_online_date" content="2008/10/31"/>
+
+    <meta name="citation_firstpage" content="51"/>
+
+    <meta name="citation_lastpage" content="57"/>
+
+    <meta name="citation_article_type" content="Original Article"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-008-0105-y"/>
+
+    <meta name="DOI" content="10.1007/s10055-008-0105-y"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-008-0105-y"/>
+
+    <meta name="description" content="This work proposes the development of an auxiliary library for use with OpenGL, to facilitate the creation of graphic applications incorporating stereoscop"/>
+
+    <meta name="dc.creator" content="S. Mart&#237;n"/>
+
+    <meta name="dc.creator" content="J. Su&#225;rez"/>
+
+    <meta name="dc.creator" content="R. Orea"/>
+
+    <meta name="dc.creator" content="R. Rubio"/>
+
+    <meta name="dc.creator" content="R. Gallego"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="Akka B (1998) Writing Stereoscopic Software for StereoGraphics&#174; Systems Using Microsoft Windows&#174; OpenGL StereoGraphics Corporation"/>
+
+    <meta name="citation_reference" content="Bourke P (1999) Calculating stereo pairs. 
+                    http://astronomy.swin.edu.au/~pbourke
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comp Graph; citation_title=Geometric transformations for displaying virtual objects on stereoscopic devices; citation_author=M Carrozzo, F Lacquaniti; citation_volume=21; citation_issue=3; citation_publication_date=1997; citation_pages=324-334; citation_id=CR3"/>
+
+    <meta name="citation_reference" content="Foley J, Van Dam A, Feiner S, Hughes J (1997) Computer graphics: principles and practice. Addison-Wesley, Reading"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Presence; citation_title=Geometric considerations for stereoscopic virtual environments; citation_author=L Hodges, E Davis; citation_volume=2; citation_issue=1; citation_publication_date=1993; citation_pages=34-43; citation_id=CR6"/>
+
+    <meta name="citation_reference" content="Lipton L (1997a) Stereographics developer&#8217;s handbook. StereoGraphics Corporation"/>
+
+    <meta name="citation_reference" content="Lipton L (1997b) Stereo-vision formats for video and computers graphics. StereoGraphics Corporation"/>
+
+    <meta name="citation_reference" content="OpenGL Architecture Review Board (1997) OpenGL Programming Guide v.1.1. Addison-Wesley Publishing Company, Reading"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comp Graph; citation_title=Transformations for stereoscopic visual simulation; citation_author=D Southard; citation_volume=16; citation_issue=4; citation_publication_date=1992; citation_pages=401-410; citation_doi=10.1016/0097-8493(92)90027-S; citation_id=CR13"/>
+
+    <meta name="citation_reference" content="Stereo3DTM (1999) Hardware developer&#8217;s handbook. StereoGraphics Corporation"/>
+
+    <meta name="citation_author" content="S. Mart&#237;n"/>
+
+    <meta name="citation_author_email" content="martinsantiago@uniovi.es"/>
+
+    <meta name="citation_author_institution" content="I3G Research Group, University School of Industrial Technical Engineering, University of Oviedo, Oviedo, Spain"/>
+
+    <meta name="citation_author" content="J. Su&#225;rez"/>
+
+    <meta name="citation_author_institution" content="I3G Research Group, University School of Industrial Technical Engineering, University of Oviedo, Oviedo, Spain"/>
+
+    <meta name="citation_author" content="R. Orea"/>
+
+    <meta name="citation_author_institution" content="I3G Research Group, University School of Industrial Technical Engineering, University of Oviedo, Oviedo, Spain"/>
+
+    <meta name="citation_author" content="R. Rubio"/>
+
+    <meta name="citation_author_institution" content="I3G Research Group, University School of Industrial Technical Engineering, University of Oviedo, Oviedo, Spain"/>
+
+    <meta name="citation_author" content="R. Gallego"/>
+
+    <meta name="citation_author_institution" content="I3G Research Group, University School of Industrial Technical Engineering, University of Oviedo, Oviedo, Spain"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-008-0105-y&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2009/03/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-008-0105-y"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="GLSV: Graphics library stereo vision for OpenGL"/>
+        <meta property="og:description" content="This work proposes the development of an auxiliary library for use with OpenGL, to facilitate the creation of graphic applications incorporating stereoscopic representation. This library, christened graphics library stereo vision (GLSV), is designed to remove all calculations involving knowledge of stereo vision theory from the task performed by the programmer without the latter having to change the way he/she has been working with the OpenGL library. The GLSV is distributed under the terms of the GNU Library General Public License agreement."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>GLSV: Graphics library stereo vision for OpenGL | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-008-0105-y","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Software libraries, Display algorithms, Stereoscopic, Virtual reality","kwrd":["Software_libraries","Display_algorithms","Stereoscopic","Virtual_reality"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-008-0105-y","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-008-0105-y","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=105;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-008-0105-y">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            GLSV: Graphics library stereo vision for OpenGL
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-008-0105-y.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-008-0105-y.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">Original Article</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2008-10-31" itemprop="datePublished">31 October 2008</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">GLSV: Graphics library stereo vision for OpenGL</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-S_-Mart_n" data-author-popup="auth-S_-Mart_n" data-corresp-id="c1">S. Martín<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University School of Industrial Technical Engineering, University of Oviedo" /><meta itemprop="address" content="grid.10863.3c, 0000000121646351, I3G Research Group, University School of Industrial Technical Engineering, University of Oviedo, Oviedo, Spain" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-J_-Su_rez" data-author-popup="auth-J_-Su_rez">J. Suárez</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University School of Industrial Technical Engineering, University of Oviedo" /><meta itemprop="address" content="grid.10863.3c, 0000000121646351, I3G Research Group, University School of Industrial Technical Engineering, University of Oviedo, Oviedo, Spain" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-R_-Orea" data-author-popup="auth-R_-Orea">R. Orea</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University School of Industrial Technical Engineering, University of Oviedo" /><meta itemprop="address" content="grid.10863.3c, 0000000121646351, I3G Research Group, University School of Industrial Technical Engineering, University of Oviedo, Oviedo, Spain" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-R_-Rubio" data-author-popup="auth-R_-Rubio">R. Rubio</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University School of Industrial Technical Engineering, University of Oviedo" /><meta itemprop="address" content="grid.10863.3c, 0000000121646351, I3G Research Group, University School of Industrial Technical Engineering, University of Oviedo, Oviedo, Spain" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-R_-Gallego" data-author-popup="auth-R_-Gallego">R. Gallego</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University School of Industrial Technical Engineering, University of Oviedo" /><meta itemprop="address" content="grid.10863.3c, 0000000121646351, I3G Research Group, University School of Industrial Technical Engineering, University of Oviedo, Oviedo, Spain" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 13</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">51</span>–<span itemprop="pageEnd">57</span>(<span data-test="article-publication-year">2009</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">244 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">4 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                    
+                        <li class="c-article-metrics-bar__item">
+                            <p class="c-article-metrics-bar__count">0 <span class="c-article-metrics-bar__label">Altmetric</span></p>
+                        </li>
+                    
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-008-0105-y/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>This work proposes the development of an auxiliary library for use with OpenGL, to facilitate the creation of graphic applications incorporating stereoscopic representation. This library, christened graphics library stereo vision (GLSV), is designed to remove all calculations involving knowledge of stereo vision theory from the task performed by the programmer without the latter having to change the way he/she has been working with the OpenGL library. The GLSV is distributed under the terms of the GNU Library General Public License agreement.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Introduction</h2><div class="c-article-section__content" id="Sec1-content"><p>Man’s interest in representing the three-dimensional reality surrounding us by means of a two-dimensional projection has remained unchanging through the ages. The irruption of computers in the second half of the XX century brought about an unprecedented revolution in the area of graphic representation. Stereovision techniques (StereoGraphics Corporation <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Stereo3DTM (1999) Hardware developer’s handbook. StereoGraphics Corporation" href="/article/10.1007/s10055-008-0105-y#ref-CR14" id="ref-link-section-d47411e318">1999</a>) have been impelled by this technological impulse.</p><p>For the development of graphic applications, the programmer normally has recourse to <b>graphic programming libraries</b>, also known as <b>graphic</b>
+                        <b>APIs</b> (<i>API: Application Programming Interface</i>).</p><p>There are a large number of graphic libraries: <i>OpenGL</i>, <i>Direct3D</i>, <i>GKS</i>, <i>PHIGS</i>, <i>PEX</i>, etc. <b>OpenGL</b> (OpenGL Architecture Review Board, <a href="http://www.opengl.org">http://www.opengl.org</a>, 2005) and <b>DirectX</b> are currently the most widely used. However, there are two essential differences between them: whereas <i>Direct3D</i> is a proprietary library of <i>Microsoft</i>, designed exclusively for the development of applications within the <i>Windows</i> environment, <i>OpenGL</i> is a freeware standard for the development of multiplatform applications. Applications developed using this library can run on any system, such as Unix<sup>®</sup>, Linux, Windows 95/98/2000/NT, Mac OS, OS/2, etc. Furthermore, the final users and independent software sellers do not require any licence for the use of <b>OpenGL</b>.</p><p>These two characteristics: free standard and multiplatform nature, are responsible for <i>OpenGL</i> continuing to be the reference for graphic application programmers after more than 14 years.</p><p>Generally, programmers use <b>OpenGL</b> in combination with other supplementary APIs in order to generalize functions common to most developers. Thus, for example, the <b>GLU</b> (<i>OpenGL Utility</i>) library simplifies the programmer’s work by defining the scenario to be displayed.</p><p>Nowadays there are a great number of graphics applications offering the possibility of three-dimensional representation (3D). The user can display a conical projection on the computer screen, which enhances spatial understanding of the designs. Virtual representations of great realism can be obtained through the addition to the conical projection of algorithms for overlapping and the suppression of hidden lines, lighting effects and surface texturing.</p><p>Nevertheless, in these 3D representation systems, the image obtained is unique, whereas human vision is binocular, stereoscopic. We perceive reality through two images, the result of two conical projections in which the view point is very slightly different. The brain integrates the two images to form a single representation of reality, deducing the distance of the objects forming it from the disparity between the two images.</p><p>The problem involved in generating a stereo image in the computer affects not only the computer program, but also the display devices. Stereo display devices in PCs have evolved from the simple anaglyphic glasses to systems of shutter glasses, lenticular filters, alternative polarizing screens, auto-stereo monitors and head mounted displays.</p></div></div></section><section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">Development of 3D graphics using OpenGL</h2><div class="c-article-section__content" id="Sec2-content"><p>
+                        <b>OpenGL</b> has been conceived for the creation of graphic contents in both <i>orthogonal</i> and <i>conical projections</i>. In order to recreate a three-dimensional environment using photo-realism techniques, the conical projection system must be used, as it is the one that most faithfully represents the image captured by the human eye or photographic objectives (Foley et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="Foley J, Van Dam A, Feiner S, Hughes J (1997) Computer graphics: principles and practice. Addison-Wesley, Reading" href="/article/10.1007/s10055-008-0105-y#ref-CR5" id="ref-link-section-d47411e428">1997</a>).</p><p>
+                        <b>OpenGL</b> offers a series of functions that facilitate the programmer’s work to achieve a conical projection. In order to define the position of the camera, we can use the <i>gluLookAt</i> function in the <b>GLU</b> auxiliary library (OpenGL Architecture Review Board <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="OpenGL Architecture Review Board (1997) OpenGL Programming Guide v.1.1. Addison-Wesley Publishing Company, Reading" href="/article/10.1007/s10055-008-0105-y#ref-CR12" id="ref-link-section-d47411e443">1997</a>).</p><p>The need to limit calculations in any computer system makes it necessary to define a <b>display volume</b>, so that only the graphic objects included in it are projected (see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0105-y#Fig1">1</a>). <b>OpenGL</b> defines this volume as a pyramid frustum with a rectangular base. The base of the pyramid frustum will pertain to the so-called<b> Far plane</b>, which represents the background of the scene. The upper face of the pyramid frustum will correspond to the <b>Near plane</b>. This plane, besides restricting the volume displayed within its area nearest the camera, coincides with <b>projection plane</b>
+                        <b>π</b> in <b>OpenGL</b>.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0105-y/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0105-y/MediaObjects/10055_2008_105_Fig1_HTML.gif?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0105-y/MediaObjects/10055_2008_105_Fig1_HTML.gif" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p>Implementation of conical projection in OpenGL</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0105-y/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>Apparently, this coincidence is not important: <b>projection plane</b>
+                        <b>π</b> represents the plane on which the computer monitor or projection screen is located, and the reality to be represented should be behind it. However, as we should see later, this necessary coincidence of <b>projection plane</b>
+                        <b>π</b> with the <b>Near plane</b> merits more detailed consideration in the case of stereo projections.</p><p>
+                        <b>OpenGL</b> contains a function <i>glFrustum,</i> which allows the volume displayed to be defined. The <i>gluPerspective</i> function of the <b>GLU</b> auxiliary library provides an alternative to <i>glFrustum</i>.</p><p>The <i>gluPerspective</i> function reduces the parameters required from six to four, because it assumes that the window of the scene is symmetrically centred around the point of intersection between <b>visual v</b> and the <b>Near plane</b>. It is not usual to need windows that are asymmetrical with regard to <b>visual v</b>; however, as we see below, it is the case with stereo projection.</p></div></div></section><section aria-labelledby="Sec3"><div class="c-article-section" id="Sec3-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec3">Development of stereo graphics using OpenGL</h2><div class="c-article-section__content" id="Sec3-content"><h3 class="c-article__sub-heading" id="Sec4">Implementation of stereo projection in OpenGL</h3><p>The main difference between a monoscopic and stereoscopic projection is that in the latter case there is not just one <b>view point V</b> from which the scene is observed, but two, one for each eye (Akka <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1998" title="Akka B (1998) Writing Stereoscopic Software for StereoGraphics® Systems Using Microsoft Windows® OpenGL StereoGraphics Corporation" href="/article/10.1007/s10055-008-0105-y#ref-CR1" id="ref-link-section-d47411e559">1998</a>; Carrozzo and Lacquaniti <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="Carrozzo M, Lacquaniti F (1997) Geometric transformations for displaying virtual objects on stereoscopic devices. Comp Graph 21(3):324–334" href="/article/10.1007/s10055-008-0105-y#ref-CR3" id="ref-link-section-d47411e562">1997</a>; Hodges and Davis <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1993" title="Hodges L, Davis E (1993) Geometric considerations for stereoscopic virtual environments. Presence 2(1):34–43" href="/article/10.1007/s10055-008-0105-y#ref-CR6" id="ref-link-section-d47411e565">1993</a>; Southard <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1992" title="Southard D (1992) Transformations for stereoscopic visual simulation. Comp Graph 16(4):401–410" href="/article/10.1007/s10055-008-0105-y#ref-CR13" id="ref-link-section-d47411e568">1992</a>). These points, which we shall call <b>V</b>
+                           <sub>
+                    <b>l</b>
+                  </sub> (left eye) and <b>V</b>
+                           <sub>
+                    <b>r</b>
+                  </sub> (right eye), are separated from each other by a given distance, called <b>interaxial distance, d</b>. This distance should be approximately 6 cm in order to faithfully reproduce human vision.</p><p>The positioning of the cameras in <b>OpenGL</b> for a stereo projection does not entail any difficulty. View points <b>V</b>
+                           <sub>
+                    <b>l</b>
+                  </sub> and <b>V</b>
+                           <sub>
+                    <b>r</b>
+                  </sub> will be defined using function <i>gluLookAt</i> described previously.</p><p>The definition of the volumes displayed requires more careful analysis. In the first place, it can be deduced from the geometrical interpretation of the stereo projection that the <b>projection window</b> is not symmetrical to the <b>visual</b> from either <b>V</b>
+                           <sub>
+                    <b>l</b>
+                  </sub> or <b>V</b>
+                           <sub>
+                    <b>r,</b>
+                  </sub> (<b>v</b>
+                           <sub>
+                    <b>l</b>
+                  </sub> and <b>v</b>
+                           <sub>
+                    <b>r,</b>
+                  </sub>). Therefore, the <i>glFrustum</i> function must not be used to define either of the displayed volumes (neither must <i>gluPerspective</i>). One solution is shown in the Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0105-y#Fig2">2</a> (Bourke <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Bourke P (1999) Calculating stereo pairs. &#xA;                    http://astronomy.swin.edu.au/~pbourke&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-008-0105-y#ref-CR2" id="ref-link-section-d47411e677">1999</a>).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0105-y/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0105-y/MediaObjects/10055_2008_105_Fig2_HTML.gif?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0105-y/MediaObjects/10055_2008_105_Fig2_HTML.gif" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p>Asymmetrical volumes for stereoscopic projection</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0105-y/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>Unfortunately, this solution does not allow objects located in front of <b>projection plane π</b> to be represented. This is due to the fact that <b>projection plane π</b> is identified with the <b>Near plane</b> in <b>OpenGL</b>. Any object between the observer and <b>plane</b>
+                           <b>π</b> is outside the volume displayed and is not represented.</p><p>However, the effect of representing objects floating in front of the monitor or the projection screen is much used in stereo projections and, therefore, an adequate solution for this problem has to be found using <b>OpenGL</b>.</p><p>For this purpose, we shall initially simply ignore the fact that in <b>OpenGL projection plane π</b> and the <b>Near plane</b> must coincide. The volumes displayed would then be defined as shown in the Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0105-y#Fig3">3</a>.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0105-y/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0105-y/MediaObjects/10055_2008_105_Fig3_HTML.gif?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0105-y/MediaObjects/10055_2008_105_Fig3_HTML.gif" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p>Asymmetrical volumes and separation of near and projection planes</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0105-y/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>The <i>glFrustum</i> allows us to perfectly define both volumes, but the projection will be made on a <b>Near window</b>, defined on the <b>Near plane,</b> and not on the <b>projection window,</b> defined in <b>projection plane π</b>. Fortunately, it is easy to demonstrate geometrically that the difference between the two projections is merely a scaling operation.</p><p>Such scaling can be implemented in <b>OpenGL</b> using the <i>glViewport</i> function (see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0105-y#Fig4">4</a>). This function defines the size, in pixels, of the image that is sent to the display device. Four parameters are required for this purpose. The first two represent the <i>x</i> and <i>y</i> coordinates of the bottom left corner of the image, referred to the coordinate system of the graphic device. The other two represent the <i>width</i> and <i>height</i> of the image.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0105-y/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0105-y/MediaObjects/10055_2008_105_Fig4_HTML.gif?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0105-y/MediaObjects/10055_2008_105_Fig4_HTML.gif" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p>Relationship between projection plane, near plane and graphic window</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0105-y/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>The <i>glViewport</i> function allows the <b>Near window</b>, defined in <b>OpenGL</b> units of space, to be converted into a window on the graphic device, which we may call <b>graphic window</b> and which will, initially, be measured in pixels, although its physical dimension can be calculated. Thus, we can select this <b>graphic window</b> so that its physical dimensions are coherent with the dimensions in <b>OpenGL</b> space of the <b>projection window</b>.</p><p>This means that we intended to make a scaling operation between the <b>Near window</b> and the <b>projection window</b>, by means of an instruction that <b>OpenGL</b> does not provide, followed by a final transformation of the result towards a <b>graphic window</b> located on the display device, by means of the <i>glViewport</i> function. However, what we in fact do is to make a single transformation that includes both operations, from the <b>Near window</b> to the <b>graphic window</b>, using <i>glViewport</i>.</p><p>This ratio between <b>OpenGL</b> space and real dimensions must be common for all the items in the scene. Thus, the same ratio must be applied between the <b>interaxial</b>
+                           <b>distance</b> and the real value of the <i>interocular distance</i>; between the <b>view point V</b> to <b>projection plane π</b> distance and the distance separating the user from the monitor or the projection screen.</p><h3 class="c-article__sub-heading" id="Sec5">Influence of the computer system</h3><p>Once the geometrical problems involved in the creation of stereo scenes have been solved, it is necessary to briefly consider the difficulties associated with the transmission of the image to the display device.</p><p>In a computer system, the graphic card driver is the core of any stereo development, as it creates the connection between the stereo hardware and the development software.</p><p>The programmer may face two different situations when generating a stereogram: the video card may belong to the <b>quad buffer</b> category or to the <b>double buffer</b> category.</p><p>With <b>quad</b> technology video cards, the two images that define the stereogram are transmitted separately, through two independent communication channels. This is the <b>“dual stream”</b> format. Using in <b>OpenGL</b>
+                           <i>glGetBoolean</i> and the GL_STEREO attribute the programmer can query if the current display configuration permits the creation of stereo quad-buffered windows. The <i>quad</i> video cards have four memory zones or buffers. While two of them, called <i>left-front buffer</i> and <i>right-front buffer</i>, contain the pair of images being displayed on the device, the following scene to be displayed is created on the other two, called <i>left-back buffer</i> and <i>right-back buffer</i>. The driver adapts this double stream of information to the display device chosen.</p><p>In a second category—the <b>double buffer</b> technology video cards—both images of the stereo pair are transmitted via a single communication channel. The format used is the so-called <b>alternated pages</b>.</p><p>The <i>alternated pages</i> format can be used in two different ways. The first way consists of alternatively generating the two images that define the stereogram. We shall call this the <b>alternated image</b> format. While the <i>front buffer</i> contains the image that is being displayed on the device, for example the left image, the right image of the pair is created in the <i>back buffer</i>. This system allows a high resolution in shutter glasses-type devices or head mounted displays. However, the performance of the video card diminishes. Regardless of whether events that modify scene occur or not, the left and right views have to be continuously and alternately recreated, and synchronized with the refresh speed of the display device.</p><p>The <i>alternated pages</i> format has traditionally been used in a different way. Traditionally, the two images that define the stereogram are transmitted together as a single image. There are many possible formats that allow the stereogram to be combined in a single image: <b>anaglyph</b>, <b>col interlaced</b>, <b>row interlaced</b>, <b>above/below</b>, <b>side by side</b> (Lipton <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997b" title="Lipton L (1997b) Stereo-vision formats for video and computers graphics. StereoGraphics Corporation" href="/article/10.1007/s10055-008-0105-y#ref-CR9" id="ref-link-section-d47411e990">1997b</a>). Depending on the display device, these formats can be used directly. It is always possible to transform one format into another, using interpolated software. In any case, while the <i>front buffer</i> contains, for example, the anaglyph corresponding to an instant of time <i>t</i>, which is displayed on the device, the <i>back buffer</i> receives the anaglyph corresponding to instant<i> t</i> + 1. The loss of resolution of the stereogram, inherent to these formats, is compensated, from the economic point of view, by the lower level of technical sophistication required of the video card.</p><p>From the point of view of the programmer using <b>OpenGL</b>, the use of one format or the other conditions the design of the code. Pseudo-codes for the generation of a stereo pair are shown below as an example for <i>anaglyph</i>, <i>alternated pages</i> and <i>dual stream</i> formats. The obvious differences between the three examples highlight the need for the programmer to rigorously manage the format or work method.</p><h3 class="c-article__sub-heading" id="Sec6">Alternated pages: Anaglyph (double buffer)</h3>
+                  <ul class="u-list-style-none">
+                    <li>
+                      <p>
+                        <i>Initialise the buffer</i>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <i>Define the scene for the left view</i>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <i>Activate filter for left image (for example, cyan)</i>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <i>Transmit the scene to the back buffer</i>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <i>Deactivate the filter for the left view</i>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <i>Define the scene for the right view</i>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <i>Activate filter for right image (for example, red)</i>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <i>Transmit the scene to the back buffer</i>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <i>Deactivate the filter for the right view</i>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <i>Exchange buffers</i>
+                      </p>
+                    </li>
+                  </ul>
+                <h3 class="c-article__sub-heading" id="Sec7">Alternated pages: Alternated images (double buffer)</h3>
+                  <ul class="u-list-style-none">
+                    <li>
+                      <p>
+                        <i>Initialise the back buffer</i>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <i>If the left view is active</i>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <i>Define the scene for the left view</i>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <i>Transmit the scene to the back buffer</i>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <i>Ifnot</i>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <i>Define the scene for the right view</i>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <i>Transmit the scene to the back buffer</i>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <i>Endif</i>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <i>Exchange buffers</i>
+                      </p>
+                    </li>
+                  </ul>
+                <h3 class="c-article__sub-heading" id="Sec8">Dual Stream (quad buffer)</h3>
+                  <ul class="u-list-style-none">
+                    <li>
+                      <p>
+                        <i>Initialise left back buffer and right back buffer</i>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <i>Define the scene for the left view</i>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <i>Transmit the scene for left view to the left back buffer</i>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <i>Define the scene for right view</i>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <i>Transmit the scene for right view to the right back buffer</i>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <i>Exchange buffers</i>
+                      </p>
+                    </li>
+                  </ul>
+                </div></div></section><section aria-labelledby="Sec9"><div class="c-article-section" id="Sec9-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec9">Proposal for an auxiliary OpenGL library: GLSV</h2><div class="c-article-section__content" id="Sec9-content"><p>As can be deduced from the foregoing sections, the OpenGL structure allows the creation of stereo contents. However, any programmer who wishes to develop these contents has to fully understand the rules governing stereoscopy which, besides entailing a considerable additional effort, is a possible source of errors.</p><p>Some manufacturers, both graphic card and display device manufacturers, have developed drivers with stereo functions (NVidia Corporation <a href="http://www.nvidia.com">http://www.nvidia.com</a>, 2005). These drivers generate two or even more cameras from a single scene defined in OpenGL. The result is a stereogram that can be displayed in the various devices that support the driver in question (shutter glasses, auto-stereo monitors, etc.). Obviously, offering these drivers with stereo functions represents a competitive advantage of the first order for hardware manufacturers. The problem is that these drivers are not multiplatform and the programmer has not the total control of the parameters associated with the stereo nature of the scene.</p><p>From this we can deduce the advantage of defining an auxiliary library that eliminates the need for the programmer to make any calculations requiring mastery of the theory of stereo vision. It would be desirable that the use of such a library does not oblige the programmer to understand a new set of functions, or change the way of developing applications with <b>OpenGL</b>. Furthermore, the distribution under the terms of a free software license like <b>GNU</b> would be desirable.</p><p>These requirements form the basis for the design of the auxiliary <b>GLSV</b> library (<i>Graphics Library Stereo Vision</i>) developed by the <b>I</b>
+                        <sup><b>3</b></sup>
+                        <b>G</b> research group, <b><i>Investigación e Innovación en Ingeniería Gráfica</i></b>
+                        <b>(Research and Innovation in Graphic Engineering)</b> at <b>Oviedo University</b> (<a href="http://www.ideascad.es">http://www.ideascad.es</a>). To the above requirements must be added others associated with two basic concepts: the administration of the scene components and control of the stereo format.</p><p>The first concept, the <i>administration of scene components</i>, should give rise to a series of functions that basically allow:</p><ul class="u-list-style-bullet">
+                  <li>
+                    <p>The definition of the position of the cameras</p>
+                  </li>
+                  <li>
+                    <p>The definition of the volume of the stereo display</p>
+                  </li>
+                </ul>
+                     <p>The second concept, the <i>control of the stereo format</i>, requires the definition of another series of functions that allow:</p><ul class="u-list-style-bullet">
+                  <li>
+                    <p>Exchange between stereo vision formats implemented in the program at any moment of its execution: <i>dual stream</i>, <i>alternated pages</i>, <i>anaglyph</i>, etc.</p>
+                  </li>
+                  <li>
+                    <p>The control of the left, right and central cameras.</p><ul class="u-list-style-bullet">
+                        <li>
+                          <p>Definition of the active camera</p>
+                        </li>
+                        <li>
+                          <p>Enquiries as to the active camera</p>
+                        </li>
+                        <li>
+                          <p>Switching of the active camera (between left and right)</p>
+                        </li>
+                      </ul>
+                              
+                  </li>
+                  <li>
+                    <p>The management of variables associated with a specific stereo format. For example, in the case of an anaglyph format:</p><ul class="u-list-style-bullet">
+                        <li>
+                          <p>The choice of the type of glasses: red/blue, red/cyan, etc.</p>
+                        </li>
+                        <li>
+                          <p>The activation/deactivation of the colour filter</p>
+                        </li>
+                      </ul>
+                              
+                  </li>
+                </ul>
+                     </div></div></section><section aria-labelledby="Sec10"><div class="c-article-section" id="Sec10-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec10">Functions implemented in GLSV</h2><div class="c-article-section__content" id="Sec10-content"><p>At present, the functions implemented in the <b>GLSV</b> library for the administration of scene components are <i>glsvLookAt</i> and <i>glsvPerspective</i>. The <i>glsvLookAt</i> function is similar to the <i>gluLookAt</i> function. It receives ten variables as parameters, one more than its homonym. The first three define the coordinates of the observer in the reference system, i.e., the <b>view point of the observer</b> (<b>V</b>
+                        <sub>
+                  <b>o</b>
+                </sub>). The following three represent the coordinates of any point belonging to the <b>visual traced from the observer</b> (<b>v</b>
+                        <sub>
+                  <b>o</b>
+                </sub>). The following three variables define the <b>vertical orientation of the cameras</b> in space (common for both). Finally, <i>glsvLookAt</i> requires a tenth variable, the <b>interaxial distance</b> or separation between the cameras.</p><p>The <i>glsvPerspective</i> function has a direct link with its homonym <i>gluPerspective</i>. In this case, six parameters are required. The first four coincide with those of <i>gluPerspective</i> and define the <b>opening</b> of the display volume pyramid, the <b>aspect ratio</b> of the projection window, and the distances from <b>observer</b>
+                        <b>V</b>
+                        <sub>
+                  <b>o</b>
+                </sub> to the <b>Near</b> and <b>Far</b> planes. The last two variables define the distance <b>V</b>
+                        <sub>
+                  <b>o</b>
+                </sub> to the <b>projection plane π</b> and the <b>interaxial distance</b>.</p><p>With regard to <i>stereo format control</i>, the functions currently implemented in <b>GLSV</b> to change between stereo vision formats are <i>glsvSetStereoMode</i> and <i>glsvGetStereoMode</i>. The former establishes the desired format, while the latter provides information about the format currently selected. To date, the <i>dual stream</i>, <i>alternated pages-alternated images</i> and <i>alternated pages – anaglyph</i> formats have been implemented in <b>GLSV</b>
+                        <i>.</i>
+                     </p><p>The following functions: <i>glsvSetActiveEye</i>, <i>glsvGetActiveeye</i> and <i>glsvSwapEye</i> have been implemented for camera management. The first function allows the active camera to be established, while the second allows an enquiry as to which camera is active. Three different cameras are defined: <i>left</i> and <i>right</i>, for stereo projections, and <i>central</i>, when a monoscopic projection from the observer position <b>V</b>
+                        <sub>
+                  <b>o</b>
+                </sub> is required. The <i>glsvSwapEye</i> function allows the active camera to be switched between the <i>left</i> and <i>right</i> options.</p><p>Several functions associated with the <b>anaglyph format</b>: <i>glsvAnaglyphSetGlasses</i> and <i>glsvActiveAnaglyphFiltered</i> have been implemented to manage variables associated with this specific stereo format. The first function, <i>glsvAnaglyphSetGlasses</i>, receives as a parameter a variable defining the type of anaglyph glasses to be used: red/blue, red/green, red/cyan, blue/red, green/red and cyan/red. The <i>glsvActiveAnaglyphFiltered</i> function activates/deactivates a colour mask, depending on the type of glasses selected and the camera that is active at that time.</p><p>There have been defined also two functions associated with the <b>interlaced format</b>: <i>glsvInterlacedMask</i> and <i>glsvInterlacedFiltered</i>. The first function, <i>glsvInterlacedMask</i>, creates a row interlaced mask. The second function, <i>glsvInterlacedFiltered</i> activates/deactivates that mask, depending on the camera that is active at that time.</p></div></div></section><section aria-labelledby="Sec11"><div class="c-article-section" id="Sec11-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec11">Proposed future functionality of GLSV</h2><div class="c-article-section__content" id="Sec11-content"><p>To date, the following stereo formats: dual stream, alternated pages-alternated images, alternated pages-anaglyph and alternated pages-row interlaced have implemented in <b>GLSV</b>.</p><p>The implementation of the above-below, side-by-side and column-interlaced formats is foreseen and has not difficulty. The side-by-side format will be specially useful for HMDs with single-surface display.</p><p>Support for <b>head-tracked stereo</b> with single-surface displays (e.g., head-tracked user in front of stereo CRT or LCD or projection screen) implies the definition of a new function for the administration of scene components, glsvFustrum. It has a direct link with its homonym glFustrum, because it must be used when the assumption that the user’s head is centered in front of the display is false.</p><p>The <b>GLSV</b> has been designed to facilitate the creation of graphic applications incorporating stereoscopic representation based on two views. Nevertheless, the possibility of implementing other formats, particularly those associated with the new auto-stereo monitors in which eight or more views are needed, must be studied.</p><p>Finally, it has been observed that the alternated image format works only if the card does not miss frames. That is, if the scene is simple enough to be rendered within a single frame time. Otherwise, it is necessary to manually resynchronize the shutter glasses switching of the active camera (between left and right) with <i>glsvSwapEye</i>. It would be interesting to automatically measure the time between buffer swaps and try to recover in situations where swaps are missed. There are methods for that however, such as blue-line sync.</p></div></div></section><section aria-labelledby="Sec12"><div class="c-article-section" id="Sec12-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec12">Conclusions</h2><div class="c-article-section__content" id="Sec12-content"><p>The creation of stereo graphs using <b>OpenGL</b> requires the programmer to have a profound knowledge of the geometrical bases of stereo projection. The <b>GLSV</b>, <i>Graphics Library Stereo Vision</i>, auxiliary library removes this problem for the programmer, without making it necessary to change the way he/she has been working with the <b>OpenGL</b> library, as the functions introduced are equivalent in all aspects.</p><p>Compared to other alternatives, such as the use of drivers with stereo capability, the <b>GLSV</b> library allows the programmer to maintain full control over the parameters defining the composition of the stereo scene. Moreover, as it is directly based on the <b>OpenGL</b> standard, it inherits the advantages of the latter, particularly its independence from the operating system chosen and its portability on any hardware device with <b>OpenGL</b> support. The <b>GLSV</b> library is distributed under the terms of the <b>GNU</b> Library General Public License agreement.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Akka B (1998) Writing Stereoscopic Software for StereoGraphics® Systems Using Microsoft Windows® OpenGL Stereo" /><p class="c-article-references__text" id="ref-CR1">Akka B (1998) Writing Stereoscopic Software for StereoGraphics® Systems Using Microsoft Windows® OpenGL StereoGraphics Corporation</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bourke P (1999) Calculating stereo pairs. http://astronomy.swin.edu.au/~pbourke&#xA;                        " /><p class="c-article-references__text" id="ref-CR2">Bourke P (1999) Calculating stereo pairs. <a href="http://astronomy.swin.edu.au/~pbourke">http://astronomy.swin.edu.au/~pbourke</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="M. Carrozzo, F. Lacquaniti, " /><meta itemprop="datePublished" content="1997" /><meta itemprop="headline" content="Carrozzo M, Lacquaniti F (1997) Geometric transformations for displaying virtual objects on stereoscopic devic" /><p class="c-article-references__text" id="ref-CR3">Carrozzo M, Lacquaniti F (1997) Geometric transformations for displaying virtual objects on stereoscopic devices. Comp Graph 21(3):324–334</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 3 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Geometric%20transformations%20for%20displaying%20virtual%20objects%20on%20stereoscopic%20devices&amp;journal=Comp%20Graph&amp;volume=21&amp;issue=3&amp;pages=324-334&amp;publication_year=1997&amp;author=Carrozzo%2CM&amp;author=Lacquaniti%2CF">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Foley J, Van Dam A, Feiner S, Hughes J (1997) Computer graphics: principles and practice. Addison-Wesley, Read" /><p class="c-article-references__text" id="ref-CR5">Foley J, Van Dam A, Feiner S, Hughes J (1997) Computer graphics: principles and practice. Addison-Wesley, Reading</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="L. Hodges, E. Davis, " /><meta itemprop="datePublished" content="1993" /><meta itemprop="headline" content="Hodges L, Davis E (1993) Geometric considerations for stereoscopic virtual environments. Presence 2(1):34–43" /><p class="c-article-references__text" id="ref-CR6">Hodges L, Davis E (1993) Geometric considerations for stereoscopic virtual environments. Presence 2(1):34–43</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 5 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Geometric%20considerations%20for%20stereoscopic%20virtual%20environments&amp;journal=Presence&amp;volume=2&amp;issue=1&amp;pages=34-43&amp;publication_year=1993&amp;author=Hodges%2CL&amp;author=Davis%2CE">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Lipton L (1997a) Stereographics developer’s handbook. StereoGraphics Corporation" /><p class="c-article-references__text" id="ref-CR8">Lipton L (1997a) Stereographics developer’s handbook. StereoGraphics Corporation</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Lipton L (1997b) Stereo-vision formats for video and computers graphics. StereoGraphics Corporation" /><p class="c-article-references__text" id="ref-CR9">Lipton L (1997b) Stereo-vision formats for video and computers graphics. StereoGraphics Corporation</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="OpenGL Architecture Review Board (1997) OpenGL Programming Guide v.1.1. Addison-Wesley Publishing Company, Rea" /><p class="c-article-references__text" id="ref-CR12">OpenGL Architecture Review Board (1997) OpenGL Programming Guide v.1.1. Addison-Wesley Publishing Company, Reading</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="D. Southard, " /><meta itemprop="datePublished" content="1992" /><meta itemprop="headline" content="Southard D (1992) Transformations for stereoscopic visual simulation. Comp Graph 16(4):401–410" /><p class="c-article-references__text" id="ref-CR13">Southard D (1992) Transformations for stereoscopic visual simulation. Comp Graph 16(4):401–410</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1016%2F0097-8493%2892%2990027-S" aria-label="View reference 9">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 9 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Transformations%20for%20stereoscopic%20visual%20simulation&amp;journal=Comp%20Graph&amp;volume=16&amp;issue=4&amp;pages=401-410&amp;publication_year=1992&amp;author=Southard%2CD">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Stereo3DTM (1999) Hardware developer’s handbook. StereoGraphics Corporation" /><p class="c-article-references__text" id="ref-CR14">Stereo3D<sup>TM</sup> (1999) Hardware developer’s handbook. StereoGraphics Corporation</p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-008-0105-y-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Ack1">Acknowledgments</h2><div class="c-article-section__content" id="Ack1-content"><p>The work of the I<sup>3</sup>G group in the area of stereo graphics has been co-financed by the <b>Ánade Recursos Naturales, S.L.</b> company, in the framework of University, Company projects (CN-04-098 and FUO-EM-090-05).</p></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">I3G Research Group, University School of Industrial Technical Engineering, University of Oviedo, Oviedo, Spain</p><p class="c-article-author-affiliation__authors-list">S. Martín, J. Suárez, R. Orea, R. Rubio &amp; R. Gallego</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-S_-Mart_n"><span class="c-article-authors-search__title u-h3 js-search-name">S. Martín</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;S.+Mart%C3%ADn&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=S.+Mart%C3%ADn" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22S.+Mart%C3%ADn%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-J_-Su_rez"><span class="c-article-authors-search__title u-h3 js-search-name">J. Suárez</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;J.+Su%C3%A1rez&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=J.+Su%C3%A1rez" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22J.+Su%C3%A1rez%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-R_-Orea"><span class="c-article-authors-search__title u-h3 js-search-name">R. Orea</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;R.+Orea&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=R.+Orea" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22R.+Orea%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-R_-Rubio"><span class="c-article-authors-search__title u-h3 js-search-name">R. Rubio</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;R.+Rubio&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=R.+Rubio" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22R.+Rubio%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-R_-Gallego"><span class="c-article-authors-search__title u-h3 js-search-name">R. Gallego</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;R.+Gallego&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=R.+Gallego" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22R.+Gallego%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-008-0105-y/email/correspondent/c1/new">S. Martín</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=GLSV%3A%20Graphics%20library%20stereo%20vision%20for%20OpenGL&amp;author=S.%20Mart%C3%ADn%20et%20al&amp;contentID=10.1007%2Fs10055-008-0105-y&amp;publication=1359-4338&amp;publicationDate=2008-10-31&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Martín, S., Suárez, J., Orea, R. <i>et al.</i> GLSV: Graphics library stereo vision for OpenGL.
+                    <i>Virtual Reality</i> <b>13, </b>51–57 (2009). https://doi.org/10.1007/s10055-008-0105-y</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-008-0105-y.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2007-08-01">01 August 2007</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2008-08-08">08 August 2008</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2008-10-31">31 October 2008</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2009-03">March 2009</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-008-0105-y" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-008-0105-y</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Software libraries</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Display algorithms</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Stereoscopic</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Virtual reality</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-008-0105-y.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=105;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

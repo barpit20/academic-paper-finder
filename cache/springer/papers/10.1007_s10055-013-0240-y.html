@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="Natural and hybrid bimanual interaction for virtual assembly tasks"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="This paper focuses on the simulation of bimanual assembly/disassembly operations for training or product design applications. Most assembly applications have been limited to simulate only unimanual..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/18/3.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="Natural and hybrid bimanual interaction for virtual assembly tasks"/>
+
+    <meta name="dc.source" content="Virtual Reality 2013 18:3"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2013-12-10"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2013 Springer-Verlag London"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="This paper focuses on the simulation of bimanual assembly/disassembly operations for training or product design applications. Most assembly applications have been limited to simulate only unimanual tasks or bimanual tasks with one hand. However, recent research has introduced the use of two haptic devices for bimanual assembly. We propose a more natural and low-cost bimanual interaction than existing ones based on Markerless motion capture (Mocap) systems. Specifically, this paper presents two interactions based on a Markerless Mocap technology and one interaction based on combining Markerless Mocap technology with haptic technology. A set of experiments following a within-subjects design have been implemented to test the usability of the proposed interfaces. The Markerless Mocap-based interactions were validated with respect to two-haptic-based interactions, as the latter has been successfully integrated into bimanual assembly simulators. The pure Markerless Mocap interaction proved to be either the most or least efficient depending on the configuration (with 2D or 3D tracking, respectively). Usability results among the proposed interactions and the two-haptic based interaction showed no significant differences. These results suggest that Markerless Mocap or hybrid interactions are valid solutions for simulating bimanual assembly tasks when the precision of the motion is not critical. The decision on which technology to use should depend on the trade-off between the precision requested to simulate the task, the cost, and inner features of the technology."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2013-12-10"/>
+
+    <meta name="prism.volume" content="18"/>
+
+    <meta name="prism.number" content="3"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="161"/>
+
+    <meta name="prism.endingPage" content="171"/>
+
+    <meta name="prism.copyright" content="2013 Springer-Verlag London"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-013-0240-y"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-013-0240-y"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-013-0240-y.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-013-0240-y"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer London"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="Natural and hybrid bimanual interaction for virtual assembly tasks"/>
+
+    <meta name="citation_volume" content="18"/>
+
+    <meta name="citation_issue" content="3"/>
+
+    <meta name="citation_publication_date" content="2014/09"/>
+
+    <meta name="citation_online_date" content="2013/12/10"/>
+
+    <meta name="citation_firstpage" content="161"/>
+
+    <meta name="citation_lastpage" content="171"/>
+
+    <meta name="citation_article_type" content="Original Article"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-013-0240-y"/>
+
+    <meta name="DOI" content="10.1007/s10055-013-0240-y"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-013-0240-y"/>
+
+    <meta name="description" content="This paper focuses on the simulation of bimanual assembly/disassembly operations for training or product design applications. Most assembly applications ha"/>
+
+    <meta name="dc.creator" content="Yaiza V&#233;laz"/>
+
+    <meta name="dc.creator" content="Alberto Lozano-Rodero"/>
+
+    <meta name="dc.creator" content="Angel Suescun"/>
+
+    <meta name="dc.creator" content="Teresa Guti&#233;rrez"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="citation_journal_title=J Vis Lang Comput; citation_title=A haptic-based approach to virtual training for aerospace industry; citation_author=AF Abate, M Guida, P Leoncini, M Nappi, S Ricciardi; citation_volume=20; citation_publication_date=2009; citation_pages=318-325; citation_doi=10.1016/j.jvlc.2009.07.003; citation_id=CR1"/>
+
+    <meta name="citation_reference" content="Adams JR, Clowden D, Hannaford B (2001) Virtual training for a manual assembly task. Haptics-e, Vol. 2(2)"/>
+
+    <meta name="citation_reference" content="Avizzano CA, Marcheschi S, Angerilli M (2003) A multi-finger haptic interface for visually impaired people. Works.on ROMAN, pp 165&#8211;170. doi:
+                    10.1109/ROMAN.2003.1251838
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="Bloomfield A, Deng Y, Wampler J, Rondot P, Harth D, Mcmanus M, Badler NI (2003) A taxonomy and comparison of haptic actions for disassembly tasks. In: Proceedings of IEEE VR Conference, Los Angeles, CA, USA. pp 225&#8211;231"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Virtual Mixed Real LNCS; citation_title=Evaluation of a haptic-based interaction system for virtual manual assembly; citation_author=M Bordegoni, U Cugini, Paolo Belluco, M Aliverti; citation_volume=5622; citation_publication_date=2009; citation_pages=303-312; citation_doi=10.1007/978-3-642-02771-0_34; citation_id=CR5"/>
+
+    <meta name="citation_reference" content="citation_title=3D user interfaces: theory and practice; citation_publication_date=2004; citation_id=CR6; citation_author=D Bowman; citation_author=E Kruijff; citation_author=J LaViola; citation_author=I Poupyrev; citation_publisher=Addison-Wesley"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comput Vis (ECCV).; citation_title=A close-form iterative algorithm for depth inferring from a single image; citation_author=Y Cao, Y Xia, Z Wang; citation_volume=6315; citation_publication_date=2010; citation_pages=729-742; citation_id=CR7"/>
+
+    <meta name="citation_reference" content="Cheng-jun C, Yun-feng W, Niu L (2010) Research on interaction for virtual assembly system with force feedback. In: Proceedings ICIC, Wuxi, China, 2: 147&#8211;150. doi:
+                    10.1109/ICIC.2010.131
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="Gupta SK, An DK, Brough JE, Kavetsky RA, Schwartz M, Thakur A (2008) A survey of the virtual environments-based assembly training applications. Virtual manufacturing workshop (UMCP), Turin, Italy"/>
+
+    <meta name="citation_reference" content="Guti&#233;rrez T, Rodr&#237;guez J, V&#233;laz Y, Casado S, S&#225;nchez EJ, Suescun A (2010) IMA-VR: a multimodal virtual training system for skills transfer in industrial maintenance and assembly tasks. In: Proceedings ROMAN, pp 428&#8211;433. doi:
+                    10.1109/ROMAN.2010.5598643
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="citation_journal_title=Int J Comput Vis; citation_title=Condensation&#8212;conditional density propagation for visual tracking; citation_author=M Isard, A Blake; citation_volume=29; citation_issue=1; citation_publication_date=1998; citation_pages=5-28; citation_doi=10.1023/A:1008078328650; citation_id=CR11"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Int J Comput Integr Manuf; citation_title=Assembly process modeling for virtual assembly process planning; citation_author=Y Jun, J Liu, R Ning, Y Zhang; citation_volume=18; citation_issue=6; citation_publication_date=2005; citation_pages=442-445; citation_doi=10.1080/09511920400030153; citation_id=CR12"/>
+
+    <meta name="citation_reference" content="Jung B, Latoschik M, Wachsmuth I (1998) Knowledge-based assembly simulation for virtual prototype modeling. In: Proceedings IECON, Aachen, Germany, 4: 2152&#8211;2157. doi:
+                    10.1109/IECON.1998.724054
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="citation_journal_title=Int J Adv Manuf Tech; citation_title=Hand gesture-based tangible interactions for manipulating virtual objects in a mixed reality environment; citation_author=J Lee, G Rhee, D Seo; citation_volume=51; citation_issue=9; citation_publication_date=2010; citation_pages=1069-1082; citation_doi=10.1007/s00170-010-2671-x; citation_id=CR14"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Virtual Mixed Real LNCS; citation_title=Enhanced industrial maintenance work task planning by using virtual engineering tools and haptic user interfaces; citation_author=S-P Leino, S Lind, M Poyade, S Kiviranta, P Multanen, A Reyes-Lecuona, A M&#228;kiranta, A Muhammad; citation_volume=5622; citation_publication_date=2009; citation_pages=346-354; citation_doi=10.1007/978-3-642-02771-0_39; citation_id=CR15"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Adv Comput Environ Sci Adv Intell Soft Comput; citation_title=Constraint-based virtual assembly training system for aircraft engine; citation_author=X Lu, Y Qi, T Zhou, X Yao; citation_volume=142; citation_publication_date=2012; citation_pages=105-112; citation_doi=10.1007/978-3-642-27957-7_13; citation_id=CR16"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comput Vis Image Underst; citation_title=A survey of advances in vision-based human motion capture and analysis; citation_author=TB Moeslund, A Hilton, V Kr&#252;ger; citation_volume=104; citation_issue=2; citation_publication_date=2006; citation_pages=90-126; citation_doi=10.1016/j.cviu.2006.08.002; citation_id=CR17"/>
+
+    <meta name="citation_reference" content="Oikonomidis I, Kyriazis N, Argyros AA (2012) Tracking the articulated motion of two strongly interacting hands. To appear in the proceedings of IEEE conference on CVPR, Rhode Island, USA"/>
+
+    <meta name="citation_reference" content="Belluco P, Bordegoni M, Polistina, S (2010) Multimodal navigation for a haptic-based virtual assembly application. In: Conference on WINVR. Iowa, USA. pp 295&#8211;301. doi:
+                    10.1115/WINVR2010-3743
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comput Vis Image Underst; citation_title=Vision-based human motion analysis: an overview; citation_author=R Poppe; citation_volume=108; citation_issue=1&#8211;2; citation_publication_date=2007; citation_pages=4-18; citation_doi=10.1016/j.cviu.2006.10.016; citation_id=CR20"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Virtual Mixed Real LNCS; citation_title=A high-level haptic interface for enhanced interaction within virtools; citation_author=M Poyade, A Reyes-Lecuona, S-P Leino, S Kiviranta, R Viciana-Abad, S Lind; citation_volume=5622; citation_publication_date=2009; citation_pages=365-374; citation_doi=10.1007/978-3-642-02771-0_41; citation_id=CR21"/>
+
+    <meta name="citation_reference" content="Romero J, Kjellstr&#246;m H, Kragic H (2010) Hands in action: real-time 3D reconstruction of hands in interaction with objects. In: Proceedings IEEE ICRA, pp 458&#8211;463. doi:
+                    10.1109/ROBOT.2010.5509753
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="citation_journal_title=J Comput Inf Sci Eng; citation_title=Development of a dual-handed haptic assembly system: SHARP; citation_author=A Seth, H-J Su, JM Vance; citation_volume=8; citation_issue=4; citation_publication_date=2008; citation_pages=044502; citation_doi=10.1115/1.3006306; citation_id=CR23"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Virtual Real Virtual Manuf Constr; citation_title=Virtual reality for assembly methods prototyping&#8212;a review; citation_author=A Seth, JM Vance, JH Oliver; citation_volume=15; citation_issue=1; citation_publication_date=2011; citation_pages=5-20; citation_doi=10.1007/s10055-009-0153-y; citation_id=CR24"/>
+
+    <meta name="citation_reference" content="Shotton J, Fitzgibbon A, Cook M, Sharp T, Finocchio M, Moore R, Kipman A, Blake A (2011) Real-time human pose recognition in parts from single depth images. In: Proceedings CVPR&#8217;11. 2: 1297&#8211;1304"/>
+
+    <meta name="citation_reference" content="Siddiqui M, Medioni G (2010) Human pose estimation from a single view point, real-time range sensor. Conference in CVCG at CVPR, San Francisco, California, USA, pp. 1&#8211;8. doi:
+                    10.1109/CVPRW.2010.5543618
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="Unzueta L (2008) Markerless full-body human motion capture and combined motor action recognition for human-computer interaction. Ph. D. thesis, University of Navarra, tecnun"/>
+
+    <meta name="citation_reference" content="citation_journal_title=ASME J Comput Inf Sci Eng; citation_title=Effectiveness of haptic sensation for the evaluation of virtual prototypes; citation_author=S Volkov, JM Vance; citation_volume=1; citation_issue=2; citation_publication_date=2001; citation_pages=123-128; citation_doi=10.1115/1.1384566; citation_id=CR28"/>
+
+    <meta name="citation_reference" content="Wang RY, Popovic J (2009) Real-time hand-tracking with a color glove. In: Proceedeings SIGGRAPH&#8217;09. 28(3). doi:
+                    10.1145/1531326.1531369
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="Wang RY, Paris S, Popovic J (2011) 6D hands: Markerless hand-tracking for computer aided design. In: Proceeding UIST, pp 549&#8211;558. doi:
+                    10.1145/2047196.2047269
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Trans Pattern Anal Mach Intell; citation_title=Pfinder: real-time tracking of the human body; citation_author=CR Wren, A Azarbayejani, T Darrell; citation_volume=19; citation_issue=7; citation_publication_date=1997; citation_pages=780-785; citation_doi=10.1109/34.598236; citation_id=CR31"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Proc ACCV; citation_title=Constrained optimization for human pose estimation from depth sequences; citation_author=Y Zhu, K Fujimura; citation_volume=1; citation_publication_date=2007; citation_pages=408-418; citation_id=CR32"/>
+
+    <meta name="citation_author" content="Yaiza V&#233;laz"/>
+
+    <meta name="citation_author_email" content="yvelaz@gmail.com"/>
+
+    <meta name="citation_author_institution" content="Department of Mechanical Engineering, Centro de Estudios e investigaciones t&#233;cnicas de Guipuzcoa, ceit, Donostia-San Sebasti&#225;n, Spain"/>
+
+    <meta name="citation_author" content="Alberto Lozano-Rodero"/>
+
+    <meta name="citation_author_email" content="alozano@ceit.es"/>
+
+    <meta name="citation_author_institution" content="Department of Mechanical Engineering, Centro de Estudios e investigaciones t&#233;cnicas de Guipuzcoa, ceit, Donostia-San Sebasti&#225;n, Spain"/>
+
+    <meta name="citation_author" content="Angel Suescun"/>
+
+    <meta name="citation_author_email" content="asuescun@ceit.es"/>
+
+    <meta name="citation_author_institution" content="Department of Mechanical Engineering, Centro de Estudios e investigaciones t&#233;cnicas de Guipuzcoa, ceit, Donostia-San Sebasti&#225;n, Spain"/>
+
+    <meta name="citation_author" content="Teresa Guti&#233;rrez"/>
+
+    <meta name="citation_author_email" content="teresa.gutierrez@tecnalia.com"/>
+
+    <meta name="citation_author_institution" content="Industry and Transport Division of TECNALIA, Derio, Spain"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-013-0240-y&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2014/09/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-013-0240-y"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="Natural and hybrid bimanual interaction for virtual assembly tasks"/>
+        <meta property="og:description" content="This paper focuses on the simulation of bimanual assembly/disassembly operations for training or product design applications. Most assembly applications have been limited to simulate only unimanual tasks or bimanual tasks with one hand. However, recent research has introduced the use of two haptic devices for bimanual assembly. We propose a more natural and low-cost bimanual interaction than existing ones based on Markerless motion capture (Mocap) systems. Specifically, this paper presents two interactions based on a Markerless Mocap technology and one interaction based on combining Markerless Mocap technology with haptic technology. A set of experiments following a within-subjects design have been implemented to test the usability of the proposed interfaces. The Markerless Mocap-based interactions were validated with respect to two-haptic-based interactions, as the latter has been successfully integrated into bimanual assembly simulators. The pure Markerless Mocap interaction proved to be either the most or least efficient depending on the configuration (with 2D or 3D tracking, respectively). Usability results among the proposed interactions and the two-haptic based interaction showed no significant differences. These results suggest that Markerless Mocap or hybrid interactions are valid solutions for simulating bimanual assembly tasks when the precision of the motion is not critical. The decision on which technology to use should depend on the trade-off between the precision requested to simulate the task, the cost, and inner features of the technology."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>Natural and hybrid bimanual interaction for virtual assembly tasks | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-013-0240-y","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Virtual reality, Haptics, Markerless Mocap, Human–computer interaction, Assembly training, Bimanual assembly simulation","kwrd":["Virtual_reality","Haptics","Markerless_Mocap","Human–computer_interaction","Assembly_training","Bimanual_assembly_simulation"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-013-0240-y","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-013-0240-y","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=240;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-013-0240-y">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            Natural and hybrid bimanual interaction for virtual assembly tasks
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-013-0240-y.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-013-0240-y.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">Original Article</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2013-12-10" itemprop="datePublished">10 December 2013</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">Natural and hybrid bimanual interaction for virtual assembly tasks</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Yaiza-V_laz" data-author-popup="auth-Yaiza-V_laz" data-corresp-id="c1">Yaiza Vélaz<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Centro de Estudios e investigaciones técnicas de Guipuzcoa, ceit" /><meta itemprop="address" content="grid.13822.3a, 0000000106601972, Department of Mechanical Engineering, Centro de Estudios e investigaciones técnicas de Guipuzcoa, ceit, Paseo de Manuel Lardizabal, N° 15, 20018, Donostia-San Sebastián, Spain" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Alberto-Lozano_Rodero" data-author-popup="auth-Alberto-Lozano_Rodero">Alberto Lozano-Rodero</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Centro de Estudios e investigaciones técnicas de Guipuzcoa, ceit" /><meta itemprop="address" content="grid.13822.3a, 0000000106601972, Department of Mechanical Engineering, Centro de Estudios e investigaciones técnicas de Guipuzcoa, ceit, Paseo de Manuel Lardizabal, N° 15, 20018, Donostia-San Sebastián, Spain" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Angel-Suescun" data-author-popup="auth-Angel-Suescun">Angel Suescun</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Centro de Estudios e investigaciones técnicas de Guipuzcoa, ceit" /><meta itemprop="address" content="grid.13822.3a, 0000000106601972, Department of Mechanical Engineering, Centro de Estudios e investigaciones técnicas de Guipuzcoa, ceit, Paseo de Manuel Lardizabal, N° 15, 20018, Donostia-San Sebastián, Spain" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Teresa-Guti_rrez" data-author-popup="auth-Teresa-Guti_rrez">Teresa Gutiérrez</a></span><sup class="u-js-hide"><a href="#Aff2">2</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Industry and Transport Division of TECNALIA" /><meta itemprop="address" content="Industry and Transport Division of TECNALIA, C/Geldo-Parque Tecnologico de Bizkaia, Edificio 700, 48160, Derio, Spain" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 18</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">161</span>–<span itemprop="pageEnd">171</span>(<span data-test="article-publication-year">2014</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">535 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">5 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-013-0240-y/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>This paper focuses on the simulation of bimanual assembly/disassembly operations for training or product design applications. Most assembly applications have been limited to simulate only unimanual tasks or bimanual tasks with one hand. However, recent research has introduced the use of two haptic devices for bimanual assembly. We propose a more natural and low-cost bimanual interaction than existing ones based on Markerless motion capture (Mocap) systems. Specifically, this paper presents two interactions based on a Markerless Mocap technology and one interaction based on combining Markerless Mocap technology with haptic technology. A set of experiments following a within-subjects design have been implemented to test the usability of the proposed interfaces. The Markerless Mocap-based interactions were validated with respect to two-haptic-based interactions, as the latter has been successfully integrated into bimanual assembly simulators. The pure Markerless Mocap interaction proved to be either the most or least efficient depending on the configuration (with 2D or 3D tracking, respectively). Usability results among the proposed interactions and the two-haptic based interaction showed no significant differences. These results suggest that Markerless Mocap or hybrid interactions are valid solutions for simulating bimanual assembly tasks when the precision of the motion is not critical. The decision on which technology to use should depend on the trade-off between the precision requested to simulate the task, the cost, and inner features of the technology.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Introduction</h2><div class="c-article-section__content" id="Sec1-content"><p>
+Virtual reality (VR) is an artificial environment which simulates real or imaginary worlds by means of computers. This paper focuses on the simulation of bimanual assembly/disassembly operations, which are typically found in virtual training processes or as part of product design. The use of virtual mock-ups during the product design/development allows the reduction of physical prototypes (Jung et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1998" title="Jung B, Latoschik M, Wachsmuth I (1998) Knowledge-based assembly simulation for virtual prototype modeling. In: Proceedings IECON, Aachen, Germany, 4: 2152–2157. doi:&#xA;                    10.1109/IECON.1998.724054&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-013-0240-y#ref-CR13" id="ref-link-section-d87759e353">1998</a>), saving costs and time. In this specific context, virtual mock-ups allow designers to analyse accessibility problems and to validate whether the assembly and maintainability operations of a machine can be properly done. In the case of training activities, the user can practise the assembly task as many times as necessary, eliminating the constraints of using the physical environment such as availability of the machine, safety, time, or costs.</p><p>An important aspect of VR systems is the interaction between the user and the virtual world. As described by Bowman et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Bowman D, Kruijff E, LaViola J, Poupyrev I (2004) 3D user interfaces: theory and practice. Addison-Wesley, Boston" href="/article/10.1007/s10055-013-0240-y#ref-CR6" id="ref-link-section-d87759e359">2004</a>), there are three universal interaction tasks in a 3D user interface design: selection of an object, viewpoint motion control, and manipulation of the object. The implementation of these tasks is constrained by the technology used for interaction. Reviewing existing virtual assembly applications, the main types of interaction are based on mouse (2D and 3D), data-gloves, or haptic technology. Most commercial CAD applications, such as SolidWorks or Solid Edge, support standard input devices (i.e. keyboard and 2D mouse). In scientific publications, the proposed interaction is usually based on haptic technology (Leino et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Leino S-P, Lind S, Poyade M, Kiviranta S, Multanen P, Reyes-Lecuona A, Mäkiranta A, Muhammad A (2009) Enhanced industrial maintenance work task planning by using virtual engineering tools and haptic user interfaces. Virtual Mixed Real LNCS 5622:346–354. doi:&#xA;                    10.1007/978-3-642-02771-0_39&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-013-0240-y#ref-CR15" id="ref-link-section-d87759e362">2009</a>; Poyade et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Poyade M, Reyes-Lecuona A, Leino S-P, Kiviranta S, Viciana-Abad R, Lind S (2009) A high-level haptic interface for enhanced interaction within virtools. Virtual Mixed Real LNCS 5622:365–374. doi:&#xA;                    10.1007/978-3-642-02771-0_41&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-013-0240-y#ref-CR21" id="ref-link-section-d87759e365">2009</a>; Abate et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Abate AF, Guida M, Leoncini P, Nappi M, Ricciardi S (2009) A haptic-based approach to virtual training for aerospace industry. J Vis Lang Comput 20:318–325. doi:&#xA;                    10.1016/j.jvlc.2009.07.003&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-013-0240-y#ref-CR1" id="ref-link-section-d87759e368">2009</a>; Cheng-jun et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2010" title="Cheng-jun C, Yun-feng W, Niu L (2010) Research on interaction for virtual assembly system with force feedback. In: Proceedings ICIC, Wuxi, China, 2: 147–150. doi:&#xA;                    10.1109/ICIC.2010.131&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-013-0240-y#ref-CR8" id="ref-link-section-d87759e371">2010</a>; Lu et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2012" title="Lu X, Qi Y, Zhou T, Yao X (2012) Constraint-based virtual assembly training system for aircraft engine. Adv Comput Environ Sci Adv Intell Soft Comput 142:105–112. doi:&#xA;                    10.1007/978-3-642-27957-7_13&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-013-0240-y#ref-CR16" id="ref-link-section-d87759e375">2012</a>; Polistina <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2010" title="Belluco P, Bordegoni M, Polistina, S (2010) Multimodal navigation for a haptic-based virtual assembly application. In: Conference on WINVR. Iowa, USA. pp 295–301. doi:&#xA;                    10.1115/WINVR2010-3743&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-013-0240-y#ref-CR19" id="ref-link-section-d87759e378">2010</a>; Bordegoni et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Bordegoni M, Cugini U, Belluco Paolo, Aliverti M (2009) Evaluation of a haptic-based interaction system for virtual manual assembly. Virtual Mixed Real LNCS 5622:303–312. doi:&#xA;                    10.1007/978-3-642-02771-0_34&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-013-0240-y#ref-CR5" id="ref-link-section-d87759e381">2009</a>). There are few exceptions where the interaction is based on solely a Spaceball 5,000 mouse (Jun et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Jun Y, Liu J, Ning R, Zhang Y (2005) Assembly process modeling for virtual assembly process planning. Int J Comput Integr Manuf 18(6):442–445. doi:&#xA;                    10.1080/09511920400030153&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-013-0240-y#ref-CR12" id="ref-link-section-d87759e384">2005</a>), pinch glove (Lee et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2010" title="Lee J, Rhee G, Seo D (2010) Hand gesture-based tangible interactions for manipulating virtual objects in a mixed reality environment. Int J Adv Manuf Tech 51(9):1069–1082. doi:&#xA;                    10.1007/s00170-010-2671-x&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-013-0240-y#ref-CR14" id="ref-link-section-d87759e387">2010</a>), or where the interface supports several devices such as mouse, data-glove, Spaceball mouse, or hand tracking (Jung et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1998" title="Jung B, Latoschik M, Wachsmuth I (1998) Knowledge-based assembly simulation for virtual prototype modeling. In: Proceedings IECON, Aachen, Germany, 4: 2152–2157. doi:&#xA;                    10.1109/IECON.1998.724054&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-013-0240-y#ref-CR13" id="ref-link-section-d87759e390">1998</a>). More examples in virtual assembly systems can be found in the surveys (Seth et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2011" title="Seth A, Vance JM, Oliver JH (2011) Virtual reality for assembly methods prototyping—a review. Virtual Real Virtual Manuf Constr 15(1):5–20. doi:&#xA;                    10.1007/s10055-009-0153-y&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-013-0240-y#ref-CR24" id="ref-link-section-d87759e394">2011</a>; Gupta et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Gupta SK, An DK, Brough JE, Kavetsky RA, Schwartz M, Thakur A (2008) A survey of the virtual environments-based assembly training applications. Virtual manufacturing workshop (UMCP), Turin, Italy" href="/article/10.1007/s10055-013-0240-y#ref-CR9" id="ref-link-section-d87759e397">2008</a>).</p><p>A second important aspect of VR systems is their degree of fidelity with respect to real tasks. Most of virtual assembly applications, indistinctly of the implemented interaction technology, either do not simulate bimanual assembly operations or do it sequentially, for which only one-handed interaction is needed. However, in a real assembly task, the user will often work with both hands simultaneously. This means that for a realistic assembly simulation bimanual interaction should be available. An example of bimanual simulation can be found in the work of Seth et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Seth A, Su H-J, Vance JM (2008) Development of a dual-handed haptic assembly system: SHARP. J Comput Inf Sci Eng 8(4):044502" href="/article/10.1007/s10055-013-0240-y#ref-CR23" id="ref-link-section-d87759e403">2008</a>), who proposed a dual-handed haptic interface for realistic part interaction using two PHANToM<sup>®</sup> haptic devices.</p><p>However, the use of dual-handed haptic interface presents two main drawbacks:</p><ul class="u-list-style-bullet">
+                  <li>
+                    <p>High acquisition cost; professional devices may cost several thousands of US dollars.</p>
+                  </li>
+                  <li>
+                    <p>Bimanual configuration is not always feasible; this is a common problem in haptic devices that have not been designed for bimanual operations, even if the haptic rendering library allows it. Reasons are due to workspace limitations (the size/configuration of some devices impedes having two devices working in the same workspace) or due to mechanical interferences between the device arms (when two devices work in the same workspace the haptic arms can collide with one another impeding some motions).</p>
+                  </li>
+                </ul><p>Similarly, the mouse (2D or 3D) has not been designed for bimanual operations and thus, it would require an ad hoc approach to allow bimanual tasks. Moreover, it has been demonstrated that the efficiency of a 3D mouse is worse than a haptic device for assembly tasks (Leino et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Leino S-P, Lind S, Poyade M, Kiviranta S, Multanen P, Reyes-Lecuona A, Mäkiranta A, Muhammad A (2009) Enhanced industrial maintenance work task planning by using virtual engineering tools and haptic user interfaces. Virtual Mixed Real LNCS 5622:346–354. doi:&#xA;                    10.1007/978-3-642-02771-0_39&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-013-0240-y#ref-CR15" id="ref-link-section-d87759e424">2009</a>; Bloomfield et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Bloomfield A, Deng Y, Wampler J, Rondot P, Harth D, Mcmanus M, Badler NI (2003) A taxonomy and comparison of haptic actions for disassembly tasks. In: Proceedings of IEEE VR Conference, Los Angeles, CA, USA. pp 225–231" href="/article/10.1007/s10055-013-0240-y#ref-CR4" id="ref-link-section-d87759e427">2003</a>).</p><p>In this paper, we propose a new low-cost approach for natural bimanual interaction based on integrating a Markerless motion capture (Mocap) system in a virtual assembly system. We analyse the usability and user performance of a particular Mocap system in a virtual assembly task that requires bimanual interaction, and we compare the Mocap system results with two haptic-based interaction. One could think that the lack of force feedback on the interaction could affect somehow the learning process, the accuracy or the time needed to do the task. Volkov et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Volkov S, Vance JM (2001) Effectiveness of haptic sensation for the evaluation of virtual prototypes. ASME J Comput Inf Sci Eng 1(2):123–128. doi:&#xA;                    10.1115/1.1384566&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-013-0240-y#ref-CR28" id="ref-link-section-d87759e434">2001</a>) studied the effectiveness of haptic sensation for the evaluation of virtual prototyping. They concluded that the addition of force feedback to the virtual environment allowed the participants to complete the task faster, but not more accurately. Adams et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Adams JR, Clowden D, Hannaford B (2001) Virtual training for a manual assembly task. Haptics-e, Vol. 2(2)" href="/article/10.1007/s10055-013-0240-y#ref-CR2" id="ref-link-section-d87759e437">2001</a>) studied the learning effect of a virtual training with haptics-based interaction, where two groups trained with and without force feedback, respectively. They did not find significant differences between the two groups.</p><p>We can find several approaches of Markerless Mocap systems based on research contributions (Moeslund et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Moeslund TB, Hilton A, Krüger V (2006) A survey of advances in vision-based human motion capture and analysis. Comput Vis Image Underst 104(2):90–126. doi:&#xA;                    10.1016/j.cviu.2006.08.002&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-013-0240-y#ref-CR17" id="ref-link-section-d87759e443">2006</a>; Poppe <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Poppe R (2007) Vision-based human motion analysis: an overview. Comput Vis Image Underst 108(1–2):4–18. doi:&#xA;                    10.1016/j.cviu.2006.10.016&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-013-0240-y#ref-CR20" id="ref-link-section-d87759e446">2007</a>; Zhu and Fujimura <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2007" title="Zhu Y, Fujimura K (2007) Constrained optimization for human pose estimation from depth sequences. Proc ACCV 1:408–418" href="/article/10.1007/s10055-013-0240-y#ref-CR32" id="ref-link-section-d87759e449">2007</a>; Siddiqui and Medioni <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2010" title="Siddiqui M, Medioni G (2010) Human pose estimation from a single view point, real-time range sensor. Conference in CVCG at CVPR, San Francisco, California, USA, pp. 1–8. doi:&#xA;                    10.1109/CVPRW.2010.5543618&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-013-0240-y#ref-CR26" id="ref-link-section-d87759e452">2010</a>; Romero et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2010" title="Romero J, Kjellström H, Kragic H (2010) Hands in action: real-time 3D reconstruction of hands in interaction with objects. In: Proceedings IEEE ICRA, pp 458–463. doi:&#xA;                    10.1109/ROBOT.2010.5509753&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-013-0240-y#ref-CR22" id="ref-link-section-d87759e455">2010</a>; Cao et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2010" title="Cao Y, Xia Y, Wang Z (2010) A close-form iterative algorithm for depth inferring from a single image. Comput Vis (ECCV). 6315:729–742. doi:&#xA;                    10.1007/978-3-642-15555-0_53&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-013-0240-y#ref-CR7" id="ref-link-section-d87759e459">2010</a>; Wang and Popovic <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Wang RY, Popovic J (2009) Real-time hand-tracking with a color glove. In: Proceedeings SIGGRAPH’09. 28(3). doi:&#xA;                    10.1145/1531326.1531369&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-013-0240-y#ref-CR29" id="ref-link-section-d87759e462">2009</a>; Wang et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2011" title="Wang RY, Paris S, Popovic J (2011) 6D hands: Markerless hand-tracking for computer aided design. In: Proceeding UIST, pp 549–558. doi:&#xA;                    10.1145/2047196.2047269&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-013-0240-y#ref-CR30" id="ref-link-section-d87759e465">2011</a>; Shotton et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2011" title="Shotton J, Fitzgibbon A, Cook M, Sharp T, Finocchio M, Moore R, Kipman A, Blake A (2011) Real-time human pose recognition in parts from single depth images. In: Proceedings CVPR’11. 2: 1297–1304" href="/article/10.1007/s10055-013-0240-y#ref-CR25" id="ref-link-section-d87759e468">2011</a>; Oikonomidis et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2012" title="Oikonomidis I, Kyriazis N, Argyros AA (2012) Tracking the articulated motion of two strongly interacting hands. To appear in the proceedings of IEEE conference on CVPR, Rhode Island, USA" href="/article/10.1007/s10055-013-0240-y#ref-CR18" id="ref-link-section-d87759e471">2012</a>). For this research, we implemented a particular Markerless Mocap system with two possible configurations. First approach is based on tracking user’s hands with one standard camera. In this case, the 2D hands positions are converted to 3D world position. Second approach is based on tracking user’s hand with a stereo RGB camera. The stereo camera returns a disparity map from which we can obtain 3D hand positions. Results obtained in our usability experiment could be extended to similar off-the-shelf Markerless Mocap systems, such as Organic Motion™, Kinect™, Omek™, and SoftKinetic™ for the 3D solution, or eyetoy™ for the 2D solution.</p><p>In addition, in the cases in which we want to benefit from having a physical interaction with the virtual objects but it is not possible or adequate to interact with two haptic devices simultaneously, we decided to combine a haptic device with a Markerless Mocap system technology.</p><p>In summary, this paper proposes and analyses three interactions: a pure Markerless Mocap-based interaction, where both hands are tracked, in 2D or 3D, with a Markerless Mocap system; and a hybrid interaction, where one hand is tracked with a Markerless Mocap and the other hand with a haptic device. Specifically, this paper addresses the following research questions:</p><ul class="u-list-style-bullet">
+                  <li>
+                    <p>
+                      <i>Is it feasible to interact in a virtual assembly context by means of a Markerless Mocap system?</i>
+                    </p>
+                    <p>Originally, Markerless Mocap systems were poor on precision compared to other technologies (i.e. Haptic, mouse). But the release of off-the-shelf technologies (such Organic Motion™, Kinect™, Omek™, etc.), they have demonstrated that its level of precision became good enough for a wide range of applications, i.e. Tv-controller, medical and physical therapy, and in particular video game. However, Markerless Mocap systems have been rarely applied to virtual assembly systems, and thus more research is needed. An example can be found in the work of Wang et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2011" title="Wang RY, Paris S, Popovic J (2011) 6D hands: Markerless hand-tracking for computer aided design. In: Proceeding UIST, pp 549–558. doi:&#xA;                    10.1145/2047196.2047269&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-013-0240-y#ref-CR30" id="ref-link-section-d87759e491">2011</a>), Wang and Popovic (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Wang RY, Popovic J (2009) Real-time hand-tracking with a color glove. In: Proceedeings SIGGRAPH’09. 28(3). doi:&#xA;                    10.1145/1531326.1531369&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-013-0240-y#ref-CR29" id="ref-link-section-d87759e494">2009</a>) where they presented a 6D hand tracking and tested it within a virtual assembly task. However, the performance was not assessed in comparison with other technologies.</p>
+                  </li>
+                  <li>
+                    <p>
+                                 <i>How usable are the Markerless Mocap-based interactions (with 2D or 3D tracking) and hybrid-based interaction (Markerless Mocap</i> + <i>haptic) compared to two</i>-<i>haptic-based interaction?</i>
+                              </p>
+                  </li>
+                </ul><p>To address these research questions and in order to assess the usability of the proposed interactions, this paper presents two different experiments:</p><ul class="u-list-style-bullet">
+                  <li>
+                    <p>A “usability” experiment has been carried out to analyse the usability of the three interactions; Markerless Mocap system (with 2D and 3D tracking) and a hybrid system. A couple of interactions based on two haptic devices have been taken as benchmark. The experiment has been performed using two desktop haptic devices with a small workspace (OMNI<sup>®</sup> haptic device). The hybrid configuration is based on this haptic device and a Markerless Mocap system (with 2D tracking). Due to the differences in workspace size between both technologies, a second experiment analyses the usability of the hybrid interaction with a more appropriate haptic device. The “usability” experiment follows a within-subjects design, i.e. participants repeat the same task with each interaction modality where the interaction order is randomly assigned. The task consists of assembling part of a virtual valve.</p>
+                  </li>
+                  <li>
+                    <p>A “hybrid versus haptic” experiment has been conducted in order to assess the hybrid interaction with respect to two haptic devices with similar workspace size. The experiment is similar to the “usability” experiment except for the haptic device used. In this case, the GRAB haptic device (Avizzano et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Avizzano CA, Marcheschi S, Angerilli M (2003) A multi-finger haptic interface for visually impaired people. Works.on ROMAN, pp 165–170. doi:&#xA;                    10.1109/ROMAN.2003.1251838&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-013-0240-y#ref-CR3" id="ref-link-section-d87759e529">2003</a>) with a larger workspace has been used.</p>
+                  </li>
+                </ul><p>This paper starts describing the virtual assembly system used for running the experiments. Then, the two experiments are presented based on their experimental task, experimental design, procedure, and results. After that we discuss results and summarise the conclusions.</p></div></div></section><section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">The test-bed application</h2><div class="c-article-section__content" id="Sec2-content"><p>The experiments were conducted on a previously published demonstrator known as IMA-VR (Gutiérrez et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2010" title="Gutiérrez T, Rodríguez J, Vélaz Y, Casado S, Sánchez EJ, Suescun A (2010) IMA-VR: a multimodal virtual training system for skills transfer in industrial maintenance and assembly tasks. In: Proceedings ROMAN, pp 428–433. doi:&#xA;                    10.1109/ROMAN.2010.5598643&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-013-0240-y#ref-CR10" id="ref-link-section-d87759e543">2010</a>). This demonstrator was designed to train users on industrial assembly and disassembly tasks. The IMA-VR platform consists of a screen displaying the 3D graphical scene corresponding to the maintenance task, the device used for the interaction with the virtual scene, and the training software to simulate and teach assembly and disassembly tasks.</p><h3 class="c-article__sub-heading" id="Sec3">Interaction technologies</h3><p>One of the main features of this platform is its flexibility to integrate new interaction devices. By default, this demonstrator can work with different types of haptic devices (e.g. desktop or large space devices, one or two contact points, etc.). For this research, a Markerless Mocap system was integrated.</p><p>The Markerless Mocap implementation is based on Unzueta’s work (Unzueta <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Unzueta L (2008) Markerless full-body human motion capture and combined motor action recognition for human-computer interaction. Ph. D. thesis, University of Navarra, tecnun" href="/article/10.1007/s10055-013-0240-y#ref-CR27" id="ref-link-section-d87759e555">2008</a>), where the user’s body part is tracked by applying the condensation algorithm (Isard and Blake <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1998" title="Isard M, Blake A (1998) Condensation—conditional density propagation for visual tracking. Int J Comput Vis 29(1):5–28" href="/article/10.1007/s10055-013-0240-y#ref-CR11" id="ref-link-section-d87759e558">1998</a>) with a blob representation (Wren et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="Wren CR, Azarbayejani A, Darrell T (1997) Pfinder: real-time tracking of the human body. IEEE Trans Pattern Anal Mach Intell 19(7):780–785" href="/article/10.1007/s10055-013-0240-y#ref-CR31" id="ref-link-section-d87759e561">1997</a>). The Kalman filter was efficiently applied against white noise. In order to improve its tracking recognition, the users wore a chrome-key glove. The system was implemented to work with one or more standard cameras and with a stereo camera. The output is in 2D or 3D depending on the number of cameras.</p><p>Since Markerless Mocap systems allow to design natural interfaces, the interaction with the virtual objects must be consistent with the performance in the real task. Haptic-based interactions using force feedback devices such as PHANToM<sup>®</sup> are different to Markerless Mocap interactions firstly in that the user is constantly attached to a handle. Secondly, user’s natural reactions, such as swapping a tool from one hand to another, have no sense with haptic devices. To allow this type of actions and increase the naturalness in the Markerless Mocap interaction, we have used props. Props are real objects which are tracked and can interact with the virtual scene. These can be as complex as a steering wheel or as simple as a physical tool. A review of props can be found in this book (Bowman et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Bowman D, Kruijff E, LaViola J, Poupyrev I (2004) 3D user interfaces: theory and practice. Addison-Wesley, Boston" href="/article/10.1007/s10055-013-0240-y#ref-CR6" id="ref-link-section-d87759e569">2004</a>). With the adopted approach, the user can grasp a physical tool to perform the virtual task.</p><h3 class="c-article__sub-heading" id="Sec4">System layout</h3><p>The 3D graphical scene is divided into two areas. The assembly zone, with the machine to be assembled, is rendered in the centre of the scene, and the pieces to be assembled are placed at the back-wall, see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0240-y#Fig2">2</a>. On the right edge of the screen, there is a configurable “tools menu” with the virtual tools that can be chosen to assemble. To grasp a piece or tool, the user has to select it, and then, grab it by means of a voice command. If the piece/tool is correct, the piece/tool will be grasped and moved with the motion of the user’s hand. In other case, a message is displayed explaining the type of error.</p><p>The selection of small pieces, very common in assembly tasks (screws, nuts, washers, etc.), may be cumbersome in case of Mocap-based interactions due to the noise coming from the tracking process. To solve this problem, a new strategy was implemented to facilitate the selection of small pieces. This strategy was based on defining a tolerance region for each small object, so that the object was automatically selected when the user’s hand dropped inside this region.</p><p>As previously mentioned and optionally to the “tools menu”, the Markerless Mocap system implementation provides a prop solution that allows the users to operate with physical tools in a natural way. When the user grasps a physical tool, a virtual copy of the tool appears in the scene which moves with the motion of the physical tool.</p><h3 class="c-article__sub-heading" id="Sec5">Commands</h3><p>These experiments follow the Wizard of Oz strategy, i.e. the user does not know that the system is partially operated by a person. In this strategy, when the users want to send an order to the system (e.g. grasp a piece), they send the order by voice and the evaluator activates the corresponding command in the system.</p></div></div></section><section aria-labelledby="Sec6"><div class="c-article-section" id="Sec6-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec6">Usability experiment I</h2><div class="c-article-section__content" id="Sec6-content"><p>This section describes the experiment conducted to analyse the feasibility and usability of the proposed bimanual interactions for assembling a virtual task, followed by their results. The five types of interactions analysed are as follows (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0240-y#Fig1">1</a>):</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-013-0240-y/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0240-y/MediaObjects/10055_2013_240_Fig1_HTML.jpg?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0240-y/MediaObjects/10055_2013_240_Fig1_HTML.jpg" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p>Five types of interactions analysed from <i>left</i> to <i>right</i>: the Markerless Mocap system (2D and 3D), the hybrid system, two haptic devices with the haptic arms non-aligned, and two haptic devices with the haptic arms aligned</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-013-0240-y/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <ol class="u-list-style-none">
+                  <li>
+                    <span class="u-custom-list-number">1.</span>
+                    
+                      <p>A Markerless Mocap system with 2D tracking (Mmocap2D).</p>
+                    
+                  </li>
+                  <li>
+                    <span class="u-custom-list-number">2.</span>
+                    
+                      <p>A Markerless Mocap system with 3D tracking (Mmocap3D).</p>
+                    
+                  </li>
+                  <li>
+                    <span class="u-custom-list-number">3.</span>
+                    
+                      <p>A hybrid system based on Mmocap2D and a haptic device (We found that combining two different technologies and manage them in the 3D space was far more complicated than in the 2D space. In order to not increase significantly the cognitive load, we decided to combine the haptic device, which runs in the real 3D space, with the Markerless Mocap system with 2D tracking).</p>
+                    
+                  </li>
+                  <li>
+                    <span class="u-custom-list-number">4.</span>
+                    
+                      <p>Two haptic devices, with different real workspace, placed one in front of the other so that the haptic arms were aligned (haptic w.a.w.), and</p>
+                    
+                  </li>
+                  <li>
+                    <span class="u-custom-list-number">5.</span>
+                    
+                      <p>Two haptic devices, with different real workspace, placed one beside the other so that the arms were not aligned (haptic w.n.w.).</p>
+                    
+                  </li>
+                </ol>
+                     <p>The initial objective of the fourth type of interaction, with aligned haptic arms, was to evaluate the configuration of two haptic devices sharing the same real workspace. However, this was not feasible due to the haptic devices used in this experiment: two PHANToM OMNI<sup>®</sup>. When both haptic devices were placed in the same workspace, the haptic arms collided with each other most times impeding the task completion. So, the two haptic devices were shifted to avoid the haptic arms collision, similar to the work of Seth et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Seth A, Su H-J, Vance JM (2008) Development of a dual-handed haptic assembly system: SHARP. J Comput Inf Sci Eng 8(4):044502" href="/article/10.1007/s10055-013-0240-y#ref-CR23" id="ref-link-section-d87759e689">2008</a>). As result, in the aligned haptic arms configuration, the offset in axe <i>x</i> between both hands was smaller than in the non-aligned haptic arms configuration. To analyse if this factor could have any influence in the interaction, we decided to analyse both configurations.</p><h3 class="c-article__sub-heading" id="Sec7">Experimental task</h3><p>The selected experimental task consisted of assembling a part of an electro-hydraulic valve bimanually. This task consisted of 5 steps where participants had to place the cover of the valve (step 1) and to fix it using a set of pieces (e.g. screws, nuts, lock washers, and washers) and tools (steps 2–5).</p><p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0240-y#Fig2">2</a> shows the virtual task. As shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0240-y#Fig2">2</a>a, the virtual scenario was divided into three areas: assembly area, pieces repository, and “tools menu”. At the beginning of every test, all pieces were located on the rear wall (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0240-y#Fig2">2</a>a). When users had to assemble by means of the haptic interaction, they had to grab the tool from the tool menu. In case of the Markerless Mocap interaction, users had to grasp the corresponding prop from a table. After completion of the assembly task, the system displayed a message indicating the end of the task (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0240-y#Fig2">2</a>c). The assembly task was explained before starting the experiment.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-013-0240-y/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0240-y/MediaObjects/10055_2013_240_Fig2_HTML.gif?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0240-y/MediaObjects/10055_2013_240_Fig2_HTML.gif" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p>Bimanual experimental task: <b>a</b> initial task set-up; <b>b</b> bimanual operation; <b>c</b> task finished</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-013-0240-y/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>In this research work, an operation is considered as unimanual or bimanual depending on the number of pieces/tools manipulated at the same time. Unimanual operations (i.e. only one object/tool is involved) are simulated with a single hand independently of whether the user needs a second hand as support in the real task performance. Bimanual operations (i.e. two or more pieces/tools are involved simultaneously) are simulated with both hands. Following this criteria, the experimental task consisted of one unimanual operation (step 1 corresponding to place the cover) and four bimanual operations (steps 2–5 corresponding to fix the cover with the screws and nuts, Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0240-y#Fig2">2</a>b).</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec8">Experimental design</h4><p>In order to analyse the differences among the five interaction types, the experiment followed a within-subject design with 25 users that performed the task 5 times, one for each type of interaction. Our interest was in analysing which technology was faster and more usable. Participants were 8 women and 17 men of an age rate between 20 and 60 years. All of them were competent users of personal computers and new technology in general. From them, 5–6 users were familiar with Mocap and haptic technology, respectively. All participants were right-handed and reported normal sense of touch and vision. In order to block the possible learning effect between some of the interactions (e.g. between haptic w.a.w. and haptic w.n.w.), each user performed the experiment with a random order of the interaction condition.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec9">Procedure</h4><p>First, the experiment’s objective was explained, and the task to be performed was illustrated step by step. Thereafter, the participants had a familiarisation session with the platform and the interaction technologies. Then, they had to perform the task five times, one with each interaction condition, trying to perform the task as fast as possible and without errors. Once the participants completed the experiment, they were asked to fill out a demographic questionnaire and a usability questionnaire in order to rate each interaction and comment on the advantages/disadvantages.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec10">Performance measure</h4><p>The main parameters considered to measure the efficiency and usability of each interaction corresponded to quantitative results (e.g. time to grab each piece, total time) and qualitative data gathered through the usability questionnaire.</p><h3 class="c-article__sub-heading" id="Sec11">Results</h3><p>We have analysed the efficiency and usability of five interaction types in a bimanual assembly task. The interaction conditions were as follows: a two-haptic based interaction with the haptic arms aligned (haptic w.a.w), a two-haptic based interaction with the haptic arms non-aligned (haptic w.n.w), a hybrid system combining a haptic device with a 2D Markerless Mocap system (hybrid-I), a Markerless Mocap solution with 2D tracking (Mmocap2D), and a Markerless Mocap solution with 3D tracking (Mmocap3D). All results were analysed with the aid of Minitab.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec12">Quantitative results</h4><p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0240-y#Fig3">3</a> shows the total execution time for each interaction condition. The task consisted of one unimanual step and four repeated bimanual steps. Since the goal of this experiment was to check which technology was faster and more usable and the execution time for the first step could be influenced by the learning of the technology itself, we decided to analyse only the execution time of the last step. This step consisted of grasping one tool and two pieces for each hand and assembling them with both hands simultaneously.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-013-0240-y/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0240-y/MediaObjects/10055_2013_240_Fig3_HTML.gif?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0240-y/MediaObjects/10055_2013_240_Fig3_HTML.gif" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p>Box-plot with total times and quartile values</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-013-0240-y/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <p>A one-way within-subjects ANOVA (<i>α</i> = 0.05), adjusted for ties, was run to compare the effect of the interaction technology on the completion time for the last step (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0240-y#Fig4">4</a> shows these times). The main effect that the interaction technology had on the dependent variable, time, was found to be significant (<i>F</i>(4, 94) = 8.10, <i>p</i> = 0.000). Tukye’s post hoc comparisons of the five interaction groups indicated that the Mmocap2D (<i>M</i> = 22.974 s, SD = 3.913) and hybrid-I (<i>M</i> = 27.329 s, SD = 9.617) were the fastest interaction and were significantly faster than Mmocap3D interaction (<i>M</i> = 40.320 s, SD = 13.010). Rest of the interactions were haptic w.a.w (<i>M</i> = 32.243 s, SD = 9.624) and haptic w.n.w (<i>M</i> = 31.852 s, SD = 11.246).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-013-0240-y/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0240-y/MediaObjects/10055_2013_240_Fig4_HTML.gif?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0240-y/MediaObjects/10055_2013_240_Fig4_HTML.gif" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p>Box-plot of time completion for last step</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-013-0240-y/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec13">Qualitative results</h4><p>Once the participants completed the experiment, they were asked to fill out a usability questionnaire of these interaction types in terms of:<dl class="c-abbreviation_list"><dt class="c-abbreviation_list__term"><dfn>Q1:</dfn></dt><dd class="c-abbreviation_list__description">
+                          <p>naturalness of interaction</p>
+                        </dd><dt class="c-abbreviation_list__term"><dfn>Q2:</dfn></dt><dd class="c-abbreviation_list__description">
+                          <p>ease of use</p>
+                        </dd><dt class="c-abbreviation_list__term"><dfn>Q3:</dfn></dt><dd class="c-abbreviation_list__description">
+                          <p>movement consistency</p>
+                        </dd><dt class="c-abbreviation_list__term"><dfn>Q4:</dfn></dt><dd class="c-abbreviation_list__description">
+                          <p>user’s concentration in the task</p>
+                        </dd><dt class="c-abbreviation_list__term"><dfn>Q5:</dfn></dt><dd class="c-abbreviation_list__description">
+                          <p>comfort</p>
+                        </dd><dt class="c-abbreviation_list__term"><dfn>Q6:</dfn></dt><dd class="c-abbreviation_list__description">
+                          <p>satisfaction</p>
+                        </dd><dt class="c-abbreviation_list__term"><dfn>Q7:</dfn></dt><dd class="c-abbreviation_list__description">
+                          <p>efficiency to complete the assembly task</p>
+                        </dd><dt class="c-abbreviation_list__term"><dfn>Q8:</dfn></dt><dd class="c-abbreviation_list__description">
+                          <p>amusement</p>
+                        </dd></dl>
+                           </p><p>The usability questionnaire followed a 7-point Likert scale. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0240-y#Fig5">5</a> shows the medians and quartiles for each question.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-013-0240-y/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0240-y/MediaObjects/10055_2013_240_Fig5_HTML.gif?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0240-y/MediaObjects/10055_2013_240_Fig5_HTML.gif" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p>Usability results: <i>1</i> represents the least favourable and <i>7</i> the most favourable. These results are grouped according to the interaction group where <i>A</i> corresponds to haptic w.a.w., <i>NA</i> corresponds to haptic w.n.w., <i>H</i> corresponds to hybrid-I, <i>M2</i> corresponds to Mmocap2D, and <i>M3</i> corresponds to Mmocap3D</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-013-0240-y/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <p>As seen in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0240-y#Fig5">5</a>, the hybrid-I system was clearly valued worst in terms of usability. The Mmocap2D was found easiest from all interactions, but similar in the rest of usability questions. As for the rest of interactions (Mmocap3D, haptic w.n.w., haptic w.a.w.), we could not find significant differences.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec14">User’s preference for interaction technology</h4><p>Finally, users had to rank the interaction technology in decreasing order starting from the most preferable one (rate 1) to the least (rate 5). Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0240-y#Fig6">6</a> represents the medians and quartiles of the preferences for each interaction.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-6"><figure><figcaption><b id="Fig6" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 6</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-013-0240-y/figures/6" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0240-y/MediaObjects/10055_2013_240_Fig6_HTML.gif?as=webp"></source><img aria-describedby="figure-6-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0240-y/MediaObjects/10055_2013_240_Fig6_HTML.gif" alt="figure6" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-6-desc"><p>Median and quartile values for each interaction technology based on users’ preference; where 1 corresponds to the favourite interaction and 5 to the worst interaction</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-013-0240-y/figures/6" data-track-dest="link:Figure6 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <p>A Kruskal–Wallis test was conducted to evaluate differences in the user’s preference among the five interaction types. The test, which was adjusted for ties, was found significant <i>χ</i>
+                              <sup>2</sup> (4, N = 25) = 20.67, <i>p</i> = 0.000. As seen in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0240-y#Fig6">6</a>, there were few differences among haptic (w.a.w and w.n.w.) and Mmocap (2D and 3D) groups meanwhile the hybrid-I interaction was the worst valued. In fact, a 60 % of participants rated the hybrid-I interaction as the worst.</p></div></div></section><section aria-labelledby="Sec15"><div class="c-article-section" id="Sec15-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec15">Usability experiment II: hybrid versus haptic interaction</h2><div class="c-article-section__content" id="Sec15-content"><p>Based on previous experiment results, we realised that the hybrid configuration analysed (hybrid-I) combined two systems with a great difference in workspace size (16 cm × 12 cm × 12 cm for the OMNI<sup>®</sup> device against approximately 50 cm × 40 cm × 50 cm for the Markerless Mocap system). Consequently, movements done with each hand by the user were considerably different in amplitude, resulting in a poor natural interaction.</p><p>In addition, the Markerless Mocap and the haptic system followed a different strategy to grasp the tools; while the Markerless Mocap interaction kept a strategy based on props, the haptic interaction followed a strategy based on “tools menu”. We found that having two different selection strategies in the hybrid interaction confused some participants when changing from one modality to another. These factors, workspace size and grasp strategy, could have led to wrong usability results with respect to the hybrid system. Therefore, we decided to take another experiment based on the previous one, but having only one selection strategy (i.e. “tools menu”) and using a larger workspace haptic: the GRAB haptic device (Avizzano et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Avizzano CA, Marcheschi S, Angerilli M (2003) A multi-finger haptic interface for visually impaired people. Works.on ROMAN, pp 165–170. doi:&#xA;                    10.1109/ROMAN.2003.1251838&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-013-0240-y#ref-CR3" id="ref-link-section-d87759e1059">2003</a>). This device has been designed for bimanual operations and is composed of two haptic arms working in the same workspace (60 cm × 40 cm × 40 cm).</p><p>Therefore, the goal of this experiment was to analyse the task performance and usability of a hybrid system that combines a Markerless Mocap system with one arm of the GRAB device with respect to a dual-handed haptic interaction where the haptic arms share the real workspace (the GRAB device), see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0240-y#Fig7">7</a>.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-7"><figure><figcaption><b id="Fig7" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 7</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-013-0240-y/figures/7" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0240-y/MediaObjects/10055_2013_240_Fig7_HTML.jpg?as=webp"></source><img aria-describedby="figure-7-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0240-y/MediaObjects/10055_2013_240_Fig7_HTML.jpg" alt="figure7" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-7-desc"><p>Two types of interactions analysed from left to right: two-haptic based interaction and hybrid system</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-013-0240-y/figures/7" data-track-dest="link:Figure7 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <h3 class="c-article__sub-heading" id="Sec16">Experimental task</h3><p>This experiment used the same experimental task and followed the same procedure as the usability experiment. Thus, it followed a within-subjects design (i.e. participants had to repeat the same task twice alternating the interaction system). There were 13 participants, 4 women and 9 men of an age rate between 20 and 50 years, most of them with a technical degree. From them, 4 users were familiar with haptic technology, and 4 users were familiar with Mocap technology. All participants were right-handed and reported normal sense of touch and vision. In order to block the possible learning effect, two experimental groups were defined and each participant was randomly assigned to any of both. We had,</p><p>Group 1 (7) → pre-test → task under strategy 1 → task under strategy 2 → usability test</p><p>Group 2 (7) → pre-test → task under strategy 2 → task under strategy 1 → usability test</p><h3 class="c-article__sub-heading" id="Sec17">Results</h3><p>We have analysed the efficiency and usability of two interactions types in a bimanual assembly task. Those were a two-haptic based interaction with the arms sharing the same workspace (haptic w.s.w.) and a new hybrid configuration (hybrid-II).</p><p>A paired-sample <i>t</i> test (<i>α</i> = 0.05) was run to compare the effect of the interaction technology in the time completion. The normality assumption was checked with a probability plot, Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0240-y#Fig8">8</a>.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-8"><figure><figcaption><b id="Fig8" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 8</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-013-0240-y/figures/8" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0240-y/MediaObjects/10055_2013_240_Fig8_HTML.gif?as=webp"></source><img aria-describedby="figure-8-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0240-y/MediaObjects/10055_2013_240_Fig8_HTML.gif" alt="figure8" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-8-desc"><p>Normality of the differences between pairs with Kolmogorov–Smirnov normality test and the <i>p</i> &gt; 0.15</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-013-0240-y/figures/8" data-track-dest="link:Figure8 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>There was no significant difference in the time for haptic w.s.w. (<i>M</i> = 207 s, SD = 36.9) and hybrid-II (<i>M</i> = 198.6 s, SD = 41.5) conditions; <i>t</i>(12) = −1.45, <i>p</i> = 0.914.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec18">Qualitative results</h4><p>The usability of both interaction types was studied in terms of:<dl class="c-abbreviation_list"><dt class="c-abbreviation_list__term"><dfn>Q1:</dfn></dt><dd class="c-abbreviation_list__description">
+                          <p>naturalness of interaction</p>
+                        </dd><dt class="c-abbreviation_list__term"><dfn>Q2:</dfn></dt><dd class="c-abbreviation_list__description">
+                          <p>ease of use</p>
+                        </dd><dt class="c-abbreviation_list__term"><dfn>Q3:</dfn></dt><dd class="c-abbreviation_list__description">
+                          <p>movement consistency</p>
+                        </dd><dt class="c-abbreviation_list__term"><dfn>Q4:</dfn></dt><dd class="c-abbreviation_list__description">
+                          <p>user’s concentration in the task</p>
+                        </dd><dt class="c-abbreviation_list__term"><dfn>Q5:</dfn></dt><dd class="c-abbreviation_list__description">
+                          <p>comfort</p>
+                        </dd><dt class="c-abbreviation_list__term"><dfn>Q6:</dfn></dt><dd class="c-abbreviation_list__description">
+                          <p>user’s capability to control the events of the virtual system</p>
+                        </dd><dt class="c-abbreviation_list__term"><dfn>Q7:</dfn></dt><dd class="c-abbreviation_list__description">
+                          <p>efficiency to complete the assembly task</p>
+                        </dd><dt class="c-abbreviation_list__term"><dfn>Q8:</dfn></dt><dd class="c-abbreviation_list__description">
+                          <p>difficulty of interaction with the virtual system</p>
+                        </dd></dl>
+                           </p><p>The usability questionnaire followed a 7-point Likert scale. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0240-y#Fig9">9</a> shows the medians and quartiles for each question.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-9"><figure><figcaption><b id="Fig9" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 9</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-013-0240-y/figures/9" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0240-y/MediaObjects/10055_2013_240_Fig9_HTML.gif?as=webp"></source><img aria-describedby="figure-9-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-013-0240-y/MediaObjects/10055_2013_240_Fig9_HTML.gif" alt="figure9" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-9-desc"><p>Usability results where 1 represents the least favourable and 7 the most favourable. These results are grouped according to the interaction mode</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-013-0240-y/figures/9" data-track-dest="link:Figure9 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <p>From Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-013-0240-y#Fig9">9</a>, we could not find any significant difference between both interactions in terms of usability.</p></div></div></section><section aria-labelledby="Sec19"><div class="c-article-section" id="Sec19-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec19">Discussion</h2><div class="c-article-section__content" id="Sec19-content"><p>Discussion is presented for each experiment in the same order as they were explained in the design of experiments section.</p><h3 class="c-article__sub-heading" id="Sec20">Usability experiment I</h3><p>All participants performed and finished the virtual task with the tested interactions without major problems. Nevertheless, recorded times have demonstrated that the Markerless Mocap solution with a 2D tracking and the hybrid-I were significantly faster than the Markerless Mocap interaction based on 3D tracking. This is explainable, since working in 2D is easier than in a 3D scene. The two haptic (with/without haptic arms aligned) did not differ significantly from the rest of groups. Although they are working directly in the 3D space, the slight difference in time with respect to the Mmocap3D can be due to the difference in the movement amplitudes requested by both technologies. The haptic workspace was around three times smaller than the 3D Markerless Mocap workspace.</p><p>
+One of the initial objectives of this experiment was also to compare the results with the use of two haptic devices sharing the same real workspace. When the haptic arms do not share the same real workspace the virtual hands positions cannot be consistent with real hands position, what may provoke the user’s confusion and affect the task performance. An example is when both hands appear crossed in the virtual space, when actually they are not. But, we could not analyse this configuration since we found a problem when we set up two OMNI<sup>®</sup> haptics to share the workspace; both haptic arms were colliding in the central area impeding to operate bimanually most of the time. Hence, we analysed two different distributions of the haptic devices (with/without aligned haptic arms) to know whether this distribution could have any influence on the usability results. Results showed almost no difference between both groups. In fact, most participants did not realise the difference between both configurations.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec21">Usability results</h4><p>Overall, the usability questionnaire analysis has demonstrated that there are no significant differences among four of the five interactions corresponding to Mocap2D, Mocap3D, and the two-haptic based interactions (with/without haptic arms aligned). On the other hand, the hybrid interaction has been significantly worst valued. We discuss now each factor.</p><p>
+                              <i>Efficiency to complete the task (Q7):</i> Overall participants valued the hybrid-I interaction significantly worse than the rest of interaction groups, although the hybrid-I system was the second fastest in finishing the task. But the reason for such a short time was most likely due to the Mmocap2D, which was the fastest interaction. In any case, we found that some participants became confused because the workspace size of each hand was significantly different. This confusion was increased in the use of two different strategies to grasp the tool (props and tool container for each hand). This assumption is as well reflected in the ratings of the factors concentration (Q4), satisfaction (Q6), and naturalness (Q1), where hybrid-I interaction resulted significantly worst.</p><p>
+                              <i>Naturalness (Q1):</i> Only slight differences were noticeable, except for the hybrid-I interaction. The hybrid-I interaction based on the Markerless Mocap and the haptic system used a different strategy to grasp the tool for each hand (tool menu vs. props). This could have affected negatively the naturalness of the interaction type.</p><p>
+                              <i>Concentration (Q4) and easiness (Q2):</i> When users are performing a virtual task the interaction system could negatively influence the concentration on the task, and thus affect the efficiency of several applications such as virtual assembly training. The concentration factor is also related to the easiness of use of the corresponding technology. A complex interaction may increase the user’s cognitive load and hence reduce the concentration on the task. In this sense, bimanual operations require users to work simultaneously with both hands, resulting in more complex interaction than unimanual operations. Results have demonstrated that users value the concentration on the task higher with a natural interface (Mmocap2D and Mmocap3D) than with the rest of tested technologies (haptic and hybrid), where the interaction based on the hybrid-I interaction was the worst valued. These results are consistent with the valorisation of the easiness of interaction where the hybrid-I interaction was considered significantly more difficult to use. The main reason is that it requires the user to learn and use two different technologies simultaneously.</p><p>
+                              <i>Consistence between real and virtual movements (Q3):</i> Participants did not find significant differences between the tested interactions. This result is interesting since it is related to the precision of each technology. The nature of Markerless Mocap systems is considerably noisier compared to haptic technology. While the haptic technology tracks the user’s movements directly, the Markerless Mocap system has to estimate them. Moreover, we have to add the noise coming from the image quality and the hands tracking. These results suggest that participants’ perception is based on how alike the virtual movement is with the real trajectory, rather than how exact or precise the virtual movement really is.</p><p>
+                              <i>Comfort and ergonomics (Q5):</i> The hybrid-I interaction was considerably worst valued to the rest of technologies. However, we considered that the duration of this experiment (3–4 min per task) was not enough to evaluate this aspect and more experiments should be conducted. In long term, the Markerless Mocap interaction seems to be more tiring with respect to haptic desktop interactions, as a consequence of being standing for long time, and having larger movement amplitudes.</p><p>
+                              <i>Satisfaction (Q6) and amusing (Q8):</i> Only slight differences have been noticeable, except for the hybrid-I interaction. Overall, it depended more on participants’ preference than on the interaction technology itself.</p><p>At the end of the usability questionnaire, participants had to rank the interaction types from the most preferable one to the least. The hybrid-I system was considered the worst system by the majority of the participants. The main reason is due to the differences in the workspace size for each hand which make the interaction awkward and less usable. Rest of the interactions achieved a similar score.</p><p>Looking backward to the usability responses, we can conclude that combining two technologies with different workspace sizes is significantly less usable. A second observation is that participants did not value the slowest interaction negatively, as long as the interaction was perceived to respond in real time. The final observation is that usability results are very similar between the solely Markerless Mocap interactions and the solely two-haptic based interactions. Responds varied from one participant to another depending on what they personally value more from each interaction.</p><h3 class="c-article__sub-heading" id="Sec22">Usability experiment II: hybrid versus haptic interaction</h3><p>During the previous experiment, we noticed that there were two features of the tested hybrid-I system (Mmocap2D plus OMNI<sup>®</sup> device) that could have a great influence in the results: the use of two technologies with a different workspace size and the use of different interaction strategies to grasp a tool. In order to analyse the potential of the hybrid systems, we conducted a new experiment with a new configuration of the hybrid system that did not present the above drawbacks called hybrid-II. In addition, we compared this system with two haptic devices sharing the same real workspace.</p><p>All participants performed and finished the virtual task with the two systems. In contrast to the previous experiment, recorded times showed no significant difference between both interactions. Same could be observed for the usability test. These results suggest that the new configuration of the hybrid-II system could substitute the two-haptic systems when the precision of the motion is not critical for simulating the task.</p><p>The difference in the results obtained in this experiment and the previous one shows the importance of the strategy used for combining two different technologies. In the first experiment, we demonstrated that each technology (Markerless Mocap, OMNI-haptic) obtained each good result, but the usability results decreased when both technologies were combined. However, in this experiment, where we had tried to minimise the differences between both technologies, the results of the integration were similar. Thus, we conclude that in order to achieve a usable hybrid interaction, it is important to minimise the differences in the conditions in which both technologies are used, similar workspace and similar strategy to interact with the virtual objects, etc.</p></div></div></section><section aria-labelledby="Sec23"><div class="c-article-section" id="Sec23-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec23">Conclusions and future work</h2><div class="c-article-section__content" id="Sec23-content"><p>This paper has been focused on studying the feasibility and usability of Markerless Mocap-based interactions for simulating bimanual assembly tasks. In particular, we have proposed three interactions: a pure Markerless Mocap-based interaction with two possible configurations (where both hands are tracked, in 2D or 3D, with a Markerless Mocap) and a hybrid interaction (where one hand is tracked with a 2D Markerless Mocap and the other hand with a haptic device). These interactions have been analysed in comparison with two-haptic based interactions with two possible configurations (with/without aligned haptic arms) through different experiments. Taking all results into account, the initially formulated questions can be answered as following:</p><ul class="u-list-style-bullet">
+                  <li>
+                    <p>
+                      <i>Is it feasible to simulate a virtual assembly task by means of a Markerless Mocap system?</i>
+                    </p>
+                    <p>All participants in the experiments performed and finished the tested tasks without major problems, showing that the Markerless Mocap system can be a valid option for simulating bimanual assembly tasks when the precision of the motion is not critical. Based on the participants’ comments, it seems that the use of props, such as physical tools, improves the naturalness of the interaction.</p>
+                  </li>
+                  <li>
+                    <p>
+                                 <i>And how usable are the Markerless Mocap-based interactions (with 2D and 3D tracking) and hybrid- (Mmocap2D</i> + <i>haptic) based interaction compared to two</i>-<i>haptic-based interaction?</i>
+                              </p>
+                    <p>Usability results have demonstrated that the Markerless Mocap and hybrid interactions are as usable as a dual-handed haptic interaction for assembly tasks when the precision of the motion is not critical. The efficiency of each interaction is determined by the movement amplitude and the DoF of the tracking system (2D vs. 3D). The decision about which interaction (haptic, Mmocap2D, Mmocap3D, or hybrid) to use depends on the trade-off between the requirements of simulating the target task (e.g. precision) and the cost of the interaction technology. Three additional considerations:</p><ul class="u-list-style-bullet">
+                        <li>
+                          <p>In order to get a good hybrid system, one should minimise the differences in the conditions in which both technologies are used, e.g. tracking each hand with a considerably different workspace size leads to a decreased usability.</p>
+                        </li>
+                        <li>
+                          <p>Time performance does not affect the valorisation of the usability of a system, as soon as the interaction responses in real time (i.e. users do not feel any lagging).</p>
+                        </li>
+                        <li>
+                          <p>Results suggest that users’ perception is based on how alike the virtual movement and the real trajectory are, rather than how exact or precise the virtual movement really is.</p>
+                        </li>
+                      </ul>
+                              
+                  </li>
+                </ul>
+                     <p>Future work should analyse the effect that the new Markerless Mocap approach has on the assembly process of assembly tasks. A comparison against off-the-shelf solutions, or alternatively to traditional training systems, should be carried out.</p><p>As for the usability study, the simulation of assembly tasks can require more functionality (i.e. rotation of virtual objects and weight discrimination operations), which should be implemented and assessed. Finally, based on these results, it seems feasible to extend the use of the Markerless Mocap systems for the simulation of assembly tasks with one hand.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="AF. Abate, M. Guida, P. Leoncini, M. Nappi, S. Ricciardi, " /><meta itemprop="datePublished" content="2009" /><meta itemprop="headline" content="Abate AF, Guida M, Leoncini P, Nappi M, Ricciardi S (2009) A haptic-based approach to virtual training for aer" /><p class="c-article-references__text" id="ref-CR1">Abate AF, Guida M, Leoncini P, Nappi M, Ricciardi S (2009) A haptic-based approach to virtual training for aerospace industry. J Vis Lang Comput 20:318–325. doi:<a href="https://doi.org/10.1016/j.jvlc.2009.07.003">10.1016/j.jvlc.2009.07.003</a>
+                        </p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1016%2Fj.jvlc.2009.07.003" aria-label="View reference 1">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 1 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=A%20haptic-based%20approach%20to%20virtual%20training%20for%20aerospace%20industry&amp;journal=J%20Vis%20Lang%20Comput&amp;doi=10.1016%2Fj.jvlc.2009.07.003&amp;volume=20&amp;pages=318-325&amp;publication_year=2009&amp;author=Abate%2CAF&amp;author=Guida%2CM&amp;author=Leoncini%2CP&amp;author=Nappi%2CM&amp;author=Ricciardi%2CS">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Adams JR, Clowden D, Hannaford B (2001) Virtual training for a manual assembly task. Haptics-e, Vol. 2(2)" /><p class="c-article-references__text" id="ref-CR2">Adams JR, Clowden D, Hannaford B (2001) Virtual training for a manual assembly task. Haptics-e, Vol. 2(2)</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Avizzano CA, Marcheschi S, Angerilli M (2003) A multi-finger haptic interface for visually impaired people. Wo" /><p class="c-article-references__text" id="ref-CR3">Avizzano CA, Marcheschi S, Angerilli M (2003) A multi-finger haptic interface for visually impaired people. Works.on ROMAN, pp 165–170. doi:<a href="https://doi.org/10.1109/ROMAN.2003.1251838">10.1109/ROMAN.2003.1251838</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bloomfield A, Deng Y, Wampler J, Rondot P, Harth D, Mcmanus M, Badler NI (2003) A taxonomy and comparison of h" /><p class="c-article-references__text" id="ref-CR4">Bloomfield A, Deng Y, Wampler J, Rondot P, Harth D, Mcmanus M, Badler NI (2003) A taxonomy and comparison of haptic actions for disassembly tasks. In: Proceedings of IEEE VR Conference, Los Angeles, CA, USA. pp 225–231</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="M. Bordegoni, U. Cugini, Paolo. Belluco, M. Aliverti, " /><meta itemprop="datePublished" content="2009" /><meta itemprop="headline" content="Bordegoni M, Cugini U, Belluco Paolo, Aliverti M (2009) Evaluation of a haptic-based interaction system for vi" /><p class="c-article-references__text" id="ref-CR5">Bordegoni M, Cugini U, Belluco Paolo, Aliverti M (2009) Evaluation of a haptic-based interaction system for virtual manual assembly. Virtual Mixed Real LNCS 5622:303–312. doi:<a href="https://doi.org/10.1007/978-3-642-02771-0_34">10.1007/978-3-642-02771-0_34</a>
+                        </p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1007%2F978-3-642-02771-0_34" aria-label="View reference 5">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 5 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Evaluation%20of%20a%20haptic-based%20interaction%20system%20for%20virtual%20manual%20assembly&amp;journal=Virtual%20Mixed%20Real%20LNCS&amp;doi=10.1007%2F978-3-642-02771-0_34&amp;volume=5622&amp;pages=303-312&amp;publication_year=2009&amp;author=Bordegoni%2CM&amp;author=Cugini%2CU&amp;author=Belluco%2CPaolo&amp;author=Aliverti%2CM">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="D. Bowman, E. Kruijff, J. LaViola, I. Poupyrev, " /><meta itemprop="datePublished" content="2004" /><meta itemprop="headline" content="Bowman D, Kruijff E, LaViola J, Poupyrev I (2004) 3D user interfaces: theory and practice. Addison-Wesley, Bos" /><p class="c-article-references__text" id="ref-CR6">Bowman D, Kruijff E, LaViola J, Poupyrev I (2004) 3D user interfaces: theory and practice. Addison-Wesley, Boston</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 6 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=3D%20user%20interfaces%3A%20theory%20and%20practice&amp;publication_year=2004&amp;author=Bowman%2CD&amp;author=Kruijff%2CE&amp;author=LaViola%2CJ&amp;author=Poupyrev%2CI">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="Y. Cao, Y. Xia, Z. Wang, " /><meta itemprop="datePublished" content="2010" /><meta itemprop="headline" content="Cao Y, Xia Y, Wang Z (2010) A close-form iterative algorithm for depth inferring from a single image. Comput V" /><p class="c-article-references__text" id="ref-CR7">Cao Y, Xia Y, Wang Z (2010) A close-form iterative algorithm for depth inferring from a single image. Comput Vis (ECCV). 6315:729–742. doi:<a href="https://doi.org/10.1007/978-3-642-15555-0_53">10.1007/978-3-642-15555-0_53</a>
+                        </p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 7 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=A%20close-form%20iterative%20algorithm%20for%20depth%20inferring%20from%20a%20single%20image&amp;journal=Comput%20Vis%20%28ECCV%29.&amp;doi=10.1007%2F978-3-642-15555-0_53&amp;volume=6315&amp;pages=729-742&amp;publication_year=2010&amp;author=Cao%2CY&amp;author=Xia%2CY&amp;author=Wang%2CZ">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Cheng-jun C, Yun-feng W, Niu L (2010) Research on interaction for virtual assembly system with force feedback." /><p class="c-article-references__text" id="ref-CR8">Cheng-jun C, Yun-feng W, Niu L (2010) Research on interaction for virtual assembly system with force feedback. In: Proceedings ICIC, Wuxi, China, 2: 147–150. doi:<a href="https://doi.org/10.1109/ICIC.2010.131">10.1109/ICIC.2010.131</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Gupta SK, An DK, Brough JE, Kavetsky RA, Schwartz M, Thakur A (2008) A survey of the virtual environments-base" /><p class="c-article-references__text" id="ref-CR9">Gupta SK, An DK, Brough JE, Kavetsky RA, Schwartz M, Thakur A (2008) A survey of the virtual environments-based assembly training applications. Virtual manufacturing workshop (UMCP), Turin, Italy</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Gutiérrez T, Rodríguez J, Vélaz Y, Casado S, Sánchez EJ, Suescun A (2010) IMA-VR: a multimodal virtual trainin" /><p class="c-article-references__text" id="ref-CR10">Gutiérrez T, Rodríguez J, Vélaz Y, Casado S, Sánchez EJ, Suescun A (2010) IMA-VR: a multimodal virtual training system for skills transfer in industrial maintenance and assembly tasks. In: Proceedings ROMAN, pp 428–433. doi:<a href="https://doi.org/10.1109/ROMAN.2010.5598643">10.1109/ROMAN.2010.5598643</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="M. Isard, A. Blake, " /><meta itemprop="datePublished" content="1998" /><meta itemprop="headline" content="Isard M, Blake A (1998) Condensation—conditional density propagation for visual tracking. Int J Comput Vis 29(" /><p class="c-article-references__text" id="ref-CR11">Isard M, Blake A (1998) Condensation—conditional density propagation for visual tracking. Int J Comput Vis 29(1):5–28</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1023%2FA%3A1008078328650" aria-label="View reference 11">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 11 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Condensation%E2%80%94conditional%20density%20propagation%20for%20visual%20tracking&amp;journal=Int%20J%20Comput%20Vis&amp;volume=29&amp;issue=1&amp;pages=5-28&amp;publication_year=1998&amp;author=Isard%2CM&amp;author=Blake%2CA">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="Y. Jun, J. Liu, R. Ning, Y. Zhang, " /><meta itemprop="datePublished" content="2005" /><meta itemprop="headline" content="Jun Y, Liu J, Ning R, Zhang Y (2005) Assembly process modeling for virtual assembly process planning. Int J Co" /><p class="c-article-references__text" id="ref-CR12">Jun Y, Liu J, Ning R, Zhang Y (2005) Assembly process modeling for virtual assembly process planning. Int J Comput Integr Manuf 18(6):442–445. doi:<a href="https://doi.org/10.1080/09511920400030153">10.1080/09511920400030153</a>
+                        </p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1080%2F09511920400030153" aria-label="View reference 12">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 12 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Assembly%20process%20modeling%20for%20virtual%20assembly%20process%20planning&amp;journal=Int%20J%20Comput%20Integr%20Manuf&amp;doi=10.1080%2F09511920400030153&amp;volume=18&amp;issue=6&amp;pages=442-445&amp;publication_year=2005&amp;author=Jun%2CY&amp;author=Liu%2CJ&amp;author=Ning%2CR&amp;author=Zhang%2CY">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Jung B, Latoschik M, Wachsmuth I (1998) Knowledge-based assembly simulation for virtual prototype modeling. In" /><p class="c-article-references__text" id="ref-CR13">Jung B, Latoschik M, Wachsmuth I (1998) Knowledge-based assembly simulation for virtual prototype modeling. In: Proceedings IECON, Aachen, Germany, 4: 2152–2157. doi:<a href="https://doi.org/10.1109/IECON.1998.724054">10.1109/IECON.1998.724054</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="J. Lee, G. Rhee, D. Seo, " /><meta itemprop="datePublished" content="2010" /><meta itemprop="headline" content="Lee J, Rhee G, Seo D (2010) Hand gesture-based tangible interactions for manipulating virtual objects in a mix" /><p class="c-article-references__text" id="ref-CR14">Lee J, Rhee G, Seo D (2010) Hand gesture-based tangible interactions for manipulating virtual objects in a mixed reality environment. Int J Adv Manuf Tech 51(9):1069–1082. doi:<a href="https://doi.org/10.1007/s00170-010-2671-x">10.1007/s00170-010-2671-x</a>
+                        </p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1007%2Fs00170-010-2671-x" aria-label="View reference 14">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 14 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Hand%20gesture-based%20tangible%20interactions%20for%20manipulating%20virtual%20objects%20in%20a%20mixed%20reality%20environment&amp;journal=Int%20J%20Adv%20Manuf%20Tech&amp;doi=10.1007%2Fs00170-010-2671-x&amp;volume=51&amp;issue=9&amp;pages=1069-1082&amp;publication_year=2010&amp;author=Lee%2CJ&amp;author=Rhee%2CG&amp;author=Seo%2CD">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="S-P. Leino, S. Lind, M. Poyade, S. Kiviranta, P. Multanen, A. Reyes-Lecuona, A. Mäkiranta, A. Muhammad, " /><meta itemprop="datePublished" content="2009" /><meta itemprop="headline" content="Leino S-P, Lind S, Poyade M, Kiviranta S, Multanen P, Reyes-Lecuona A, Mäkiranta A, Muhammad A (2009) Enhanced" /><p class="c-article-references__text" id="ref-CR15">Leino S-P, Lind S, Poyade M, Kiviranta S, Multanen P, Reyes-Lecuona A, Mäkiranta A, Muhammad A (2009) Enhanced industrial maintenance work task planning by using virtual engineering tools and haptic user interfaces. Virtual Mixed Real LNCS 5622:346–354. doi:<a href="https://doi.org/10.1007/978-3-642-02771-0_39">10.1007/978-3-642-02771-0_39</a>
+                        </p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1007%2F978-3-642-02771-0_39" aria-label="View reference 15">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 15 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Enhanced%20industrial%20maintenance%20work%20task%20planning%20by%20using%20virtual%20engineering%20tools%20and%20haptic%20user%20interfaces&amp;journal=Virtual%20Mixed%20Real%20LNCS&amp;doi=10.1007%2F978-3-642-02771-0_39&amp;volume=5622&amp;pages=346-354&amp;publication_year=2009&amp;author=Leino%2CS-P&amp;author=Lind%2CS&amp;author=Poyade%2CM&amp;author=Kiviranta%2CS&amp;author=Multanen%2CP&amp;author=Reyes-Lecuona%2CA&amp;author=M%C3%A4kiranta%2CA&amp;author=Muhammad%2CA">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="X. Lu, Y. Qi, T. Zhou, X. Yao, " /><meta itemprop="datePublished" content="2012" /><meta itemprop="headline" content="Lu X, Qi Y, Zhou T, Yao X (2012) Constraint-based virtual assembly training system for aircraft engine. Adv Co" /><p class="c-article-references__text" id="ref-CR16">Lu X, Qi Y, Zhou T, Yao X (2012) Constraint-based virtual assembly training system for aircraft engine. Adv Comput Environ Sci Adv Intell Soft Comput 142:105–112. doi:<a href="https://doi.org/10.1007/978-3-642-27957-7_13">10.1007/978-3-642-27957-7_13</a>
+                        </p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1007%2F978-3-642-27957-7_13" aria-label="View reference 16">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 16 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Constraint-based%20virtual%20assembly%20training%20system%20for%20aircraft%20engine&amp;journal=Adv%20Comput%20Environ%20Sci%20Adv%20Intell%20Soft%20Comput&amp;doi=10.1007%2F978-3-642-27957-7_13&amp;volume=142&amp;pages=105-112&amp;publication_year=2012&amp;author=Lu%2CX&amp;author=Qi%2CY&amp;author=Zhou%2CT&amp;author=Yao%2CX">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="TB. Moeslund, A. Hilton, V. Krüger, " /><meta itemprop="datePublished" content="2006" /><meta itemprop="headline" content="Moeslund TB, Hilton A, Krüger V (2006) A survey of advances in vision-based human motion capture and analysis." /><p class="c-article-references__text" id="ref-CR17">Moeslund TB, Hilton A, Krüger V (2006) A survey of advances in vision-based human motion capture and analysis. Comput Vis Image Underst 104(2):90–126. doi:<a href="https://doi.org/10.1016/j.cviu.2006.08.002">10.1016/j.cviu.2006.08.002</a>
+                        </p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1016%2Fj.cviu.2006.08.002" aria-label="View reference 17">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 17 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=A%20survey%20of%20advances%20in%20vision-based%20human%20motion%20capture%20and%20analysis&amp;journal=Comput%20Vis%20Image%20Underst&amp;doi=10.1016%2Fj.cviu.2006.08.002&amp;volume=104&amp;issue=2&amp;pages=90-126&amp;publication_year=2006&amp;author=Moeslund%2CTB&amp;author=Hilton%2CA&amp;author=Kr%C3%BCger%2CV">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Oikonomidis I, Kyriazis N, Argyros AA (2012) Tracking the articulated motion of two strongly interacting hands" /><p class="c-article-references__text" id="ref-CR18">Oikonomidis I, Kyriazis N, Argyros AA (2012) Tracking the articulated motion of two strongly interacting hands. To appear in the proceedings of IEEE conference on CVPR, Rhode Island, USA</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Belluco P, Bordegoni M, Polistina, S (2010) Multimodal navigation for a haptic-based virtual assembly applicat" /><p class="c-article-references__text" id="ref-CR19">Belluco P, Bordegoni M, Polistina, S (2010) Multimodal navigation for a haptic-based virtual assembly application. In: Conference on WINVR. Iowa, USA. pp 295–301. doi:<a href="https://doi.org/10.1115/WINVR2010-3743">10.1115/WINVR2010-3743</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="R. Poppe, " /><meta itemprop="datePublished" content="2007" /><meta itemprop="headline" content="Poppe R (2007) Vision-based human motion analysis: an overview. Comput Vis Image Underst 108(1–2):4–18. doi:10" /><p class="c-article-references__text" id="ref-CR20">Poppe R (2007) Vision-based human motion analysis: an overview. Comput Vis Image Underst 108(1–2):4–18. doi:<a href="https://doi.org/10.1016/j.cviu.2006.10.016">10.1016/j.cviu.2006.10.016</a>
+                        </p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1016%2Fj.cviu.2006.10.016" aria-label="View reference 20">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 20 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Vision-based%20human%20motion%20analysis%3A%20an%20overview&amp;journal=Comput%20Vis%20Image%20Underst&amp;doi=10.1016%2Fj.cviu.2006.10.016&amp;volume=108&amp;issue=1%E2%80%932&amp;pages=4-18&amp;publication_year=2007&amp;author=Poppe%2CR">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="M. Poyade, A. Reyes-Lecuona, S-P. Leino, S. Kiviranta, R. Viciana-Abad, S. Lind, " /><meta itemprop="datePublished" content="2009" /><meta itemprop="headline" content="Poyade M, Reyes-Lecuona A, Leino S-P, Kiviranta S, Viciana-Abad R, Lind S (2009) A high-level haptic interface" /><p class="c-article-references__text" id="ref-CR21">Poyade M, Reyes-Lecuona A, Leino S-P, Kiviranta S, Viciana-Abad R, Lind S (2009) A high-level haptic interface for enhanced interaction within virtools. Virtual Mixed Real LNCS 5622:365–374. doi:<a href="https://doi.org/10.1007/978-3-642-02771-0_41">10.1007/978-3-642-02771-0_41</a>
+                        </p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1007%2F978-3-642-02771-0_41" aria-label="View reference 21">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 21 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=A%20high-level%20haptic%20interface%20for%20enhanced%20interaction%20within%20virtools&amp;journal=Virtual%20Mixed%20Real%20LNCS&amp;doi=10.1007%2F978-3-642-02771-0_41&amp;volume=5622&amp;pages=365-374&amp;publication_year=2009&amp;author=Poyade%2CM&amp;author=Reyes-Lecuona%2CA&amp;author=Leino%2CS-P&amp;author=Kiviranta%2CS&amp;author=Viciana-Abad%2CR&amp;author=Lind%2CS">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Romero J, Kjellström H, Kragic H (2010) Hands in action: real-time 3D reconstruction of hands in interaction w" /><p class="c-article-references__text" id="ref-CR22">Romero J, Kjellström H, Kragic H (2010) Hands in action: real-time 3D reconstruction of hands in interaction with objects. In: Proceedings IEEE ICRA, pp 458–463. doi:<a href="https://doi.org/10.1109/ROBOT.2010.5509753">10.1109/ROBOT.2010.5509753</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="A. Seth, H-J. Su, JM. Vance, " /><meta itemprop="datePublished" content="2008" /><meta itemprop="headline" content="Seth A, Su H-J, Vance JM (2008) Development of a dual-handed haptic assembly system: SHARP. J Comput Inf Sci E" /><p class="c-article-references__text" id="ref-CR23">Seth A, Su H-J, Vance JM (2008) Development of a dual-handed haptic assembly system: SHARP. J Comput Inf Sci Eng 8(4):044502</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1115%2F1.3006306" aria-label="View reference 23">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 23 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Development%20of%20a%20dual-handed%20haptic%20assembly%20system%3A%20SHARP&amp;journal=J%20Comput%20Inf%20Sci%20Eng&amp;volume=8&amp;issue=4&amp;publication_year=2008&amp;author=Seth%2CA&amp;author=Su%2CH-J&amp;author=Vance%2CJM">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="A. Seth, JM. Vance, JH. Oliver, " /><meta itemprop="datePublished" content="2011" /><meta itemprop="headline" content="Seth A, Vance JM, Oliver JH (2011) Virtual reality for assembly methods prototyping—a review. Virtual Real Vir" /><p class="c-article-references__text" id="ref-CR24">Seth A, Vance JM, Oliver JH (2011) Virtual reality for assembly methods prototyping—a review. Virtual Real Virtual Manuf Constr 15(1):5–20. doi:<a href="https://doi.org/10.1007/s10055-009-0153-y">10.1007/s10055-009-0153-y</a>
+                        </p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1007%2Fs10055-009-0153-y" aria-label="View reference 24">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 24 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Virtual%20reality%20for%20assembly%20methods%20prototyping%E2%80%94a%20review&amp;journal=Virtual%20Real%20Virtual%20Manuf%20Constr&amp;doi=10.1007%2Fs10055-009-0153-y&amp;volume=15&amp;issue=1&amp;pages=5-20&amp;publication_year=2011&amp;author=Seth%2CA&amp;author=Vance%2CJM&amp;author=Oliver%2CJH">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Shotton J, Fitzgibbon A, Cook M, Sharp T, Finocchio M, Moore R, Kipman A, Blake A (2011) Real-time human pose " /><p class="c-article-references__text" id="ref-CR25">Shotton J, Fitzgibbon A, Cook M, Sharp T, Finocchio M, Moore R, Kipman A, Blake A (2011) Real-time human pose recognition in parts from single depth images. In: Proceedings CVPR’11. 2: 1297–1304</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Siddiqui M, Medioni G (2010) Human pose estimation from a single view point, real-time range sensor. Conferenc" /><p class="c-article-references__text" id="ref-CR26">Siddiqui M, Medioni G (2010) Human pose estimation from a single view point, real-time range sensor. Conference in CVCG at CVPR, San Francisco, California, USA, pp. 1–8. doi:<a href="https://doi.org/10.1109/CVPRW.2010.5543618">10.1109/CVPRW.2010.5543618</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Unzueta L (2008) Markerless full-body human motion capture and combined motor action recognition for human-com" /><p class="c-article-references__text" id="ref-CR27">Unzueta L (2008) Markerless full-body human motion capture and combined motor action recognition for human-computer interaction. Ph. D. thesis, University of Navarra, tecnun</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="S. Volkov, JM. Vance, " /><meta itemprop="datePublished" content="2001" /><meta itemprop="headline" content="Volkov S, Vance JM (2001) Effectiveness of haptic sensation for the evaluation of virtual prototypes. ASME J C" /><p class="c-article-references__text" id="ref-CR28">Volkov S, Vance JM (2001) Effectiveness of haptic sensation for the evaluation of virtual prototypes. ASME J Comput Inf Sci Eng 1(2):123–128. doi:<a href="https://doi.org/10.1115/1.1384566">10.1115/1.1384566</a>
+                        </p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1115%2F1.1384566" aria-label="View reference 28">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 28 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Effectiveness%20of%20haptic%20sensation%20for%20the%20evaluation%20of%20virtual%20prototypes&amp;journal=ASME%20J%20Comput%20Inf%20Sci%20Eng&amp;doi=10.1115%2F1.1384566&amp;volume=1&amp;issue=2&amp;pages=123-128&amp;publication_year=2001&amp;author=Volkov%2CS&amp;author=Vance%2CJM">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Wang RY, Popovic J (2009) Real-time hand-tracking with a color glove. In: Proceedeings SIGGRAPH’09. 28(3). doi" /><p class="c-article-references__text" id="ref-CR29">Wang RY, Popovic J (2009) Real-time hand-tracking with a color glove. In: Proceedeings SIGGRAPH’09. 28(3). doi:<a href="https://doi.org/10.1145/1531326.1531369">10.1145/1531326.1531369</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Wang RY, Paris S, Popovic J (2011) 6D hands: Markerless hand-tracking for computer aided design. In: Proceedin" /><p class="c-article-references__text" id="ref-CR30">Wang RY, Paris S, Popovic J (2011) 6D hands: Markerless hand-tracking for computer aided design. In: Proceeding UIST, pp 549–558. doi:<a href="https://doi.org/10.1145/2047196.2047269">10.1145/2047196.2047269</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="CR. Wren, A. Azarbayejani, T. Darrell, " /><meta itemprop="datePublished" content="1997" /><meta itemprop="headline" content="Wren CR, Azarbayejani A, Darrell T (1997) Pfinder: real-time tracking of the human body. IEEE Trans Pattern An" /><p class="c-article-references__text" id="ref-CR31">Wren CR, Azarbayejani A, Darrell T (1997) Pfinder: real-time tracking of the human body. IEEE Trans Pattern Anal Mach Intell 19(7):780–785</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2F34.598236" aria-label="View reference 31">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 31 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Pfinder%3A%20real-time%20tracking%20of%20the%20human%20body&amp;journal=IEEE%20Trans%20Pattern%20Anal%20Mach%20Intell&amp;volume=19&amp;issue=7&amp;pages=780-785&amp;publication_year=1997&amp;author=Wren%2CCR&amp;author=Azarbayejani%2CA&amp;author=Darrell%2CT">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="Y. Zhu, K. Fujimura, " /><meta itemprop="datePublished" content="2007" /><meta itemprop="headline" content="Zhu Y, Fujimura K (2007) Constrained optimization for human pose estimation from depth sequences. Proc ACCV 1:" /><p class="c-article-references__text" id="ref-CR32">Zhu Y, Fujimura K (2007) Constrained optimization for human pose estimation from depth sequences. Proc ACCV 1:408–418</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 32 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Constrained%20optimization%20for%20human%20pose%20estimation%20from%20depth%20sequences&amp;journal=Proc%20ACCV&amp;volume=1&amp;pages=408-418&amp;publication_year=2007&amp;author=Zhu%2CY&amp;author=Fujimura%2CK">
+                    Google Scholar</a> 
+                </p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-013-0240-y-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><div class="c-article-section__content" id="Ack1-content"></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">Department of Mechanical Engineering, Centro de Estudios e investigaciones técnicas de Guipuzcoa, ceit, Paseo de Manuel Lardizabal, N° 15, 20018, Donostia-San Sebastián, Spain</p><p class="c-article-author-affiliation__authors-list">Yaiza Vélaz, Alberto Lozano-Rodero &amp; Angel Suescun</p></li><li id="Aff2"><p class="c-article-author-affiliation__address">Industry and Transport Division of TECNALIA, C/Geldo-Parque Tecnologico de Bizkaia, Edificio 700, 48160, Derio, Spain</p><p class="c-article-author-affiliation__authors-list">Teresa Gutiérrez</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Yaiza-V_laz"><span class="c-article-authors-search__title u-h3 js-search-name">Yaiza Vélaz</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Yaiza+V%C3%A9laz&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Yaiza+V%C3%A9laz" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Yaiza+V%C3%A9laz%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Alberto-Lozano_Rodero"><span class="c-article-authors-search__title u-h3 js-search-name">Alberto Lozano-Rodero</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Alberto+Lozano-Rodero&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Alberto+Lozano-Rodero" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Alberto+Lozano-Rodero%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Angel-Suescun"><span class="c-article-authors-search__title u-h3 js-search-name">Angel Suescun</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Angel+Suescun&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Angel+Suescun" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Angel+Suescun%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Teresa-Guti_rrez"><span class="c-article-authors-search__title u-h3 js-search-name">Teresa Gutiérrez</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Teresa+Guti%C3%A9rrez&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Teresa+Guti%C3%A9rrez" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Teresa+Guti%C3%A9rrez%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-013-0240-y/email/correspondent/c1/new">Yaiza Vélaz</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=Natural%20and%20hybrid%20bimanual%20interaction%20for%20virtual%20assembly%20tasks&amp;author=Yaiza%20V%C3%A9laz%20et%20al&amp;contentID=10.1007%2Fs10055-013-0240-y&amp;publication=1359-4338&amp;publicationDate=2013-12-10&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Vélaz, Y., Lozano-Rodero, A., Suescun, A. <i>et al.</i> Natural and hybrid bimanual interaction for virtual assembly tasks.
+                    <i>Virtual Reality</i> <b>18, </b>161–171 (2014). https://doi.org/10.1007/s10055-013-0240-y</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-013-0240-y.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2013-02-27">27 February 2013</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2013-11-30">30 November 2013</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2013-12-10">10 December 2013</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2014-09">September 2014</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-013-0240-y" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-013-0240-y</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Virtual reality</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Haptics</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Markerless Mocap</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Human–computer interaction</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Assembly training</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Bimanual assembly simulation</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-013-0240-y.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=240;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

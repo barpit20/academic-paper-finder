@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="Stable haptic interaction using a damping model to implement a realist"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="It is difficult to implement a stable and realistic haptic simulation for cutting rigid objects that is based on a damping model because of an inevitable conflict between stability and high output..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/12/2.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="Stable haptic interaction using a damping model to implement a realistic tooth-cutting simulation for dental training"/>
+
+    <meta name="dc.source" content="Virtual Reality 2008 12:2"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2008-04-16"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2008 Springer-Verlag London Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="It is difficult to implement a stable and realistic haptic simulation for cutting rigid objects that is based on a damping model because of an inevitable conflict between stability and high output force. This paper presents passivity techniques to show that an excessive damping coefficient causes the output stiffness to exceed the maximum output stiffness of the haptic device, leading to instability. By analysing the damping model of a haptic dental-training simulator, we construct a relationship among the damping coefficient, position resolution, sampling frequency, human operation, and the maximum achievable device stiffness that will still maintain device stability. A method is also provided to restrict the output stiffness of the haptic device to ensure stability while enabling the realistic haptic simulation of cutting rigid objects (teeth) that is based in a damping model. Our analysis and conclusions are verified by a damping model that is constructed for a dental-training haptic display. Three types of haptic devices are used in our analysis and experiments."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2008-04-16"/>
+
+    <meta name="prism.volume" content="12"/>
+
+    <meta name="prism.number" content="2"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="99"/>
+
+    <meta name="prism.endingPage" content="106"/>
+
+    <meta name="prism.copyright" content="2008 Springer-Verlag London Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-008-0094-x"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-008-0094-x"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-008-0094-x.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-008-0094-x"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="Stable haptic interaction using a damping model to implement a realistic tooth-cutting simulation for dental training"/>
+
+    <meta name="citation_volume" content="12"/>
+
+    <meta name="citation_issue" content="2"/>
+
+    <meta name="citation_publication_date" content="2008/06"/>
+
+    <meta name="citation_online_date" content="2008/04/16"/>
+
+    <meta name="citation_firstpage" content="99"/>
+
+    <meta name="citation_lastpage" content="106"/>
+
+    <meta name="citation_article_type" content="Original article"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-008-0094-x"/>
+
+    <meta name="DOI" content="10.1007/s10055-008-0094-x"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-008-0094-x"/>
+
+    <meta name="description" content="It is difficult to implement a stable and realistic haptic simulation for cutting rigid objects that is based on a damping model because of an inevitable c"/>
+
+    <meta name="dc.creator" content="Guanyang Liu"/>
+
+    <meta name="dc.creator" content="Yuru Zhang"/>
+
+    <meta name="dc.creator" content="Dangxiao Wang"/>
+
+    <meta name="dc.creator" content="William T. Townsend"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="Adachi Y, Kumano T, Ogino K (1995) Intermediate representation for stiff virtual objects. In: Proceedings of IEEE virtual reality annual international symposium, Research Triangle Park, NC, March, pp 203&#8211;210 "/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Trans Rob Autom; citation_title=Stable haptic interaction with virtual environments; citation_author=RJ Adams, B Hannaford; citation_volume=15; citation_issue=3; citation_publication_date=1999; citation_pages=465-474; citation_doi=10.1109/70.768179; citation_id=CR2"/>
+
+    <meta name="citation_reference" content="Basdogan C, Ho C, Srinivasan MA (1999) Simulation of tissue cutting and bleeding for laparoscopic surgery using auxiliary surfaces. In: Proceeding of the medicine meets virtual reality VII conference, San Francisco, CA"/>
+
+    <meta name="citation_reference" content="Colgate JE, Brown JM (1994) Factors affecting the Z-width of a haptic display. In: Proceedings of IEEE international conference robot automat, Los Alamitos, CA, pp 3205&#8211;3210"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Trans Rob Autom; citation_title=Time-domain passivity control of haptic interfaces; citation_author=B Hannaford, JH Ryu; citation_volume=18; citation_issue=1; citation_publication_date=2002; citation_pages=1-10; citation_doi=10.1109/70.988969; citation_id=CR5"/>
+
+    <meta name="citation_reference" content="citation_title=Haptic simulation of a tool in contact with a nonlinear deformable body; citation_inbook_title=IS4TM: International symposium on surgery simulation and soft tissue modelling. Lecture notes in computer science (LNCS 2673); citation_publication_date=2003; citation_pages=311-320; citation_id=CR6; citation_author=M Mahvash; citation_author=V Hayward; citation_publisher=Springer"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comput Graph; citation_title=Feeling and seeing issues in force display; citation_author=M Minsky, M Ouh-Young, O Steele, FP Brooks, M Behensky; citation_volume=24; citation_issue=2; citation_publication_date=1990; citation_pages=235-243; citation_doi=10.1145/91394.91451; citation_id=CR8"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Trans ASME J Dyn Syst Meas Contr; citation_title=On the emulation of stiff walls and static friction with a magnetically levitated input/output device; citation_author=SE Salcudean, TD Vlaar; citation_volume=119; citation_issue=1; citation_publication_date=1997; citation_pages=127-132; citation_doi=10.1115/1.2801204; citation_id=CR9"/>
+
+    <meta name="citation_reference" content="Tanaka A, Hirota K, Kaneko T (1998) Virtual cutting with force feedback. In: Proceedings of virtual reality annual international symposium, vol 199(8), pp 71&#8211;77"/>
+
+    <meta name="citation_reference" content="Wang D, Zhang Y (2004) Effect of haptic device&#8217;s position resolution on stability. In: Proceedings of EuroHaptics 2004, Munich Germany, 5&#8211;7 June, pp 377&#8211;380"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Trans Vis Comput Graph; citation_title=Cutting on triangle mesh: local model-based haptic display for dental preparation surgery simulation; citation_author=D Wang, Y Zhang, Y Wang, Y-S Lee, P Lu, Y Wang; citation_volume=11; citation_issue=6; citation_publication_date=2005; citation_pages=671-683; citation_doi=10.1109/TVCG.2005.97; citation_id=CR12"/>
+
+    <meta name="citation_reference" content="Mark WR, Randolph SC, Finch M, Van Verth JM, Taylor RM II (1996) Adding force feedback to graphics systems: issues and solutions. In: Proceedings of SIGGRAPH 96, New Orleans, Louisiana, August 4&#8211;9, pp 447&#8211;452"/>
+
+    <meta name="citation_reference" content="citation_title=Metallic cutting theory and tool; citation_publication_date=1990; citation_id=CR14; citation_author=Y Zhang; citation_publisher=National Defence Industry Press"/>
+
+    <meta name="citation_author" content="Guanyang Liu"/>
+
+    <meta name="citation_author_email" content="gyliu@me.buaa.edu.cn"/>
+
+    <meta name="citation_author_institution" content="State Key Lab of Virtual Reality Technology and System,  Beihang University, Beijing, China"/>
+
+    <meta name="citation_author" content="Yuru Zhang"/>
+
+    <meta name="citation_author_institution" content="State Key Lab of Virtual Reality Technology and System,  Beihang University, Beijing, China"/>
+
+    <meta name="citation_author" content="Dangxiao Wang"/>
+
+    <meta name="citation_author_institution" content="State Key Lab of Virtual Reality Technology and System,  Beihang University, Beijing, China"/>
+
+    <meta name="citation_author" content="William T. Townsend"/>
+
+    <meta name="citation_author_email" content="wt@barrett.com"/>
+
+    <meta name="citation_author_institution" content="Barrett Technology Inc., Cambridge, USA"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-008-0094-x&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2008/06/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-008-0094-x"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="Stable haptic interaction using a damping model to implement a realistic tooth-cutting simulation for dental training"/>
+        <meta property="og:description" content="It is difficult to implement a stable and realistic haptic simulation for cutting rigid objects that is based on a damping model because of an inevitable conflict between stability and high output force. This paper presents passivity techniques to show that an excessive damping coefficient causes the output stiffness to exceed the maximum output stiffness of the haptic device, leading to instability. By analysing the damping model of a haptic dental-training simulator, we construct a relationship among the damping coefficient, position resolution, sampling frequency, human operation, and the maximum achievable device stiffness that will still maintain device stability. A method is also provided to restrict the output stiffness of the haptic device to ensure stability while enabling the realistic haptic simulation of cutting rigid objects (teeth) that is based in a damping model. Our analysis and conclusions are verified by a damping model that is constructed for a dental-training haptic display. Three types of haptic devices are used in our analysis and experiments."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>Stable haptic interaction using a damping model to implement a realistic tooth-cutting simulation for dental training | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-008-0094-x","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Haptic display system, Output stiffness, Damping model, Stability criterion","kwrd":["Haptic_display_system","Output_stiffness","Damping_model","Stability_criterion"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-008-0094-x","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-008-0094-x","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=94;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-008-0094-x">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            Stable haptic interaction using a damping model to implement a realistic tooth-cutting simulation for dental training
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-008-0094-x.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-008-0094-x.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">Original article</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2008-04-16" itemprop="datePublished">16 April 2008</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">Stable haptic interaction using a damping model to implement a realistic tooth-cutting simulation for dental training</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Guanyang-Liu" data-author-popup="auth-Guanyang-Liu" data-corresp-id="c1">Guanyang Liu<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content=" Beihang University" /><meta itemprop="address" content="grid.64939.31, 0000000099991211, State Key Lab of Virtual Reality Technology and System,  Beihang University, Beijing, China" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Yuru-Zhang" data-author-popup="auth-Yuru-Zhang">Yuru Zhang</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content=" Beihang University" /><meta itemprop="address" content="grid.64939.31, 0000000099991211, State Key Lab of Virtual Reality Technology and System,  Beihang University, Beijing, China" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Dangxiao-Wang" data-author-popup="auth-Dangxiao-Wang">Dangxiao Wang</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content=" Beihang University" /><meta itemprop="address" content="grid.64939.31, 0000000099991211, State Key Lab of Virtual Reality Technology and System,  Beihang University, Beijing, China" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-William_T_-Townsend" data-author-popup="auth-William_T_-Townsend">William T. Townsend</a></span><sup class="u-js-hide"><a href="#Aff2">2</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Barrett Technology Inc." /><meta itemprop="address" content="grid.423180.c, Barrett Technology Inc., Cambridge, USA" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 12</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">99</span>–<span itemprop="pageEnd">106</span>(<span data-test="article-publication-year">2008</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">235 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">11 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-008-0094-x/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>It is difficult to implement a stable and realistic haptic simulation for cutting rigid objects that is based on a damping model because of an inevitable conflict between stability and high output force. This paper presents passivity techniques to show that an excessive damping coefficient causes the output stiffness to exceed the maximum output stiffness of the haptic device, leading to instability. By analysing the damping model of a haptic dental-training simulator, we construct a relationship among the damping coefficient, position resolution, sampling frequency, human operation, and the maximum achievable device stiffness that will still maintain device stability. A method is also provided to restrict the output stiffness of the haptic device to ensure stability while enabling the realistic haptic simulation of cutting rigid objects (teeth) that is based in a damping model. Our analysis and conclusions are verified by a damping model that is constructed for a dental-training haptic display. Three types of haptic devices are used in our analysis and experiments.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Introduction</h2><div class="c-article-section__content" id="Sec1-content"><p>Dental students use a haptic dental-training display to simulate dental operations. Dentists can move the tip of haptic device to operate on virtual teeth with a level of haptic-visual feedback that is similar to those of physical operations (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0094-x#Fig1">1</a>). The haptic display system is capable of artificially recreating the forces that simulate the interaction between a dental pin and a virtual tooth. The computational engine of the haptic display, namely the force model, computes and provides realtime force feedback, which is critical in building the dental-training system.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0094-x/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0094-x/MediaObjects/10055_2008_94_Fig1_HTML.gif?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0094-x/MediaObjects/10055_2008_94_Fig1_HTML.gif" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p>The haptic-visual system for dental training</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0094-x/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>The damping model, which is used to compute the response force based on human’s operating speed, is a kind of force model in haptic simulations. In nearly all mechanical operations, the cutting force is computed based on the operating speed (Zhang <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1990" title="Zhang Y (1990) Metallic cutting theory and tool. National Defence Industry Press, Beijing, pp 163–180" href="/article/10.1007/s10055-008-0094-x#ref-CR14" id="ref-link-section-d90278e353">1990</a>). Some researchers also use damping models to compute the force feedback in haptic simulations. Tanaka et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1998" title="Tanaka A, Hirota K, Kaneko T (1998) Virtual cutting with force feedback. In: Proceedings of virtual reality annual international symposium, vol 199(8), pp 71–77" href="/article/10.1007/s10055-008-0094-x#ref-CR10" id="ref-link-section-d90278e356">1998</a>) and Basdogan et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Basdogan C, Ho C, Srinivasan MA (1999) Simulation of tissue cutting and bleeding for laparoscopic surgery using auxiliary surfaces. In: Proceeding of the medicine meets virtual reality VII conference, San Francisco, CA" href="/article/10.1007/s10055-008-0094-x#ref-CR3" id="ref-link-section-d90278e359">1999</a>) implemented haptic interactions based on damping models. Using the damping model to implement a haptic rendering during the tooth-cutting operation in dental training is more efficient and simpler than other methods.</p><p>However, applying a damping model in haptic simulations frequently leads to instability and low output force. For example, the three degree-of-freedom haptic Phantom Desktop device will oscillate and lose stability when the damping coefficient exceeds 0.002 N s/mm with the sampling frequency of haptic loop set 1 kHz. The output force can reaches only 0.3 N, which does not meet the needs of dental simulator. In real tooth cutting, the force between the tooth and the dental pin can reach 2.8 N. Therefore, the goal of this paper is to analyse why a haptic simulation based on a damping model initially fails the needs of the dental simulator and then overcoming this failure by finding a solution that provides both stability and high output forces.</p><p>Some authors have considered the issues of stability in the haptic simulations. Minsky et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1990" title="Minsky M,Ouh-Young M, Steele O, Brooks FP, Behensky M (1990) Feeling and seeing issues in force display. Comput Graph 24(2):235–243" href="/article/10.1007/s10055-008-0094-x#ref-CR8" id="ref-link-section-d90278e367">1990</a>) noted a critical trade-off among the simulation rate, the virtual wall stiffness, and the device viscosity and provided insights into the role of the human operators in the stability concerned. Salcudean and Vlaar (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="Salcudean SE, Vlaar TD (1997) On the emulation of stiff walls and static friction with a magnetically levitated input/output device. Trans ASME J Dyn Syst Meas Contr 119(1):127–132" href="/article/10.1007/s10055-008-0094-x#ref-CR9" id="ref-link-section-d90278e370">1997</a>) found that very low device friction significantly limited the achievable stiffness of the virtual environment. Virtual coupling and time domain passivity methods have been used to analyse the stability of haptic system (Adams and Hannaford <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Adams RJ, Hannaford B (1999) Stable haptic interaction with virtual environments. IEEE Trans Rob Autom 15(3):465–474" href="/article/10.1007/s10055-008-0094-x#ref-CR2" id="ref-link-section-d90278e373">1999</a>; Hannaford and Ryu <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Hannaford B, Ryu JH (2002) Time-domain passivity control of haptic interfaces. IEEE Trans Rob Autom 18(1):1–10" href="/article/10.1007/s10055-008-0094-x#ref-CR5" id="ref-link-section-d90278e376">2002</a>). Colgate and Brown (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1994" title="Colgate JE, Brown JM (1994) Factors affecting the Z-width of a haptic display. In: Proceedings of IEEE international conference robot automat, Los Alamitos, CA, pp 3205–3210" href="/article/10.1007/s10055-008-0094-x#ref-CR4" id="ref-link-section-d90278e379">1994</a>) presented the dynamic range of achievable impedances “Z-Width” which should satisfy a robust property, such as passivity, and the factors affecting Z-Width—sample and hold, inherent interface dynamics, displacement sensor quantization and velocity filtering. They focused on the design of haptic device and did not elaborate how to implement the damping model in order to increase the output force stably.</p><p>The large error of computed operating speed has been presented as the basic cause for the instability of haptic simulations that are based on a damping model. Some authors have attempted to improve the computed operating speed and force feedback to implement high output force stably (Mahvash and Hayward <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Mahvash M, Hayward V (2003) Haptic simulation of a tool in contact with a nonlinear deformable body. In: Ayache N, Delingette H (eds) IS4TM: International symposium on surgery simulation and soft tissue modelling. Lecture notes in computer science (LNCS 2673). Springer, New York, pp 311–320" href="/article/10.1007/s10055-008-0094-x#ref-CR6" id="ref-link-section-d90278e386">2003</a>; Adachi et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1995" title="Adachi Y, Kumano T, Ogino K (1995) Intermediate representation for stiff virtual objects. In: Proceedings of IEEE virtual reality annual international symposium, Research Triangle Park, NC, March, pp 203–210 " href="/article/10.1007/s10055-008-0094-x#ref-CR1" id="ref-link-section-d90278e389">1995</a>; Mark et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1996" title="Mark WR, Randolph SC, Finch M, Van Verth JM, Taylor RM II (1996) Adding force feedback to graphics systems: issues and solutions. In: Proceedings of SIGGRAPH 96, New Orleans, Louisiana, August 4–9, pp 447–452" href="/article/10.1007/s10055-008-0094-x#ref-CR13" id="ref-link-section-d90278e392">1996</a>). Although more-precise encoders can solve the problem, doing so sharply increases the cost of the haptic device and so is not a practical option.</p><p>The paper presents a stability principle to analyse above problems and presents a method which implements the damping model while enabling high output force stably. The paper is organized as follows. A damping model for dental simulation is constructed in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-008-0094-x#Sec2">2</a> and applied in the dental-training system. The conservative criterion of stable haptic interaction is presented in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-008-0094-x#Sec3">3</a>, and the cause of instability when applying the damping model is discussed. In Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-008-0094-x#Sec4">4</a>, a method to realize high output force stably is presented. The factors affecting the damping coefficient—operating speed, position resolution, and sampling frequency—are discussed. Finally, the dental training system is built to test our analysis and method.</p></div></div></section><section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">Damping model and implementation</h2><div class="c-article-section__content" id="Sec2-content"><p>In the process of tooth preparation, dentists move the dental holders (rotary dental pins) to cut or grind teeth while sensing the forces between the dental pin and a tooth. The force between the dental pin and a tooth is composed of resistance to the movement imposed by the dentist and a reactive friction force that opposes the rotation of dental pin. Based on the results measurements described later in this section, the value of friction component (&lt;0.25 N) is much smaller than that of resistance component (up to 2.8 N). The paper focuses on the stability analysis of the damping model and not the accurate force model for dental training. Therefore, we do not consider the friction component in the force model.</p><p>We first analyse the tooth cutting operation with cylindrical dental pin. When a dentist uses the cylindrical dental pin to cut into the tooth interior, the tooth will react to the dental pin by a force <i>F</i>
+                        <sup>e</sup> whose direction is opposite to the direction of the human’s operation <i>F</i>
+                        <sup>h</sup> (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0094-x#Fig2">2</a>). Therefore, in the haptic simulation of cutting into the tooth interior, we compute the force feedback <i>F</i>
+                        <sup>e</sup> which should be imposed against operators based on human’s operating speed: </p><div id="Equ1" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">
+$$ F^{{\text{e}}} = BV^{c} $$</span></div><div class="c-article-equation__number">
+                    (1)
+                </div></div><p>
+                        <i>V</i>
+                        <sup><i>c</i></sup> is the computed operating speed of the human in the haptic simulation; and <i>B</i> is the damping coefficient, which is decided by the stiffness of tooth and the contact geometry between the dental pin and the tooth.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0094-x/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0094-x/MediaObjects/10055_2008_94_Fig2_HTML.gif?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0094-x/MediaObjects/10055_2008_94_Fig2_HTML.gif" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p>Force analysis in tooth cutting</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0094-x/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>In order to determine the value of the damping coefficient <i>B</i>, we construct a measuring system which is designed to have multiple capabilities such as: (a) measuring the cutting forces, (b) recording the positions of human’s operation, (c) computing the orientations of dental pin in the process of tooth preparation. The equipment consists of a dental engine to generate high-speed pin rotation (5 × 10<sup>5</sup> rpm) and two subsystems: a force-measuring subsystem and an optical-tracking subsystem (Figs. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0094-x#Fig3">3</a>, <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0094-x#Fig4">4</a>). The first subsystem consists of a 6-axis force/torque sensor (manufactured by ATI Inc.), gypsum to fix the sensor on the test-bed and a mechanism to fix teeth on the force sensor. The optical-tracking subsystem consists of two digital cameras (manufactured by Panasonic) and an image acquisition board. The subsystems acquire and process digital data by computer control.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0094-x/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0094-x/MediaObjects/10055_2008_94_Fig3_HTML.jpg?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0094-x/MediaObjects/10055_2008_94_Fig3_HTML.jpg" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p>Measuring system and dental engine</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0094-x/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0094-x/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0094-x/MediaObjects/10055_2008_94_Fig4_HTML.jpg?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0094-x/MediaObjects/10055_2008_94_Fig4_HTML.jpg" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p>Force measuring and the dental holder with marks</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0094-x/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>When a dentist cuts a tooth from the surface to the interior, cutting forces and the positions of the dental pin can be measured with a sampling frequency at 40 Hz. Twelve dentists take part in measuring and cutting operations on forty teeth that were previously removed from patients. The measuring results show that the maximum cutting force can reach 2.8 N in the enamel layer of tooth and 0.9 N in the hard-dentin layer. The maximum operating speed among these 12 dentists is measured to be 0.48 mm/s. The computed value of <i>B</i> is between −11.3 and −6.1 N s/mm in the enamel layer (tooth attachment) and between −6.5 and −3.8 N s/mm in the layer of hard dentin.</p><p>We first choose the damping coefficient <i>B</i> to be 6.5 N s/mm with a of haptic-loop frequency of 1 kHz to simulate cutting teeth (Eq. (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0094-x#Equ1">1</a>)). When dentists move the tip of the haptic device to cut the virtual tooth, the Phantom oscillates badly enough that they can hardly maintain their grasp of the stylus. In all three types of haptic devices that we tested (Phantom Desktop, Omega and BHhd manufactured by us) the phenomenon is the same. Operators cannot finish cutting the virtual tooth at all. The only way to avoid oscillation is to decrease the sampling frequency of the position signal or decrease the damping coefficient. Although doing so can prevent oscillation of haptic device, the output force decreases significantly and cannot reach 0.3 N, well below the requirements for realistic dental simulation. Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-008-0094-x#Tab1">1</a> shows the relation among maximum damping coefficient, sampling frequency of position signal, and maximum output force required to keep the haptic simulation stable.
+</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-1"><figure><figcaption class="c-article-table__figcaption"><b id="Tab1" data-test="table-caption">Table 1 Maximum damping coefficient and output force when the haptic simulation remains stable</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-008-0094-x/tables/1"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>What causes the instability when the damping model is applied in haptic simulation? How do we improve the damping model to increase the output force stably and meet the requirements of dental simulation? We attempt to solve these two problems from a stability analysis.</p></div></div></section><section aria-labelledby="Sec3"><div class="c-article-section" id="Sec3-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec3">Stability analysis</h2><div class="c-article-section__content" id="Sec3-content"><p>The phenomenon of oscillation is that the output force changes so acutely that the dentist almost loses grasp of the haptic device. In the process of oscillation, the haptic device transfers energy to the dentist. It violates a stability principle of haptic simulation in which the operator can never extract energy from the haptic display. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0094-x#Fig5">5</a> shows the network model of haptic simulation. The haptic display system is composed of three elements: (1) the operator, (2) the haptic interface, and (3) the virtual environment. The operator exerts a force <i>F</i>
+                        <sup>h</sup> on the haptic interface to change the physical character of the virtual environment, while the virtual environment generates a force <i>F</i>
+                        <sup>e</sup> through the haptic interface to resist the actions of the dentist. For a static environment (a tooth model), if an operator uses the haptic display system to simulate cutting (not touching) the deformable tooth model stably, the haptic device will not transfer energy to the dentist: </p><div id="Equ2" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">
+$$ \left\{ {\begin{array}{*{20}c} {{F^{{\text{e}}}_{i} \cdot V^{{\text{a}}}_{i} \le 0}} \\ {{F^{{\text{h}}}_{{\text{i}}} \cdot V^{{\text{a}}}_{{\text{i}}} \ge 0}} \\ \end{array} } \right. $$</span></div><div class="c-article-equation__number">
+                    (2)
+                </div></div><p>
+                        <i>i</i> is the sampling period of haptic loop and <i>V</i>
+                        <span class="c-stack">
+                  <sup>a</sup><sub>
+                    <i>i</i>
+                  </sub>
+                  
+                </span> is the accurate dentist operating speed with no error at each sampling period. A haptic simulation of tooth cutting which does not satisfy Eq. (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0094-x#Equ2">2</a>) will lose stability and oscillate.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0094-x/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0094-x/MediaObjects/10055_2008_94_Fig5_HTML.gif?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0094-x/MediaObjects/10055_2008_94_Fig5_HTML.gif" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p>Network of haptic display system</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0094-x/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>What causes violation of stability principle Eq. (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0094-x#Equ2">2</a>) in haptic simulations? We consider that the primary reason is that the output stiffness exceeds the maximum achievable stiffness of the haptic device. In fact, the haptic device generates variational stiffness against the dentist in haptic simulations. The output stiffness should not exceed the maximum achievable stiffness which is provided by the manufacturer of haptic device. In the haptic simulation of touching a virtual wall, if the simulated virtual stiffness exceeds the maximum achievable output stiffness of haptic device, the above stability principle (Eq. (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0094-x#Equ2">2</a>)) will be violated and oscillation is inevitable. If the simulated virtual stiffness is smaller than the maximum achievable stiffness of haptic device, the haptic simulation of touching a virtual wall can remain stable.</p><p>In the next step, we analyse the instability of haptic simulation by using a damping model with the above conclusion: output stiffness of haptic device should not exceed the maximum achievable output stiffness in order to to keep the haptic simulation stable.</p><p>In the haptic simulation of tooth cutting, the speed of the dentist is computed: </p><div id="Equ3" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">
+$$ V^{{\text{c}}}_{{\text{i}}} = (p^{{\text{c}}}_{i} - p^{{\text{c}}}_{{i\, - \,{\text{1}}}} )f $$</span></div><div class="c-article-equation__number">
+                    (3)
+                </div></div><p>
+                        <i>p</i>
+                        <span class="c-stack">
+                  <sup>c</sup><sub>
+                    <i>i</i>
+                  </sub>
+                  
+                </span> is the measured position of the dentist by the encoders in haptic device at each sampling period and <i>f</i> is the sampling frequency of position signal. The accurate operating speed <i>V</i>
+                        <span class="c-stack">
+                  <sup>a</sup><sub>
+                    <i>i</i>
+                  </sub>
+                  
+                </span> can be defined: </p><div id="Equ4" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">
+$$ V^{{\text{a}}}_{i} = (p^{{\text{a}}}_{i} - p^{{\text{a}}}_{{i - {\text{1}}}} )f $$</span></div><div class="c-article-equation__number">
+                    (4)
+                </div></div><p>
+                        <i>P</i>
+                        <span class="c-stack">
+                  <sup>a</sup><sub>
+                    <i>i</i>
+                  </sub>
+                  
+                </span> is the accurate position of the dentist at each sampling period with no error. In order to simplify the equation, we define <i>δ</i> as the minimum resolution of each axis of the haptic interface in Cartesian coordinates. 
+<span class="mathjax-tex">\( \delta = {\left[ {\begin{array}{*{20}c} {\delta } &amp; {\delta } &amp; {\delta } \\ \end{array} } \right]}^{{\text{T}}} \)</span> (mm) is defined as the position resolution of the haptic interface in Cartesian coordinates. Therefore, the error of the measured position and the accurate position can be determined: </p><div id="Equ5" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ \left\{ {\begin{array}{*{20}c} {{p^{{\text{a}}}_{{ix}} - \delta \le p^{{\text{c}}}_{{ix}} \le p^{{\text{a}}}_{{ix}} + \delta }} \\ {{p^{{\text{a}}}_{{iy}} - \delta \le p^{{\text{c}}}_{{iy}} \le p^{{\text{a}}}_{{iy}} + \delta }} \\ {{p^{{\text{a}}}_{{iz}} - \delta \le p^{{\text{c}}}_{{iz}} \le p^{{\text{a}}}_{{iz}} + \delta }} \\ \end{array} } \right. $$</span></div><div class="c-article-equation__number">
+                    (5)
+                </div></div><p>The position change of the dentist between two sampling periods can be determined as </p><div id="Equ6" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ \left\{ {\begin{array}{*{20}c} {{p^{{\text{a}}}_{{ix}} - p^{{\text{a}}}_{{{\text{(}}i - {\text{1)}}x}} - 2\delta \le p^{{\text{c}}}_{{ix}} - p^{{\text{c}}}_{{{\text{(}}i - {\text{1)}}x}} \le p^{{\text{a}}}_{{ix}} - p^{{\text{a}}}_{{{\text{(}}i - {\text{1)}}x}} + 2\delta }} \\ {{p^{{\text{a}}}_{{iy}} - p^{{\text{a}}}_{{{\text{(}}i - {\text{1)}}y}} - 2\delta \le p^{{\text{c}}}_{{iy}} - p^{{\text{c}}}_{{{\text{(}}i - {\text{1)}}y}} \le p^{{\text{a}}}_{{iy}} - p^{{\text{a}}}_{{{\text{(}}i - {\text{1)}}y}} + 2\delta }} \\ {{p^{{\text{a}}}_{{iz}} - p^{{\text{a}}}_{{{\text{(}}i - {\text{1)}}z}} - 2\delta \le p^{{\text{c}}}_{{iz}} - p^{{\text{c}}}_{{{\text{(}}i - {\text{1)}}z}} \le p^{{\text{a}}}_{{iz}} - p^{{\text{a}}}_{{{\text{(}}i - {\text{1)}}z}} + 2\delta }} \\ \end{array} } \right. $$</span></div><div class="c-article-equation__number">
+                    (6)
+                </div></div><p>Based on Eqs. (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0094-x#Equ3">3</a>), (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0094-x#Equ4">4</a>) and (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0094-x#Equ6">6</a>), the error of accurate operating speed <i>V</i>
+                        <span class="c-stack">
+                  <sup>a</sup><sub>
+                    <i>i</i>
+                  </sub>
+                  
+                </span> and the computed operating speed <i>V</i>
+                        <span class="c-stack">
+                  <sup>c</sup><sub>
+                    <i>i</i>
+                  </sub>
+                  
+                </span> can be determined: </p><div id="Equ7" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ \left\{ {\begin{array}{*{20}c} {{V^{{\text{a}}}_{{ix}} - 2\delta f \le V^{{\text{c}}}_{{ix}} \le V^{{\text{a}}}_{{ix}} + 2\delta f}} \\ {{V^{{\text{a}}}_{{iy}} - 2\delta f \le V^{{\text{c}}}_{{iy}} \le V^{{\text{a}}}_{{iy}} + 2\delta f}} \\ {{V^{{\text{a}}}_{{iz}} - 2\delta f \le V^{{\text{c}}}_{{iz}} \le V^{{\text{a}}}_{{iz}} + 2\delta f}} \\ \end{array} } \right. $$</span></div><div class="c-article-equation__number">
+                    (7)
+                </div></div><p>From Eqs. (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0094-x#Equ1">1</a>) and (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0094-x#Equ7">7</a>), for a measured damping coefficient <i>B</i>, the error <span class="mathjax-tex">\( \psi = [\begin{array}{*{20}c} {{\psi _{x} }} &amp; {{\psi _{y} }} &amp; {{\psi _{z} }} \\ \end{array} ]^{{\text{T}}} \)</span> of force <i>F</i>
+                        <sup>e</sup> computed by the damping model in haptic simulation and a realistic cutting force <i>F</i>
+                        <span class="c-stack">
+                  <sup>e</sup><sub>
+                    <i>a</i>
+                  </sub>
+                  
+                </span> can be determined: </p><div id="Equ8" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">
+$$ \left\{ {\begin{array}{*{20}c} {{F^{{\text{e}}}_{{ax}} - 2B\delta f \le F^{{\text{e}}}_{x} \le F^{{\text{e}}}_{{ax}} + 2B\delta f}} \\ {{F^{{\text{e}}}_{{ay}} - 2B\delta f \le F^{{\text{e}}}_{y} \le F^{{\text{e}}}_{{ay}} + 2B\delta f}} \\ {{F^{{\text{e}}}_{{az}} - 2B\delta f \le F^{{\text{e}}}_{z} \le F^{{\text{e}}}_{{az}} + 2B\delta f}} \\ \end{array} } \right. $$</span></div><div class="c-article-equation__number">
+                    (8)
+                </div></div>
+                        <div id="Equ9" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">
+$$ \left\{ {\begin{array}{*{20}c} {{ - 2B\delta f \le \psi _{x} \le 2B\delta f}} \\ {{ - 2B\delta f \le \psi _{y} \le 2B\delta f}} \\ {{ - 2B\delta f \le \psi _{z} \le 2B\delta f}} \\ \end{array} } \right. $$</span></div><div class="c-article-equation__number">
+                    (9)
+                </div></div><p>We define the computed force change Δ<i>F</i>
+                        <span class="c-stack">
+                  <sup>e</sup><sub>
+                    <i>i</i>
+                  </sub>
+                  
+                </span> between two sampling periods as </p><div id="Equ10" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">
+$$ \Updelta F^{{\text{e}}}_{i} = F^{{\text{e}}}_{i} - F^{{\text{e}}}_{{i - 1}} $$</span></div><div class="c-article-equation__number">
+                    (10)
+                </div></div><p>From Eqs. (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0094-x#Equ9">9</a>) and (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0094-x#Equ10">10</a>), the computed output force change Δ<i>F</i>
+                        <span class="c-stack">
+                  <sup>e</sup><sub>
+                    <i>i</i>
+                  </sub>
+                  
+                </span> between two sampling periods of the haptic loop can be determined as: </p><div id="Equ11" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">
+$$ \left\{ {\begin{array}{*{20}c} {{ - 4B(f\delta + {| {V^{{\text{a}}}_{{ix}} -V^{{\text{a}}}_{{{\text{(}}i - {\text{1)}}x}} } |}) \le \Updelta F^{{\text{e}}}_{{ix}} \le 4B(f\delta + {| {V^{{\text{a}}}_{{ix}} - V^{{\text{a}}}_{{{\text{(}}i - {\text{1)}}x}} } |})}} \\ {{ - 4B(f\delta + {| {V^{{\text{a}}}_{{iy}} - V^{{\text{a}}}_{{{\text{(}}i - {\text{1)}}y}} } |}) \le \Updelta F^{{\text{e}}}_{{iy}} \le 4B(f\delta + {| {V^{{\text{a}}}_{{iy}} - V^{{\text{a}}}_{{{\text{(}}i - {\text{1)}}y}} } |})}} \\ {{ - 4B(f\delta + {| {V^{{\text{a}}}_{{{\text{i}}z}} - V^{{\text{a}}}_{{{\text{(}}i - {\text{1)}}z}} } |}) \le \Updelta F^{{\text{e}}}_{{iz}} \le 4B(f\delta + {| {V^{{\text{a}}}_{{iz}} - V^{{\text{a}}}_{{{\text{(}}i - {\text{1)}}z}} } |})}} \\ \end{array} } \right. $$</span></div><div class="c-article-equation__number">
+                    (11)
+                </div></div><p>Based on the above analysis, the output stiffness of haptic device should be smaller than its maximum achievable stiffness to keep the haptic simulations stable. Therefore, </p><div id="Equ12" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">
+$$ \left\{ {\begin{array}{*{20}c} {{{\left| {\frac{{\Updelta\,F^{{\text{e}}}_{{ix}} }} {{p^{{\text{c}}}_{{ix}} - p^{{\text{c}}}_{{{\text{(}}i - {\text{1)}}x}} }}} \right|} \le K}} \\ {{{\left| {\frac{{\Updelta\,F^{{\text{a}}}_{{iy}} }} {{p^{{\text{c}}}_{{iy}} - p^{{\text{c}}}_{{{\text{(}}i - {\text{1)}}y}} }}} \right|} \le K}} \\ {{{\left| {\frac{{\Updelta\,F^{{\text{e}}}_{{iz}} }} {{p^{{\text{c}}}_{{iz}} - p^{{\text{c}}}_{{{\text{(}}i - {\text{1)}}z}} }}} \right|} \le K}} \\ \end{array} } \right. $$</span></div><div class="c-article-equation__number">
+                    (12)
+                </div></div><p>
+                        <i>K</i> is the maximum achievable stiffness of haptic interface. Here, we assume that the position signal of the tip of haptic device has the largest error in haptic simulation: </p><div id="Equ13" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">
+$$ \left\{ {\begin{array}{*{20}c} {{p^{{\text{c}}}_{{ix}} = p^{{\text{a}}}_{{ix}} + \delta }} \\ {{p^{{\text{c}}}_{{iy}} = p^{{\text{a}}}_{{iy}} + \delta }} \\ {{p^{{\text{c}}}_{{iz}} = p^{{\text{a}}}_{{iz}} + \delta }} \\ \end{array} } \right. $$</span></div><div class="c-article-equation__number">
+                    (13)
+                </div></div><p>
+                        <i>i</i> represents the odd sampling periods of the encoder-position signals. </p><div id="Equ14" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">
+$$ \left\{ {\begin{array}{*{20}c} {{p^{{\text{c}}}_{{jx}} = p^{{\text{a}}}_{{jx}} - \delta }} \\ {{p^{{\text{c}}}_{{jy}} = p^{{\text{a}}}_{{jy}} - \delta }} \\ {{p^{{\text{c}}}_{{jz}} = p^{{\text{a}}}_{{jz}} - \delta }} \\ \end{array} } \right. $$</span></div><div class="c-article-equation__number">
+                    (14)
+                </div></div><p>
+                        <i>j</i> represents the even sampling periods of the encoder-position signals. Based on above assumption and substituting Eqs. (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0094-x#Equ11">11</a>, <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0094-x#Equ13">13</a>) and (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0094-x#Equ14">14</a>) into Eq. (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0094-x#Equ12">12</a>), we can obtain the sufficient condition of Eq. (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0094-x#Equ12">12</a>): </p><div id="Equ15" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">
+$$ \left\{ {\begin{array}{*{20}c} {{{\left| {\frac{{\Updelta\,F^{{\text{e}}}_{{ix}} }} {{\Updelta\,p^{c}_{{ix}} }}} \right|} = {\left| {\frac{{4B(f\delta + {\left| {V^{{\text{a}}}_{{ix}} - V^{{\text{a}}}_{{{\text{(}}i - {\text{1)}}x}} } \right|})}} {{p^{{\text{a}}}_{{ix}} - p^{{\text{a}}}_{{{\text{(}}i - {\text{1)}}x}} + 2\delta }}} \right|} \le K}} \\ {{{\left| {\frac{{\Updelta\,F^{{\text{e}}}_{{iy}} }} {{\Updelta\,p^{{\text{c}}}_{{iy}} }}} \right|} = {\left| {\frac{{4B(f\delta + {\left| {V^{{\text{a}}}_{{iy}} - V^{{\text{a}}}_{{{\text{(}}i - {\text{1)}}y}} } \right|})}} {{p^{{\text{a}}}_{{iy}} - p^{{\text{a}}}_{{{\text{(}}i - {\text{1)}}y}} + 2\delta }}} \right|} \le K}} \\ {{{\left| {\frac{{\Updelta\,F^{{\text{e}}}_{{iz}} }} {{\Updelta\,p^{{\text{c}}}_{{iz}} }}} \right|} = {\left| {\frac{{4B(f\delta + {\left| {V^{{\text{a}}}_{{iz}} - V^{{\text{a}}}_{{{\text{(}}i - {\text{1)z}}}} } \right|})}} {{p^{{\text{a}}}_{{iz}} - p^{{\text{a}}}_{{{\text{(}}i - {\text{1)}}z}} + 2\delta }}} \right|} \le K}} \\ \end{array} } \right. $$</span></div><div class="c-article-equation__number">
+                    (15)
+                </div></div>
+                        <div id="Equ16" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">
+$$ B \le \frac{{K(V^{{\text{a}}}_{{ik}} + 2\delta f)}} {{4\delta f^{2} + f(V^{{\text{a}}}_{{ik}} - {\text{V}}^{{\text{a}}}_{{{\text{(}}i - {\text{1)}}k}} )}} = \frac{{K(V^{{\text{a}}}_{{ik}} + 2\delta f)}} {{4\delta f^{2} + {\text{a}}^{{\text{a}}}_{{ik}} }},\quad k = x,y,z $$</span></div><div class="c-article-equation__number">
+                    (16)
+                </div></div><p>where <i>a</i>
+                        <span class="c-stack">
+                  <sup>a</sup><sub>
+                    <i>ik</i>
+                  </sub>
+                  
+                </span> is the acceleration of the dentist at each sampling period in the haptic simulation (Wang and Zhang <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Wang D, Zhang Y (2004) Effect of haptic device’s position resolution on stability. In: Proceedings of EuroHaptics 2004, Munich Germany, 5–7 June, pp 377–380" href="/article/10.1007/s10055-008-0094-x#ref-CR11" id="ref-link-section-d90278e1204">2004</a>). From Eqs. (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0094-x#Equ15">15</a>) and (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0094-x#Equ16">16</a>), we can obtain the relationship among the damping coefficient <i>B</i>, the maximum achievable output stiffness of haptic device <i>K</i>, the position resolution <i>δ</i>, the sampling frequency of position signal <i>f</i> (the frequency of haptic loop is 1 kHz), and the dentist which should be satisfied to keep the haptic simulation stable. In haptic simulation, the damping coefficient is decided by the haptic device, the operation of the human, and the sampling frequency of the position signal. For the same operation and the same sampling frequency, the haptic device that has the largest position resolution and largest achievable stiffness can output the largest damping coefficient. For the same haptic device, if the operator can keep a high operating speed in the whole cutting process with small acceleration, the damping coefficient can be increased stably. However, it is difficult for an operator to keep a high and constant operating speed in the whole simulation. Equation (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0094-x#Equ16">16</a>) reveals that the damping coefficient is nearly inverse proportional to the sampling frequency. However, the increasing the damping coefficient in combination with decreasing of sampling frequency does not increase the output force [Eqs. (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0094-x#Equ2">2</a>) and (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0094-x#Equ3">3</a>)]. The output force is proportional to the product of the damping coefficient and the sampling frequency.</p><p>If the sampling frequency is set at 1 kHz, the value of <i>a</i>
+                        <span class="c-stack">
+                  <sup>a</sup><sub>
+                    <i>ik</i>
+                  </sub>
+                  
+                </span> is much smaller than that of 4<i>δf</i>
+                        <sup>2</sup> (Eq. (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0094-x#Equ16">16</a>), Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-008-0094-x#Tab1">1</a>) and the effect of acceleration can be ignored. Therefore, for the tooth-cutting simulation, we can assume that the operating speed is 0.5 mm/s (maximum operating speed in tooth cutting) and use Eq. (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0094-x#Equ16">16</a>) to compute the lowest damping coefficient with which the haptic simulation can keep stable.</p><p>Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-008-0094-x#Tab2">2</a> shows experimental results which verify our analysis. The computed damping coefficient is close to the value obtained by haptic simulations. In other words, the damping coefficient <i>B</i> and maximum output force are determined simultaneously by the maximum output stiffness, the position resolution, the dentist operating speed, and the sampling frequency. For the same sampling frequency, the haptic device, which has a larger position resolution and maximum achievable output stiffness, also has a larger damping coefficient when the haptic simulation remains stable.
+</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-2"><figure><figcaption class="c-article-table__figcaption"><b id="Tab2" data-test="table-caption">Table 2 Comparison between measured maximum achievable damping coefficient and computed value by Eq. (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0094-x#Equ16">16</a>)</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-008-0094-x/tables/2"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     </div></div></section><section aria-labelledby="Sec4"><div class="c-article-section" id="Sec4-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec4">Method and experiment</h2><div class="c-article-section__content" id="Sec4-content"><p>We can change the damping coefficient and the sampling frequency to keep the haptic simulations stable. However, the output force of haptic device cannot meet the requirements of simulating cutting stiff teeth. For the damping model of haptic simulation, increasing the damping coefficient and the sampling frequency of position signal simultaneously is a way to realize high output force. However, it may result in too large of an error for computed operating speed and output force which may lead the output stiffness to exceed the maximum stiffness of haptic device. Oscillation and instability are inevitable. If any other encoder with higher resolution is selected, the position error will be decreased and the damping coefficient and output force can be increased accordingly. However, it is difficult to replace the encoders of an existent haptic device and the cost of more precise encoders is much higher. Therefore, other methods are required to solve the conflict between stability and high output force when the damping model is applied in haptic simulations.</p><p>From the above analysis, we have drawn the conclusion that large error of computed output force by a force model that results in the output stiffness exceeding the maximum stiffness is the basic source of instability. If the output stiffness can be restricted to a stable range which the haptic device can endure, the haptic display will remain stable. Therefore, before outputting force feedback to operators, we can deal with the computed force by leveraging the damping model to make the output stiffness smaller than the maximum achievable stiffness of haptic device. If the computed output stiffness exceeds the maximum achievable stiffness of haptic device, the force computed by the damping model should be modified by our proposed method to satisfy Eq. (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0094-x#Equ12">12</a>).</p><p>We propose the method: </p><div id="Equ17" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">
+$$ F^{{\text{e}}}_{i} = \left\{ \begin{aligned}{} F^{{\text{e}}}_{{ic}} \quad\quad\quad\quad\quad \frac{{{\left\| {{\text{(}}F^{{\text{e}}}_{{ic}} - F^{{\text{e}}}_{{i - {\text{1}}}} {\text{)}} \cdot {\text{(}}p^{{\text{c}}}_{i} - p^{{\text{c}}}_{{i - {\text{1}}}} {\text{)}}} \right\|}}} {{{\left\| {{\text{(}}p^{{\text{c}}}_{i} - p^{{\text{c}}}_{{i - {\text{1}}}} {\text{)}}} \right\|}^{{\text{2}}} }} &amp; &lt; K_{c} \\ F^{{\text{e}}}_{{i - {\text{1}}}} {\text{ + }}K_{c} {\text{(}}p^{{\text{c}}}_{i} - p^{{\text{c}}}_{{i - {\text{1}}}} {\text{)}}\frac{{{\left\| {{\text{(}}F^{{\text{e}}}_{{ic}} - F^{{\text{e}}}_{{i - {\text{1}}}} {\text{)}} \cdot {\text{(}}p^{{\text{c}}}_{i} - p^{{\text{c}}}_{{i - {\text{1}}}} {\text{)}}} \right\|}}} {{{\left\| {{\text{(}}p^{{\text{c}}}_{i} - p^{{\text{c}}}_{{i - {\text{1}}}} {\text{)}}} \right\|}^{{\text{2}}} }} &amp; \ge K_{c} \\ \end{aligned} \right. $$</span></div><div class="c-article-equation__number">
+                    (17)
+                </div></div><p> where <i>F</i>
+                        <span class="c-stack">
+                  <sup>e</sup><sub>
+                    <i>ic</i>
+                  </sub>
+                  
+                </span> is the computed output force according to the damping-force model at each period of the haptic loop and <i>F</i>
+                        <span class="c-stack">
+                  <sup>e</sup><sub>
+                    <i>i</i>
+                  </sub>
+                  
+                </span> is the actual force which is outputted to the operator by the haptic device (Wang et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Wang D, Zhang Y, Wang Y, Lee Y-S, Lu P, Wang Y (2005) Cutting on triangle mesh: local model-based haptic display for dental preparation surgery simulation. IEEE Trans Vis Comput Graph 11(6):671–683" href="/article/10.1007/s10055-008-0094-x#ref-CR12" id="ref-link-section-d90278e1508">2005</a>). In Eq. (<a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0094-x#Equ17">17</a>), the output stiffness can always be restricted to be smaller than the maximum achievable stiffness of the haptic device. The effect of this method is verified in the dental training system.</p><p>The dental training system consists of a single-processor PIV/2 GHz with 512 MB PC133 RAM, a NVIDIA GeForce 4 Ti4600 and three types of haptic devices for haptic interaction (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0094-x#Fig6">6</a>). In the virtual environment, a tooth triangle mesh and a cylindrical dental pin mesh are constructed for cutting simulations. Dentists can move the stylus of the haptic device to cut the virtual tooth and can sense the cutting force generated by the simulation. Cutting-force feedback is computed by the damping model which is produced by our proposed method. In the first step of the experiment, we require the dentists to try to cut the virtual tooth as quickly as possible. The damping coefficient of force model is also increased to the maximum value at which the haptic simulation remains stable. The maximum output force can be seen in Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-008-0094-x#Tab3">3</a>. The maximum output force of the Omega haptic device can reach 3.7 N, which is much larger than those of the Phantom and Bhhd haptic devices (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0094-x#Fig9">9</a>). The larger achievable stiffness and position resolution of the Omega explains why it can generate the highest stable forces against dentists.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-6"><figure><figcaption><b id="Fig6" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 6</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0094-x/figures/6" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0094-x/MediaObjects/10055_2008_94_Fig6_HTML.jpg?as=webp"></source><img aria-describedby="figure-6-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0094-x/MediaObjects/10055_2008_94_Fig6_HTML.jpg" alt="figure6" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-6-desc"><p>Dental training system and its virtual environment</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0094-x/figures/6" data-track-dest="link:Figure6 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-3"><figure><figcaption class="c-article-table__figcaption"><b id="Tab3" data-test="table-caption">Table 3 Maximum output force when the method is applied</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-008-0094-x/tables/3"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0094-x#Fig7">7</a> shows the maximum output force by haptic device when a dentist moves the tip of the Omega haptic device to cut the virtual tooth with an operating speed of 0.5 and 0.2 mm/s respectively. The computed force values are close to those of real physical dentist operations at the same operating speed. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0094-x#Fig8">8</a> shows the force comparison between the measured force in real physical operation and force generated by each haptic device in haptic simulation when the same dentist finishes the same operation (cutting the enamel of tooth with the operating speed at 0.4 mm/s). The computed force values are close to that of physical operations with the same operating speed. The error between measured value and computed value is smaller than 0.1 N. Therefore, the Omega haptic device with our damping model and proposed method meets the requirements for a dental training system: realistic and stable force feedback. (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0094-x#Fig9">9</a>)
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-7"><figure><figcaption><b id="Fig7" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 7</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0094-x/figures/7" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0094-x/MediaObjects/10055_2008_94_Fig7_HTML.gif?as=webp"></source><img aria-describedby="figure-7-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0094-x/MediaObjects/10055_2008_94_Fig7_HTML.gif" alt="figure7" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-7-desc"><p>Output force of OMEGA in haptic simulation when this method is applied</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0094-x/figures/7" data-track-dest="link:Figure7 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-8"><figure><figcaption><b id="Fig8" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 8</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0094-x/figures/8" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0094-x/MediaObjects/10055_2008_94_Fig8_HTML.gif?as=webp"></source><img aria-describedby="figure-8-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0094-x/MediaObjects/10055_2008_94_Fig8_HTML.gif" alt="figure8" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-8-desc"><p>Measured force and computed (output) force of OMEGA at the same operating speed in measurement and simulation</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0094-x/figures/8" data-track-dest="link:Figure8 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-9"><figure><figcaption><b id="Fig9" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 9</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0094-x/figures/9" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0094-x/MediaObjects/10055_2008_94_Fig9_HTML.gif?as=webp"></source><img aria-describedby="figure-9-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0094-x/MediaObjects/10055_2008_94_Fig9_HTML.gif" alt="figure9" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-9-desc"><p>Maximum output force of OMEGA in haptic simulation with damping model</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0094-x/figures/9" data-track-dest="link:Figure9 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>With the damping model and our proposed method, we are able to simulate tooth-cutting operations. Four dentists (two professors and two students) of Beijing stomatological hospital have used the prototype to simulate tooth cutting. They first point out that the value and direction of force feedback are close to those of physical operations. The relation between the force imposed by operator and the sensed force feedback could reflect the physical phenomenon.</p></div></div></section><section aria-labelledby="Sec5"><div class="c-article-section" id="Sec5-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec5">Conclusion</h2><div class="c-article-section__content" id="Sec5-content"><p>This paper introduces an explanation for instability when applying the damping model in haptic simulation. The damping coefficient is decided not only by the simulated operations but also by the sampling frequency, the position resolution of the haptic device, the operation of the human (dentist), and the maximum achievable output stiffness of the haptic device. If the relationship among them is violated, oscillation and instability are inevitable.</p><p>A method to restrict the output stiffness of a haptic device is proposed to deal with the damping model to realize high output forces that are stable. The experimental results show that the three-degree-of-freedom Omega haptic device with a damping model can meet the requirements of dental training.</p><p>Our future work will focus on realizing high-fidelity force feedback stably in the haptic simulations for other operations, such as grinding and drilling operations.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Adachi Y, Kumano T, Ogino K (1995) Intermediate representation for stiff virtual objects. In: Proceedings of I" /><p class="c-article-references__text" id="ref-CR1">Adachi Y, Kumano T, Ogino K (1995) Intermediate representation for stiff virtual objects. In: Proceedings of IEEE virtual reality annual international symposium, Research Triangle Park, NC, March, pp 203–210 </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="RJ. Adams, B. Hannaford, " /><meta itemprop="datePublished" content="1999" /><meta itemprop="headline" content="Adams RJ, Hannaford B (1999) Stable haptic interaction with virtual environments. IEEE Trans Rob Autom 15(3):4" /><p class="c-article-references__text" id="ref-CR2">Adams RJ, Hannaford B (1999) Stable haptic interaction with virtual environments. IEEE Trans Rob Autom 15(3):465–474</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2F70.768179" aria-label="View reference 2">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 2 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Stable%20haptic%20interaction%20with%20virtual%20environments&amp;journal=IEEE%20Trans%20Rob%20Autom&amp;volume=15&amp;issue=3&amp;pages=465-474&amp;publication_year=1999&amp;author=Adams%2CRJ&amp;author=Hannaford%2CB">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Basdogan C, Ho C, Srinivasan MA (1999) Simulation of tissue cutting and bleeding for laparoscopic surgery usin" /><p class="c-article-references__text" id="ref-CR3">Basdogan C, Ho C, Srinivasan MA (1999) Simulation of tissue cutting and bleeding for laparoscopic surgery using auxiliary surfaces. In: Proceeding of the medicine meets virtual reality VII conference, San Francisco, CA</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Colgate JE, Brown JM (1994) Factors affecting the Z-width of a haptic display. In: Proceedings of IEEE interna" /><p class="c-article-references__text" id="ref-CR4">Colgate JE, Brown JM (1994) Factors affecting the Z-width of a haptic display. In: Proceedings of IEEE international conference robot automat, Los Alamitos, CA, pp 3205–3210</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="B. Hannaford, JH. Ryu, " /><meta itemprop="datePublished" content="2002" /><meta itemprop="headline" content="Hannaford B, Ryu JH (2002) Time-domain passivity control of haptic interfaces. IEEE Trans Rob Autom 18(1):1–10" /><p class="c-article-references__text" id="ref-CR5">Hannaford B, Ryu JH (2002) Time-domain passivity control of haptic interfaces. IEEE Trans Rob Autom 18(1):1–10</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2F70.988969" aria-label="View reference 5">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 5 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Time-domain%20passivity%20control%20of%20haptic%20interfaces&amp;journal=IEEE%20Trans%20Rob%20Autom&amp;volume=18&amp;issue=1&amp;pages=1-10&amp;publication_year=2002&amp;author=Hannaford%2CB&amp;author=Ryu%2CJH">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="M. Mahvash, V. Hayward, " /><meta itemprop="datePublished" content="2003" /><meta itemprop="headline" content="Mahvash M, Hayward V (2003) Haptic simulation of a tool in contact with a nonlinear deformable body. In: Ayach" /><p class="c-article-references__text" id="ref-CR6">Mahvash M, Hayward V (2003) Haptic simulation of a tool in contact with a nonlinear deformable body. In: Ayache N, Delingette H (eds) IS4TM: International symposium on surgery simulation and soft tissue modelling. Lecture notes in computer science (LNCS 2673). Springer, New York, pp 311–320</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 6 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=IS4TM%3A%20International%20symposium%20on%20surgery%20simulation%20and%20soft%20tissue%20modelling.%20Lecture%20notes%20in%20computer%20science%20%28LNCS%202673%29&amp;pages=311-320&amp;publication_year=2003&amp;author=Mahvash%2CM&amp;author=Hayward%2CV">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="M. Minsky, M. Ouh-Young, O. Steele, FP. Brooks, M. Behensky, " /><meta itemprop="datePublished" content="1990" /><meta itemprop="headline" content="Minsky M,Ouh-Young M, Steele O, Brooks FP, Behensky M (1990) Feeling and seeing issues in force display. Compu" /><p class="c-article-references__text" id="ref-CR8">Minsky M,Ouh-Young M, Steele O, Brooks FP, Behensky M (1990) Feeling and seeing issues in force display. Comput Graph 24(2):235–243</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1145%2F91394.91451" aria-label="View reference 7">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 7 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Feeling%20and%20seeing%20issues%20in%20force%20display&amp;journal=Comput%20Graph&amp;volume=24&amp;issue=2&amp;pages=235-243&amp;publication_year=1990&amp;author=Minsky%2CM&amp;author=Ouh-Young%2CM&amp;author=Steele%2CO&amp;author=Brooks%2CFP&amp;author=Behensky%2CM">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="SE. Salcudean, TD. Vlaar, " /><meta itemprop="datePublished" content="1997" /><meta itemprop="headline" content="Salcudean SE, Vlaar TD (1997) On the emulation of stiff walls and static friction with a magnetically levitate" /><p class="c-article-references__text" id="ref-CR9">Salcudean SE, Vlaar TD (1997) On the emulation of stiff walls and static friction with a magnetically levitated input/output device. Trans ASME J Dyn Syst Meas Contr 119(1):127–132</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="http://www.emis.de/MATH-item?0899.73365" aria-label="View reference 8 on MATH">MATH</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1115%2F1.2801204" aria-label="View reference 8">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 8 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=On%20the%20emulation%20of%20stiff%20walls%20and%20static%20friction%20with%20a%20magnetically%20levitated%20input%2Foutput%20device&amp;journal=Trans%20ASME%20J%20Dyn%20Syst%20Meas%20Contr&amp;volume=119&amp;issue=1&amp;pages=127-132&amp;publication_year=1997&amp;author=Salcudean%2CSE&amp;author=Vlaar%2CTD">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Tanaka A, Hirota K, Kaneko T (1998) Virtual cutting with force feedback. In: Proceedings of virtual reality an" /><p class="c-article-references__text" id="ref-CR10">Tanaka A, Hirota K, Kaneko T (1998) Virtual cutting with force feedback. In: Proceedings of virtual reality annual international symposium, vol 199(8), pp 71–77</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Wang D, Zhang Y (2004) Effect of haptic device’s position resolution on stability. In: Proceedings of EuroHapt" /><p class="c-article-references__text" id="ref-CR11">Wang D, Zhang Y (2004) Effect of haptic device’s position resolution on stability. In: Proceedings of EuroHaptics 2004, Munich Germany, 5–7 June, pp 377–380</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="D. Wang, Y. Zhang, Y. Wang, Y-S. Lee, P. Lu, Y. Wang, " /><meta itemprop="datePublished" content="2005" /><meta itemprop="headline" content="Wang D, Zhang Y, Wang Y, Lee Y-S, Lu P, Wang Y (2005) Cutting on triangle mesh: local model-based haptic displ" /><p class="c-article-references__text" id="ref-CR12">Wang D, Zhang Y, Wang Y, Lee Y-S, Lu P, Wang Y (2005) Cutting on triangle mesh: local model-based haptic display for dental preparation surgery simulation. IEEE Trans Vis Comput Graph 11(6):671–683</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2FTVCG.2005.97" aria-label="View reference 11">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 11 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Cutting%20on%20triangle%20mesh%3A%20local%20model-based%20haptic%20display%20for%20dental%20preparation%20surgery%20simulation&amp;journal=IEEE%20Trans%20Vis%20Comput%20Graph&amp;volume=11&amp;issue=6&amp;pages=671-683&amp;publication_year=2005&amp;author=Wang%2CD&amp;author=Zhang%2CY&amp;author=Wang%2CY&amp;author=Lee%2CY-S&amp;author=Lu%2CP&amp;author=Wang%2CY">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Mark WR, Randolph SC, Finch M, Van Verth JM, Taylor RM II (1996) Adding force feedback to graphics systems: is" /><p class="c-article-references__text" id="ref-CR13">Mark WR, Randolph SC, Finch M, Van Verth JM, Taylor RM II (1996) Adding force feedback to graphics systems: issues and solutions. In: Proceedings of SIGGRAPH 96, New Orleans, Louisiana, August 4–9, pp 447–452</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="Y. Zhang, " /><meta itemprop="datePublished" content="1990" /><meta itemprop="headline" content="Zhang Y (1990) Metallic cutting theory and tool. National Defence Industry Press, Beijing, pp 163–180" /><p class="c-article-references__text" id="ref-CR14">Zhang Y (1990) Metallic cutting theory and tool. National Defence Industry Press, Beijing, pp 163–180</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 13 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Metallic%20cutting%20theory%20and%20tool&amp;pages=163-180&amp;publication_year=1990&amp;author=Zhang%2CY">
+                    Google Scholar</a> 
+                </p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-008-0094-x-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Ack1">Acknowledgments</h2><div class="c-article-section__content" id="Ack1-content"><p>This research received support from the National Science Foundation of China under the grant no. 50575011.</p></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">State Key Lab of Virtual Reality Technology and System,  Beihang University, Beijing, China</p><p class="c-article-author-affiliation__authors-list">Guanyang Liu, Yuru Zhang &amp; Dangxiao Wang</p></li><li id="Aff2"><p class="c-article-author-affiliation__address">Barrett Technology Inc., Cambridge, USA</p><p class="c-article-author-affiliation__authors-list">William T. Townsend</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Guanyang-Liu"><span class="c-article-authors-search__title u-h3 js-search-name">Guanyang Liu</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Guanyang+Liu&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Guanyang+Liu" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Guanyang+Liu%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Yuru-Zhang"><span class="c-article-authors-search__title u-h3 js-search-name">Yuru Zhang</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Yuru+Zhang&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Yuru+Zhang" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Yuru+Zhang%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Dangxiao-Wang"><span class="c-article-authors-search__title u-h3 js-search-name">Dangxiao Wang</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Dangxiao+Wang&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Dangxiao+Wang" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Dangxiao+Wang%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-William_T_-Townsend"><span class="c-article-authors-search__title u-h3 js-search-name">William T. Townsend</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;William T.+Townsend&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=William T.+Townsend" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22William T.+Townsend%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-008-0094-x/email/correspondent/c1/new">Guanyang Liu</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=Stable%20haptic%20interaction%20using%20a%20damping%20model%20to%20implement%20a%20realistic%20tooth-cutting%20simulation%20for%20dental%20training&amp;author=Guanyang%20Liu%20et%20al&amp;contentID=10.1007%2Fs10055-008-0094-x&amp;publication=1359-4338&amp;publicationDate=2008-04-16&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Liu, G., Zhang, Y., Wang, D. <i>et al.</i> Stable haptic interaction using a damping model to implement a realistic tooth-cutting simulation for dental training.
+                    <i>Virtual Reality</i> <b>12, </b>99–106 (2008). https://doi.org/10.1007/s10055-008-0094-x</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-008-0094-x.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2006-05-29">29 May 2006</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2008-03-14">14 March 2008</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2008-04-16">16 April 2008</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2008-06">June 2008</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-008-0094-x" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-008-0094-x</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Haptic display system</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Output stiffness</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Damping model</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Stability criterion</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-008-0094-x.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=94;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

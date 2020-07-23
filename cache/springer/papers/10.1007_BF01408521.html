@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="Al in computer games: Survey and perspectives"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="Computer games have traditionally implemented empirical solutions to many Al problems and are now turning to more traditional Al algorithms. After introducing the role of Al in gameplay, we review..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/5/4.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="Al in computer games: Survey and perspectives"/>
+
+    <meta name="dc.source" content="Virtual Reality 2000 5:4"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2000 Springer-Verlag Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="Computer games have traditionally implemented empirical solutions to many Al problems and are now turning to more traditional Al algorithms. After introducing the role of Al in gameplay, we review the main techniques used in current computer games such as Finite-State Transition Networks, rule-based systems and search algorithms. We describe the implementation of Al in several commercial computer games, as well as academic research in Al targeting computer games applications. We conclude this review by discussing future trends and proposing research directions."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.volume" content="5"/>
+
+    <meta name="prism.number" content="4"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="223"/>
+
+    <meta name="prism.endingPage" content="235"/>
+
+    <meta name="prism.copyright" content="2000 Springer-Verlag Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/BF01408521"/>
+
+    <meta name="prism.doi" content="doi:10.1007/BF01408521"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/BF01408521.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/BF01408521"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="Al in computer games: Survey and perspectives"/>
+
+    <meta name="citation_volume" content="5"/>
+
+    <meta name="citation_issue" content="4"/>
+
+    <meta name="citation_publication_date" content="2000/12"/>
+
+    <meta name="citation_firstpage" content="223"/>
+
+    <meta name="citation_lastpage" content="235"/>
+
+    <meta name="citation_article_type" content="Article"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/BF01408521"/>
+
+    <meta name="DOI" content="10.1007/BF01408521"/>
+
+    <meta name="citation_doi" content="10.1007/BF01408521"/>
+
+    <meta name="description" content="Computer games have traditionally implemented empirical solutions to many Al problems and are now turning to more traditional Al algorithms. After introduc"/>
+
+    <meta name="dc.creator" content="M. Cavazza"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Artificial Intelligence; citation_title=Soar: an architecture for general intelligence; citation_author=JE Laird, A Newell, PS Rosenbloom; citation_volume=33; citation_publication_date=1987; citation_pages=1-64; citation_doi=10.1016/0004-3702(87)90050-6; citation_id=CR1"/>
+
+    <meta name="citation_reference" content="Wright I, Marshall J. RC++: a rule-based language for game Al. In: Proceedings of the First International Conference on Intelligent Games and Simulation, 2000; 42&#8211;46"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Artificial Intelligence; citation_title=RETE: a fast algorithm for the many pattern/many objects pattern match problem; citation_author=CL Forgy; citation_volume=19; citation_publication_date=1982; citation_pages=17-37; citation_doi=10.1016/0004-3702(82)90020-0; citation_id=CR3"/>
+
+    <meta name="citation_reference" content="Laird JE, Duchi JC. Creating human-like synthetic characters with multiple skill levels: a case study using the Soar Quakebot. In: Papers from the AAAI 2000 Fall Symposium on Simulating Human Agents, Technical Report FS-00-03. AAAI Press 2000; 75&#8211;79"/>
+
+    <meta name="citation_reference" content="Laird JE, van Lent M. Human-level Al&#39;s killer application: interactive computer games. In: Papers from the AAAI 2000 Fall Symposium on Simulating Human Agents, Technical Report FS-00-03. AAAI Press 2000; 80&#8211;87"/>
+
+    <meta name="citation_reference" content="Laird JE. It knows what you&#39;re going to do: adding anticipation to a Quakebot. In: Papers from the AAAI 2000 Spring Symposium on Artificial Intelligence and Interactive Entertainment, Technical Report SS-00-02. AAAI Press 2000; 41&#8211;50"/>
+
+    <meta name="citation_reference" content="Whittaker A, Riolfo T, Rowlands N. An object model for behavioural planning in a dynamic multi-agent system. Intelligent Information Interfaces (13) Workshop on Behavior Planning for Life-Like Characters and Avatars, Sitges, Spain, 2000; available at: http://www.dfki.de/imedia/workshops/i3-spring99/w4-contributions/whittaker.txt"/>
+
+    <meta name="citation_reference" content="Webber B, Badler N, Di Eugenio B, Geib C, Levison L, Moore M. Instructions, intentions and expectations. Technical Report, IRCS-94-01, Institute for Research in Cognitive Science, University of Pennsylvania, 1994"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Al Magazine; citation_title=Recent advances in Al planning; citation_author=DS Weld; citation_volume=20; citation_issue=2; citation_publication_date=1999; citation_pages=93-123; citation_id=CR9"/>
+
+    <meta name="citation_reference" content="Geib C, Levison L, Moore MB, Sodajack: an architecture for agents that search for and manipulate objects. Technical Report, MS-CIS-94-16. Department of Computer and Information Science, University of Pennsylvania, 1994"/>
+
+    <meta name="citation_reference" content="Kurlander DJ, Ling DT. Planning-based control of interface animation. In: Proceedings of the CHI&#39;95 Conference. Deriver, ACM Press 1995; 472&#8211;479"/>
+
+    <meta name="citation_reference" content="Nilsson NJ. Principles of artificial intelligence. Tioga Publishing Company, 1980"/>
+
+    <meta name="citation_reference" content="Bandi S. Discrete object space methods for computer animation. PhD Thesis. Ecole Polytechnique Federale de Lausanne, Switzerland, 1998"/>
+
+    <meta name="citation_reference" content="Davis IL. Warp speed: path planning for Star Trek armada. In: Papers from the AAAI 2000 Spring Symposium on Artificial Intelligence and Interactive Entertainment, Technical Report SS-00-02. AAAI Press 2000; 18&#8211;21"/>
+
+    <meta name="citation_reference" content="Bandi S, Cavazza M. Integrating world semantics into path planning heuristics for virtual agents. In: Proceedings of Virtual Agents 99, Salford, UK, 1999; 23&#8211;32"/>
+
+    <meta name="citation_reference" content="Abd Latiff MS, Cavazza, M. Synchronous path planning for multi-agent co-ordination. In: Proceedings of the VSMM 2000 Conference, Gifu, Japan, 2000; 688&#8211;694"/>
+
+    <meta name="citation_reference" content="Ishida T, Korf RE. Moving-target search: a real-time search for changing goals. In: IEEE Transactions in Pattern Analysis and Machine Intelligence 1995; 6: 609&#8211;619"/>
+
+    <meta name="citation_reference" content="Stentz A. The focussed D* algorithm for real-time re-planning. In: Proceedings of the 1995 International Joint Conference on Artificial Intelligence 1995; 1652&#8211;1659"/>
+
+    <meta name="citation_reference" content="Hansen EA, Zilberstein S, Danilchenko VA. Anytime heuristic search: first results. CMPSCI Technical Report, 1997: 97&#8211;50"/>
+
+    <meta name="citation_reference" content="Pearl J. Heuristics: Intelligent search strategies for computer problem solving. Addison-Wesley, 1984"/>
+
+    <meta name="citation_reference" content="Korf RE. Artificial intelligence search algorithms. In: Atallah MJ ed. CRC Handbook of Algorithms and Theory of Computation. CRC Press 1996; 36&#8211;1 to 36&#8211;20"/>
+
+    <meta name="citation_reference" content="Juil J. A clash between game and narrative. In: Proceedings of the Digital Arts and Culture Conference. Bergen, Norway, 1998"/>
+
+    <meta name="citation_reference" content="Suchman L. Plans and situated actions: the problem of human-machine communication. Cambridge University Press, 1987"/>
+
+    <meta name="citation_reference" content="Sgouros NM, Papakonstantinou G, Tsanakas P. A framework for plot control in interactive story systems. In: Proceedings of the AAAI-96 Conference. AAAI Press, 1996; 162&#8211;167"/>
+
+    <meta name="citation_reference" content="Young RM. Creating interactive narrative structures: the potential for Al approaches. In: Papers from the AAAI Spring Symposium in Artificial Intelligence and Interactive Entertainment. AAAI Press 2000; 81&#8211;82"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Virtual Reality; citation_title=Natural language control of interactive 3D animation and computer games; citation_author=M Cavazza, IJ Palmer; citation_volume=4; citation_publication_date=1999; citation_pages=85-102; citation_id=CR26"/>
+
+    <meta name="citation_reference" content="Badler NI, Bindiganavale R, Allbeck J, Schuler W, Zhao L, Lee S-J, Shin H, Palmer M. Parameterized action representation and natural language instructions for dynamic behavior modification of embodied agents. In: Papers from the AAAI Spring Symposium on Artificial Intelligence and Interactive Entertainment. AAAI Press 2000; 6&#8211;10"/>
+
+    <meta name="citation_reference" content="Cavazza M, Palmer IJ. Natural language control and paradigms of interactivity. In: Papers from the AAAI 2000 Spring Symposium on Artificial Intelligence and Interactive Entertainment. Technical Report SS-00-02. AAAI Press 2000: 11&#8211;17"/>
+
+    <meta name="citation_reference" content="Kiczales G, Des Rivieres J, Bobrow D. The art of the metaobject protocol. MIT Press, 1991"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Computer; citation_title=The challenges of real-time Al; citation_author=DJ Musliner, JA Hendler, AK Agrawala, H Simon; citation_volume=28; citation_publication_date=1995; citation_pages=58-66; citation_doi=10.1109/2.362628; citation_id=CR30"/>
+
+    <meta name="citation_author" content="M. Cavazza"/>
+
+    <meta name="citation_author_email" content="m.o.cavazza@tees.ac.uk"/>
+
+    <meta name="citation_author_institution" content="School of Computing and Mathematics, University of Teesside, Middlesbrough, UK"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/BF01408521&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2000/12/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/BF01408521"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="Al in computer games: Survey and perspectives"/>
+        <meta property="og:description" content="Computer games have traditionally implemented empirical solutions to many Al problems and are now turning to more traditional Al algorithms. After introducing the role of Al in gameplay, we review the main techniques used in current computer games such as Finite-State Transition Networks, rule-based systems and search algorithms. We describe the implementation of Al in several commercial computer games, as well as academic research in Al targeting computer games applications. We conclude this review by discussing future trends and proposing research directions."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>Al in computer games: Survey and perspectives | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-BF01408521","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Artificial intelligence, Computer games, Intelligent agents, Planning, Virtual Humans","kwrd":["Artificial_intelligence","Computer_games","Intelligent_agents","Planning","Virtual_Humans"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"N","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-BF01408521","Full HTML":"N","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/BF01408521","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=BF01408521;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2FBF01408521">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            Al in computer games: Survey and perspectives
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/BF01408521.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/BF01408521.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2000-12" itemprop="datePublished">December 2000</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">Al in computer games: Survey and perspectives</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-M_-Cavazza" data-author-popup="auth-M_-Cavazza" data-corresp-id="c1">M. Cavazza<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of Teesside" /><meta itemprop="address" content="grid.26597.3f, 0000000123251783, School of Computing and Mathematics, University of Teesside, TS1 3BA, Middlesbrough, UK" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 5</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">223</span>–<span itemprop="pageEnd">235</span>(<span data-test="article-publication-year">2000</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">333 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">9 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2FBF01408521/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>Computer games have traditionally implemented empirical solutions to many Al problems and are now turning to more traditional Al algorithms. After introducing the role of Al in gameplay, we review the main techniques used in current computer games such as Finite-State Transition Networks, rule-based systems and search algorithms. We describe the implementation of Al in several commercial computer games, as well as academic research in Al targeting computer games applications. We conclude this review by discussing future trends and proposing research directions.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+    <div class="note test-pdf-link" id="cobranding-and-download-availability-text">
+        <div class="c-article-access-provider" aria-hidden="true" data-component="provided-by-box">
+            
+            
+                <p class="c-article-access-provider__text">
+                    <a href="/content/pdf/10.1007/BF01408521.pdf" target="_blank" rel="noopener"
+                    data-track="click" data-track-action="download pdf" data-track-label="inline link">Download</a> to read the full article text
+                </p>
+            
+        </div>
+    </div>
+
+
+                    
+                        
+                            
+                        
+                    
+
+                    <section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="JE. Laird, A. Newell, PS. Rosenbloom, " /><meta itemprop="datePublished" content="1987" /><meta itemprop="headline" content="Laird JE, Newell A, Rosenbloom PS. Soar: an architecture for general intelligence. Artificial Intelligence 198" /><span class="c-article-references__counter">1</span><p class="c-article-references__text" id="ref-CR1">Laird JE, Newell A, Rosenbloom PS. Soar: an architecture for general intelligence. Artificial Intelligence 1987; 33: 1–64</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1016%2F0004-3702%2887%2990050-6" aria-label="View reference 1">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 1 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Soar%3A%20an%20architecture%20for%20general%20intelligence&amp;journal=Artificial%20Intelligence&amp;volume=33&amp;pages=1-64&amp;publication_year=1987&amp;author=Laird%2CJE&amp;author=Newell%2CA&amp;author=Rosenbloom%2CPS">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Wright I, Marshall J. RC++: a rule-based language for game Al. In: Proceedings of the First International Conf" /><span class="c-article-references__counter">2</span><p class="c-article-references__text" id="ref-CR2">Wright I, Marshall J. RC++: a rule-based language for game Al. In: Proceedings of the First International Conference on Intelligent Games and Simulation, 2000; 42–46</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="CL. Forgy, " /><meta itemprop="datePublished" content="1982" /><meta itemprop="headline" content="Forgy CL. RETE: a fast algorithm for the many pattern/many objects pattern match problem. Artificial Intellige" /><span class="c-article-references__counter">3</span><p class="c-article-references__text" id="ref-CR3">Forgy CL. RETE: a fast algorithm for the many pattern/many objects pattern match problem. Artificial Intelligence 1982: 19: 17–37</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1016%2F0004-3702%2882%2990020-0" aria-label="View reference 3">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 3 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=RETE%3A%20a%20fast%20algorithm%20for%20the%20many%20pattern%2Fmany%20objects%20pattern%20match%20problem&amp;journal=Artificial%20Intelligence&amp;volume=19&amp;pages=17-37&amp;publication_year=1982&amp;author=Forgy%2CCL">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Laird JE, Duchi JC. Creating human-like synthetic characters with multiple skill levels: a case study using th" /><span class="c-article-references__counter">4</span><p class="c-article-references__text" id="ref-CR4">Laird JE, Duchi JC. Creating human-like synthetic characters with multiple skill levels: a case study using the Soar Quakebot. In: Papers from the AAAI 2000 Fall Symposium on Simulating Human Agents, Technical Report FS-00-03. AAAI Press 2000; 75–79</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Laird JE, van Lent M. Human-level Al's killer application: interactive computer games. In: Papers from the AAA" /><span class="c-article-references__counter">5</span><p class="c-article-references__text" id="ref-CR5">Laird JE, van Lent M. Human-level Al's killer application: interactive computer games. In: Papers from the AAAI 2000 Fall Symposium on Simulating Human Agents, Technical Report FS-00-03. AAAI Press 2000; 80–87</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Laird JE. It knows what you're going to do: adding anticipation to a Quakebot. In: Papers from the AAAI 2000 S" /><span class="c-article-references__counter">6</span><p class="c-article-references__text" id="ref-CR6">Laird JE. It knows what you're going to do: adding anticipation to a Quakebot. In: Papers from the AAAI 2000 Spring Symposium on Artificial Intelligence and Interactive Entertainment, Technical Report SS-00-02. AAAI Press 2000; 41–50</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Whittaker A, Riolfo T, Rowlands N. An object model for behavioural planning in a dynamic multi-agent system. I" /><span class="c-article-references__counter">7</span><p class="c-article-references__text" id="ref-CR7">Whittaker A, Riolfo T, Rowlands N. An object model for behavioural planning in a dynamic multi-agent system. Intelligent Information Interfaces (13) Workshop on Behavior Planning for Life-Like Characters and Avatars, Sitges, Spain, 2000; available at: http://www.dfki.de/imedia/workshops/i3-spring99/w4-contributions/whittaker.txt</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Webber B, Badler N, Di Eugenio B, Geib C, Levison L, Moore M. Instructions, intentions and expectations. Techn" /><span class="c-article-references__counter">8</span><p class="c-article-references__text" id="ref-CR8">Webber B, Badler N, Di Eugenio B, Geib C, Levison L, Moore M. Instructions, intentions and expectations. Technical Report, IRCS-94-01, Institute for Research in Cognitive Science, University of Pennsylvania, 1994</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="DS. Weld, " /><meta itemprop="datePublished" content="1999" /><meta itemprop="headline" content="Weld DS, Recent advances in Al planning. Al Magazine 1999; 20(2): 93–123" /><span class="c-article-references__counter">9</span><p class="c-article-references__text" id="ref-CR9">Weld DS, Recent advances in Al planning. Al Magazine 1999; 20(2): 93–123</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 9 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Recent%20advances%20in%20Al%20planning&amp;journal=Al%20Magazine&amp;volume=20&amp;issue=2&amp;pages=93-123&amp;publication_year=1999&amp;author=Weld%2CDS">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Geib C, Levison L, Moore MB, Sodajack: an architecture for agents that search for and manipulate objects. Tech" /><span class="c-article-references__counter">10</span><p class="c-article-references__text" id="ref-CR10">Geib C, Levison L, Moore MB, Sodajack: an architecture for agents that search for and manipulate objects. Technical Report, MS-CIS-94-16. Department of Computer and Information Science, University of Pennsylvania, 1994</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Kurlander DJ, Ling DT. Planning-based control of interface animation. In: Proceedings of the CHI'95 Conference" /><span class="c-article-references__counter">11</span><p class="c-article-references__text" id="ref-CR11">Kurlander DJ, Ling DT. Planning-based control of interface animation. In: Proceedings of the CHI'95 Conference. Deriver, ACM Press 1995; 472–479</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Nilsson NJ. Principles of artificial intelligence. Tioga Publishing Company, 1980" /><span class="c-article-references__counter">12</span><p class="c-article-references__text" id="ref-CR12">Nilsson NJ. Principles of artificial intelligence. Tioga Publishing Company, 1980</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bandi S. Discrete object space methods for computer animation. PhD Thesis. Ecole Polytechnique Federale de Lau" /><span class="c-article-references__counter">13</span><p class="c-article-references__text" id="ref-CR13">Bandi S. Discrete object space methods for computer animation. PhD Thesis. Ecole Polytechnique Federale de Lausanne, Switzerland, 1998</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Davis IL. Warp speed: path planning for Star Trek armada. In: Papers from the AAAI 2000 Spring Symposium on Ar" /><span class="c-article-references__counter">14</span><p class="c-article-references__text" id="ref-CR14">Davis IL. Warp speed: path planning for Star Trek armada. In: Papers from the AAAI 2000 Spring Symposium on Artificial Intelligence and Interactive Entertainment, Technical Report SS-00-02. AAAI Press 2000; 18–21</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bandi S, Cavazza M. Integrating world semantics into path planning heuristics for virtual agents. In: Proceedi" /><span class="c-article-references__counter">15</span><p class="c-article-references__text" id="ref-CR15">Bandi S, Cavazza M. Integrating world semantics into path planning heuristics for virtual agents. In: Proceedings of Virtual Agents 99, Salford, UK, 1999; 23–32</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Abd Latiff MS, Cavazza, M. Synchronous path planning for multi-agent co-ordination. In: Proceedings of the VSM" /><span class="c-article-references__counter">16</span><p class="c-article-references__text" id="ref-CR16">Abd Latiff MS, Cavazza, M. Synchronous path planning for multi-agent co-ordination. In: Proceedings of the VSMM 2000 Conference, Gifu, Japan, 2000; 688–694</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Ishida T, Korf RE. Moving-target search: a real-time search for changing goals. In: IEEE Transactions in Patte" /><span class="c-article-references__counter">17</span><p class="c-article-references__text" id="ref-CR17">Ishida T, Korf RE. Moving-target search: a real-time search for changing goals. In: IEEE Transactions in Pattern Analysis and Machine Intelligence 1995; 6: 609–619</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Stentz A. The focussed D* algorithm for real-time re-planning. In: Proceedings of the 1995 International Joint" /><span class="c-article-references__counter">18</span><p class="c-article-references__text" id="ref-CR18">Stentz A. The focussed D* algorithm for real-time re-planning. In: Proceedings of the 1995 International Joint Conference on Artificial Intelligence 1995; 1652–1659</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Hansen EA, Zilberstein S, Danilchenko VA. Anytime heuristic search: first results. CMPSCI Technical Report, 19" /><span class="c-article-references__counter">19</span><p class="c-article-references__text" id="ref-CR19">Hansen EA, Zilberstein S, Danilchenko VA. Anytime heuristic search: first results. CMPSCI Technical Report, 1997: 97–50</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Pearl J. Heuristics: Intelligent search strategies for computer problem solving. Addison-Wesley, 1984" /><span class="c-article-references__counter">20</span><p class="c-article-references__text" id="ref-CR20">Pearl J. Heuristics: Intelligent search strategies for computer problem solving. Addison-Wesley, 1984</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Korf RE. Artificial intelligence search algorithms. In: Atallah MJ ed. CRC Handbook of Algorithms and Theory o" /><span class="c-article-references__counter">21</span><p class="c-article-references__text" id="ref-CR21">Korf RE. Artificial intelligence search algorithms. In: Atallah MJ ed. CRC Handbook of Algorithms and Theory of Computation. CRC Press 1996; 36–1 to 36–20</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Juil J. A clash between game and narrative. In: Proceedings of the Digital Arts and Culture Conference. Bergen" /><span class="c-article-references__counter">22</span><p class="c-article-references__text" id="ref-CR22">Juil J. A clash between game and narrative. In: Proceedings of the Digital Arts and Culture Conference. Bergen, Norway, 1998</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Suchman L. Plans and situated actions: the problem of human-machine communication. Cambridge University Press," /><span class="c-article-references__counter">23</span><p class="c-article-references__text" id="ref-CR23">Suchman L. Plans and situated actions: the problem of human-machine communication. Cambridge University Press, 1987</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Sgouros NM, Papakonstantinou G, Tsanakas P. A framework for plot control in interactive story systems. In: Pro" /><span class="c-article-references__counter">24</span><p class="c-article-references__text" id="ref-CR24">Sgouros NM, Papakonstantinou G, Tsanakas P. A framework for plot control in interactive story systems. In: Proceedings of the AAAI-96 Conference. AAAI Press, 1996; 162–167</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Young RM. Creating interactive narrative structures: the potential for Al approaches. In: Papers from the AAAI" /><span class="c-article-references__counter">25</span><p class="c-article-references__text" id="ref-CR25">Young RM. Creating interactive narrative structures: the potential for Al approaches. In: Papers from the AAAI Spring Symposium in Artificial Intelligence and Interactive Entertainment. AAAI Press 2000; 81–82</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="M. Cavazza, IJ. Palmer, " /><meta itemprop="datePublished" content="1999" /><meta itemprop="headline" content="Cavazza M, Palmer IJ. Natural language control of interactive 3D animation and computer games. Virtual Reality" /><span class="c-article-references__counter">26</span><p class="c-article-references__text" id="ref-CR26">Cavazza M, Palmer IJ. Natural language control of interactive 3D animation and computer games. Virtual Reality 1999; 4: 85–102</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 26 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Natural%20language%20control%20of%20interactive%203D%20animation%20and%20computer%20games&amp;journal=Virtual%20Reality&amp;volume=4&amp;pages=85-102&amp;publication_year=1999&amp;author=Cavazza%2CM&amp;author=Palmer%2CIJ">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Badler NI, Bindiganavale R, Allbeck J, Schuler W, Zhao L, Lee S-J, Shin H, Palmer M. Parameterized action repr" /><span class="c-article-references__counter">27</span><p class="c-article-references__text" id="ref-CR27">Badler NI, Bindiganavale R, Allbeck J, Schuler W, Zhao L, Lee S-J, Shin H, Palmer M. Parameterized action representation and natural language instructions for dynamic behavior modification of embodied agents. In: Papers from the AAAI Spring Symposium on Artificial Intelligence and Interactive Entertainment. AAAI Press 2000; 6–10</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Cavazza M, Palmer IJ. Natural language control and paradigms of interactivity. In: Papers from the AAAI 2000 S" /><span class="c-article-references__counter">28</span><p class="c-article-references__text" id="ref-CR28">Cavazza M, Palmer IJ. Natural language control and paradigms of interactivity. In: Papers from the AAAI 2000 Spring Symposium on Artificial Intelligence and Interactive Entertainment. Technical Report SS-00-02. AAAI Press 2000: 11–17</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Kiczales G, Des Rivieres J, Bobrow D. The art of the metaobject protocol. MIT Press, 1991" /><span class="c-article-references__counter">29</span><p class="c-article-references__text" id="ref-CR29">Kiczales G, Des Rivieres J, Bobrow D. The art of the metaobject protocol. MIT Press, 1991</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="DJ. Musliner, JA. Hendler, AK. Agrawala, H. Simon, " /><meta itemprop="datePublished" content="1995" /><meta itemprop="headline" content="Musliner DJ, Hendler JA, Agrawala AK, Simon H. The challenges of real-time Al. Computer 1995; 28: 58–66" /><span class="c-article-references__counter">30</span><p class="c-article-references__text" id="ref-CR30">Musliner DJ, Hendler JA, Agrawala AK, Simon H. The challenges of real-time Al. Computer 1995; 28: 58–66</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2F2.362628" aria-label="View reference 30">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 30 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=The%20challenges%20of%20real-time%20Al&amp;journal=Computer&amp;volume=28&amp;pages=58-66&amp;publication_year=1995&amp;author=Musliner%2CDJ&amp;author=Hendler%2CJA&amp;author=Agrawala%2CAK&amp;author=Simon%2CH">
+                    Google Scholar</a> 
+                </p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/BF01408521-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><div class="c-article-section__content" id="Ack1-content"></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">School of Computing and Mathematics, University of Teesside, TS1 3BA, Middlesbrough, UK</p><p class="c-article-author-affiliation__authors-list">M. Cavazza</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-M_-Cavazza"><span class="c-article-authors-search__title u-h3 js-search-name">M. Cavazza</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;M.+Cavazza&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=M.+Cavazza" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22M.+Cavazza%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/BF01408521/email/correspondent/c1/new">M. Cavazza</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=Al%20in%20computer%20games%3A%20Survey%20and%20perspectives&amp;author=M.%20Cavazza&amp;contentID=10.1007%2FBF01408521&amp;publication=1359-4338&amp;publicationDate=2000-12&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Cavazza, M. Al in computer games: Survey and perspectives.
+                    <i>Virtual Reality</i> <b>5, </b>223–235 (2000). https://doi.org/10.1007/BF01408521</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/BF01408521.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2000-12">December 2000</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/BF01408521" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/BF01408521</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Artificial intelligence</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Computer games</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Intelligent agents</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Planning</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Virtual Humans</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/BF01408521.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=BF01408521;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

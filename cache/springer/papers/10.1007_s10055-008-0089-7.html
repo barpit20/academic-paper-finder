@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="Cognitive and synthetic behavior of avatars in intelligent virtual env"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="In intelligent virtual environments (IVEs), it is a challenging research issue to provide the intelligent virtual actors (or avatars) with the ability of visual perception and rapid response to..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/12/1.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="Cognitive and synthetic behavior of avatars in intelligent virtual environments"/>
+
+    <meta name="dc.source" content="Virtual Reality 2008 12:1"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2008-03-08"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2008 Springer-Verlag London Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="In intelligent virtual environments (IVEs), it is a challenging research issue to provide the intelligent virtual actors (or avatars) with the ability of visual perception and rapid response to virtual world events. Modeling an avatar&#8217;s cognitive and synthetic behavior appropriately is of paramount important in IVEs. We propose a new cognitive and behavior modeling methodology that integrates two previously developed complementary approaches. We present expression cloning, walking synthetic behavior modeling, and an autonomous agent cognitive model for driving an avatar&#8217;s behavior. Facial expressions are generated using our own-developed rule-based state transition system. Facial expressions are further personalized for individuals by expression cloning. An avatar&#8217;s walking behavior is modeled using a skeleton model that is implemented by seven-motion sequences and finite state machines (FSMs). We discuss experimental results demonstrating the benefits of our approach."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2008-03-08"/>
+
+    <meta name="prism.volume" content="12"/>
+
+    <meta name="prism.number" content="1"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="47"/>
+
+    <meta name="prism.endingPage" content="54"/>
+
+    <meta name="prism.copyright" content="2008 Springer-Verlag London Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-008-0089-7"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-008-0089-7"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-008-0089-7.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-008-0089-7"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="Cognitive and synthetic behavior of avatars in intelligent virtual environments"/>
+
+    <meta name="citation_volume" content="12"/>
+
+    <meta name="citation_issue" content="1"/>
+
+    <meta name="citation_publication_date" content="2008/03"/>
+
+    <meta name="citation_online_date" content="2008/03/08"/>
+
+    <meta name="citation_firstpage" content="47"/>
+
+    <meta name="citation_lastpage" content="54"/>
+
+    <meta name="citation_article_type" content="Original Article"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-008-0089-7"/>
+
+    <meta name="DOI" content="10.1007/s10055-008-0089-7"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-008-0089-7"/>
+
+    <meta name="description" content="In intelligent virtual environments (IVEs), it is a challenging research issue to provide the intelligent virtual actors (or avatars) with the ability of v"/>
+
+    <meta name="dc.creator" content="Ronghua Liang"/>
+
+    <meta name="dc.creator" content="Mingmin Zhang"/>
+
+    <meta name="dc.creator" content="Zhen Liu"/>
+
+    <meta name="dc.creator" content="Meleagros Krokos"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="Ashida K, Lee S-J, Allbeck J, Sun H, Badler N, Metaxas D (2001) Pedestrians: creating agent behaviors through statistical analysis of observation data. In: Proceedings of computer animation. IEEE Computer Society, Seoul, pp 84&#8211;92"/>
+
+    <meta name="citation_reference" content="Badler N, Allbeck J, Zhao L, Byun M. Representing and parameterizing agent behaviors. In: Proceedings of computer animation. IEEE Computer Society, Geneva, June 2002"/>
+
+    <meta name="citation_reference" content="Bindiganavale R, Schuler W, Allbeck JM, Badler NI, Joshi AK, Palmer M (2000) Dynamically altering agent behaviors using natural language instructions. In: Proceedings of the fourth international conference on Autonomous agents 2000, Barcelona, Spain, pp 293&#8211;300, 03&#8211;07 June 2000"/>
+
+    <meta name="citation_reference" content="Blumberg BM, Galyean TA (1995) Multi-Level Direction of autonomous creatures for real-time virtual environments. In: Proceedings of SIGGRAPH, 47&#8211;54"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Graph Models; citation_title=Real-time inverse kinematics techniques for anthropomorphic limbs.; citation_author=D Tolani, A Goswami, NI Badler; citation_volume=62; citation_publication_date=2000; citation_pages=353-388; citation_doi=10.1006/gmod.2000.0528; citation_id=CR5"/>
+
+    <meta name="citation_reference" content="Funge J, Tu X, Terzopoulos D (1999) Cognitive modeling: knowledge, reasoning and planning for intelligent characters. In: Proceedings of SIGGRAPH, pp 29&#8211;38"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Technometrics; citation_title=Generalized crossvalidation as a method for choosing a good ridge parameter; citation_author=GH Golub, M Heath, G Wahba; citation_volume=21; citation_issue=2; citation_publication_date=1979; citation_pages=215-223; citation_doi=10.2307/1268518; citation_id=CR7"/>
+
+    <meta name="citation_reference" content="citation_journal_title=J Appl Artif Intell; citation_title=Some lessons for emotion psychology for the design of lifelike characters; citation_author=J Gratch, S Marsella; citation_volume=19; citation_issue=3&#8211;4; citation_publication_date=2005; citation_pages=215-233; citation_doi=10.1080/08839510590910156; citation_id=CR8"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Intell Syst; citation_title=Creating interactive virtual humans: some assembly required.; citation_author=J Gratch, J Rickel, E Andr&#233;, N Badler, J Cassell, E Petajan; citation_volume=17; citation_issue=4; citation_publication_date=2002; citation_pages=54-63; citation_doi=10.1109/MIS.2002.1024753; citation_id=CR9"/>
+
+    <meta name="citation_reference" content="citation_journal_title=ACM Trans Graph (SIGGRAPH 2003 Conf Proc); citation_title=Reanimating the dead: reconstruction of expressive faces from skull data; citation_author=K K&#228;hler, J Haber, HP Seidel; citation_volume=22; citation_issue=3; citation_publication_date=2003; citation_pages=554-561; citation_doi=10.1145/882262.882307; citation_id=CR10"/>
+
+    <meta name="citation_reference" content="citation_journal_title=J Comput Sci Technol; citation_title=New algorithm for 3D facial model reconstruction and its application in virtual reality; citation_author=R Liang, Z Pan, C Chen; citation_volume=19; citation_issue=4; citation_publication_date=2004; citation_pages=501-509; citation_doi=10.1007/BF02944751; citation_id=CR11"/>
+
+    <meta name="citation_reference" content="Liu Z, Pan Z, Zhang M (2002) Behavior animation of virtual human in virtual society. In: The 12th international conference on artificial reality and telexistence (ICAT), pp 186&#8211;187"/>
+
+    <meta name="citation_reference" content="Maes P, Darell T, Blumberg B (1995) The ALIVE system: full-body interaction with autonomous agents. In: Proceedings of IEEE computer animation, Switzerland, pp 11&#8211;18"/>
+
+    <meta name="citation_reference" content="Noh J, Neumann U (2001) Expression cloning. ACM SIGGRAPH, pp 277&#8211;288"/>
+
+    <meta name="citation_reference" content="Noser H (1997) A behavioural animation system based on L-systems and synthetic sensors for actors, PhD Thesis"/>
+
+    <meta name="citation_reference" content="Treuille A, Cooper S, Popovi&#263; Z (2006) Continuum Crowds. In: Proceedings of ACM SIGGRAPH"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Proc SIGGRAPH; citation_title=Artificial Fishes: physics, locomotion, perception, behavior; citation_author=X Tu, D Terzopoulos; citation_volume=28; citation_issue=3; citation_publication_date=1994; citation_pages=43-50; citation_id=CR17"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comput Graph; citation_title=A muscle model for animation three-dimensional facial expression; citation_author=K Waters; citation_volume=21; citation_issue=4; citation_publication_date=1987; citation_pages=17-24; citation_id=CR18"/>
+
+    <meta name="citation_reference" content="citation_journal_title=ACM Trans Graph (Proc ACM SIGGRAPH 2005); citation_title=Dynamic response for motion capture animation; citation_author=VB Zordan, A Majkowska, B Chiu; citation_volume=24; citation_issue=3; citation_publication_date=2005; citation_pages=697-701; citation_id=CR19"/>
+
+    <meta name="citation_author" content="Ronghua Liang"/>
+
+    <meta name="citation_author_email" content="rhliang@zjut.edu.cn"/>
+
+    <meta name="citation_author_institution" content="College of Information Engineering, Zhejiang University of Technology, Hangzhou, China"/>
+
+    <meta name="citation_author" content="Mingmin Zhang"/>
+
+    <meta name="citation_author_institution" content="State Key Lab of CAD&amp;CG, Zhejiang University, Hangzhou, People&#8217;s Republic of China"/>
+
+    <meta name="citation_author" content="Zhen Liu"/>
+
+    <meta name="citation_author_email" content="liuzhen@nbu.edu.cn"/>
+
+    <meta name="citation_author_institution" content="College of Information Engineering, Zhejiang University of Technology, Hangzhou, China"/>
+
+    <meta name="citation_author_institution" content="Institute of Information, Ning Bo University, Ning Bo, People&#8217;s Republic of China"/>
+
+    <meta name="citation_author" content="Meleagros Krokos"/>
+
+    <meta name="citation_author_institution" content="Department of Creative Technologies, University of Portsmouth, Portsmouth, UK"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-008-0089-7&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2008/03/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-008-0089-7"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="Cognitive and synthetic behavior of avatars in intelligent virtual environments"/>
+        <meta property="og:description" content="In intelligent virtual environments (IVEs), it is a challenging research issue to provide the intelligent virtual actors (or avatars) with the ability of visual perception and rapid response to virtual world events. Modeling an avatar’s cognitive and synthetic behavior appropriately is of paramount important in IVEs. We propose a new cognitive and behavior modeling methodology that integrates two previously developed complementary approaches. We present expression cloning, walking synthetic behavior modeling, and an autonomous agent cognitive model for driving an avatar’s behavior. Facial expressions are generated using our own-developed rule-based state transition system. Facial expressions are further personalized for individuals by expression cloning. An avatar’s walking behavior is modeled using a skeleton model that is implemented by seven-motion sequences and finite state machines (FSMs). We discuss experimental results demonstrating the benefits of our approach."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>Cognitive and synthetic behavior of avatars in intelligent virtual environments | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-008-0089-7","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Expression animation, Walking synthetic behavior, Expression cloning, Autonomous agent models, FSM","kwrd":["Expression_animation","Walking_synthetic_behavior","Expression_cloning","Autonomous_agent_models","FSM"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-008-0089-7","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-008-0089-7","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=89;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-008-0089-7">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            Cognitive and synthetic behavior of avatars in intelligent virtual environments
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-008-0089-7.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-008-0089-7.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">Original Article</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2008-03-08" itemprop="datePublished">08 March 2008</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">Cognitive and synthetic behavior of avatars in intelligent virtual environments</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Ronghua-Liang" data-author-popup="auth-Ronghua-Liang">Ronghua Liang</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Zhejiang University of Technology" /><meta itemprop="address" content="grid.413273.0, 0000000105748737, College of Information Engineering, Zhejiang University of Technology, Hangzhou, 310032, China" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Mingmin-Zhang" data-author-popup="auth-Mingmin-Zhang">Mingmin Zhang</a></span><sup class="u-js-hide"><a href="#Aff2">2</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Zhejiang University" /><meta itemprop="address" content="grid.13402.34, 000000041759700X, State Key Lab of CAD&amp;CG, Zhejiang University, Hangzhou, 310027, People’s Republic of China" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Zhen-Liu" data-author-popup="auth-Zhen-Liu" data-corresp-id="c1">Zhen Liu<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a>,<a href="#Aff3">3</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Zhejiang University of Technology" /><meta itemprop="address" content="grid.413273.0, 0000000105748737, College of Information Engineering, Zhejiang University of Technology, Hangzhou, 310032, China" /></span><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Ning Bo University" /><meta itemprop="address" content="Institute of Information, Ning Bo University, Ning Bo, Zhejiang, 315211, People’s Republic of China" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Meleagros-Krokos" data-author-popup="auth-Meleagros-Krokos">Meleagros Krokos</a></span><sup class="u-js-hide"><a href="#Aff4">4</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of Portsmouth" /><meta itemprop="address" content="grid.4701.2, 0000000107286636, Department of Creative Technologies, University of Portsmouth, Portsmouth, UK" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 12</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">47</span>–<span itemprop="pageEnd">54</span>(<span data-test="article-publication-year">2008</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">171 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">4 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                    
+                        <li class="c-article-metrics-bar__item">
+                            <p class="c-article-metrics-bar__count">0 <span class="c-article-metrics-bar__label">Altmetric</span></p>
+                        </li>
+                    
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-008-0089-7/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>In intelligent virtual environments (IVEs), it is a challenging research issue to provide the intelligent virtual actors (or avatars) with the ability of visual perception and rapid response to virtual world events. Modeling an avatar’s cognitive and synthetic behavior appropriately is of paramount important in IVEs. We propose a new cognitive and behavior modeling methodology that integrates two previously developed complementary approaches. We present expression cloning, walking synthetic behavior modeling, and an autonomous agent cognitive model for driving an avatar’s behavior. Facial expressions are generated using our own-developed rule-based state transition system. Facial expressions are further personalized for individuals by expression cloning. An avatar’s walking behavior is modeled using a skeleton model that is implemented by seven-motion sequences and finite state machines (FSMs). We discuss experimental results demonstrating the benefits of our approach.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Background</h2><div class="c-article-section__content" id="Sec1-content"><p>In virtual reality, one of the challenging research issues is that avatars in IVE have the ability of making decisions, and possess visual and haptic perception in order to be able to make appropriate response to signals within the virtual environments. Human facial expressions play a critical role in creating believable avatars to populate virtual worlds. Unlike the off-line animator-intensive methods used in the special effects industry, real-time embodied agents are expected to exist and interact with us ‘live’ by using realistic human expressions. There has been a large amount of research on off-line human face and walking animation (Noh and Neumann <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Noh J, Neumann U (2001) Expression cloning. ACM SIGGRAPH, pp 277–288" href="/article/10.1007/s10055-008-0089-7#ref-CR14" id="ref-link-section-d83411e379">2001</a>; Kähler et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Kähler K, Haber J, Seidel HP (2003) Reanimating the dead: reconstruction of expressive faces from skull data. ACM Trans Graph (SIGGRAPH 2003 Conf Proc) 22(3):554–561" href="/article/10.1007/s10055-008-0089-7#ref-CR10" id="ref-link-section-d83411e382">2003</a>; Zordan et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Zordan VB, Majkowska A, Chiu B (2005) Dynamic response for motion capture animation, ACM Trans Graph (Proc ACM SIGGRAPH 2005) 24(3):697–701" href="/article/10.1007/s10055-008-0089-7#ref-CR19" id="ref-link-section-d83411e385">2005</a>; Liang et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Liang R, Pan Z, Chen C (2004) New algorithm for 3D facial model reconstruction and its application in virtual reality. J Comput Sci Technol 19(4):501–509" href="/article/10.1007/s10055-008-0089-7#ref-CR11" id="ref-link-section-d83411e388">2004</a>). One main goal of face modeling is to investigate how to deform a facial surface spatially or develop a facial deformation control model. The key research issue of face animation is how to deform a facial surface temporally, or construct a facial coarticulation model. As walking is useful in many different virtual environments, the creation of natural looking walking is important. Many different research groups have explored the generation of locomotion for walking behavior. Most methods for generating locomotion can be classified into kinematics (Tolani et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Tolani D, Goswami A, Badler NI (2000) Real-time inverse kinematics techniques for anthropomorphic limbs. Graph Models 62:353–388" href="/article/10.1007/s10055-008-0089-7#ref-CR5" id="ref-link-section-d83411e391">2000</a>), dynamics, which are slower and more complex, motion editing (Zordan et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Zordan VB, Majkowska A, Chiu B (2005) Dynamic response for motion capture animation, ACM Trans Graph (Proc ACM SIGGRAPH 2005) 24(3):697–701" href="/article/10.1007/s10055-008-0089-7#ref-CR19" id="ref-link-section-d83411e395">2005</a>), and combinations of these methods (Ashida et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Ashida K, Lee S-J, Allbeck J, Sun H, Badler N, Metaxas D (2001) Pedestrians: creating agent behaviors through statistical analysis of observation data. In: Proceedings of computer animation. IEEE Computer Society, Seoul, pp 84–92" href="/article/10.1007/s10055-008-0089-7#ref-CR1" id="ref-link-section-d83411e398">2001</a>). The last few years have seen great maturation in understanding how to use computer graphics technology to portray 3D embodied characters or virtual humans in virtual environment (Funge et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Funge J, Tu X, Terzopoulos D (1999) Cognitive modeling: knowledge, reasoning and planning for intelligent characters. In: Proceedings of SIGGRAPH, pp 29–38" href="/article/10.1007/s10055-008-0089-7#ref-CR6" id="ref-link-section-d83411e401">1999</a>; Blumberg and Galyean <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1995" title="Blumberg BM, Galyean TA (1995) Multi-Level Direction of autonomous creatures for real-time virtual environments. In: Proceedings of SIGGRAPH, 47–54" href="/article/10.1007/s10055-008-0089-7#ref-CR4" id="ref-link-section-d83411e404">1995</a>; Gratch et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Gratch J, Rickel J, André E, Badler N, Cassell J, Petajan E (2002) Creating interactive virtual humans: some assembly required. IEEE Intell Syst 17(4):54–63" href="/article/10.1007/s10055-008-0089-7#ref-CR9" id="ref-link-section-d83411e407">2002</a>; Treuille et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Treuille A, Cooper S, Popović Z (2006) Continuum Crowds. In: Proceedings of ACM SIGGRAPH" href="/article/10.1007/s10055-008-0089-7#ref-CR16" id="ref-link-section-d83411e410">2006</a>).</p><p>Besides the realistic face animation and walking behavior, the intelligence of the avatar is even more important in IVE. An autonomous agent achieves great outcomes in artificial intelligence by using a distribution control model instead of the traditional central control model. A distributed control model consists of many specific modules corresponding to the agent’s sensor input and decisions are made by modeling the specific behaviors. To meet the requirements of self-determination for an intelligent avatar, an autonomous agent is devised for the avatar or intelligent life in most previously presented systems (Funge et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Funge J, Tu X, Terzopoulos D (1999) Cognitive modeling: knowledge, reasoning and planning for intelligent characters. In: Proceedings of SIGGRAPH, pp 29–38" href="/article/10.1007/s10055-008-0089-7#ref-CR6" id="ref-link-section-d83411e416">1999</a>; Treuille et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Treuille A, Cooper S, Popović Z (2006) Continuum Crowds. In: Proceedings of ACM SIGGRAPH" href="/article/10.1007/s10055-008-0089-7#ref-CR16" id="ref-link-section-d83411e419">2006</a>; Tu and Terzopoulos <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1994" title="Tu X, Terzopoulos D (1994) Artificial Fishes: physics, locomotion, perception, behavior. Proc SIGGRAPH 28(3):43–50" href="/article/10.1007/s10055-008-0089-7#ref-CR17" id="ref-link-section-d83411e422">1994</a>; Bindiganavale et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Bindiganavale R, Schuler W, Allbeck JM, Badler NI, Joshi AK, Palmer M (2000) Dynamically altering agent behaviors using natural language instructions. In: Proceedings of the fourth international conference on Autonomous agents 2000, Barcelona, Spain, pp 293–300, 03–07 June 2000" href="/article/10.1007/s10055-008-0089-7#ref-CR3" id="ref-link-section-d83411e425">2000</a>), an autonomous agent models not only behavioral dynamics, such as stimulus response, but also cognitive aspects such as knowledge and learning. This is primarily because humans typically have distinct characteristics and make decisions based on personal goals. More recently, some researchers used continuum dynamics instead of agent-base technology. Dynamic potential fields are employed to integrate global navigation and local collision avoidance into one framework to produce an intelligent behavior (Treuille et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Treuille A, Cooper S, Popović Z (2006) Continuum Crowds. In: Proceedings of ACM SIGGRAPH" href="/article/10.1007/s10055-008-0089-7#ref-CR16" id="ref-link-section-d83411e428">2006</a>).</p></div></div></section><section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">Relevant work</h2><div class="c-article-section__content" id="Sec2-content"><p>Tu and Terzopoulos (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1994" title="Tu X, Terzopoulos D (1994) Artificial Fishes: physics, locomotion, perception, behavior. Proc SIGGRAPH 28(3):43–50" href="/article/10.1007/s10055-008-0089-7#ref-CR17" id="ref-link-section-d83411e439">1994</a>) did the pioneering work for life-like animated simulation by generating artificial fish. They simulated real fish-like locomotion in a virtual world. Fish behavior is controlled by fish life-characteristic, that is a sequence of behavior rule-base and an intender generator. The purpose of the intended generator is to create an intender based on the outside environment and select an appropriate behavior from a pre-defined set of rules. Other systems, such as ALIVE (Maes et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1995" title="Maes P, Darell T, Blumberg B (1995) The ALIVE system: full-body interaction with autonomous agents. In: Proceedings of IEEE computer animation, Switzerland, pp 11–18" href="/article/10.1007/s10055-008-0089-7#ref-CR13" id="ref-link-section-d83411e442">1995</a>), have also implemented an autonomous agent model for the artificial life to live in a virtual environment.</p><p>Due to the successful modeling of artificial life, many researchers (Gratch et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Gratch J, Rickel J, André E, Badler N, Cassell J, Petajan E (2002) Creating interactive virtual humans: some assembly required. IEEE Intell Syst 17(4):54–63" href="/article/10.1007/s10055-008-0089-7#ref-CR9" id="ref-link-section-d83411e448">2002</a>; Bindiganavale et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Bindiganavale R, Schuler W, Allbeck JM, Badler NI, Joshi AK, Palmer M (2000) Dynamically altering agent behaviors using natural language instructions. In: Proceedings of the fourth international conference on Autonomous agents 2000, Barcelona, Spain, pp 293–300, 03–07 June 2000" href="/article/10.1007/s10055-008-0089-7#ref-CR3" id="ref-link-section-d83411e451">2000</a>; Badler et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Badler N, Allbeck J, Zhao L, Byun M. Representing and parameterizing agent behaviors. In: Proceedings of computer animation. IEEE Computer Society, Geneva, June 2002" href="/article/10.1007/s10055-008-0089-7#ref-CR2" id="ref-link-section-d83411e454">2002</a>) have employed such architectures for implementing human behaviors within virtual environment. Badler et al. ( <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Badler N, Allbeck J, Zhao L, Byun M. Representing and parameterizing agent behaviors. In: Proceedings of computer animation. IEEE Computer Society, Geneva, June 2002" href="/article/10.1007/s10055-008-0089-7#ref-CR2" id="ref-link-section-d83411e457">2002</a>) have done impressive work in this field.They described a parameterized action representation (PAR) that allows an agent to act, plan, and reason about its actions or others. Besides embodying the semantics of human action, PAR was designed for building future behaviors into autonomous agents and further controlling the animation parameters that portray personality, mood, and affect in an embodied agent. The controller for an avatar consists of virtual sensors, a working behavior sequence, and a behavior hierarchy structure. The avatar’s walking is designed according to the principle of plan and advice. The limitation of this approach is that the avatar does not always walk along a specific path. Gratch et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Gratch J, Rickel J, André E, Badler N, Cassell J, Petajan E (2002) Creating interactive virtual humans: some assembly required. IEEE Intell Syst 17(4):54–63" href="/article/10.1007/s10055-008-0089-7#ref-CR9" id="ref-link-section-d83411e460">2002</a>) and Gratch and Marsella (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Gratch J, Marsella S (2005) Some lessons for emotion psychology for the design of lifelike characters. J Appl Artif Intell 19(3–4):215–233" href="/article/10.1007/s10055-008-0089-7#ref-CR8" id="ref-link-section-d83411e464">2005</a>) have shown that some of this daunting subtlety in human behavior can be modeled by intelligent agents, from the perception of events in the world to the appraisal of their emotional significance, through to their outward impact on an agent’s behavior. They created general computational models to support characters that act in virtual environments, make decisions, but whose behavior also suggests an underlying emotional current. Noser (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="Noser H (1997) A behavioural animation system based on L-systems and synthetic sensors for actors, PhD Thesis" href="/article/10.1007/s10055-008-0089-7#ref-CR15" id="ref-link-section-d83411e467">1997</a>) presented an extended L-system to describe a dynamic virtual environment, and employed a symbol system to represent avatar behavior. This work has used an octant tree to simulate the avatars' perception, but due to the time-consuming octant-tree operation, it was difficult for the avatar to perceive a dynamic virtual environment.</p><p>This paper integrates two complementary approaches, the autonomous agent model and the avatars' realistic behavior modeling to visual perception and behavior modeling, into a single unified system in IVE. Based on the system of human face reconstruction (Liang et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Liang R, Pan Z, Chen C (2004) New algorithm for 3D facial model reconstruction and its application in virtual reality. J Comput Sci Technol 19(4):501–509" href="/article/10.1007/s10055-008-0089-7#ref-CR11" id="ref-link-section-d83411e473">2004</a>), animation, and IVES (intelligence virtual environment system) (Liu et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Liu Z, Pan Z, Zhang M (2002) Behavior animation of virtual human in virtual society. In: The 12th international conference on artificial reality and telexistence (ICAT), pp 186–187" href="/article/10.1007/s10055-008-0089-7#ref-CR12" id="ref-link-section-d83411e476">2002</a>) we developed previously, a novel method of interactive model which was presented with human expressions and behaviors in a virtual world, based on agent technology. This paper concentrates on cognitive modeling and synthetic behavior modeling of avatars. An avatar’s behavior is simulated by using a skeleton model and is denoted by a seven-motion sequence each of which is implemented by a finite state machine (FSM). Realistic expressions of individuals can be simulated using our approach by expression cloning and face 3D model reconstruction based on facial muscular model. Rule and training base are also given for an avatar’s recognition and expression. Compared to the systems mentioned above, the contributions of our work are as follows:</p><ol class="u-list-style-none">
+                  <li>
+                    <span class="u-custom-list-number">(1)</span>
+                    
+                      <p>We propose a complete realistic behavior modeling including expression cloning and walking behavior modeling. The previously described approaches have not paid much attention to realistic modeling.</p>
+                    
+                  </li>
+                  <li>
+                    <span class="u-custom-list-number">(2)</span>
+                    
+                      <p>We employ FSM to improve training base and production rule in autonomous agent model.</p>
+                    
+                  </li>
+                </ol><p>The rest of this paper is organized as follows: in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-008-0089-7#Sec3">3</a> the overall methodology is outlined, the avatar’s walking behavior and expression cloning are described in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-008-0089-7#Sec4">4</a>, the origination of expression and behavior are depicted in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-008-0089-7#Sec7">5</a>, the experimental results are presented in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-008-0089-7#Sec8">6</a> and the related conclusions are summarized in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-008-0089-7#Sec9">7</a>.</p></div></div></section><section aria-labelledby="Sec3"><div class="c-article-section" id="Sec3-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec3">Methodology</h2><div class="c-article-section__content" id="Sec3-content"><p>Our integrated cognitive and synthetic behavior modeling methodology (See Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0089-7#Fig1">1</a>) consists of three distinct stages:</p><ol class="u-list-style-none">
+                  <li>
+                    <span class="u-custom-list-number">(a)</span>
+                    
+                      <p>production of autonomous walking behaviors,</p>
+                    
+                  </li>
+                  <li>
+                    <span class="u-custom-list-number">(b)</span>
+                    
+                      <p>generation of avatar’s expressions, and</p>
+                    
+                  </li>
+                  <li>
+                    <span class="u-custom-list-number">(c)</span>
+                    
+                      <p>generation of the behavioral driver for the avatar to produce the autonomous synthesis behavior.</p>
+                    
+                  </li>
+                </ol><p>The walking behaviors are simulated using a skeleton model that is implemented by a sequence of seven-motions. A radial basis function (RBF) alignment and a facial muscular model deformation of are employed for expression cloning (Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-008-0089-7#Sec4">4</a>). The expression and pose behavior are entirely based on a set of rules and a suitable-defined hypothesis (Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-008-0089-7#Sec7">5</a>). The set of rules identifies when a specific behavior appears and further determines how long a particular behavior is sustained and how the switch is made into different behavior. To generate autonomous synthesis behaviors, appropriated-defined behavioral driver is employed.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0089-7/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0089-7/MediaObjects/10055_2008_89_Fig1_HTML.gif?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0089-7/MediaObjects/10055_2008_89_Fig1_HTML.gif" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p>Methodology overview</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0089-7/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     </div></div></section><section aria-labelledby="Sec4"><div class="c-article-section" id="Sec4-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec4">Avatar’s synthetic behaviors</h2><div class="c-article-section__content" id="Sec4-content"><h3 class="c-article__sub-heading" id="Sec5">Walking synthetic behaviors</h3><p>We employ kinematic chains (Tolani et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Tolani D, Goswami A, Badler NI (2000) Real-time inverse kinematics techniques for anthropomorphic limbs. Graph Models 62:353–388" href="/article/10.1007/s10055-008-0089-7#ref-CR5" id="ref-link-section-d83411e598">2000</a>) to simulate the basic walking behavior of the an avatar (see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0089-7#Fig2">2</a>). The thigh constitutes the chain root. The end effector is the foot in the virtual human skeleton. Kinematic chains can be represented by: </p><div id="Equ1" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">
+$$ \Delta \theta = J^{ + } \Delta X + (I - J^{ + } J)\Delta Z, $$</span></div><div class="c-article-equation__number">
+                    (1)
+                </div></div><p>where Δ<i>θ </i> is the joint variation vector, <i>I</i> is the identity matrix, <i>J</i> is the Jacobian matrix of the set of cartesian constraints, <i>J</i>
+                           <sup><i>+</i></sup> is the pseudo-inverse of <i>J</i>, Δ<i>X</i> represent the variations of the set of cartesian constraints, and finally Δ<i>X</i> is used to minimize the distance to the attraction posture. Tolani et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Tolani D, Goswami A, Badler NI (2000) Real-time inverse kinematics techniques for anthropomorphic limbs. Graph Models 62:353–388" href="/article/10.1007/s10055-008-0089-7#ref-CR5" id="ref-link-section-d83411e644">2000</a>) presented an analytical method for solving inverse kinematics according to which a human limb kinematic chain can be modeled with seven degrees of freedom (DOFs). Six DOFs are utilized for the rotation matrix (with three being reserved for the nearest point <i>S1</i> and three others being reserved for the farthest point <i>S2</i>) and one DOF is employed for the joint <i>J2</i>.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0089-7/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0089-7/MediaObjects/10055_2008_89_Fig2_HTML.gif?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0089-7/MediaObjects/10055_2008_89_Fig2_HTML.gif" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p>The skeleton mode for avatar</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0089-7/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>Synthetic behaviors are founded on basic walking behaviors. Typically there exist some basic walking behaviors for an avatar. During its walking, for instance, basic behaviors can be considered the greeting of other avatars and avoiding collisions with other objects inside the virtual world. An appropriate hierarchy was proposed to produce the avatar’s walking behaviors (see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0089-7#Fig3">3</a>). In our methodology walking synthetic behaviors are represented by seven-motion sequence: </p><div id="Equ2" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">
+$$ {\text{WM}} = {\left\{ {{\text{GR, AV, GD, WR, AL, AO, CH}}} \right\}}, $$</span></div><div class="c-article-equation__number">
+                    (2)
+                </div></div><p>where GR means greeting with others, AV means avoiding collision, GD means going towards a specific destination, WR means walking through a specific route, AL means arriving at a specific location, AO means arriving at a specific object, and CH means chasing a specific object.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0089-7/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0089-7/MediaObjects/10055_2008_89_Fig3_HTML.gif?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0089-7/MediaObjects/10055_2008_89_Fig3_HTML.gif" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p>Hierarchy overview of avatar’s walking behavior</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0089-7/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>The three top-level motions, that is CH, AO, and AL, can be implemented by using the bottom-level motions, For example, GD can be considered as being made up of two motions: AV and GR. The most important walking behaviors of the seven-motion sequence (Eq. <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0089-7#Equ2">2</a>) are thus WR and GD, as other behaviors can be implemented by the two bottom-level behaviors. The data flow of GD can be represented by a FSM, and is shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0089-7#Fig4">4</a> and the data flow of WR is depicted in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0089-7#Fig5">5</a>. Some experimental results of walking behaviors are shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0089-7#Fig6">6</a>.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0089-7/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0089-7/MediaObjects/10055_2008_89_Fig4_HTML.gif?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0089-7/MediaObjects/10055_2008_89_Fig4_HTML.gif" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p>FSM representation of GD (<b>a</b>), greeting (<b>b</b>), avoidance collision</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0089-7/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0089-7/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0089-7/MediaObjects/10055_2008_89_Fig5_HTML.gif?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0089-7/MediaObjects/10055_2008_89_Fig5_HTML.gif" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p>FSM representation of WR</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0089-7/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-6"><figure><figcaption><b id="Fig6" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 6</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0089-7/figures/6" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0089-7/MediaObjects/10055_2008_89_Fig6_HTML.gif?as=webp"></source><img aria-describedby="figure-6-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0089-7/MediaObjects/10055_2008_89_Fig6_HTML.gif" alt="figure6" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-6-desc"><p>Some experimental results of walking behaviors</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0089-7/figures/6" data-track-dest="link:Figure6 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h3 class="c-article__sub-heading" id="Sec6">Facial expression generation and cloning</h3><p>We generate facial expressions by deforming the vector-based muscle model described in Waters (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1987" title="Waters K (1987) A muscle model for animation three-dimensional facial expression. Comput Graph 21(4):17–24" href="/article/10.1007/s10055-008-0089-7#ref-CR18" id="ref-link-section-d83411e796">1987</a>). There exist 18 distinct muscular vectors according to Waters (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1987" title="Waters K (1987) A muscle model for animation three-dimensional facial expression. Comput Graph 21(4):17–24" href="/article/10.1007/s10055-008-0089-7#ref-CR18" id="ref-link-section-d83411e799">1987</a>), denoted by <i>S</i> = {<i>S1, S2,</i>…, <i>S18</i>}. Each muscular vector consists of two endpoints and is adhered to a vertex in a 3D mesh face model. Expressions are obtained by deforming the <i>S</i>
+                           <sub>
+                    <i>i</i>
+                  </sub>, the rotation angle of the jaw parameter <i>θ</i> and the eyes rotation angles <i>α, β</i>. According to Waters (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1987" title="Waters K (1987) A muscle model for animation three-dimensional facial expression. Comput Graph 21(4):17–24" href="/article/10.1007/s10055-008-0089-7#ref-CR18" id="ref-link-section-d83411e827">1987</a>), all expressions can be generated from six basic expressions namely, happiness, anger, surprise, sadness, fear, and disgust, using equation: </p><div id="Equ3" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">
+$$ {\text{Expression}} = {\sum\limits_{i = 1}^6 {w_{i} E_{i} } } + \uplambda_{i} (t_{i} + R(\upalpha_{i} \upbeta_{i} \uptheta_{i} )), $$</span></div><div class="c-article-equation__number">
+                    (3)
+                </div></div><p>where <i>w</i>
+                           <sub>
+                    <i>i</i>
+                  </sub> play the role of deforming parameter weights, <i>E</i>
+                           <sub>
+                    <i>i</i>
+                  </sub> denote the basic expressions, and finally 
+<span class="mathjax-tex">\( \uplambda_{i} ,t_{i} ,\upalpha_{i} ,\upbeta_{i} ,\uptheta_{i} \)</span> represent the scaling factors, transformation vectors, jaw parameters, and rotation angles, respectively.</p><p>After an expression model is obtained from Eq. <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0089-7#Equ3">3</a>, the next step is to adapt to the 3D mesh facial model at hand. There exist many approaches to animate expressions of the different 3D mesh facial models with a pre-defined deformation control model, e.g. FAP in MPEG-4 and Aus in FACS. However, the main drawback of these approaches is that control parameters require a fairly large number of manual interactions. We solve this problem by adopting called expression cloning to generate individual facial expression with minimal interactions. Assuming a given 3D mesh facial model, an interpolation function is applied to obtain the vertices of muscular vectors. This interpolation function also allows us to calculate the length of muscular vectors for different people. 3D mesh facial models for individuals can be easily obtained by using stereo vision approach which were developed previously (Liang et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Liang R, Pan Z, Chen C (2004) New algorithm for 3D facial model reconstruction and its application in virtual reality. J Comput Sci Technol 19(4):501–509" href="/article/10.1007/s10055-008-0089-7#ref-CR11" id="ref-link-section-d83411e879">2004</a>).</p><p>To animate an arbitrary object (destination model) without any muscle model based on the existed source muscle mode, RBF is employed to match the vertices of 3D source model and destination model. The cloning expression is obtained by deforming the proportioned muscular vector model. Our method transfers vertex motion vectors from source face model to a target model having different geometric proportions and mesh structure (vertex number and connectivity). With the aid of an automated heuristic correspondence search, expression cloning typically requires a user to select fewer than ten points in the model. Cloned expression animations preserve the relative motions, dynamics, and character of the original facial animations. If manual tuning or computational costs are high in creating animations for one model, creating similar animations for new models will take similar efforts.</p><p>The remainder of this section gives a more detailed description of our animation methodology. Let us denote the source model and destination models by M and M′ respectively. Our solution is realized as follows in three distinct stages:</p><ol class="u-list-style-none">
+                    <li>
+                      <span class="u-custom-list-number">(a)</span>
+                      
+                        <p>Align the vertices of the M and M′.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">(b)</span>
+                      
+                        <p>Calculate overall deformation scales.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">(c)</span>
+                      
+                        <p>Deform M′.</p>
+                      
+                    </li>
+                  </ol><p>Stage (a) is performed through an RBF. Stage (b) is performed by setting the end-points of muscles for model M′. Stage (c) animates the destination M′ based on the values of parameters obtained from (a) and (b). A detailed description of stages (b) and (c) can be found in reference (Noh and Neumann <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Noh J, Neumann U (2001) Expression cloning. ACM SIGGRAPH, pp 277–288" href="/article/10.1007/s10055-008-0089-7#ref-CR14" id="ref-link-section-d83411e937">2001</a>). The rest of this section presents the details of stage (a).</p><p>A large number of authors have employed radial basis functions for point interpolation. Let us assume that <span class="mathjax-tex">\( \Omega :R^{3} \to R,\Omega (x) = \Phi {\left( {{\left\| x \right\|}} \right)}. \)</span> We can then define our destination function by using the following equation: </p><div id="Equ4" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ F:R^{3} \to R^{3} ,\hbox{F}(x) = {\sum\limits_{j = 1}^n {C_{j} } }\Phi {\left( {{\left\| {x - x_{j} } \right\|}} \right)},X = (x_{1} ,x_{2} ,x_{3} ,...,x_{n} ) \in R^{3} . $$</span></div><div class="c-article-equation__number">
+                    (4)
+                </div></div><p>Bearing in mind that m points are known as alignment in advance, the following Eq. <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0089-7#Equ5">5</a> expressing this condition, </p><div id="Equ5" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ S:R^{3} \to R^{3} ,S(x_{k} ) = y_{k} ,k = 1...m, $$</span></div><div class="c-article-equation__number">
+                    (5)
+                </div></div><p>where <i>y</i>
+                           <sub>
+                    <i>k</i>
+                  </sub> denote destination coordinate point, and <i>m</i> is the number of points The problem is to calculate values for the coefficients <i>C</i>
+                           <sub>
+                    <i>j</i>
+                  </sub> in Eq. <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0089-7#Equ4">4</a>. We have from Eq. <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0089-7#Equ5">5</a>: </p><div id="Equa" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ \left\{ \begin{aligned}{} &amp; \hbox{F}(x_{1} ) = C_{1} \Phi {\left( {{\left\| {x_{1} - x_{1} } \right\|}} \right)} + C_{2} \Phi {\left( {{\left\| {x_{1} - x_{2} } \right\|}} \right)} + \cdots + C_{n} \Phi {\left( {{\left\| {x_{1} - x_{n} } \right\|}} \right)} = y_{1} \\ &amp; \hbox{F}(x_{2} ) = C_{1} \Phi {\left( {{\left\| {x_{2} - x_{1} } \right\|}} \right)} + C_{2} \Phi {\left( {{\left\| {x_{2} - x_{2} } \right\|}} \right)} + \cdots + C_{n} \Phi {\left( {{\left\| {x_{2} - x_{n} } \right\|}} \right)} = y_{2} \\ &amp; ... \\ &amp; \hbox{F}(x_{n} ) = C_{1} \Phi {\left( {{\left\| {x_{n} - x_{1} } \right\|}} \right)} + C_{2} \Phi {\left( {{\left\| {x_{n} - x_{2} } \right\|}} \right)} + \cdots + C_{n} \Phi {\left( {{\left\| {x_{n} - x_{n} } \right\|}} \right)} = y_{n} \\ \end{aligned} \right. $$</span></div></div><p>so </p><div id="Equb" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ {\text{CA}} = Y,C = (C_{1} ,C_{2} ,...,C_{n} )^{\text{T}} ,Y = (y_{1} ,y_{2} ,...,y_{n} )^{\text{T}} , $$</span></div></div><p>and </p><div id="Equc" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ A = \left\{ {\left. \begin{aligned}{} &amp; \Phi {\left( {{\left\| {x_{1} - x_{1} } \right\|}} \right)},\Phi {\left\| {x_{1} - x_{2} } \right\|},...,\Phi {\left\| {x_{1} - x_{n} } \right\|} \\ &amp; \Phi {\left\| {x_{2} - x_{1} } \right\|},\Phi {\left\| {x_{2} - x_{2} } \right\|},...,\Phi {\left\| {x_{2} - x_{n} } \right\|} \\ &amp; ... \\ &amp; \Phi {\left\| {x_{n} - x_{1} } \right\|},\Phi {\left\| {x_{n} - x_{2} } \right\|},...,\Phi {\left\| {x_{n} - x_{n} } \right\|} \\ \end{aligned} \right\}} \right. $$</span></div></div><p>so </p><div id="Equ6" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ C = A^{{ - 1}} Y. $$</span></div><div class="c-article-equation__number">
+                    (6)
+                </div></div><p>In order for the matrix <i>A</i> to be invertible, that is for Eq. <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-008-0089-7#Equ6">6</a> to be able to provide a solution for C, <i>A</i> needs to be a positively defined matrix, so the basic function for RBF is very important. We employ Hardy multi-quadrics for the basis function, </p><div id="Equd" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ \Phi {\left( {{\left\| {x_{j} - x_{i} } \right\|}} \right)} = {\sqrt {||x_{j} - x_{i} ||^{2} + s_{j} ^{2} } },s_{j} = {\mathop {\min }\limits_{i \ne j} }{\left\| {x_{j} - x_{i} } \right\|}\, $$</span></div></div><p>Input <i>n</i> points in M (<i>x</i>
+                           <sub>
+                    <i>i</i>
+                  </sub>) to align <i>K</i> points between M and M′ by manually (such as tip nose, eyes, and mouth), in our system, <i>K</i> = 10. Firstly, the error vector of the difference between the actual value and estimate value is calculated: </p><div id="Equ7" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ e = \hat{Y} - Y,\hat{Y} = {\text{CA}} $$</span></div><div class="c-article-equation__number">
+                    (7)
+                </div></div><p>GCV generalized cross-validation (Waters <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1987" title="Waters K (1987) A muscle model for animation three-dimensional facial expression. Comput Graph 21(4):17–24" href="/article/10.1007/s10055-008-0089-7#ref-CR18" id="ref-link-section-d83411e1118">1987</a>), a tool for measuring prediction error, can be differentiated with respect to error vector, and detailed algorithm can be found in reference (Waters <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1987" title="Waters K (1987) A muscle model for animation three-dimensional facial expression. Comput Graph 21(4):17–24" href="/article/10.1007/s10055-008-0089-7#ref-CR18" id="ref-link-section-d83411e1122">1987</a>). </p><div id="Equ8" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ {\text{GCV}} = {\frac{ne^{\text{T}}e} {(n - \upgamma^{2})}} $$</span></div><div class="c-article-equation__number">
+                    (8)
+                </div></div><p>where <span class="mathjax-tex">\( \gamma = n - {\text{tr}}(A^{{ - 1}} ), \)</span> tr denotes the trace of a matrix. The iteration stops when GCV converges, in our system GCV = 1e-7.</p><p>Let <i>L</i> and <i>L′</i> be vector length of M and M′, respectively, the size of deformation in M is <i>λ</i>
+                           <sub>1</sub>
+                           <i>∼λ</i>
+                           <sub>2</sub>, then the size of deformation in M′ is </p><div id="Equ9" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ \raise0.7ex\hbox{${L^{'} }$} \!\mathord{\left/ {\vphantom {{L^{'} } L}}\right.\kern-\nulldelimiterspace} \!\lower0.7ex\hbox{$L$}\lambda _{1} \tilde{}\raise0.7ex\hbox{${L^{'} }$} \!\mathord{\left/ {\vphantom {{L^{'} } L}}\right.\kern-\nulldelimiterspace} \!\lower0.7ex\hbox{$L$}\lambda _{2} $$</span></div><div class="c-article-equation__number">
+                    (9)
+                </div></div><p>Deformation direction is obtained by Waters (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1987" title="Waters K (1987) A muscle model for animation three-dimensional facial expression. Comput Graph 21(4):17–24" href="/article/10.1007/s10055-008-0089-7#ref-CR18" id="ref-link-section-d83411e1191">1987</a>).</p></div></div></section><section aria-labelledby="Sec7"><div class="c-article-section" id="Sec7-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec7">Behavioral Driver</h2><div class="c-article-section__content" id="Sec7-content"><p>In a typical situation avatars express their behaviors via facial expressions and body movements. Our IVE described by Liu et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Liu Z, Pan Z, Zhang M (2002) Behavior animation of virtual human in virtual society. In: The 12th international conference on artificial reality and telexistence (ICAT), pp 186–187" href="/article/10.1007/s10055-008-0089-7#ref-CR12" id="ref-link-section-d83411e1203">2002</a>) allows avatars to show expression describing their emotions vividly. Further the facial 3D mesh for different individuals can be changed in real-time (see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0089-7#Fig8">8</a>). To obtain realism within the IVE it is important to be able to control the way an avatar’s emotional expression and body animation are driven. We have addressed this issue within our methodology by making use of appropriately defined, production rule-base and finite state machines.</p><p>First, we present some definitions and a hypothesis in order to represent the relationship between the avatar’s behavior and expression, then we describe the driver process.</p>
+                <h3 class="c-article__sub-heading">Definition 1</h3>
+                <p>For a certain virtual environment, let <i>E</i> be a behavior set to represent all the possible behavior states, and <i>E </i>= (<i>e1,...,en</i>), <i>n</i> is the number of the behavior states. For a given moment in time, the virtual human behavior is represented by a single element of <i>E</i>. For two possible behavior sets <i>E</i>(<i>A1</i>) and <i>E</i>(<i>A2</i>), the union of them is indicated by <i>E</i>(A1) + <i>E</i>(A2), and intersection of them is indicated by <i>E</i>(A1) *<i> E</i>(A2).</p>
+              
+                <h3 class="c-article__sub-heading">Definition 2</h3>
+                <p>For a certain virtual environment, let <i>P</i> be an expression set to represent all the possible body poses or facial expressions that responds to a behavior set, and <i>P </i>= (<i>p1,...,pm</i>), <i>m</i> is the number of body poses and facial expressions. <i>P</i>
+                           <sub>
+                    <i>j</i>
+                  </sub> (<i>j</i> = 1,...,<i>m</i>) is one body pose or facial expression.</p>
+              
+                <h3 class="c-article__sub-heading">Definition 3</h3>
+                <p>For a certain virtual environment, Let f
+                           <sub>
+                    m
+                  </sub> be a function to represent the mapping from <i>E</i> to <i>P</i>, for any <i>x</i>∈<i>E</i>, <i>y</i>∈<i>P</i>, <i>y </i>= f
+                           <sub>
+                    m
+                  </sub>(<i>x</i>), f
+                           <sub>
+                    m
+                  </sub> is called behavior function.</p>
+              <p>In general, a behavior function is some production rules used to represent the behavior and expression, one example for the behavior function is shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0089-7#Fig7">7</a>.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-7"><figure><figcaption><b id="Fig7" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 7</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0089-7/figures/7" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0089-7/MediaObjects/10055_2008_89_Fig7_HTML.gif?as=webp"></source><img aria-describedby="figure-7-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0089-7/MediaObjects/10055_2008_89_Fig7_HTML.gif" alt="figure7" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-7-desc"><p>An example for some production rule used for behavior operation</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0089-7/figures/7" data-track-dest="link:Figure7 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     
+                <h3 class="c-article__sub-heading">Definition 4</h3>
+                <p>For a certain virtual environment, let <i>E</i>(A) be a subset of <i>E</i>, <i>P</i>(A) be an element of <i>P</i>, if for any <i>x</i>∈<i>E</i>(A), if <i>P</i>(A) = <i>f</i>
+                           <sub>
+                    m
+                  </sub>(<i>x</i>), <i>E</i>(A) is then considered to be relevant to <i>P</i>(A), and it is denoted by <i>E</i>(A) → <i>P</i>(A); otherwise it is denoted by <span class="mathjax-tex">\( {\text{E}}({\text{A}}) \succ {\text{P}}({\text{A}}). \)</span>
+                        </p>
+              
+                <h3 class="c-article__sub-heading">Hypothesis 1</h3>
+                <p>A virtual human is assumed to have two possible behavior sets <i>E</i>(A1) and <i>E</i>(A2), where <i>E</i>(A1) and <i>E</i>(A2) are not empty sets. If <i>P</i>(A1) and <i>P</i>(A2) are two possible expressions, we can conclude:</p><ol class="u-list-style-none">
+                    <li>
+                      <span class="u-custom-list-number">(1)</span>
+                      
+                        <p>If <i>E</i>(A1) → <i>P</i>(A1), <i>E</i>(A2) → <i>P</i>(A1), then <i>E</i>(A1) + <i>E</i>(A2) → <i>P</i>(A1), <i>E</i>(A1)*<i>E</i>(A2) → <i>P</i>(A1);</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">(2)</span>
+                      
+                        <p>If <i>E</i>(A1) → <i>P</i>(A1), <span class="mathjax-tex">\( E({\text{A2}}) \succ P({\text{A2}}), \)</span> and <i>E</i>(A1) *<i> E</i>(A2) is not an empty set, then <i>P</i>(A1) ≠ <i>P</i>(A2).</p>
+                      
+                    </li>
+                  </ol>
+                        
+              
+                <h3 class="c-article__sub-heading">Definition 5</h3>
+                <p>Behavior origin is all external factors which can produce the virtual human emotional behavior, for a behavior set <i>E</i>, the behavior’s origin is represented by a finite set O(<i>E</i>), whose element is called the origin factors.</p>
+              <p>Fine state machines (FSM) is employed to express the transfer of behavior. A behavior state can be expressed by the tuple &lt;<i>P</i>(<i>t</i>), <i>E</i>(<i>t</i>), <i>B</i>(<i>t</i>)&gt;, where <i>t</i> is the time variable, <i>P</i>(<i>t</i>) is the input sets from perception including the behavior’s origin and other environment information, <i>E</i>(<i>t</i>) is the behavior state which includes all the possible behavior states at the time <i>t</i>, and <i>E</i>(<i>t0</i>) is the original behavior state, <i>B</i>(<i>t</i>) is the output behavior sets. There exist two following functions, <i>L1</i>: <i>E</i>(<i>t</i>) *<i> P</i>(<i>t</i>) → <i>E</i>(<i>t</i>), <i>L2</i>: <i>E</i>(<i>t</i>) * <i>P</i>(<i>t</i>) → <i>B</i>(<i>t</i>), where <i>L1</i> is the behavior transfer and <i>L2</i> is the behavior output. <i>L1</i>, <i>L2</i> can be constructed using production rules. In our system, the virtual world is represented by the world map and original information which consists of the behavior original location, virtual human original location, walking speed, and so on. Drive of behavior and expression of avatar consists of the following three steps:</p><ol class="u-list-style-none">
+                  <li>
+                    <span class="u-custom-list-number">(1)</span>
+                    
+                      <p>Read global map and select navigation point in the virtual world, lead character to move along navigation points which include some origin factors.</p>
+                    
+                  </li>
+                  <li>
+                    <span class="u-custom-list-number">(2)</span>
+                    
+                      <p>Get all activated behavior’s origin, and select the most appropriate expression and behavior with the simulation sensor and expression pre-processing.</p>
+                    
+                  </li>
+                  <li>
+                    <span class="u-custom-list-number">(3)</span>
+                    
+                      <p>Generate appropriate emotional expression after avatar recognizes the virtual world.</p>
+                    
+                  </li>
+                </ol><p>Some experimental results of origination of expression and behaviors are shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-008-0089-7#Fig8">8</a>.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-8"><figure><figcaption><b id="Fig8" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 8</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-008-0089-7/figures/8" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0089-7/MediaObjects/10055_2008_89_Fig8_HTML.gif?as=webp"></source><img aria-describedby="figure-8-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-008-0089-7/MediaObjects/10055_2008_89_Fig8_HTML.gif" alt="figure8" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-8-desc"><p>Some experimental results of origination of expression and behaviors in IVE (<b>a</b>) an avatar was frightened when it met two robbers (<b>b</b>) zoom picture of (a)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-008-0089-7/figures/8" data-track-dest="link:Figure8 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     </div></div></section><section aria-labelledby="Sec8"><div class="c-article-section" id="Sec8-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec8">Experimental results</h2><div class="c-article-section__content" id="Sec8-content"><p>Our methodology has been integrated into our IVE system (IVES), and all the approaches are implemented in real-time. In IVES, the user can interact with an avatar with a friendly window interface. The experimental system is implemented with Visual C++ 6.0 under Windows 2000, and the system runs on Pentium IV 1.4GHZ with graphics card Geforce 6200. Although this configuration is not state of the art, performance is near reaching frame rates of at least 20 fps. Most rendering employs DirectX 9 from Microsoft 3D rendering tool-kit. The frame rate in our IVES is about 20 fps, which meets the real-time-rendering requirement. In addition, the head of avatar is modeled by our approach proposed by Liang et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Liang R, Pan Z, Chen C (2004) New algorithm for 3D facial model reconstruction and its application in virtual reality. J Comput Sci Technol 19(4):501–509" href="/article/10.1007/s10055-008-0089-7#ref-CR11" id="ref-link-section-d83411e1751">2004</a>) and the body of avatar is generated by the software POSER 4.</p></div></div></section><section aria-labelledby="Sec9"><div class="c-article-section" id="Sec9-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec9">Conclusions and future work</h2><div class="c-article-section__content" id="Sec9-content"><p>This paper describes an integrated methodology for cognitive and behavior modeling of avatars populating IVEs. The expression of the avatar is simulated by expression cloning and 3D face model reconstruction based on a facial muscular model. Walking synthetic behavior is implemented by FSM and a skeleton model. Furthermore, the origination of expression and behavior is generated by a production rule-set and FSM. Our methodology can also be applied to other fields of Human–Machine interaction, for example, if the virtual world and IF-ACTION rules are revised and voice recognition capability is added, the avatar could have voice-driven facial expression. The future work includes the following aspects:</p><p>Create more robust and complex knowledge base with production rules, current perception base just contains some simple 3D objects, such as tables, house, road, etc.</p><p>Create multi-agent collaboration mechanism to meet the requirement of many avatars interactions and stimulate an even more realistic virtual world, because it is an important phenomena observed in a real world.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Ashida K, Lee S-J, Allbeck J, Sun H, Badler N, Metaxas D (2001) Pedestrians: creating agent behaviors through " /><p class="c-article-references__text" id="ref-CR1">Ashida K, Lee S-J, Allbeck J, Sun H, Badler N, Metaxas D (2001) Pedestrians: creating agent behaviors through statistical analysis of observation data. In: Proceedings of computer animation. IEEE Computer Society, Seoul, pp 84–92</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Badler N, Allbeck J, Zhao L, Byun M. Representing and parameterizing agent behaviors. In: Proceedings of compu" /><p class="c-article-references__text" id="ref-CR2">Badler N, Allbeck J, Zhao L, Byun M. Representing and parameterizing agent behaviors. In: Proceedings of computer animation. IEEE Computer Society, Geneva, June 2002</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bindiganavale R, Schuler W, Allbeck JM, Badler NI, Joshi AK, Palmer M (2000) Dynamically altering agent behavi" /><p class="c-article-references__text" id="ref-CR3">Bindiganavale R, Schuler W, Allbeck JM, Badler NI, Joshi AK, Palmer M (2000) Dynamically altering agent behaviors using natural language instructions. In: Proceedings of the fourth international conference on Autonomous agents 2000, Barcelona, Spain, pp 293–300, 03–07 June 2000</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Blumberg BM, Galyean TA (1995) Multi-Level Direction of autonomous creatures for real-time virtual environment" /><p class="c-article-references__text" id="ref-CR4">Blumberg BM, Galyean TA (1995) Multi-Level Direction of autonomous creatures for real-time virtual environments. In: Proceedings of SIGGRAPH, 47–54</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="D. Tolani, A. Goswami, NI. Badler, " /><meta itemprop="datePublished" content="2000" /><meta itemprop="headline" content="Tolani D, Goswami A, Badler NI (2000) Real-time inverse kinematics techniques for anthropomorphic limbs. Graph" /><p class="c-article-references__text" id="ref-CR5">Tolani D, Goswami A, Badler NI (2000) Real-time inverse kinematics techniques for anthropomorphic limbs. Graph Models 62:353–388</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="http://www.emis.de/MATH-item?1010.68655" aria-label="View reference 5 on MATH">MATH</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1006%2Fgmod.2000.0528" aria-label="View reference 5">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 5 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Real-time%20inverse%20kinematics%20techniques%20for%20anthropomorphic%20limbs.&amp;journal=Graph%20Models&amp;volume=62&amp;pages=353-388&amp;publication_year=2000&amp;author=Tolani%2CD&amp;author=Goswami%2CA&amp;author=Badler%2CNI">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Funge J, Tu X, Terzopoulos D (1999) Cognitive modeling: knowledge, reasoning and planning for intelligent char" /><p class="c-article-references__text" id="ref-CR6">Funge J, Tu X, Terzopoulos D (1999) Cognitive modeling: knowledge, reasoning and planning for intelligent characters. In: Proceedings of SIGGRAPH, pp 29–38</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="GH. Golub, M. Heath, G. Wahba, " /><meta itemprop="datePublished" content="1979" /><meta itemprop="headline" content="Golub GH, Heath M, Wahba G (1979) Generalized crossvalidation as a method for choosing a good ridge parameter." /><p class="c-article-references__text" id="ref-CR7">Golub GH, Heath M, Wahba G (1979) Generalized crossvalidation as a method for choosing a good ridge parameter. Technometrics 21(2):215–223</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="http://www.emis.de/MATH-item?0461.62059" aria-label="View reference 7 on MATH">MATH</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.2307%2F1268518" aria-label="View reference 7">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" href="http://www.ams.org/mathscinet-getitem?mr=533250" aria-label="View reference 7 on MathSciNet">MathSciNet</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 7 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Generalized%20crossvalidation%20as%20a%20method%20for%20choosing%20a%20good%20ridge%20parameter&amp;journal=Technometrics&amp;volume=21&amp;issue=2&amp;pages=215-223&amp;publication_year=1979&amp;author=Golub%2CGH&amp;author=Heath%2CM&amp;author=Wahba%2CG">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="J. Gratch, S. Marsella, " /><meta itemprop="datePublished" content="2005" /><meta itemprop="headline" content="Gratch J, Marsella S (2005) Some lessons for emotion psychology for the design of lifelike characters. J Appl " /><p class="c-article-references__text" id="ref-CR8">Gratch J, Marsella S (2005) Some lessons for emotion psychology for the design of lifelike characters. J Appl Artif Intell 19(3–4):215–233</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1080%2F08839510590910156" aria-label="View reference 8">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 8 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Some%20lessons%20for%20emotion%20psychology%20for%20the%20design%20of%20lifelike%20characters&amp;journal=J%20Appl%20Artif%20Intell&amp;volume=19&amp;issue=3%E2%80%934&amp;pages=215-233&amp;publication_year=2005&amp;author=Gratch%2CJ&amp;author=Marsella%2CS">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="J. Gratch, J. Rickel, E. André, N. Badler, J. Cassell, E. Petajan, " /><meta itemprop="datePublished" content="2002" /><meta itemprop="headline" content="Gratch J, Rickel J, André E, Badler N, Cassell J, Petajan E (2002) Creating interactive virtual humans: some a" /><p class="c-article-references__text" id="ref-CR9">Gratch J, Rickel J, André E, Badler N, Cassell J, Petajan E (2002) Creating interactive virtual humans: some assembly required. IEEE Intell Syst 17(4):54–63</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2FMIS.2002.1024753" aria-label="View reference 9">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 9 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Creating%20interactive%20virtual%20humans%3A%20some%20assembly%20required.&amp;journal=IEEE%20Intell%20Syst&amp;volume=17&amp;issue=4&amp;pages=54-63&amp;publication_year=2002&amp;author=Gratch%2CJ&amp;author=Rickel%2CJ&amp;author=Andr%C3%A9%2CE&amp;author=Badler%2CN&amp;author=Cassell%2CJ&amp;author=Petajan%2CE">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="K. Kähler, J. Haber, HP. Seidel, " /><meta itemprop="datePublished" content="2003" /><meta itemprop="headline" content="Kähler K, Haber J, Seidel HP (2003) Reanimating the dead: reconstruction of expressive faces from skull data. " /><p class="c-article-references__text" id="ref-CR10">Kähler K, Haber J, Seidel HP (2003) Reanimating the dead: reconstruction of expressive faces from skull data. ACM Trans Graph (SIGGRAPH 2003 Conf Proc) 22(3):554–561</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1145%2F882262.882307" aria-label="View reference 10">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 10 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Reanimating%20the%20dead%3A%20reconstruction%20of%20expressive%20faces%20from%20skull%20data&amp;journal=ACM%20Trans%20Graph%20%28SIGGRAPH%202003%20Conf%20Proc%29&amp;volume=22&amp;issue=3&amp;pages=554-561&amp;publication_year=2003&amp;author=K%C3%A4hler%2CK&amp;author=Haber%2CJ&amp;author=Seidel%2CHP">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="R. Liang, Z. Pan, C. Chen, " /><meta itemprop="datePublished" content="2004" /><meta itemprop="headline" content="Liang R, Pan Z, Chen C (2004) New algorithm for 3D facial model reconstruction and its application in virtual " /><p class="c-article-references__text" id="ref-CR11">Liang R, Pan Z, Chen C (2004) New algorithm for 3D facial model reconstruction and its application in virtual reality. J Comput Sci Technol 19(4):501–509</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1007%2FBF02944751" aria-label="View reference 11">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 11 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=New%20algorithm%20for%203D%20facial%20model%20reconstruction%20and%20its%20application%20in%20virtual%20reality&amp;journal=J%20Comput%20Sci%20Technol&amp;volume=19&amp;issue=4&amp;pages=501-509&amp;publication_year=2004&amp;author=Liang%2CR&amp;author=Pan%2CZ&amp;author=Chen%2CC">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Liu Z, Pan Z, Zhang M (2002) Behavior animation of virtual human in virtual society. In: The 12th internationa" /><p class="c-article-references__text" id="ref-CR12">Liu Z, Pan Z, Zhang M (2002) Behavior animation of virtual human in virtual society. In: The 12th international conference on artificial reality and telexistence (ICAT), pp 186–187</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Maes P, Darell T, Blumberg B (1995) The ALIVE system: full-body interaction with autonomous agents. In: Procee" /><p class="c-article-references__text" id="ref-CR13">Maes P, Darell T, Blumberg B (1995) The ALIVE system: full-body interaction with autonomous agents. In: Proceedings of IEEE computer animation, Switzerland, pp 11–18</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Noh J, Neumann U (2001) Expression cloning. ACM SIGGRAPH, pp 277–288" /><p class="c-article-references__text" id="ref-CR14">Noh J, Neumann U (2001) Expression cloning. ACM SIGGRAPH, pp 277–288</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Noser H (1997) A behavioural animation system based on L-systems and synthetic sensors for actors, PhD Thesis" /><p class="c-article-references__text" id="ref-CR15">Noser H (1997) A behavioural animation system based on L-systems and synthetic sensors for actors, PhD Thesis</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Treuille A, Cooper S, Popović Z (2006) Continuum Crowds. In: Proceedings of ACM SIGGRAPH" /><p class="c-article-references__text" id="ref-CR16">Treuille A, Cooper S, Popović Z (2006) Continuum Crowds. In: Proceedings of ACM SIGGRAPH</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="X. Tu, D. Terzopoulos, " /><meta itemprop="datePublished" content="1994" /><meta itemprop="headline" content="Tu X, Terzopoulos D (1994) Artificial Fishes: physics, locomotion, perception, behavior. Proc SIGGRAPH 28(3):4" /><p class="c-article-references__text" id="ref-CR17">Tu X, Terzopoulos D (1994) Artificial Fishes: physics, locomotion, perception, behavior. Proc SIGGRAPH 28(3):43–50</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 17 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Artificial%20Fishes%3A%20physics%2C%20locomotion%2C%20perception%2C%20behavior&amp;journal=Proc%20SIGGRAPH&amp;volume=28&amp;issue=3&amp;pages=43-50&amp;publication_year=1994&amp;author=Tu%2CX&amp;author=Terzopoulos%2CD">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="K. Waters, " /><meta itemprop="datePublished" content="1987" /><meta itemprop="headline" content="Waters K (1987) A muscle model for animation three-dimensional facial expression. Comput Graph 21(4):17–24" /><p class="c-article-references__text" id="ref-CR18">Waters K (1987) A muscle model for animation three-dimensional facial expression. Comput Graph 21(4):17–24</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 18 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=A%20muscle%20model%20for%20animation%20three-dimensional%20facial%20expression&amp;journal=Comput%20Graph&amp;volume=21&amp;issue=4&amp;pages=17-24&amp;publication_year=1987&amp;author=Waters%2CK">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="VB. Zordan, A. Majkowska, B. Chiu, " /><meta itemprop="datePublished" content="2005" /><meta itemprop="headline" content="Zordan VB, Majkowska A, Chiu B (2005) Dynamic response for motion capture animation, ACM Trans Graph (Proc ACM" /><p class="c-article-references__text" id="ref-CR19">Zordan VB, Majkowska A, Chiu B (2005) Dynamic response for motion capture animation, ACM Trans Graph (Proc ACM SIGGRAPH 2005) 24(3):697–701</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 19 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Dynamic%20response%20for%20motion%20capture%20animation&amp;journal=ACM%20Trans%20Graph%20%28Proc%20ACM%20SIGGRAPH%202005%29&amp;volume=24&amp;issue=3&amp;pages=697-701&amp;publication_year=2005&amp;author=Zordan%2CVB&amp;author=Majkowska%2CA&amp;author=Chiu%2CB">
+                    Google Scholar</a> 
+                </p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-008-0089-7-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Ack1">Acknowledgments</h2><div class="c-article-section__content" id="Ack1-content"><p>This work was partly supported by NSFC grants 60203013 and 60533080, and key project from Zhejiang Provincial Natural Science Foundation of China grants Z603262, 863 project: 2006AA01Z303 and pre-973 project: 2005CCA04400.</p></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">College of Information Engineering, Zhejiang University of Technology, Hangzhou, 310032, China</p><p class="c-article-author-affiliation__authors-list">Ronghua Liang &amp; Zhen Liu</p></li><li id="Aff2"><p class="c-article-author-affiliation__address">State Key Lab of CAD&amp;CG, Zhejiang University, Hangzhou, 310027, People’s Republic of China</p><p class="c-article-author-affiliation__authors-list">Mingmin Zhang</p></li><li id="Aff3"><p class="c-article-author-affiliation__address">Institute of Information, Ning Bo University, Ning Bo, Zhejiang, 315211, People’s Republic of China</p><p class="c-article-author-affiliation__authors-list">Zhen Liu</p></li><li id="Aff4"><p class="c-article-author-affiliation__address">Department of Creative Technologies, University of Portsmouth, Portsmouth, UK</p><p class="c-article-author-affiliation__authors-list">Meleagros Krokos</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Ronghua-Liang"><span class="c-article-authors-search__title u-h3 js-search-name">Ronghua Liang</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Ronghua+Liang&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Ronghua+Liang" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Ronghua+Liang%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Mingmin-Zhang"><span class="c-article-authors-search__title u-h3 js-search-name">Mingmin Zhang</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Mingmin+Zhang&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Mingmin+Zhang" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Mingmin+Zhang%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Zhen-Liu"><span class="c-article-authors-search__title u-h3 js-search-name">Zhen Liu</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Zhen+Liu&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Zhen+Liu" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Zhen+Liu%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Meleagros-Krokos"><span class="c-article-authors-search__title u-h3 js-search-name">Meleagros Krokos</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Meleagros+Krokos&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Meleagros+Krokos" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Meleagros+Krokos%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-008-0089-7/email/correspondent/c1/new">Zhen Liu</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=Cognitive%20and%20synthetic%20behavior%20of%20avatars%20in%20intelligent%20virtual%20environments&amp;author=Ronghua%20Liang%20et%20al&amp;contentID=10.1007%2Fs10055-008-0089-7&amp;publication=1359-4338&amp;publicationDate=2008-03-08&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Liang, R., Zhang, M., Liu, Z. <i>et al.</i> Cognitive and synthetic behavior of avatars in intelligent virtual environments.
+                    <i>Virtual Reality</i> <b>12, </b>47–54 (2008). https://doi.org/10.1007/s10055-008-0089-7</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-008-0089-7.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2006-06-21">21 June 2006</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2007-07-23">23 July 2007</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2008-03-08">08 March 2008</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2008-03">March 2008</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-008-0089-7" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-008-0089-7</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Expression animation</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Walking synthetic behavior</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Expression cloning</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Autonomous agent models</span></li><li class="c-article-subject-list__subject"><span itemprop="about">FSM</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-008-0089-7.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=89;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

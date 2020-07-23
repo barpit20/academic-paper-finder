@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="Design and display of enhancing information in desktop information-ric"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="Information-rich virtual environments (IRVEs) have been described as environments in which perceptual information is enhanced with abstract (or symbolic) information, such as text, numbers, images,..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/8/1.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="Design and display of enhancing information in desktop information-rich virtual environments: challenges and techniques"/>
+
+    <meta name="dc.source" content="Virtual Reality 2004 8:1"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2004-06-09"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2004 Springer-Verlag London Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="Information-rich virtual environments (IRVEs) have been described as environments in which perceptual information is enhanced with abstract (or symbolic) information, such as text, numbers, images, audio, video, or hyperlinked resources. Desktop virtual environment (VE) applications present similar information design and layout challenges as immersive VEs, but, in addition, they may also be integrated with external windows or frames commonly used in desktop interfaces. This paper enumerates design approaches for the display of enhancing information both internal and external to the virtual world&#8217;s render volume. Using standard Web-based software frameworks, we explore a number of implicit and explicit spatial layout methods for the display and linking of abstract information, especially text. Within the VE view, we demonstrate both heads-up-displays
+(HUDs) and encapsulated scenegraph behaviors we call
+semantic objects. For desktop displays, which support information display venues external to the scene, we demonstrate the linking and integration of the scene with Web browsers and external visualization applications. Finally, we describe the application of these techniques in the PathSim visualizer, an IRVE interface for the biomedical domain. These design techniques are relevant to instructional and informative interfaces for a wide variety of VE applications."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2004-06-09"/>
+
+    <meta name="prism.volume" content="8"/>
+
+    <meta name="prism.number" content="1"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="41"/>
+
+    <meta name="prism.endingPage" content="54"/>
+
+    <meta name="prism.copyright" content="2004 Springer-Verlag London Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-004-0134-0"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-004-0134-0"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-004-0134-0.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-004-0134-0"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="Design and display of enhancing information in desktop information-rich virtual environments: challenges and techniques"/>
+
+    <meta name="citation_volume" content="8"/>
+
+    <meta name="citation_issue" content="1"/>
+
+    <meta name="citation_publication_date" content="2004/03"/>
+
+    <meta name="citation_online_date" content="2004/06/09"/>
+
+    <meta name="citation_firstpage" content="41"/>
+
+    <meta name="citation_lastpage" content="54"/>
+
+    <meta name="citation_article_type" content="Original Article"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-004-0134-0"/>
+
+    <meta name="DOI" content="10.1007/s10055-004-0134-0"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-004-0134-0"/>
+
+    <meta name="description" content="Information-rich virtual environments (IRVEs) have been described as environments in which perceptual information is enhanced with abstract (or symbolic) i"/>
+
+    <meta name="dc.creator" content="Nicholas F. Polys"/>
+
+    <meta name="dc.creator" content="Doug A. Bowman"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="Baldonado M, Woodruff A, Kuchinsky A (2000) Guidelines for using multiple views in information visualization. In: Proceedings of the conference on advanced visual interfaces (AVI2000), Palermo, Italy, May 2000"/>
+
+    <meta name="citation_reference" content="citation_journal_title=J Visual Lang Comput; citation_author=null Bederson; citation_volume=7; citation_publication_date=1996; citation_pages=3; citation_doi=10.1006/jvlc.1996.0002; citation_id=CR2"/>
+
+    <meta name="citation_reference" content="Bertin J (1981) Berg W, Scott P (trans) Graphics and graphic information processing. Walter de Gruyter, Berlin New York"/>
+
+    <meta name="citation_reference" content="Bowman D, North C, Chen J, Polys N, Pyla P, Yilmaz U (2003) Information-rich virtual environments: theory, tools, and research agenda. In: Proceedings of the conference on virtual reality software and technology (VRST2003), Osaka, Japan, October 2003"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Information; citation_author=null Card; citation_volume=visualization; citation_publication_date=1999; citation_pages=using; citation_id=CR5"/>
+
+    <meta name="citation_reference" content="Chen J, Pyla P, Bowman D (2004) Testbed evaluation of navigation and text display techniques in an information-rich virtual environment. In: Proceedings of the IEEE VR 2004 conference, Chicago, Illinois, March 2004"/>
+
+    <meta name="citation_reference" content="Convertino G, Chen J, Yost B, Young-Sam R, North C (2003) Exploring context switching and cognition in dual-view coordinated visualizations. In: Proceedings of the international conference on coordinated and multiple views in exploratory visualization (CMV2003), London, UK, July 2003, 15:57&#8211;66"/>
+
+    <meta name="citation_reference" content="Duca K, Laubenbacher R (2003) PathSim. Virginia Bioinformatics Institute, 
+                    http://www.vbi.vt.edu/~pathsim
+                    
+                  
+"/>
+
+    <meta name="citation_reference" content="Fauconnier G (1997) Mappings in thought and language. Cambridge University Press, Cambridge"/>
+
+    <meta name="citation_reference" content="Feiner S, Macintyre B, Haupt M, Solomon E (1993) Windows on the world: 2D windows for 3D augmented reality. In: Proceedings of the 6th ACM symposium on user interface software and technology (UIST1993), Atlanta, Georgia, November 1993, pp 145&#8211;155"/>
+
+    <meta name="citation_reference" content="Friedhoff R, Peercy Mark (2000) Visual computing. Scientific American Library, New York"/>
+
+    <meta name="citation_reference" content="citation_journal_title=The FISHEYE; citation_author=null Furnas; citation_volume=view; citation_publication_date=1981; citation_pages=a; citation_id=CR12"/>
+
+    <meta name="citation_reference" content="Furnas GW (1986) Generalized Fisheye views: visualizing complex information spaces. In: Proceedings of the ACM conference on human factors in computing systems (CHI&#8217;86), Boston, Massachusetts, April 1986, pp 16&#8211;23"/>
+
+    <meta name="citation_reference" content="Goguen J (2000) Information visualizations and semiotic morphisms. University of California, San Diego, 
+                    http://citeseer.ist.psu.edu/goguen00information.html
+                    
+                  
+"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Visual; citation_author=null Keller; citation_volume=cues; citation_publication_date=1993; citation_pages=practical; citation_id=CR15"/>
+
+    <meta name="citation_reference" content="Norman DA (1986) Cognitive engineering. In: Norman DA, Draper SD (eds) User centered system design: new perspectives on human&#8211;computer interaction. Lawrence Erlbaum Associates, Hillsdale, New Jersey, pp 31&#8211;61"/>
+
+    <meta name="citation_reference" content="North C (2001) Multiple views and tight coupling in visualization: a language, taxonomy, and system. In: Proceedings of the CSREA CISST 2001 workshop of fundamental issues in visualization, June 2001 pp 626&#8211;632"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Int J Hum Comput St; citation_author=null North; citation_volume=53; citation_publication_date=2000; citation_pages=715; citation_doi=10.1006/ijhc.2000.0418; citation_id=CR18"/>
+
+    <meta name="citation_reference" content="Perkins D (2000) Archimedes&#8217; bathtub. Norton, New York"/>
+
+    <meta name="citation_reference" content="Pickett RM, Grinstein G, Levkowitz H, Smith S (1995) Harnessing preattentive processes in visualization. In: Grinstein G, Levkoitz H (eds) Perceptual issues in visualization. Springer, Berlin Heidelberg New York"/>
+
+    <meta name="citation_reference" content="Polys, NF (2003) The VirtuPortal: opening new dimensions on the Web,
+                    http://www.3DeZ.net
+                    
+                  
+"/>
+
+    <meta name="citation_reference" content="Polys N, North C, Bowman D, Ray A, Moldenhauer M, Dandekar C (2004a) Snap2Diverse: coordinating information visualizations and virtual environments. In: Proceedings of the SPIE conference on visualization and data analysis (VDA2004), San Jose, California, January 2004"/>
+
+    <meta name="citation_reference" content="Polys N, Bowman D, North C, Laubenbacher R, Duca K (2004b) PathSim visualizer: an information-rich virtual environment for systems biology. In: Proceedings of the 9th international conference on 3D Web technology (Web3D2004), Monterey, California, April 2004"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Computer; citation_author=null Reynolds; citation_volume=Graphics; citation_publication_date=1987; citation_pages=25; citation_id=CR24"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Presence-Teleop Virt; citation_title=A model for understanding how virtual reality aids complex conceptual learning; citation_author=MC Salzman, C Dede, LR Bowen, J Chen; citation_volume=8; citation_issue=3; citation_publication_date=1999; citation_pages=293-316; citation_id=CR25"/>
+
+    <meta name="citation_reference" content="Shneiderman B (1996) The eyes have it: a task by data type taxonomy for information visualizations. In: Proceedings of the IEEE symposium on Visual Languages, Boulder, Colorado, September 1996, pp 336&#8211;343"/>
+
+    <meta name="citation_reference" content="citation_journal_title=J Exp Psychol; citation_author=null Stroop; citation_volume=18; citation_publication_date=1935; citation_pages=643; citation_id=CR27"/>
+
+    <meta name="citation_reference" content="Sutcliffe A, Faraday P (1994) Designing presentation in multimedia interfaces. In: Proceedings of the ACM conference on computer&#8211;human interaction, Boston, Massachusetts"/>
+
+    <meta name="citation_reference" content="Tufte E (1990) Envisioning information. Graphics Press, Cheshire, Connecticut"/>
+
+    <meta name="citation_reference" content="Vanderdonckt J, Gillo X (1994) Visual techniques for traditional and multimedia layouts. In: Proceedings of the ACM conference on advanced visual interfaces, Bari, Italy"/>
+
+    <meta name="citation_reference" content="Ware C (2003) Design as applied perception. In: Carrol JM (ed) HCI models, theories, and frameworks: towards a multidisciplinary science. Morgan Kaufmann, San Francisco, California"/>
+
+    <meta name="citation_reference" content="Watzman S (2002) Visual design principles for usable interfaces. In: Stanney K (ed) Computer interaction handbook: design, implementations, and applications. Lawrence Erlbaum Associates, Mahwah, New Jersey"/>
+
+    <meta name="citation_reference" content="Web3D Consortium (2004) Specifications: 
+                    http://www.web3d.org/fs_specifications.htm
+                    
+                  
+"/>
+
+    <meta name="citation_author" content="Nicholas F. Polys"/>
+
+    <meta name="citation_author_email" content="npolys@vt.edu"/>
+
+    <meta name="citation_author_institution" content="Department of Computer Science &amp; Center for Human Computer Interaction, Virginia Polytechnic Institute and State University, Blacksburg, USA"/>
+
+    <meta name="citation_author" content="Doug A. Bowman"/>
+
+    <meta name="citation_author_email" content="bowman@vt.edu"/>
+
+    <meta name="citation_author_institution" content="Department of Computer Science &amp; Center for Human Computer Interaction, Virginia Polytechnic Institute and State University, Blacksburg, USA"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-004-0134-0&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2004/03/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-004-0134-0"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="Design and display of enhancing information in desktop information-rich virtual environments: challenges and techniques"/>
+        <meta property="og:description" content="Information-rich virtual environments (IRVEs) have been described as environments in which perceptual information is enhanced with abstract (or symbolic) information, such as text, numbers, images, audio, video, or hyperlinked resources. Desktop virtual environment (VE) applications present similar information design and layout challenges as immersive VEs, but, in addition, they may also be integrated with external windows or frames commonly used in desktop interfaces. This paper enumerates design approaches for the display of enhancing information both internal and external to the virtual world’s render volume. Using standard Web-based software frameworks, we explore a number of implicit and explicit spatial layout methods for the display and linking of abstract information, especially text. Within the VE view, we demonstrate both heads-up-displays (HUDs) and encapsulated scenegraph behaviors we call semantic objects. For desktop displays, which support information display venues external to the scene, we demonstrate the linking and integration of the scene with Web browsers and external visualization applications. Finally, we describe the application of these techniques in the PathSim visualizer, an IRVE interface for the biomedical domain. These design techniques are relevant to instructional and informative interfaces for a wide variety of VE applications."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>Design and display of enhancing information in desktop information-rich virtual environments: challenges and techniques | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-004-0134-0","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Information-rich virtual environments, Visualization design, Information psychophysics, Multiple view architectures, Desktop virtual environments","kwrd":["Information-rich_virtual_environments","Visualization_design","Information_psychophysics","Multiple_view_architectures","Desktop_virtual_environments"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-004-0134-0","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-004-0134-0","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=134;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-004-0134-0">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            Design and display of enhancing information in desktop information-rich virtual environments: challenges and techniques
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-004-0134-0.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-004-0134-0.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">Original Article</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2004-06-09" itemprop="datePublished">09 June 2004</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">Design and display of enhancing information in desktop information-rich virtual environments: challenges and techniques</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Nicholas_F_-Polys" data-author-popup="auth-Nicholas_F_-Polys" data-corresp-id="c1">Nicholas F. Polys<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Virginia Polytechnic Institute and State University" /><meta itemprop="address" content="grid.438526.e, 0000000106944940, Department of Computer Science &amp; Center for Human Computer Interaction, Virginia Polytechnic Institute and State University, Blacksburg, Virginia, 24060, USA" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Doug_A_-Bowman" data-author-popup="auth-Doug_A_-Bowman">Doug A. Bowman</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Virginia Polytechnic Institute and State University" /><meta itemprop="address" content="grid.438526.e, 0000000106944940, Department of Computer Science &amp; Center for Human Computer Interaction, Virginia Polytechnic Institute and State University, Blacksburg, Virginia, 24060, USA" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 8</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">41</span>–<span itemprop="pageEnd">54</span>(<span data-test="article-publication-year">2004</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">267 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">17 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                    
+                        <li class="c-article-metrics-bar__item">
+                            <p class="c-article-metrics-bar__count">6 <span class="c-article-metrics-bar__label">Altmetric</span></p>
+                        </li>
+                    
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-004-0134-0/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>Information-rich virtual environments (IRVEs) have been described as environments in which perceptual information is enhanced with abstract (or symbolic) information, such as text, numbers, images, audio, video, or hyperlinked resources. Desktop virtual environment (VE) applications present similar information design and layout challenges as immersive VEs, but, in addition, they may also be integrated with external windows or frames commonly used in desktop interfaces. This paper enumerates design approaches for the display of enhancing information both internal and external to the virtual world’s render volume. Using standard Web-based software frameworks, we explore a number of implicit and explicit spatial layout methods for the display and linking of abstract information, especially text. Within the VE view, we demonstrate both<i> heads-up-displays</i>
+(HUDs) and encapsulated scenegraph behaviors we call<i>
+semantic objects</i>. For desktop displays, which support information display venues external to the scene, we demonstrate the linking and integration of the scene with Web browsers and external visualization applications. Finally, we describe the application of these techniques in the PathSim visualizer, an IRVE interface for the biomedical domain. These design techniques are relevant to instructional and informative interfaces for a wide variety of VE applications.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">Introduction</h2><div class="c-article-section__content" id="Sec2-content"><p>At the intersection of the fields of Virtual Environments (VEs), visualization, and user interfaces, designers aim to supply users with relevant information at a minimum cognitive and execution load. We believe that Information-Rich Virtual Environments (IRVEs), by enhancing perceptual information with abstract information, can reduce Norman’s “Gulf of Evaluation” [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 16" title="Norman DA (1986) Cognitive engineering. In: Norman DA, Draper SD (eds) User centered system design: new perspectives on human–computer interaction. Lawrence Erlbaum Associates, Hillsdale, New Jersey, pp 31–61" href="/article/10.1007/s10055-004-0134-0#ref-CR16" id="ref-link-section-d21412e300">16</a>] and promote a semantic directness that leads users to more accurate mental models of the phenomena they perceive. In order to “amplify cognition” as Card, Mackinlay, and Shneiderman [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 5" title="Card S, Mackinlay J, Shneiderman B (1999) Information visualization: using vision to think. Morgan Kaufmann, San Francisco" href="/article/10.1007/s10055-004-0134-0#ref-CR5" id="ref-link-section-d21412e303">5</a>, p. 7] suggest, designers are motivated to efficiently employ human perception and cognition to design and communicate perceptual substrates for accurate interpretation and use.</p><p>There are a large number of domains in which users are required to access and integrate heterogeneous information types—specifically, perceptual, abstract, and temporal information. Perceptual information includes 3D spaces that represent physical or real-world or virtual phenomena, including lighting, colors, and textures. Abstract information is non-spatial data that represents additional attributes of data items. This abstract (or symbolic) information could include text, links, numbers, graphical-plots, and audio/video annotations. Temporal information includes how the perceptual and abstract information changes over time.</p><p>Immersive VEs excel at providing users a greater comprehension of perceptual information. 3D immersion can be beneficial for user understanding and a life-like experience of the perceptual data (such as an architectural walk through). However, in most cases, perceptual substrates from the realm of our everyday experiences are not enough. Consider the simple case where a user perceives a brick and a feather dropped simultaneously from a high point. We have come to accept a scientific theory of gravity that could not be inferred from the stimuli; that is, it is not their difference in “weight” that makes them fall at different rates. Supposedly, the difference is attributable to other variables, such as “mass” and “air resistance.” Without supplemental cues and information enhancement, such a perceptual phenomenon would be mischaracterized and misunderstood for decades or even centuries. Now (despite our everyday phenomenology), we believe it and base our action plans upon its veridicality.</p><p>Our work on IRVEs attempts to address this problem by developing design guidelines and software architectures for composing VEs that are enhanced with abstract information, which may be a variety of media resources and types. As users navigate within the VE, they may need access to information related to the world and objects. This is the domain of<i> information visualization</i>, which is concerned with improving how users perceive, understand, and interact with visual representations of abstract information. We have implemented a number of methods for both in-scene annotations and desktop layouts, and applied them in the domain of biomedical visualization.</p><p>In this paper, we examine the challenges, tradeoffs, and techniques involved in the design and layout of supplemental information for desktop VEs. Section <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-004-0134-0#Sec3">2</a> motivates the enterprise by reviewing literature from information and interface design. In Section <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-004-0134-0#Sec7">3</a>, we describe the design space of IRVEs and detail general challenges, as well as those particular to desktop VEs. Section <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-004-0134-0#Sec10">4</a> contains details on the spatial layout techniques we are using in our work and Sect <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-004-0134-0#Sec11">5</a> details a real-world application employing these methods.</p></div></div></section><section aria-labelledby="Sec3"><div class="c-article-section" id="Sec3-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec3">Related Work</h2><div class="c-article-section__content" id="Sec3-content"><p>Previously, we have addressed the problem of integrated information spaces and put forward a theoretical framework and research agenda for IRVEs [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 4" title="Bowman D, North C, Chen J, Polys N, Pyla P, Yilmaz U (2003) Information-rich virtual environments: theory, tools, and research agenda. In: Proceedings of the conference on virtual reality software and technology (VRST2003), Osaka, Japan, October 2003" href="/article/10.1007/s10055-004-0134-0#ref-CR4" id="ref-link-section-d21412e340">4</a>]. We formally defined IRVEs and described the design space for display and interaction in integrated information spaces. More recently, this design space has served as the basis for software design and usability evaluations on: navigation interactions in IRVEs [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 6" title="Chen J, Pyla P, Bowman D (2004) Testbed evaluation of navigation and text display techniques in an information-rich virtual environment. In: Proceedings of the IEEE VR 2004 conference, Chicago, Illinois, March 2004" href="/article/10.1007/s10055-004-0134-0#ref-CR6" id="ref-link-section-d21412e343">6</a>], relating abstract and perceptual information in IRVEs [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 22" title="Polys N, North C, Bowman D, Ray A, Moldenhauer M, Dandekar C (2004a) Snap2Diverse: coordinating information visualizations and virtual environments. In: Proceedings of the SPIE conference on visualization and data analysis (VDA2004), San Jose, California, January 2004" href="/article/10.1007/s10055-004-0134-0#ref-CR22" id="ref-link-section-d21412e346">22</a>], and understanding spatial trends in IRVEs [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 23" title="Polys N, Bowman D, North C, Laubenbacher R, Duca K (2004b) PathSim visualizer: an information-rich virtual environment for systems biology. In: Proceedings of the 9th international conference on 3D Web technology (Web3D2004), Monterey, California, April 2004" href="/article/10.1007/s10055-004-0134-0#ref-CR23" id="ref-link-section-d21412e349">23</a>]. Such systematic approaches are essential for improving the design and effectiveness of VEs for complex, information-intensive applications, such as design, simulation, education, and scientific research. This paper explores further the IRVE design space and enumerates challenges and techniques for information display.</p><p>The goal of the IRVE research agenda is to understand how media designers can disambiguate perceptual stimuli and enable users to accurately form concepts about, and mental models of, the phenomena they perceive. By taking account of how humans build their cognitive models and what perceptual predispositions and biases are in play, designers can take steps to minimize their effect. This line of inquiry has been termed the “inverse problem of design” [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 14" title="Goguen J (2000) Information visualizations and semiotic morphisms. University of California, San Diego, &#xA;                    http://citeseer.ist.psu.edu/goguen00information.html&#xA;                    &#xA;                  &#xA;" href="/article/10.1007/s10055-004-0134-0#ref-CR14" id="ref-link-section-d21412e355">14</a>] and “information psychophysics” [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 31" title="Ware C (2003) Design as applied perception. In: Carrol JM (ed) HCI models, theories, and frameworks: towards a multidisciplinary science. Morgan Kaufmann, San Francisco, California" href="/article/10.1007/s10055-004-0134-0#ref-CR31" id="ref-link-section-d21412e358">31</a>].</p><h3 class="c-article__sub-heading" id="Sec4">Perception</h3><p>The nature of visual perception is a crucial factor in the design of effective graphics and VEs. The challenge is to understand human perceptual dimensions and map abstract data to display so that dependent variables can be instantly perceived—processed pre-consciously and in parallel [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 11" title="Friedhoff R, Peercy Mark (2000) Visual computing. Scientific American Library, New York" href="/article/10.1007/s10055-004-0134-0#ref-CR11" id="ref-link-section-d21412e368">11</a>]. Such properties of the visual system have been described (such as sensitivity to texture, color, motion, depth) and graphical presentation models have been formulated to exploit these properties, such as pre-attentive processing [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 20" title="Pickett RM, Grinstein G, Levkowitz H, Smith S (1995) Harnessing preattentive processes in visualization. In: Grinstein G, Levkoitz H (eds) Perceptual issues in visualization. Springer, Berlin Heidelberg New York" href="/article/10.1007/s10055-004-0134-0#ref-CR20" id="ref-link-section-d21412e371">20</a>] and visual cues and perception [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 31" title="Ware C (2003) Design as applied perception. In: Carrol JM (ed) HCI models, theories, and frameworks: towards a multidisciplinary science. Morgan Kaufmann, San Francisco, California" href="/article/10.1007/s10055-004-0134-0#ref-CR31" id="ref-link-section-d21412e374">31</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 15" title="Keller PR (1993) Visual cues: practical data visualization. IEEE Computer Society Press, Los Alamitos, California" href="/article/10.1007/s10055-004-0134-0#ref-CR15" id="ref-link-section-d21412e377">15</a>]. Watzman [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 32" title="Watzman S (2002) Visual design principles for usable interfaces. In: Stanney K (ed) Computer interaction handbook: design, implementations, and applications. Lawrence Erlbaum Associates, Mahwah, New Jersey" href="/article/10.1007/s10055-004-0134-0#ref-CR32" id="ref-link-section-d21412e380">32</a>] has examined usability guidelines and visual design principles as they relate to text typography and color usage. Watzman [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 32" title="Watzman S (2002) Visual design principles for usable interfaces. In: Stanney K (ed) Computer interaction handbook: design, implementations, and applications. Lawrence Erlbaum Associates, Mahwah, New Jersey" href="/article/10.1007/s10055-004-0134-0#ref-CR32" id="ref-link-section-d21412e384">32</a>] details the relation of principles such as harmony, balance, and simplicity to text legibility and readability. In the context of IRVEs, as we shall see below, we are especially concerned with visibility, legibility, and the association of related abstract information to its referent object.</p><h3 class="c-article__sub-heading" id="Sec5">Recognition</h3><p>How users recognize and construct knowledge about what a graphic<i> means</i> is also of crucial importance in visualization and IRVE applications. For users to understand and interpret complex images, higher-level cognitive processes are usually needed. A number of authors have enumerated design strategies and parameters for representing signifiers in graphics [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 3" title="Bertin J (1981) Berg W, Scott P (trans) Graphics and graphic information processing. Walter de Gruyter, Berlin New York" href="/article/10.1007/s10055-004-0134-0#ref-CR3" id="ref-link-section-d21412e398">3</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 29" title="Tufte E (1990) Envisioning information. Graphics Press, Cheshire, Connecticut" href="/article/10.1007/s10055-004-0134-0#ref-CR29" id="ref-link-section-d21412e401">29</a>] and there are effects from both the kind of data and the kind of task [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 26" title="Shneiderman B (1996) The eyes have it: a task by data type taxonomy for information visualizations. In: Proceedings of the IEEE symposium on Visual Languages, Boulder, Colorado, September 1996, pp 336–343" href="/article/10.1007/s10055-004-0134-0#ref-CR26" id="ref-link-section-d21412e404">26</a>]. Thus, we expect that we may have to identify IRVE design heuristics according to data type, display type, and task context.</p><p>Vanderdonckt and Gillo [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 30" title="Vanderdonckt J, Gillo X (1994) Visual techniques for traditional and multimedia layouts. In: Proceedings of the ACM conference on advanced visual interfaces, Bari, Italy" href="/article/10.1007/s10055-004-0134-0#ref-CR30" id="ref-link-section-d21412e410">30</a>] summarize visual layout techniques from an aesthetic and psychological point of view, relating methods such as composition, association/dissociation, and ordering on a 2D grid-based structure. They also conclude that effective visual design should rely on task analysis. Sutcliffe and Faraday [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 28" title="Sutcliffe A, Faraday P (1994) Designing presentation in multimedia interfaces. In: Proceedings of the ACM conference on computer–human interaction, Boston, Massachusetts" href="/article/10.1007/s10055-004-0134-0#ref-CR28" id="ref-link-section-d21412e413">28</a>] concentrate on user task and resource analysis to determine a task–knowledge structure, which they formalize as an entity-relationship model. This model enables the effective design of multimedia interfaces and presentation scripting, e.g., what media resources the user needs visual access and when. This is a useful approach to consider for IRVE design as it intends to formally identify items that need user attention and minimize perceptual overload and interference.</p><h3 class="c-article__sub-heading" id="Sec6">Concept formation</h3><p>It has been shown that conceptual learning can be aided by features of VEs, such as their spatial, 3D aspect, their support for users to change their frames of reference, and the inclusion of multi-sensory cues [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 25" title="Salzman MC, Dede C, Bowen LR, Chen J (1999) A model for understanding how virtual reality aids complex conceptual learning. Presence-Teleop Virt 8(3):293–316" href="/article/10.1007/s10055-004-0134-0#ref-CR25" id="ref-link-section-d21412e425">25</a>]. This is compelling evidence for the value of VEs as experimental learning tools (learning by doing) and for concept acquisition during the development of a (student) user’s mental model of a physical system. It is important to remember, however, that subjects at different stages of cognitive development assign different meanings to the same perceptual event; by explicitly adding information about what the user is viewing within the VE, IRVEs can enable more accurate interpretation.</p><p>It is our larger hypothesis that enhancing information in VEs can serve both an instructional purpose and an informative purpose. When designing for domain experts for example, having simultaneous access to supplemental, abstract information about a perceptual event can be valuable for insight generation. Insight and breakthroughs in science are often the result of mapping structures or principles from one domain to another; for example, reframing or redefining the problem in alternative terms [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 19" title="Perkins D (2000) Archimedes’ bathtub. Norton, New York" href="/article/10.1007/s10055-004-0134-0#ref-CR19" id="ref-link-section-d21412e431">19</a>] or blending two or more cognitive spaces [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 9" title="Fauconnier G (1997) Mappings in thought and language. Cambridge University Press, Cambridge" href="/article/10.1007/s10055-004-0134-0#ref-CR9" id="ref-link-section-d21412e434">9</a>]. In addition, a flexible system for user-constructed multiple views (e.g., [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 18" title="North C, Shneiderman B (2000) Snap-together visualization: can users construct and operate coordinated views? Int J Hum Comput St 53(5):715–739" href="/article/10.1007/s10055-004-0134-0#ref-CR18" id="ref-link-section-d21412e437">18</a>]) can allow users to coordinate these views in ways unforeseen by the original designers.</p></div></div></section><section aria-labelledby="Sec7"><div class="c-article-section" id="Sec7-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec7">Design space and layout challenges</h2><div class="c-article-section__content" id="Sec7-content"><p>Supplemental information content in an IRVE may be a variety of media types, such as text, numbers, images, audio, video, or hyperlinked resources. We can define this supplemental, enhancing information as<i> annotations</i> that refer to some perceptual data in the VE. Annotations may be associated with objects in the environment, the environment itself (or locations in the environment), or a temporal event in the environment. Annotations may be rendered as a result of implicit user action, such as navigating closer to an object or explicit user action, such as selecting an object for details-on-demand. Although the content of the annotations may be of heterogeneous data types and structured differently to the perceptual data, users may have to browse, search, recognize, and compare this information in a unified context.</p><p>Annotations may be simple labels, detailed attributes such as field–value pairs, graphs, or related multimedia. With the exception of hyperlinked resources (which may be another 3D world), all the types of annotations we have mentioned can be displayed on 2D surfaces, which we call<i> panels</i>. Following the work in [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 10" title="Feiner S, Macintyre B, Haupt M, Solomon E (1993) Windows on the world: 2D windows for 3D augmented reality. In: Proceedings of the 6th ACM symposium on user interface software and technology (UIST1993), Atlanta, Georgia, November 1993, pp 145–155" href="/article/10.1007/s10055-004-0134-0#ref-CR10" id="ref-link-section-d21412e458">10</a>] on display techniques for augmented reality, we divide the possible display locations for annotation panels into<i> object-fixed</i>,<i> world-fixed</i>,<i>
+user-fixed</i>, and<i> display-fixed</i>
+categories. According to [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 10" title="Feiner S, Macintyre B, Haupt M, Solomon E (1993) Windows on the world: 2D windows for 3D augmented reality. In: Proceedings of the 6th ACM symposium on user interface software and technology (UIST1993), Atlanta, Georgia, November 1993, pp 145–155" href="/article/10.1007/s10055-004-0134-0#ref-CR10" id="ref-link-section-d21412e474">10</a>], augmenting information may be associated to a particular object in the world (<i>object-fixed</i>) or associated to a location in the world (<i>world-fixed</i>). If information travels with the user, regardless of their navigational actions, it is classified as<i> user-fixed</i>. If the information is persistently located on the display screen, it is termed<i> display-fixed</i>. Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-004-0134-0#Tab1">1</a> summarizes the dimensions of the IRVE information design space and their impact on usability. </p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-1"><figure><figcaption class="c-article-table__figcaption"><b id="Tab1" data-test="table-caption">Table 1  IRVE design matrix for abstract information display</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-004-0134-0/tables/1"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+<h3 class="c-article__sub-heading" id="Sec8">General challenges</h3><p>Inside the 3D scene or viewing frustum, IRVE designers must tackle a number of design challenges and perceptual issues. These include visibility, legibility, association, aggregation, and occlusion.</p>
+                  <h3 class="c-article__sub-heading">Visibility</h3>
+                  <p>Foremost, annotation panels should be<i> visible</i> to the user. This means that our first spatial layout consideration is the size of the annotation. If the annotation panel is object-fixed and the object is within the viewing frustum, the panel should not be located behind its referent object. Conversely, the annotation should not block the user’s view of the referent object by being located directly in front of the object (between the user and the referent). One tradeoff along these lines arises in the case that the object is sufficiently large or near that it consumes the user’s field of view. In such a case, the panel should, at least, not block the user’s view of important features of the object. At a distance, the panel should be sufficiently large so that it is noticeable, but not so large as to dominate the visual field and, thus, becomes perceived as the referent itself rather than an attribute of the object.</p>
+                
+                  <h3 class="c-article__sub-heading">Legibility</h3>
+                  <p>A crucial consideration in the case of supplemental text or numeric information is<i> legibility</i>. If an annotation (such as text) is to be displayed and legible, it must be of sufficient size and clarity that users can read its letters and numbers. Font attributes (such as family, style, language, and anti-aliasing) and the variability of acuity in human vision can impact a design and its legibility, and these are important considerations. In addition, there is the issue of sizing and layout behaviors for annotations. For example, in the case of object- or world-fixed annotations, scaling of size can be a function of user proximity to the object. In the case of user- or display-fixed annotations, legible font size may be a function of screen resolution.</p>
+                <p>Annotation panels that contain text, graphs, or images also have a natural “up” direction. Since users may navigate by flying in 3D spaces and their orientation may not be constrained, object-fixed annotations should be true 3D billboards—not simply rotating around the<i>
+y</i>-axis as default Virtual Reality Modeling Language (VRML) or Extensible 3D (X3D) billboards do (Web3D [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 33" title="Web3D Consortium (2004) Specifications: &#xA;                    http://www.web3d.org/fs_specifications.htm&#xA;                    &#xA;                  &#xA;" href="/article/10.1007/s10055-004-0134-0#ref-CR33" id="ref-link-section-d21412e804">33</a>]). Another consideration for legibility is color and contrast. If the font color of a text annotation is the same as the environment background or its referent object (in the case of object-fixed), the characters may blend in with their background. One solution to this problem is to include a rectangular plane of a contrasting color behind the textual annotation. These background panels may be semi-transparent to minimize occlusion of other objects in the scene.</p>
+                  <h3 class="c-article__sub-heading">Association</h3>
+                  <p>
+<i>Associating</i> an annotation with its referent object is a crucial issue in IRVEs. Users must be able to perceive the reference relation with minimal cognitive overhead. The laws of Gestalt perception (most recently summarized in [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 31" title="Ware C (2003) Design as applied perception. In: Carrol JM (ed) HCI models, theories, and frameworks: towards a multidisciplinary science. Morgan Kaufmann, San Francisco, California" href="/article/10.1007/s10055-004-0134-0#ref-CR31" id="ref-link-section-d21412e818">31</a>]), including connectedness, proximity, common region, similarity, and common fate, are most relevant here. In the case of an object-fixed annotation, the relation may be depicted explicitly by way of a line between the panel and a point on the object (connectedness). Relation may also be depicted implicitly in a number of ways. For example, being “near enough” to an object so that the relation is perceived (proximity, common region), or the annotation is rendered with the same color scheme as its referent object (similarity). Common fate refers to the principle that objects that move together in similar trajectories are related. The challenge for either implicit or explicit relations is that the relation can be understood from any perspective, even if the referent object is oddly shaped.</p>
+                
+                  <h3 class="c-article__sub-heading">Aggregation</h3>
+                  <p>The content(s) of an annotation may be of a variety of data types, data structures, and of a range of volumes. Thus, another important consideration in the design of IRVE annotations is the geometric and abstract levels of detail depicted at a given time. We refer to the informational hierarchy as the<i> level-of-aggregation</i>, which may or may not correspond one-to-one with the referent object’s geometric level-of-detail. As a user drills down, iteratively requesting more detailed attributes, the content and the size of the annotation may change. Successive annotation details may become visible implicitly as a function of user proximity or explicitly as a result of user action, such as mouse-over or selection. If the annotation metadata is of a variety of media types, designers may need to introduce additional affordances, such as hyperlinked menus and display logic.</p>
+                
+                  <h3 class="c-article__sub-heading">Occlusion</h3>
+                  <p>Finally, when considering the design of object- and user fixed annotation panels, there is the issue of<i>
+occlusion</i>. In dense or crowded scenes with a large number of annotation panels, users can be quickly overwhelmed or confused as annotations consume the visual space. Management and layout of panels in these situations can be accomplished either by a centralized manager class that knows the image-plane size and the span of 3D object’s 2D projection or by a distributed ruleset that gives rise to emergent behaviors such as flocking [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 24" title="Reynolds CW (1987) Flocks, herds, and schools: a distributed behavioral model. Computer Graphics (SIGGRAPH 1987) 21(4):25–34" href="/article/10.1007/s10055-004-0134-0#ref-CR24" id="ref-link-section-d21412e843">24</a>].</p>
+                <h3 class="c-article__sub-heading" id="Sec9">Challenges particular to desktop VEs</h3><p>In desktop VEs, designers have additional flexibility as to how and where annotation information is displayed. In immersive systems such as CAVEs (Cave automatic virtual environments) or head-mounted displays, user-fixed and display-fixed annotations are perceptually equivalent and there is no visible screen real estate outside the render volume. In desktop VEs, however, a user-fixed display location, such as a heads-up-display (HUD), is categorically distinct from display-fixed locations, such as HTML frames or popup windows, which also populate the screen space. These display-fixed locations are external to the scene’s render volume. The variety of content and applications on the Web using standard formats, such as VRML and X3D, are prime examples of how additional information can be integrated and presented to the user outside the viewing frustum allocated to the 3D scene (e.g., [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 21" title="Polys, NF (2003) The VirtuPortal: opening new dimensions on the Web,&#xA;                    http://www.3DeZ.net&#xA;                    &#xA;                  &#xA;" href="/article/10.1007/s10055-004-0134-0#ref-CR21" id="ref-link-section-d21412e855">21</a>, Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-004-0134-0#Fig1">1</a>]). </p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-004-0134-0/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0134-0/MediaObjects/s10055-004-0134-0fhb1.jpg?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0134-0/MediaObjects/s10055-004-0134-0fhb1.jpg" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p> An IRVE Web portal using frames and pop-up windows to manage virtual world content, object-fixed annotations, and display-fixed annotations</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-004-0134-0/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+<p>On desktop platforms especially, designers have limited screen space to work with. Browser windows and embedded media objects (such as Web3D worlds) are usually sized in absolute pixels, while frames and tables can be sized by percentages or absolute pixels. Using Web pages and hyperlinks, 3D, text, images, audio, and video resources can all be loaded into different windows. For VRML and X3D worlds embedded in a Web page at a fixed size, the user perspective on the VE is specified by the<i>
+fieldOfView</i> field of the <span class="u-monospace">ViewPoint{}</span> node. This is a value in radians, with the default value being<i> π</i>/4; larger values create a fish-eye effect while smaller values create tunneled, telescoping effects. Naturally, with a larger<i>
+fieldOfView</i>, more of the VE is visible, but the perspective can be distorted, especially at the periphery. This is similar to the focus+context technique in information visualization, originally described [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 12" title="Furnas GW (1981) The FISHEYE view: a new look at structured files. AT&amp;T Bell Laboratories, Murray Hill, New Jersey" href="/article/10.1007/s10055-004-0134-0#ref-CR12" id="ref-link-section-d21412e894">12</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 13" title="Furnas GW (1986) Generalized Fisheye views: visualizing complex information spaces. In: Proceedings of the ACM conference on human factors in computing systems (CHI’86), Boston, Massachusetts, April 1986, pp 16–23" href="/article/10.1007/s10055-004-0134-0#ref-CR13" id="ref-link-section-d21412e898">13</a>].</p><p>In desktop contexts, where multiple external frames and windows are viable display venues for complementary information and supplemental views, it is especially important that designers establish a perceptual correspondence between objects in the 3D view and items in other areas of the screen real estate. In Gestalt terminology, this correspondence may be established by shared visual attributes, such as color (similarity), or by implicit or explicit user actions (common fate, such as synchronized highlighting). For example, if a user navigates to a nearby object in the 3D scene and a text area in another part of the screen changes to show the object’s description, there is a referential relation established and the user will expect this navigation action to have a similar effect with other objects.</p><p>The details of association and interaction design are likely to be platform-, application-, and task-specific. Still, steps can be taken in order to insure the perception of association by similarity (across windows or frames): the color of the description text or the color of the annotation background should match the referent object’s color for example. Violating such a simple guideline can lead to confusing and cognitively expensive user behavior [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 27" title="Stroop J (1935) Studies of interference in serial verbal reactions. J Exp Psychol 18:643–662" href="/article/10.1007/s10055-004-0134-0#ref-CR27" id="ref-link-section-d21412e906">27</a>].</p><p>There is also the display of parallel information where the same data in the 3D scene is displayed on screen with another visual encoding in the display-fixed venue. Generally, these can be classified as the<i> multiple-views</i> approach and require the sharing of addressable data objects and coordinated event communication between the views. If a user selects a data object in a 2D view, the corresponding object(s) in the 3D environment should feed back and be selected, and vice versa. In the case of standard Web data formats and runtimes, such coordination is implemented through an API (application program interface). The API for VRML is the External Authoring Interface (EAI) and for X3D it is called the Scene Access Interface (SAI). While the EAI is capable in its own right, the new SAI provides a much more expansive and rigorous set of functionalities for integrating external applications and windows with the VE.</p></div></div></section><section aria-labelledby="Sec10"><div class="c-article-section" id="Sec10-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec10">Design and layout techniques</h2><div class="c-article-section__content" id="Sec10-content"><p>This section describes a set of design solutions to the display challenges enumerated in the previous section. The basic objects in our system are a set of annotation panels that can be used in the 3D scene for object-, world-, or user-fixed annotations. These panels address the legibility requirement noted above and expose as much functionality as possible for the world author, including font color, family, line spacing, and justification, as well as panel color and transparency. The size of the annotation background panel (a 2D plane) is automatically computed according to the number of lines and the character width of the annotation. The string content of the node is exposed so that text content can be updated from events in the scenegraph. For textual and numeric information, we implemented two different panels for common situations: “unstructured” panels and field–value pair panels with a title (left and right of Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-004-0134-0#Fig2">2</a>, respectively). Similar panels may be constructed for image textures, movie texture, and graphs (i.e., Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-004-0134-0#Fig7">7</a>
+later). </p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-004-0134-0/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0134-0/MediaObjects/s10055-004-0134-0fhb2.jpg?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0134-0/MediaObjects/s10055-004-0134-0fhb2.jpg" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p> A variety of parameters for text annotation panels</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-004-0134-0/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+
+                <h3 class="c-article__sub-heading">Object- and world-fixed annotations</h3>
+                <p>Bederson et al. [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2" title="Bederson BB, Hollan JD, Perlin K, Meyer J, David B, Furnas G (1996) Pad++: a zoomable graphical sketchpad for exploring alternate interface physics. J Visual Lang Comput 7(1):3–32" href="/article/10.1007/s10055-004-0134-0#ref-CR2" id="ref-link-section-d21412e956">2</a>] proposed that interface designers appeal to user’s knowledge about the real world, i.e., that objects appear and behave differently depending on the scale of the view and the context. They have termed this “interface physics” and demonstrated the Pad++ system for “semantic zooming”, where both the content of the representation and the manipulation affordances it provides are directly and naturally available to the user. We have encapsulated similar display and interaction behaviors in the definitions of 3D objects themselves and implemented a range of design options and layout techniques for the display of related abstract information across scales. We call these<i> semantic objects</i>.</p>
+              <p>Semantic objects are especially designed for object- and world-fixed annotations. A number of important layout behaviors are encapsulated in the definition of semantic objects, which are parameterized for various solutions to the aggregation, visibility, and association issues mentioned above. Semantic object nodes maintain two sets of ordered children: one for object geometries and one for annotation informatics (annotation panels). They also maintain two lists of ranges (distance to user) that specify which child (level-of-detail and level-of-aggregation) is rendered at a given time. Thus, authors can choose to aggregate abstract information when the user is far away and show progressively more detail as they approach the object.</p><p>The annotation panel can be scaled a number of ways to maintain visibility. We implemented smooth scaling and periodic scaling as a function of user distance, as well as constant size. Preliminary evaluations on dynamic sizing of annotation panels have shown that the smooth scaling technique can confound the user’s normal depth cues and thus periodic sizing may be preferable.</p><p>In addition, we implemented a number of spatial layout techniques to address the association problem in the case of object-fixed annotation panels. The first we call<i> relative orthogonal</i>, where the author simply specifies the annotation panel’s position value (<i>x</i>,<i>
+y</i>,<i> z</i>) relative to the referent object. As the user navigates around the object, the annotation panel rotates to maintain this relative position orthogonal to the user’s perspective. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-004-0134-0#Fig3">3</a> shows an example of this technique. </p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-004-0134-0/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0134-0/MediaObjects/s10055-004-0134-0fhb3.jpg?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0134-0/MediaObjects/s10055-004-0134-0fhb3.jpg" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p> Object-fixed layout of a semantic object’s annotation panel (relative orthogonal)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-004-0134-0/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+<p>The second spatial layout technique for object-fixed association we call the<i> bounding box</i> method. In this method, the annotation panel snaps to the corner of the object’s bounding box nearest to the user. One issue here is that when the panel is located on a “left” corner of the bounds, the panel may have to be shifted left so as not to occlude the object. Optionally, for oddly-shaped objects, the author may specify a series of eight coordinates that define a bounding prism containing the object. While the bounding prism is not a rendered object, Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-004-0134-0#Fig4">4</a> shows an example of this technique with the bounding prism rendered for reference. </p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-004-0134-0/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0134-0/MediaObjects/s10055-004-0134-0fhb4.jpg?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0134-0/MediaObjects/s10055-004-0134-0fhb4.jpg" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p> Object-fixed layout of a semantic object’s annotation panel (bounding box shown for reference)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-004-0134-0/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+<p>Lastly, for object-fixed annotations, we examined a layout method to minimize the occlusion among panels and objects. Since we wanted to encapsulate layout behaviors in our semantic objects without resorting to an external manager, we implemented a flocking algorithm similar to [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 24" title="Reynolds CW (1987) Flocks, herds, and schools: a distributed behavioral model. Computer Graphics (SIGGRAPH 1987) 21(4):25–34" href="/article/10.1007/s10055-004-0134-0#ref-CR24" id="ref-link-section-d21412e1035">24</a>], in which a simple set of attraction/avoidance rules give rise to complex, emergent behavior. In our current version, annotation panels are attracted to the nearest corner of the bounding prism and avoid other semantic objects. While this approach requires some tuning of attraction/repulsion parameters, depending on environment crowding, by implementing such an algorithm we can avoid the need for centralized control of annotation layout. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-004-0134-0#Fig5">5</a> shows the result of our approach. </p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-004-0134-0/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0134-0/MediaObjects/s10055-004-0134-0fhb5.jpg?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0134-0/MediaObjects/s10055-004-0134-0fhb5.jpg" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p> Object-fixed layouts of semantic objects without (<i>left</i>) and with (<i>right</i>) flocking behavior</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-004-0134-0/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+
+                <h3 class="c-article__sub-heading">User-fixed annotations</h3>
+                <p>User-fixed annotations are fixed to the user’s view as they navigate the VE. Typically, they appear as HUDs or overlays on the image plane. While both are perceptually equivalent to the user, implementations can vary considerably.</p>
+              <p>For example, Java3D has an API for the Canvas object (the image plane) onto which 2D graphics can be laid. The Canvas object has<i> x</i> and<i> y</i> dimensions and objects rendered there are not defined as part of the VE (scenegraph) itself. In contrast, a common HUD, as implemented in VRML or X3D, is defined in the scenegraph, can have objects with<i>
+x</i>,<i> y</i>, and<i>
+z</i> coordinates, and does not necessarily know the size of the image plane. In this paradigm, the HUD must be offset from the user’s viewpoint and scaled within the field of view (usually at the near<i>
+z</i>-clipping plane so that objects from the scene to not interfere with visibility at close ranges).</p><p>We implemented a VRML HUD prototype object that can take arbitrary sensor and geometry nodes, such as text, image, or graph panels, as children. Because these nodes are instantiated in the scenegraph, it is trivial to route events to objects in the HUD, and vice versa. This event interaction is crucial to establishing correspondence relations between scene objects and their annotation information through implicit or explicit user interaction. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-004-0134-0#Fig6">6</a> shows an example of our HUD object in use. </p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-6"><figure><figcaption><b id="Fig6" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 6</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-004-0134-0/figures/6" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0134-0/MediaObjects/s10055-004-0134-0fhb6.jpg?as=webp"></source><img aria-describedby="figure-6-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0134-0/MediaObjects/s10055-004-0134-0fhb6.jpg" alt="figure6" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-6-desc"><p> User-fixed layout of annotation information on a HUD: semantic object annotations are displayed by mouse-over (<i>left</i>) and by selection (<i>right</i>)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-004-0134-0/figures/6" data-track-dest="link:Figure6 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+
+                <h3 class="c-article__sub-heading">Display-fixed annotations</h3>
+                <p>While desktop VEs provide the experience of interactive 3D spaces to a larger audience (especially through Web3D standard formats), they also open up a large set of challenges and choices designers have to consider, such as screen resolution and window management. In a Web browser, supplemental abstract information may be provided by hyperlinks to load information in frames, popup windows, and applets.</p>
+              <p>If a user locates the pointer (e.g., a mouse) over an object in the 3D scene (an explicit action) and a window frame updates, a referential association is established. Similarly, if a user selects an object in the 3D scene and a popup window opens loading a display of detail attributes, that window becomes the annotation venue.</p><p>Semantic object’s annotation panels themselves can carry <span class="u-monospace">Anchor{}</span> node hyperlinks that launch a popup window for supplemental information or a detailed 3D view. Previously [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 21" title="Polys, NF (2003) The VirtuPortal: opening new dimensions on the Web,&#xA;                    http://www.3DeZ.net&#xA;                    &#xA;                  &#xA;" href="/article/10.1007/s10055-004-0134-0#ref-CR21" id="ref-link-section-d21412e1142">21</a>], we have implemented a portal interface, using standard Web technologies, that checks the user’s screen resolution and launches supplemental information in a popup window when the user clicks on an object for more details (see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-004-0134-0#Fig1">1</a>). The VE itself is embedded in a frame where links in the HTML menu (left) load content in the 3D window.</p>
+                <h3 class="c-article__sub-heading">Multiple coordinated annotations</h3>
+                <p>There may also be a variety of abstract information types that are related to a given spatial data record. For each of these types, there are already effective 2D visualization techniques that we want to use. Our group has conducted preliminary research into this approach, highlighting architectural and usability design issues for coordinated multiple views in IRVEs, including indexing between perceptual, abstract, and temporal information (i.e., [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 22" title="Polys N, North C, Bowman D, Ray A, Moldenhauer M, Dandekar C (2004a) Snap2Diverse: coordinating information visualizations and virtual environments. In: Proceedings of the SPIE conference on visualization and data analysis (VDA2004), San Jose, California, January 2004" href="/article/10.1007/s10055-004-0134-0#ref-CR22" id="ref-link-section-d21412e1155">22</a>]). Coordinating brushing and linking interactions between multiple views has shown a significant speed-up on overview plus detail tasks [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 18" title="North C, Shneiderman B (2000) Snap-together visualization: can users construct and operate coordinated views? Int J Hum Comput St 53(5):715–739" href="/article/10.1007/s10055-004-0134-0#ref-CR18" id="ref-link-section-d21412e1158">18</a>] and North [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 17" title="North C (2001) Multiple views and tight coupling in visualization: a language, taxonomy, and system. In: Proceedings of the CSREA CISST 2001 workshop of fundamental issues in visualization, June 2001 pp 626–632" href="/article/10.1007/s10055-004-0134-0#ref-CR17" id="ref-link-section-d21412e1161">17</a>] has described a language, taxonomy, and system for user-defined, coordinated multiple views. To support such interactions with existing visualizations, semantic objects also encapsulate behaviors for selecting, being selected, and navigating to.</p>
+              <p>Baldonado, Woodruff, Kuchinsky [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1" title="Baldonado M, Woodruff A, Kuchinsky A (2000) Guidelines for using multiple views in information visualization. In: Proceedings of the conference on advanced visual interfaces (AVI2000), Palermo, Italy, May 2000" href="/article/10.1007/s10055-004-0134-0#ref-CR1" id="ref-link-section-d21412e1168">1</a>] have proposed guidelines for building multiple view visualizations. They claim four criteria regarding how to choose multiple views: diversity, complementarity, parsimony, and decomposition. Also, they put forward four criteria for presentation and interaction design: space/time resource optimization, self-evidence, consistency, and attention management. Recent empirical research supports these guidelines [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 7" title="Convertino G, Chen J, Yost B, Young-Sam R, North C (2003) Exploring context switching and cognition in dual-view coordinated visualizations. In: Proceedings of the international conference on coordinated and multiple views in exploratory visualization (CMV2003), London, UK, July 2003, 15:57–66" href="/article/10.1007/s10055-004-0134-0#ref-CR7" id="ref-link-section-d21412e1171">7</a>] and methodologies for designing multiple windows interfaces with display-fixed annotations should evaluate their design according to these criteria.</p></div></div></section><section aria-labelledby="Sec11"><div class="c-article-section" id="Sec11-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec11">Application example: biomedical visualization</h2><div class="c-article-section__content" id="Sec11-content"><p>We are using our semantic objects and HUD in a biomedical visualization application designed for desktop users via a Web interface. Anatomy and medical applications are a prime domain for IRVEs, since there can be a wealth of abstract and temporal information related to spatial objects, such as systems, organs, tissues, cells, etc. The PathSim project [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 8" title="Duca K, Laubenbacher R (2003) PathSim. Virginia Bioinformatics Institute, &#xA;                    http://www.vbi.vt.edu/~pathsim&#xA;                    &#xA;                  &#xA;" href="/article/10.1007/s10055-004-0134-0#ref-CR8" id="ref-link-section-d21412e1182">8</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 23" title="Polys N, Bowman D, North C, Laubenbacher R, Duca K (2004b) PathSim visualizer: an information-rich virtual environment for systems biology. In: Proceedings of the 9th international conference on 3D Web technology (Web3D2004), Monterey, California, April 2004" href="/article/10.1007/s10055-004-0134-0#ref-CR23" id="ref-link-section-d21412e1185">23</a>] simulates pathogen/host agent interaction with a computer model built from clinical knowledge. Users can analyze the simulation results from the global level down to microscopic tissue with numerical, color-coded, and histogram renderings of agent populations. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-004-0134-0#Fig7">7</a> shows a set of results from a simulated viral infection of the tonsils. </p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-7"><figure><figcaption><b id="Fig7" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 7</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-004-0134-0/figures/7" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0134-0/MediaObjects/s10055-004-0134-0fhb7.jpg?as=webp"></source><img aria-describedby="figure-7-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0134-0/MediaObjects/s10055-004-0134-0fhb7.jpg" alt="figure7" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-7-desc"><p> PathSim desktop IRVE application showing a variety of annotation panels in semantic objects and HUD display venues</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-004-0134-0/figures/7" data-track-dest="link:Figure7 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+<p>For this application, biology systems investigators require both overview and detailed abstract information as it relates to various systems and parts of the anatomy over time. For global view and control, regardless of scale and time, the HUD contains DVD controller buttons and a slider interface for users to navigate through the time series. Additionally, on the HUD are selectable buttons where users can pick the active population color attribute for the tonsils. The active color-coding and the simulation run’s index number are also explicitly displayed on the HUD using our annotation panels.</p><p>In the PathSim desktop IRVE interface, we use semantic objects in a number of ways. For example, the 3D anatomical models are annotated with names, references, and scale factors. As users zoom into smaller scales, more detailed geometry and information is displayed. At these detail levels, field–value pairs are displayed showing the population numbers for each active tonsil and system (e.g., circulatory and lymphatic). At the microscopic levels, each unit tissue section is also annotated with population field–value pairs. The unit tissue sections are hyperlinked to popup detail window views of the finite difference mesh on which the simulation runs.</p><p>Formative evaluations of the PathSim interface have shown that the relative orthogonal layout technique with periodically scaled annotation panels yields the most consistent display results with regards to visibility, legibility, association, and occlusion. Other anatomical geometries (such as the brain or lungs) and other applications (such as educational) are likely to have different requirements for abstract annotation display. Using the IRVE design space, we have defined a finite, well-designed set of annotation layout techniques that can answer the typical requirements for integrated information spaces and be rapidly deployed and tested.</p></div></div></section><section aria-labelledby="Sec12"><div class="c-article-section" id="Sec12-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec12">Summary and future work</h2><div class="c-article-section__content" id="Sec12-content"><p>We have enumerated the scope of design challenges and options for the display of abstract information in desktop VEs and demonstrated an object-oriented approach to encapsulating a variety of display behaviors. The techniques we describe solve a number of fundamental challenges for information design across display locations. The next phase of our IRVE research involves task-oriented empirical evaluation and comparison of these IRVE design methods. We hope the results of this research will aid the development of design heuristics for improved instructional and informative interfaces that are applicable to a variety of domains including medicine, architecture, and CAD/CAM.</p><p>In addition, this work is contributing to the development of better standards, such as X3D, to support integrated visualization of abstract information in VEs. For example, our prototypes are elucidating perceptual and architectural issues for the design of new X3D components, such as annotation and compositing. As data archives trend toward self-describing and annotated repositories, a systematic consideration of challenges and techniques for the display of enhancing abstract information is required for the development of more usable IRVE interfaces and integrated knowledge bases.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Baldonado M, Woodruff A, Kuchinsky A (2000) Guidelines for using multiple views in information visualization. " /><span class="c-article-references__counter">1.</span><p class="c-article-references__text" id="ref-CR1">Baldonado M, Woodruff A, Kuchinsky A (2000) Guidelines for using multiple views in information visualization. In: Proceedings of the conference on advanced visual interfaces (AVI2000), Palermo, Italy, May 2000</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content=". Bederson, " /><meta itemprop="datePublished" content="1996" /><meta itemprop="headline" content="Bederson BB, Hollan JD, Perlin K, Meyer J, David B, Furnas G (1996) Pad++: a zoomable graphical sketchpad for " /><span class="c-article-references__counter">2.</span><p class="c-article-references__text" id="ref-CR2">Bederson BB, Hollan JD, Perlin K, Meyer J, David B, Furnas G (1996) Pad++: a zoomable graphical sketchpad for exploring alternate interface physics. J Visual Lang Comput 7(1):3–32</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1006%2Fjvlc.1996.0002" aria-label="View reference 2">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 2 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=&amp;journal=J%20Visual%20Lang%20Comput&amp;volume=7&amp;publication_year=1996&amp;author=Bederson%2C">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bertin J (1981) Berg W, Scott P (trans) Graphics and graphic information processing. Walter de Gruyter, Berlin" /><span class="c-article-references__counter">3.</span><p class="c-article-references__text" id="ref-CR3">Bertin J (1981) Berg W, Scott P (trans) Graphics and graphic information processing. Walter de Gruyter, Berlin New York</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bowman D, North C, Chen J, Polys N, Pyla P, Yilmaz U (2003) Information-rich virtual environments: theory, too" /><span class="c-article-references__counter">4.</span><p class="c-article-references__text" id="ref-CR4">Bowman D, North C, Chen J, Polys N, Pyla P, Yilmaz U (2003) Information-rich virtual environments: theory, tools, and research agenda. In: Proceedings of the conference on virtual reality software and technology (VRST2003), Osaka, Japan, October 2003</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content=". Card, " /><meta itemprop="datePublished" content="1999" /><meta itemprop="headline" content="Card S, Mackinlay J, Shneiderman B (1999) Information visualization: using vision to think. Morgan Kaufmann, S" /><span class="c-article-references__counter">5.</span><p class="c-article-references__text" id="ref-CR5">Card S, Mackinlay J, Shneiderman B (1999) Information visualization: using vision to think. Morgan Kaufmann, San Francisco</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 5 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=&amp;journal=Information&amp;volume=visualization&amp;publication_year=1999&amp;author=Card%2C">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Chen J, Pyla P, Bowman D (2004) Testbed evaluation of navigation and text display techniques in an information" /><span class="c-article-references__counter">6.</span><p class="c-article-references__text" id="ref-CR6">Chen J, Pyla P, Bowman D (2004) Testbed evaluation of navigation and text display techniques in an information-rich virtual environment. In: Proceedings of the IEEE VR 2004 conference, Chicago, Illinois, March 2004</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Convertino G, Chen J, Yost B, Young-Sam R, North C (2003) Exploring context switching and cognition in dual-vi" /><span class="c-article-references__counter">7.</span><p class="c-article-references__text" id="ref-CR7">Convertino G, Chen J, Yost B, Young-Sam R, North C (2003) Exploring context switching and cognition in dual-view coordinated visualizations. In: Proceedings of the international conference on coordinated and multiple views in exploratory visualization (CMV2003), London, UK, July 2003, 15:57–66</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Duca K, Laubenbacher R (2003) PathSim. Virginia Bioinformatics Institute, http://www.vbi.vt.edu/~pathsim&#xA;" /><span class="c-article-references__counter">8.</span><p class="c-article-references__text" id="ref-CR8">Duca K, Laubenbacher R (2003) PathSim. Virginia Bioinformatics Institute, <a href="http://www.vbi.vt.edu/~pathsim">http://www.vbi.vt.edu/~pathsim</a>
+</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Fauconnier G (1997) Mappings in thought and language. Cambridge University Press, Cambridge" /><span class="c-article-references__counter">9.</span><p class="c-article-references__text" id="ref-CR9">Fauconnier G (1997) Mappings in thought and language. Cambridge University Press, Cambridge</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Feiner S, Macintyre B, Haupt M, Solomon E (1993) Windows on the world: 2D windows for 3D augmented reality. In" /><span class="c-article-references__counter">10.</span><p class="c-article-references__text" id="ref-CR10">Feiner S, Macintyre B, Haupt M, Solomon E (1993) Windows on the world: 2D windows for 3D augmented reality. In: Proceedings of the 6th ACM symposium on user interface software and technology (UIST1993), Atlanta, Georgia, November 1993, pp 145–155</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Friedhoff R, Peercy Mark (2000) Visual computing. Scientific American Library, New York" /><span class="c-article-references__counter">11.</span><p class="c-article-references__text" id="ref-CR11">Friedhoff R, Peercy Mark (2000) Visual computing. Scientific American Library, New York</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content=". Furnas, " /><meta itemprop="datePublished" content="1981" /><meta itemprop="headline" content="Furnas GW (1981) The FISHEYE view: a new look at structured files. AT&amp;T Bell Laboratories, Murray Hill, New Je" /><span class="c-article-references__counter">12.</span><p class="c-article-references__text" id="ref-CR12">Furnas GW (1981) The FISHEYE view: a new look at structured files. AT&amp;T Bell Laboratories, Murray Hill, New Jersey</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 12 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=&amp;journal=The%20FISHEYE&amp;volume=view&amp;publication_year=1981&amp;author=Furnas%2C">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Furnas GW (1986) Generalized Fisheye views: visualizing complex information spaces. In: Proceedings of the ACM" /><span class="c-article-references__counter">13.</span><p class="c-article-references__text" id="ref-CR13">Furnas GW (1986) Generalized Fisheye views: visualizing complex information spaces. In: Proceedings of the ACM conference on human factors in computing systems (CHI’86), Boston, Massachusetts, April 1986, pp 16–23</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Goguen J (2000) Information visualizations and semiotic morphisms. University of California, San Diego, http:/" /><span class="c-article-references__counter">14.</span><p class="c-article-references__text" id="ref-CR14">Goguen J (2000) Information visualizations and semiotic morphisms. University of California, San Diego, <a href="http://citeseer.ist.psu.edu/goguen00information.html">http://citeseer.ist.psu.edu/goguen00information.html</a>
+</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content=". Keller, " /><meta itemprop="datePublished" content="1993" /><meta itemprop="headline" content="Keller PR (1993) Visual cues: practical data visualization. IEEE Computer Society Press, Los Alamitos, Califor" /><span class="c-article-references__counter">15.</span><p class="c-article-references__text" id="ref-CR15">Keller PR (1993) Visual cues: practical data visualization. IEEE Computer Society Press, Los Alamitos, California</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 15 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=&amp;journal=Visual&amp;volume=cues&amp;publication_year=1993&amp;author=Keller%2C">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Norman DA (1986) Cognitive engineering. In: Norman DA, Draper SD (eds) User centered system design: new perspe" /><span class="c-article-references__counter">16.</span><p class="c-article-references__text" id="ref-CR16">Norman DA (1986) Cognitive engineering. In: Norman DA, Draper SD (eds) User centered system design: new perspectives on human–computer interaction. Lawrence Erlbaum Associates, Hillsdale, New Jersey, pp 31–61</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="North C (2001) Multiple views and tight coupling in visualization: a language, taxonomy, and system. In: Proce" /><span class="c-article-references__counter">17.</span><p class="c-article-references__text" id="ref-CR17">North C (2001) Multiple views and tight coupling in visualization: a language, taxonomy, and system. In: Proceedings of the CSREA CISST 2001 workshop of fundamental issues in visualization, June 2001 pp 626–632</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content=". North, " /><meta itemprop="datePublished" content="2000" /><meta itemprop="headline" content="North C, Shneiderman B (2000) Snap-together visualization: can users construct and operate coordinated views? " /><span class="c-article-references__counter">18.</span><p class="c-article-references__text" id="ref-CR18">North C, Shneiderman B (2000) Snap-together visualization: can users construct and operate coordinated views? Int J Hum Comput St 53(5):715–739</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1006%2Fijhc.2000.0418" aria-label="View reference 18">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" href="http://www.emis.de/MATH-item?1011.68631" aria-label="View reference 18 on MATH">MATH</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 18 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=&amp;journal=Int%20J%20Hum%20Comput%20St&amp;volume=53&amp;publication_year=2000&amp;author=North%2C">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Perkins D (2000) Archimedes’ bathtub. Norton, New York" /><span class="c-article-references__counter">19.</span><p class="c-article-references__text" id="ref-CR19">Perkins D (2000) Archimedes’ bathtub. Norton, New York</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Pickett RM, Grinstein G, Levkowitz H, Smith S (1995) Harnessing preattentive processes in visualization. In: G" /><span class="c-article-references__counter">20.</span><p class="c-article-references__text" id="ref-CR20">Pickett RM, Grinstein G, Levkowitz H, Smith S (1995) Harnessing preattentive processes in visualization. In: Grinstein G, Levkoitz H (eds) Perceptual issues in visualization. Springer, Berlin Heidelberg New York</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Polys, NF (2003) The VirtuPortal: opening new dimensions on the Web,http://www.3DeZ.net&#xA;" /><span class="c-article-references__counter">21.</span><p class="c-article-references__text" id="ref-CR21">Polys, NF (2003) The VirtuPortal: opening new dimensions on the Web,<a href="http://www.3DeZ.net">http://www.3DeZ.net</a>
+</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Polys N, North C, Bowman D, Ray A, Moldenhauer M, Dandekar C (2004a) Snap2Diverse: coordinating information vi" /><span class="c-article-references__counter">22.</span><p class="c-article-references__text" id="ref-CR22">Polys N, North C, Bowman D, Ray A, Moldenhauer M, Dandekar C (2004a) Snap2Diverse: coordinating information visualizations and virtual environments. In: Proceedings of the SPIE conference on visualization and data analysis (VDA2004), San Jose, California, January 2004</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Polys N, Bowman D, North C, Laubenbacher R, Duca K (2004b) PathSim visualizer: an information-rich virtual env" /><span class="c-article-references__counter">23.</span><p class="c-article-references__text" id="ref-CR23">Polys N, Bowman D, North C, Laubenbacher R, Duca K (2004b) PathSim visualizer: an information-rich virtual environment for systems biology. In: Proceedings of the 9th international conference on 3D Web technology (Web3D2004), Monterey, California, April 2004</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content=". Reynolds, " /><meta itemprop="datePublished" content="1987" /><meta itemprop="headline" content="Reynolds CW (1987) Flocks, herds, and schools: a distributed behavioral model. Computer Graphics (SIGGRAPH 198" /><span class="c-article-references__counter">24.</span><p class="c-article-references__text" id="ref-CR24">Reynolds CW (1987) Flocks, herds, and schools: a distributed behavioral model. Computer Graphics (SIGGRAPH 1987) 21(4):25–34</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 24 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=&amp;journal=Computer&amp;volume=Graphics&amp;publication_year=1987&amp;author=Reynolds%2C">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="MC. Salzman, C. Dede, LR. Bowen, J. Chen, " /><meta itemprop="datePublished" content="1999" /><meta itemprop="headline" content="Salzman MC, Dede C, Bowen LR, Chen J (1999) A model for understanding how virtual reality aids complex concept" /><span class="c-article-references__counter">25.</span><p class="c-article-references__text" id="ref-CR25">Salzman MC, Dede C, Bowen LR, Chen J (1999) A model for understanding how virtual reality aids complex conceptual learning. Presence-Teleop Virt 8(3):293–316</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 25 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=A%20model%20for%20understanding%20how%20virtual%20reality%20aids%20complex%20conceptual%20learning&amp;journal=Presence-Teleop%20Virt&amp;volume=8&amp;issue=3&amp;pages=293-316&amp;publication_year=1999&amp;author=Salzman%2CMC&amp;author=Dede%2CC&amp;author=Bowen%2CLR&amp;author=Chen%2CJ">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Shneiderman B (1996) The eyes have it: a task by data type taxonomy for information visualizations. In: Procee" /><span class="c-article-references__counter">26.</span><p class="c-article-references__text" id="ref-CR26">Shneiderman B (1996) The eyes have it: a task by data type taxonomy for information visualizations. In: Proceedings of the IEEE symposium on Visual Languages, Boulder, Colorado, September 1996, pp 336–343</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content=". Stroop, " /><meta itemprop="datePublished" content="1935" /><meta itemprop="headline" content="Stroop J (1935) Studies of interference in serial verbal reactions. J Exp Psychol 18:643–662" /><span class="c-article-references__counter">27.</span><p class="c-article-references__text" id="ref-CR27">Stroop J (1935) Studies of interference in serial verbal reactions. J Exp Psychol 18:643–662</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 27 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=&amp;journal=J%20Exp%20Psychol&amp;volume=18&amp;publication_year=1935&amp;author=Stroop%2C">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Sutcliffe A, Faraday P (1994) Designing presentation in multimedia interfaces. In: Proceedings of the ACM conf" /><span class="c-article-references__counter">28.</span><p class="c-article-references__text" id="ref-CR28">Sutcliffe A, Faraday P (1994) Designing presentation in multimedia interfaces. In: Proceedings of the ACM conference on computer–human interaction, Boston, Massachusetts</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Tufte E (1990) Envisioning information. Graphics Press, Cheshire, Connecticut" /><span class="c-article-references__counter">29.</span><p class="c-article-references__text" id="ref-CR29">Tufte E (1990) Envisioning information. Graphics Press, Cheshire, Connecticut</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Vanderdonckt J, Gillo X (1994) Visual techniques for traditional and multimedia layouts. In: Proceedings of th" /><span class="c-article-references__counter">30.</span><p class="c-article-references__text" id="ref-CR30">Vanderdonckt J, Gillo X (1994) Visual techniques for traditional and multimedia layouts. In: Proceedings of the ACM conference on advanced visual interfaces, Bari, Italy</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Ware C (2003) Design as applied perception. In: Carrol JM (ed) HCI models, theories, and frameworks: towards a" /><span class="c-article-references__counter">31.</span><p class="c-article-references__text" id="ref-CR31">Ware C (2003) Design as applied perception. In: Carrol JM (ed) HCI models, theories, and frameworks: towards a multidisciplinary science. Morgan Kaufmann, San Francisco, California</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Watzman S (2002) Visual design principles for usable interfaces. In: Stanney K (ed) Computer interaction handb" /><span class="c-article-references__counter">32.</span><p class="c-article-references__text" id="ref-CR32">Watzman S (2002) Visual design principles for usable interfaces. In: Stanney K (ed) Computer interaction handbook: design, implementations, and applications. Lawrence Erlbaum Associates, Mahwah, New Jersey</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Web3D Consortium (2004) Specifications: http://www.web3d.org/fs_specifications.htm&#xA;" /><span class="c-article-references__counter">33.</span><p class="c-article-references__text" id="ref-CR33">Web3D Consortium (2004) Specifications: <a href="http://www.web3d.org/fs_specifications.htm">http://www.web3d.org/fs_specifications.htm</a>
+</p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-004-0134-0-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Ack1">Acknowledgements</h2><div class="c-article-section__content" id="Ack1-content"><p>The authors would like to thank members of the 3D Interaction Group at Virginia Tech’s Center for Human Computer Interaction for their review of and input to this manuscript, especially Chad Wingrave and Jian Chen. In addition, the people involved with the PathSim project: Dr. Karen Duca, Dr. Reinhard Laubenbacher and their research team at the Virginia Bioinformatics Institute: Jignesh Shah, Rohan Luktuke, and John McGee. All screenshots are captured from a Windows desktop using the ParallelGraphics Cortona VRML plugin with Internet Explorer (<a href="http://www.parallelgraphics.com">http://www.parallelgraphics.com</a>). All trademarks are the property of their owners.</p></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">Department of Computer Science &amp; Center for Human Computer Interaction, Virginia Polytechnic Institute and State University, Blacksburg, Virginia, 24060, USA</p><p class="c-article-author-affiliation__authors-list">Nicholas F. Polys &amp; Doug A. Bowman</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Nicholas_F_-Polys"><span class="c-article-authors-search__title u-h3 js-search-name">Nicholas F. Polys</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Nicholas F.+Polys&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Nicholas F.+Polys" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Nicholas F.+Polys%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Doug_A_-Bowman"><span class="c-article-authors-search__title u-h3 js-search-name">Doug A. Bowman</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Doug A.+Bowman&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Doug A.+Bowman" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Doug A.+Bowman%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-004-0134-0/email/correspondent/c1/new">Nicholas F. Polys</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=Design%20and%20display%20of%20enhancing%20information%20in%20desktop%20information-rich%20virtual%20environments%3A%20challenges%20and%20techniques&amp;author=Nicholas%20F.%20Polys%20et%20al&amp;contentID=10.1007%2Fs10055-004-0134-0&amp;publication=1359-4338&amp;publicationDate=2004-06-09&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Polys, N.F., Bowman, D.A. Design and display of enhancing information in desktop information-rich virtual environments: challenges and techniques.
+                    <i>Virtual Reality</i> <b>8, </b>41–54 (2004). https://doi.org/10.1007/s10055-004-0134-0</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-004-0134-0.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2003-12-12">12 December 2003</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2004-03-30">30 March 2004</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2004-06-09">09 June 2004</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2004-03">March 2004</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-004-0134-0" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-004-0134-0</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Information-rich virtual environments</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Visualization design</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Information psychophysics</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Multiple view architectures</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Desktop virtual environments</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-004-0134-0.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=134;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

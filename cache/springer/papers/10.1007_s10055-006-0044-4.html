@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="Collaborative virtual sculpting with haptic feedback"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="This paper introduces a haptic virtual environment in which two users can collaboratively sculpt a virtual clay model, working from different physical locations connected by the internet. They view..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/10/2.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="Collaborative virtual sculpting with haptic feedback"/>
+
+    <meta name="dc.source" content="Virtual Reality 2006 10:2"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2006-09-12"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2006 Springer-Verlag London Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="This paper introduces a haptic virtual environment in which two users can collaboratively sculpt a virtual clay model, working from different physical locations connected by the internet. They view their virtual sculpting tools and the clay model in 3D, feel the tool&#8217;s pressure on the clay as they work, and have their hands co-located with the view of the tool and model. Since the sculptors have independent views of the same logical environment, they can work at different zoom levels, and be in different coordinate systems, even spinning ones, at the same time. This provides them with the capability to explore new styles of collaborative creativity, working off each other&#8217;s initiative where appropriate. The system was designed to allow unrestrained, asynchronous behaviour by the collaborating sculptors. The paper describes the hardware as well as the algorithms behind the deformability of the clay surface and the communications model enabling the distance collaboration. It gives an explanation of the simple conflict resolution mechanism that haptic feedback facilitates and also reports on the results of a qualitative study into the creativity benefits of such a collaborative system."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2006-09-12"/>
+
+    <meta name="prism.volume" content="10"/>
+
+    <meta name="prism.number" content="2"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="73"/>
+
+    <meta name="prism.endingPage" content="83"/>
+
+    <meta name="prism.copyright" content="2006 Springer-Verlag London Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-006-0044-4"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-006-0044-4"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-006-0044-4.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-006-0044-4"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="Collaborative virtual sculpting with haptic feedback"/>
+
+    <meta name="citation_volume" content="10"/>
+
+    <meta name="citation_issue" content="2"/>
+
+    <meta name="citation_publication_date" content="2006/10"/>
+
+    <meta name="citation_online_date" content="2006/09/12"/>
+
+    <meta name="citation_firstpage" content="73"/>
+
+    <meta name="citation_lastpage" content="83"/>
+
+    <meta name="citation_article_type" content="Original Article"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-006-0044-4"/>
+
+    <meta name="DOI" content="10.1007/s10055-006-0044-4"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-006-0044-4"/>
+
+    <meta name="description" content="This paper introduces a haptic virtual environment in which two users can collaboratively sculpt a virtual clay model, working from different physical loca"/>
+
+    <meta name="dc.creator" content="Chris Gunn"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="AARNet (2006) AARNet&#8212;Australia&#8217;s Research and Education Network, 
+                    http://www.aarnet.edu.au/
+                    
+                  , cited 8 February 2006"/>
+
+    <meta name="citation_reference" content="Battle of Pydna (2006) 
+                    http://www.en.wikipedia.org/wiki/Battle_of_Pydna
+                    
+                  , cited 8 February 2006"/>
+
+    <meta name="citation_reference" content="Benford S, Bowers J, Fahlen L, Greenhalgh C (1994) Managing mutual awareness in collaborative virtual environments. In Proceedings of ACM VRST, 1994, pp. 223&#8211;236"/>
+
+    <meta name="citation_reference" content="Bogsyani F, Krumm-Heller A (2000) Scale and collocation in hapto-visual environments. In: Stereoscopic Displays and Virtual Reality Systems VII, Proceedings of SPIE, vol 3957, 2000"/>
+
+    <meta name="citation_reference" content="Calvin J, Dicken A, Gaines B, Metzger P, Miller D, Owen D (1993) The SIMNET Virtual World Architecture. In Proceedings of IEEE Virtual Reality Annual International Symposium, pp. 450&#8211;455, 1993"/>
+
+    <meta name="citation_reference" content="Carlsson C, Hagsand O (1993) DIVE&#8212;a multi-user virtual reality system. In Proceedings of IEEE VRAIS, 1993, pp. 394&#8211;400"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Teleoperat Virtual Environ; citation_title=Multioperator teleoperation of Multirobot Systems with time delay; citation_author=N Chong, S Kawabata, K Ohba, T Kotoku, K Komoriya, K Takase, K Tanie; citation_volume=11; citation_issue=3; citation_publication_date=2002; citation_pages=277-303; citation_id=CR7"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Rapid Prototyping J; citation_title=Electrophotographic printing of part and binder powders; citation_author=A Kumar, A Dutta, J Fay; citation_volume=10; citation_issue=1; citation_publication_date=2004; citation_pages=7-13; citation_doi=10.1108/13552540410512480; citation_id=CR8"/>
+
+    <meta name="citation_reference" content="Galyean T, Hughes J (1991) Sculpting: an interactive volumetric modelling technique. In Proceedings of ACM SIGGRAPH&#8217;91, vol. 25, 1991, pp.267&#8211;274"/>
+
+    <meta name="citation_reference" content="Gunn C (2005) Using force fields as a user interface device. In: proc. VR2005, Bonn, Germany, March 2005"/>
+
+    <meta name="citation_reference" content="Gunn C, Marando P (1999) Experiments on the haptic rendering of constraints: guiding the user. Simulation Technology and Training Conference, Melbourne, 1999"/>
+
+    <meta name="citation_reference" content="Gunn C, Hutchins M, Adcock M, Hawkins R (2003) Trans-world haptic collaboration. In Proceedings SIGGRAPH, San Diego, USA, July 2003"/>
+
+    <meta name="citation_reference" content="Gunn C, Hutchins M, Adcock M, Hawkins R (2004) Surgical training using haptics over long distances. In Proceedings of Medicine Meets Virtual Reality 12, USA, January 2004"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Teleoperat Virtual Environ; citation_title=Combating latency in haptic collaborative virtual environments; citation_author=C Gunn, M Hutchins, M Adcock; citation_volume=14; citation_issue=3; citation_publication_date=2005; citation_pages=313-328; citation_doi=10.1162/105474605323384663; citation_id=CR14"/>
+
+    <meta name="citation_reference" content="Hartman J, Wernecke J (1996) The VRML 2.0 handbook, 1996, Addison Wesley, Boston "/>
+
+    <meta name="citation_reference" content="Hespanha J, McLaughlin M, Sukhatme G, Akbarian M, Garg R, Zhu W (2000) Haptic collaboration over the Internet. Fifth Phantom Users&#8217; Group Workshop, 2000"/>
+
+    <meta name="citation_reference" content="Hutchins M, Adcock M, Stevenson D, Gunn C, Krumpholz A (2005a) The design of perceptual representations for practical networked multimodal virtual training environments, HCI International 2005: 11th International Conference on Human&#8211;Computer Interaction, Las Vegas, July 22&#8211;27, 2005"/>
+
+    <meta name="citation_reference" content="Hutchins M, O&#8217;Leary S, Stevenson D, Gunn C, Krumpholz A (2005b) A networked haptic virtual environment for teaching temporal bone surgery. In: Proceedings of Medicine Meets Virtual Reality (MMVR) 2005"/>
+
+    <meta name="citation_reference" content="Internet2 (2006) Internet2 Consortium., 
+                    http://www.internet2.edu/
+                    
+                  , cited 8 February 2006"/>
+
+    <meta name="citation_reference" content="Li F, Lau R, Ng F (2001) Collaborative distributed virtual sculpting Proceedings of IEEE VR, pp. 217&#8211;224, March 2001"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Trans Multimed; citation_title=VSculpt: a distributed virtual sculpting environment for collaborative design; citation_author=F Li, R Lau, F Ng; citation_volume=5; citation_issue=4; citation_publication_date=2003; citation_pages=570-580; citation_id=CR21"/>
+
+    <meta name="citation_reference" content="Matsumoto S, Fukuda I, Morino H, Hikichi K, Sezaki K, Yasuda Y (2000) The influences of network issues on haptic collaboration in shared virtual environments. Proceedings of Fifth Phantom Users&#8217; Group Workshop, 2000"/>
+
+    <meta name="citation_reference" content="Nishino H, Utsumiya K, Sakamoto A, Yoshida K, Korida K (1999) A method for sharing interactive deformations in collaborative 3D modelling. ACM VRST1999, pp. 116&#8211;123"/>
+
+    <meta name="citation_reference" content="Oakley I, Brewster S, Gray P (2001) Can you feel the force? An investigation of haptic collaboration in shared editors. Proceedings of EuroHaptics Conference"/>
+
+    <meta name="citation_reference" content="Ogawa, A. (2006) DVTS (Digital Video Transport System), 
+                    http://www.sfc.wide.ad.jp/DVTS/
+                    
+                  , cited 22 May 2006"/>
+
+    <meta name="citation_reference" content="Ramage and Ramage (1996), The A&#8211;Z of art: the world&#8217;s greatest and most popular artists and their works. Editors: Nicola Hodge and Libby Anson, p. 47"/>
+
+    <meta name="citation_reference" content="Reachin Technologies AB (2006) 
+                    http://www.reachin.se
+                    
+                  , cited 8 Feb 2006"/>
+
+    <meta name="citation_reference" content="Rhino (2006) 
+                    http://www.rhino32.com
+                    
+                  , cited 8 Feb 2006"/>
+
+    <meta name="citation_reference" content="Schkolne S, Pruett M, Schroder P (2001) Surface drawing: creating organic 3D shapes with the hand and tangible tools. SIGCHI conference on human factors in computing systems Seattle, Washington, US, pp 261&#8211;268, 2001"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Multimedia Syst J; citation_title=THRED: a two-handed design system; citation_author=C Shaw, M Green; citation_volume=5; citation_publication_date=1997; citation_pages=126-139; citation_doi=10.1007/s005300050048; citation_id=CR30"/>
+
+    <meta name="citation_reference" content="Stevens W (1998) Unix Network Programming, vol 1, 85&#8212;110, 2nd edn, Prentice Hall, NJ"/>
+
+    <meta name="citation_reference" content="Stevenson D, Smith K, McLaughlin J, Gunn C, Veldkamp J, Dixon M (1999) Haptic workbench: a multisensory virtual environment. In: Proceedings of SPIE&#8212;The International Society for Optical Engineering, 3639, pp 356&#8211;366"/>
+
+    <meta name="citation_reference" content="The Artist&#8217;s Life (2006) 
+                    http://www.renaissanceconnection.org/artistslife.html
+                    
+                  , cited 8 February 2006"/>
+
+    <meta name="citation_reference" content="Vasari G, Bull G (1987) Lives of the artists. Penguin Books, Harmondsworth"/>
+
+    <meta name="citation_reference" content="Williams L, McDowell C, Nagappan N, Fernald J, Werner L (2003) Building pair programming knowledge through a family of experiments. In: Proceedings of 2003 International Symposium on Empirical Software Engineering, ISESE 2003, October 2003"/>
+
+    <meta name="citation_author" content="Chris Gunn"/>
+
+    <meta name="citation_author_email" content="Chris.Gunn@csiro.au"/>
+
+    <meta name="citation_author_institution" content="Commonwealth Scientific and Industrial Research Organisation (CSIRO), Canberra, Australia"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-006-0044-4&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2006/10/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-006-0044-4"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="Collaborative virtual sculpting with haptic feedback"/>
+        <meta property="og:description" content="This paper introduces a haptic virtual environment in which two users can collaboratively sculpt a virtual clay model, working from different physical locations connected by the internet. They view their virtual sculpting tools and the clay model in 3D, feel the tool’s pressure on the clay as they work, and have their hands co-located with the view of the tool and model. Since the sculptors have independent views of the same logical environment, they can work at different zoom levels, and be in different coordinate systems, even spinning ones, at the same time. This provides them with the capability to explore new styles of collaborative creativity, working off each other’s initiative where appropriate. The system was designed to allow unrestrained, asynchronous behaviour by the collaborating sculptors. The paper describes the hardware as well as the algorithms behind the deformability of the clay surface and the communications model enabling the distance collaboration. It gives an explanation of the simple conflict resolution mechanism that haptic feedback facilitates and also reports on the results of a qualitative study into the creativity benefits of such a collaborative system."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>Collaborative virtual sculpting with haptic feedback | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-006-0044-4","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Haptics, Collaboration, Sculpting, Virtual environments","kwrd":["Haptics","Collaboration","Sculpting","Virtual_environments"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-006-0044-4","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-006-0044-4","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=44;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-006-0044-4">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            Collaborative virtual sculpting with haptic feedback
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-006-0044-4.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-006-0044-4.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">Original Article</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2006-09-12" itemprop="datePublished">12 September 2006</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">Collaborative virtual sculpting with haptic feedback</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Chris-Gunn" data-author-popup="auth-Chris-Gunn" data-corresp-id="c1">Chris Gunn<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Commonwealth Scientific and Industrial Research Organisation (CSIRO)" /><meta itemprop="address" content="grid.1016.6, Commonwealth Scientific and Industrial Research Organisation (CSIRO), GPO Box 664, Canberra, Australia" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 10</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">73</span>–<span itemprop="pageEnd">83</span>(<span data-test="article-publication-year">2006</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">276 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">17 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-006-0044-4/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>This paper introduces a haptic virtual environment in which two users can collaboratively sculpt a virtual clay model, working from different physical locations connected by the internet. They view their virtual sculpting tools and the clay model in 3D, feel the tool’s pressure on the clay as they work, and have their hands co-located with the view of the tool and model. Since the sculptors have independent views of the same logical environment, they can work at different zoom levels, and be in different coordinate systems, even spinning ones, at the same time. This provides them with the capability to explore new styles of collaborative creativity, working off each other’s initiative where appropriate. The system was designed to allow unrestrained, asynchronous behaviour by the collaborating sculptors. The paper describes the hardware as well as the algorithms behind the deformability of the clay surface and the communications model enabling the distance collaboration. It gives an explanation of the simple conflict resolution mechanism that haptic feedback facilitates and also reports on the results of a qualitative study into the creativity benefits of such a collaborative system.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Introduction</h2><div class="c-article-section__content" id="Sec1-content"><p>Art can be thought of as a record of human existence. Sculpture is one of the earliest forms of art. From ancient times to our own day, sculpture has represented the thoughts, ideas, emotions and experiences of humanity seen through the eyes of the artist. Sculptors have used their creativity to provide an insight into their interpretation of the characters and events of their times. Historically, sculpture has focused on the depiction of deities, such as the marble gods of Phidas, historical figures, such as the bust of Caesar Augustus, or the human form, such as Discobolus (the discus thrower). Larger works have depicted historical events. These have often been in the form of a relief due to the size of the works and the structural limitations of the materials being used. The earliest historical relief that survives is the one dedicated to Aemilius Paullus in 168<span class="u-small-caps"> bc</span>. It depicts the historical battle between the Romans and the Macedonians at Pydna (Battle of Pydna <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Battle of Pydna (2006) &#xA;                    http://www.en.wikipedia.org/wiki/Battle_of_Pydna&#xA;                    &#xA;                  , cited 8 February 2006" href="/article/10.1007/s10055-006-0044-4#ref-CR2" id="ref-link-section-d65570e281">2006</a>, <a href="http://www.en.wikipedia.org/wiki/Battle_of_Pydna">http://www.en.wikipedia.org/wiki/Battle_of_Pydna</a>).</p><p>Societies have long used sculpture as a great leveler since it does not matter if a person cannot read or write (or even hear or see); they can enjoy it and can try to understand the messages behind the form. In more recent times, sculpture has been used to denote more abstract geometric concepts such as flow, symmetry and juxtaposition. The theory behind sculpture has even been applied to landscaping, architecture and product design.</p><p>From ancient times, sculptures have been primarily the work and inspiration of an individual artist. However, many of the larger Greek and Roman works, as well as those of the renaissance, have also included input from one or more apprentices working in a team. Michelangelo spent his early years as an apprentice to the artist Ghirlandio. (He later tried to suppress this fact, implying that he was largely self-taught, perhaps because he did not want to present himself as a product of the workshop system which carried with it the stigma of teaching crafts rather than art (Ramage and Ramage <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1996" title="Ramage and Ramage (1996), The A–Z of art: the world’s greatest and most popular artists and their works. Editors: Nicola Hodge and Libby Anson, p. 47" href="/article/10.1007/s10055-006-0044-4#ref-CR26" id="ref-link-section-d65570e296">1996</a>).</p><p>Right up to the present day, sculpture is perceived primarily as the product of the inspiration and creativity of an individual artist, with the co-operation of any assisting artists being relegated to supportive roles. Traditional (physical as opposed to digital) sculpture has rarely ventured into the realm of allowing two or more sculptors to co-operatively create a work of art and thereby contribute equally to the originality of the activity. If there has been any co-operation between artists in the creative process, it has been a sequential process, with one artist passing on a part-finished work to the other, or two or more artists working on separate components of the whole work (The Artist’s Life et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="The Artist’s Life (2006) &#xA;                    http://www.renaissanceconnection.org/artistslife.html&#xA;                    &#xA;                  , cited 8 February 2006" href="/article/10.1007/s10055-006-0044-4#ref-CR33" id="ref-link-section-d65570e302">2006</a>; Vasari and Bull <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1987" title="Vasari G, Bull G (1987) Lives of the artists. Penguin Books, Harmondsworth" href="/article/10.1007/s10055-006-0044-4#ref-CR34" id="ref-link-section-d65570e305">1987</a>).</p><p>In this paper we describe a system that allows two artists to simultaneously work co-operatively on a common sculpture in a virtual environment. The over-riding goal of the project was to allow unrestrained, individual interaction with the model by two sculptors, without being encumbered by the constraints of their own physical bodies. They would be able to move their hands freely around the model, and interact with it in a natural way, but also have the freedom to ‘pass through each other’s bodies’ in a super-natural way. Artificial constraints imposed by the digital technology were to be minimized, allowing each sculptor to poke, mould, carve and paint any part of the model at any time. The technology should not get in the way of the creativity, nor stifle the imagination. The aim was to create a co-operative environment where the sculptors could see, feel and interact with each other’s work as it was being created, without being constrained by turn-taking or sharing protocols.</p><p>In real-world pottery and sculpture, two artists working on a common work obviously have physical bodies that will limit their actions and behaviour. They will typically collide hands, arms and bodies if they should try to work on a similar area of a piece at the same time. Using a digital, computer-generated, environment we are able to circumvent some of the aspects of the real world that are not to our benefit, and take advantage of those that are. However, with the use of haptics we can reproduce physical elements from reality when it suits our purpose, and also take advantage of the ‘magic’ or non-physically based capabilities of a virtual environment where it is advantageous to do so.</p><p>Digital 3D modelling involves using a computer to create a conceptual 3D model which is typically represented as a 2D projection on a computer screen (e.g. Maya, 3DSMax, ZBrush, Renderman; Rhino et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Rhino (2006) &#xA;                    http://www.rhino32.com&#xA;                    &#xA;                  , cited 8 Feb 2006" href="/article/10.1007/s10055-006-0044-4#ref-CR28" id="ref-link-section-d65570e316">2006</a>). Using 3D stereo viewing technology, two slightly differing 2D projections of this model can be delivered to the viewer’s left and right eyes respectively, to create the illusion that they are viewing a 3D shape. Digital sculpting is a term used to describe a free-form style of digital modelling, where the user directly interacts with the virtual modelling material, rather than with on-screen widgets that may in turn modify the model. Since the user is interacting with the 3D shape itself, hand motions need to also be three dimensional, using some kind of 3D interaction tool (Schkolne et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Schkolne S, Pruett M, Schroder P (2001) Surface drawing: creating organic 3D shapes with the hand and tangible tools. SIGCHI conference on human factors in computing systems Seattle, Washington, US, pp 261–268, 2001" href="/article/10.1007/s10055-006-0044-4#ref-CR29" id="ref-link-section-d65570e319">2001</a>; Galyean and Hughes <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1991" title="Galyean T, Hughes J (1991) Sculpting: an interactive volumetric modelling technique. In Proceedings of ACM SIGGRAPH’91, vol. 25, 1991, pp.267–274" href="/article/10.1007/s10055-006-0044-4#ref-CR9" id="ref-link-section-d65570e322">1991</a>). Haptic systems allow users to feel the objects they are working on through force feedback. Haptically enabled digital sculpting applications enable users to feel as well as see the modelling medium as they work. Shaw and Green (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="Shaw C, Green M (1997) THRED: a two-handed design system. Multimedia Syst J 5:126–139" href="/article/10.1007/s10055-006-0044-4#ref-CR30" id="ref-link-section-d65570e325">1997</a>) describe a digital sculpting system which has visual feedback and 3D interaction but does not provide any haptic interaction. Li et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Li F, Lau R, Ng F (2003) VSculpt: a distributed virtual sculpting environment for collaborative design. IEEE Trans Multimed 5(4):570–580" href="/article/10.1007/s10055-006-0044-4#ref-CR21" id="ref-link-section-d65570e328">2003</a>) developed a system which allows the user to sculpt control points which adjust the surface model indirectly. SensAble Technologies SensAble Technologies Inc <a href="http://www.sensable.com">http://www.sensable.com</a> market a product called FreeForm<sup>®</sup> Sensable Technologies Freeform system <a href="http://www.sensable.com/products/3ddesign/concept/index.asp">http://www.sensable.com/products/3ddesign/concept/index.asp</a> which allows a user to build up and sculpt a voxel model of a sculpture, assisted by haptic feedback. Nishino et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Nishino H, Utsumiya K, Sakamoto A, Yoshida K, Korida K (1999) A method for sharing interactive deformations in collaborative 3D modelling. ACM VRST1999, pp. 116–123" href="/article/10.1007/s10055-006-0044-4#ref-CR23" id="ref-link-section-d65570e348">1999</a>) describe a collaborative sculpting system that uses implicit surfaces, but has no haptic feedback. None of these systems allow both collaborative sculpting and haptics. The system we developed is a surface-based sculpting system, which has haptic feedback as well as 3D stereo graphics, and also allows simultaneous collaborative sculpting by two sculptors. It was trialled along with an integrated video conferencing facility to allow the collaborating sculptors to communicate face to face.</p><p>After a digital model has been created in a virtual environment, the problem remains that it is potentially ‘trapped’ inside the bits and bytes of the electronic system. Although we did not address this problem directly, there exist technologies for ‘freeing’ the model into the real, physical world. 3D printing equipment is now commercially available and can potentially be used to ‘solidify’ the digital models (Kumar et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Kumar A, Dutta A, Fay J (2004) Electrophotographic printing of part and binder powders. Rapid Prototyping J 10(1):7–13" href="/article/10.1007/s10055-006-0044-4#ref-CR8" id="ref-link-section-d65570e354">2004</a>). The system described here allows export to virtual reality modelling language (VRML) (Hartman and Wernecke <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1996" title="Hartman J, Wernecke J (1996) The VRML 2.0 handbook, 1996, Addison Wesley, Boston " href="/article/10.1007/s10055-006-0044-4#ref-CR15" id="ref-link-section-d65570e357">1996</a>), which then allows import into these 3D printing technologies as well as other applications, including web browsers.</p></div></div></section><section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">Hardware</h2><div class="c-article-section__content" id="Sec2-content"><p>To reproduce a realistic clay-sculpting experience in a virtual environment we considered it necessary to provide haptic feedback approximating that which a sculptor would expect when working with real material. The interaction point should be co-located with the visual representation of the model. An effective solution to this is the CSIRO Haptic Workbench (Stevenson et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Stevenson D, Smith K, McLaughlin J, Gunn C, Veldkamp J, Dixon M (1999) Haptic workbench: a multisensory virtual environment. In: Proceedings of SPIE—The International Society for Optical Engineering, 3639, pp 356–366" href="/article/10.1007/s10055-006-0044-4#ref-CR32" id="ref-link-section-d65570e368">1999</a>), a hardware configuration which has been previously described for use in mining applications (Gunn and Marando <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Gunn C, Marando P (1999) Experiments on the haptic rendering of constraints: guiding the user. Simulation Technology and Training Conference, Melbourne, 1999" href="/article/10.1007/s10055-006-0044-4#ref-CR11" id="ref-link-section-d65570e371">1999</a>; Gunn <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Gunn C (2005) Using force fields as a user interface device. In: proc. VR2005, Bonn, Germany, March 2005" href="/article/10.1007/s10055-006-0044-4#ref-CR10" id="ref-link-section-d65570e374">2005</a>) and surgical simulation training systems (Hutchins et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005b" title="Hutchins M, Adcock M, Stevenson D, Gunn C, Krumpholz A (2005a) The design of perceptual representations for practical networked multimodal virtual training environments, HCI International 2005: 11th International Conference on Human–Computer Interaction, Las Vegas, July 22–27, 2005" href="/article/10.1007/s10055-006-0044-4#ref-CR17" id="ref-link-section-d65570e377">2005b</a>; Gunn et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Gunn C, Hutchins M, Adcock M, Hawkins R (2004) Surgical training using haptics over long distances. In Proceedings of Medicine Meets Virtual Reality 12, USA, January 2004" href="/article/10.1007/s10055-006-0044-4#ref-CR13" id="ref-link-section-d65570e380">2004</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003)" title="Gunn C, Hutchins M, Adcock M, Hawkins R (2003) Trans-world haptic collaboration. In Proceedings SIGGRAPH, San Diego, USA, July 2003" href="/article/10.1007/s10055-006-0044-4#ref-CR12" id="ref-link-section-d65570e384">2003)</a>. It is a frame which places a computer monitor above an angled mirror and allows the haptic interaction to take place behind the mirror where the 3D model is represented (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0044-4#Fig1">1</a>). The haptic interaction is calibrated and scaled to match the visual dimensions that are viewed in the mirror. As with surgical simulation, this arrangement reinforces the believability of the virtual system, through the use of proprioception. The user cannot see their real hands but the virtual representation of the tool they are holding is located in the same place as they would see their hands if the mirror were not there (Bogsyani and Krumm-Heller <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Bogsyani F, Krumm-Heller A (2000) Scale and collocation in hapto-visual environments. In: Stereoscopic Displays and Virtual Reality Systems VII, Proceedings of SPIE, vol 3957, 2000" href="/article/10.1007/s10055-006-0044-4#ref-CR4" id="ref-link-section-d65570e390">2000</a>).
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-006-0044-4/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0044-4/MediaObjects/10055_2006_44_Fig1_HTML.gif?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0044-4/MediaObjects/10055_2006_44_Fig1_HTML.gif" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p>The CSIRO haptic workbench</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-006-0044-4/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+              <p>Force feedback was provided through the use of two SensAble Phantom 1.5 haptic devices (<a href="http://www.sensable.com">http://www.sensable.com</a>), one for each sculptor. These have a resolution of 0.03 mm and a maximum force of 8.5 N—a sufficient amount to simulate the pressure required to sculpt clay. Two such systems were connected together through either a local area network or through the Internet.</p><p>The virtual model can be oriented in space using a Logitech Magellan space mouse, which is typically used in the non-dominant hand while the user sculpts with the dominant hand. (There is also an on-screen Compass widget that can orient the model in the absence of the space mouse.) Active stereo shutter glasses are used to provide stereo 3D vision.</p><p>A miniature screen and spy-cam are attached to the workbench to allow video/audio communication between the two sculptors. This is important to provide more awareness of each other’s presence—users can see and talk to each other as well as see their collaborator’s avatar (in the form of a sculpting tool) in the virtual scene. Such interaction assists in the synchronisation of the users actions and decisions on where and what to work on at any given time, and what their intentions are. DVTS software (Ogawa <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Ogawa, A. (2006) DVTS (Digital Video Transport System), &#xA;                    http://www.sfc.wide.ad.jp/DVTS/&#xA;                    &#xA;                  , cited 22 May 2006" href="/article/10.1007/s10055-006-0044-4#ref-CR25" id="ref-link-section-d65570e426">2006</a>) handles the video transmission on linux machines, providing very good quality video display, but at the penalty of high bandwidth requirements (∼30 Mbs). A lower quality video link would likely be sufficient for this application as the concentration of the participants is likely to be more focussed on the sculpted model rather than the face-to-face communications.</p><p>A dual processor 3.2 GHz computer with an NVidia Quadro4 900 XGL graphics card, running Windows XP provided the haptics and graphics processing at each end. A single processor 1.5 GHz computer running Linux was added, to provide the optional video conferencing capability.</p></div></div></section><section aria-labelledby="Sec3"><div class="c-article-section" id="Sec3-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec3">Collaborative virtual environments</h2><div class="c-article-section__content" id="Sec3-content"><p>The term ‘collaborative virtual environment’ (CVE) refers to a virtual world that is depicted in a computer simulation, and which is shared between two or more computers. Several frameworks such as DIVE (Carlsson and Hagsand <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1993" title="Carlsson C, Hagsand O (1993) DIVE—a multi-user virtual reality system. In Proceedings of IEEE VRAIS, 1993, pp. 394–400" href="/article/10.1007/s10055-006-0044-4#ref-CR6" id="ref-link-section-d65570e440">1993</a>), SIMNET (Calvin and Dicken <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1993" title="Calvin J, Dicken A, Gaines B, Metzger P, Miller D, Owen D (1993) The SIMNET Virtual World Architecture. In Proceedings of IEEE Virtual Reality Annual International Symposium, pp. 450–455, 1993" href="/article/10.1007/s10055-006-0044-4#ref-CR5" id="ref-link-section-d65570e443">1993</a>) and MASSIVE (Benford et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1994" title="Benford S, Bowers J, Fahlen L, Greenhalgh C (1994) Managing mutual awareness in collaborative virtual environments. In Proceedings of ACM VRST, 1994, pp. 223–236" href="/article/10.1007/s10055-006-0044-4#ref-CR3" id="ref-link-section-d65570e446">1994</a>) have been developed to support the implementation of CVEs. They supply tools to handle data replication and transmission across the network.</p><p>Typically, the representation of this virtual world is duplicated on all collaborating systems, so that when the participating users view these representations, they feel as if they are participating in the one, common virtual environment (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0044-4#Fig2">2</a>). As users interact with virtual objects in the environment, the changes need to also be registered on all connected systems. To maintain logical consistency between these computer systems, the current state of each system must constantly be updated with changes from others. This is one of the major challenges in such a collaborative environment (Hespanha et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Hespanha J, McLaughlin M, Sukhatme G, Akbarian M, Garg R, Zhu W (2000) Haptic collaboration over the Internet. Fifth Phantom Users’ Group Workshop, 2000" href="/article/10.1007/s10055-006-0044-4#ref-CR16" id="ref-link-section-d65570e455">2000</a>). The <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-006-0044-4#Sec6">Communication</a> section of this paper describes the mechanism that was used to collect and transfer the model changes to avoid consistency errors.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-006-0044-4/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0044-4/MediaObjects/10055_2006_44_Fig2_HTML.jpg?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0044-4/MediaObjects/10055_2006_44_Fig2_HTML.jpg" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p>Dual sculpting</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-006-0044-4/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+              <p>Another challenge in collaborative systems that use real networks (i.e. those that go beyond the experimental situation found within a research laboratory), is that of dealing with latency in the network. Any network, whether using copper wire, fibre-optics or airwave transmissions, has an inherent time to deliver data from one machine to the next, due to the inflexible speed of light. However, often a greater contribution to the delay in network connections is that introduced by queuing in the routers that may be necessary in a multi-purpose network. This latency can result in the late arrival of update data. Because of the late arrival at a local machine, the local user may, by chance, interact with some part of the model that has already been changed by another user. This can lead to inconsistencies and, especially in a haptically enabled configuration, can lead to oscillations and instability, potentially rendering the system unusable (Matsumoto et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Matsumoto S, Fukuda I, Morino H, Hikichi K, Sezaki K, Yasuda Y (2000) The influences of network issues on haptic collaboration in shared virtual environments. Proceedings of Fifth Phantom Users’ Group Workshop, 2000" href="/article/10.1007/s10055-006-0044-4#ref-CR22" id="ref-link-section-d65570e482">2000</a>; Oakley et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Oakley I, Brewster S, Gray P (2001) Can you feel the force? An investigation of haptic collaboration in shared editors. Proceedings of EuroHaptics Conference" href="/article/10.1007/s10055-006-0044-4#ref-CR24" id="ref-link-section-d65570e485">2001</a>; Chong et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Chong N, Kawabata S, Ohba K, Kotoku T, Komoriya K, Takase K, Tanie K (2002) Multioperator teleoperation of Multirobot Systems with time delay. Teleoperat Virtual Environ 11(3): 277–303" href="/article/10.1007/s10055-006-0044-4#ref-CR7" id="ref-link-section-d65570e488">2002</a>). Gunn et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Gunn C, Hutchins M, Adcock M (2005) Combating latency in haptic collaborative virtual environments. Presence: Teleoperat Virtual Environ 14(3):313–328" href="/article/10.1007/s10055-006-0044-4#ref-CR14" id="ref-link-section-d65570e491">2005</a>) describe the use of ‘pseudo physics’ to accommodate this unavoidable latency, when dealing with interconnected elastic tissue simulations in a collaborative surgical simulation. With digital sculpting, such measures were found to be unnecessary due to the success of using haptics to prevent simultaneous editing of the same location (see <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-006-0044-4#Sec6">Communication</a>) section and the fact that principally plastic, rather than elastic deformation was required to emulate the properties of clay. The consequence of the latter point is that only the region of the surface that is in contact with the haptic tool deforms and it stops deforming as soon as the contact ceases. Also the haptic properties of the tools cause them to collide with each other and therefore prevent simultaneous touching of the same area of surface. Elastic deformation, on the other hand, could allow a surface to continue to move after the sculpting tool has left the site and also typically has surface stretching effects extending beyond the contact point. Details of the surface model used for the sculpting is described in the <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-006-0044-4#Sec5">Program Structure</a> section.</p></div></div></section><section aria-labelledby="Sec4"><div class="c-article-section" id="Sec4-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec4">Features</h2><div class="c-article-section__content" id="Sec4-content"><p>The sculpting system has several modes of operation. Each user can choose to sculpt, paint and draw independently of their partner on the collaborating system. They can also specify their clay material to have a different viscosity and cohesiveness. By default, both ends of the system start with a spherical ball of virtual clay, but any VRML model can be chosen as a starting point. After the two systems achieve connectivity through the network, all subsequent changes are conveyed bi-laterally between them.</p><p>The surface-sculpting activity is carried out with one of a number of different sized spherical sculpting tools, affixed to the end of a virtual stylus. The sculptor strokes the tool on the surface resulting in permanent deformation around the path of the tool. This provides the ability to produce indentations into the surface, but does not provide a mechanism to pull the surface outwards. To achieve this, the tool can be ‘popped-through’ the surface by striking it quite hard. The spherical tool tip passes through the surface without leaving any indentation and is henceforth on the inside of the clay. It can then be used in the same way as when on the outside. Using a stroking motion against the inside of the surface bends the surface outwards. The tool tip location is always apparent to the user due to the virtual stylus protruding from the model. The behaviour is as if the user is sculpting a pliable bubble from either the inside or the outside.</p><p>The ability to have two sculptors working together in a virtual environment has some interesting benefits. They can simultaneously be working at different zoom levels and can be working with different virtual tools. It should be noted that the volume of the clay is not conserved. This can be seen as a disadvantage since it does not reflect reality. However there are times when it provides a benefit; the sculptor can be assured that modifications to one part of the model will in no way change any other part that may already have been completed. The surface is modified only in the immediate vicinity of the haptic tool’s contact.</p><p>When switched to painting mode, the user can select a colour and apply this to the surface of the model with a simulated paint brush. In this mode the surface does not deform and is rigid to the touch. Each touch of the brush to the surface replaces whatever former colour was applied to the spot being touched. An extension to the painting mode is the ‘surface draw’ mode. In this case the successively detected touch points on the surface are connected with a surface painted line, so that the tool behaves as a ball point pen. It is implemented through modifying a texture which is mapped onto the surface, in real time. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0044-4#Fig3">3</a>b shows the screen with one user painting while the other sculpts. With each of these modes the model can be returned to sculpture mode and sculpted after it has been painted. This is an example of a capability that does not exist in the real world.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-006-0044-4/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0044-4/MediaObjects/10055_2006_44_Fig3_HTML.jpg?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0044-4/MediaObjects/10055_2006_44_Fig3_HTML.jpg" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p>
+                        <b>a </b>Simultaneous ‘potters wheel’ and stationary sculpting. <b>b</b> Painting and sculpting</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-006-0044-4/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+              <p>Since the virtual clay is approximated with a polygonal model, any surface deformation causes the polygons to stretch or compress. This can result in the situation where some of the polygons become large enough to become individually noticeable. Also, fine work may be needed on one part of the model, but not on other parts. The ‘paint on resolution’ feature of the system solves both of these problems. Having chosen this mode, the user is provided with a paintbrush as a tool, but instead of painting a colour onto the surface, they paint ‘sprinkles of gold dust’. This provides an indicator of the area that they have covered. When they return to sculpting mode, the system subdivides all the polygons beneath the gold dust and the local surface area quadruples its resolution. The process can be repeated up to the memory capacity of the system. It should be noted that this feature is currently only available in stand-alone (not collaborative) mode. However, there is no technical barrier to it being available across the network.</p><p>During testing we learned that users typically chose to sculpt a face. To facilitate this, a ‘symmetrical sculpting’ mode was provided. This duplicates any deformation that the user performs on either side of the <i>Y</i>–<i>Z</i> plane. Using this feature, users can sculpt one eye and get two, one ear and get a second or create a perfectly symmetrical nose. After returning to normal sculpting, they have the option of introducing asymmetrical characteristics.</p><p>To allow the system to be used as a potter’s wheel, a ‘spin’ feature was added. The clay model will spin around either the <i>X</i>, <i>Y</i> or <i>Z</i> axis. When the sculpting or painting tool is touched against the spinning surface it sculpts a groove around the model or, in paint mode, it paints a circular line. In fact the whole creative space (but not the user’s tool) is rotating, so that if the user chooses free line drawing mode along with spinning, a ‘spun’ thread in space is created. Interesting circular and spiral shapes can be produced with this combination.</p><p>As mentioned before, each of the collaborating systems has complete independence of choice of operation mode. This means that it is possible for one end to be spinning while the other is stationary. One user can be treating the model as a potter’s wheel, carving grooves or ridges, or hollowing out the interior of a bowl. Meanwhile the other user can have the model stationary, perhaps working in detail on some feature (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0044-4#Fig3">3</a>a). In this configuration, the stationary user sees the spinning user’s tool revolving around the model like a satellite around the earth, perhaps carving a groove as it goes. The other user sees both the clay model and stationary user’s tool spinning around the chosen axis, as if it were a spinning globe of the earth with a person working on the surface. Collisions between the two users’ tools are discussed in the <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-006-0044-4#Sec6">Communication</a> section.</p><p>As well as this, it is possible for the properties of the surface to differ between the two systems. The clay could appear stiff to one sculptor and soft and pliable to the other,</p></div></div></section><section aria-labelledby="Sec5"><div class="c-article-section" id="Sec5-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec5">Program structure</h2><div class="c-article-section__content" id="Sec5-content"><p>The 3D scene is constructed in the style of VRML, with a scene-graph consisting of a hierarchy of nodes. For example there are Transform nodes, Shape nodes, Appearance nodes and Geometry nodes along with various specializations of these nodes. These nodes store their attributes in the form of fields held within the nodes. For example the Transform node has translation, rotation and scale fields as well as a field to store the children nodes to which the transform applies. The fields can be connected together by routes, which can pass messages to other fields (typically in other nodes) whenever a change to a field occurs. The application is built upon the Reachin API [formerly Magma White Paper: <a href="http://www.reachin.se/DevelopmentPlatform/Tdp1.htm">http://www.reachin.se/DevelopmentPlatform/Tdp1.htm</a>; Reachin Technologies (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Reachin Technologies AB (2006) &#xA;                    http://www.reachin.se&#xA;                    &#xA;                  , cited 8 Feb 2006" href="/article/10.1007/s10055-006-0044-4#ref-CR27" id="ref-link-section-d65570e593">2006</a>), <a href="http://www.reachin.se">http://www.reachin.se</a>, which provides the basic structure of node interconnection and field routing as well as graphic rendering and solid surface haptics. To create the sculpting program, selected Reachin nodes were specialized into types specific to the application, using C++ inheritance. An example of one such specialization is the PaintPot node, which is a specialization of a Group node, and which implements a virtual paint pot UI widget for choosing paint colours. The Compass node specializes a Transform node and provides a visual indication of the current global orientation of the clay model.</p><p>The DeformableTriSurface node provides the main sculpting functionality. It inherits from the IndexedFaceSet node and encapsulates the sculpting and painting algorithms that make up the most interesting part of the application. It has fields which describe its pliability and others that hold the actual vertices and connectivity list that makes up the triangular polygons of the surface. The user’s tool position, routed to the DeformableTriSurface, triggers one of several possible changes in the clay model, depending on the selected mode of operation. In sculpt mode, the spherical tool location is tested against the surface vertices of the model. If any vertex is within the tool’s volume, the penetration adds to the force reflected back to the user through the haptic device. Simultaneously, the vertex is moved a proportion of the penetration distance back towards the surface of the tool. Note that it is not moved completely to the tool surface, since this would result in an almost instantaneous elimination of any vertex penetration, which would then remove any force reflection back to the user. The consequence of this would be that the user would feel no effective force at all as they press into the clay. Neighbouring vertices are moved proportionally to their distance away from the nearest sculpted vertex. The proportion can be altered to allow for different cohesiveness values in the model.</p><p>Since the repositioning of the vertices affects the haptic feel of the surface, it needs to be updated at around 1,000 Hz. Any update rate below this can result in a buzzing vibration in the haptic device. The graphic display, however, can be updated at only 20–30 Hz before the user notices any adverse effect. For this reason a separate thread, looping at 1,000 Hz, controls the vertex positioning algorithm and all haptics in the system. Then, every 1/30 s the accumulated vertex position changes are passed to the graphics thread for visual display. Since the haptics thread has only 1 ms to perform its calculations, there is not enough time for it to check each vertex against collisions with the sculpting tool. However, since the user cannot move the tool a great distance within the 1/30 s graphics cycle, the graphics thread can collect all vertices that are within ‘striking range’ of the sculpting tool in that time interval and pass this temporary list to the haptics thread. The smaller list is manageable in the 1 ms time available. Nonetheless, the very act of determining which vertices are within range can take significant time. To overcome this, vertex references are kept in a spatial index structure of axis aligned cells. Once we know that the sculpting tool is within a cell, it is efficient to retrieve all vertices in that cell, as well as a sufficient number of surrounding cells. It can then pass the list across to the haptics thread as candidates for collision. The haptics thread then needs to only scan this substantially smaller list for collisions. Naturally, as vertices are moved by the sculpting action, they often end up in another spatial index cell. Since the cells are axis aligned, the new cell can be easily calculated from the new vertex position, and the vertex is re-allocated to the new cell. The penalty of this calculation is more than compensated for by the resulting saving in search time for collisions.</p><p>In paint mode, the surface of the clay reacts to being touched with the painting tool tip. It then calculates the 2D spot on the texture that is currently being mapped onto the surface. It changes a number of pixels (depending on the paint brush size) to the current paint colour. The surface draw mode works the same way except that it calculates a contiguous line of pixels between successive contact points until the brush is lifted from the surface significantly. The algorithm, therefore, accommodates small involuntary bounces in the virtual pen.</p><p>In free line draw mode, the user can draw lines in free space, not necessarily on the surface of the model. Although the lines appear to be equivalent to those drawn on the surface, they have a different underlying structure and behaviour. A ‘free line’ consists of a DeformableLine node which inherits from the IndexedLineSet node of the Reachin API. As the user drags the haptic tool with its button pressed, successive vertices are added to the line until the button is released. When the user is sculpting, the line vertices are handled in the same way as for the clay surface, reacting to collisions with the tool and deforming accordingly, by being repositioned a percentage of their penetration distance inside the tool. A list of all deformable objects (both lines and surfaces) is maintained by the system, and this is visited once on each update cycle. Each object is checked for collisions and treated independently, thus allowing one movement of the haptic tool to sculpt all colliding surfaces and lines simultaneously. There is no mode shifting required between sculpting haptic lines and surfaces.</p></div></div></section><section aria-labelledby="Sec6"><div class="c-article-section" id="Sec6-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec6">Communications</h2><div class="c-article-section__content" id="Sec6-content"><p>The inter-program communication occurs through sockets, using both TCP/IP, and UDP/IP. Reading and writing to the network occurs through separate, dedicated threads.</p><p>We use replicated databases on each machine with update data being transferred between them when necessary. We have extended the field-route concept to ‘remote routes’ that exist across a network connection. There is a specialized node in the scene-graph that handles the network connection and holds the remote routes. When local fields are connected to these remote routes, any change in the local field is transmitted to the other end of the network connection. If the receiving end has the remote route connected to a field, that field gets a change-message in the same way that it would if it was receiving it from a local route. This mechanism provides an easy API to facilitate the connection of selected components of a scene-graph, together across a network. In the sculpting application, the vertices of the clay surface are held in a field of a node, which is routed to one of the remote routes. When some vertices are changed by the user’s sculpting actions, the new vertex positions and their indices are transmitted, via the remote route, to the far end and its vertex field is subsequently updated. Some of the other fields that are transmitted are tool position, tool orientation, paint spot size and paint spot location.</p><p>Networks have an inherent latency in the delivery of data from one location to another. For example, we have found that a typical latency between Australia and the USA is about 190 ms. The network distance, network quality, bandwidth and the number of router queues that the data must pass through, all have a bearing on the degree of this latency. With such a delay in the delivery of messages, it is possible that one user can move a vertex in the model at the same time that the other user is changing it in another direction. The two users do not see the current state at the other end, only a state that existed some time in the past. Their immediate actions may be based on a state that is no longer valid. The system needs a mechanism to determine how to resolve such inconsistencies.</p><p>Parallel modifications at the same location require very precise synchronization. Both network latency and the high update rates needed by haptic feedback exacerbate the problem. When the requirement for haptic refresh cycle times of around 1 ms are combined with network latencies of up to 190 ms, current technology does not allow independent simultaneous editing of a haptic surface, without the likelihood of introducing physical feedback and instability. One solution to this is to allow the users’ actions to be combined into a resultant action before being applied to the model. Such a method is used in (Gunn et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Gunn C, Hutchins M, Adcock M (2005) Combating latency in haptic collaborative virtual environments. Presence: Teleoperat Virtual Environ 14(3):313–328" href="/article/10.1007/s10055-006-0044-4#ref-CR14" id="ref-link-section-d65570e627">2005</a>) where one of the collaborating machines is nominated as a physics server and all user inputs, from both ends of the network, are passed to that machine. It then determines the resultant forces on objects and how they should move, and informs both ends of the new object positions for separate rendering. Another method is to have a locking mechanism so that one end ‘claims’ part of the model for editing and has ownership of that part until released. The other end cannot edit that part for the same period (Li et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Li F, Lau R, Ng F (2003) VSculpt: a distributed virtual sculpting environment for collaborative design. IEEE Trans Multimed 5(4):570–580" href="/article/10.1007/s10055-006-0044-4#ref-CR21" id="ref-link-section-d65570e630">2003</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Li F, Lau R, Ng F (2001) Collaborative distributed virtual sculpting Proceedings of IEEE VR, pp. 217–224, March 2001" href="/article/10.1007/s10055-006-0044-4#ref-CR20" id="ref-link-section-d65570e633">2001</a>). This may require the user to be aware of parts of the model that are temporarily unavailable for editing, and their editing behaviour must be modified accordingly.</p><p>In this application, it was possible to avoid introducing software complexity in the underlying system, and any special behaviours on the part of the users, due to the fact that there was a haptic system available. In the real world, two sculptors would not sculpt the same point on the piece of clay at the same time, since their hands or sculpting tools would collide, preventing them doing so. As mentioned in the introduction, a virtual environment allows sculptors to work without the inconvenience of collisions between their physical bodies, delivering advantages in freedom of movement and access. Having achieved this, we then have the option of selectively reintroducing inter-personal collisions where there may be a greater advantage in doing so. Such an opportunity presents itself in addressing the problem of mutual simultaneous editing. By enabling haptic collision between <i>only</i> the virtual tool tips, we can prevent simultaneous vertex manipulation by physical exclusion from the zone closely around the sculpting point. Since it is only the area within the radius of the tool tips that can collide, this still essentially permits sculptors to ‘pass through’ each other, as mentioned earlier, with the exception of the tool tip. This is functionally different to sculptors’ bodies colliding, since the collision of bodies serves no purpose towards the outcome, whereas colliding tool tips serves the purpose of preventing simultaneous editing of the same point. We considered this compromise a worthwhile trade-off from our original aim of unhindered access, since it solves the simultaneous editing problem without requiring any contrived behaviour, or knowledge of the underlying system, on the part of the participants.</p><p>In practice, the haptic contact between the tool tips involves more than just supplying the tool tips with a haptic, ‘touchable’ surface. The tool position is transmitted with TCP/IP (Stevens <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1998" title="Stevens W (1998) Unix Network Programming, vol 1, 85—110, 2nd edn, Prentice Hall, NJ" href="/article/10.1007/s10055-006-0044-4#ref-CR31" id="ref-link-section-d65570e646">1998</a>) to the other end at the graphics refresh rate, 30 Hz. At this rate, a hard-surfaced tool tip would move slightly, each 30th of a second. This causes an uncomfortable vibration when the local user touches it. Even sending the tool tip position at higher rates can cause a higher frequency vibration, due to the latency in the network and correspondingly delayed reactions to any movement. The problem is solved by using an implicit function to represent the tool tip, allowing the haptic influence to extend slightly beyond the tool surface and introducing some damping into the inter-tool interaction. The minimum network transmission rate for the tool position that could achieve stability over a network with up to 300 ms latency was found to be 400 Hz. It was also necessary to use UDP/IP (Stevens <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1998" title="Stevens W (1998) Unix Network Programming, vol 1, 85—110, 2nd edn, Prentice Hall, NJ" href="/article/10.1007/s10055-006-0044-4#ref-CR31" id="ref-link-section-d65570e649">1998</a>) for the transmission protocol. UDP, although less reliable, has no buffering delays and has lower jitter due to the fact that it does not try to resend lost packets. In our case, an occasional lost packet is preferable to the delay introduced by checking for them.</p><p>With other data, such as the segments of a drawn line, it is important that each position that is sent, is actually received and displayed, so TCP was used. Another problem that can occur is that if the receiving machine is running at a slower frame-rate than the sender, it is possible for data to be sent faster than the receiving machine can read and process them. In this case, some values may be lost, resulting in an incorrect rendering of the line. A buffering mechanism was introduced to avoid this by ensuring that all received values are recorded and applied as soon as the system can accommodate them.</p><p>The collaborative sculpting system incorporates a shared virtual 3D scene in which users can see each others actions, tool types and changes in the model as they occur. It also has an audio and video link to allow users to discuss their work. Using these features, a co-operative work situation is created which allows them to use language, gesture and demonstration to illustrate their ideas and thoughts. While it is still possible for the sculptors to work independently in parallel, the system encourages the sharing of ideas through the communication channels provided. An illustrative example was captured in the conversation of two subjects in the trial detailed later in the Creativity Experiment section. </p><ul class="u-list-style-none">
+                  <li>
+                    <p>Subject 1: “What’s that? <i>I’m</i> doing the front”</p>
+                  </li>
+                  <li>
+                    <p>Subject 2: “No, I’m doing the face. Look, here’s the nose”</p>
+                  </li>
+                  <li>
+                    <p>Subject 1: “But what’s that spiky stuff then?”</p>
+                  </li>
+                </ul><p>Because of the shared 3D environment and the awareness of each other’s tools, the users can use deixis, as exemplified by the use of the words “that”, “here’s” which were accompanied by pointing and gesture. Similarly, it is possible for one sculptor to demonstrate a shape or style by example using the clay itself.</p><p>We found that it was possible to run collaborative sculpting sessions over distances across Australia and between Australia and the USA. They were connected via the CeNTIE network in Australia (CeNTIE Centre for Networking Technologies for the Information Economy <a href="http://www.centie.net.au">http://www.centie.net.au</a>) and Internet2 (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Internet2 (2006) Internet2 Consortium., &#xA;                    http://www.internet2.edu/&#xA;                    &#xA;                  , cited 8 February 2006" href="/article/10.1007/s10055-006-0044-4#ref-CR19" id="ref-link-section-d65570e689">2006</a>) in the USA, and used the Australia’s Research and Education Network (AARNET <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="AARNet (2006) AARNet—Australia’s Research and Education Network, &#xA;                    http://www.aarnet.edu.au/&#xA;                    &#xA;                  , cited 8 February 2006" href="/article/10.1007/s10055-006-0044-4#ref-CR1" id="ref-link-section-d65570e692">2006</a>) link across the Pacific Ocean. This had a network latency of around 190 ms. In laboratory tests the system worked satisfactorily with simulated latencies of up to 300 ms. The clay model involved 22528 triangular polygons. This resulted in a maximum data transfer of 1 MBits/second during deep sculpting (discounting the separate video / audio link).</p></div></div></section><section aria-labelledby="Sec7"><div class="c-article-section" id="Sec7-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec7">User interface</h2><div class="c-article-section__content" id="Sec7-content"><p>The user interface comprises a series of haptic virtual buttons within the 3D scene, a compass widget to indicate the current orientation and a rack of paint pots for choosing colours. One interesting discovery was that in UI design for virtual environments, one should not always strive for maximum realism. Initially we created the paint pots with a hard, ‘glass’ surface, and soft, sticky paint inside (with a dribble of paint running down the outside). The idea was that users would dip the brush into the paint to select a colour. In practice, however, we found that users typically tried to pass the brush through the side of the paint pots. This could be because they were all computer users of some sort, and have come to expect ‘magic’ behaviour when they know a computer is creating their work environment. We solved the problem by making the glass jar react to the touch of a brush as well as its contents.</p><p>The mode of operation is reflected by the style of the virtual tool in the scene. The remote user can see both their own tool, and the remote user’s tool, so they know what mode they have chosen and what mode the remote user is in. There was therefore no need to reflect the state of the each user’s buttons and widgets at the other end.</p></div></div></section><section aria-labelledby="Sec8"><div class="c-article-section" id="Sec8-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec8">Creativity experiment</h2><div class="c-article-section__content" id="Sec8-content"><p>Can real-time collaborative sculpting increase the creativity of the individual artists? It is hard to imagine any quantitative experiment that could measure this. However, it is possible to get some qualitative idea on whether the ability to share the sculpting experience with another person, helps with inspiration. A small experiment, using 16 subjects, was devised to try to determine if the shared workspace enhanced the participants’ creativity. They were individually given an introduction to the sculpting system and were then paired up with a partner on a networked, collaborating sculpting station. They were then allowed to sculpt a spherical ball of virtual clay, together, for about 10 min (actually, often they wanted to keep going).</p><p>Nearing the end of the allotted time, they were asked to grade the amount that their sculpting ideas were triggered by something their partner had done. A scale of 1–10 was used, where 1 indicated that they felt that they had no ideas triggered by their partner, i.e. they were effectively working independently. A score of 10 implied that they were totally reacting to what the other person was doing. Scores of 2–9 indicated degrees of influence between those extremes. It was stressed that the point to note was how much the other person’s actions triggered a creative idea of their own that they then pursued, not just how much their sculpting actions were controlled by those of the other.</p><p>There were 6 females and 10 males between the ages of 12 and 53, with varying experience of computer interfaces. None professed to have particular artistic abilities. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0044-4#Fig4">4</a>a shows the number of subjects who nominated each possible score. The average nominated score was 4.43, with a standard deviation of 1.89, indicating that shared environment can indeed enhance an individual’s creativity.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-006-0044-4/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0044-4/MediaObjects/10055_2006_44_Fig4_HTML.gif?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0044-4/MediaObjects/10055_2006_44_Fig4_HTML.gif" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p>Creativity experiment results. <b>a</b> Number of subjects with each score <b>b</b> Subjects’ scores, grouped in pairs</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-006-0044-4/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+              <p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0044-4#Fig4">4</a>b shows the actual scores nominated by the subjects, grouped into their pairings. There appears to be no obvious correlation between the score difference of each pair and their overall score, i.e. that pairs necessarily agreed on the sharing experience to any degree, or that pairs nominating a high score agreed any more than those nominating a low score.</p><p>Since a score of around 1 would have indicated that no new ideas were generated by the presence of the partner, the mean of 4.43 indicates that a number of ideas were typically generated. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0044-4#Fig4">4</a>b shows that both sculptors in each pair typically recorded the generation of new ideas from their partner’s ongoing work, suggesting a two-way flow of increased creativity. This creativity flow could have only been in a one-way direction if the sculpting had occurred consecutively rather than in parallel.</p><p>The subjects for this experiment were chosen from a general cross-section of the population. A further trial was undertaken to investigate whether the collaborative system shows potential in the eyes of experienced artists. Two instructors and two students from the Australian National University School of Arts, Ceramics Workshop were given the opportunity to use the system and their comments and suggestions were noted. They felt that the collaborative simultaneous working environment was fairly chaotic to start with, but put that down to the novelty of the concept and inexperience with the hardware. One comment was that the immediacy of the collaborative interaction resulted in a somewhat <i>somatic</i> as opposed to <i>intellectual</i> response to the partner’s work. Their experience of collaborative work had previously been sequential, allowing the second artist time to intellectualise their response to the first artist’s creation. They thought that an immediate, somatic response was very interesting and held potential for a different style of creativity. Most preferred to divide the task so that one artist worked on form while the other worked on surface. One student commented that she noticed a swirl that the other was creating, which seemed to have the appearance of the top of a shell, so she started hollowing out the inside to match. Some of the creations are shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-006-0044-4#Fig5">5</a>.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-006-0044-4/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0044-4/MediaObjects/10055_2006_44_Fig5_HTML.jpg?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-006-0044-4/MediaObjects/10055_2006_44_Fig5_HTML.jpg" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p>Virtual artworks (on a real table)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-006-0044-4/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+              </div></div></section><section aria-labelledby="Sec9"><div class="c-article-section" id="Sec9-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec9">Future work</h2><div class="c-article-section__content" id="Sec9-content"><p>The application currently provides each sculptor with only one sculpting tool. The author has been involved in the development of haptic medical systems which allow two collaborating surgical trainees to use two haptic tools each, totalling four haptic devices at once in the system (Hutchins et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Hutchins M, O’Leary S, Stevenson D, Gunn C, Krumpholz A (2005b) A networked haptic virtual environment for teaching temporal bone surgery. In: Proceedings of Medicine Meets Virtual Reality (MMVR) 2005" href="/article/10.1007/s10055-006-0044-4#ref-CR18" id="ref-link-section-d65570e795">2005</a>). The virtual model can recognise contact from each tool independently and can therefore behave differently depending on the tool type. It is planned to import this mechanism to the sculpting application to allow two-handed interaction.</p><p>The same medical haptic application allows the drilling and boring of simulated human bone. This technique could also be introduced to the sculpting application to provide a range of materials from soft pliable clay to hard stone.</p></div></div></section><section aria-labelledby="Sec10"><div class="c-article-section" id="Sec10-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec10">Discussion</h2><div class="c-article-section__content" id="Sec10-content"><p>This application showed that it is possible for two sculptors to simultaneous work on a virtual clay model in any mode they chose without any interference from the other user. Users’ actions could be completely asynchronous, as they would be in the real world. They could work individually or co-operatively, and be in the same, or different, co-ordinate systems while separated by thousands of kilometres.</p><p>Our qualitative study suggests that the system can indeed improve the creative output of the two sculptors. We can also look at a parallel situation to draw some subjective conclusions about the effect of a collaborative environment on creativity. Pair programming is a form of writing computer code where two or more programmers look at a shared display. They make suggestions to each other and add to the logic as they progress. It has been shown that the act of sharing the production of the computer code improves the resulting product (Williams et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Williams L, McDowell C, Nagappan N, Fernald J, Werner L (2003) Building pair programming knowledge through a family of experiments. In: Proceedings of 2003 International Symposium on Empirical Software Engineering, ISESE 2003, October 2003" href="/article/10.1007/s10055-006-0044-4#ref-CR35" id="ref-link-section-d65570e810">2003</a>). One explanation of this effect is that as one programmer adds a piece of logic, it triggers some lateral thought in the others, which can result in more alternatives being explored. It seems logical that the same effect would occur with two artists working simultaneously on a sculpture. As one artist changes the form of a part of the model, it may bring new ideas and suggest new forms to the other. This process could play back and forth between two artists until the work is completed.</p><p>Traditional sculpture has been either carried out by a single artist, or two or more artists in a sequential mode, or in the apprenticeship model with a chief artist creating the major part of the work and several assistants filling in minor details. This virtual environment allows all of these modes of operation as well as the ability for two artists to work closely together equally without getting in each other’s way. By increasing the number of modes of creation available to the artists, it is likely that their overall creative output would be enhanced.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="AARNet (2006) AARNet—Australia’s Research and Education Network, http://www.aarnet.edu.au/, cited 8 February 2" /><p class="c-article-references__text" id="ref-CR1">AARNet (2006) AARNet—Australia’s Research and Education Network, <a href="http://www.aarnet.edu.au/">http://www.aarnet.edu.au/</a>, cited 8 February 2006</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Battle of Pydna (2006) http://www.en.wikipedia.org/wiki/Battle_of_Pydna, cited 8 February 2006" /><p class="c-article-references__text" id="ref-CR2">Battle of Pydna (2006) <a href="http://www.en.wikipedia.org/wiki/Battle_of_Pydna">http://www.en.wikipedia.org/wiki/Battle_of_Pydna</a>, cited 8 February 2006</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Benford S, Bowers J, Fahlen L, Greenhalgh C (1994) Managing mutual awareness in collaborative virtual environm" /><p class="c-article-references__text" id="ref-CR3">Benford S, Bowers J, Fahlen L, Greenhalgh C (1994) Managing mutual awareness in collaborative virtual environments. In Proceedings of ACM VRST, 1994, pp. 223–236</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bogsyani F, Krumm-Heller A (2000) Scale and collocation in hapto-visual environments. In: Stereoscopic Display" /><p class="c-article-references__text" id="ref-CR4">Bogsyani F, Krumm-Heller A (2000) Scale and collocation in hapto-visual environments. In: Stereoscopic Displays and Virtual Reality Systems VII, Proceedings of SPIE, vol 3957, 2000</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Calvin J, Dicken A, Gaines B, Metzger P, Miller D, Owen D (1993) The SIMNET Virtual World Architecture. In Pro" /><p class="c-article-references__text" id="ref-CR5">Calvin J, Dicken A, Gaines B, Metzger P, Miller D, Owen D (1993) The SIMNET Virtual World Architecture. In Proceedings of IEEE Virtual Reality Annual International Symposium, pp. 450–455, 1993</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Carlsson C, Hagsand O (1993) DIVE—a multi-user virtual reality system. In Proceedings of IEEE VRAIS, 1993, pp." /><p class="c-article-references__text" id="ref-CR6">Carlsson C, Hagsand O (1993) DIVE—a multi-user virtual reality system. In Proceedings of IEEE VRAIS, 1993, pp. 394–400</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="N. Chong, S. Kawabata, K. Ohba, T. Kotoku, K. Komoriya, K. Takase, K. Tanie, " /><meta itemprop="datePublished" content="2002" /><meta itemprop="headline" content="Chong N, Kawabata S, Ohba K, Kotoku T, Komoriya K, Takase K, Tanie K (2002) Multioperator teleoperation of Mul" /><p class="c-article-references__text" id="ref-CR7">Chong N, Kawabata S, Ohba K, Kotoku T, Komoriya K, Takase K, Tanie K (2002) Multioperator teleoperation of Multirobot Systems with time delay. Teleoperat Virtual Environ 11(3): 277–303</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 7 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Multioperator%20teleoperation%20of%20Multirobot%20Systems%20with%20time%20delay&amp;journal=Teleoperat%20Virtual%20Environ&amp;volume=11&amp;issue=3&amp;pages=277-303&amp;publication_year=2002&amp;author=Chong%2CN&amp;author=Kawabata%2CS&amp;author=Ohba%2CK&amp;author=Kotoku%2CT&amp;author=Komoriya%2CK&amp;author=Takase%2CK&amp;author=Tanie%2CK">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="A. Kumar, A. Dutta, J. Fay, " /><meta itemprop="datePublished" content="2004" /><meta itemprop="headline" content="Kumar A, Dutta A, Fay J (2004) Electrophotographic printing of part and binder powders. Rapid Prototyping J 10" /><p class="c-article-references__text" id="ref-CR8">Kumar A, Dutta A, Fay J (2004) Electrophotographic printing of part and binder powders. Rapid Prototyping J 10(1):7–13</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1108%2F13552540410512480" aria-label="View reference 8">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 8 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Electrophotographic%20printing%20of%20part%20and%20binder%20powders&amp;journal=Rapid%20Prototyping%20J&amp;volume=10&amp;issue=1&amp;pages=7-13&amp;publication_year=2004&amp;author=Kumar%2CA&amp;author=Dutta%2CA&amp;author=Fay%2CJ">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Galyean T, Hughes J (1991) Sculpting: an interactive volumetric modelling technique. In Proceedings of ACM SIG" /><p class="c-article-references__text" id="ref-CR9">Galyean T, Hughes J (1991) Sculpting: an interactive volumetric modelling technique. In Proceedings of ACM SIGGRAPH’91, vol. 25, 1991, pp.267–274</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Gunn C (2005) Using force fields as a user interface device. In: proc. VR2005, Bonn, Germany, March 2005" /><p class="c-article-references__text" id="ref-CR10">Gunn C (2005) Using force fields as a user interface device. In: proc. VR2005, Bonn, Germany, March 2005</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Gunn C, Marando P (1999) Experiments on the haptic rendering of constraints: guiding the user. Simulation Tech" /><p class="c-article-references__text" id="ref-CR11">Gunn C, Marando P (1999) Experiments on the haptic rendering of constraints: guiding the user. Simulation Technology and Training Conference, Melbourne, 1999</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Gunn C, Hutchins M, Adcock M, Hawkins R (2003) Trans-world haptic collaboration. In Proceedings SIGGRAPH, San " /><p class="c-article-references__text" id="ref-CR12">Gunn C, Hutchins M, Adcock M, Hawkins R (2003) Trans-world haptic collaboration. In Proceedings SIGGRAPH, San Diego, USA, July 2003</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Gunn C, Hutchins M, Adcock M, Hawkins R (2004) Surgical training using haptics over long distances. In Proceed" /><p class="c-article-references__text" id="ref-CR13">Gunn C, Hutchins M, Adcock M, Hawkins R (2004) <i>Surgical </i>training using haptics over long distances. In Proceedings of Medicine Meets Virtual Reality 12, USA, January 2004</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="C. Gunn, M. Hutchins, M. Adcock, " /><meta itemprop="datePublished" content="2005" /><meta itemprop="headline" content="Gunn C, Hutchins M, Adcock M (2005) Combating latency in haptic collaborative virtual environments. Presence: " /><p class="c-article-references__text" id="ref-CR14">Gunn C, Hutchins M, Adcock M (2005) Combating latency in haptic collaborative virtual environments. Presence: Teleoperat Virtual Environ 14(3):313–328</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1162%2F105474605323384663" aria-label="View reference 14">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 14 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Combating%20latency%20in%20haptic%20collaborative%20virtual%20environments&amp;journal=Teleoperat%20Virtual%20Environ&amp;volume=14&amp;issue=3&amp;pages=313-328&amp;publication_year=2005&amp;author=Gunn%2CC&amp;author=Hutchins%2CM&amp;author=Adcock%2CM">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Hartman J, Wernecke J (1996) The VRML 2.0 handbook, 1996, Addison Wesley, Boston " /><p class="c-article-references__text" id="ref-CR15">Hartman J, Wernecke J (1996) The VRML 2.0 handbook, 1996, Addison Wesley, Boston </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Hespanha J, McLaughlin M, Sukhatme G, Akbarian M, Garg R, Zhu W (2000) Haptic collaboration over the Internet." /><p class="c-article-references__text" id="ref-CR16">Hespanha J, McLaughlin M, Sukhatme G, Akbarian M, Garg R, Zhu W (2000) Haptic collaboration over the Internet. Fifth Phantom Users’ Group Workshop, 2000</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Hutchins M, Adcock M, Stevenson D, Gunn C, Krumpholz A (2005a) The design of perceptual representations for pr" /><p class="c-article-references__text" id="ref-CR17">Hutchins M, Adcock M, Stevenson D, Gunn C, Krumpholz A (2005a) The design of perceptual representations for practical networked multimodal virtual training environments, HCI International 2005: 11th International Conference on Human–Computer Interaction, Las Vegas, July 22–27, 2005</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Hutchins M, O’Leary S, Stevenson D, Gunn C, Krumpholz A (2005b) A networked haptic virtual environment for tea" /><p class="c-article-references__text" id="ref-CR18">Hutchins M, O’Leary S, Stevenson D, Gunn C, Krumpholz A (2005b) A networked haptic virtual environment for teaching temporal bone surgery. In: Proceedings of Medicine Meets Virtual Reality (MMVR) 2005</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Internet2 (2006) Internet2 Consortium., http://www.internet2.edu/, cited 8 February 2006" /><p class="c-article-references__text" id="ref-CR19">Internet2 (2006) Internet2 Consortium., <a href="http://www.internet2.edu/">http://www.internet2.edu/</a>, cited 8 February 2006</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Li F, Lau R, Ng F (2001) Collaborative distributed virtual sculpting Proceedings of IEEE VR, pp. 217–224, Marc" /><p class="c-article-references__text" id="ref-CR20">Li F, Lau R, Ng F (2001) Collaborative distributed virtual sculpting Proceedings of IEEE VR, pp. 217–224, March 2001</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="F. Li, R. Lau, F. Ng, " /><meta itemprop="datePublished" content="2003" /><meta itemprop="headline" content="Li F, Lau R, Ng F (2003) VSculpt: a distributed virtual sculpting environment for collaborative design. IEEE T" /><p class="c-article-references__text" id="ref-CR21">Li F, Lau R, Ng F (2003) VSculpt: a distributed virtual sculpting environment for collaborative design. IEEE Trans Multimed 5(4):570–580</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 21 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=VSculpt%3A%20a%20distributed%20virtual%20sculpting%20environment%20for%20collaborative%20design&amp;journal=IEEE%20Trans%20Multimed&amp;volume=5&amp;issue=4&amp;pages=570-580&amp;publication_year=2003&amp;author=Li%2CF&amp;author=Lau%2CR&amp;author=Ng%2CF">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Matsumoto S, Fukuda I, Morino H, Hikichi K, Sezaki K, Yasuda Y (2000) The influences of network issues on hapt" /><p class="c-article-references__text" id="ref-CR22">Matsumoto S, Fukuda I, Morino H, Hikichi K, Sezaki K, Yasuda Y (2000) The influences of network issues on haptic collaboration in shared virtual environments. Proceedings of Fifth Phantom Users’ Group Workshop, 2000</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Nishino H, Utsumiya K, Sakamoto A, Yoshida K, Korida K (1999) A method for sharing interactive deformations in" /><p class="c-article-references__text" id="ref-CR23">Nishino H, Utsumiya K, Sakamoto A, Yoshida K, Korida K (1999) A method for sharing interactive deformations in collaborative 3D modelling. ACM VRST1999, pp. 116–123</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Oakley I, Brewster S, Gray P (2001) Can you feel the force? An investigation of haptic collaboration in shared" /><p class="c-article-references__text" id="ref-CR24">Oakley I, Brewster S, Gray P (2001) Can you feel the force? An investigation of haptic collaboration in shared editors. Proceedings of EuroHaptics Conference</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Ogawa, A. (2006) DVTS (Digital Video Transport System), http://www.sfc.wide.ad.jp/DVTS/, cited 22 May 2006" /><p class="c-article-references__text" id="ref-CR25">Ogawa, A. (2006) DVTS (Digital Video Transport System), <a href="http://www.sfc.wide.ad.jp/DVTS/">http://www.sfc.wide.ad.jp/DVTS/</a>, cited 22 May 2006</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Ramage and Ramage (1996), The A–Z of art: the world’s greatest and most popular artists and their works. Edito" /><p class="c-article-references__text" id="ref-CR26">Ramage and Ramage (1996), The A–Z of art: the world’s greatest and most popular artists and their works. Editors: Nicola Hodge and Libby Anson, p. 47</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Reachin Technologies AB (2006) http://www.reachin.se, cited 8 Feb 2006" /><p class="c-article-references__text" id="ref-CR27">Reachin Technologies AB (2006) <a href="http://www.reachin.se">http://www.reachin.se</a>, cited 8 Feb 2006</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Rhino (2006) http://www.rhino32.com, cited 8 Feb 2006" /><p class="c-article-references__text" id="ref-CR28">Rhino (2006) <a href="http://www.rhino32.com">http://www.rhino32.com</a>, cited 8 Feb 2006</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Schkolne S, Pruett M, Schroder P (2001) Surface drawing: creating organic 3D shapes with the hand and tangible" /><p class="c-article-references__text" id="ref-CR29">Schkolne S, Pruett M, Schroder P (2001) Surface drawing: creating organic 3D shapes with the hand and tangible tools. SIGCHI conference on human factors in computing systems Seattle, Washington, US, pp 261–268, 2001</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="C. Shaw, M. Green, " /><meta itemprop="datePublished" content="1997" /><meta itemprop="headline" content="Shaw C, Green M (1997) THRED: a two-handed design system. Multimedia Syst J 5:126–139" /><p class="c-article-references__text" id="ref-CR30">Shaw C, Green M (1997) THRED: a two-handed design system. Multimedia Syst J 5:126–139</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1007%2Fs005300050048" aria-label="View reference 30">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 30 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=THRED%3A%20a%20two-handed%20design%20system&amp;journal=Multimedia%20Syst%20J&amp;volume=5&amp;pages=126-139&amp;publication_year=1997&amp;author=Shaw%2CC&amp;author=Green%2CM">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Stevens W (1998) Unix Network Programming, vol 1, 85—110, 2nd edn, Prentice Hall, NJ" /><p class="c-article-references__text" id="ref-CR31">Stevens W (1998) Unix Network Programming, vol 1, 85—110, 2nd edn, Prentice Hall, NJ</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Stevenson D, Smith K, McLaughlin J, Gunn C, Veldkamp J, Dixon M (1999) Haptic workbench: a multisensory virtua" /><p class="c-article-references__text" id="ref-CR32">Stevenson D, Smith K, McLaughlin J, Gunn C, Veldkamp J, Dixon M (1999) Haptic workbench: a multisensory virtual environment. In: Proceedings of SPIE—The International Society for Optical Engineering, 3639, pp 356–366</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="The Artist’s Life (2006) http://www.renaissanceconnection.org/artistslife.html, cited 8 February 2006" /><p class="c-article-references__text" id="ref-CR33">The Artist’s Life (2006) <a href="http://www.renaissanceconnection.org/artistslife.html">http://www.renaissanceconnection.org/artistslife.html</a>, cited 8 February 2006</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Vasari G, Bull G (1987) Lives of the artists. Penguin Books, Harmondsworth" /><p class="c-article-references__text" id="ref-CR34">Vasari G, Bull G (1987) Lives of the artists. Penguin Books, Harmondsworth</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Williams L, McDowell C, Nagappan N, Fernald J, Werner L (2003) Building pair programming knowledge through a f" /><p class="c-article-references__text" id="ref-CR35">Williams L, McDowell C, Nagappan N, Fernald J, Werner L (2003) Building pair programming knowledge through a family of experiments. In: Proceedings of 2003 International Symposium on Empirical Software Engineering, ISESE 2003, October 2003</p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-006-0044-4-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Ack1">Acknowledgments</h2><div class="c-article-section__content" id="Ack1-content"><p>This work was funded under the CeNTIE project (<a href="http://www.ict.csiro.au/page.php?cid%C2%A0=%C2%A022">http://www.ict.csiro.au/page.php?cid = 22</a>) which is supported by the Australian Government through the Advanced Networks Program (ANP) of the Department of Communications, Information Technology and the Arts.</p></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">Commonwealth Scientific and Industrial Research Organisation (CSIRO), GPO Box 664, Canberra, Australia</p><p class="c-article-author-affiliation__authors-list">Chris Gunn</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Chris-Gunn"><span class="c-article-authors-search__title u-h3 js-search-name">Chris Gunn</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Chris+Gunn&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Chris+Gunn" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Chris+Gunn%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-006-0044-4/email/correspondent/c1/new">Chris Gunn</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=Collaborative%20virtual%20sculpting%20with%20haptic%20feedback&amp;author=Chris%20Gunn&amp;contentID=10.1007%2Fs10055-006-0044-4&amp;publication=1359-4338&amp;publicationDate=2006-09-12&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Gunn, C. Collaborative virtual sculpting with haptic feedback.
+                    <i>Virtual Reality</i> <b>10, </b>73–83 (2006). https://doi.org/10.1007/s10055-006-0044-4</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-006-0044-4.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2006-02-25">25 February 2006</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2006-07-14">14 July 2006</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2006-09-12">12 September 2006</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2006-10">October 2006</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-006-0044-4" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-006-0044-4</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Haptics</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Collaboration</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Sculpting</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Virtual environments</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-006-0044-4.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=44;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

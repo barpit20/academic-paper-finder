@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="Low-cost simulated MIG welding for advancement in technical training"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="The simulated MIG lab (sMIG) is a training simulator for Metal Inert Gas (MIG) welding. It is based on commercial off the shelf (COTS) components and targeted at familiarizing beginning students..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/15/1.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="Low-cost simulated MIG welding for advancement in technical training"/>
+
+    <meta name="dc.source" content="Virtual Reality 2010 15:1"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2010-05-21"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2010 Springer-Verlag London Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="The simulated MIG lab (sMIG) is a training simulator for Metal Inert Gas (MIG) welding. It is based on commercial off the shelf (COTS) components and targeted at familiarizing beginning students with the MIG equipment and best practices to follow to become competent and effective MIG welders. To do this, it simulates the welding process as realistically as possible using standard welding hardware components (helmet, gun) for input and by using head-tracking and a 3D-capable low-cost monitor and standard speakers for output. We developed a simulation to generate realistic audio and visuals based on numerical heat transfer methods and verified the accuracy against real welds. sMIG runs in real time producing a realistic, interactive, and immersive welding experience while maintaining a low installation cost. In addition to being realistic, the system provides instant feedback beyond what is possible in a traditional lab. This help students avoid learning (and unlearning) incorrect movement patterns."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2010-05-21"/>
+
+    <meta name="prism.volume" content="15"/>
+
+    <meta name="prism.number" content="1"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="69"/>
+
+    <meta name="prism.endingPage" content="81"/>
+
+    <meta name="prism.copyright" content="2010 Springer-Verlag London Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-010-0162-x"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-010-0162-x"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-010-0162-x.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-010-0162-x"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="Low-cost simulated MIG welding for advancement in technical training"/>
+
+    <meta name="citation_volume" content="15"/>
+
+    <meta name="citation_issue" content="1"/>
+
+    <meta name="citation_publication_date" content="2011/03"/>
+
+    <meta name="citation_online_date" content="2010/05/21"/>
+
+    <meta name="citation_firstpage" content="69"/>
+
+    <meta name="citation_lastpage" content="81"/>
+
+    <meta name="citation_article_type" content="Original Article"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-010-0162-x"/>
+
+    <meta name="DOI" content="10.1007/s10055-010-0162-x"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-010-0162-x"/>
+
+    <meta name="description" content="The simulated MIG lab (sMIG) is a training simulator for Metal Inert Gas (MIG) welding. It is based on commercial off the shelf (COTS) components and targe"/>
+
+    <meta name="dc.creator" content="Steven A. White"/>
+
+    <meta name="dc.creator" content="Mores Prachyabrued"/>
+
+    <meta name="dc.creator" content="Terrence L. Chambers"/>
+
+    <meta name="dc.creator" content="Christoph W. Borst"/>
+
+    <meta name="dc.creator" content="Dirk Reiners"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="Aglawe A (2008) Virtual mig welding simulation. Master&#8217;s thesis, University of Louisiana at Lafayette"/>
+
+    <meta name="citation_reference" content="Aiteanu HBD (2003) A step forward in manual welding: Demonstration of augmented reality helment. In: Second IEEE and ACM international symposium on mixed and augmented reality. IEEE, pp 309&#8211;310"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Can Metallurg Q; citation_title=Modelling gas metal arc weld geometry using artificial neural network technology; citation_author=B Chan, J Pacey, M Bibby; citation_volume=39; citation_publication_date=1999; citation_pages=43-51; citation_doi=10.1016/S0008-4433(98)00037-8; citation_id=CR3"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Welding J; citation_title=Signature analysis for quality monitoring in short-circuit gmaw; citation_author=YX Chu, SJ Hou, PC Wang, SP Marin; citation_volume=22; citation_publication_date=2004; citation_pages=336s-343s; citation_id=CR4"/>
+
+    <meta name="citation_reference" content="Conitec Datasystems I (2009) 3d game studio
+                    
+                      
+                    
+                    $$^{\circledR}.$$
+                  
+                           
+                    http://www.3dgamestudio.com
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="Cudina M, Prezelj J (2003) Evaluation of the sound signal based on the welding current in the gas-metal arc welding process. In: Institution of mechanical engineers, pp 483&#8211;494, J Mech Eng Sci 217(5)"/>
+
+    <meta name="citation_reference" content="ESAB Group I (2000) Lesson 2 common electric arc welding processes. 
+                    http://www.esabna.com/EUWeb/AWTC/Lesson2_2.htm
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="Fast K, Gifford T, Yancey R (2004) Virtual training for welding. In: 3rd IEEE/ACM international symposium on mixed and augmented reality, IEEE, pp 298&#8211;299. doi:
+                    http://dx.doi.org/10.1109/ISMAR.2004.65
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="citation_journal_title=Welding J; citation_title=Process behavior and stability in short circuit gas metal arc welding; citation_author=MJM Hermans, GD Ouden; citation_volume=78; citation_issue=4; citation_publication_date=1999; citation_pages=137s-141s; citation_id=CR9"/>
+
+    <meta name="citation_reference" content="Jones AL, Mendez P, Weiss D, Eager TW (1997) Dynamic behavior of gas metal arc welding. In: 9th Annual conference on iron and steel technology"/>
+
+    <meta name="citation_reference" content="Kato M, Billinghurst I, Poupyrev I, Imamoto k, Tachibana K (2000) Virtual object manipulation on a table-top ar environment. In: IEEE and ACM international symposium on augmented reality. IEEE, pp 111&#8211;119"/>
+
+    <meta name="citation_reference" content="citation_journal_title=J Mater Process Technol; citation_title=A mathematical model of heat transfer and fluid flow in the gas metal arc welding process; citation_author=IS Kim, A Basu; citation_volume=77; citation_publication_date=1998; citation_pages=17-24; citation_doi=10.1016/S0924-0136(97)00383-X; citation_id=CR12"/>
+
+    <meta name="citation_reference" content="Kobayashi K, Ishigame S, Kato H (2001) Simulator of manual metal arc welding with haptic display. In: Int. Conf. Artif. Real Telexistence, pp 175&#8211;178"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Metallurg Mater Trans; citation_title=Three-dimensional finite element modeling of gas metal-arc welding; citation_author=S Kumar, S Bhaduri; citation_volume=25; citation_publication_date=1994; citation_pages=435-441; citation_doi=10.1007/BF02663394; citation_id=CR14"/>
+
+    <meta name="citation_reference" content="Mansoor AM, Huissoon JP (1999) Acoustic identification of the gmaw process. In: Ninth international conference on computer technology in welding, pp 312&#8211;323"/>
+
+    <meta name="citation_reference" content="Martin BKJ (2005) Opportunities for VR and R&amp;D initiatives. In: International conference on computer simulation in information and communication engineering, pp 20&#8211;22"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Int J Comp Integr Manuf; citation_title=A prototype virtual reality-based demonstrator for immersive and interactive simulation of welding process; citation_author=D Mavrikios, V Karabatsou, null Fragos, G Chryssolouris; citation_volume=19; citation_publication_date=2006; citation_pages=294-300; citation_doi=10.1080/09511920500340916; citation_id=CR17"/>
+
+    <meta name="citation_reference" content="Parker JR, Behm B (2004) Creating audio textures by example: Tiling and stitching. In: IEEE international conference on acoustics, speech, and signal processing, pp 317&#8211;320"/>
+
+    <meta name="citation_reference" content="citation_title=Numerical heat transfer and fluid flow; citation_publication_date=1980; citation_id=CR19; citation_author=SV Patankar; citation_publisher=Hemisphere Corporation"/>
+
+    <meta name="citation_reference" content="citation_journal_title=J Ship Prod; citation_title=A prototype virtual reality-based demonstrator for immersive and interactive simulation of welding process; citation_author=NC Porter, J Cote, G Allan, D Timothy, W Lam; citation_volume=22; citation_publication_date=2006; citation_pages=126-138; citation_id=CR20"/>
+
+    <meta name="citation_reference" content="Syst&#233;mes C (2009) Cs wave, the virtual welding trainer. 
+                    http://www.wave.c-s.fr
+                    
+                  
+                        "/>
+
+    <meta name="citation_reference" content="Tschirner P, Hillers B, Graser A (2002) A concept for the application of augmented reality in manual gas metal arc welding. In: International symposium on mixed and augmented reality, pp 257&#8211;258"/>
+
+    <meta name="citation_reference" content="Wang Y, Chen Y, Nan Z, Hu Y (2006) Study on welder training by means of haptic guidance and virtual reality for arc welding. In: 2006 IEEE international conference on robotics and biomimetics, pp 954&#8211;958"/>
+
+    <meta name="citation_reference" content="Wormell D, Foxlin E (2003) Advancements in 3d interactive devices for virtual environments. In: Eurographics workshop on virtual environments, pp 47&#8211;56"/>
+
+    <meta name="citation_author" content="Steven A. White"/>
+
+    <meta name="citation_author_email" content="saw7186@cacs.louisiana.edu"/>
+
+    <meta name="citation_author_institution" content="University of Louisiana at Lafayette, Lafayette, USA"/>
+
+    <meta name="citation_author" content="Mores Prachyabrued"/>
+
+    <meta name="citation_author_institution" content="University of Louisiana at Lafayette, Lafayette, USA"/>
+
+    <meta name="citation_author" content="Terrence L. Chambers"/>
+
+    <meta name="citation_author_institution" content="University of Louisiana at Lafayette, Lafayette, USA"/>
+
+    <meta name="citation_author" content="Christoph W. Borst"/>
+
+    <meta name="citation_author_institution" content="University of Louisiana at Lafayette, Lafayette, USA"/>
+
+    <meta name="citation_author" content="Dirk Reiners"/>
+
+    <meta name="citation_author_institution" content="University of Louisiana at Lafayette, Lafayette, USA"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-010-0162-x&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2011/03/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-010-0162-x"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="Low-cost simulated MIG welding for advancement in technical training"/>
+        <meta property="og:description" content="The simulated MIG lab (sMIG) is a training simulator for Metal Inert Gas (MIG) welding. It is based on commercial off the shelf (COTS) components and targeted at familiarizing beginning students with the MIG equipment and best practices to follow to become competent and effective MIG welders. To do this, it simulates the welding process as realistically as possible using standard welding hardware components (helmet, gun) for input and by using head-tracking and a 3D-capable low-cost monitor and standard speakers for output. We developed a simulation to generate realistic audio and visuals based on numerical heat transfer methods and verified the accuracy against real welds. sMIG runs in real time producing a realistic, interactive, and immersive welding experience while maintaining a low installation cost. In addition to being realistic, the system provides instant feedback beyond what is possible in a traditional lab. This help students avoid learning (and unlearning) incorrect movement patterns."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>Low-cost simulated MIG welding for advancement in technical training | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-010-0162-x","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Virtual reality, Welding, Finite difference, Simulation, Acoustics","kwrd":["Virtual_reality","Welding","Finite_difference","Simulation","Acoustics"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-010-0162-x","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-010-0162-x","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=162;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-010-0162-x">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            Low-cost simulated MIG welding for advancement in technical training
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-010-0162-x.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-010-0162-x.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">Original Article</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2010-05-21" itemprop="datePublished">21 May 2010</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">Low-cost simulated MIG welding for advancement in technical training</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Steven_A_-White" data-author-popup="auth-Steven_A_-White" data-corresp-id="c1">Steven A. White<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of Louisiana at Lafayette" /><meta itemprop="address" content="grid.266621.7, 0000000098315270, University of Louisiana at Lafayette, 537 Cajundome Boulevard, Lafayette, LA, 70506, USA" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Mores-Prachyabrued" data-author-popup="auth-Mores-Prachyabrued">Mores Prachyabrued</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of Louisiana at Lafayette" /><meta itemprop="address" content="grid.266621.7, 0000000098315270, University of Louisiana at Lafayette, 537 Cajundome Boulevard, Lafayette, LA, 70506, USA" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Terrence_L_-Chambers" data-author-popup="auth-Terrence_L_-Chambers">Terrence L. Chambers</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of Louisiana at Lafayette" /><meta itemprop="address" content="grid.266621.7, 0000000098315270, University of Louisiana at Lafayette, 537 Cajundome Boulevard, Lafayette, LA, 70506, USA" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Christoph_W_-Borst" data-author-popup="auth-Christoph_W_-Borst">Christoph W. Borst</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of Louisiana at Lafayette" /><meta itemprop="address" content="grid.266621.7, 0000000098315270, University of Louisiana at Lafayette, 537 Cajundome Boulevard, Lafayette, LA, 70506, USA" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Dirk-Reiners" data-author-popup="auth-Dirk-Reiners">Dirk Reiners</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of Louisiana at Lafayette" /><meta itemprop="address" content="grid.266621.7, 0000000098315270, University of Louisiana at Lafayette, 537 Cajundome Boulevard, Lafayette, LA, 70506, USA" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 15</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">69</span>–<span itemprop="pageEnd">81</span>(<span data-test="article-publication-year">2011</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">410 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">4 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                    
+                        <li class="c-article-metrics-bar__item">
+                            <p class="c-article-metrics-bar__count">3 <span class="c-article-metrics-bar__label">Altmetric</span></p>
+                        </li>
+                    
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-010-0162-x/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>The simulated MIG lab (sMIG) is a training simulator for Metal Inert Gas (MIG) welding. It is based on commercial off the shelf (COTS) components and targeted at familiarizing beginning students with the MIG equipment and best practices to follow to become competent and effective MIG welders. To do this, it simulates the welding process as realistically as possible using standard welding hardware components (helmet, gun) for input and by using head-tracking and a 3D-capable low-cost monitor and standard speakers for output. We developed a simulation to generate realistic audio and visuals based on numerical heat transfer methods and verified the accuracy against real welds. sMIG runs in real time producing a realistic, interactive, and immersive welding experience while maintaining a low installation cost. In addition to being realistic, the system provides instant feedback beyond what is possible in a traditional lab. This help students avoid learning (and unlearning) incorrect movement patterns.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Introduction</h2><div class="c-article-section__content" id="Sec1-content"><p>Since the Industrial Revolution, welding has become increasingly important as a construction technique. One of the primary methods for joining two pieces of metal together, welding is a critical profession for the modern age. However, the dangerous nature of welding and the extreme risk imposed to users of a poorly bonded structure make it important for employers to seek out highly skilled welders. The increasing demand for welders and the need for skilled labor over untrained labor require that entry-level tradesmen seek out professional training outside the working environment.</p><p>The most common current welder training method in the United States is Technical College training where students learn a trade in a classroom environment instead of the traditional on-the-job training received by apprenticeships. Because welding requires a high amount of hand–eye coordination and a solid understanding of the best practices required to obtain a solid bond, the transfer of knowledge from teachers to students can be very time intensive for some students, while others may pick up the principles quickly and only require practice to improve. As classroom size increases, it becomes harder for an instructor to schedule time between individual students.</p><p>This problem might be solved by employing additional instructors, but that would likely increase the tuition cost. An alternative is to develop trainers that provide feedback for users who are self-reliant, but still require evaluation of their over all progress. Virtual simulations are capable of providing experiences similar to what a student would get in actual trials. These simulators have the added benefit of presenting additional information both during and after the run. This eases the burden on the instructor and can help lower the total cost of tuition, depending on simulation cost. Prior work has led to the development of various welding simulators, but most were designed with expensive, specialized equipment far outside of the price range of regional and local institutions, and therefore they were not suitable to overcome the welder shortage in effect today.</p><p>With advancements in modern computing, a powerful personal computer is more than capable of running an application that realistically simulates the welding process. Computational power combined with the advancement of low-cost position and orientation (pose) tracking technology and consumer-level stereoscopic monitors greatly reduces the cost of incorporating simulation-based training in current curricula. The simulated MIG lab (sMIG) is a welding simulator for Metal Inert Gas (MIG) welding that is intended to cost roughly the same as a traditional welding station while eliminating material, building, and supply costs. The system is also capable of providing additional feedback that can be returned during and between practice runs, giving educators more time to instruct in best practices.</p></div></div></section><section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">Related work</h2><div class="c-article-section__content" id="Sec2-content"><p>Edison Welding Institute (EWI), General Dynamics Electric Boat (GDEB), and VRSim developed a virtual reality training system for Gas Metal Arc Welding (GMAW). The system employed a real welding torch, with its tip attached to a HapticMASTER system for force-feedback. The welding torch and welder’s head were tracked using an IS-900 PCTracker. A head-mounted display (HMD) was used for visual display, and a desktop speaker was used for audio display. They employed an Artificial Neural Network (ANN) to predict the weld bead profile from input welding parameters calculated from real-time tracking data. Sample welds were made from 43 welding parameter combinations. The samples were then analyzed for weld bead profile characteristics, and the results were used to train the neural network. Audio feedback was generated by playback of prerecorded sounds. The system supported a welding scenario with a T-joint, one-pass, horizontal weld. Evaluation was done subjectively, 77 out of 104 participants rated the system as good, great, or excellent. Sixty-six participants indicated the system would be a useful tool for welder training (Porter et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Porter NC, Cote J, Allan G, Timothy D, Lam W (2006) A prototype virtual reality-based demonstrator for immersive and interactive simulation of welding process. J Ship Prod 22:126–138" href="/article/10.1007/s10055-010-0162-x#ref-CR20" id="ref-link-section-d43614e388">2006</a>; Fast et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Fast K, Gifford T, Yancey R (2004) Virtual training for welding. In: 3rd IEEE/ACM international symposium on mixed and augmented reality, IEEE, pp 298–299. doi:&#xA;                    http://dx.doi.org/10.1109/ISMAR.2004.65&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-010-0162-x#ref-CR8" id="ref-link-section-d43614e391">2004</a>). Original cost was around $100,000 per seat, but has since reduced to around $40,000. This is still very expensive when setting up a full lab.</p><p>Chan et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Chan B, Pacey J, Bibby M (1999) Modelling gas metal arc weld geometry using artificial neural network technology. Can Metallurg Q 39:43–51" href="/article/10.1007/s10055-010-0162-x#ref-CR3" id="ref-link-section-d43614e397">1999</a>). shows an early example of developing a weld simulation for predicting the final outcome of a weld bead. They also used an ANN. Input parameters included: work angle, travel angle, contact tip-to-work distance, current, voltage, and wire feed speed. The numerical model based on these parameters was fed into the ANN and a back-propagation algorithm was used to train it. Out of 96 bead-on-plate welds, they found that no simple scheme easily models the final bead geometry. An ellipse, as used in Mavrikios, tends to overestimate the size while a parabola is known to underestimate the shape (Mavrikios et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Mavrikios D, Karabatsou V, Fragos, Chryssolouris G (2006) A prototype virtual reality-based demonstrator for immersive and interactive simulation of welding process. Int J Comp Integr Manuf 19:294–300" href="/article/10.1007/s10055-010-0162-x#ref-CR17" id="ref-link-section-d43614e400">2006</a>; Chan et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Chan B, Pacey J, Bibby M (1999) Modelling gas metal arc weld geometry using artificial neural network technology. Can Metallurg Q 39:43–51" href="/article/10.1007/s10055-010-0162-x#ref-CR3" id="ref-link-section-d43614e403">1999</a>). The geometry of the weld pool/puddle is also affected by the volume and temperature of the molten metal provided by the weld wire. As the electrode melts, drops rapidly form to create a pool at the joint between the materials (Kumar and Bhaduri <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1994" title="Kumar S, Bhaduri S (1994) Three-dimensional finite element modeling of gas metal-arc welding. Metallurg Mater Trans 25:435–441" href="/article/10.1007/s10055-010-0162-x#ref-CR14" id="ref-link-section-d43614e406">1994</a>). The size of the drops is dependent on the electrical current used for welding (Jones et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="Jones AL, Mendez P, Weiss D, Eager TW (1997) Dynamic behavior of gas metal arc welding. In: 9th Annual conference on iron and steel technology" href="/article/10.1007/s10055-010-0162-x#ref-CR10" id="ref-link-section-d43614e409">1997</a>; Kim and Basu <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1998" title="Kim IS, Basu A (1998) A mathematical model of heat transfer and fluid flow in the gas metal arc welding process. J Mater Process Technol 77:17–24" href="/article/10.1007/s10055-010-0162-x#ref-CR12" id="ref-link-section-d43614e413">1998</a>). These and other assumptions were used by Chan to model the proper bead shape, but their model is not suitable for real-time interaction due to high computational cost.</p><p>CS Wave is a commercial welder training system developed and distributed by CS Communications &amp; Systémes in partnership with Association pour la formation professionnelle des adultes AFPA. The primary goal of the system is to train students in welding postures. It uses an IS-900 PCTracker for tracking a real welding torch. The display has an adjustable, monoscopic flat panel screen to support both horizontal and vertical welding scenarios. It provides real-time visual aids for self-checking, but no immersive stereoscopic display. The system supports both SMAW and GMAW processes (Wormell and Foxlin <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Wormell D, Foxlin E (2003) Advancements in 3d interactive devices for virtual environments. In: Eurographics workshop on virtual environments, pp 47–56" href="/article/10.1007/s10055-010-0162-x#ref-CR24" id="ref-link-section-d43614e419">2003</a>; Systémes <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Systémes C (2009) Cs wave, the virtual welding trainer. &#xA;                    http://www.wave.c-s.fr&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-010-0162-x#ref-CR21" id="ref-link-section-d43614e422">2009</a>).</p><p>The Center for Multimedia and Learning (CML) at the University of Applied Sciences developed a virtual welding simulator (Martin <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Martin BKJ (2005) Opportunities for VR and R&amp;D initiatives. In: International conference on computer simulation in information and communication engineering, pp 20–22" href="/article/10.1007/s10055-010-0162-x#ref-CR16" id="ref-link-section-d43614e428">2005</a>). The software was based on 3D Game Studio<span class="mathjax-tex">\(^{\circledR}\)</span>, a game development tool consisting of game editor, game programming language, and game engine (Conitec Datasystems <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2009" title="Conitec Datasystems I (2009) 3d game studio&#xA;                    &#xA;                      &#xA;                    &#xA;                    $$^{\circledR}.$$&#xA;                  &#xA;                           &#xA;                    http://www.3dgamestudio.com&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-010-0162-x#ref-CR5" id="ref-link-section-d43614e442">2009</a>). A real welding torch was used as an input device and was tracked by a Polhemus<span class="mathjax-tex">\(^{\circledR}\)</span> magnetic tracking device. The system supported feedback such as temperature distribution and gas pressure information, video recording of training sessions, and use of different welding materials.</p><p>Wang et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Wang Y, Chen Y, Nan Z, Hu Y (2006) Study on welder training by means of haptic guidance and virtual reality for arc welding. In: 2006 IEEE international conference on robotics and biomimetics, pp 954–958" href="/article/10.1007/s10055-010-0162-x#ref-CR23" id="ref-link-section-d43614e460">2006</a>) developed a manual-arc-welding training system that aimed to train a welder to maintain: proper arc length, proper electrode angle, and proper travel speed. They used a Phantom haptic device as an input device and to provide force-feedback. The system helped a user to maintain proper arc length and travel speed by using haptic guidance, realized by a proportional-plus-derivative (PD) feedback control using error between the current and predefined-ideal trajectories. Due to a limitation of the Phantom device that torque couldn’t be provided, they added visual and audio feedbacks to notify an error in electrode angle. Additionally, they provided two non-guidance forces to simulate the weight of an electrode holder and an attractive force between an electrode and a base metal while welding.</p><p>An enhanced welding helmet was developed to improve a manual welding process. It provided improved vision and additional information during the welding. The helmet was integrated with two High Dynamic Range CMOS (HDRC) cameras acquiring images of the environment, and a HMD providing a stereoscopic view. The helmet was connected to a portable computer system for image processing. The acquired images were processed by an algorithm that enhanced the darker surrounding areas preserving the area of the welding arc. Welding torch positions were tracked and corrections were suggested by augmenting visual information. Construction details could be displayed online to avoid laborious looking at a drawing. Welding machine parameters were monitored during a welding process and could be displayed to a welder or controlled by the welder. A welding documentation, containing the entire welding process data and recorded images, was provided at the end for further analysis (Aiteanu <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Aiteanu HBD (2003) A step forward in manual welding: Demonstration of augmented reality helment. In: Second IEEE and ACM international symposium on mixed and augmented reality. IEEE, pp 309–310" href="/article/10.1007/s10055-010-0162-x#ref-CR2" id="ref-link-section-d43614e466">2003</a>; Tschirner et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Tschirner P, Hillers B, Graser A (2002) A concept for the application of augmented reality in manual gas metal arc welding. In: International symposium on mixed and augmented reality, pp 257–258" href="/article/10.1007/s10055-010-0162-x#ref-CR22" id="ref-link-section-d43614e469">2002</a>).</p><p>Kobayashi et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Kobayashi K, Ishigame S, Kato H (2001) Simulator of manual metal arc welding with haptic display. In: Int. Conf. Artif. Real Telexistence, pp 175–178" href="/article/10.1007/s10055-010-0162-x#ref-CR13" id="ref-link-section-d43614e475">2001</a>) presented a mixed-reality manual-arc-welding training system. The system consisted of a face-shield-like display with a hand grip, a haptic input device simulating an electrode unit, and a controlling PC. A CCD camera on the display acquired images of the workspace. The images were processed by the PC for extraction of input device pose using an image-based registration technique (Kato et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Kato M, Billinghurst I, Poupyrev I, Imamoto k, Tachibana K (2000) Virtual object manipulation on a table-top ar environment. In: IEEE and ACM international symposium on augmented reality. IEEE, pp 111–119" href="/article/10.1007/s10055-010-0162-x#ref-CR11" id="ref-link-section-d43614e478">2000</a>). Finally, the images were augmented with virtual base metal, virtual electrode, and virtual spatters before being displayed on a color LCD. The input device used a photo sensor to measure a gap between the tip of the electrode and the base metal. The gap was used to calculate an attractive force between them, realized by electromagnetic equipment. A stepper motor and pulley were used to simulate electrode consumption. The arc effect was simulated using a flash light unit on the display. Audio feedback was generated by playback of prerecorded sounds. The system provided quantitative measurements of a simulated welding process for performance improvement.</p><p>All of the described systems are either impractically expensive for a Technical College level institution or do not provide a sufficient realism and fidelity for effective learning. Our system tries to combine current advances on commercial off the shelf (COTS) hardware to overcome these limitations.</p></div></div></section><section aria-labelledby="Sec3"><div class="c-article-section" id="Sec3-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec3">sMIG system hardware</h2><div class="c-article-section__content" id="Sec3-content"><p>The primary goal of sMIG was to create an accurate real-time simulator without exceeding the cost of a traditional training station for the Lafayette branch of the Louisiana Technical College. The system has to be easy to set up, provide sufficient realism for effective training and be precise enough to avoid learning practices that do not transfer to the actual tasks. The components necessary for this are a computer powerful enough for the simulation, a high-quality 3D display system, precise tracking for the head and welding gun, an easy way to get welding gun trigger information, and a efficient method for sound output.</p><h3 class="c-article__sub-heading" id="Sec4">Computer</h3><p>Current COTS computer systems provide more than enough power to run the simulation at an acceptable rate. sMIG runs on a Intel Core2Duo equipped with 2GB of ram. An nVidia Quadro based on the G80 architecture or higher because we use nVidia’s 3D vision technology. Motivation for this hardware choice is discussed in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0162-x#Sec5">3.2</a>.</p><h3 class="c-article__sub-heading" id="Sec5">Display</h3><p>While the systems described in the related work have traditionally preferred HMD displays (if they have 3D display capabilities at all), sMIG is designed with a consumer-level monitor. Through the course of the project, three display technologies were considered and evaluated.</p><p>The initial system considered was an iZ3D 22 monitor. It uses two LCD panels one in front of the other, where the back one has the usual polarization filters that every LCD has and controls the brightness, while the front one has no polarization filters and as such can control the polarization plane of the outgoing light. Together with simple linear polarization glasses this allows splitting the brightness between left and right eye by selecting an appropriate polarization rotation angle.</p><p>The Iz3D is interesting because it uses passive technology driven by two inputs, allowing the use of cheap gaming graphics cards. It does not sacrifice resolution for stereo, mono and stereo both get the full resolution. But, because it uses linear polarization, it needs constant active adjustment of the polarization plane to account for head rotations, making it complicated to support for an application that has a fair amount of head motions like a welder trainer. The inability to control per-channel left-right color balance made it an inappropriate choice for the project.</p><p>The second display evaluated was the Zalman ZM-M220W. It uses circular polarization, which makes it insensitive to head rotations, and has alternating scanlines polarized in alternating directions. This is easy to support from an application perspective due to programmable shaders and direct render-to-texture capabilities. The display also has a lower, but still visible, amount of cross talk.</p><p>However, the Zalman’s approach sacrifices vertical resolution for stereo, each eye seeing only half of the scanlines. This reduces the amount of displayable detail, and leaves gaps between scanlines that are clearly that can be visible at close range (e.g. when welding). The system also suffered from a small vertical field of view that limited the head motion freedom of the user.</p><p>The display that our most recent system uses is an active stereo-capable LCD monitor, in our case a Samsung SyncMaster 2233RZ. In combination with nVidia GeForce3D Vision active glasses it is the most promising. The monitor and glasses are available as an affordable bundle, and the quality is very good, featuring very little cross talk and low but acceptable brightness in stereo mode with a limited but usable viewing angle. The use of active stereo allows each eye to receive a full resolution frame. This technology allows us to better compensate for head rotations and improves cross talk beyond what is capable with the iZ3D or the Zalman.</p><p>This monitor currently has driver support only for the professional Quadro line of graphics cards, requiring a more expensive card for the system. The glasses also suffered from interference with the tracker (see Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0162-x#Sec6">3.3</a>), as both components use infrared light. Careful adjustments of the camera intensity allowed us to eliminate this problem.</p><h3 class="c-article__sub-heading" id="Sec6">Tracking</h3><p>Head-tracking and MIG gun tracking are achieved with three OptiTrack FLEX:V100 cameras. The cameras are placed in front of the display in a non-linear arrangement providing a suitable tracking volume for the simulated welding. The monitor and cameras are attached to an aluminum frame. This keeps the cameras from moving out of alignment and provides metered markers, which are used during initial calibration.</p><p>The scenario-specific attachments consist of a professional 150 amp MIG welding gun and a common welding helmet. Both are slightly modified to reduce IR reflection that would complicate tracking. Retro-reflective markers are applied in unique arrangements to track each objects position and orientation. The guns trigger switch is connected to the control board of a standard joystick controller, which is used to detect trigger events.</p><p>The tracking is the most expensive component of the whole system at this point, costing $2500. This price-point includes the cost of three cameras and the Rigid Body Toolkit used to interface with the three cameras. We have experimented with cheaper options like the popular Wiimote controllers. So far we have not been able to achieve precision that was comparable to the Optitrack or even remotely accurate enough for Welder training. This option might be revisited in the future, but for now the Optitrack is the best option, as it gives sufficient accuracy for the fine motion used in welding (see Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0162-x#Sec21">7</a> for details).</p><h3 class="c-article__sub-heading" id="Sec7">Total costs</h3><p>The price of the system is currently around $5500. This includes: $600 for the monitor-glasses bundle, $2500 for tracking, $1500 for the base PC, $300 for the custom frame, and $600 for the required nVidia Quadro. As mentioned in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0162-x#Sec6">3.3</a>, the OptiTrack system costs $2500 and includes the Rigid Body ToolKit. This toolkit provides prebuilt applications for calibration of the FLEX:V100 cameras and saving rigid body definitions to file. The toolkit also provides libraries for retrieving the current pose of defined rigid bodies and other information required for tracking. An nVidia Quadro Card is required to run the nVidia 3D Vision technology using OpenGL. Models that support 3D Vision can range between $500 and $2500. Since the Quadro requirement is simply a driver limitation and not a hardware issue, the selected Quadro simply needs to be designed to meet the G80 specification or higher. This means that a NVIDIA Quadro FX 3700 or 3800 would be adequate and currently range between $500 and $800. The custom frame is constructed from 80/20 extrusions (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0162-x#Fig1">1</a>). It includes adjustable mounting positions for the three cameras and removable guides for calibration (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0162-x#Fig9">9</a>). Cameras are attached to the frame by KODAK mini tripods. The tripods are acquired at nominal cost and the legs are removed by a single screw providing an acceptable mount point. The total cost of $5500 stays well below the original project goals.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0162-x/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0162-x/MediaObjects/10055_2010_162_Fig1_HTML.jpg?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0162-x/MediaObjects/10055_2010_162_Fig1_HTML.jpg" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p>sMIG hardware</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0162-x/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        </div></div></section><section aria-labelledby="Sec8"><div class="c-article-section" id="Sec8-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec8">System software architecture</h2><div class="c-article-section__content" id="Sec8-content"><p>The software architecture of sMIG is divided into five operational components and one administration component (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0162-x#Fig2">2</a>) called the simulation engine. The operational components are Status Information, tracking, acoustics, visualization, and simulation. Communication among the operational components is managed by the engine, which retrieves any information that is required by the current component before the engine notifies it to run. This design was chosen because it is easy to maintain and provides a clear outline of communication between components in case concurrent operation of any two components would ever be required.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0162-x/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0162-x/MediaObjects/10055_2010_162_Fig2_HTML.gif?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0162-x/MediaObjects/10055_2010_162_Fig2_HTML.gif" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p>System architecture</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0162-x/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <h3 class="c-article__sub-heading" id="Sec9">Configuration</h3><p>Due to the wide variety of configurable inputs needed to define a work-piece and the underlying representation, a component responsible for managing the current configuration was required to ensure the other components receive all configuration parameters at start up and any changes that occur at runtime. Referred to as the Status Information object, it is the first component instantiated by the simulation engine. The component is responsible for parsing the scenario configuration. A modular xml-based file, which contains parameters ranging from the material used in the simulation to the density of the simulation grid, is processed at the start of each simulation. The file format also allows optional debugging configuration, alternate textures, and the ability to turn off specific rendering techniques.</p><p>The Status Information object acts as a publisher that other components subscribe to when created. This allows parameters to be adjusted at runtime. sMIG’s design includes a remote observation client that can be controlled by an instructor on a different computer. The currently preliminary design, a small HTTP server allows real-time changes to a weld simulation using any web browser on the local network. When a parameter is modified each of the subscribers is notified of the change and is individually responsible for updating their local parameters when it is safe to do so. Once the system is updated, the simulation is adjusted, which happens practically instantaneously.</p><h3 class="c-article__sub-heading" id="Sec10">Tracking</h3><p>The second component controlled by the engine is Tracking. The tracking component is central for operation because it acts as both the system clock and it is responsible for delivering information vital to all other components. The data it passes back is encapsulated in a serializable Pose class, which contains the time stamp of when its creation with the position and orientation of an object. Camera SDK portability limitations motivated development of multiple tracking implementations. An interface abstraction of the component allows sMIG to change dynamically between real-time optical input and prerecorded input stored in binary or text format. For desktop development away from the welding system an additional simulated tracking interface was developed for the keyboard and mouse. The additional tracking interfaces aid in both development and the final product. The prerecorded input is required for validation of the physical engine, but can also be used for feedback and remote monitoring. While keyboard input is useful for allowing developers to test the graphical engine without requiring the entire simulator. Calibration and Tracking is further discussed in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0162-x#Sec21">7</a>.</p><h3 class="c-article__sub-heading" id="Sec11">Visualization</h3><p>Visualization includes several sub-components. The simulation engine instantiates a visualization engine that is responsible for detecting the system hardware and processing the simulation configuration to determine the best rendering method for the detected hardware configuration. Once this has been completed, a display interface is instantiated with the correct rendering implementation. Each implementation is derived from a basic monoscopic rendering class. This technique minimizes the code required to develop different stereo rendering techniques, as required by each different display technology. Development warranted the a monoscopic implementation capable of showing individual eye-views separately or side-by side. The user interface is further discussed in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0162-x#Sec18">6</a>.</p><h3 class="c-article__sub-heading" id="Sec12">Acoustics</h3><p>The auditory component uses information about the welding gun’s pose and the activity of the physical simulation. Because of the noise volume generated by welding activity and the use of headphones in practical application scenarios, sMIG does not take the head position into account when generating sound, as differences in sound based on position in such a small area is not a critical factor. Generated sound is passed directly to the sound card and played in real time independent of the other components. Each time the sound generates a spike of significant intensity, a signal is sent to the graphical component that a spark event needs to be displayed. The method for sound generation is discussed in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-010-0162-x#Sec22">8</a>.</p><h3 class="c-article__sub-heading" id="Sec13">Simulation</h3><p>The simulation represents a weld-piece as a regular mesh of points. The simulation tracks the current and maximum temperature for every test point in the mesh and, the top mesh layer additionally stores the height of the weld to simulate the deposition of weld material. This information is stored in contiguous memory buffers in a format that does not require data conversions between the graphical and physical simulation. This allows relevant data in the simulation to be passed directly to the video card and stored in vertex buffers without conversion. The mesh uses a double buffer representation of the temperature and position to prevent writes from affecting reads of an unsteady state.</p><p>The simulation communicates with the tracking component to get the MIG gun pose to determine the heat transfer to the proper mesh nodes. It uses the timestamp included with the pose to determine the time difference between iterations and to calculate the amount of material deposited over the time interval. When new material is deposited, the simulation adjusts the position and a surface normal for each affected mesh node that was affected. Normals along with surface contour data and current temperatures are all passed directly to the graphical component at the end of each simulation run to be used for rendering.</p></div></div></section><section aria-labelledby="Sec14"><div class="c-article-section" id="Sec14-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec14">Physical simulation</h2><div class="c-article-section__content" id="Sec14-content"><p>Two different simulation models were developed for sMIG. The initial model was adapted from the technique described by Patankar (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1980" title="Patankar SV (1980) Numerical heat transfer and fluid flow 1st ed. Hemisphere Corporation, New York" href="/article/10.1007/s10055-010-0162-x#ref-CR19" id="ref-link-section-d43614e665">1980</a>) and uses a finite difference method to solve the thermal conductance problem using a discretization of the work-piece. The second model uses a neighborhood averaging approach and was developed to allow the model to run faster respectively at a higher mesh resolution, and to eventually be segmented parallelized.</p><h3 class="c-article__sub-heading" id="Sec15">Gauss–seidel</h3><p>This section describes one of two numerical welding simulations that predicts the shape of the weld bead and the depth of penetration in real time by taking into consideration the welding speed, wire feed rate, and the welding gun position. Full details are available in Aglawe (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Aglawe A (2008) Virtual mig welding simulation. Master’s thesis, University of Louisiana at Lafayette" href="/article/10.1007/s10055-010-0162-x#ref-CR1" id="ref-link-section-d43614e675">2008</a>). In this simulation, the finite difference method is used to calculate the temperature distribution in the work-piece. The depth of penetration and the width of the weld bead are determined based on the temperature distribution. A three-dimensional parabolic shape is assumed for the weld bead, and the volume of the bead deposited per unit time is calculated based on the previously calculated width of the bead, the wire feed rate, and the gun velocity. The goal was to find a simulation technique that would strike a useful balance between accuracy in the prediction of the weld bead shape and computational cost of the simulation, so that the simulation could be used in a real-time interactive MIG welding training system.</p><p>The work-piece of the simulation is configurable through an XML interface, which is loaded at startup and can be reloaded through an HTTP interface made available as the application runs. A typical scenario is a 20 cm × 20 cm aluminum work-piece with 2 cm of thickness. At a 1-mm resolution, this creates a mesh of 200 × 200 × 20 grid points.</p><p>sMIG approximates the transient heat transfer problem by partially converging to the steady-state solution at each time step. All points in the weld mesh are initialized to room temperature. In this state, the 3D partial differential Laplace equation is used to represent the temperature distribution throughout the work-piece. As thermal energy is transferred to the work-piece by the electrical arc generated by the welding gun, the discrete weld mesh is used to approximate the solution to the Laplace equation.</p><p>Because the work-piece is uniform in nature, the rates of change across dimensions are uniform. This allows us to approximate the solution to the Laplace equation by creating a system of linear equations that solves for the temperature of each node in the plate simultaneously. The Gauss–Seidel method with under-relaxation is used to solve this system of linear equations for the temperature distribution in the plate. Full details can be found in Aglawe (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Aglawe A (2008) Virtual mig welding simulation. Master’s thesis, University of Louisiana at Lafayette" href="/article/10.1007/s10055-010-0162-x#ref-CR1" id="ref-link-section-d43614e685">2008</a>).</p><p>Because it would be computationally too expensive to fully converge the system at each time step, we instead perform a maximum of eight iterations at each time step, which resulted in an average convergence rate of approximately 90%. To start the process, the coordinates returned by the tracking component are mapped to a particular discrete node. The temperature of the node at the mapped coordinates is set to the arc temperature, which was empirically set to be 6, 500<sup>^</sup>C. The temperature generated by the welding process is considered constant provided no changes to input parameters are made. The primary output of the numerical heat transfer model is the predicted width of the weld bead, which is found by identifying those nodes that have exceeded the melting temperature of the material. The weld bead width is used to calculate the shape of the weld bead, as shown below.</p><h3 class="c-article__sub-heading" id="Sec16">Bead shape</h3><p>Chan et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Chan B, Pacey J, Bibby M (1999) Modelling gas metal arc weld geometry using artificial neural network technology. Can Metallurg Q 39:43–51" href="/article/10.1007/s10055-010-0162-x#ref-CR3" id="ref-link-section-d43614e702">1999</a>) have shown that the cross-section of the weld bead is approximately parabolic. sMIG assumes the shape of the weld bead to be parabolic as in Chan, but the parabola is revolved about the vertical axis, which produces a hemispherical shape, as shown below.</p><p>The volume of the bead is calculated by integrating to find the volume under the parabola, shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0162-x#Fig3">3</a>, that has been revolved around the <i>y</i> axis. By equating the volume of the wire fed over a unit of time to the volume under the parabola, we can derive the following equation for the shape of the weld bead, based on given values for the wire diameter, <i>d</i>
+                           <sub>
+                    <i>w</i>
+                  </sub>, the wire feedrate, <i>f</i>, the time step, <span class="mathjax-tex">\(\Updelta t\)</span>, and the width of the weld bead, <i>w</i>, which comes from the numerical heat transfer model described above:</p><div id="Equ1" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ y = -\left({\frac{4d_w^2 f\Updelta t}{w^4}} \right) x^2+\left({\frac{d_w^2 f \Updelta t}{w^2}} \right ) $$</span></div><div class="c-article-equation__number">
+                    (1)
+                </div></div>
+                           <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0162-x/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0162-x/MediaObjects/10055_2010_162_Fig3_HTML.gif?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0162-x/MediaObjects/10055_2010_162_Fig3_HTML.gif" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p>Cross-section of parabola revolved around <i>Y</i>-axis</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0162-x/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>Through physical experiments, it was determined that the simulation is more than 92% accurate concerning weld width, height and undercut. Details can be found in Aglawe (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Aglawe A (2008) Virtual mig welding simulation. Master’s thesis, University of Louisiana at Lafayette" href="/article/10.1007/s10055-010-0162-x#ref-CR1" id="ref-link-section-d43614e779">2008</a>).</p><h3 class="c-article__sub-heading" id="Sec17">Averaging engine</h3><p>An alternative simulation the averaging engine was created to achieve a performance gain that allowed the use of finer meshes with minimal impacts on accuracy. The design of the engine was based on a few assumptions. The first assumption is that the time difference between iterations of the weld engine will be small. Finally, the heat transferred away from the plate is insignificant compared to the heat transferred into the plate while the welding process is ongoing.</p><p>By assuming a small time step, we know that the heat conducted away from a node cannot have traveled outside of its neighborhood, which allows us to restrict heat transfer to and from an individual node to just its topological neighbors. The distance and material properties of the nodes in a neighborhood are regular, allowing us to simplify the equations used in Aglawe (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2008" title="Aglawe A (2008) Virtual mig welding simulation. Master’s thesis, University of Louisiana at Lafayette" href="/article/10.1007/s10055-010-0162-x#ref-CR1" id="ref-link-section-d43614e792">2008</a>).</p><p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0162-x#Fig4">4</a> shows the conceptual connectivity of nodes in the weld mesh. Members with the same depth coordinate are labeled with the cardinal directions while neighbors above and below the central member are called the top and bottom neighbors, respectively. When all members of the neighborhood are equally distant and have uniform material properties the heat transfer over a given timestamp can be calculated with 2 and 3, where <i>c</i> is the thermal conductance of the material, <i>v</i> is the volume represented by the central node, <i>d</i> is the material density, and <i>T</i>
+                           <sub>
+                    <i>E</i>
+                  </sub> is the current temperature of neighbor <i>E</i> as defined in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0162-x#Fig4">4</a>.</p><div id="Equ2" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ A_{p_0} = {\frac{c*v*d}{\Updelta t}} $$</span></div><div class="c-article-equation__number">
+                    (2)
+                </div></div>
+                           <div id="Equ3" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ T_p = {\frac{T_N+T_S+T_E+T_W+T_T+T_B+T_{p_0}}{6A_{p_{0}}}} $$</span></div><div class="c-article-equation__number">
+                    (3)
+                </div></div>
+                           <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0162-x/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0162-x/MediaObjects/10055_2010_162_Fig4_HTML.gif?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0162-x/MediaObjects/10055_2010_162_Fig4_HTML.gif" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p>A typical mesh neighborhood</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0162-x/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0162-x/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0162-x/MediaObjects/10055_2010_162_Fig5_HTML.jpg?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0162-x/MediaObjects/10055_2010_162_Fig5_HTML.jpg" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p>The same frame viewed with the current temperature attribute mapped to two different textures. The left focuses on mid- and upper range values while the right focuses on low-end values</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0162-x/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-6"><figure><figcaption><b id="Fig6" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 6</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0162-x/figures/6" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0162-x/MediaObjects/10055_2010_162_Fig6_HTML.jpg?as=webp"></source><img aria-describedby="figure-6-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0162-x/MediaObjects/10055_2010_162_Fig6_HTML.jpg" alt="figure6" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-6-desc"><p>Various views of an example weld where the height attributed mapped to an artificial gradient. <i>White</i> represents the target height, <i>blue</i> is too low and <i>orange/red</i> too high</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0162-x/figures/6" data-track-dest="link:Figure6 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-7"><figure><figcaption><b id="Fig7" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 7</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0162-x/figures/7" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0162-x/MediaObjects/10055_2010_162_Fig7_HTML.jpg?as=webp"></source><img aria-describedby="figure-7-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0162-x/MediaObjects/10055_2010_162_Fig7_HTML.jpg" alt="figure7" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-7-desc"><p>The sMIG engine used to create freeform beads</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0162-x/figures/7" data-track-dest="link:Figure7 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>The gun pose is used to determined the closest node in the mesh to its location. The mesh is double buffered so the arc temperature in written to the back buffer. Then, each node uses the above equation to calculate its temperature for the next iteration. After reading the necessary values from the front buffer, each node calculates its temperature for the next iteration and stores results in the back buffer. When all nodes have reported in, the values in the back buffer are copied to the front buffer and used in subsequent read operations.</p><p>When the trigger is down and the gun is in acceptable range, new material enters the simulation. This material is calculated to be the volume of the feed-wire fed through the gun during a time interval. This material is distributed among the nodes near the gun with a bias for more material depositing directly below the gun. This deviates from the Gauss–Seidel engine, which only places new material directly below the gun. This is done because approximation of the weld bead inside the averaging engine is accomplished through height averaging instead of the parabolic representation used in Chan et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Chan B, Pacey J, Bibby M (1999) Modelling gas metal arc weld geometry using artificial neural network technology. Can Metallurg Q 39:43–51" href="/article/10.1007/s10055-010-0162-x#ref-CR3" id="ref-link-section-d43614e941">1999</a>)</p><p>A height averaging algorithm was developed to approximate the molten weld bead and the results were compared to the Gauss–Seidel engine’s parabolic approximation. The goal was to achieve a reasonable approximation of the weld bead while improving behavior for material behind the gun that was still in a molten state. For each node with temperature above the work-piece material’s melting point, the height of the node is reduced and distributed among the neighbors. Flow is restricted to neighbors whose height is below the contributing node to simulate the natural work of gravity. The amount of material moved is proportional to the slope of the surface between neighbors and the temperature of the central node. Early results show that the bead approximation is roughly the same size and height, but surface geometry varies depending on the welding direction. Work is being conducted to determine the best distribution between neighbors. New methods of depositing new material are also being considered. Actual welding experiments will be conducted to compare the height averaging model to actual weld beads in the future.</p></div></div></section><section aria-labelledby="Sec18"><div class="c-article-section" id="Sec18-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec18">Graphical interface</h2><div class="c-article-section__content" id="Sec18-content"><p>The goals of the graphic interface are broken into two parts. The first goal of the graphical interface is to present the act of welding in a manner that prepares students for the actual welding experience. The second goal is to provide an enhanced experience by providing information to the user beyond what is possible in real environments.</p><h3 class="c-article__sub-heading" id="Sec19">Simulated environment</h3><p>The basis of the graphic interface is a simple rendering of the work-piece. Each of the pieces is textured with a metal texture, which is altered from session to session to generate the feel that each session is on a different piece of metal. The coordinates, temperature, and surface normals of each point in the simulation are transferred to the graphics card to be used as a Vertex Buffer Object. When the gun is activated, the light sources are adjusted in the shader to create an effect similar to the light created from the welding arc. The weld bead is rendered using a procedural texture generated by a fragment shader. Speculative values are adjusted to increase the reflective properties of the plate at where new material has been introduced. A particle system is used to generate the sparking affect. A spark is generated every time a spark creation event is sent to the graphics interface. The acoustics engine generates the spark creation event and sends it to the render. Sparks follow a random parabolic trajectory and die upon contact with the work-piece (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0162-x#Fig5">5</a>).</p><p>In addition to the realistic view, the graphics unit offers several alternative views that represent different properties of the simulation. Any of the simulation parameters, like current temperature, maximum temperature, or weld height can be mapped to a color using a number of different 1D textures that are loaded at startup time. For each attribute, multiple maps can be chosen from to focus on different characteristics. Using the current temperature as the color map attribute is helpful for gaining an understanding of how material properties change between the various metals used by the simulation. Using other attributes gives additional information that is not immediately available to non-simulated environments. These views include the maximum temperature that any given point of the work-piece has ever reached, an mapping of the height of each point, and a view that maps to the depth of penetration of the weld. Switching between these views gives users a better understanding of the reaction their activity causes without the distractions caused by the arc lighting.</p><h3 class="c-article__sub-heading" id="Sec20">User feedback</h3><p>In order to give users, additional feedback that is not available in real life we augment the realistic view guides that represent the height and speed of the MIG gun. For example the optimal rate of movement while welding Aluminum would be 4.2 mm/s. Our initial testing shows it to be difficult for most students to naturally engage in such precision. An additional difficulty is that the desired height above the work-piece is only about 3–5 mm. To aid students during training, a series of guides that are proportional to the movement speed and height are drawn near the gun’s position. A secondary set is drawn at a constant size, which represents the ideal rate of position and movement. When the two lines meet up within an adjustable tolerance, they are drawn as a single yellow line meaning that the user is operating at the proper height and velocity. Finally, for a given scenario, it is possible to render a line of high contrast along the desired weld seem. When a user deviates from the desired seam a line segment drawn between the closest point to the gun tip and the seam. The students goal is simply to match up the guide lines that give them a sense of their instantaneous velocity and position from seam. These guides help the student get back on track and do not interfere with correcting mistakes (Figs. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0162-x#Fig6">6</a>, <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0162-x#Fig7">7</a>).</p><p>Real-time cross-sections are available that show the depth of penetration. These cross-sections are drawn above and left of the plate. They represent the width-depth and length-depth cross-sections, respectively. The gun’s location is used to decide which section of the plate the cross-sections represent. Color-maps are available in the cross-section viewports and are chosen independently of the current view of the work-piece. Once a user has finished his weld he or she is able to move the gun to various positions along the seam to explore the depth of penetration that was achieved. When viewing the penetration depth and bead height, the user can switch views to review the behavior that generated the result at the current location. Cross-sections would not be available in a standard shop until after the piece had been cut and stained. The time delay between review and execution makes it hard to link the two together in traditional training.</p><p>As a final result, we have created a flexible and powerful visualization component that can display a simple but realistic view of the weld-piece to simulate the real welding process, but it can also be used to give additional supporting information during the welding process, and it can be used to analyze the result after the welding is done in ways that are just not possible in real life training.</p></div></div></section><section aria-labelledby="Sec21"><div class="c-article-section" id="Sec21-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec21">Tracking and calibration</h2><div class="c-article-section__content" id="Sec21-content"><p>We use three OptiTrack FLEX:V100 cameras and the Rigid Body Toolkit from Natural Point, Inc. to track the welding gun and viewer’s head (for perspectively correct viewing). Two sets of four markers, each arranged in a unique configuration (rigid body, see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0162-x#Fig8">8</a>), were attached to a gun and a helmet to be tracked in 3D-space by the cameras. The toolkit extracts a pose containing position and orientation from these markers as seen by the infrared cameras.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-8"><figure><figcaption><b id="Fig8" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 8</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0162-x/figures/8" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0162-x/MediaObjects/10055_2010_162_Fig8_HTML.jpg?as=webp"></source><img aria-describedby="figure-8-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0162-x/MediaObjects/10055_2010_162_Fig8_HTML.jpg" alt="figure8" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-8-desc"><p>Marker configurations (rigid bodies) for gun and helmet. <i>Red circles</i> indicate markers used to compute positions for the tip of the gun and the eyes</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0162-x/figures/8" data-track-dest="link:Figure8 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>We use a calibration process in the toolkit to calibrate the coordinate frame that a tracked object uses. We designate this coordinate frame at a fixed position on the 80/20 frame using a calibration triangle tool consisting of 3 markers on a fixed triangle. We only need to perform this process when cameras are moved. We measured an offset from this fixed position to the origin of the virtual weld plate so that we know the transform between base frame and local weld plate coordinate. Similarly, we measured an offset from a marker (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0162-x#Fig8">8</a> left, in a red circle) on the gun to the tip of the gun so that we can calculate a position of the tip of the gun in 3D-space. We did the same to calculate 3D-position of the eyes (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0162-x#Fig8">8</a> right).</p><p>One of the steps in the toolkit calibration process allows us to specify zero-orientations for the gun and the helmet, i.e., what orientation of the gun and helmet will be returned as zero rotation by the toolkit. We have to match these zero-orientations to those assumed by the software for correct operations. For this, we built physical calibration guides that keep the gun and helmet at desired orientations and report that to the toolkit (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0162-x#Fig9">9</a>).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-9"><figure><figcaption><b id="Fig9" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 9</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0162-x/figures/9" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0162-x/MediaObjects/10055_2010_162_Fig9_HTML.jpg?as=webp"></source><img aria-describedby="figure-9-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0162-x/MediaObjects/10055_2010_162_Fig9_HTML.jpg" alt="figure9" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-9-desc"><p>(<i>Left</i>) Extension of 80/20 frame to hold the gun at zero orientation. (<i>Right</i>) A styro-foam guide used to hold the helmet at zero orientation</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0162-x/figures/9" data-track-dest="link:Figure9 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>We performed an experiment to measure the accuracy of gun tracking. A 3D-grid of known positions was superimposed in the virtual space. The dimensions of the grid were 50.8, 190.5 and 28.8 mm in <i>X</i>, <i>Y</i>, and <i>Z</i>, respectively. For each grid point in the workspace, we measured tracking error from a known position and tracker-reported position with the gun located at the grid point. We defined the 3D-grid such that it covers a region where usual welding will be performed as shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0162-x#Fig10">10</a>. In the experiment, positioning the tip of the real gun at grid points would be very difficult to do precisely. To alleviate this problem a LEGO model of the gun was built that allowed more precise and repeatable positioning. The mean errors in <i>X</i>, <i>Y</i>, and <i>Z</i> directions were 0.6, 1.39, and 0.56 mm, respectively. Mean errors in the sub-millimeter range are accurate enough to make the system useful for welder training.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-10"><figure><figcaption><b id="Fig10" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 10</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0162-x/figures/10" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0162-x/MediaObjects/10055_2010_162_Fig10_HTML.gif?as=webp"></source><img aria-describedby="figure-10-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0162-x/MediaObjects/10055_2010_162_Fig10_HTML.gif" alt="figure10" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-10-desc"><p>Coordinate frame of welding system and precision test</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0162-x/figures/10" data-track-dest="link:Figure10 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>We have no quantitative result for helmet tracking, because it is hard to exactly measure the eye position of the user while he is moving. However, we devised an experiment to estimate tracking accuracy for the helmet. We tuned tracking parameters and validated them qualitatively. A physical box was placed at a designated location on the display and while a virtual box of the same dimensions was rendered at the same location. If tracking is accurate, the two boxes should coincide with each other. We got a subjectively good result from this experiment, with adjustments to accommodate users eye separation.</p></div></div></section><section aria-labelledby="Sec22"><div class="c-article-section" id="Sec22-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec22">Auditory interface</h2><div class="c-article-section__content" id="Sec22-content"><h3 class="c-article__sub-heading" id="Sec23">Sound synthesis method</h3><p>In Gas Metal Arc Welding (GMAW), different metal transfer modes produce different welding sound characteristics (Mansoor and Huissoon <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Mansoor AM, Huissoon JP (1999) Acoustic identification of the gmaw process. In: Ninth international conference on computer technology in welding, pp 312–323" href="/article/10.1007/s10055-010-0162-x#ref-CR15" id="ref-link-section-d43614e1117">1999</a>). We assume the metal transfer mode is short circuit, which is an often used method in GMAW (ESAB Group <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="ESAB Group I (2000) Lesson 2 common electric arc welding processes. &#xA;                    http://www.esabna.com/EUWeb/AWTC/Lesson2_2.htm&#xA;                    &#xA;                  &#xA;                        " href="/article/10.1007/s10055-010-0162-x#ref-CR7" id="ref-link-section-d43614e1120">2000</a>). We present a sound synthesis method for the short circuit GMAW that takes gun height from a weld work-piece as the primary controlling input.</p><p>A cyclic behavior of the short circuit GMAW process results in a cyclic pattern of sound signal (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0162-x#Fig11">11</a>). A cycle starts with a sound impulse (large spike) due to arc ignition, followed by a turbulent noise generated mostly by pulsation of shielding gas, followed by a sound impulse (small spike) due to arc extinction, and ends with a background noise (Cudina and Prezelj <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Cudina M, Prezelj J (2003) Evaluation of the sound signal based on the welding current in the gas-metal arc welding process. In: Institution of mechanical engineers, pp 483–494, J Mech Eng Sci 217(5)" href="/article/10.1007/s10055-010-0162-x#ref-CR6" id="ref-link-section-d43614e1129">2003</a>). The length of a cycle (short circuit frequency) has been found to depend strongly on welding parameters, e.g., wire feed rate, arc voltage, and gun height (Hermans and Ouden <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Hermans MJM, Ouden GD (1999) Process behavior and stability in short circuit gas metal arc welding. Welding J 78(4):137s–141s" href="/article/10.1007/s10055-010-0162-x#ref-CR9" id="ref-link-section-d43614e1132">1999</a>; Chu et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Chu YX, Hou SJ, Wang PC, Marin SP (2004) Signature analysis for quality monitoring in short-circuit gmaw. Welding J 22:336s–343s" href="/article/10.1007/s10055-010-0162-x#ref-CR4" id="ref-link-section-d43614e1135">2004</a>). We employed these facts in our synthesis method.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-11"><figure><figcaption><b id="Fig11" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 11</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0162-x/figures/11" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0162-x/MediaObjects/10055_2010_162_Fig11_HTML.gif?as=webp"></source><img aria-describedby="figure-11-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0162-x/MediaObjects/10055_2010_162_Fig11_HTML.gif" alt="figure11" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-11-desc"><p>Acoustic signal in short circuit GMAW process. This is similar to that shown in a paper by (Cudina and Prezelj <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Cudina M, Prezelj J (2003) Evaluation of the sound signal based on the welding current in the gas-metal arc welding process. In: Institution of mechanical engineers, pp 483–494, J Mech Eng Sci 217(5)" href="/article/10.1007/s10055-010-0162-x#ref-CR6" id="ref-link-section-d43614e1148">2003</a>) but the picture was composed using our own data</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0162-x/figures/11" data-track-dest="link:Figure11 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>In our method, we synthesize one cycle of sound signal after another. For each cycle, we first compute cycle parameters statistically, and then stitch together collected chunks of sound samples to generate an actual waveform for the cycle. Specifically, we start by computing the length of a cycle, <i>t</i>, and the normalized peak-amplitude of the sound impulse due to arc ignition, <i>a</i>. We model <i>t</i> as a Gaussian random variable, where its mean <i>t</i>
+                           <sub>
+                    <i>m</i>
+                  </sub> and standard deviation, <i>t</i>
+                           <sub>
+                    <i>sd</i>
+                  </sub>, are functions of gun height, <i>d</i>. As a preprocessing step, we recorded sounds from actual welding processes at n different heights: <i>d</i>
+                           <sub>1</sub>, <i>d</i>
+                           <sub>2</sub>, ..., <i>d</i>
+                           <sub>
+                    <i>n</i>
+                  </sub>, where <i>d</i>
+                           <sub>1</sub> &lt;  <i>d</i>
+                           <sub>2</sub> &lt;  ... &lt;  <i>d</i>
+                           <sub>
+                    <i>n</i>
+                  </sub>. (We use <i>n</i> = 3 in our experiments: <span class="mathjax-tex">\(d_1={\frac{1}{16}}\,in. \)</span> (too-close), <span class="mathjax-tex">\(d_2={\frac{1}{4}}\)</span> in. (good-height), and <span class="mathjax-tex">\(d_3={\frac{1}{2}}\)</span> in. (too-far)). We name the recorded sounds as <i>R</i>
+                           <sub>1</sub>, <i>R</i>
+                           <sub>2</sub>, ..., <i>R</i>
+                           <sub>
+                    <i>n</i>
+                  </sub> accordingly. We manually analyzed the recorded sounds, and computed the mean and standard deviation of <i>t</i> for each of them. To find <i>t</i>
+                           <sub>
+                    <i>m</i>
+                  </sub> and <i>t</i>
+                           <sub>
+                    <i>sd</i>
+                  </sub> at an arbitrary value of <i>d</i> at run-time, we use interpolation or extrapolation from the previously computed <i>t</i>
+                           <sub>
+                    <i>m</i>
+                  </sub> and <i>t</i>
+                           <sub>
+                    <i>sd</i>
+                  </sub>, e.g., if <i>d</i> falls between <i>d</i>
+                           <sub>1</sub> and <i>d</i>
+                           <sub>2</sub>, we compute <i>t</i>
+                           <sub>
+                    <i>m</i>
+                  </sub> (and similarly for <i>t</i>
+                           <sub>
+                    <i>sd</i>
+                  </sub>) by interpolating between <i>t</i>
+                           <sub>
+                    <i>m</i>
+                  </sub> at <i>d</i>
+                           <sub>1</sub> and <i>t</i>
+                           <sub>
+                    <i>m</i>
+                  </sub> at <i>d</i>
+                           <sub>2</sub>. Once we know <i>t</i>
+                           <sub>
+                    <i>m</i>
+                  </sub> and <i>t</i>
+                           <sub>
+                    <i>sd</i>
+                  </sub>, we compute <i>t</i> by sampling from the distribution. The same technique is used to compute <i>a</i>, using the same set of recorded sounds.</p><p>Next, we fill in the cycle with an actual sound waveform using sound stitching technique (Parker and Behm <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Parker JR, Behm B (2004) Creating audio textures by example: Tiling and stitching. In: IEEE international conference on acoustics, speech, and signal processing, pp 317–320" href="/article/10.1007/s10055-010-0162-x#ref-CR18" id="ref-link-section-d43614e1424">2004</a>). As a preprocessing step, we looked at selected cycles (230 in our experiments) in the recorded sounds, and cut two chunks of sound samples from each cycle: (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-010-0162-x#Fig12">12</a>) </p><ol class="u-list-style-none">
+                    <li>
+                      <span class="u-custom-list-number">1.</span>
+                      
+                        <p>IGNITION: impulse from ignition + part of a turbulent noise after it.</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">2.</span>
+                      
+                        <p>EXTINCTION: impulse from extinction + background noise after it + part of a turbulent noise before it.</p>
+                      
+                    </li>
+                  </ol>
+                           <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-12"><figure><figcaption><b id="Fig12" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 12</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-010-0162-x/figures/12" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0162-x/MediaObjects/10055_2010_162_Fig12_HTML.gif?as=webp"></source><img aria-describedby="figure-12-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-010-0162-x/MediaObjects/10055_2010_162_Fig12_HTML.gif" alt="figure12" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-12-desc"><p>Examples of sound chunk used to generate output sound signal</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-010-0162-x/figures/12" data-track-dest="link:Figure12 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>The two chunks were marked with the same unique <i>id</i> and the same ordered pair (<i>r</i>, <i>p</i>), where <i>r</i>  ∈ {<i>R</i>
+                           <sub>1</sub>, <i>R</i>
+                           <sub>2</sub>, ..., <i>R</i>
+                           <sub>
+                    <i>n</i>
+                  </sub>} (which recorded sound they came from) and <i>p</i>  ∈ {0.0 − 0.1, 0.1 − 0.2, ..., 0.9 − 1.0} (which range the normalized peak-amplitude of impulse from ignition in this cycle fell into). Additionally, we cut out chunks of the third type, (72 in our experiments) NOISE: turbulent noise only, and marked them with <i>r</i>  ∈ {<i>R</i>
+                           <sub>1</sub>, <i>R</i>
+                           <sub>2</sub>, ..., <i>R</i>
+                           <sub>
+                    <i>n</i>
+                  </sub>}.</p><p>To stitch together sound chunks for the cycle at run-time, let <i>r</i>
+                           <sub>
+                    <i>d</i>
+                  </sub>  ∈ {<i>R</i>
+                           <sub>1</sub>, <i>R</i>
+                           <sub>2</sub>, ..., <i>R</i>
+                           <sub>
+                    <i>n</i>
+                  </sub>} be the recorded sound that has its associated gun height closest to the current value of <i>d</i>, and let <i>p</i>
+                           <sub>
+                    <i>a</i>
+                  </sub>  ∈ {0.0 − 0.1, 0.1 − 0.2, ..., 0.9 − 1.0} be the range of amplitude that <i>a</i> falls into. We search for an IGNITION and EXTINCTION pair that: </p><ol class="u-list-style-none">
+                    <li>
+                      <span class="u-custom-list-number">1.</span>
+                      
+                        <p>have the same <i>id</i>. (They come from the same cycle.)</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">2.</span>
+                      
+                        <p>their (<i>r</i>, <i>p</i>) = (<i>r</i>
+                                       <sub>
+                            <i>d</i>
+                          </sub>, <i>p</i>
+                                       <sub>
+                            <i>a</i>
+                          </sub>). (They come from the source closest to the current gun height, and come from a cycle that has the normalized peak-amplitude of impulse from ignition in the same range as <i>a</i>.)</p>
+                      
+                    </li>
+                    <li>
+                      <span class="u-custom-list-number">3.</span>
+                      
+                        <p><i>c</i>*<i>t</i> ≤ their combined length ≤<i>t</i>, where 0 &lt; <i>c</i>≤1. (They provide a decent fit to the cycle. We use <i>c</i> = 0.7 in our experiments).</p>
+                      
+                    </li>
+                  </ol>
+                        <p>If no such pair exists, we use the first inspected pair that satisfies the first two conditions. In the case that the combined length exceeds <i>t</i>, we trim out the tail end of the combined waveform (IGNITION followed by EXTINCTION) such that the final length is <i>t</i>. In the case that there is a remaining space in the cycle, we add random NOISE chunk(s), having <i>r</i> = <i>r</i>
+                           <sub>
+                    <i>d</i>
+                  </sub>, between IGNITION and EXTINCTION, with trimming to keep the combined length from exceeding <i>t</i>. The IGNITION chunk is normalized such that its normalized peak-amplitude is equal to <i>a</i>. The EXTINCTION chunk is normalized by the same proportion.</p><p>This completes one cycle of the sound signal. We repeatedly generate more cycles as needed to produce continuous welding sound. Our method generates a welding sound that changes with gun height. A demonstration was held for a group of welding instructors and welding students. They gave positive feedback regarding our generated sounds. Examples of feedback are “sounds good”, “sounds like it (welding)”. No one complained about the fidelity of the sound. One of the instructors was able to identify the material welded, aluminum, just from the sound.</p><p>Currently, it is possible to detect a sharp change in the sound when <i>d</i> crosses a halfway point between two preprocessed-heights, e.g., when <i>d</i> crosses the halfway between good-height and too-far. This is due to the fact that our synthesis method changes the sound source from which it picks chunks when <i>d</i> crosses a halfway. One solution to this problem is to increase <i>n</i>, i.e., preprocess sounds at more heights. Another solution is to modify our method to choose the sound source probabilistically where the sound source closer to <i>d</i> has higher probability of being chosen.</p></div></div></section><section aria-labelledby="Sec24"><div class="c-article-section" id="Sec24-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec24">Conclusions</h2><div class="c-article-section__content" id="Sec24-content"><p>We presented a design and development of a training simulator for MIG welding called sMIG. The system runs in real-time, provides sufficient realism and fidelity for effective learning, and provides instant feedback not possible with real welding. The system costs about $5,500, roughly the same as a traditional welding station while eliminating material and supply costs. It provides a safe, immersive and cost-effective environment to familiarize beginning students with MIG equipment and best practices to become competent and effective MIG welders.</p><p>We used optical tracking to track a welding gun and the user’s head (for perspectively correct viewing). With our tracking setup, we achieved mean errors in the sub-millimeter range for gun tracking, and subjectively good results for head-tracking. We presented our sound synthesis method for MIG welding that takes gun height from a weld work-piece as a primary controlling input. This is an improvement from previous virtual welding systems that synthesized sounds just by playback of prerecorded sounds and did not use any of the real-time welding parameters. From a demonstration held for a group of welding instructors and welding students, we received positive feedback regarding the fidelity of our sound synthesis. Multiple real-time engines have been developed and compared to actual welding samples. Comparisons between real-world and simulated runs show a high rate of accuracy when input parameters are with in probable ranges.</p><p>Several improvements remain for possible future work. We observed a distortion in the tracking volume in the current system. A new calibration technique that takes this distortion into account will improve the accuracy of the system. The fidelity of our sound synthesis method can be improved by taking into account additional welding parameters, e.g., gun speed and voltage. We also want to eliminate the laborious process of manual collection of sound chunks and instead use a purely synthesis technique to fill in sound cycles. Work proceeds in improving the level of immersion provided by the rendered visualizations. By decoupling the resolution of the mesh with the resolution of visualization, finer surface adjustments can be made. Additionally, improvements in the perceived luminance could greatly improve the quality of both the appearance of sparks and the locations of the melted region around the electrode. Visual performance indicators may be improved through user feedback after the first units are deployed. Performance of the current simulation could be increased by using all available computational devices. Computing platforms such as the GPU could provide substantial performance increases allowing for greater granularity.</p><p>Five sMIG systems will be deployed at the Technical College to be incorporated with its curriculum during an up-coming semester. The results of this trial run will be used to improve feedback and user controls, along with assessing the practical benefit of sMIG in a real classroom environment. In this environment, the longer-term development of an instructor station is required to provide the ability to set up simulated runs simultaneously, and to send out prerecorded simulations for observation to the individual student stations.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Aglawe A (2008) Virtual mig welding simulation. Master’s thesis, University of Louisiana at Lafayette" /><p class="c-article-references__text" id="ref-CR1">Aglawe A (2008) Virtual mig welding simulation. Master’s thesis, University of Louisiana at Lafayette</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Aiteanu HBD (2003) A step forward in manual welding: Demonstration of augmented reality helment. In: Second IE" /><p class="c-article-references__text" id="ref-CR2">Aiteanu HBD (2003) A step forward in manual welding: Demonstration of augmented reality helment. In: Second IEEE and ACM international symposium on mixed and augmented reality. IEEE, pp 309–310</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="B. Chan, J. Pacey, M. Bibby, " /><meta itemprop="datePublished" content="1999" /><meta itemprop="headline" content="Chan B, Pacey J, Bibby M (1999) Modelling gas metal arc weld geometry using artificial neural network technolo" /><p class="c-article-references__text" id="ref-CR3">Chan B, Pacey J, Bibby M (1999) Modelling gas metal arc weld geometry using artificial neural network technology. Can Metallurg Q 39:43–51</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1016%2FS0008-4433%2898%2900037-8" aria-label="View reference 3">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 3 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Modelling%20gas%20metal%20arc%20weld%20geometry%20using%20artificial%20neural%20network%20technology&amp;journal=Can%20Metallurg%20Q&amp;volume=39&amp;pages=43-51&amp;publication_year=1999&amp;author=Chan%2CB&amp;author=Pacey%2CJ&amp;author=Bibby%2CM">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="YX. Chu, SJ. Hou, PC. Wang, SP. Marin, " /><meta itemprop="datePublished" content="2004" /><meta itemprop="headline" content="Chu YX, Hou SJ, Wang PC, Marin SP (2004) Signature analysis for quality monitoring in short-circuit gmaw. Weld" /><p class="c-article-references__text" id="ref-CR4">Chu YX, Hou SJ, Wang PC, Marin SP (2004) Signature analysis for quality monitoring in short-circuit gmaw. Welding J 22:336s–343s</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 4 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Signature%20analysis%20for%20quality%20monitoring%20in%20short-circuit%20gmaw&amp;journal=Welding%20J&amp;volume=22&amp;pages=336s-343s&amp;publication_year=2004&amp;author=Chu%2CYX&amp;author=Hou%2CSJ&amp;author=Wang%2CPC&amp;author=Marin%2CSP">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Conitec Datasystems I (2009) 3d game studio\(^{\circledR}.\)&#xA;                           http://www.3dgamestudi" /><p class="c-article-references__text" id="ref-CR5">Conitec Datasystems I (2009) 3d game studio<span class="mathjax-tex">\(^{\circledR}.\)</span>
+                           <a href="http://www.3dgamestudio.com">http://www.3dgamestudio.com</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Cudina M, Prezelj J (2003) Evaluation of the sound signal based on the welding current in the gas-metal arc we" /><p class="c-article-references__text" id="ref-CR6">Cudina M, Prezelj J (2003) Evaluation of the sound signal based on the welding current in the gas-metal arc welding process. In: Institution of mechanical engineers, pp 483–494, J Mech Eng Sci 217(5)</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="ESAB Group I (2000) Lesson 2 common electric arc welding processes. http://www.esabna.com/EUWeb/AWTC/Lesson2_2" /><p class="c-article-references__text" id="ref-CR7">ESAB Group I (2000) Lesson 2 common electric arc welding processes. <a href="http://www.esabna.com/EUWeb/AWTC/Lesson2_2.htm">http://www.esabna.com/EUWeb/AWTC/Lesson2_2.htm</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Fast K, Gifford T, Yancey R (2004) Virtual training for welding. In: 3rd IEEE/ACM international symposium on m" /><p class="c-article-references__text" id="ref-CR8">Fast K, Gifford T, Yancey R (2004) Virtual training for welding. In: 3rd IEEE/ACM international symposium on mixed and augmented reality, IEEE, pp 298–299. doi:<a href="http://dx.doi.org/10.1109/ISMAR.2004.65">http://dx.doi.org/10.1109/ISMAR.2004.65</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="MJM. Hermans, GD. Ouden, " /><meta itemprop="datePublished" content="1999" /><meta itemprop="headline" content="Hermans MJM, Ouden GD (1999) Process behavior and stability in short circuit gas metal arc welding. Welding J " /><p class="c-article-references__text" id="ref-CR9">Hermans MJM, Ouden GD (1999) Process behavior and stability in short circuit gas metal arc welding. Welding J 78(4):137s–141s</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 9 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Process%20behavior%20and%20stability%20in%20short%20circuit%20gas%20metal%20arc%20welding&amp;journal=Welding%20J&amp;volume=78&amp;issue=4&amp;pages=137s-141s&amp;publication_year=1999&amp;author=Hermans%2CMJM&amp;author=Ouden%2CGD">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Jones AL, Mendez P, Weiss D, Eager TW (1997) Dynamic behavior of gas metal arc welding. In: 9th Annual confere" /><p class="c-article-references__text" id="ref-CR10">Jones AL, Mendez P, Weiss D, Eager TW (1997) Dynamic behavior of gas metal arc welding. In: 9th Annual conference on iron and steel technology</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Kato M, Billinghurst I, Poupyrev I, Imamoto k, Tachibana K (2000) Virtual object manipulation on a table-top a" /><p class="c-article-references__text" id="ref-CR11">Kato M, Billinghurst I, Poupyrev I, Imamoto k, Tachibana K (2000) Virtual object manipulation on a table-top ar environment. In: IEEE and ACM international symposium on augmented reality. IEEE, pp 111–119</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="IS. Kim, A. Basu, " /><meta itemprop="datePublished" content="1998" /><meta itemprop="headline" content="Kim IS, Basu A (1998) A mathematical model of heat transfer and fluid flow in the gas metal arc welding proces" /><p class="c-article-references__text" id="ref-CR12">Kim IS, Basu A (1998) A mathematical model of heat transfer and fluid flow in the gas metal arc welding process. J Mater Process Technol 77:17–24</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1016%2FS0924-0136%2897%2900383-X" aria-label="View reference 12">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 12 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=A%20mathematical%20model%20of%20heat%20transfer%20and%20fluid%20flow%20in%20the%20gas%20metal%20arc%20welding%20process&amp;journal=J%20Mater%20Process%20Technol&amp;volume=77&amp;pages=17-24&amp;publication_year=1998&amp;author=Kim%2CIS&amp;author=Basu%2CA">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Kobayashi K, Ishigame S, Kato H (2001) Simulator of manual metal arc welding with haptic display. In: Int. Con" /><p class="c-article-references__text" id="ref-CR13">Kobayashi K, Ishigame S, Kato H (2001) Simulator of manual metal arc welding with haptic display. In: Int. Conf. Artif. Real Telexistence, pp 175–178</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="S. Kumar, S. Bhaduri, " /><meta itemprop="datePublished" content="1994" /><meta itemprop="headline" content="Kumar S, Bhaduri S (1994) Three-dimensional finite element modeling of gas metal-arc welding. Metallurg Mater " /><p class="c-article-references__text" id="ref-CR14">Kumar S, Bhaduri S (1994) Three-dimensional finite element modeling of gas metal-arc welding. Metallurg Mater Trans 25:435–441</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1007%2FBF02663394" aria-label="View reference 14">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 14 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Three-dimensional%20finite%20element%20modeling%20of%20gas%20metal-arc%20welding&amp;journal=Metallurg%20Mater%20Trans&amp;volume=25&amp;pages=435-441&amp;publication_year=1994&amp;author=Kumar%2CS&amp;author=Bhaduri%2CS">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Mansoor AM, Huissoon JP (1999) Acoustic identification of the gmaw process. In: Ninth international conference" /><p class="c-article-references__text" id="ref-CR15">Mansoor AM, Huissoon JP (1999) Acoustic identification of the gmaw process. In: Ninth international conference on computer technology in welding, pp 312–323</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Martin BKJ (2005) Opportunities for VR and R&amp;D initiatives. In: International conference on computer simulatio" /><p class="c-article-references__text" id="ref-CR16">Martin BKJ (2005) Opportunities for VR and R&amp;D initiatives. In: International conference on computer simulation in information and communication engineering, pp 20–22</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="D. Mavrikios, V. Karabatsou, . Fragos, G. Chryssolouris, " /><meta itemprop="datePublished" content="2006" /><meta itemprop="headline" content="Mavrikios D, Karabatsou V, Fragos, Chryssolouris G (2006) A prototype virtual reality-based demonstrator for i" /><p class="c-article-references__text" id="ref-CR17">Mavrikios D, Karabatsou V, Fragos, Chryssolouris G (2006) A prototype virtual reality-based demonstrator for immersive and interactive simulation of welding process. Int J Comp Integr Manuf 19:294–300</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1080%2F09511920500340916" aria-label="View reference 17">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 17 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=A%20prototype%20virtual%20reality-based%20demonstrator%20for%20immersive%20and%20interactive%20simulation%20of%20welding%20process&amp;journal=Int%20J%20Comp%20Integr%20Manuf&amp;volume=19&amp;pages=294-300&amp;publication_year=2006&amp;author=Mavrikios%2CD&amp;author=Karabatsou%2CV&amp;author=Fragos%2C&amp;author=Chryssolouris%2CG">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Parker JR, Behm B (2004) Creating audio textures by example: Tiling and stitching. In: IEEE international conf" /><p class="c-article-references__text" id="ref-CR18">Parker JR, Behm B (2004) Creating audio textures by example: Tiling and stitching. In: IEEE international conference on acoustics, speech, and signal processing, pp 317–320</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="SV. Patankar, " /><meta itemprop="datePublished" content="1980" /><meta itemprop="headline" content="Patankar SV (1980) Numerical heat transfer and fluid flow 1st ed. Hemisphere Corporation, New York" /><p class="c-article-references__text" id="ref-CR19">Patankar SV (1980) Numerical heat transfer and fluid flow 1st ed. Hemisphere Corporation, New York</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 19 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Numerical%20heat%20transfer%20and%20fluid%20flow&amp;publication_year=1980&amp;author=Patankar%2CSV">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="NC. Porter, J. Cote, G. Allan, D. Timothy, W. Lam, " /><meta itemprop="datePublished" content="2006" /><meta itemprop="headline" content="Porter NC, Cote J, Allan G, Timothy D, Lam W (2006) A prototype virtual reality-based demonstrator for immersi" /><p class="c-article-references__text" id="ref-CR20">Porter NC, Cote J, Allan G, Timothy D, Lam W (2006) A prototype virtual reality-based demonstrator for immersive and interactive simulation of welding process. J Ship Prod 22:126–138</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 20 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=A%20prototype%20virtual%20reality-based%20demonstrator%20for%20immersive%20and%20interactive%20simulation%20of%20welding%20process&amp;journal=J%20Ship%20Prod&amp;volume=22&amp;pages=126-138&amp;publication_year=2006&amp;author=Porter%2CNC&amp;author=Cote%2CJ&amp;author=Allan%2CG&amp;author=Timothy%2CD&amp;author=Lam%2CW">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Systémes C (2009) Cs wave, the virtual welding trainer. http://www.wave.c-s.fr&#xA;                        " /><p class="c-article-references__text" id="ref-CR21">Systémes C (2009) Cs wave, the virtual welding trainer. <a href="http://www.wave.c-s.fr">http://www.wave.c-s.fr</a>
+                        </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Tschirner P, Hillers B, Graser A (2002) A concept for the application of augmented reality in manual gas metal" /><p class="c-article-references__text" id="ref-CR22">Tschirner P, Hillers B, Graser A (2002) A concept for the application of augmented reality in manual gas metal arc welding. In: International symposium on mixed and augmented reality, pp 257–258</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Wang Y, Chen Y, Nan Z, Hu Y (2006) Study on welder training by means of haptic guidance and virtual reality fo" /><p class="c-article-references__text" id="ref-CR23">Wang Y, Chen Y, Nan Z, Hu Y (2006) Study on welder training by means of haptic guidance and virtual reality for arc welding. In: 2006 IEEE international conference on robotics and biomimetics, pp 954–958</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Wormell D, Foxlin E (2003) Advancements in 3d interactive devices for virtual environments. In: Eurographics w" /><p class="c-article-references__text" id="ref-CR24">Wormell D, Foxlin E (2003) Advancements in 3d interactive devices for virtual environments. In: Eurographics workshop on virtual environments, pp 47–56</p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-010-0162-x-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><div class="c-article-section__content" id="Ack1-content"></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">University of Louisiana at Lafayette, 537 Cajundome Boulevard, Lafayette, LA, 70506, USA</p><p class="c-article-author-affiliation__authors-list">Steven A. White, Mores Prachyabrued, Terrence L. Chambers, Christoph W. Borst &amp; Dirk Reiners</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Steven_A_-White"><span class="c-article-authors-search__title u-h3 js-search-name">Steven A. White</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Steven A.+White&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Steven A.+White" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Steven A.+White%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Mores-Prachyabrued"><span class="c-article-authors-search__title u-h3 js-search-name">Mores Prachyabrued</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Mores+Prachyabrued&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Mores+Prachyabrued" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Mores+Prachyabrued%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Terrence_L_-Chambers"><span class="c-article-authors-search__title u-h3 js-search-name">Terrence L. Chambers</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Terrence L.+Chambers&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Terrence L.+Chambers" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Terrence L.+Chambers%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Christoph_W_-Borst"><span class="c-article-authors-search__title u-h3 js-search-name">Christoph W. Borst</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Christoph W.+Borst&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Christoph W.+Borst" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Christoph W.+Borst%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Dirk-Reiners"><span class="c-article-authors-search__title u-h3 js-search-name">Dirk Reiners</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Dirk+Reiners&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Dirk+Reiners" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Dirk+Reiners%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-010-0162-x/email/correspondent/c1/new">Steven A. White</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=Low-cost%20simulated%20MIG%20welding%20for%20advancement%20in%20technical%20training&amp;author=Steven%20A.%20White%20et%20al&amp;contentID=10.1007%2Fs10055-010-0162-x&amp;publication=1359-4338&amp;publicationDate=2010-05-21&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">White, S.A., Prachyabrued, M., Chambers, T.L. <i>et al.</i> Low-cost simulated MIG welding for advancement in technical training.
+                    <i>Virtual Reality</i> <b>15, </b>69–81 (2011). https://doi.org/10.1007/s10055-010-0162-x</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-010-0162-x.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2009-06-12">12 June 2009</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2010-04-28">28 April 2010</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2010-05-21">21 May 2010</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2011-03">March 2011</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-010-0162-x" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-010-0162-x</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Virtual reality</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Welding</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Finite difference</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Simulation</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Acoustics</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-010-0162-x.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=162;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

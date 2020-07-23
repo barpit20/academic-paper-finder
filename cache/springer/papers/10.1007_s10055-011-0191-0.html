@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="The Palenque project: evaluating interaction in an online virtual arch"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="This case study evaluated the effect on cultural understanding of three different interaction modes, each teamed with a specific slice of the digitally reconstructed environment. The three..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/16/2.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="The Palenque project: evaluating interaction in an online virtual archaeology site"/>
+
+    <meta name="dc.source" content="Virtual Reality 2011 16:2"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2011-06-21"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2011 Springer-Verlag London Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="This case study evaluated the effect on cultural understanding of three different interaction modes, each teamed with a specific slice of the digitally reconstructed environment. The three interaction modes were derived from an initial descriptive theory of cultural learning as instruction, observation and action. A major aim was to ascertain whether task performance was similar to the development of understanding of the cultural context reached by participation in the virtual environment. A hypothesis was that if task performance is equivalent to understanding and engagement, we might be able to evaluate the success of virtual heritage environments (through engagement and education), without having to annoy the user with post-experience questionnaires. However, results suggest interaction in virtual heritage environments is so contextually embedded; subjective post-test questionnaires can still be more reliable than evaluating task performance."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2011-06-21"/>
+
+    <meta name="prism.volume" content="16"/>
+
+    <meta name="prism.number" content="2"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="121"/>
+
+    <meta name="prism.endingPage" content="139"/>
+
+    <meta name="prism.copyright" content="2011 Springer-Verlag London Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-011-0191-0"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-011-0191-0"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-011-0191-0.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-011-0191-0"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="The Palenque project: evaluating interaction in an online virtual archaeology site"/>
+
+    <meta name="citation_volume" content="16"/>
+
+    <meta name="citation_issue" content="2"/>
+
+    <meta name="citation_publication_date" content="2012/06"/>
+
+    <meta name="citation_online_date" content="2011/06/21"/>
+
+    <meta name="citation_firstpage" content="121"/>
+
+    <meta name="citation_lastpage" content="139"/>
+
+    <meta name="citation_article_type" content="Original Article"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-011-0191-0"/>
+
+    <meta name="DOI" content="10.1007/s10055-011-0191-0"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-011-0191-0"/>
+
+    <meta name="description" content="This case study evaluated the effect on cultural understanding of three different interaction modes, each teamed with a specific slice of the digitally rec"/>
+
+    <meta name="dc.creator" content="Erik Champion"/>
+
+    <meta name="dc.creator" content="Ian Bishop"/>
+
+    <meta name="dc.creator" content="Bharat Dave"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="Barnhart E (1998) The Palenque mapping project, 1998 field season report, FAMSI, 
+                    http://www.famsi.org/reports/97024/index.html
+                    
+                   [2-15-2007]"/>
+
+    <meta name="citation_reference" content="Barnhart E (1999) The Palenque mapping project, 1999 field season report, FAMSI, 1999, 
+                    http://www.famsi.org/reports/98063/index.html
+                    
+                   [2-15-2007]"/>
+
+    <meta name="citation_reference" content="citation_title=3D user interfaces: theory and practice; citation_publication_date=2005; citation_id=CR3; citation_author=DA Bowman; citation_author=E Kruijff; citation_author=J LaViola; citation_author=I Poupyrev; citation_publisher=Addison-Wesley"/>
+
+    <meta name="citation_reference" content="citation_title=Handbook to life in the ancient Maya World; citation_publication_date=2002; citation_id=CR5; citation_author=LV Foster; citation_publisher=Facts on File Inc."/>
+
+    <meta name="citation_reference" content="Grube N (1996) Palenque in the Maya World, originally presented at the Eighth Palenque Round Table, June 6&#8211;12, 1993. In: Macri M, McHargue J (eds). Eighth Palenque Round Table, June 6&#8211;12, 1993, Pre-Columbian Art Research Institute, San Francisco, pp 1&#8211;9"/>
+
+    <meta name="citation_reference" content="Hartman J, Wernecke J (1996) The VRML 2.0 handbook, Addison-Wesley Professional, USA"/>
+
+    <meta name="citation_reference" content="Kremer J, Uc F (1996) The ritual suicide of Maya Rulers, originally presented at the Eighth Palenque Round Table, June 6&#8211;12, 1993. In: Macri M, McHargue J (eds). Eighth Palenque Round Table, June 6&#8211;12, 1993, San Francisco: Pre-Columbian Art Research Institute, pp 1&#8211;14"/>
+
+    <meta name="citation_reference" content="citation_title=The role of visual cues in microgravity spatial orientation; citation_inbook_title=Eurolab spacelab mission: Neuroscience research in space: Results from the STS-90; citation_publication_date=2003; citation_pages=69-81; citation_id=CR9; citation_author=C Oman; citation_author=I Howard; citation_author=T Smith; citation_author=A Beall; citation_author=A Natapoff; citation_author=J Zacher; citation_author=H Jenkin; citation_publisher=Neurolab Spacelab Mission, NASA"/>
+
+    <meta name="citation_reference" content="Reilly III, FK (1989) Enclosed ritual spaces and the watery underworld in formative period architecture: New observations on the function of la Venta complex A, originally presented at the Seventh Palenque Round Table in 1989, In: Fields V (ed). Seventh Palenque Round Table, 1989, Pre-Columbian Art Research Institute, San Francisco, 1994, 1&#8211;14"/>
+
+    <meta name="citation_reference" content="Ruiz R, Weghorst S, Savage J, Oppenheimer P, Furness III T, Dozal Y (2004) Virtual Reality for Archeological Maya cities. Paper presented at the Virtual Congress&#8212;World heritage in the digital age: Technology and New Media for documentation, preservation, management, sustainable tourism and education conference, from 
+                    http://www.virtualworldheritage.org/index.cfm?pg=PapersProjects&amp;l=en&amp;confSelect=Mexico
+                    
+                  
+                "/>
+
+    <meta name="citation_reference" content="citation_title=The code of kings; citation_publication_date=1998; citation_id=CR12; citation_author=L Schele; citation_author=P Mathews; citation_publisher=Scribner"/>
+
+    <meta name="citation_reference" content="Spero J (1994) Beyond rainstorms: The Kawak as an ancestor, warrior, and patron of witchcraft, originally presented at the seventh Palenque Round Table in 1989. In: Fields V (ed). Seventh Palenque Round Table, 1989. Pre-Columbian Art Research Institute, San Francisco, pp 1&#8211;14"/>
+
+    <meta name="citation_reference" content="Taube K (1985) The classic Maya Maize God: a reappraisal. originally presented at the fifth Palenque round table, June 12&#8211;18, 1983. In: Fields V (ed). Fifth Palenque Round Table"/>
+
+    <meta name="citation_author" content="Erik Champion"/>
+
+    <meta name="citation_author_email" content="e.champion@massey.ac.nz"/>
+
+    <meta name="citation_author_institution" content="Auckland School of Design, Massey University, Auckland, New Zealand"/>
+
+    <meta name="citation_author" content="Ian Bishop"/>
+
+    <meta name="citation_author_email" content="i.bishop@unimelb.edu.au"/>
+
+    <meta name="citation_author_institution" content="Department of Infrastructure Engineering, University of Melbourne, Parkville, Australia"/>
+
+    <meta name="citation_author" content="Bharat Dave"/>
+
+    <meta name="citation_author_email" content="b.dave@unimelb.edu.au"/>
+
+    <meta name="citation_author_institution" content="Faculty of Architecture, Building and Planning, University of Melbourne, Parkville, Australia"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-011-0191-0&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2012/06/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-011-0191-0"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="The Palenque project: evaluating interaction in an online virtual archaeology site"/>
+        <meta property="og:description" content="This case study evaluated the effect on cultural understanding of three different interaction modes, each teamed with a specific slice of the digitally reconstructed environment. The three interaction modes were derived from an initial descriptive theory of cultural learning as instruction, observation and action. A major aim was to ascertain whether task performance was similar to the development of understanding of the cultural context reached by participation in the virtual environment. A hypothesis was that if task performance is equivalent to understanding and engagement, we might be able to evaluate the success of virtual heritage environments (through engagement and education), without having to annoy the user with post-experience questionnaires. However, results suggest interaction in virtual heritage environments is so contextually embedded; subjective post-test questionnaires can still be more reliable than evaluating task performance."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>The Palenque project: evaluating interaction in an online virtual archaeology site | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-011-0191-0","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Palenque, Virtual heritage, Cultural learning, Mayan","kwrd":["Palenque","Virtual_heritage","Cultural_learning","Mayan"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-011-0191-0","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-011-0191-0","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=191;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-011-0191-0">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            The Palenque project: evaluating interaction in an online virtual archaeology site
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-011-0191-0.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-011-0191-0.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">Original Article</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2011-06-21" itemprop="datePublished">21 June 2011</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">The Palenque project: evaluating interaction in an online virtual archaeology site</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Erik-Champion" data-author-popup="auth-Erik-Champion" data-corresp-id="c1">Erik Champion<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Massey University" /><meta itemprop="address" content="grid.148374.d, Auckland School of Design, Massey University, Auckland, New Zealand" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Ian-Bishop" data-author-popup="auth-Ian-Bishop">Ian Bishop</a></span><sup class="u-js-hide"><a href="#Aff2">2</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of Melbourne" /><meta itemprop="address" content="grid.1008.9, 000000012179088X, Department of Infrastructure Engineering, University of Melbourne, Parkville, VIC, Australia" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Bharat-Dave" data-author-popup="auth-Bharat-Dave">Bharat Dave</a></span><sup class="u-js-hide"><a href="#Aff3">3</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="University of Melbourne" /><meta itemprop="address" content="grid.1008.9, 000000012179088X, Faculty of Architecture, Building and Planning, University of Melbourne, Parkville, VIC, Australia" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 16</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">121</span>–<span itemprop="pageEnd">139</span>(<span data-test="article-publication-year">2012</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">573 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">10 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                    
+                        <li class="c-article-metrics-bar__item">
+                            <p class="c-article-metrics-bar__count">2 <span class="c-article-metrics-bar__label">Altmetric</span></p>
+                        </li>
+                    
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-011-0191-0/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>This case study evaluated the effect on cultural understanding of three different interaction modes, each teamed with a specific slice of the digitally reconstructed environment. The three interaction modes were derived from an initial descriptive theory of cultural learning as instruction, observation and action. A major aim was to ascertain whether task performance was similar to the development of understanding of the cultural context reached by participation in the virtual environment. A hypothesis was that if task performance is equivalent to understanding and engagement, we might be able to evaluate the success of virtual heritage environments (through engagement and education), without having to annoy the user with post-experience questionnaires. However, results suggest interaction in virtual heritage environments is so contextually embedded; subjective post-test questionnaires can still be more reliable than evaluating task performance.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Introduction</h2><div class="c-article-section__content" id="Sec1-content"><p>There is still a great deal of opportunity for research on contextual interactive immersion in virtual heritage environments. The general failure of virtual environment technology to create engaging and educational experiences may be attributable not just to deficiencies in technology or in visual fidelity, but also to a lack of contextual and engaging interaction, such as that found in games. This is perhaps most important in virtual heritage projects (where virtual reality is used to convey cultural heritage), for cultural heritage necessitates meaningful learning, and interaction appropriate to situated learning. Yet, presentation of virtual heritage projects typically glosses over the interaction used, or the evaluation methods employed. For example, Bowman et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Bowman DA, Kruijff E, LaViola J, Poupyrev I (2005) 3D user interfaces: theory and practice. Addison-Wesley, Boston" href="/article/10.1007/s10055-011-0191-0#ref-CR3" id="ref-link-section-d10328e355">2005</a>, pp. 360–367) argued that extrapolating guidelines from the 2D world of HCI heuristics to virtual environments may obscure the distinctive characteristics of 3D virtual environments. They wrote (2005, pp. 363–365):</p><blockquote class="c-blockquote"><div class="c-blockquote__body">
+                  <p>3D UIs are still often a ‘solution looking for a problem.’ Because of this, the target user population or interaction technique to be evaluated may not be known or well understood…Presence is another example of a measure often required in VE evaluations that has no analogue in traditional UI evaluation.</p>
+                </div></blockquote>
+              <p>We interpret their phrase ‘solution looking for a problem’ to mean that the technology of 3D user interfaces is often developed without specific aims in mind, so evaluating effectiveness is difficult. With this in mind, we hoped to resolve three questions. Firstly, how do different modes of interaction affect cultural learning in a virtual environment? Secondly, does increased task performance (the ability to complete tasks within a certain time) relate to the cultural understanding achieved? Thirdly, which types of evaluation are most appropriate and accurate in assessing the effectiveness of the interactivity mode on both task performance and understanding?</p></div></div></section><section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">The test site</h2><div class="c-article-section__content" id="Sec2-content"><h3 class="c-article__sub-heading" id="Sec3">Site selection</h3><p>We chose the Mayan city at Palenque, in Chiapas, Mexico, in order to evaluate how well online digital media can help recreate a sense of cultural inhabitation and communicate the situated culture through interaction. Palenque (or Lakam Ha, which means Big Water in Mayan) is well documented, is where the Mayan language was first decoded by archaeologists and is set in a spectacular landscape. The buildings are generally well preserved, and the Palenque mapping project created an extensive laser-mapped model of the mountainous landscape that sheltered Palenque (Barnhart <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1998" title="Barnhart E (1998) The Palenque mapping project, 1998 field season report, FAMSI, &#xA;                    http://www.famsi.org/reports/97024/index.html&#xA;                    &#xA;                   [2-15-2007]" href="/article/10.1007/s10055-011-0191-0#ref-CR1" id="ref-link-section-d10328e377">1998</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Barnhart E (1999) The Palenque mapping project, 1999 field season report, FAMSI, 1999, &#xA;                    http://www.famsi.org/reports/98063/index.html&#xA;                    &#xA;                   [2-15-2007]" href="/article/10.1007/s10055-011-0191-0#ref-CR2" id="ref-link-section-d10328e380">1999</a>). Despite the impressive condition of the restored buildings, the majority of the artefacts of that city of inscriptions are simply no longer there.</p><p>Palenque was most prominent during the middle of the Classical period of Mayan civilization (300–900 A.D.), and three of its temples hold three tablets to three different gods, as recorded in the Popol Vuh, a Mayan story of creation. Palenque was also the site where archaeologists made a major advance in understanding the complex Mayan written language (Schele and Mathews <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1998" title="Schele L, Mathews P (1998) The code of kings. Scribner, New York" href="/article/10.1007/s10055-011-0191-0#ref-CR12" id="ref-link-section-d10328e386">1998</a>; Foster <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Foster LV (2002) Handbook to life in the ancient Maya World. Facts on File Inc., New York" href="/article/10.1007/s10055-011-0191-0#ref-CR5" id="ref-link-section-d10328e389">2002</a>).</p><p>Mayan culture has a vivid belief system (such as prayer based on bloodletting, ballgame-creation myth, extensive trade, deliberate cranial deformation and a belief in communication between rulers and ancestors via ‘sky-snakes’). Every year, Mayans visit their sacred temples, dedicate offerings to sacred buildings and commemorate the Day of the Dead, yet tourists may never realize the temples are still being used (Schele and Mathews <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1998" title="Schele L, Mathews P (1998) The code of kings. Scribner, New York" href="/article/10.1007/s10055-011-0191-0#ref-CR12" id="ref-link-section-d10328e395">1998</a>).</p><p>To separate Mayan buildings from their landscape and rituals is to barely scratch the surface of a complex and highly delicate social system. Nor does visiting the sites today ensure that tourists understand how these buildings were used, built or worshipped. For example, tourist guides are often asked where the Mayans have gone. It is true that many Mayan traditions have been infused to some extent with that of the Spanish, and all but a few of their books have been burnt. Yet, it is also true that the majority of Mexicans have native Amerindian blood (Mayan, Aztec, etc.). We suggest a possible way of understanding and appreciating the hidden portals, wells, road signs and constellation maps of the Mayans is to recreate their myths and archaeological remains in digital form.</p><h3 class="c-article__sub-heading" id="Sec4">Previous work on Palenque and Central America</h3><p>Central and South American architecture has featured quite prominently in virtual reconstructions and recreations. The Aztec city of Tenochtitlán was used to showcase VRML (Hartman and Wernecke <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1996" title="Hartman J, Wernecke J (1996) The VRML 2.0 handbook, Addison-Wesley Professional, USA" href="/article/10.1007/s10055-011-0191-0#ref-CR7" id="ref-link-section-d10328e408">1996</a>), and there are web-based models of Palenque (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-011-0191-0#Fig1">1</a>). The models could be spun around and, in the case of the Palace, could have their roofs and various layers of buildings removed to show how the Palace had been built up over time.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig1_HTML.gif?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig1_HTML.gif" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p>Online model of the Palace at Palenque by Dylan Nagel</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>There was also a project remodelling Palenque in the Unreal game engine by UNAM, Universidad Nacional Autónoma de México (Ruiz et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Ruiz R, Weghorst S, Savage J, Oppenheimer P, Furness III T, Dozal Y (2004) Virtual Reality for Archeological Maya cities. Paper presented at the Virtual Congress—World heritage in the digital age: Technology and New Media for documentation, preservation, management, sustainable tourism and education conference, from &#xA;                    http://www.virtualworldheritage.org/index.cfm?pg=PapersProjects&amp;l=en&amp;confSelect=Mexico&#xA;                    &#xA;                  &#xA;                " href="/article/10.1007/s10055-011-0191-0#ref-CR11" id="ref-link-section-d10328e435">2004</a>). It was designed for specific research purposes and thus was partially completed; one could only run around and inside a temple, and it did not have an accurate landscape model.</p><p>However, there were many pedagogical issues with the above environments. Due to lack of avatars, accurate terrain and other artefacts (such as tools), there was no way of gauging the scale or the spatial relationships of the buildings or even their apparent mass. Online models tend to float in space and do not convey a sense of embodiment. Further, they do not show the rituals and practices and ways in which social roles are regulated by the building in the landscape (Spero <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1994" title="Spero J (1994) Beyond rainstorms: The Kawak as an ancestor, warrior, and patron of witchcraft, originally presented at the seventh Palenque Round Table in 1989. In: Fields V (ed). Seventh Palenque Round Table, 1989. Pre-Columbian Art Research Institute, San Francisco, pp 1–14" href="/article/10.1007/s10055-011-0191-0#ref-CR14" id="ref-link-section-d10328e441">1994</a>). In the case of Palenque, the specific religious symbolism of the rivers, orientation of buildings (such as the observatory) and sheer visual effect of the buildings nestled against the mountains was missing.</p><h3 class="c-article__sub-heading" id="Sec5">Significant features of Palenque affecting the prototype</h3><p>The Mayans believed in three levels of existence, the sky, the earth and the underworld. Rites involving smoke, sacrificial blood and offerings of food and artefacts were to thank the Gods for continual existence. Some artefacts were seen as magical aids that could help the spirits of the ruling class travel through portals to the other planes of existence (Spero <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1994" title="Spero J (1994) Beyond rainstorms: The Kawak as an ancestor, warrior, and patron of witchcraft, originally presented at the seventh Palenque Round Table in 1989. In: Fields V (ed). Seventh Palenque Round Table, 1989. Pre-Columbian Art Research Institute, San Francisco, pp 1–14" href="/article/10.1007/s10055-011-0191-0#ref-CR14" id="ref-link-section-d10328e452">1994</a>). ‘Cenotes’ (wells) and rivers were also symbolic links to the underworld, and many items of worship have been found there. So, a way of conveying the magical portals of Mayan myth was required.</p><p>The condition of inscriptions and setting of Palenque, with its mountainous backdrop, wide-span temples, and collection of tablets, tombs and rivers, have made it a popular tourist destination. The early morning fog can be so strong that some archaeologists believe Palenque was created to resemble the Mayan mythical origin of the current world, magical mountains that took form out of the primeval sea (Reilly III <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1989" title="Reilly III, FK (1989) Enclosed ritual spaces and the watery underworld in formative period architecture: New observations on the function of la Venta complex A, originally presented at the Seventh Palenque Round Table in 1989, In: Fields V (ed). Seventh Palenque Round Table, 1989, Pre-Columbian Art Research Institute, San Francisco, 1994, 1–14" href="/article/10.1007/s10055-011-0191-0#ref-CR10" id="ref-link-section-d10328e458">1989</a>). This suggested that the software should be capable of conveying the scale of the external environment and producing adjustable fog.</p><p>Buildings were of extreme importance to the Mayans, they were living sources of energy, and offerings to them appeased the gods, whose support was necessary for the growth of maize, the primary crop (Schele and Mathews <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1998" title="Schele L, Mathews P (1998) The code of kings. Scribner, New York" href="/article/10.1007/s10055-011-0191-0#ref-CR12" id="ref-link-section-d10328e464">1998</a>; Foster <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Foster LV (2002) Handbook to life in the ancient Maya World. Facts on File Inc., New York" href="/article/10.1007/s10055-011-0191-0#ref-CR5" id="ref-link-section-d10328e467">2002</a>; Taube <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1985" title="Taube K (1985) The classic Maya Maize God: a reappraisal. originally presented at the fifth Palenque round table, June 12–18, 1983. In: Fields V (ed). Fifth Palenque Round Table" href="/article/10.1007/s10055-011-0191-0#ref-CR15" id="ref-link-section-d10328e470">1985</a>). Changing light and shade were used to turn the buildings into astronomical clocks that foretold major events. So in order to demonstrate the function of the religious buildings as astronomical instruments, we required shade and shadow.</p><p>As the Palenque rulers suffered a break in paternal lineage, their temples emphasized the rulers’ right to lead by recording creation myths of the gods and linking them to divine properties of the rulers. As was the tradition with other Mayan cities, Palenque’s buildings were consecrated with human sacrifice (usually war captives); for example, the ball court commemorated both trade and sacrifice, and slaves were found in the burial chambers of the kings (Kremer and Uc <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1996" title="Kremer J, Uc F (1996) The ritual suicide of Maya Rulers, originally presented at the Eighth Palenque Round Table, June 6–12, 1993. In: Macri M, McHargue J (eds). Eighth Palenque Round Table, June 6–12, 1993, San Francisco: Pre-Columbian Art Research Institute, pp 1–14" href="/article/10.1007/s10055-011-0191-0#ref-CR8" id="ref-link-section-d10328e476">1996</a>; Grube <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1996" title="Grube N (1996) Palenque in the Maya World, originally presented at the Eighth Palenque Round Table, June 6–12, 1993. In: Macri M, McHargue J (eds). Eighth Palenque Round Table, June 6–12, 1993, Pre-Columbian Art Research Institute, San Francisco, pp 1–9" href="/article/10.1007/s10055-011-0191-0#ref-CR6" id="ref-link-section-d10328e479">1996</a>). So interaction allowing the user to take part in the sacrificial offering ritual was another requirement. And as the ball court is a recurring theme in Mayan history, we also decided we needed software with physics simulation, so users could actually play the game and thus trigger retellings of the primal myth linking the ball court to the Mayans’ understanding of the birth of the planet and their civilization.</p><p>The three tablets of the major temples, plus the sarcophagus found in the tomb of Hanab Pakal the Great, in the Temple of Inscriptions, stress the relation of heavenly bodies to the ascension of Kings, and to the importance of maize. However, each temple had its own history and foretold different astronomical events. Therefore, we decided to build each major temple and evaluate what sort of interaction was most appropriate to its function.</p></div></div></section><section aria-labelledby="Sec6"><div class="c-article-section" id="Sec6-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec6">Experimental design</h2><div class="c-article-section__content" id="Sec6-content"><h3 class="c-article__sub-heading" id="Sec7">Test software</h3><p>Various software was tested, and one product was chosen for the experiment, Adobe Atmosphere. Atmosphere allowed for chat-enabled internet-based three-dimensional worlds. Using JavaScript and a proprietary XML file format, Atmosphere could also import CAD-generated files, and featured Flash-based textures, Windows Media (streaming media), and dynamic scripted effects such as collision, a physics engine, position-based sound, database integration, particles and key events, as well as button-driven interaction. This program could also create native primitives that offered increased frame rate speed and improved dynamic lighting over imported models.</p><p>Various projects have already used Atmosphere for virtual archaeology (Stonehenge, lighthouse of Alexander, Landskrona Cathedral, the Great Pyramid of Cairo, Tikal, and Tenochtitlán). However, most of these environments have been designed as a three-dimensional gallery. They were typically not used with advanced scripting techniques for increased interaction between artefacts, avatars and the environment.</p><p>We built three versions of the site due to the size of the models, and the textures, and because the data had to stream over the Internet. The technology used was Adobe Atmosphere (beta), as it offered accessible scripting and content (XML based), was backed by a large and established software company, was available as a PDF plug-in, could send and pull data from simple web pages, and could be used as multi-player environments shared across the Internet. However, such a decision was premature, as the beta suffered many technical problems, and eventually the product was pulled from the market, just months after version one was released to the world.</p><h3 class="c-article__sub-heading" id="Sec8">The test environment</h3><p>Three versions of the site were designed due to the large size of the models, and the textures, and because the software chosen was designed to stream over the Internet. Each version had all the major buildings included, but only the primary building that the visitor was interested in was detailed. It alone contained sculptures and detailed interiors. The other two building areas were three-dimensional but without detailed interiors. Luckily, archaeologists have grouped Palenque into three primary areas.</p><p>Three of the most famous built areas are the Temple of Inscriptions (which also contains an underground tomb with sarcophagus), the Palace (which is really a group of buildings constructed over 200 years over a common substructure) and the Cross Precinct (which contains three similar sized temples, the Temple of the Cross, the Foliated Cross, and the Temple of the Sun, known to archaeologists as the Cross Group).</p><h3 class="c-article__sub-heading" id="Sec9">Structure of experimental design</h3><p>The experiment was to test a possible link between interaction and cultural understanding by modelling and scripting a virtual heritage project with three different types of interactions, activity-based, observational and instruction-based (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-011-0191-0#Fig2">2</a>). We will refer to the different types of interaction as ‘interaction modes’, where users are to Observe, be Instructed (by scripted agents, also known as ‘bots’) or Act (manipulate objects in order to accomplish tasks). Ideally, one would have only tested these interaction modes, but the environment was too large for a single model, so the digital model of Palenque was split into three environments.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig2_HTML.gif?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig2_HTML.gif" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p>Groups A and B interaction—activity, observation and instruction</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>Briefly, three groups of users (A, B and C) entered three different virtual reconstructions of Palenque, or ‘worlds’ (defined as a virtual environment with a specific type of interactivity). Since there were three virtual environments and three interaction modes, there were a maximum of nine possible archaeological worlds (digital reconstructions of Palenque). Due to logistical and content issues, only six of these worlds were created and used in the experiments.</p><p>Users in the ‘observational’ interaction mode could find information by clicking on objects. The goal was to find all such artefacts and read the related information, within 9 min. The instructional’ interaction mode had clickable objects along with agents (chatbots) that could ask and remember simple dialogue. The task was to gain knowledge through questioning the avatars. The ‘activity’ interaction mode required the participant to move objects out of the way and to navigate the avatar into specific positions in order to be teleported to the next environment.</p></div></div></section><section aria-labelledby="Sec10"><div class="c-article-section" id="Sec10-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec10">The user experience</h2><div class="c-article-section__content" id="Sec10-content"><h3 class="c-article__sub-heading" id="Sec11">Warm-up environment</h3><p>The participants were eased into the virtual environments, by having a warm-up environment (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-011-0191-0#Fig3">3</a>) which only required that they move their avatar to read an in-world billboard and then move up the slope of a pyramid to a glowing portal, which transferred them to an online 3D museum of Mayan archaeology. They had 3 min to undertake these tasks, which proved to be sufficient. To avoid confusion, the field of view was set at the default Atmosphere value (although possible to change by script or by user). The users had access to a button they could click on to go home (start position) or to move and orient their avatar’s viewpoint to the next artefact (target). This would prove to be a major help, especially in the Palace environment, which actually was a giant platform on which sat many Mayan buildings that obscured each other.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig3_HTML.gif?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig3_HTML.gif" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p>Warm-up task: read the billboard, climb the Pyramid of the Sun</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <h3 class="c-article__sub-heading" id="Sec12">Archaeological environments</h3><p>As mentioned earlier, there were three main archaeological environments designed (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-011-0191-0#Fig2">2</a>), but each had the possibility of different interactivity modes (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-011-0191-0#Fig4">4</a>).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig4_HTML.gif?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig4_HTML.gif" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p>The Palace environment with instruction as the interactivity mode</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>In the Palace environment and for the Temple of the Cross Group (three temples), there were dynamic lighting, specific sculptures and three Mayan avatars (two of whom were models of Kings and their traditional costumes). These Mayans acted as hosts and were scaled appropriately (Mayan men were seldom five feet tall, and the women were even shorter. Such a scale was important-only Mayan sized people could easily get into some of the crooks and crannies of their buildings, while the steps in some buildings were deliberately oversized, presumably to unsettle and impress visiting dignitaries.</p><p>In the Temple of Inscriptions (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-011-0191-0#Fig5">5</a>), the visitors were asked to find the original trapdoor discovered by an archaeologist 50 years ago, which led down to a tomb below ground level. Inside was found Pakal, the great king of Palenque, his skeleton covered in cinnabar (radioactive red ash) (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-011-0191-0#Fig6">6</a>).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig5_HTML.jpg?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig5_HTML.jpg" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p>Loading screen instructions for Temple of Inscriptions</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                  <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-6"><figure><figcaption><b id="Fig6" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 6</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/6" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig6_HTML.gif?as=webp"></source><img aria-describedby="figure-6-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig6_HTML.gif" alt="figure6" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-6-desc"><p>A Backpacker avatar leaving a conversation with King Pakal</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/6" data-track-dest="link:Figure6 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <h3 class="c-article__sub-heading" id="Sec13">Imaginative worlds</h3><p>We also created four more imaginative ‘worlds’ based on the cultural perspectives of the ancient Mayans in Palenqué, Mexico. After each archaeological world, the participant was transported via the portal to a related imaginative world. These more imaginative game-like worlds were simpler in task, and only 3 min long, but the idea was to see whether more game-style interaction was preferable to the interaction mode of the three archaeological environments.</p><p>The first imaginative world, the Mayan Village, was entered directly after the warm-up and before the archaeological worlds. In the Mayan Village world (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-011-0191-0#Fig7">7</a>), users could select an avatar (a three-dimensional representation of themselves) that was either one of four western style backpacking characters or an avatar in local Mayan dress. Photographs of real people available via the Lonely Planet images database were mapped onto the face of the avatars. The Mayan avatars (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-011-0191-0#Fig8">8</a>) were also sized appropriately, and only by changing into the smaller Mayan avatar were participants able to explore the interior of the Mayan huts.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-7"><figure><figcaption><b id="Fig7" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 7</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/7" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig7_HTML.jpg?as=webp"></source><img aria-describedby="figure-7-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig7_HTML.jpg" alt="figure7" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-7-desc"><p>The Mayan village (Imaginative world)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/7" data-track-dest="link:Figure7 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                  <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-8"><figure><figcaption><b id="Fig8" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 8</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/8" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig8_HTML.gif?as=webp"></source><img aria-describedby="figure-8-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig8_HTML.gif" alt="figure8" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-8-desc"><p>Western tourist was bigger than the Mayans</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/8" data-track-dest="link:Figure8 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>The stated goal was to find the other test participant by orientating themselves against large Mayan carvings in the jungle. They were then asked to find the village using the interface guides and the sound of music. Once they approached the correct objects, the music changed, and the objects became visible. They were then asked to find and kick a pot in one of the village huts. If they were using a backpacker avatar, they would have to change to the Mayan avatar in order to be small enough to enter the doorway. This was to remind them of the differences in physical size between the Mayans and modern tourists in relation to the size of the buildings.</p><p>In the Mayan ‘Primal Mountain’ World, (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-011-0191-0#Fig9">9</a>) gradually thinning fog was used to convey a mythical setting and just as in the archaeological environments, glare was used at regular intervals to indicate where spiritually valuable artefacts were located. Participants were asked to find the beginning of the world (the Mayan sacred Sky-Tree) and click on it for information. They were then asked to find any other people (there were two Mayan paddler gods paddling around the mountain). They were also asked whether they noticed the mountain they were on was actually a giant crocodile (the Mayans believed the world was created from a crack in the back of a caiman or turtle) (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-011-0191-0#Fig10">10</a>).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-9"><figure><figcaption><b id="Fig9" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 9</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/9" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig9_HTML.jpg?as=webp"></source><img aria-describedby="figure-9-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig9_HTML.jpg" alt="figure9" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-9-desc"><p>The Primal Mountain World</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/9" data-track-dest="link:Figure9 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                  <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-10"><figure><figcaption><b id="Fig10" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 10</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/10" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig10_HTML.jpg?as=webp"></source><img aria-describedby="figure-10-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig10_HTML.jpg" alt="figure10" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-10-desc"><p>As the fog clears, the Primal Mountain turns into a giant crocodile</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/10" data-track-dest="link:Figure10 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>In the Mayan Cave world (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-011-0191-0#Fig11">11</a>), when the avatar walks into the water, he automatically starts swimming under water, blue fog appears and the sound of bubbling water drowns out the ambient Mayan music. If the participant does not keep pressing the forward arrow, they slowly ascend back to the surface of the water. By finding, collecting and then dropping artefacts at a hidden shrine, a Mayan sky-snake appears (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-011-0191-0#Fig12">12</a>) and so does a portal that takes them back to the start.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-11"><figure><figcaption><b id="Fig11" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 11</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/11" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig11_HTML.jpg?as=webp"></source><img aria-describedby="figure-11-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig11_HTML.jpg" alt="figure11" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-11-desc"><p>The participant dives in and swims around looking for sacrificial artefacts</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/11" data-track-dest="link:Figure11 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                  <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-12"><figure><figcaption><b id="Fig12" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 12</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/12" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig12_HTML.jpg?as=webp"></source><img aria-describedby="figure-12-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig12_HTML.jpg" alt="figure12" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-12-desc"><p>The sky snake appears in the Cave World when the offering is placed correctly</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/12" data-track-dest="link:Figure12 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>In the final imaginative world, Mayan Ballcourt world, each participant turned into a Mayan ball player, and each was asked to try to get the rubber ball to touch the hoop. If they managed to kick the ball into the hoop, thunder and lighting were triggered (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-011-0191-0#Fig13">13</a>).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-13"><figure><figcaption><b id="Fig13" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 13</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/13" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig13_HTML.jpg?as=webp"></source><img aria-describedby="figure-13-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig13_HTML.jpg" alt="figure13" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-13-desc"><p>The Mayan Ballcourt, the ball has to be kicked into the hoop</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/13" data-track-dest="link:Figure13 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                </div></div></section><section aria-labelledby="Sec14"><div class="c-article-section" id="Sec14-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec14">Evaluation</h2><div class="c-article-section__content" id="Sec14-content"><h3 class="c-article__sub-heading" id="Sec15">Sequence of audience participation</h3><p>In order to reduce the ‘sequence’ effect, whereby the first world experienced may produce different results to the next two worlds encountered, each two participants entered the worlds in a different sequence to each other. This ensured, for example, that only a third of people entered the Temple of Inscriptions as their first world (Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-011-0191-0#Tab1">1</a>). Note also that the interaction mode was altered for the environments; each environment also had one of two interactivity modes.</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-1"><figure><figcaption class="c-article-table__figcaption"><b id="Tab1" data-test="table-caption">Table 1 Sequencing user testing of archaeological environments</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-011-0191-0/tables/1"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <h3 class="c-article__sub-heading" id="Sec16">Evaluation factors of experimental design</h3><p>In the evaluation of the archaeological environments, participants were asked to complete certain tasks within a set time limit of 9 min. At the end of 9 min, they were asked to perform tasks (for 3 min) in an imaginative environment. Then, they were asked to record answers to a multiple choice questionnaire, with six questions for each of the three archaeological environments. At the end of the experiment, they were asked to rank the archaeological and the imaginative worlds against each other, to answer questions on generic environmental details and to guess the relative frame rate speeds of the three archaeological environments.</p><p>The aggregate levels of engagement of the observation mode, instruction mode and activity mode environments were assessed against demographic features of the audience. These included age, gender, experience of three-dimensional digital media, archaeological knowledge, PC game knowledge and travel.</p><p>The control factors, the independent variables, were principally the three virtual environments, and the three ‘modes’ of interactivity, observation, instruction and activity (Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-011-0191-0#Tab2">2</a>).</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-2"><figure><figcaption class="c-article-table__figcaption"><b id="Tab2" data-test="table-caption">Table 2 Evaluation factors of experimental design</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-011-0191-0/tables/2"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>Three types of interactivity, different audience groups and the novelty of the technology necessitated that the experimental objectives were best evaluated by factorial design statistics. Since a variety of evaluation methods were employed, there was also a need for qualitative judgements based on observations of participant responses when part of the design experiment.</p><p>Possible confounding factors included the disparity in sample size, background environmental details (computing power etcetera), speed of the Internet connection and background experience not indicated by the questions. There could also be differences in content complexity between the three environments, or interaction modes may favour (be more suitable for) one environment over another.</p><p>The virtual environments worked in a browser (internet explorer) but to avoid the effects of varying speed, all webpages and the webpage plugin virtual environments were cached locally. All frame rates were automatically recorded by a script every 5 s, so we could compare machines and loading and frame rate across different environments. Two identical machines were used for Group B, and all models etc. loaded via locally, not via the Internet, as mentioned above. Only two machines were used for the twenty-four in Group B, the same two plus eight others with similar technical specifications were used for Group C. Although the computers used for testing were not identical, the tracked frame rates were not significantly different.</p><h3 class="c-article__sub-heading" id="Sec17">Audience groups tested</h3><p>Pilot group evaluations were conducted using a first year archaeology class of forty-nine students (Group A), and for Group B, twenty-four more experienced participants who were either virtual environment designers or cultural historians with an interest in virtual heritage. For Group C, ten IT-experienced people from Lonely Planet Publications (a travel publications company with a strong web-based presence) were tested.</p><h3 class="c-article__sub-heading" id="Sec18">Tasks set in the environments</h3><p>Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-011-0191-0#Tab3">3</a> shows the objectives set to each participant for Groups A and B. Once they completed the archaeological world tasks (worlds 1, 2, and 3), they were teleported to the related imaginative worlds (worlds 1a, 2a and 3a), depending on the sequencing of the worlds.</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-3"><figure><figcaption class="c-article-table__figcaption"><b id="Tab3" data-test="table-caption">Table 3 Palenque tasks for Groups A and B</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-011-0191-0/tables/3"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>This pattern was repeated for Group C, except that the interaction modes of worlds 1, 2 and 3 were swapped around so that different interaction in the same environment could be compared across groups.</p><h3 class="c-article__sub-heading" id="Sec19">Sequence of environments</h3><p>Ideally, as mentioned above, there should be nine worlds, but it was found in the design of the environments that not all three modes of interactivity were easily transferable across the three digital environments. While Instruction and Observation modes were easily transferable, Activity mode was ideal for the Temple of Inscriptions, but not for the other two environments. This necessitated an abbreviated factorial design (Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-011-0191-0#Tab4">4</a>).</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-4"><figure><figcaption class="c-article-table__figcaption"><b id="Tab4" data-test="table-caption">Table 4 Environment Interaction for Groups A, B and C</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-011-0191-0/tables/4"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>The first three worlds (for Groups A and B) were Inscriptions-Activity, the Palace-Observation and the Cross Precinct-Instructions. The second sets of worlds (for Group C) were Inscriptions-Observation, the Palace-Instruction and the Cross Precinct-Observation.</p><h3 class="c-article__sub-heading" id="Sec20">Cultural questions asked</h3><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec21">Inscriptions</h4><p>At the end of experiencing the Inscriptions Environment, participants were asked</p>
+                    <div class="c-article-table-container"><div class="c-article-table-border c-table-scroll-wrapper"><div class="c-table-scroll-wrapper__content" data-component-scroll-wrapper=""><table class="data last-table"><tbody><tr><td class="u-text-left ">
+                              
+                                <i>The Temple of the Inscriptions, named for the hieroglyphic texts on the inner walls was built to commemorate Lord Pakal. We discovered his name through</i>
+                              
+                            </td></tr><tr><td class="u-text-left ">
+                              Comparing glyphs with the existing Mayan language
+                            </td></tr><tr><td class="u-text-left ">
+                              From Spanish documents compiled by priests and conquerors and enslaved Mayans
+                            </td></tr><tr><td class="u-text-left ">
+                              From Mayan books (codices) written in deerskin
+                            </td></tr><tr><td class="u-text-left ">
+                              All of the above
+                            </td></tr><tr><td class="u-text-left ">
+                              
+                                <i>The carvings throughout the Temple of Inscriptions recounts</i>
+                              
+                            </td></tr><tr><td class="u-text-left ">
+                              The accession of Mayan Kings and Queens to the throne
+                            </td></tr><tr><td class="u-text-left ">
+                              The accession of Mayan Kings and Queens to the throne, important events, and the creation of the world by the Gods
+                            </td></tr><tr><td class="u-text-left ">
+                              The accession of Mayan Kings to the throne, important events, and the creation of the world by the Gods
+                            </td></tr><tr><td class="u-text-left ">
+                              The accession of Mayan Kings and Queens to the throne, local officials, important events and the creation of the world by the Gods
+                            </td></tr><tr><td class="u-text-left ">
+                              
+                                <i>Inside the sarcophagus were found the remains of Pakal. The utensils found</i>
+                              
+                            </td></tr><tr><td class="u-text-left ">
+                              Was currency that paid for his entry into the Underworld (Xibalba)
+                            </td></tr><tr><td class="u-text-left ">
+                              Were symbols of life and death
+                            </td></tr><tr><td class="u-text-left ">
+                              Were symbols of kingship
+                            </td></tr><tr><td class="u-text-left ">
+                              Were symbols of life and death and kingship
+                            </td></tr><tr><td class="u-text-left ">
+                              
+                                <i>The river that runs alongside the Temple of Inscriptions is to</i>
+                              
+                            </td></tr><tr><td class="u-text-left ">
+                              The east of the Temple
+                            </td></tr><tr><td class="u-text-left ">
+                              The west of the Temple
+                            </td></tr><tr><td class="u-text-left ">
+                              The north of the Temple
+                            </td></tr><tr><td class="u-text-left ">
+                              The south of the Temple
+                            </td></tr><tr><td class="u-text-left ">
+                              
+                                <i>If you visit a Mayan ball court, you can recognize it as</i>
+                              
+                            </td></tr><tr><td class="u-text-left ">
+                              The area will be flat and mown
+                            </td></tr><tr><td class="u-text-left ">
+                              The area will be flat, and vary greatly in size, and may have skulls buried under it
+                            </td></tr><tr><td class="u-text-left ">
+                              There will be a flat area, with a hoop on each of two adjoining walls
+                            </td></tr><tr><td class="u-text-left ">
+                              The ball court may be any of the above and may have strange acoustic features as well
+                            </td></tr><tr><td class="u-text-left ">
+                              
+                                <i>We believe the ball court represented</i>
+                              
+                            </td></tr><tr><td class="u-text-left ">
+                              The Mayan king as the ancient hero who was decapitated and revived in the ancient ballgame against the Lords of the Underworld
+                            </td></tr><tr><td class="u-text-left ">
+                              The fading and return of Venus as morning and evening star
+                            </td></tr><tr><td class="u-text-left ">
+                              War
+                            </td></tr><tr><td class="u-text-left ">
+                              All of the above
+                            </td></tr></tbody></table></div></div></div>
+                  <h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec22">Cross precinct</h4><p>At the end of experiencing the Cross Precinct Environment, participants were asked</p>
+                    <div class="c-article-table-container"><div class="c-article-table-border c-table-scroll-wrapper"><div class="c-table-scroll-wrapper__content" data-component-scroll-wrapper=""><table class="data last-table"><tbody><tr><td class="u-text-left ">
+                              
+                                <i>Tablet of the Temple of the Foliated Cross-describes</i>
+                              
+                            </td></tr><tr><td class="u-text-left ">
+                              The passing of the kingship from Pakal to Chan-Bahlum his son
+                            </td></tr><tr><td class="u-text-left ">
+                              The life of Chan-Bahlum
+                            </td></tr><tr><td class="u-text-left ">
+                              Mythical characters
+                            </td></tr><tr><td class="u-text-left ">
+                              We are not sure
+                            </td></tr><tr><td class="u-text-left ">
+                              
+                                <i>Tablet of the Temple of the Cross</i>-<i>describes Yax Naab Chak</i> (<i>God I</i>) <i>in cosmic battle with the Death Lord. This represents</i>
+                              
+                            </td></tr><tr><td class="u-text-left ">
+                              Only at Palenque, the spirit of Kings
+                            </td></tr><tr><td class="u-text-left ">
+                              Throughout the Mayan world, the animal soul of people falling sick and falling to the underworld
+                            </td></tr><tr><td class="u-text-left ">
+                              The cycle of life and death
+                            </td></tr><tr><td class="u-text-left ">
+                              B and C
+                            </td></tr><tr><td class="u-text-left ">
+                              
+                                <i>Tablet of the Temple of the Sun depicts a baby jaguar that in turn represents the King as</i>
+                              
+                            </td></tr><tr><td class="u-text-left ">
+                              Jaguars were the rarest animals to be found
+                            </td></tr><tr><td class="u-text-left ">
+                              Jaguars had the most luxurious pelts
+                            </td></tr><tr><td class="u-text-left ">
+                              Jaguars represented the most powerful animal spirits as they could swim, run on the land or climb trees
+                            </td></tr><tr><td class="u-text-left ">
+                              Jaguars were the most feared animals in Mesoamerica
+                            </td></tr><tr><td class="u-text-left ">
+                              
+                                <i>The three temples represent</i>
+                              
+                            </td></tr><tr><td class="u-text-left ">
+                              The three stones of creation
+                            </td></tr><tr><td class="u-text-left ">
+                              The growth and death i.e. the life cycle of Maize
+                            </td></tr><tr><td class="u-text-left ">
+                              The rise and fall of the sun
+                            </td></tr><tr><td class="u-text-left ">
+                              All of the above
+                            </td></tr><tr><td class="u-text-left ">
+                              
+                                <i>Judging by the siting of the temples and their contents</i>
+                              
+                            </td></tr><tr><td class="u-text-left ">
+                              The Temple of the Sun symbolizes death,
+                            </td></tr><tr><td class="u-text-left ">
+                              The Temple of the Foliated Cross symbolizes death
+                            </td></tr><tr><td class="u-text-left ">
+                              The Temple of the Cross symbolizes death as it faces north
+                            </td></tr><tr><td class="u-text-left ">
+                              The Temple of the Cross symbolizes death as it faces north
+                            </td></tr><tr><td class="u-text-left ">
+                              
+                                <i>The Temples were designed</i>
+                              
+                            </td></tr><tr><td class="u-text-left ">
+                              To be of general access to the public
+                            </td></tr><tr><td class="u-text-left ">
+                              To be like giant billboards where everyone could see the sculptures on the roof combs and on the balustrades
+                            </td></tr><tr><td class="u-text-left ">
+                              To be accessed depending on social rank, only high lords and the king were allowed into the inner sanctuaries
+                            </td></tr><tr><td class="u-text-left ">
+                              All of the above except for A
+                            </td></tr></tbody></table></div></div></div>
+                  <h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec23">The Palace</h4><p>At the end of experiencing the Palace Environment, participants were asked</p>
+                    <div class="c-article-table-container"><div class="c-article-table-border c-table-scroll-wrapper"><div class="c-table-scroll-wrapper__content" data-component-scroll-wrapper=""><table class="data last-table"><tbody><tr><td class="u-text-left ">
+                              
+                                <i>The East court had steps of various heights to</i>
+                              
+                            </td></tr><tr><td class="u-text-left ">
+                              Best accommodate various sculptures
+                            </td></tr><tr><td class="u-text-left ">
+                              To unsettle guests
+                            </td></tr><tr><td class="u-text-left ">
+                              Because the Mayans did not spend a great deal of care on stone construction
+                            </td></tr><tr><td class="u-text-left ">
+                              We are not sure
+                            </td></tr><tr><td class="u-text-left ">
+                              
+                                <i>Oval tablet in House E shows Pakal sitting on a throne made of</i>
+                              
+                            </td></tr><tr><td class="u-text-left ">
+                              A jaguar
+                            </td></tr><tr><td class="u-text-left ">
+                              A creation stone
+                            </td></tr><tr><td class="u-text-left ">
+                              A double-headed jaguar stone
+                            </td></tr><tr><td class="u-text-left ">
+                              Only B and C are correct
+                            </td></tr><tr><td class="u-text-left ">
+                              
+                                <i>Tower</i>: <i>Which of the following is most accurate?</i>
+                              
+                            </td></tr><tr><td class="u-text-left ">
+                              This picture cannot be of an observatory, as Mayans did not have telescopes
+                            </td></tr><tr><td class="u-text-left ">
+                              This picture could be of an observatory because during solstice the light falls directly onto the ledge
+                            </td></tr><tr><td class="u-text-left ">
+                              This is a picture of the only Mayan observatory known to us
+                            </td></tr><tr><td class="u-text-left ">
+                              This is not a picture of the observatory—the Mayans only viewed the stars to indicate ancestors just as some of us use the stars for astrology
+                            </td></tr><tr><td class="u-text-left ">
+                              
+                                <i>The buildings of the Palace</i>
+                              
+                            </td></tr><tr><td class="u-text-left ">
+                              Would have the roofs and roof combs covered in red, yellow and blue sculpture
+                            </td></tr><tr><td class="u-text-left ">
+                              Masks would cover the sides of houses
+                            </td></tr><tr><td class="u-text-left ">
+                              All the buildings would have been covered in pink-red plaster
+                            </td></tr><tr><td class="u-text-left ">
+                              A and B only
+                            </td></tr><tr><td class="u-text-left ">
+                              
+                                <i>Under the Palace near the Tower, the Mayans used the river to</i>
+                              
+                            </td></tr><tr><td class="u-text-left ">
+                              Create running water for a toilet
+                            </td></tr><tr><td class="u-text-left ">
+                              Wash domestic utensils
+                            </td></tr><tr><td class="u-text-left ">
+                              As a symbol of life
+                            </td></tr><tr><td class="u-text-left ">
+                              Act as an escape in case of attack
+                            </td></tr><tr><td class="u-text-left ">
+                              
+                                <i>Inside House L and also in two other places are stairs that descend into the substructure. They were built as</i>
+                              
+                            </td></tr><tr><td class="u-text-left ">
+                              They provide access
+                            </td></tr><tr><td class="u-text-left ">
+                              They are needed to provide access to an artificially created cave, which symbolizes the birth of creation
+                            </td></tr><tr><td class="u-text-left ">
+                              They already existed
+                            </td></tr><tr><td class="u-text-left ">
+                              They were designed to allow dignitaries to escape from invading armies
+                            </td></tr></tbody></table></div></div></div>
+                  <h3 class="c-article__sub-heading" id="Sec24">Post-test presence questionnaire</h3><p>See Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-011-0191-0#Tab5">5</a>.</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-8"><figure><figcaption class="c-article-table__figcaption"><b id="Tab5" data-test="table-caption">Table 5 Presence questions</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-011-0191-0/tables/8"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                </div></div></section><section aria-labelledby="Sec25"><div class="c-article-section" id="Sec25-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec25">Results</h2><div class="c-article-section__content" id="Sec25-content"><h3 class="c-article__sub-heading" id="Sec26">Demographic data</h3><p>See Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-011-0191-0#Tab6">6</a>.</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-9"><figure><figcaption class="c-article-table__figcaption"><b id="Tab6" data-test="table-caption">Table 6 Demographic and evaluation data recorded for all groups</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-011-0191-0/tables/9"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <h3 class="c-article__sub-heading" id="Sec27">Task performance</h3><p>This measure recorded how often participants managed to click on different information sources. For observation interaction mode, they just had to find the objects, for instruction, they also needed to get advice from the guides, for action, they had to move objects in order to get to the information and click on it. Results were interval data, with a value of 0–6 for each ‘world’ visited. The scores for the imaginative worlds were also recorded but not statistically evaluated, as they did not directly relate to cultural understanding.</p><p>Group B was slightly better at both understanding and task performance on average; compared to Group C. Results were similar between groups except for understanding regards the Palace. With guides the Instruction-Palace for Group C did markedly worse (mean was 1.60) than Observation-Palace for Group B (the mean was 2.67). The only difference was that Group C had guides, but Group B did not. It was completely unexpected that adding guides to a virtual environment would actually impede task performance, as the guides made location of the task more obvious.</p><h3 class="c-article__sub-heading" id="Sec28">Cultural understanding</h3><p>This measure was recorded from a post-experience questionnaire of eighteen questions (listed above). It is based on the participants’ ability to select the right answer, displaying their recall ability, and ability to extrapolate likely Mayan beliefs and facts. Results were discrete data with a value of 0–18. The data were labelled cultural understanding (understanding in the tables) and were discussed in the previous section. As noted in that section, Group A extrapolated knowledge was not recorded, due to incomplete results, hardware difficulties and the participants (students) not completing each virtual environment and interaction mode.</p><h3 class="c-article__sub-heading" id="Sec29">Performance and understanding</h3><p>In the design experiment, relating task performance to cultural understanding, the questionnaire recorded cultural understanding through testing what participants remembered, as well as what they were able to recall and extrapolate from web pages that popped up when well-hidden artefacts were clicked. Unfortunately, cultural understanding did not appear to relate closely to task performance for either Group B or Group C. The Cross Precinct environment was almost perfectly scored for task performance, yet in terms of understanding, it was second overall for Group B and just in front of Inscriptions for Group C understanding (Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-011-0191-0#Tab7">7</a>).</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-10"><figure><figcaption class="c-article-table__figcaption"><b id="Tab7" data-test="table-caption">Table 7 Groups B and C performance and understanding</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-011-0191-0/tables/10"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>Participants in Groups B and C solved the least number of tasks in the Palace environment, but answered more questions correctly there. They solved all the tasks in the Cross environment, but it ranked second on correctly answered questions. The Inscriptions environment ranked second for task performance and last for correct number of answers. While task performance decreased with age, the rate of correct answers (cultural understanding) increased with age (Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-011-0191-0#Tab8">8</a>).</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-11"><figure><figcaption class="c-article-table__figcaption"><b id="Tab8" data-test="table-caption">Table 8 Group B age group and understanding</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-011-0191-0/tables/11"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>There are two possible reasons for this, the questions in the Inscriptions environment were harder than in the other two, or the environments themselves confounded the results. Having checked the questions with an archaeology teacher, probably the problem was with the different types of environment, and the presence survey appears to substantiate this.</p><h3 class="c-article__sub-heading" id="Sec30">Demographic effects on understanding</h3><p>Where demographic data (Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-011-0191-0#Tab8">8</a>) are recorded and considered the independent variable, we found a close to significant correlation between age and cultural understanding (Pearson correlation <i>r</i> = 0.367, <i>p</i> = 0.072) and between PC game experience and understanding (Pearson correlation <i>r</i> = 0.337, <i>p</i> = 0.107).</p><p>There were some interesting variations based on demographics and life experience for both Groups B and C. For Group B, there was a nearly significant relation of age to understanding, and a nearly significant negative relation of travel experience to task performance. There was a significant relationship between game experience and age, and between game experience and an ability to discern correct frame rate. What this meant was that the younger participants typically had more gaming experience (which was to be expected), and that those with more gaming experience were more accurate in estimating which environments had faster or slower frame rates.</p><h3 class="c-article__sub-heading" id="Sec31">Presence rankings</h3><p>Reviewing the presence rankings of archaeological worlds for Groups A, B and C is revealing (Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-011-0191-0#Tab9">9</a>). For all three, the Palace environment was most interesting. For Group B, the Action-Inscriptions world was the most interesting and most interactive world (for Group A, it was Observation-Palace).</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-12"><figure><figcaption class="c-article-table__figcaption"><b id="Tab9" data-test="table-caption">Table 9 Groups A, B and C top-ranked worlds</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-011-0191-0/tables/12"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>Environment rather than interaction appears to be a strong factor in generating the feeling one is in the presence of Mayan culture, is probably a factor in what makes the world more or less interesting, and may be a factor in generating a feeling that it is closest to the Mayan perspective.</p><h3 class="c-article__sub-heading" id="Sec32">Presence and game-style interaction</h3><p>Groups B and C experienced the same game-style interactive worlds. If we collate the presence rankings per hand-eye coordination style worlds (Ballcourt and Cave) and per observation worlds (Village and Mountain) and tabulate them against an average presence ranking of the three archaeological worlds, we get the following results (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-011-0191-0#Fig14">14</a>). Despite different interaction modes between Group B and Group C for the Archaeological worlds, their presence rankings are very similar. However, the small number of Group C participants and the similarity of the other rankings between the two groups suggest that further statistical analysis is not meaningful. However, the overall similarity in rankings between the two groups is promising.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-14"><figure><figcaption><b id="Fig14" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 14</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/14" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig14_HTML.gif?as=webp"></source><img aria-describedby="figure-14-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig14_HTML.gif" alt="figure14" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-14-desc"><p>Graph of hand-eye versus observation-based environments</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/14" data-track-dest="link:Figure14 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>Also, the hand-eye games are considered much more interactive in both groups than the observation ones. This is interesting, there was not much more actual scripted interaction in the hand-eye environments, but there was more interaction the participant could immediately control. It is possible that interactive agency rather than the amount of overall actual scripted interactivity in the virtual environment is of strong importance to the user.</p><h3 class="c-article__sub-heading" id="Sec33">Groups B and C correlation of questions</h3><p>For Groups B and C (<i>n</i> = 34), we could calculate how close answers are between the different Presence questions and found a correlation or 0.86 (<i>p</i> = 0.03) between ‘Which felt most like you were in the presence of Mayan culture?’ and ‘Which did you feel most closely represented the way Mayans saw their own world?’</p><p>Using the same approach (combining Groups B and C, so <i>N</i> = 34), to see which pairs of answers to the below questions had a significantly negative correlation, we find two pairs of near significance and slight significance (Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-011-0191-0#Tab10">10</a>). The more inhabited worlds seemed less interesting, and more interaction seemed to curtail the sensation of being in the presence of Mayan culture.</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-13"><figure><figcaption class="c-article-table__figcaption"><b id="Tab10" data-test="table-caption">Table 10 Dissimilarity in Paired Presence responses</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-011-0191-0/tables/13"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <h3 class="c-article__sub-heading" id="Sec34">Other evaluation criteria</h3><p>No statistical significance was found for PC game experience, CAD experience or age in relation to task performance. Participants also answered questions that tested their recall of details not directly asked before in the experiment. They were also asked to rank the three archaeological worlds they visited, from 1 to 3, in terms of the environment with the perceived fastest perceived frame rate. Results were taken as interval data, with a value of 1–3, but no significant results were found.</p></div></div></section><section aria-labelledby="Sec35"><div class="c-article-section" id="Sec35-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec35">Summary of results</h2><div class="c-article-section__content" id="Sec35-content"><h3 class="c-article__sub-heading" id="Sec36">Analysing the results</h3><p>Results show the importance of recording demographics (in this case age group and gender), the strong effect of context on the choice of interaction, the strong effect of navigation and a significant relation between gaming experience, task performance and understanding. It uncovered a potential new factor for consideration by future researchers and that is cognitive overloading (including too many interactive processes for the participant to cope with effectively while immersed within a virtual environment).</p><p>Staggering the sequence of worlds visited by the participants proved to be important. There was a clearly lower average task performance and understanding score for the first world experienced compared to the next two. Environmental recall was significant for gauging heights of other avatars, in relation to cultural understanding.</p><p>For B and C treated as a combined group, there was also a relationship between gender, task performance and cultural understanding, but there were not enough women to make a strong conclusion based on the data. The statistical results suggest a gaming background does influence the cultural understanding score, and to some extent, task performance. For example, gender had a much greater influence than expected, but a future experiment would need a larger sample size to make any major claims. A more even spread of demographic factors and comparable sample sizes of equal distribution between genders should be attempted in future evaluations.</p><p>The findings suggest that engagement relates to how appropriate the interactivity is to the environment rather than what type of interactivity it is. Any apparently small variances in environmental content may strongly affect results. Therefore, the environment that people are experiencing is an important factor.</p><p>Although the interaction modes used in the experimental design were non-violent and non-destructive, the results indicated the least interactive mode (Observation) was the most successful (ranked first and second) for ‘most interesting’ world.</p><p>In short, despite an initial hypothesis that the environmental content should not drastically affect the results, the environment seems to be a far stronger factor than does interaction mode, for most of the presence responses. This does not necessarily mean we cannot aim for richer and more distinctive and involved interaction modes, but they must be appropriate to the environment, believable, and yet not interfere with the cognitive demands of cultural learning in virtual environments.</p><h3 class="c-article__sub-heading" id="Sec37">Design implications</h3><p>Three major design-related issues appeared to confound results especially in the Cross Precinct Environment. These were cognitive loading, navigation and compelling and believable social agents.</p><p>Navigation must be consistent to obtain results. Oman et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Oman C, Howard I, Smith T, Beall A, Natapoff A, Zacher J, Jenkin H (2003) The role of visual cues in microgravity spatial orientation. In: Buckey J, Homick J (eds) Eurolab spacelab mission: Neuroscience research in space: Results from the STS-90. Neurolab Spacelab Mission, NASA, Houston, pp 69–81" href="/article/10.1007/s10055-011-0191-0#ref-CR9" id="ref-link-section-d10328e4375">2003</a>) noted that participants in virtual worlds do not tend to rotate as much as in the real world, and that this may make navigational cues all the more important. Such research seems to substantiate the inference that the Cross Temple Environment was considered not at all challenging because on entry to the world every task can be seen within the screen at the same time (that is, all three temples and tablets). The navigational and orientation features of environments have to be clear perceived affordances to the end user if we are to compare task performance across environments. Creating believable agents was a problem.</p><p>While people are attracted to scripted agents (who act as guides), they soon tire of them if they can predict their behaviour. There also appeared to be cognitive overloading when using scripted agents and the agents did not appear to be believable enough. However, they were good navigation landmarks as the participants all saw them very quickly (the scripted agents’ default behaviour involved some movement from side to side).</p><p>If redeveloped, only one large part of the site should have been chosen, and quite distinct interactive modes applied to it. The desire to show people archaeological content of the entire site was compelling, but in the end analysis, the point was to build an experimental context, not an educational showcase.</p><p>The second redesign issue would be to redress the (unexpected) ease of task completion in the Cross Precinct environment. Tasks for that environment should have been extended or made more difficult to complete.</p><p>Thirdly, there was a designer fallacy or bias in attempting to use dynamic lighting as only half the participants noticed it. While dynamic lighting (real-time shadows) may indeed make the virtual world seem more immersive, since it is not obvious to others and decreases frame rate significantly it should have been dropped. Designers may want to convey atmosphere, but in a game-style task-based environment, the end-users want interactive control and low levels of latency (i.e. minimal lag).</p><p>Another example of designer bias was in the designer versus end user perception of ‘most interesting’ and ‘most interactive’ world. The most interactive (i.e. heavily scripted) world was the Cave, but this was not picked up on by many participants in their answers to the related presence question.</p><p>Also, when adding game-style interaction to virtual environments, participants may miss important educational features of the environment as they are concentrating on solving specific tasks. For example, none of the users in the above game-style environment realized that the mountain they walked on and around was actually a giant caiman (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-011-0191-0#Fig15">15</a>).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-15"><figure><figcaption><b id="Fig15" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 15</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/15" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig15_HTML.gif?as=webp"></source><img aria-describedby="figure-15-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig15_HTML.gif" alt="figure15" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-15-desc"><p>Caiman/Crocodile outline of Primal Mountain, rowers in distance</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/15" data-track-dest="link:Figure15 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <h3 class="c-article__sub-heading" id="Sec38">Evaluating evaluation methods for virtual heritage</h3><p>The results suggested that the answers to the present questionnaire were highly subjective. For while all groups according to the presence of factor rankings generally found the archaeological worlds to be more authentic and interesting than the imaginative worlds, the evaluator found it much harder to drag them out of the latter.</p><p>For example, the artefacts and themes in the imaginative worlds were also based on archaeological records and anthropological theories of the cultural and mythical beliefs of the Mayans. The Ballcourt was based on a direct reconstruction of the Palenque Ballcourt from photos (we did not have full measurements for this building). Yet, people consistently rated the imaginative worlds lower for both ‘most interesting world’, and for the ‘cultural presence’ questions. Not all imaginative worlds were navigationally as challenging as the archaeological worlds, but they were generally smaller and more confined. This may be another reason they failed to rank well against the archaeological worlds.</p><p>The students (Group A) in particular were keen to explore all the capabilities of the avatars rather than the archaeological modelling they were meant to be interested in. Some wished to know what parts of the environment and others they could find and destroy. So it is possible that as virtual heritage projects attempt to improve graphic performance and engagement (and by extension, usability and usefulness), by adopting conventional game-style interaction and design, the more genre-trapped they may become, persuading the student to see them only as a game, and a destructive one at that. However, the results above indicate that even many practitioners as well as the majority of students are keen to explore the more imaginative versions of virtual heritage sites. The challenge is to make the interaction both educational and replete with the ‘hard fun’ element of engaging games.</p><p>In other words, experienced gamers concentrated on solving tasks rather than exploring the environment for its own sake, and the more authentic environments were actually considered less authentic the more they afforded interaction. Hence, to simply add interaction to a virtual environment does not necessarily make it more authentic, and adding game-style scenarios appears to help users know what to expect in a virtual environment, but they seem to take it less seriously the more they can affect it.</p><h3 class="c-article__sub-heading" id="Sec39">Ongoing-related work</h3><p>In 2005, the first author organized a student project where the model was ported to a game engine (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-011-0191-0#Fig16">16</a>). The students built a special environment where the game was projected onto three walls and a ceiling, roughly 2.4 ms. People could navigate with a 3D joystick; their task was to find the Mayan version of the underworld (Xibalba). A shaman stick allowed them to control lightning, and if they found the Ballcourt, the Ballcourt split open and they were sent to Xibalba (modelled on the description in the Mayan book, The Popol Vuh). When people are surrounded by a large game space in three dimensions that is bigger than they are, and when they interact by standing and moving (we used sensor pads), the scale of the place and the embodiment of the visitor begins to develop into an entirely new perspective.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-16"><figure><figcaption><b id="Fig16" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 16</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/16" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig16_HTML.jpg?as=webp"></source><img aria-describedby="figure-16-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-011-0191-0/MediaObjects/10055_2011_191_Fig16_HTML.jpg" alt="figure16" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-16-desc"><p>Palenque in the Unreal Engine</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-011-0191-0/figures/16" data-track-dest="link:Figure16 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                <p>The game engine allowed quick and easy use of current models (including avatars and flying birds), was significantly quicker and could be used to project via several cameras at once (it has been used to run in a CAVE). Despite being used for many peripherals, we did find coding to be laborious, and it is not immediately cross-platform. Future work will hopefully examine the model in more recent and thus more advanced game engines that can afford more social participation and interaction with the model without sacrificing speed or resolution quality. The primary author has also developed more advanced and thematically appropriate interaction genres and hopes to test them and publish them at a later date.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Barnhart E (1998) The Palenque mapping project, 1998 field season report, FAMSI, http://www.famsi.org/reports/" /><p class="c-article-references__text" id="ref-CR1">Barnhart E (1998) The Palenque mapping project, 1998 field season report, FAMSI, <a href="http://www.famsi.org/reports/97024/index.html">http://www.famsi.org/reports/97024/index.html</a> [2-15-2007]</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Barnhart E (1999) The Palenque mapping project, 1999 field season report, FAMSI, 1999, http://www.famsi.org/re" /><p class="c-article-references__text" id="ref-CR2">Barnhart E (1999) The Palenque mapping project, 1999 field season report, FAMSI, 1999, <a href="http://www.famsi.org/reports/98063/index.html">http://www.famsi.org/reports/98063/index.html</a> [2-15-2007]</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="DA. Bowman, E. Kruijff, J. LaViola, I. Poupyrev, " /><meta itemprop="datePublished" content="2005" /><meta itemprop="headline" content="Bowman DA, Kruijff E, LaViola J, Poupyrev I (2005) 3D user interfaces: theory and practice. Addison-Wesley, Bo" /><p class="c-article-references__text" id="ref-CR3">Bowman DA, Kruijff E, LaViola J, Poupyrev I (2005) 3D user interfaces: theory and practice. Addison-Wesley, Boston</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 3 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=3D%20user%20interfaces%3A%20theory%20and%20practice&amp;publication_year=2005&amp;author=Bowman%2CDA&amp;author=Kruijff%2CE&amp;author=LaViola%2CJ&amp;author=Poupyrev%2CI">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="LV. Foster, " /><meta itemprop="datePublished" content="2002" /><meta itemprop="headline" content="Foster LV (2002) Handbook to life in the ancient Maya World. Facts on File Inc., New York" /><p class="c-article-references__text" id="ref-CR5">Foster LV (2002) Handbook to life in the ancient Maya World. Facts on File Inc., New York</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 4 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Handbook%20to%20life%20in%20the%20ancient%20Maya%20World&amp;publication_year=2002&amp;author=Foster%2CLV">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Grube N (1996) Palenque in the Maya World, originally presented at the Eighth Palenque Round Table, June 6–12," /><p class="c-article-references__text" id="ref-CR6">Grube N (1996) Palenque in the Maya World, originally presented at the Eighth Palenque Round Table, June 6–12, 1993. In: Macri M, McHargue J (eds). Eighth Palenque Round Table, June 6–12, 1993, Pre-Columbian Art Research Institute, San Francisco, pp 1–9</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Hartman J, Wernecke J (1996) The VRML 2.0 handbook, Addison-Wesley Professional, USA" /><p class="c-article-references__text" id="ref-CR7">Hartman J, Wernecke J (1996) The VRML 2.0 handbook, Addison-Wesley Professional, USA</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Kremer J, Uc F (1996) The ritual suicide of Maya Rulers, originally presented at the Eighth Palenque Round Tab" /><p class="c-article-references__text" id="ref-CR8">Kremer J, Uc F (1996) The ritual suicide of Maya Rulers, originally presented at the Eighth Palenque Round Table, June 6–12, 1993. In: Macri M, McHargue J (eds). Eighth Palenque Round Table, June 6–12, 1993, San Francisco: Pre-Columbian Art Research Institute, pp 1–14</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="C. Oman, I. Howard, T. Smith, A. Beall, A. Natapoff, J. Zacher, H. Jenkin, " /><meta itemprop="datePublished" content="2003" /><meta itemprop="headline" content="Oman C, Howard I, Smith T, Beall A, Natapoff A, Zacher J, Jenkin H (2003) The role of visual cues in micrograv" /><p class="c-article-references__text" id="ref-CR9">Oman C, Howard I, Smith T, Beall A, Natapoff A, Zacher J, Jenkin H (2003) The role of visual cues in microgravity spatial orientation. In: Buckey J, Homick J (eds) Eurolab spacelab mission: Neuroscience research in space: Results from the STS-90. Neurolab Spacelab Mission, NASA, Houston, pp 69–81</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 8 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Eurolab%20spacelab%20mission%3A%20Neuroscience%20research%20in%20space%3A%20Results%20from%20the%20STS-90&amp;pages=69-81&amp;publication_year=2003&amp;author=Oman%2CC&amp;author=Howard%2CI&amp;author=Smith%2CT&amp;author=Beall%2CA&amp;author=Natapoff%2CA&amp;author=Zacher%2CJ&amp;author=Jenkin%2CH">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Reilly III, FK (1989) Enclosed ritual spaces and the watery underworld in formative period architecture: New o" /><p class="c-article-references__text" id="ref-CR10">Reilly III, FK (1989) Enclosed ritual spaces and the watery underworld in formative period architecture: New observations on the function of la Venta complex A, originally presented at the Seventh Palenque Round Table in 1989, In: Fields V (ed). Seventh Palenque Round Table, 1989, Pre-Columbian Art Research Institute, San Francisco, 1994, 1–14</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Ruiz R, Weghorst S, Savage J, Oppenheimer P, Furness III T, Dozal Y (2004) Virtual Reality for Archeological M" /><p class="c-article-references__text" id="ref-CR11">Ruiz R, Weghorst S, Savage J, Oppenheimer P, Furness III T, Dozal Y (2004) Virtual Reality for Archeological Maya cities. Paper presented at the Virtual Congress—World heritage in the digital age: Technology and New Media for documentation, preservation, management, sustainable tourism and education conference, from <a href="http://www.virtualworldheritage.org/index.cfm?pg=PapersProjects&amp;l=en&amp;confSelect=Mexico">http://www.virtualworldheritage.org/index.cfm?pg=PapersProjects&amp;l=en&amp;confSelect=Mexico</a>
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/Book"><meta itemprop="author" content="L. Schele, P. Mathews, " /><meta itemprop="datePublished" content="1998" /><meta itemprop="headline" content="Schele L, Mathews P (1998) The code of kings. Scribner, New York" /><p class="c-article-references__text" id="ref-CR12">Schele L, Mathews P (1998) The code of kings. Scribner, New York</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 11 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=The%20code%20of%20kings&amp;publication_year=1998&amp;author=Schele%2CL&amp;author=Mathews%2CP">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Spero J (1994) Beyond rainstorms: The Kawak as an ancestor, warrior, and patron of witchcraft, originally pres" /><p class="c-article-references__text" id="ref-CR14">Spero J (1994) Beyond rainstorms: The Kawak as an ancestor, warrior, and patron of witchcraft, originally presented at the seventh Palenque Round Table in 1989. In: Fields V (ed). Seventh Palenque Round Table, 1989. Pre-Columbian Art Research Institute, San Francisco, pp 1–14</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Taube K (1985) The classic Maya Maize God: a reappraisal. originally presented at the fifth Palenque round tab" /><p class="c-article-references__text" id="ref-CR15">Taube K (1985) The classic Maya Maize God: a reappraisal. originally presented at the fifth Palenque round table, June 12–18, 1983. In: Fields V (ed). Fifth Palenque Round Table</p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-011-0191-0-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Ack1">Acknowledgments</h2><div class="c-article-section__content" id="Ack1-content"><p>An Australian Research Council SPIRT grant in collaboration with Lonely Planet Publications supported this research: special thanks to Dr Ron Gallagher from Lonely Planet. Dr Graham Hepworth provided valuable statistics consulting.</p></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">Auckland School of Design, Massey University, Auckland, New Zealand</p><p class="c-article-author-affiliation__authors-list">Erik Champion</p></li><li id="Aff2"><p class="c-article-author-affiliation__address">Department of Infrastructure Engineering, University of Melbourne, Parkville, VIC, Australia</p><p class="c-article-author-affiliation__authors-list">Ian Bishop</p></li><li id="Aff3"><p class="c-article-author-affiliation__address">Faculty of Architecture, Building and Planning, University of Melbourne, Parkville, VIC, Australia</p><p class="c-article-author-affiliation__authors-list">Bharat Dave</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Erik-Champion"><span class="c-article-authors-search__title u-h3 js-search-name">Erik Champion</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Erik+Champion&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Erik+Champion" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Erik+Champion%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Ian-Bishop"><span class="c-article-authors-search__title u-h3 js-search-name">Ian Bishop</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Ian+Bishop&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Ian+Bishop" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Ian+Bishop%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Bharat-Dave"><span class="c-article-authors-search__title u-h3 js-search-name">Bharat Dave</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Bharat+Dave&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Bharat+Dave" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Bharat+Dave%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-011-0191-0/email/correspondent/c1/new">Erik Champion</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=The%20Palenque%20project%3A%20evaluating%20interaction%20in%20an%20online%20virtual%20archaeology%20site&amp;author=Erik%20Champion%20et%20al&amp;contentID=10.1007%2Fs10055-011-0191-0&amp;publication=1359-4338&amp;publicationDate=2011-06-21&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Champion, E., Bishop, I. &amp; Dave, B. The Palenque project: evaluating interaction in an online virtual archaeology site.
+                    <i>Virtual Reality</i> <b>16, </b>121–139 (2012). https://doi.org/10.1007/s10055-011-0191-0</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-011-0191-0.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2008-01-09">09 January 2008</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2009-08-19">19 August 2009</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2011-06-21">21 June 2011</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2012-06">June 2012</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-011-0191-0" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-011-0191-0</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Palenque</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Virtual heritage</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Cultural learning</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Mayan</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-011-0191-0.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=191;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="Fast continuous collision detection and handling for desktop virtual p"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="This paper presents an overview of our recent work on continuous collision detection methods and constraints handling for rigid polyhedral objects. We demonstrate that continuous collision..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/8/1.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="Fast continuous collision detection and handling for desktop virtual prototyping"/>
+
+    <meta name="dc.source" content="Virtual Reality 2004 8:1"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2004-08-03"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2004 Springer-Verlag London Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="This paper presents an overview of our recent work on continuous collision detection methods and constraints handling for rigid polyhedral objects. We demonstrate that continuous collision detection algorithms are practical in interactive dynamics simulation of complex polyhedral rigid bodies and show how continuous collision detection and efficient constraint-based dynamics algorithms allow us to perform various virtual prototyping tasks intuitively, precisely and robustly on commodity desktop computers. Especially, we present two applications of our system to actual industrial cases. We note that both tasks are performed with a simple 2D mouse on a high-end computer."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2004-08-03"/>
+
+    <meta name="prism.volume" content="8"/>
+
+    <meta name="prism.number" content="1"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="63"/>
+
+    <meta name="prism.endingPage" content="70"/>
+
+    <meta name="prism.copyright" content="2004 Springer-Verlag London Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-004-0138-9"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-004-0138-9"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-004-0138-9.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-004-0138-9"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="Fast continuous collision detection and handling for desktop virtual prototyping"/>
+
+    <meta name="citation_volume" content="8"/>
+
+    <meta name="citation_issue" content="1"/>
+
+    <meta name="citation_publication_date" content="2004/03"/>
+
+    <meta name="citation_online_date" content="2004/08/03"/>
+
+    <meta name="citation_firstpage" content="63"/>
+
+    <meta name="citation_lastpage" content="70"/>
+
+    <meta name="citation_article_type" content="Original Article"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-004-0138-9"/>
+
+    <meta name="DOI" content="10.1007/s10055-004-0138-9"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-004-0138-9"/>
+
+    <meta name="description" content="This paper presents an overview of our recent work on continuous collision detection methods and constraints handling for rigid polyhedral objects. We demo"/>
+
+    <meta name="dc.creator" content="Stephane Redon"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Nonlin Dyn; citation_title=Formulating dynamic multi-rigid-body contact problems with friction as solvable linear complementarity problems; citation_author=M Anitescu, FA Potra; citation_volume=14; citation_issue=3; citation_publication_date=1997; citation_pages=231-247; citation_doi=10.1023/A:1008292328909; citation_id=CR1"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comput Methods Appl Mech Eng; citation_title=Time-stepping for three-dimensional rigid body dynamics. Computational modeling of contact and friction; citation_author=M Anitescu, FA Potra, DE Stewart; citation_volume=177; citation_issue=3&#8211;4; citation_publication_date=1999; citation_pages=183-197; citation_doi=10.1016/S0045-7825(98)00380-6; citation_id=CR2"/>
+
+    <meta name="citation_reference" content="Baraff D (1994) Fast contact force computation for nonpenetrating rigid bodies. In: Proceedings of the 21st annual conference on computer graphics and interactive techniques (SIGGRAPH&#8217;94), Orlando, Florida, July 1994. ACM SIGGRAPH, Addison-Wesley, Reading, pp 23&#8211;34"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Comput Graph Appl; citation_title=Interactive simulation of solid rigid bodies; citation_author=D Baraff; citation_volume=15; citation_issue=3; citation_publication_date=1995; citation_pages=63-75; citation_doi=10.1109/38.376615; citation_id=CR4"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comput Methods Appl Mech Eng; citation_title=Stabilization of constraints and integrals of motion in dynamical systems; citation_author=J Baumgarte; citation_volume=1; citation_publication_date=1972; citation_pages=1-16; citation_id=CR5"/>
+
+    <meta name="citation_reference" content="Bradshaw G, O&#8217;Sullivan C (2002) Sphere-tree construction using dynamic medial axis approximation. In: Proceedings of ACM SIGGRAPH symposium on computer animation (SCA 2002), San Antonio, Texas, July 2002"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Trans Patt Anal Mach Intell; citation_title=Collision detection for moving polyhedra; citation_author=JF Canny; citation_volume=8; citation_issue=2; citation_publication_date=1986; citation_pages=200-209; citation_id=CR7"/>
+
+    <meta name="citation_reference" content="Gottschalk S, Lin MC, Manocha D (1996) OBB-Tree: a hierarchical structure for rapid interference detection. In: Proceedings of the 23rd annual conference on computer graphics and interactive techniques (SIGGRAPH&#8217;96), New Orleans, Louisiana, August 1996. ACM SIGGRAPH, Addison-Wesley, Reading"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Trans Visualization Comput Graph; citation_author=null Klosowski; citation_volume=4; citation_publication_date=1998; citation_pages=21; citation_doi=10.1109/2945.675649; citation_id=CR9"/>
+
+    <meta name="citation_reference" content="Hubbard PM (1995) Collision detection for interactive graphics applications. PhD thesis, Cornell University, Ithaca, New York"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comput Graph; citation_title=3D collision detection: a survey; citation_author=P Jimnez, F Thomas, C Torras; citation_volume=25; citation_issue=2; citation_publication_date=2001; citation_pages=269-285; citation_doi=10.1016/S0097-8493(00)00130-8; citation_id=CR11"/>
+
+    <meta name="citation_reference" content="McKenna M, Zeltzer D (1990) Dynamic simulation of autonomous legged locomotion. In: Proceedings of the 17th annual conference on computer graphics and interactive techniques (SIGGRAPH&#8217;90), Dallas, Texas, August 1990. ACM SIGGRAPH, Addison-Wesley, Reading 24:29&#8211;38"/>
+
+    <meta name="citation_reference" content="Lin M, Manocha D (2003) Collision and proximity queries. In: Goodman TNT, O&#8217;Rourke J (eds) Handbook of discrete and computational geometry: collision detection. CRC Press, Boca Raton, Florida"/>
+
+    <meta name="citation_reference" content="citation_journal_title=SIAM J Sci Stat Comput; citation_title=Numerical simulation of time-dependent contact friction problems in rigid body mechanics; citation_author=P Lotstedt; citation_volume=5; citation_issue=2; citation_publication_date=1984; citation_pages=370-393; citation_id=CR14"/>
+
+    <meta name="citation_reference" content="Milenkovic VJ, Schmidl H (2001) Optimization-based animation. In: Proceedings of the 25th international conference on computer graphics and interactive techniques (SIGGRAPH 2001), Los Angeles, California, August 2001. ACM SIGGRAPH, Addison-Wesley, Reading"/>
+
+    <meta name="citation_reference" content="Mirtich B, Canny J (1995) Impulse-based simulation of rigid bodies. In: Proceedings of the symposium on interactive 3D graphics (SI3D&#8217;95), Monterey, California, April 1995"/>
+
+    <meta name="citation_reference" content="Moore RE (1962) Interval analysis and automatic error analysis in digital computation. PhD thesis, Stanford University, California"/>
+
+    <meta name="citation_reference" content="Moore M, Wilhelms J (1988) Collision detection and response for computer animation. In: Proceedings of the 15th international conference on computer graphics and interactive techniques (SIGGRAPH 1988), Atlanta, Georgia, August 1988. ACM SIGGRAPH, Addison-Wesley, Reading, pp 289&#8211;298"/>
+
+    <meta name="citation_reference" content="Quinlan S (1994) Efficient distance computation between non-convex objects. In: Proceedings of the international conference on robotics and automation, San Diego, California, May 1994, pp 3324&#8211;3329"/>
+
+    <meta name="citation_reference" content="Redon S, Kheddar A, Coquillart S (2000) An algebraic solution to the problem of collision detection for rigid polyhedral objects. In: Proceedings of IEEE international conference of robotics and automation (ICRA 2000), San Francisco, April 2000"/>
+
+    <meta name="citation_reference" content="Redon S, Kheddar A, Coquillart S (2001) CONTACT: arbitrary in-between motions for continuous collision detection. In: Proceedings of the 10th IEEE international workshop on robot&#8211;human interactive communication (ROMAN 2001), Paris&#8211;Bordeaux, France, September 2001"/>
+
+    <meta name="citation_reference" content="Redon S, Kheddar A, Coquillart S (2002) Gauss&#8217; least constraint principle and rigid body simulations. In: Proceedings of IEEE international conference on robotics and automation, Washington DC, May 2002"/>
+
+    <meta name="citation_reference" content="Redon S, Kheddar A, Coquillart S (2002) Fast continuous collision detection between rigid bodies. In: Proceedings of the annual conference of the European association for computer graphics (Eurographics 2002), Saarbrucken, Germany, September 2002"/>
+
+    <meta name="citation_reference" content="Ruspini D, Khatib O (1997) Collision/contact models for the dynamic simulation of complex environments. In: Proceedings of the IEEE/RSJ international conference on intelligent robots and systems (IROS&#8217;97), Grenoble, France, September 1997"/>
+
+    <meta name="citation_reference" content="Ruspini DC, Kolarov K, Khatib O (1997) The haptic display of complex graphical environments. In: Proceedings of the 24th annual conference on computer graphics and interactive techniques (SIGGRAPH&#8217;97), Los Angeles, California, August 1997. ACM SIGGRAPH, Addison-Wesley, Reading, pp 345&#8211;52"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comput Graph; citation_title=Interval analysis for computer graphics; citation_author=J Snyder; citation_volume=26; citation_issue=2; citation_publication_date=1992; citation_pages=121-130; citation_id=CR26"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Int J Numerical Methods Eng; citation_title=An implicit time-stepping scheme for rigid body dynamics with inelastic collisions and coulomb friction; citation_author=DE Stewart, JC Trinkle; citation_volume=39; citation_publication_date=1996; citation_pages=2673-2691; citation_doi=10.1002/(SICI)1097-0207(19960815)39:15&lt;2673::AID-NME972&gt;3.0.CO;2-I; citation_id=CR27"/>
+
+    <meta name="citation_reference" content="citation_journal_title=J Graph Tools; citation_author=null Van; citation_volume=2; citation_publication_date=1997; citation_pages=1; citation_id=CR28"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Math Comput; citation_title=A nearest point algorithm for convex polyhedral cones and applications to positive linear approximations; citation_author=DR Wilhelmsen; citation_volume=30; citation_publication_date=1976; citation_pages=48-57; citation_id=CR29"/>
+
+    <meta name="citation_author" content="Stephane Redon"/>
+
+    <meta name="citation_author_email" content="redon@cs.unc.edu"/>
+
+    <meta name="citation_author_institution" content="i3D, INRIA, France"/>
+
+    <meta name="citation_author_institution" content="Department of Computer Science, University of North Carolina, Chapel Hill, USA"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-004-0138-9&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2004/03/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-004-0138-9"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="Fast continuous collision detection and handling for desktop virtual prototyping"/>
+        <meta property="og:description" content="This paper presents an overview of our recent work on continuous collision detection methods and constraints handling for rigid polyhedral objects. We demonstrate that continuous collision detection algorithms are practical in interactive dynamics simulation of complex polyhedral rigid bodies and show how continuous collision detection and efficient constraint-based dynamics algorithms allow us to perform various virtual prototyping tasks intuitively, precisely and robustly on commodity desktop computers. Especially, we present two applications of our system to actual industrial cases. We note that both tasks are performed with a simple 2D mouse on a high-end computer."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>Fast continuous collision detection and handling for desktop virtual prototyping | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-004-0138-9","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Continuous collision detection, Dynamics simulation, Virtual prototyping, Virtual reality","kwrd":["Continuous_collision_detection","Dynamics_simulation","Virtual_prototyping","Virtual_reality"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-004-0138-9","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-004-0138-9","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=138;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-004-0138-9">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            Fast continuous collision detection and handling for desktop virtual prototyping
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-004-0138-9.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-004-0138-9.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">Original Article</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2004-08-03" itemprop="datePublished">03 August 2004</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">Fast continuous collision detection and handling for desktop virtual prototyping</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Stephane-Redon" data-author-popup="auth-Stephane-Redon" data-corresp-id="c1">Stephane Redon<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="INRIA" /><meta itemprop="address" content="grid.5328.c, 0000000121863954, i3D, INRIA, France" /></span><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden" data-present-affiliation="true"><meta itemprop="name" content="University of North Carolina" /><meta itemprop="address" content="grid.10698.36, 0000000122483208, Department of Computer Science, University of North Carolina, 336 Sitterson Hall, CB # 3175, Chapel Hill, NC, 27599-3175, USA" /></span></sup><sup class="u-js-hide"> <a href="#nAff2">nAff2</a></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 8</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">63</span>–<span itemprop="pageEnd">70</span>(<span data-test="article-publication-year">2004</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">98 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">10 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-004-0138-9/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>This paper presents an overview of our recent work on continuous collision detection methods and constraints handling for rigid polyhedral objects. We demonstrate that continuous collision detection algorithms are practical in interactive dynamics simulation of complex polyhedral rigid bodies and show how continuous collision detection and efficient constraint-based dynamics algorithms allow us to perform various virtual prototyping tasks <i>intuitively</i>, <i>precisely</i> and <i>robustly</i> on commodity desktop computers. Especially, we present two applications of our system to actual industrial cases. We note that both tasks are performed with a simple 2D mouse on a high-end computer.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Introduction</h2><div class="c-article-section__content" id="Sec1-content"><p>Computer-aided design and manufacturing has been a very active research field for many years, which has contributed to the development of major product lifecycle management software.</p><p>One important aspect of product lifecycle management is <i>virtual prototyping</i>, which aims at designing manufactured products through <i>digital mock-ups</i>, in order to suppress the need for expensive real mock-ups. Because the analysis and simulation of a product through a digital mock-up must provide insight on the product <i>before</i> it is manufactured, virtual prototyping requires the ability to simulate the physical properties of the objects being designed.</p><p>This paper focuses on a fundamental requirement of virtual prototyping: the ability to <i>detect</i> and <i>handle</i> collisions between virtual objects. Typical applications of collision detection and handling in virtual prototyping include path-planning, tolerance verification and assembly/disassembly tasks conception.</p><p>Most well-known collision detection methods are <i>discrete</i>: they sample the objects’ trajectories at discrete times and report <i>interpenetrations</i> only (recent surveys include [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 11" title="Jiménez P, Thomas F, Torras C (2001) 3D collision detection: a survey. Comput Graph 25(2):269–285" href="/article/10.1007/s10055-004-0138-9#ref-CR11" id="ref-link-section-d60118e332">11</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 13" title="Lin M, Manocha D (2003) Collision and proximity queries. In: Goodman TNT, O’Rourke J (eds) Handbook of discrete and computational geometry: collision detection. CRC Press, Boca Raton, Florida" href="/article/10.1007/s10055-004-0138-9#ref-CR13" id="ref-link-section-d60118e335">13</a>]). As a result, they can miss collisions when the objects move rapidly or are small. Moreover, even when an interpenetration has been detected, it is often difficult to reposition the objects in a <i>contacting</i> position (i.e. with no interpenetration). One reason being that computing the penetration depth for general objects is a difficult problem, which does not take the objects’ motion into account. Relying on the penetration depth to reposition the objects might thus lead to the well-known <i>pop-through</i> effect, where an object enters an obstacle on one side and goes out of it on the other side, as can be seen in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-004-0138-9#Fig1">1</a>.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-004-0138-9/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0138-9/MediaObjects/s10055-004-0138-9fhb1.jpg?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0138-9/MediaObjects/s10055-004-0138-9fhb1.jpg" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p>
+<i>The pop-through effect</i>: allowing interpenetration between objects can lead to incoherences in the simulation. In this example, the object penetrates the obstacle at time <i>t</i>
+<sub>2</sub> and pops out from the wrong side of the obstacle, because of the smaller penetration in the exit direction</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-004-0138-9/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+<p>Even <i>backtracking methods</i>, which attempt to compute the first time of collision by recursively subdividing the time interval after an interpenetration has been detected, can fail when the object is not connected. Assume that the current time interval is [<i>t</i>
+<sub>
+                  <i>n</i>
+                </sub>, <i>t</i>
+<sub>
+<i>n</i>+1</sub>], and assume an interpenetration has been detected at time <i>t</i>
+<sub>
+<i>n</i>+1</sub>. Essentially, one time of first contact <i>t</i>
+<sub>
+                  <i>e</i>
+                </sub> is <i>estimated</i> in this interval (for example, by taking the midpoint of the time interval). Objects’ positions are then computed at this instant and an interpenetration detection is performed again. Depending on whether the objects interpenetrate or not, the algorithm decides that the first time of collision is in [<i>t</i>
+<sub>
+                  <i>n</i>
+                </sub>, <i>t</i>
+<sub>
+                  <i>e</i>
+                </sub>] or [<i>t</i>
+<sub>
+                  <i>e</i>
+                </sub>, <i> t</i>
+<sub>
+<i>n</i>+1</sub>], respectively, and loops on this new interval. The process stops when the amount of interpenetration is smaller than a predetermined threshold.</p><p>The computational cost of backtracking can be high when objects are complex or when they have interpenetrated deeply. Besides, since backtracking is only performed when an interpenetration has been detected, non-connected objects, or even non-convex objects, can enter a configuration from which they could not get out (e.g. two torii that would become interlocked).</p><p>Consequently, discrete collision detection methods cannot guarantee the existence of <i>complete</i> interpenetration-free paths, and can lead to inconsistent, unrealistic or even unreachable states in the virtual scene. This may be a problem for simulation and analysis of digital mock-ups when <i>provable</i> information is required. Especially, some ad hoc strategies sometimes have to be defined when using a discrete collision detection method in a virtual prototyping context in order to attempt to guarantee interpenetration-free paths. One of them consists in not moving the object when the next position involves a penetration. While this may be sufficient when few obstacles only surround the moving object, this may lead to an impossibility of manipulating the object when the environment is cluttered. Moreover, this method guarantees interpenetration-free <i>positions</i> only, as collisions can still be missed. Other strategies include using force fields and haptic interfaces to guarantee that the manipulated object remains far from the environment.</p><p>In the following, we present an overview of our recent work on <i>continuous</i> collision detection methods and constraints handling for rigid polyhedral objects. We demonstrate that continuous collision detection algorithms are possible in interactive dynamics simulation of rigid bodies and show how continuous collision detection and constraint-based dynamics algorithms allow us to perform various virtual prototyping tasks <i>intuitively</i>, <i>precisely</i> and <i>robustly</i> on commodity desktop computers. Especially, we present two applications of our system to actual industrial cases. We note that both tasks are performed with a simple 2D mouse.</p></div></div></section><section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">Continuous collision detection</h2><div class="c-article-section__content" id="Sec2-content"><h3 class="c-article__sub-heading" id="Sec3">Arbitrary in-between motion</h3><p>Despite their shortcomings, it is understandable why discrete collision methods have been developed and used to such a large extent in dynamics simulations. Besides their assumed lower cost, it must be noticed that, most of the time, <i>the actual objects’ motions are not known</i>. One important reason is that the differential equations governing the system’s dynamics are solved using discretised methods (e.g. Euler or Runge–Kutta schemes). Another reason is that, in an interactive application, the user interface (e.g. the mouse or a haptic device) sends the user’s actions to the system at discrete instants only. Other interfaces, such as tracking systems, which are not necessarily interactive, also provide discretised data only. For all these reasons, it is, most of the time, impossible to have a closed-form expression of the objects’ motions, and the objects’ positions, velocities and accelerations are available at discrete times only.</p><p>Because the actual motion of an object is not known, we have proposed to replace it with an <i>arbitrary in-between motion</i>, which interpolates successive available data to produce a continuous object motion [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 20" title="Redon S, Kheddar A, Coquillart S (2000) An algebraic solution to the problem of collision detection for rigid polyhedral objects. In: Proceedings of IEEE international conference of robotics and automation (ICRA 2000), San Francisco, April 2000" href="/article/10.1007/s10055-004-0138-9#ref-CR20" id="ref-link-section-d60118e510">20</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 23" title="Redon S, Kheddar A, Coquillart S (2002) Fast continuous collision detection between rigid bodies. In: Proceedings of the annual conference of the European association for computer graphics (Eurographics 2002), Saarbrucken, Germany, September 2002" href="/article/10.1007/s10055-004-0138-9#ref-CR23" id="ref-link-section-d60118e513">23</a>]. Thanks to the interpolation, the global aspect of the objects’ trajectories is conserved, while the <i>local</i> motion (the unknown one, between two available positions) is modified. The continuous object motion is used both for collision detection and object positioning when a collision has been detected, to ensure that the scene is always in a consistent state, without any interpenetration. The choice of the in-between motion depends on the application. It must be general enough to satisfy the various constraints imposed by the application (e.g. objects’ rigidity, ability to reach any configuration required in the application), but, at the same time, must be such that the continuous collision detection equations can be solved very efficiently. Any motion meeting these requirements can be <i>arbitrarily</i> chosen. Note that the interpolation order depends on the application as well. While it may be sufficient to interpolate positions only, some applications may require higher-order interpolations.</p><p>It can be argued that using an interpolating motion which has been arbitrarily chosen does not allow us to determine the exact collision times and positions corresponding to the actual objects’ motions. Obviously, using an arbitrary in-between motion only allows us to report those collisions which occur <i>when the objects move according to this arbitrary motion</i>. However, by using the same arbitrary motion to place the objects at the time of collision, the virtual scene is always in a consistent state, and <i>no interpenetration ever occurs</i>. Moreover, this method guarantees interpenetration-free <i>paths</i>, and not only consistent positions at discrete times.</p><h3 class="c-article__sub-heading" id="Sec4">Elementary tests</h3><p>Since we perform continuous collision detection tests, only three types of contact can occur between two general polyhedral objects <i>i</i> and <i>j</i>: </p><ul class="u-list-style-dash">
+                    <li>
+                      <p>An edge of <i>i</i> contacts an edge of <i>j</i>
+</p>
+                    </li>
+                    <li>
+                      <p>A face of <i>i</i> contacts a vertex of <i>j</i>
+</p>
+                    </li>
+                    <li>
+                      <p>A vertex of <i>i</i> contacts a face of <i>j</i>
+</p>
+                    </li>
+                  </ul><p> The last two contact types are equivalent and we thus have to perform two different types of <i>elementary tests</i>: edge/edge or vertex/face tests. The continuous collision detection equations for both tests are derived simply. Whatever the motions of objects <i>i</i> and <i>j</i>, a collision occurs between an edge <b>a</b>(<i>t</i>)<b>b</b>(<i>t</i>) of <i>i</i> and an edge <b>c</b>(<i>t</i>)<b>d</b>(<i>t</i>) of <i>j</i> if there exists a time <i>t</i> for which:</p><div id="Equ1" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ {\mathbf{a}}{\left( t \right)}{\mathbf{c}}{\left( t \right)} \cdot {\left( {{\mathbf{a}}{\left( t \right)}{\mathbf{b}}{\left( t \right)} \wedge {\mathbf{c}}{\left( t \right)}{\mathbf{d}}{\left( t \right)}} \right)} = 0 $$ </span></div><div class="c-article-equation__number">
+                    (1)
+                </div></div><p> which means that the lines containing the edges are colliding, and if, at that time, the <i>edges</i> (not only the lines) are intersecting. Similarly, a collision occurs between a vertex <b>a</b>(<i>t</i>) of <i>i</i> (respectively <i>j</i>) and a triangle <b>b</b>(<i>t</i>)<b>c</b>(<i>t</i>)<b>d</b>(<i>t</i>) of <i>j</i> (respectively <i>i</i>) if there is a time <i>t</i> for which: </p><div id="Equ2" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ {\mathbf{a}}{\left( t \right)}{\mathbf{b}}{\left( t \right)} \cdot {\left( {{\mathbf{b}}{\left( t \right)}{\mathbf{c}}{\left( t \right)} \wedge {\mathbf{b}}{\left( t \right)}{\mathbf{d}}{\left( t \right)}} \right)} = 0 $$ </span></div><div class="c-article-equation__number">
+                    (2)
+                </div></div><p> which means that the vertex is inside the plane containing the triangle, and if, at that time, the vertex is <i>inside the triangle</i>. Equations <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-004-0138-9#Equ1">1</a> and <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-004-0138-9#Equ2">2</a> are the ones which have to be solved efficiently when a specific interpolating motion is chosen. Our initial work has focussed on these equations to show that using a specific arbitrary in-between motion derived from a screw motion allowed us to reduce them to third-degree polynomial equations when one of the objects is static [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 20" title="Redon S, Kheddar A, Coquillart S (2000) An algebraic solution to the problem of collision detection for rigid polyhedral objects. In: Proceedings of IEEE international conference of robotics and automation (ICRA 2000), San Francisco, April 2000" href="/article/10.1007/s10055-004-0138-9#ref-CR20" id="ref-link-section-d60118e708">20</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 21" title="Redon S, Kheddar A, Coquillart S (2001) CONTACT: arbitrary in-between motions for continuous collision detection. In: Proceedings of the 10th IEEE international workshop on robot–human interactive communication (ROMAN 2001), Paris–Bordeaux, France, September 2001" href="/article/10.1007/s10055-004-0138-9#ref-CR21" id="ref-link-section-d60118e711">21</a>]. A method proposed by Canny [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 7" title="Canny JF (1986) Collision detection for moving polyhedra. IEEE Trans Patt Anal Mach Intell 8(2):200–209" href="/article/10.1007/s10055-004-0138-9#ref-CR7" id="ref-link-section-d60118e714">7</a>] obtains a similar result with a different motion, but its use of quaternions and a translation along a different axis than the one of rotation makes it more computationally expensive to determine the coefficients of the polynomials.</p><h3 class="c-article__sub-heading" id="Sec5">Bounding-volumes hierarchies</h3><p>In order to avoid performing all possible edge/edge or vertex/face tests for any object pair, many collision detection algorithms rely on <i>bounding-volume hierarchies</i>. Basically, if two objects are enclosed in bounding volumes which do not overlap, then it is known for sure that they do not collide. Hierarchies of bounding volumes are used to recursively perform such overlap tests which can conservatively cull away large parts of the objects when testing for a collision. Typical bounding volumes used for collision detection include spheres [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 6" title="Bradshaw G, O’Sullivan C (2002) Sphere-tree construction using dynamic medial axis approximation. In: Proceedings of ACM SIGGRAPH symposium on computer animation (SCA 2002), San Antonio, Texas, July 2002" href="/article/10.1007/s10055-004-0138-9#ref-CR6" id="ref-link-section-d60118e728">6</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 10" title="Hubbard PM (1995) Collision detection for interactive graphics applications. PhD thesis, Cornell University, Ithaca, New York" href="/article/10.1007/s10055-004-0138-9#ref-CR10" id="ref-link-section-d60118e731">10</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 19" title="Quinlan S (1994) Efficient distance computation between non-convex objects. In: Proceedings of the international conference on robotics and automation, San Diego, California, May 1994, pp 3324–3329" href="/article/10.1007/s10055-004-0138-9#ref-CR19" id="ref-link-section-d60118e734">19</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 25" title="Ruspini DC, Kolarov K, Khatib O (1997) The haptic display of complex graphical environments. In: Proceedings of the 24th annual conference on computer graphics and interactive techniques (SIGGRAPH’97), Los Angeles, California, August 1997. ACM SIGGRAPH, Addison-Wesley, Reading, pp 345–52" href="/article/10.1007/s10055-004-0138-9#ref-CR25" id="ref-link-section-d60118e737">25</a>], axis-aligned bounding boxes (AABBs) [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 28" title="Van den Bergen G (1997) Efficient collision detection of complex deformable models using AABB trees. J Graph Tools 2(4):1–14" href="/article/10.1007/s10055-004-0138-9#ref-CR28" id="ref-link-section-d60118e741">28</a>], oriented bounding boxes (OBBs) [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 8" title="Gottschalk S, Lin MC, Manocha D (1996) OBB-Tree: a hierarchical structure for rapid interference detection. In: Proceedings of the 23rd annual conference on computer graphics and interactive techniques (SIGGRAPH’96), New Orleans, Louisiana, August 1996. ACM SIGGRAPH, Addison-Wesley, Reading" href="/article/10.1007/s10055-004-0138-9#ref-CR8" id="ref-link-section-d60118e744">8</a>] and <i>k</i>-dops [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 9" title="Klosowski JT, Held M, Mitchell JSB, Sowizral H, Zikan K (1998) Efficient collision detection using bounding volume hierarchies of k-DOPs. IEEE Trans Visualization Comput Graph 4(1):21–36" href="/article/10.1007/s10055-004-0138-9#ref-CR9" id="ref-link-section-d60118e750">9</a>].</p><p>For <i>continuous</i> collision detection, it is necessary to perform continuous overlap tests between bounding volumes. We have proposed in [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 23" title="Redon S, Kheddar A, Coquillart S (2002) Fast continuous collision detection between rigid bodies. In: Proceedings of the annual conference of the European association for computer graphics (Eurographics 2002), Saarbrucken, Germany, September 2002" href="/article/10.1007/s10055-004-0138-9#ref-CR23" id="ref-link-section-d60118e759">23</a>] to extend the discrete OBB/OBB overlap test proposed by Gottschalk et al. [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 8" title="Gottschalk S, Lin MC, Manocha D (1996) OBB-Tree: a hierarchical structure for rapid interference detection. In: Proceedings of the 23rd annual conference on computer graphics and interactive techniques (SIGGRAPH’96), New Orleans, Louisiana, August 1996. ACM SIGGRAPH, Addison-Wesley, Reading" href="/article/10.1007/s10055-004-0138-9#ref-CR8" id="ref-link-section-d60118e762">8</a>] to the continuous domain by using <i>interval arithmetic</i> [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 17" title="Moore RE (1962) Interval analysis and automatic error analysis in digital computation. PhD thesis, Stanford University, California" href="/article/10.1007/s10055-004-0138-9#ref-CR17" id="ref-link-section-d60118e768">17</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 26" title="Snyder J (1992) Interval analysis for computer graphics. Comput Graph 26(2):121–130" href="/article/10.1007/s10055-004-0138-9#ref-CR26" id="ref-link-section-d60118e772">26</a>]. The static test relies upon the separating axis theorem. Let us assume that the first OBB is described by three axes <b>e</b>
+<sub>1</sub>, <b>e</b>
+<sub>2</sub> and <b>e</b>
+<sub>3</sub>, a centre <b>T</b>
+<sub>
+                    <i>A</i>
+                  </sub>, and its half-sizes along its axes <i>a</i>
+<sub>1</sub>, <i>a</i>
+<sub>2</sub> and <i>a</i>
+<sub>3</sub>. In the same way, the second OBB is described by its axes <b>f</b>
+<sub>1</sub>, <b>f</b>
+<sub>2</sub> and <b>f</b>
+<sub>3</sub>, its centre <b>T</b>
+<sub>
+                    <i>B</i>
+                  </sub>, and its half-sizes along its axes <i>b</i>
+<sub>1</sub>, <i>b</i>
+<sub>2</sub> and <i>b</i>
+<sub>3</sub>. The separating axis theorem states that two static OBBs overlap if and only if all of the fifteen separating axis tests fail. A separating test is simple: the axis <b>a</b> separates the OBBs if and only if: </p><div id="Equ3" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ {\left| {{\mathbf{a}} \cdot {\mathbf{T}}_{A} {\mathbf{T}}_{B} } \right|} &gt; {\sum\limits_{i = 1}^3 {a_{i} {\left| {{\mathbf{a}} \cdot {\mathbf{e}}_{i} } \right|}} } + {\sum\limits_{i = 1}^3 {b_{i} {\left| {{\mathbf{a}} \cdot {\mathbf{f}}_{i} } \right|}} } $$ </span></div><div class="c-article-equation__number">
+                    (3)
+                </div></div><p> The sufficient set of 15 axes is: </p><div id="Equ4" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ {\left\{ {{\mathbf{e}}_{i} ,{\mathbf{f}}_{i} ,{\mathbf{e}}_{i} \wedge {\mathbf{f}}_{j} ,1 \leqslant i \leqslant 3,1 \leqslant j \leqslant 3} \right\}} $$ </span></div><div class="c-article-equation__number">
+                    (4)
+                </div></div><p> Since each member of the inequality in Eq. <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-004-0138-9#Equ3">3</a> is a function of time depending on the specific arbitrary in-between motion chosen for the application, interval arithmetic can be used to bound both members very efficiently over a time interval [<i>t</i>
+<sub>
+                    <i>n</i>
+                  </sub>, <i>t</i>
+<sub>
+<i>n</i>+1</sub>]. When the lower bound on the left member is larger than the upper bound on the right member, the axis <b>a</b> separates the boxes during the whole time interval [<i>t</i>
+<sub>
+                    <i>n</i>
+                  </sub>, <i>t</i>
+<sub>
+<i>n</i>+1</sub>], and the pair of boxes can, thus, be discarded. Note that basing the continuous overlap test upon bounds computed over a whole time interval produces conservative results only: two moving boxes can be separated over [<i>t</i>
+<sub>
+                    <i>n</i>
+                  </sub>, <i>t</i>
+<sub>
+<i>n</i>+1</sub>] even when there does not exist <i>one</i> axis which separates them on the whole time interval. Because of this, we have proposed a heuristic based upon the boxes’ velocities to determine when it may be useful to subdivide the time interval. This allows us to cull away more pairs of boxes by a better detection of these situations where more than one axis is required to separate the boxes over the whole time interval.</p></div></div></section><section aria-labelledby="Sec6"><div class="c-article-section" id="Sec6-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec6">Handling constraints</h2><div class="c-article-section__content" id="Sec6-content"><p>Closely related to the collision detection problem is the one of handling the geometrical constraints imposed by the collisions that have been detected. In a rigid body dynamics simulation, two different problems have to be solved:</p>
+                <ul class="u-list-style-dash">
+                  <li>
+                    <p>
+<i>Collision response problem</i>: whenever a new collision occurs, the simulator must determine the objects’ <i>post-impact velocities</i> from their pre-impact velocities and their dynamic properties</p>
+                  </li>
+                  <li>
+                    <p>
+<i>Constrained motion problem</i>: when the collision response problem has been solved, the simulator has to compute the objects’ <i>constrained accelerations</i> from their unconstrained accelerations (the ones the objects would have if there weren’t any constraints acting on them) and the geometrical constraints imposed by the transient contacts (those for which the relative velocity is zero, i.e. those which have a non-zero duration)</p>
+                  </li>
+                </ul>
+              <p>Numerous approaches have been suggested to solve both problems, and traditional algorithms include penalty methods [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 12" title="McKenna M, Zeltzer D (1990) Dynamic simulation of autonomous legged locomotion. In: Proceedings of the 17th annual conference on computer graphics and interactive techniques (SIGGRAPH’90), Dallas, Texas, August 1990. ACM SIGGRAPH, Addison-Wesley, Reading 24:29–38" href="/article/10.1007/s10055-004-0138-9#ref-CR12" id="ref-link-section-d60118e989">12</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 18" title="Moore M, Wilhelms J (1988) Collision detection and response for computer animation. In: Proceedings of the 15th international conference on computer graphics and interactive techniques (SIGGRAPH 1988), Atlanta, Georgia, August 1988. ACM SIGGRAPH, Addison-Wesley, Reading, pp 289–298" href="/article/10.1007/s10055-004-0138-9#ref-CR18" id="ref-link-section-d60118e992">18</a>], impulse-based methods [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 16" title="Mirtich B, Canny J (1995) Impulse-based simulation of rigid bodies. In: Proceedings of the symposium on interactive 3D graphics (SI3D’95), Monterey, California, April 1995" href="/article/10.1007/s10055-004-0138-9#ref-CR16" id="ref-link-section-d60118e995">16</a>] and constraint-based methods [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1" title="Anitescu M, Potra FA (1997) Formulating dynamic multi-rigid-body contact problems with friction as solvable linear complementarity problems. Nonlin Dyn 14(3):231–247" href="/article/10.1007/s10055-004-0138-9#ref-CR1" id="ref-link-section-d60118e998">1</a>–<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 4" title="Baraff D (1995) Interactive simulation of solid rigid bodies. IEEE Comput Graph Appl 15(3):63–75" href="/article/10.1007/s10055-004-0138-9#ref-CR4" id="ref-link-section-d60118e1001">4</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 14" title="Lötstedt P (1984) Numerical simulation of time-dependent contact friction problems in rigid body mechanics. SIAM J Sci Stat Comput 5(2):370–393" href="/article/10.1007/s10055-004-0138-9#ref-CR14" id="ref-link-section-d60118e1005">14</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 15" title="Milenkovic VJ, Schmidl H (2001) Optimization-based animation. In: Proceedings of the 25th international conference on computer graphics and interactive techniques (SIGGRAPH 2001), Los Angeles, California, August 2001. ACM SIGGRAPH, Addison-Wesley, Reading" href="/article/10.1007/s10055-004-0138-9#ref-CR15" id="ref-link-section-d60118e1008">15</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 27" title="Stewart DE, Trinkle JC (1996) An implicit time-stepping scheme for rigid body dynamics with inelastic collisions and coulomb friction. Int J Numerical Methods Eng 39:2673–2691" href="/article/10.1007/s10055-004-0138-9#ref-CR27" id="ref-link-section-d60118e1011">27</a>]. Penalty methods are generally used when no precise contact information is available, as they compute the contact forces from the amount of interpenetration between contacting objects. Continuous collision detection naturally provides all the necessary contact information: the contact position, the contacting elements and the contact normal. Consequently, impulse-based or constraint-based methods are a natural choice. We have opted for constraint-based methods because they can handle simultaneous constraints.</p><p>Most constraint-based methods formulate both dynamics problems as a linear complementarity problem (LCP) in the <i>contact-space</i>, which relates contact forces and accelerations. For example, in the frictionless constrained motion problem, the LCP expresses the relation between the normal contact forces and the relative normal accelerations at the contact points. If <b>f</b> and <b>a</b>
+<sub>
+                  <i>cp</i>
+                </sub> are two vectors in <span class="mathjax-tex">\( \mathbb{R}^{m} \)</span> describing the normal contact forces (in a frictionless system, the contact forces are normal to the contact plane) and the normal relative accelerations to the <i>m</i> contact points, then there exists an <i>m</i>×<i>m</i> matrix <b>A</b> and a vector <b>b</b> in <span class="mathjax-tex">\( \mathbb{R}^{m} \)</span> such that: </p><div id="Equ5" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ \left\{ {\begin{array}{*{20}c} {{\mathbf{a}}_{{cp}} = {\mathbf{Af}} + {\mathbf{b}}} \\ {{\mathbf{a}}_{{cp}} \geqslant 0} \\ {{\mathbf{f}} \geqslant 0} \\ {{\mathbf{a}}^{{\text{T}}}_{{cp}} {\mathbf{f}} = 0} \\ \end{array} } \right. $$ </span></div><div class="c-article-equation__number">
+                    (5)
+                </div></div>
+<p>The complementarity relation <b>a</b>
+<span class="c-stack">
+                  <sup>T</sup><sub>
+                    <i>cp</i>
+                  </sub>
+                  
+                </span>
+<b>f</b>=0 expresses the fact that, for each contact point, either the relative normal acceleration is non-zero (the contact breaks) and then the normal contact force is zero, or the contact force is non-zero (objects remain in contact) and, therefore, the relative normal acceleration is zero.</p><p>The matrix <b>A</b> is traditionally computed from the constraints created by the contact points [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 3" title="Baraff D (1994) Fast contact force computation for nonpenetrating rigid bodies. In: Proceedings of the 21st annual conference on computer graphics and interactive techniques (SIGGRAPH’94), Orlando, Florida, July 1994. ACM SIGGRAPH, Addison-Wesley, Reading, pp 23–34" href="/article/10.1007/s10055-004-0138-9#ref-CR3" id="ref-link-section-d60118e1105">3</a>, <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 24" title="Ruspini D, Khatib O (1997) Collision/contact models for the dynamic simulation of complex environments. In: Proceedings of the IEEE/RSJ international conference on intelligent robots and systems (IROS’97), Grenoble, France, September 1997" href="/article/10.1007/s10055-004-0138-9#ref-CR24" id="ref-link-section-d60118e1108">24</a>]. Let <i>i</i> and <i>j</i> denote two contacting objects. Then, <i>I</i> is a contact point, <b>n</b> is the contact normal directed from <i>j</i> to <i>i</i>. Depending on the object it belongs to, <i>I</i> is denoted <i>I</i>
+<sub>
+                  <i>i</i>
+                </sub> or <i>I</i>
+<sub>
+                  <i>j</i>
+                </sub>.</p><p>Note that this distinction is necessary to establish the constraint equations. Although these two points are identical in theory, it is not the case in practice, for example, because of the finite precision of the computations. Moreover, we will see in the next section that the method we use to combine the continuous collision detection algorithms to the dynamics algorithms requires us to maintain a distinction between <i>I</i>
+<sub>
+                  <i>i</i>
+                </sub> and <i>I</i>
+<sub>
+                  <i>j</i>
+                </sub> which become, in practice, the closest points belonging to the polyhedral primitives. In a vertex/face case, for example, <i>I</i>
+<sub>
+                  <i>i</i>
+                </sub> is the vertex and <i>I</i>
+<sub>
+                  <i>j</i>
+                </sub> is the point in the face which is the closest to <i>I</i>
+<sub>
+                  <i>i</i>
+                </sub>.</p><p>With this notation, the <i>non-penetration constraint</i> on the relative normal acceleration of <i>I</i> is [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 3" title="Baraff D (1994) Fast contact force computation for nonpenetrating rigid bodies. In: Proceedings of the 21st annual conference on computer graphics and interactive techniques (SIGGRAPH’94), Orlando, Florida, July 1994. ACM SIGGRAPH, Addison-Wesley, Reading, pp 23–34" href="/article/10.1007/s10055-004-0138-9#ref-CR3" id="ref-link-section-d60118e1210">3</a>]: </p><div id="Equ6" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ {\left( {{\mathbf{a}}_{i} {\left( {I_{i} } \right)} - {\mathbf{a}}_{j} {\left( {I_{j} } \right)}} \right)} \cdot {\mathbf{n}} + 2{\left( {{\mathbf{v}}_{i} {\left( {I_{i} } \right)} - {\mathbf{v}}_{j} {\left( {I_{j} } \right)}} \right)} \cdot \frac{{{\text{d}}{\mathbf{n}}}} {{{\text{d}}t}} \geqslant 0 $$ </span></div><div class="c-article-equation__number">
+                    (6)
+                </div></div><p> Similarly, a <i>collision response constraint</i> on the relative normal velocity can be derived when a collision occurs, to solve the collision response problem: </p><div id="Equ7" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ {\left( {{\mathbf{v}}^{ + }_{i} {\left( {I_{i} } \right)} - {\mathbf{v}}^{ + }_{j} {\left( {I_{j} } \right)}} \right)} \cdot {\mathbf{n}} \geqslant - e{\left( {{\mathbf{v}}^{ - }_{i} {\left( {I_{i} } \right)} - {\mathbf{v}}^{ - }_{j} {\left( {I_{j} } \right)}} \right)} \cdot {\mathbf{n}} $$ </span></div><div class="c-article-equation__number">
+                    (7)
+                </div></div><p> where <i>e</i> is the restitution coefficient at the contact point.</p><p>We have shown in [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 22" title="Redon S, Kheddar A, Coquillart S (2002) Gauss’ least constraint principle and rigid body simulations. In: Proceedings of IEEE international conference on robotics and automation, Washington DC, May 2002" href="/article/10.1007/s10055-004-0138-9#ref-CR22" id="ref-link-section-d60118e1245">22</a>] that for frictionless systems Gauss’ least constraint principle provides a <i>motion-space</i> formulation of both dynamics problems, through a projection problem which relates the object’s accelerations (or velocities) and the contact forces (or impulses). Although the two formulations are mathematically equivalent, the motion-space formulation presents several algorithmic benefits: it is better conditioned, always sparse, requires less memory and allows us to avoid some redundant computations performed by an algorithm operating in the contact-space. An experimental comparison has suggested that an algorithm operating in the motion-space takes advantage of sparsity to perform increasingly better than a contact-space algorithm as the average number of contact points per object increases. As a result, our system uses a motion-space algorithm based upon Wilhelmsen’s projection algorithm [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 29" title="Wilhelmsen DR (1976) A nearest point algorithm for convex polyhedral cones and applications to positive linear approximations. Math Comput 30:48–57" href="/article/10.1007/s10055-004-0138-9#ref-CR29" id="ref-link-section-d60118e1251">29</a>].</p></div></div></section><section aria-labelledby="Sec7"><div class="c-article-section" id="Sec7-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec7">Combining continuous collision detection and response</h2><div class="c-article-section__content" id="Sec7-content"><p>Because we use an arbitrary in-between motion to interpolate successive objects’ positions, we need to permanently maintain a small <i>security distance</i> between contacting objects. Most of the time, indeed, the arbitrarily chosen in-between motion does not satisfy the dynamics constraints during the successive time intervals.</p><p>Consider, for example, the case of a rectangular box in transient contact with a plane surface, as visible in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-004-0138-9#Fig2">2</a>a. In this example, the contact point <i>I</i> should be permanently on the contact plane <span class="mathjax-tex">\( \mathcal{P} \)</span> during the considered time interval [<i>t</i>
+<sub>
+                  <i>n</i>
+                </sub>, <i>t</i>
+<sub>
+<i>n</i>+1</sub>]. However, the real object motion during this time interval is replaced by an arbitrarily fixed motion which, although it preserves the object’s positions at times <i>t</i>
+<sub>
+                  <i>n</i>
+                </sub> and <i>t</i>
+<sub>
+<i>n</i>+1</sub>, does not guarantee that the point <i>I</i> remains on the plane <span class="mathjax-tex">\( \mathcal{P} \)</span> during the time interval. Depending on the initial and final positions of the box, which impose the in-between motion used for the collision detection, this point <i>I</i> might indeed violate the non-penetration constraint <i>immediately after</i>
+<i> t</i>
+<sub>
+                  <i>n</i>
+                </sub>, leading to the detection of a collision at time <i>t</i>
+<sub>
+                  <i>n</i>
+                </sub>. In order to avoid that the simulator remains blocked at time <i>t</i>
+<sub>
+                  <i>n</i>
+                </sub> , or, generally, that it detects these collisions artificially created by the use of an arbitrary in-between motion too often, we introduce a security distance <span class="mathjax-tex">\( \varepsilon _{s} \)</span> between contacting objects, as shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-004-0138-9#Fig2">2</a>b. As a result, we consider that each contact point determined by the continuous collision detection module is characterized by two points <i>I</i>
+<sub>
+                  <i>i</i>
+                </sub> and <i>I</i>
+<sub>
+                  <i>j</i>
+                </sub>, which are the closest points on the polyhedral primitives. These closest points are easily updated whenever the geometrical constraints are modified, as long as a contact is considered to be active.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-004-0138-9/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0138-9/MediaObjects/s10055-004-0138-9fhb2.jpg?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0138-9/MediaObjects/s10055-004-0138-9fhb2.jpg" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p>
+<b>a</b> The arbitrary in-between motion used for the collision detection does not satisfy the non-penetration constraint during the time interval [<i>t</i>
+<sub>
+                          <i>n</i>
+                        </sub>, <i>t</i>
+<sub>
+<i>n</i>+1</sub>]. <b>b</b> Contacting objects are maintained slightly distant from each other</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-004-0138-9/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+<p>In order to maintain the security distance between contacting objects over time, the constraints imposed to accelerations or velocities are modified slightly. For example, <i>when the local distance between the two objects</i> (i.e. <i>the one separating the two points</i>
+<i> I</i>
+<sub>
+                  <i>i</i>
+                </sub>
+<i> and</i>
+<i> I</i>
+<sub>
+                  <i>j</i>
+                </sub>
+<i> which characterize the contact point</i>) <i>is smaller than the security distance</i>
+<span class="mathjax-tex">\( \varepsilon _{s} \)</span>, the non-penetration constraint in Eq. <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-004-0138-9#Equ6">6</a> becomes: </p><div id="Equ8" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ {\left( {{\mathbf{a}}_{i} {\left( {I_{i} } \right)} - {\mathbf{a}}_{j} {\left( {I_{j} } \right)}} \right)} \cdot {\mathbf{n}} + 2{\left( {{\mathbf{v}}_{i} {\left( {I_{i} } \right)} - {\mathbf{v}}_{j} {\left( {I_{j} } \right)}} \right)} \cdot \frac{{{\text{d}}{\mathbf{n}}}} {{{\text{d}}t}} \geqslant K + k{\left( {\varepsilon _{s} - d} \right)} $$ </span></div><div class="c-article-equation__number">
+                    (8)
+                </div></div><p> where <i>k</i> is a coupling constant and <i>d</i> is the distance between the points <i>I</i>
+<sub>
+                  <i>i</i>
+                </sub> and <i>I</i>
+<sub>
+                  <i>j</i>
+                </sub>.</p><p>Two other values, <span class="mathjax-tex">\( \varepsilon _{b} \)</span> and <span class="mathjax-tex">\( \varepsilon _{r} \)</span>, are used in combination with the security distance <span class="mathjax-tex">\( \varepsilon _{s} \)</span>. The first one, <span class="mathjax-tex">\( \varepsilon _{b} \)</span>, larger than <span class="mathjax-tex">\( \varepsilon _{s} \)</span>, is the value beyond which the simulator declares that the contact between the two objects is <i>broken</i> (thus removing the need to update <i>I</i>
+<sub>
+                  <i>i</i>
+                </sub> and <i>I</i>
+<sub>
+                  <i>j</i>
+                </sub>). The second, <span class="mathjax-tex">\( \varepsilon _{r} \)</span>, smaller than <span class="mathjax-tex">\( \varepsilon _{s} \)</span>, is an alert value below which the simulator stops the simulation time and enters a <i>repositioning cycle</i>, because it did not manage to maintain the objects at a sufficient distance from each other during the simulation. This repositioning cycle, similar to the one introduced by Baraff [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 4" title="Baraff D (1995) Interactive simulation of solid rigid bodies. IEEE Comput Graph Appl 15(3):63–75" href="/article/10.1007/s10055-004-0138-9#ref-CR4" id="ref-link-section-d60118e1620">4</a>], is performed between two successive frames by computing the smallest objects’ displacements which satisfy the <i>repositioning constraints</i>. The repositioning constraints are similar to collision response constraints in Eq. <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-004-0138-9#Equ7">7</a>, which become: </p><div id="Equ9" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ {\left( {{\mathbf{v}}_{i} {\left( {I_{i} } \right)} - {\mathbf{v}}_{j} {\left( {I_{j} } \right)}} \right)} \cdot {\mathbf{n}} \geqslant \varepsilon _{s} - d $$ </span></div><div class="c-article-equation__number">
+                    (9)
+                </div></div><p> Once these velocities are computed, they are used to move objects (while detecting collisions). As long as there exists a contact for which the local distance is below the repositioning distance <span class="mathjax-tex">\( \varepsilon _{r} \)</span>, a new repositioning step is done. We have observed that repositioning cycles are generally very short, nearly imperceptible by the user, and do not hinder the progression of the interactive simulation.</p><p>Let us note that the repositioning problem is very similar to the collision response problem, since it consists in computing the smallest possible velocities, in the velocity-space, among those which satisfy the repositioning constraints.</p><p>In our implementation, objects are scaled so that the total width of the environment is 50 units, and the coupling parameters are <span class="mathjax-tex">\( \varepsilon _{r} = 0.0044,\;\varepsilon _{s} = 0.01\;{\text{and}}\;\varepsilon _{b} = 0.023. \)</span> As a consequence, the security distance and the repositioning effects are not perceived by the user. Let us note that, for environments including mobile objects of very disparate sizes, it is possible to adapt these coupling values to the manipulated object during the interaction, in order to avoid that the size of the object manipulated be of the same order as the security distance. For the databases we tested, however, this was not necessary.</p><p>Let us note finally that repositioning objects does not correspond to a physical phenomenon, and can add energy in the system. In order to avoid this, it may be useful to slightly decrease the objects’ velocities after a repositioning step. Note, however, that this problem does not occur in a first-order (quasi-static) simulation, since objects’ velocities are zeroed at each frame.</p><p>More generally, the repositioning problem is similar to a constraint stabilisation problem, for which a classic solution is the one proposed by Baumgarte [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 5" title="Baumgarte J (1972) Stabilization of constraints and integrals of motion in dynamical systems. Comput Methods Appl Mech Eng 1:1–16" href="/article/10.1007/s10055-004-0138-9#ref-CR5" id="ref-link-section-d60118e1670">5</a>]. In this case, however, constraints are unilateral ones. Moreover, the more difficult problem of unilateral constraint stabilisation is greatly facilitated by the continuous collision detection.</p></div></div></section><section aria-labelledby="Sec8"><div class="c-article-section" id="Sec8-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec8">Results</h2><div class="c-article-section__content" id="Sec8-content"><p>The algorithms reported here have been integrated to form a portable C++ library, CONTACT Toolkit, which has been successfully tested in Windows and Unix environments. The resulting simulator is able to perform interactive simulations on polyhedral objects which contain up to a few hundreds of thousands of triangles on a 2 GHz Pentium PC with 256 MB of memory and an NVIDIA GeForce4 MX graphics card.</p><p>Here, we present two applications of our system to actual industrial databases provided by Renault. We note that, for many virtual prototyping tasks, it is preferable to perform first-order (quasi-static) simulations, where the objects have no acceleration, as the absence of inertia generally facilitates the manipulation of the objects. This is done by zeroing the objects’ velocities at each time step and using collision response constraints only [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 22" title="Redon S, Kheddar A, Coquillart S (2002) Gauss’ least constraint principle and rigid body simulations. In: Proceedings of IEEE international conference on robotics and automation, Washington DC, May 2002" href="/article/10.1007/s10055-004-0138-9#ref-CR22" id="ref-link-section-d60118e1683">22</a>].</p><p>The first application involves positioning a car door (11,000 triangles) into the corresponding car skeleton (130,000 triangles). Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-004-0138-9#Fig3">3</a> shows a typical positioning sequence. Our tests demonstrate that a user can easily position the door with a few mouse motions. The interaction is greatly facilitated by the constraint-based algorithms. The continuous collision algorithms allow the user to precisely position the door, as contacts are detected with the exact objects’ geometry, without ever letting them interpenetrate.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-004-0138-9/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0138-9/MediaObjects/s10055-004-0138-9fhb3.jpg?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0138-9/MediaObjects/s10055-004-0138-9fhb3.jpg" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p>
+<i>Interactive positioning of a car door (11,000 triangles) on a car skeleton (130,000 triangles)</i>. Continuous collision detection algorithms and constraint-based dynamics algorithms allow the car door to be placed precisely and interactively, without any interpenetration ever. 3D models courtesy of Renault</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-004-0138-9/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+<p>The second application consists in removing a window motor from a car door (about 20,000 triangles in the scene). Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-004-0138-9#Fig4">4</a> shows a typical interaction sequence. The contact points occurring during the interaction are materialised by small light-coloured spheres. Again, this application demonstrates the quality of the interaction provided by continuous collision detection algorithms and constraint-based dynamics algorithms. The window motor is very easily removed from the car door with a few mouse motions.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-004-0138-9/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0138-9/MediaObjects/s10055-004-0138-9fhb4.jpg?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-004-0138-9/MediaObjects/s10055-004-0138-9fhb4.jpg" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p>
+<i>Determining the existence of a path to remove the window motor from the car door</i>. The continuous collision detection algorithms guarantee the existence of an interpenetration-free path to remove the motor while interactively and intuitively manipulating the motor thanks to efficient constraint-based dynamics algorithms. 3D models courtesy of Renault</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-004-0138-9/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+<p>We note that, in both cases, the interactive simulator <i>guarantees</i> complete interpenetration-free paths, and that both tasks are performed with a simple mouse on a high-end PC.</p><p>Our tests also show that a user does not notice the fact that an arbitrary in-between motion is employed to replace the actual objects’ motions between successive frames.</p></div></div></section><section aria-labelledby="Sec9"><div class="c-article-section" id="Sec9-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec9">Conclusion and future work</h2><div class="c-article-section__content" id="Sec9-content"><p>This paper has presented an overview of our recent work on continuous collision detection and constraint handling methods for polyhedral rigid bodies. We have discussed various shortcomings of discrete collision detection methods, especially in the context of virtual prototyping, and have described a continuous collision detection method based upon <i>arbitrary in-between motions</i>. We have shown how this method can be coupled to constraint-based dynamics algorithms. Our tests show that the simulator based upon the algorithms reported in this paper can be used for interactive dynamics simulations of complex polyhedral rigid bodies. Moreover, we have presented the applicability of our algorithms to actual industrial cases provided by Renault, which seem to demonstrate that continuous collision detection algorithms combined with efficient constraint-based dynamics algorithms can be a powerful tool for virtual prototyping tasks.</p><p>Future work include in-depth tests of our simulator. The CONTACT Toolkit library is currently being tested at Renault, PSA Peugeot Citroën and Airbus-EADS. This should help to evaluate more precisely the validity and the scalability of the algorithms reported in this paper.</p><p>Also, some manufacturing tasks <i>require</i> a haptic feedback (training applications for example). We would like to study the benefits of continuous collision detection algorithms in this context.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="M. Anitescu, FA. Potra, " /><meta itemprop="datePublished" content="1997" /><meta itemprop="headline" content="Anitescu M, Potra FA (1997) Formulating dynamic multi-rigid-body contact problems with friction as solvable li" /><span class="c-article-references__counter">1.</span><p class="c-article-references__text" id="ref-CR1">Anitescu M, Potra FA (1997) Formulating dynamic multi-rigid-body contact problems with friction as solvable linear complementarity problems. Nonlin Dyn 14(3):231–247</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1023%2FA%3A1008292328909" aria-label="View reference 1">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" href="http://www.ams.org/mathscinet-getitem?mr=98d%3A70006" aria-label="View reference 1 on MathSciNet">MathSciNet</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" href="http://www.emis.de/MATH-item?0899.70005" aria-label="View reference 1 on MATH">MATH</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 1 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Formulating%20dynamic%20multi-rigid-body%20contact%20problems%20with%20friction%20as%20solvable%20linear%20complementarity%20problems&amp;journal=Nonlin%20Dyn&amp;volume=14&amp;issue=3&amp;pages=231-247&amp;publication_year=1997&amp;author=Anitescu%2CM&amp;author=Potra%2CFA">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="M. Anitescu, FA. Potra, DE. Stewart, " /><meta itemprop="datePublished" content="1999" /><meta itemprop="headline" content="Anitescu M, Potra FA, Stewart DE (1999) Time-stepping for three-dimensional rigid body dynamics. Computational" /><span class="c-article-references__counter">2.</span><p class="c-article-references__text" id="ref-CR2">Anitescu M, Potra FA, Stewart DE (1999) Time-stepping for three-dimensional rigid body dynamics. Computational modeling of contact and friction. Comput Methods Appl Mech Eng 177(3–4):183–197</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1016%2FS0045-7825%2898%2900380-6" aria-label="View reference 2">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" href="http://www.ams.org/mathscinet-getitem?mr=2000f%3A70006" aria-label="View reference 2 on MathSciNet">MathSciNet</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" href="http://www.emis.de/MATH-item?0967.70003" aria-label="View reference 2 on MATH">MATH</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 2 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Time-stepping%20for%20three-dimensional%20rigid%20body%20dynamics.%20Computational%20modeling%20of%20contact%20and%20friction&amp;journal=Comput%20Methods%20Appl%20Mech%20Eng&amp;volume=177&amp;issue=3%E2%80%934&amp;pages=183-197&amp;publication_year=1999&amp;author=Anitescu%2CM&amp;author=Potra%2CFA&amp;author=Stewart%2CDE">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Baraff D (1994) Fast contact force computation for nonpenetrating rigid bodies. In: Proceedings of the 21st an" /><span class="c-article-references__counter">3.</span><p class="c-article-references__text" id="ref-CR3">Baraff D (1994) Fast contact force computation for nonpenetrating rigid bodies. In: Proceedings of the 21st annual conference on computer graphics and interactive techniques (SIGGRAPH’94), Orlando, Florida, July 1994. ACM SIGGRAPH, Addison-Wesley, Reading, pp 23–34</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="D. Baraff, " /><meta itemprop="datePublished" content="1995" /><meta itemprop="headline" content="Baraff D (1995) Interactive simulation of solid rigid bodies. IEEE Comput Graph Appl 15(3):63–75" /><span class="c-article-references__counter">4.</span><p class="c-article-references__text" id="ref-CR4">Baraff D (1995) Interactive simulation of solid rigid bodies. IEEE Comput Graph Appl 15(3):63–75</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2F38.376615" aria-label="View reference 4">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 4 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Interactive%20simulation%20of%20solid%20rigid%20bodies&amp;journal=IEEE%20Comput%20Graph%20Appl&amp;volume=15&amp;issue=3&amp;pages=63-75&amp;publication_year=1995&amp;author=Baraff%2CD">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="J. Baumgarte, " /><meta itemprop="datePublished" content="1972" /><meta itemprop="headline" content="Baumgarte J (1972) Stabilization of constraints and integrals of motion in dynamical systems. Comput Methods A" /><span class="c-article-references__counter">5.</span><p class="c-article-references__text" id="ref-CR5">Baumgarte J (1972) Stabilization of constraints and integrals of motion in dynamical systems. Comput Methods Appl Mech Eng 1:1–16</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="http://www.emis.de/MATH-item?0571.65071" aria-label="View reference 5 on MATH">MATH</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 5 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Stabilization%20of%20constraints%20and%20integrals%20of%20motion%20in%20dynamical%20systems&amp;journal=Comput%20Methods%20Appl%20Mech%20Eng&amp;volume=1&amp;pages=1-16&amp;publication_year=1972&amp;author=Baumgarte%2CJ">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bradshaw G, O’Sullivan C (2002) Sphere-tree construction using dynamic medial axis approximation. In: Proceedi" /><span class="c-article-references__counter">6.</span><p class="c-article-references__text" id="ref-CR6">Bradshaw G, O’Sullivan C (2002) Sphere-tree construction using dynamic medial axis approximation. In: Proceedings of ACM SIGGRAPH symposium on computer animation (SCA 2002), San Antonio, Texas, July 2002</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="JF. Canny, " /><meta itemprop="datePublished" content="1986" /><meta itemprop="headline" content="Canny JF (1986) Collision detection for moving polyhedra. IEEE Trans Patt Anal Mach Intell 8(2):200–209" /><span class="c-article-references__counter">7.</span><p class="c-article-references__text" id="ref-CR7">Canny JF (1986) Collision detection for moving polyhedra. IEEE Trans Patt Anal Mach Intell 8(2):200–209</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 7 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Collision%20detection%20for%20moving%20polyhedra&amp;journal=IEEE%20Trans%20Patt%20Anal%20Mach%20Intell&amp;volume=8&amp;issue=2&amp;pages=200-209&amp;publication_year=1986&amp;author=Canny%2CJF">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Gottschalk S, Lin MC, Manocha D (1996) OBB-Tree: a hierarchical structure for rapid interference detection. In" /><span class="c-article-references__counter">8.</span><p class="c-article-references__text" id="ref-CR8">Gottschalk S, Lin MC, Manocha D (1996) OBB-Tree: a hierarchical structure for rapid interference detection. In: Proceedings of the 23rd annual conference on computer graphics and interactive techniques (SIGGRAPH’96), New Orleans, Louisiana, August 1996. ACM SIGGRAPH, Addison-Wesley, Reading</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content=". Klosowski, " /><meta itemprop="datePublished" content="1998" /><meta itemprop="headline" content="Klosowski JT, Held M, Mitchell JSB, Sowizral H, Zikan K (1998) Efficient collision detection using bounding vo" /><span class="c-article-references__counter">9.</span><p class="c-article-references__text" id="ref-CR9">Klosowski JT, Held M, Mitchell JSB, Sowizral H, Zikan K (1998) Efficient collision detection using bounding volume hierarchies of k-DOPs. IEEE Trans Visualization Comput Graph 4(1):21–36</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2F2945.675649" aria-label="View reference 9">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 9 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=&amp;journal=IEEE%20Trans%20Visualization%20Comput%20Graph&amp;volume=4&amp;publication_year=1998&amp;author=Klosowski%2C">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Hubbard PM (1995) Collision detection for interactive graphics applications. PhD thesis, Cornell University, I" /><span class="c-article-references__counter">10.</span><p class="c-article-references__text" id="ref-CR10">Hubbard PM (1995) Collision detection for interactive graphics applications. PhD thesis, Cornell University, Ithaca, New York</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="P. Jimnez, F. Thomas, C. Torras, " /><meta itemprop="datePublished" content="2001" /><meta itemprop="headline" content="Jiménez P, Thomas F, Torras C (2001) 3D collision detection: a survey. Comput Graph 25(2):269–285" /><span class="c-article-references__counter">11.</span><p class="c-article-references__text" id="ref-CR11">Jiménez P, Thomas F, Torras C (2001) 3D collision detection: a survey. Comput Graph 25(2):269–285</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1016%2FS0097-8493%2800%2900130-8" aria-label="View reference 11">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 11 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=3D%20collision%20detection%3A%20a%20survey&amp;journal=Comput%20Graph&amp;volume=25&amp;issue=2&amp;pages=269-285&amp;publication_year=2001&amp;author=Jimnez%2CP&amp;author=Thomas%2CF&amp;author=Torras%2CC">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="McKenna M, Zeltzer D (1990) Dynamic simulation of autonomous legged locomotion. In: Proceedings of the 17th an" /><span class="c-article-references__counter">12.</span><p class="c-article-references__text" id="ref-CR12">McKenna M, Zeltzer D (1990) Dynamic simulation of autonomous legged locomotion. In: Proceedings of the 17th annual conference on computer graphics and interactive techniques (SIGGRAPH’90), Dallas, Texas, August 1990. ACM SIGGRAPH, Addison-Wesley, Reading 24:29–38</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Lin M, Manocha D (2003) Collision and proximity queries. In: Goodman TNT, O’Rourke J (eds) Handbook of discret" /><span class="c-article-references__counter">13.</span><p class="c-article-references__text" id="ref-CR13">Lin M, Manocha D (2003) Collision and proximity queries. In: Goodman TNT, O’Rourke J (eds) Handbook of discrete and computational geometry: collision detection. CRC Press, Boca Raton, Florida</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="P. Lotstedt, " /><meta itemprop="datePublished" content="1984" /><meta itemprop="headline" content="Lötstedt P (1984) Numerical simulation of time-dependent contact friction problems in rigid body mechanics. SI" /><span class="c-article-references__counter">14.</span><p class="c-article-references__text" id="ref-CR14">Lötstedt P (1984) Numerical simulation of time-dependent contact friction problems in rigid body mechanics. SIAM J Sci Stat Comput 5(2):370–393</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="http://www.ams.org/mathscinet-getitem?mr=85b%3A70002" aria-label="View reference 14 on MathSciNet">MathSciNet</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 14 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Numerical%20simulation%20of%20time-dependent%20contact%20friction%20problems%20in%20rigid%20body%20mechanics&amp;journal=SIAM%20J%20Sci%20Stat%20Comput&amp;volume=5&amp;issue=2&amp;pages=370-393&amp;publication_year=1984&amp;author=Lotstedt%2CP">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Milenkovic VJ, Schmidl H (2001) Optimization-based animation. In: Proceedings of the 25th international confer" /><span class="c-article-references__counter">15.</span><p class="c-article-references__text" id="ref-CR15">Milenkovic VJ, Schmidl H (2001) Optimization-based animation. In: Proceedings of the 25th international conference on computer graphics and interactive techniques (SIGGRAPH 2001), Los Angeles, California, August 2001. ACM SIGGRAPH, Addison-Wesley, Reading</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Mirtich B, Canny J (1995) Impulse-based simulation of rigid bodies. In: Proceedings of the symposium on intera" /><span class="c-article-references__counter">16.</span><p class="c-article-references__text" id="ref-CR16">Mirtich B, Canny J (1995) Impulse-based simulation of rigid bodies. In: Proceedings of the symposium on interactive 3D graphics (SI3D’95), Monterey, California, April 1995</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Moore RE (1962) Interval analysis and automatic error analysis in digital computation. PhD thesis, Stanford Un" /><span class="c-article-references__counter">17.</span><p class="c-article-references__text" id="ref-CR17">Moore RE (1962) Interval analysis and automatic error analysis in digital computation. PhD thesis, Stanford University, California</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Moore M, Wilhelms J (1988) Collision detection and response for computer animation. In: Proceedings of the 15t" /><span class="c-article-references__counter">18.</span><p class="c-article-references__text" id="ref-CR18">Moore M, Wilhelms J (1988) Collision detection and response for computer animation. In: Proceedings of the 15th international conference on computer graphics and interactive techniques (SIGGRAPH 1988), Atlanta, Georgia, August 1988. ACM SIGGRAPH, Addison-Wesley, Reading, pp 289–298</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Quinlan S (1994) Efficient distance computation between non-convex objects. In: Proceedings of the internation" /><span class="c-article-references__counter">19.</span><p class="c-article-references__text" id="ref-CR19">Quinlan S (1994) Efficient distance computation between non-convex objects. In: Proceedings of the international conference on robotics and automation, San Diego, California, May 1994, pp 3324–3329</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Redon S, Kheddar A, Coquillart S (2000) An algebraic solution to the problem of collision detection for rigid " /><span class="c-article-references__counter">20.</span><p class="c-article-references__text" id="ref-CR20">Redon S, Kheddar A, Coquillart S (2000) An algebraic solution to the problem of collision detection for rigid polyhedral objects. In: Proceedings of IEEE international conference of robotics and automation (ICRA 2000), San Francisco, April 2000</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Redon S, Kheddar A, Coquillart S (2001) CONTACT: arbitrary in-between motions for continuous collision detecti" /><span class="c-article-references__counter">21.</span><p class="c-article-references__text" id="ref-CR21">Redon S, Kheddar A, Coquillart S (2001) CONTACT: arbitrary in-between motions for continuous collision detection. In: Proceedings of the 10th IEEE international workshop on robot–human interactive communication (ROMAN 2001), Paris–Bordeaux, France, September 2001</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Redon S, Kheddar A, Coquillart S (2002) Gauss’ least constraint principle and rigid body simulations. In: Proc" /><span class="c-article-references__counter">22.</span><p class="c-article-references__text" id="ref-CR22">Redon S, Kheddar A, Coquillart S (2002) Gauss’ least constraint principle and rigid body simulations. In: Proceedings of IEEE international conference on robotics and automation, Washington DC, May 2002</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Redon S, Kheddar A, Coquillart S (2002) Fast continuous collision detection between rigid bodies. In: Proceedi" /><span class="c-article-references__counter">23.</span><p class="c-article-references__text" id="ref-CR23">Redon S, Kheddar A, Coquillart S (2002) Fast continuous collision detection between rigid bodies. In: Proceedings of the annual conference of the European association for computer graphics (Eurographics 2002), Saarbrucken, Germany, September 2002</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Ruspini D, Khatib O (1997) Collision/contact models for the dynamic simulation of complex environments. In: Pr" /><span class="c-article-references__counter">24.</span><p class="c-article-references__text" id="ref-CR24">Ruspini D, Khatib O (1997) Collision/contact models for the dynamic simulation of complex environments. In: Proceedings of the IEEE/RSJ international conference on intelligent robots and systems (IROS’97), Grenoble, France, September 1997</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Ruspini DC, Kolarov K, Khatib O (1997) The haptic display of complex graphical environments. In: Proceedings o" /><span class="c-article-references__counter">25.</span><p class="c-article-references__text" id="ref-CR25">Ruspini DC, Kolarov K, Khatib O (1997) The haptic display of complex graphical environments. In: Proceedings of the 24th annual conference on computer graphics and interactive techniques (SIGGRAPH’97), Los Angeles, California, August 1997. ACM SIGGRAPH, Addison-Wesley, Reading, pp 345–52</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="J. Snyder, " /><meta itemprop="datePublished" content="1992" /><meta itemprop="headline" content="Snyder J (1992) Interval analysis for computer graphics. Comput Graph 26(2):121–130" /><span class="c-article-references__counter">26.</span><p class="c-article-references__text" id="ref-CR26">Snyder J (1992) Interval analysis for computer graphics. Comput Graph 26(2):121–130</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 26 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Interval%20analysis%20for%20computer%20graphics&amp;journal=Comput%20Graph&amp;volume=26&amp;issue=2&amp;pages=121-130&amp;publication_year=1992&amp;author=Snyder%2CJ">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="DE. Stewart, JC. Trinkle, " /><meta itemprop="datePublished" content="1996" /><meta itemprop="headline" content="Stewart DE, Trinkle JC (1996) An implicit time-stepping scheme for rigid body dynamics with inelastic collisio" /><span class="c-article-references__counter">27.</span><p class="c-article-references__text" id="ref-CR27">Stewart DE, Trinkle JC (1996) An implicit time-stepping scheme for rigid body dynamics with inelastic collisions and coulomb friction. Int J Numerical Methods Eng 39:2673–2691</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1002%2F%28SICI%291097-0207%2819960815%2939%3A15%3C2673%3A%3AAID-NME972%3E3.0.CO%3B2-I" aria-label="View reference 27">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" href="http://www.ams.org/mathscinet-getitem?mr=97d%3A70004" aria-label="View reference 27 on MathSciNet">MathSciNet</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" href="http://www.emis.de/MATH-item?0882.70003" aria-label="View reference 27 on MATH">MATH</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 27 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=An%20implicit%20time-stepping%20scheme%20for%20rigid%20body%20dynamics%20with%20inelastic%20collisions%20and%20coulomb%20friction&amp;journal=Int%20J%20Numerical%20Methods%20Eng&amp;volume=39&amp;pages=2673-2691&amp;publication_year=1996&amp;author=Stewart%2CDE&amp;author=Trinkle%2CJC">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content=". Van, " /><meta itemprop="datePublished" content="1997" /><meta itemprop="headline" content="Van den Bergen G (1997) Efficient collision detection of complex deformable models using AABB trees. J Graph T" /><span class="c-article-references__counter">28.</span><p class="c-article-references__text" id="ref-CR28">Van den Bergen G (1997) Efficient collision detection of complex deformable models using AABB trees. J Graph Tools 2(4):1–14</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 28 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=&amp;journal=J%20Graph%20Tools&amp;volume=2&amp;publication_year=1997&amp;author=Van%2C">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="DR. Wilhelmsen, " /><meta itemprop="datePublished" content="1976" /><meta itemprop="headline" content="Wilhelmsen DR (1976) A nearest point algorithm for convex polyhedral cones and applications to positive linear" /><span class="c-article-references__counter">29.</span><p class="c-article-references__text" id="ref-CR29">Wilhelmsen DR (1976) A nearest point algorithm for convex polyhedral cones and applications to positive linear approximations. Math Comput 30:48–57</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 29 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=A%20nearest%20point%20algorithm%20for%20convex%20polyhedral%20cones%20and%20applications%20to%20positive%20linear%20approximations&amp;journal=Math%20Comput&amp;volume=30&amp;pages=48-57&amp;publication_year=1976&amp;author=Wilhelmsen%2CDR">
+                    Google Scholar</a> 
+                </p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-004-0138-9-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><div class="c-article-section__content" id="Ack1-content"></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><span class="c-article-author-information__subtitle u-visually-hidden" id="author-notes">Author notes</span><ol class="c-article-author-information__list"><li class="c-article-author-information__item" id="nAff2"><p class="c-article-author-information__authors-list">Stephane Redon</p><p class="js-present-address">Present address: Department of Computer Science, University of North Carolina, 336 Sitterson Hall, CB # 3175, Chapel Hill, NC, 27599-3175, USA</p></li></ol><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">i3D, INRIA, France</p><p class="c-article-author-affiliation__authors-list">Stephane Redon</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Stephane-Redon"><span class="c-article-authors-search__title u-h3 js-search-name">Stephane Redon</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Stephane+Redon&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Stephane+Redon" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Stephane+Redon%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-004-0138-9/email/correspondent/c1/new">Stephane Redon</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=Fast%20continuous%20collision%20detection%20and%20handling%20for%20desktop%20virtual%20prototyping&amp;author=Stephane%20Redon&amp;contentID=10.1007%2Fs10055-004-0138-9&amp;publication=1359-4338&amp;publicationDate=2004-08-03&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Redon, S. Fast continuous collision detection and handling for desktop virtual prototyping.
+                    <i>Virtual Reality</i> <b>8, </b>63–70 (2004). https://doi.org/10.1007/s10055-004-0138-9</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-004-0138-9.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2003-12-12">12 December 2003</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2004-06-22">22 June 2004</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2004-08-03">03 August 2004</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2004-03">March 2004</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-004-0138-9" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-004-0138-9</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Continuous collision detection</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Dynamics simulation</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Virtual prototyping</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Virtual reality</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-004-0138-9.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=138;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

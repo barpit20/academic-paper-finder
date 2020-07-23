@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en" class="pb-page"  data-request-id="e3e70643-617a-40b2-a90c-e2f4c449fe6d"  
+><head data-pb-dropzone="head"><meta name="pbContext" content=";topic:topic:conference-collections&gt;chi;issue:issue:doi\:10.1145/2207676;page:string:Article/Chapter View;subPage:string:Abstract;wgroup:string:ACM Publication Websites;groupTopic:topic:acm-pubtype&gt;proceeding;article:article:doi\:10.1145/2207676.2207777;csubtype:string:Conference Proceedings;website:website:dl-site;ctype:string:Book Content;journal:journal:acmconferences;pageGroup:string:Publication Pages"/>
+<link rel="schema.DC" href="http://purl.org/DC/elements/1.0/"></link><meta name="dc.Format" content="text/HTML"></meta><meta name="dc.Language" content="EN"></meta><meta name="dc.Coverage" content="world"></meta><!-- ${citation_fulltext_world_readable:10.1162/pres.15.4.359} -->
+        
+        
+
+        
+            <link rel="meta" type="application/atom+xml" href="https://doi.org/&#xA;            10.1162%2Fpres.15.4.359"></link>
+            <link rel="meta" type="application/rdf+json" href="https://doi.org/&#xA;            10.1162%2Fpres.15.4.359"></link>
+            <link rel="meta" type="application/unixref+xml" href="https://doi.org/&#xA;            10.1162%2Fpres.15.4.359"></link>
+        
+    
+
+
+
+
+
+
+
+
+<title>Designing effective gaze mechanisms for virtual agents | Proceedings of the SIGCHI Conference on Human Factors in Computing Systems</title>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta charset="UTF-8">
+
+
+
+
+
+
+<meta name="robots" content="noarchive"/>
+<meta name="pb-robots-disabled">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+        <meta property="og:url" content="https://dl.acm.org/doi/abs/10.1145/2207676.2207777"/>
+    
+
+
+
+
+
+
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+
+
+
+
+
+
+
+    
+
+
+<!--Render the heads templates for digital objects, Head templates are used to include additional meta tags specially used for digital objects-->
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/wro/j3i3~product.css">
+
+
+    <!--link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Merriweather+Sans:300,400,700,800|Merriweather:300,400,700,900')--><link rel="stylesheet" href="/products/acm/releasedAssets/css/build-de744579ab758f2eeb42.css"/><link rel="stylesheet" href="/products/acm/releasedAssets/css/print-de744579ab758f2eeb42.css" media="print"/>
+
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script src="https://scholar.google.com/scholar_js/casa.js" async></script>
+<script type="text/javascript">
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+      heap.load("1083010732");
+</script>
+<link rel="apple-touch-icon" sizes="180x180" href="/pb-assets/head-metadata/apple-touch-icon-1574252172393.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/pb-assets/head-metadata/favicon-32x32-1574252172003.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/pb-assets/head-metadata/favicon-16x16-1574252172937.png">
+<link rel="manifest" href="/pb-assets/head-metadata/site-1574252171130.webmanifest">
+<link rel="mask-icon" href="/pb-assets/head-metadata/safari-pinned-tab-1574252171193.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#00a300">
+<meta name="theme-color" content="#ffffff">
+
+    <!-- Google Tag Manager -->
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NFGCMX');</script>
+    <!-- End Google Tag Manager -->
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+    
+        
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</head>
+<body class="pb-ui">
+
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFGCMX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+    if(false) {
+        document.getElementById("skipNavigationLink").onclick =function skipElement () {
+            var element = document.getElementById('');
+            if(element == null || element == undefined) {
+                element = document.getElementsByClassName('').item(0);
+            }
+            element.setAttribute('tabindex','0');
+            element.focus();
+
+        }
+
+    }
+
+</script>
+
+
+
+
+
+    <div id="pb-page-content" data-ng-non-bindable>
+        <div data-pb-dropzone="main" data-pb-dropzone-name="Main">
+
+
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+        <header data-widget-def="ux3-layout-widget" data-widget-id="88f434fd-b4d9-4f0e-b7b6-cde0fadcc9ef" class="header base chi">
+        
+
+
+
+        
+        <div class="header__fixed-items fixed fixed-element">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="ux3-layout-widget" data-widget-id="c844bab8-b1d5-4df4-8bea-71f6156459e4" class="container header--first-row">
+        
+
+
+
+        
+        <div class="pull-left">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="ux3-general-image" data-widget-id="83eada61-9003-4cb3-99a8-a38fa7692761" class="header__logo1">
+        
+
+
+
+        
+        <a href="/" title="ACM Digital Library Logo"><img id="" alt="ACM Digital Library Logo" src="/pb-assets/icons/ACM-DL-Logo-white-1519079037293.png"/></a>
+
+        </div>
+    
+
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="ux3-general-image" data-widget-id="5517ee17-e847-46ff-b42e-c5a6754e032d" class="header__logo2">
+        
+
+
+
+        
+        <a href="https://www.acm.org" title="ACM Logo"><img id="" alt="ACM Logo" src="/specs/products/acm/templates/header/Images/logo2.png"/></a>
+
+        </div>
+    
+</div><div class="pull-right">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3InstitutionBanner" data-widget-id="6468ce1d-9e67-40ee-ae2a-f8f700846ee0" class="institution-wrapper">
+        
+
+
+
+        
+        <div class="institution"><div class="institution-info-wrapper"><span class="institution__intro"> </span><span class="institution__name">Copenhagen University Library Royal Library</span></div></div>
+
+        </div>
+    
+
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="ux3-layout-widget" data-widget-id="ab4ba9a1-6e57-4b90-b9c2-fc7914d9a3a1" class="header__quick-menu text-onDark">
+        
+
+
+
+        
+        <ul class="rlist--inline"><li class="advanced-search-link hidden-lg hidden-md hidden-sm">
+
+
+
+        
+        <a href="/search/advanced" >Advanced Search</a>
+</li><li class="show-on-mobile">
+
+
+
+        
+        <a href="/browse" title="browse">Browse</a>
+</li><li class="show-on-mobile">
+
+
+
+        
+        <a href="/about" title="About">About</a>
+</li><li>
+
+
+
+        
+        
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+<div class="dropBlock loginBar login-open">
+    <ul class="rlist--inline">
+        <li class="login-link">
+            <a href="/action/showLogin?redirectUri=%2Fdoi%2F10.1145%2F2207676.2207777">
+                Sign in
+            </a>
+        </li>
+        <li class="register-link">
+            <a href="https://accounts.acm.org?redirectUri=%2Fdoi%2F10.1145%2F2207676.2207777" class="btn" title="Register">
+                Register
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+
+</li></ul>
+
+        </div>
+    
+</div>
+
+        </div>
+    
+
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="menuWidget" data-widget-id="13da1316-80a7-4370-a291-8968cd9cb35e" class="container header--second-row">
+        
+
+
+
+        
+        <div class="responsive-menu-container clearfix"><div class="left-section pull-left"></div><div class="menu-section"><div class="main-nav responsive-menu-nav"><a href="#global-menu" data-target="global-menu" data-toggle="nav" title="menu drawer"><span class="drawer__icons-box"><span class="drawer__icons-controls"></span></span></a><nav role="navigation" id="global-menu" data-ctrl-res="screen-sm" class="drawer__nav container gutterless hidden-sm hidden-xs"><ul id="menubar" role="menubar" class="menubar rlist--inline"><li class="hidden-lg hidden-md"><div data-toggle="transplant" data-target-class="hidden-xs hidden-sm" data-target=".header--second-row .quick-search--form" data-direction="from" data-transplant="self" class="quick-search-mobile"></div></li><li role="menuitem" aria-label="Advanced Search" id="menu-item-global-menu-0" class="menu-item mobile-menu-item"><a href="/search/advanced"><span>Advanced Search</span></a></li><li role="menuitem" aria-label="Journals" id="menu-item-global-menu-1" class="menu-item"><a href="/journals"><span>Journals</span></a></li><li role="menuitem" aria-label="Magazines" id="menu-item-global-menu-2" class="menu-item"><a href="/magazines"><span>Magazines</span></a></li><li role="menuitem" aria-label="Proceedings" id="menu-item-global-menu-3" class="menu-item"><a href="/proceedings"><span>Proceedings</span></a></li><li role="menuitem" aria-label="Books" id="menu-item-global-menu-4" class="menu-item"><a href="/acmbooks"><span>Books</span></a></li><li role="menuitem" aria-label="SIGs" id="menu-item-global-menu-5" class="menu-item"><a href="/sigs"><span>SIGs</span></a></li><li role="menuitem" aria-label="Conferences" id="menu-item-global-menu-6" class="menu-item"><a href="/conferences"><span>Conferences</span></a></li><li role="menuitem" aria-label="People" id="menu-item-global-menu-7" class="menu-item"><a href="/people"><span>People</span></a></li><li class="hidden-lg hidden-md"><div data-toggle="transplant" data-target-class="hidden-xs hidden-sm" data-target=".header__quick-menu .show-on-mobile" data-direction="from" data-transplant="self"></div></li><li role="menuitem" aria-haspopup="true" aria-label="More" class="dropdown-more hidden dropdown menu-parent"><a href="#" title="More" data-toggle="dropdown" class="dropdown__toggle"><span>More</span><i aria-hidden="true" class="icon-section_arrow_d pull-right hidden-sm hidden-xs"></i></a><ul aria-labelledby="main0-1" aria-hidden="true" role="menu" class="rlist dropdown__menu"></ul></li><li class="menubar__extra-mob-links"></li></ul></nav></div></div><div class="right-section pull-right">
+
+
+
+        
+        <div class="quickSearchFormContainer"><div class="quick-search"><div class="clearfix quick-search__clearfix"><form action="/action/doSearch" name="defaultQuickSearch" method="get" title="Quick Search" class="quick-search--form"><div class="quick-search--input"><div class="input-group option-0"><label for="AllFieldf73847c0-d936-48ec-9bf9-139b3828507f" class="sr-only">Search ACM Digital Library</label><input id="AllFieldf73847c0-d936-48ec-9bf9-139b3828507f" type="search" name="AllField" placeholder="Search ACM Digital Library" data-auto-complete-max-words="7" data-auto-complete-max-chars="32" data-contributors-conf="0" data-topics-conf="3" data-publication-titles-conf="3" data-history-items-conf="3" value="" class="autocomplete quick-search__input"/></div></div><div class="quick-search--button"><button type="submit" title="Search" aria-label="Search" class="btn quick-search__button icon-Icon_Search"><span class="sr-only">Search</span><span>Search</span></button></div></form></div>
+
+
+
+        
+        <a class="quick-search__advancedHeader" href="/search/advanced">Advanced Search</a>
+</div></div>
+</div></div><div class="header__dropzone"></div>
+
+        </div>
+    
+
+
+
+
+        
+        <span style="display: none;">10.1145/2207676.2207777</span><span style="display: none;">acmconferences</span><span style="display: none;">Article/Chapter View</span><span style="display: none;">Abstract</span><span style="display: none;">Publication Pages</span><span style="display: none;">chi</span><span style="display: none;">Conference Proceedings</span><div class="sub-nav fixed-element"><a href="#" data-db-target-for="sub-nav__items" data-more="false" data-lines="1" style="text-transform: uppercase;" class="sub-nav__toggle hidden-lg truncate-text-css">chi</a><div class="sub-nav__container"><div class="container"><div data-ctrl-res="screen-md" class="responsive-menu-container"><div class="left-section pull-left"></div><div class="menu-section"><div style="display: block" class="responsive-menu-nav"><nav id="sub-nav__items" data-db-target-of="sub-nav__items" class="sub-nav__holder drawer__nav"><ul role="menu" class="rlist--inline menubar"><li role="menuitem"><a title="Conference" href="/conference/chi" class="sub-nav__item">Conference</a></li><li role="menuitem"><a title="Proceedings" href="/conference/chi/proceedings" class="sub-nav__item">Proceedings</a></li><li role="menuitem"><a title="Upcoming Events" href="/conference/chi/upcoming" class="sub-nav__item">Upcoming Events</a></li><li role="menuitem"><a title="Authors" href="/conference/chi/authors" class="sub-nav__item">Authors</a></li><li role="menuitem"><a title="Affiliations" href="/conference/chi/affiliations" class="sub-nav__item">Affiliations</a></li><li role="menuitem"><a title="Award Winners" href="/conference/chi/award-winners" class="sub-nav__item">Award Winners</a></li><li role="menuitem" aria-haspopup="true" aria-label="More" class="dropdown-more hidden dropdown menu-parent"><a href="#" title="More" data-toggle="dropdown" class="dropdown__toggle hidden-md hidden-sm hidden-xs"><span>More</span><i aria-hidden="true" class="icon-section_arrow_d"></i></a><ul aria-labelledby="main0-1" aria-hidden="true" role="menu" class="rlist dropdown__menu visible-md visible-sm visible-xs"></ul></li></ul></nav></div></div><div class="right-section hidden-md hidden-sm hidden-xs"></div></div></div></div><div class="hidden-xs hidden-sm"><div class="progress-bar--wrapper"><div style="width: 0.116818%;" class="progress-bar"></div></div></div></div>
+</div><div></div><div class="banner conference-landing"></div><div class="header-breadcrumb">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="ux3-layout-widget" data-widget-id="f5f275c5-a862-48bf-8119-8528d04615da" class="container">
+        
+
+
+
+        
+        <div>
+
+
+
+        
+        
+
+
+
+        
+        <nav class="article__breadcrumbs separator"><a href="/" class="article__tocHeading">Home</a><a href="/conferences" class="article__tocHeading">Conferences</a><a href="/conference/chi" class="article__tocHeading">CHI</a><a href="/conference/chi/proceedings" class="article__tocHeading">Proceedings</a><a href="/doi/proceedings/10.1145/2207676" class="article__tocHeading">CHI '12</a><a href="/doi/10.1145/2207676.2207777" class="article__tocHeading">Designing effective gaze mechanisms for virtual agents</a></nav>
+
+</div>
+
+        </div>
+    
+</div>
+
+        </header>
+    
+
+
+
+
+
+
+        
+        <main class="content chi loi-page no-margin">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3combinedRecommendationsWidget" data-widget-id="bf2b14e9-d9dc-4518-8bb0-d9b157f47c7e" class="recommendations" data-show-id="sec-ref">
+        
+
+
+
+        
+        <div data-widgetId="bf2b14e9-d9dc-4518-8bb0-d9b157f47c7e" class="recommended--lazyLoad"></div>
+
+        </div>
+    
+
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="ux3-publicationContent-widget" data-widget-id="f69d88a8-b404-4aae-83a9-9acea4426d78" class="container">
+        
+
+
+
+        
+        <article data-enable-mathjax="true" data-citationInfo="/action/acmCitationInfo?widgetId=f69d88a8-b404-4aae-83a9-9acea4426d78&ajax=true&doi=10.1145%2F2207676.2207777&pbContext=%3Btopic%3Atopic%3Aconference-collections%26gt%3Bchi%3Bissue%3Aissue%3Adoi%5C%3A10.1145%2F2207676%3Bpage%3Astring%3AArticle%2FChapter+View%3BsubPage%3Astring%3AAbstract%3Bwgroup%3Astring%3AACM+Publication+Websites%3BgroupTopic%3Atopic%3Aacm-pubtype%26gt%3Bproceeding%3Barticle%3Aarticle%3Adoi%5C%3A10.1145%2F2207676.2207777%3Bcsubtype%3Astring%3AConference+Proceedings%3Bwebsite%3Awebsite%3Adl-site%3Bctype%3Astring%3ABook+Content%3Bjournal%3Ajournal%3Aacmconferences%3BpageGroup%3Astring%3APublication+Pages" data-proceedingInfo="/action/proceedingArticleMeta?widgetId=f69d88a8-b404-4aae-83a9-9acea4426d78&ajax=true&doi=10.1145%2F2207676.2207777&pbContext=%3Btopic%3Atopic%3Aconference-collections%26gt%3Bchi%3Bissue%3Aissue%3Adoi%5C%3A10.1145%2F2207676%3Bpage%3Astring%3AArticle%2FChapter+View%3BsubPage%3Astring%3AAbstract%3Bwgroup%3Astring%3AACM+Publication+Websites%3BgroupTopic%3Atopic%3Aacm-pubtype%26gt%3Bproceeding%3Barticle%3Aarticle%3Adoi%5C%3A10.1145%2F2207676.2207777%3Bcsubtype%3Astring%3AConference+Proceedings%3Bwebsite%3Awebsite%3Adl-site%3Bctype%3Astring%3ABook+Content%3Bjournal%3Ajournal%3Aacmconferences%3BpageGroup%3Astring%3APublication+Pages"><div class="row"><div class="col-md-2 col-sm-3"></div><div class="col-md-8 col-sm-7"><div class="citation"><div class="issue-item__citation"><span class="issue-heading">research-article </span><span class="article__access"></span></div><div class="border-bottom clearfix"><h1 class="citation__title">Designing effective gaze mechanisms for virtual agents</h1>
+
+
+
+        
+        <!-- Go to www.addthis.com/dashboard to customize your tools --><script type="text/javascript" async="async" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-4faab26f2cff13a7"></script><div class="share__block share__inline-links"><div class="pb-dropzone" data-pb-dropzone="shareBlock" title="shareBlock"></div><span class="sr-only">Share on</span><div class="rlist--inline addthis addthis_toolbox addthis_default_style addthis_32x32_style"><a role="link" class="addthis_button_twitter"><i aria-hidden="true" class="at-icon-wrapper icon-Icon_Twitter"></i></a><a role="link" class="addthis_button_linkedin"><i aria-hidden="true" class="at-icon-wrapper icon-linkedin"></i></a><a role="link" class="addthis_button_reddit"><i aria-hidden="true" class="at-icon-wrapper icon-riddit-filled"></i></a><a role="link" class="addthis_button_facebook"><i aria-hidden="true" class="at-icon-wrapper icon-Icon_Facebook"></i></a><a role="link" class="addthis_button_email"><i aria-hidden="true" class="at-icon-wrapper icon-Icon_mail"></i></a><div class="pb-dropzone" data-pb-dropzone="share-additional-links" title="share-additional-links"></div></div></div>
+</div> <div class="border-bottom clearfix"> <div id="sb-1"> <ul data-lines="2" ariaa-label="authors" data-position="beforeLast" class="rlist--inline loa truncate-list"> <li class="label"><b>Authors: </b></li> <li class="loa__item"><a id="arnd_7058159843478732_Ctrl" href="javascript:void(0);" aria-controls="arnd_7058159843478732" aria-haspopup="true" class="author-name" title="Sean Andrist"><span class="loa__author-info"> <div class="author-data"><span class="loa__author-name"><span><img class="author-picture" src="/do/10.1145/contrib-81481650937/rel-imgonly/headshot1.jpg" alt="Sean Andrist profile image"/>Sean Andrist</span></span></div><span class="loa_author_inst"> <p data-pill-inst="arnd_7058159843478732" data-doi="10.1145/contrib-81481650937">University of Wisconsin-Madison, Madison, Wisconsin, United States</p></span></span></a><div id="arnd_7058159843478732" aria-labelledby="arnd_7058159843478732_Ctrl" class="author-info"> <div class="author-info__header" data-pill="d331766e152"></div> <div class="author-info__body"> <p data-pill-inst="d331766e152" data-doi="10.1145/contrib-81481650937">University of Wisconsin-Madison, Madison, Wisconsin, United States</p><a href="/profile/81481650937" class="btn blue stretched">View Profile</a> </div> </div><span>, </span></li> <li class="loa__item"><a id="arnd_7058159843732776_Ctrl" href="javascript:void(0);" aria-controls="arnd_7058159843732776" aria-haspopup="true" class="author-name" title="Tomislav Pejsa"><span class="loa__author-info"> <div class="author-data"><span class="loa__author-name"><span><img class="author-picture" src="/pb-assets/icons/DOs/default-profile-1543932446943.svg" alt="Tomislav Pej&#x0161;a profile image"/>Tomislav Pejsa</span></span></div><span class="loa_author_inst"> <p data-pill-inst="arnd_7058159843732776" data-doi="10.1145/contrib-81384600775">University of Wisconsin-Madison, Madison, Wisconsin, United States</p></span></span></a><div id="arnd_7058159843732776" aria-labelledby="arnd_7058159843732776_Ctrl" class="author-info"> <div class="author-info__header" data-pill="d331766e173"></div> <div class="author-info__body"> <p data-pill-inst="d331766e173" data-doi="10.1145/contrib-81384600775">University of Wisconsin-Madison, Madison, Wisconsin, United States</p><a href="/profile/81384600775" class="btn blue stretched">View Profile</a> </div> </div><span>, </span></li> <li class="loa__item"><a id="arnd_7058159843902896_Ctrl" href="javascript:void(0);" aria-controls="arnd_7058159843902896" aria-haspopup="true" class="author-name" title="Bilge Mutlu"><span class="loa__author-info"> <div class="author-data"><span class="loa__author-name"><span><img class="author-picture" src="/do/10.1145/contrib-81310500023/rel-imgonly/mutlu.jpg" alt="Bilge Mutlu profile image"/>Bilge Mutlu</span></span></div><span class="loa_author_inst"> <p data-pill-inst="arnd_7058159843902896" data-doi="10.1145/contrib-81310500023">University of Wisconsin-Madison, Madison, Wisconsin, United States</p></span></span></a><div id="arnd_7058159843902896" aria-labelledby="arnd_7058159843902896_Ctrl" class="author-info"> <div class="author-info__header" data-pill="d331766e194"></div> <div class="author-info__body"> <p data-pill-inst="d331766e194" data-doi="10.1145/contrib-81310500023">University of Wisconsin-Madison, Madison, Wisconsin, United States</p><a href="/profile/81310500023" class="btn blue stretched">View Profile</a> </div> </div><span>, </span></li> <li class="loa__item"><a id="arnd_7058159844145421_Ctrl" href="javascript:void(0);" aria-controls="arnd_7058159844145421" aria-haspopup="true" class="author-name" title="Michael Gleicher"><span class="loa__author-info"> <div class="author-data"><span class="loa__author-name"><span><img class="author-picture" src="/pb-assets/icons/DOs/default-profile-1543932446943.svg" alt="Michael L. Gleicher profile image"/>Michael Gleicher</span></span></div><span class="loa_author_inst"> <p data-pill-inst="arnd_7058159844145421" data-doi="10.1145/contrib-81100342764">University of Wisconsin - Madison, Madison, Madison, Wisconsin, United States</p></span></span></a><div id="arnd_7058159844145421" aria-labelledby="arnd_7058159844145421_Ctrl" class="author-info"> <div class="author-info__header" data-pill="d331766e215"></div> <div class="author-info__body"> <p data-pill-inst="d331766e215" data-doi="10.1145/contrib-81100342764">University of Wisconsin - Madison, Madison, Madison, Wisconsin, United States</p><a href="/profile/81100342764" class="btn blue stretched">View Profile</a> </div> </div> </li> <li><a href="#pill-authors__contentcon" data-slide-target="#pill-information" data-full-screen="false" data-ctrl-res="screen-xlg" data-tab="pill-authors__content" data-label="<i class='icon-Icon_Information'&gt;</i&gt; Information &amp; Authors" class="loa__link w-slide__btn tab-link slide-active">Authors Info &amp; Affiliations </a></li> </ul> </div> </div> <div class="border-bottom clearfix"><div class="issue-item__detail"><span class="bold label"> Publication:  </span><a href="/doi/proceedings/10.1145/2207676" title="CHI '12: Proceedings of the SIGCHI Conference on Human Factors in Computing Systems"><span class="epub-section__title">CHI '12: Proceedings of the SIGCHI Conference on Human Factors in Computing Systems</span></a><span class="dot-separator"><span class="epub-section__date">May 2012  </span></span><span class="dot-separator"><span class="epub-section__pagerange">Pages   705–714</span></span><span class="dot-separator"><a href="https://doi.org/10.1145/2207676.2207777" class="issue-item__doi">https://doi.org/10.1145/2207676.2207777</a></span></div></div>
+
+
+
+        
+        
+<div class="border-bottom clearfix"><div class="issue-item__footer"><div class="issue-item__footer-info pull-left"><div tabindex="0" class="tooltip"><ul class="rlist--inline"><li><span class="citation"><i class="icon-quote"></i><span>31</span><span class="sr-only">citation</span></span></li><li><span class="metric"><i class="icon-metric"></i><span>875</span></span></li><span class="sr-only">Downloads</span></ul><div class="tooltip__body"><span class="arrow"></span><div class="left-bordered-title">Metrics</div><div class="citation">Total Citations<span class="bold">31</span></div><div class="metric">Total Downloads<span class="bold">875</span></div><div class="info">Last 12 Months<span class="bold">103</span></div><div class="info">Last 6 weeks<span class="bold">25</span></div></div></div></div><div class="issue-item__footer-links pull-right"><ul class="rlist--inline">
+
+
+
+        
+        <li role="presentation" class="article-tool"><a id="manageAlert__crtl" href="/action/addCitationAlert?doi=10.1145/2207676.2207777" role="menuitem" data-title="Get Citation Alerts" data-target="#manageAlert" class="btn--icon simple-tooltip__block--b"><i class="icon-Icon_Alerts"></i><span class="visibility-hidden">Get Citation Alerts</span></a><div class="ux-modal-container"><div id="manageAlert" class="modal"><div class="modal__dialog"><div class="modal__dialog--success"><div class="modal__header"><button type="button" data-dismiss="modal" class="close"><i aria-hidden="true" class="icon-close_thin"></i></button><a id="id-hatemile-navigation-6073290063892647-7" name="id-hatemile-navigation-6073290063892647-7" data-headinganchorfor="id-hatemile-navigation-6073290063892647-6" class="heading-anchor"></a><h2 id="id-hatemile-navigation-6073290063892647-6">New Citation Alert added!</h2></div><div class="modal__body"><p>This alert has been successfully added and will be sent to:<span class="email"></span></p><p>You will be notified whenever a record that you have chosen has been cited.</p></div><div class="modal__footer"><p>To manage your alert preferences, click on the button below.</p><a href="/action/showPreferences?menuTab=Alerts" title="Manage my Alerts" id="id-hatemile-display-1019331959102511-5" class="btn blue big stretched manageAlert__btn"><span data-attributetitleof="id-hatemile-display-1019331959102511-5" class="force-read-before">Manage my Alerts</span></a></div></div><div class="modal__dialog--error"><div class="modal__header"><button type="button" data-dismiss="modal" class="close"><i aria-hidden="true" class="icon-close_thin"></i></button><a id="id-hatemile-navigation-6073290063892647-9" name="id-hatemile-navigation-6073290063892647-9" data-headinganchorfor="id-hatemile-navigation-6073290063892647-8" class="heading-anchor"></a><h2 id="id-hatemile-navigation-6073290063892647-8">New Citation Alert!</h2></div><div class="modal__body"><p>Please <a href="/action/showLogin?redirectUri=/doi/10.1145/2207676.2207777" title="Sign In" class="link">log in to your account</a></p></div></div></div></div></div></li>
+<li role="presentation" class="article-tool"><a href="/" role="menuitem" data-title="Save to Binder" data-db-target-for="save-to-binder" data-link="/action/binderList?doi=10.1145/2207676.2207777" class="btn--icon simple-tooltip__block--b saveToBinders"><i aria-hidden="true" class="icon-add-folder"></i><span class="visibility-hidden">Save to Binder</span></a><div data-db-target-of="save-to-binder"><div class="saveToBinders-list"><input type="hidden" name="doiVal" value="10.1145/2207676.2207777"/><h5>Save to Binder</h5><div class="binder-list-alerts"></div><div class="saveToBinders-list__container"><ul class="rlist saveToBinders-list__items"><div class="loader"><img src="/specs/products/acm/releasedAssets/images/loader.gif"/></div></ul></div><div class="binder__create"><a data-action="show" href="/action/showMyBinders" title="Create a New Binder" class="show-binder-form toggle-binder-form"><i class="icon-plus-light"></i>Create a New Binder</a><div class="binder-create-form binder__create-mini-form"><div class="input-group input-group--gray-bg"><label>Name</label><div class="input-group__field-container--right-icon"><input type="text" placeholder="My new Binder" name="binderName" data-maxChar="256" class="binder-create-form__name charCount__text form-control"/><span class="input-group-addon input-group-addon--right"><span class="charLimit"></span></span></div></div><div><ul class="rlist--inline binder__create-btns-container"><li><button type="reset" value="Cancel" data-action="hide" class="toggle-binder-form btn btn--border-less btn transparent binder__create-cancel">Cancel</button></li><li class="pull-right"><button type="submit" value="Create Binder" disabled="disabled" data-append-newbinder-link="/action/createBinder" class="btn btn--no-margin blue big binder__create-submit binder-create-form__create"><i aria-hidden="true" class="icon-plus-light"></i>Create</button></li></ul></div></div></div></div></div></li><li role="presentation" class="article-tool"><a href="/" role="menuitem" data-title="Export Citation" data-toggle="modal" data-target="#exportCitation" class="btn--icon simple-tooltip__block--b"><i aria-hidden="true" class="icon-quote"></i><span class="visibility-hidden">Export Citation</span><input type="hidden" name="doiVal" value="10.1145/2207676.2207777"/></a></li><li class="publisher-site article-tool"><a href="#" class="btn blue"><span>Publisher Site</span><i aria-hidden="true" class="icon-export"></i></a></li></ul><ul class="rlist--inline right"><li><a href="/doi/epdf/10.1145/2207676.2207777" title="View online with eReader" target="_blank" class="btn blue"><i class="icon-eReader"></i><span>eReader</span></a></li><li><a href="/doi/pdf/10.1145/2207676.2207777" title="PDF" target="_blank" class="btn red"><i class="icon-pdf-file"></i><span>PDF</span></a></li></ul></div></div></div></div></div><div class="col-sm-2"></div></div><div class="row"><div class="col-md-2 col-sm-3 sidebar-section article-sidebar-section"><div class="article__sections"><div class="sections-box"><div><div class="sections-box__static-items"><div class="parent-item"><h5 class="parent-item__title"><a href="/doi/proceedings/10.1145/2207676" data-lines="2" data-title="CHI '12: Proceedings of the SIGCHI Conference on Human Factors in Computing Systems" class="simple-tooltip__inline--r truncate-text-css">CHI '12: Proceedings of the SIGCHI Conference on Human Factors in Computing Systems</a></h5><span href="/doi/proceedings/10.1145/2207676" data-lines="2" data-title="Designing effective gaze mechanisms for virtual agents" class="parent-item__subtitle simple-tooltip__inline--r truncate-text-css">Designing effective gaze mechanisms for virtual agents</span><div class="pageRange">Pages   705–714</div></div>
+
+
+
+        
+        <div class="content-navigation clearfix"><a href="/doi/10.1145/2207676.2207776" title="Previous item in TOC" class="content-navigation__btn--pre "><span><i class="icon-Arrow-Stroke"></i></span><span class="control">Previous</span><span class="type">Chapter</span></a><a href="/doi/10.1145/3250481" title="Next item in TOC" class="content-navigation__btn--next "><span class="control">Next</span><span class="type">Chapter</span><span><i class="icon-Arrow-Stroke"></i></span></a></div>
+</div><div class="sections-block scroll-to-target"></div></div><div class="logo"><img src="/specs/products/acm/releasedAssets/images/footer-logo1.png" alt="ACM Digital Library" title="ACM Digital Library"/></div></div></div></div><div class="col-md-8 col-sm-7 sticko__side-content"><div class="stickybar__original__position"></div><nav class="stickybar coolBar trans visible-xs visible-sm"><div class="stickybar__wrapper coolBar__wrapper clearfix"><div class="coolBar__section"><a id="article_Ctrl" href="#" data-db-target-for="article-sec_Pop" role="button" aria-expanded="false" class="coolBar__ctrl"><i class="icon-burger"></i></a><div id="article_Pop" data-db-target-of="article-sec_Pop" aria-hidden="true" class="coolBar__drop fixed rlist"><div data-target=".article__sections" data-remove="false" data-target-class="hidden-xs hidden-sm" data-toggle="transplant" data-direction="from" data-transplant="self" class="transplant showit"></div></div></div><div data-target=".pill-section .pill-list" data-remove="false" data-target-class="hidden-xs hidden-sm" data-toggle="transplant" data-direction="from" data-transplant="self" class="transplant showit"></div></div></nav><div class="article__body"><!-- abstract content --><div class="hlFld-Abstract"><div class="article__section article__abstract hlFld-Abstract"><div class="colored-block__title"><h2 id="d331799e1" class="section__title left-bordered-title">ABSTRACT</h2></div><div class="abstractSection abstractInFull"><p>Virtual agents hold great promise in human-computer interaction with their ability to afford embodied interaction using nonverbal human communicative cues. Gaze cues are particularly important to achieve significant high-level outcomes such as improved learning and feelings of rapport. Our goal is to explore how agents might achieve such outcomes through seemingly subtle changes in gaze behavior and what design variables for gaze might lead to such positive outcomes. Drawing on research in human physiology, we developed a model of gaze behavior to capture these key design variables. In a user study, we investigated how manipulations in these variables might improve affiliation with the agent and learning. The results showed that an agent using affiliative gaze elicited more positive feelings of connection, while an agent using referential gaze improved participants' learning. Our model and findings offer guidelines for the design of effective gaze behaviors for virtual agents.</p></div></div></div><!-- /abstract content --><div class="pb-dropzone" data-pb-dropzone="pubContentAccessDenialDropzone"><!-- Empty dropzone --></div><div class="article__section article__references show-more-items" data-sectionname="References"><p class="explanation__text"></p><div class="colored-block__title"><h2 id="sec-ref" class="section__title left-bordered-title">
+                    References
+                </h2></div><ol class="rlist references__list references__numeric"><li id="ref-00001" class="&#xA;                references__item&#xA;            "><span class="references__note">Argyle, M., and Cook, M. Gaze and mutual gaze. Cambridge University Press Cambridge, 1976.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Argyle%2C+M.%2C+and+Cook%2C+M.+Gaze+and+mutual+gaze.+Cambridge+University+Press+Cambridge%2C+1976."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00002" class="&#xA;                references__item&#xA;            "><span class="references__note">Bailenson, J., Yee, N., Merget, D., and Schroeder, R. The effect of behavioral realism and form realism of real-time avatar faces on verbal disclosure, nonverbal disclosure, emotion recognition, and copresence in dyadic interaction. Presence: Teleoperators and Virtual Environments 15, 4 (2006), 359--372.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Bailenson%2C+J.%2C+Yee%2C+N.%2C+Merget%2C+D.%2C+and+Schroeder%2C+R.+The+effect+of+behavioral+realism+and+form+realism+of+real-time+avatar+faces+on+verbal+disclosure%2C+nonverbal+disclosure%2C+emotion+recognition%2C+and+copresence+in+dyadic+interaction.+Presence%3A+Teleoperators+and+Virtual+Environments+15%2C+4+%282006%29%2C+359%2D%2D372.+10.1162%2Fpres.15.4.359+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="https://dl.acm.org/doi/10.1162/pres.15.4.359" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00003" class="&#xA;                references__item&#xA;            "><span class="references__note">Bayliss, A., Paul, M., Cannon, P., and Tipper, S. Gaze cuing and affective judgments of objects: I like what you look at. Psychonomic bulletin &amp; review 13, 6 (2006), 1061--1066.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Bayliss%2C+A.%2C+Paul%2C+M.%2C+Cannon%2C+P.%2C+and+Tipper%2C+S.+Gaze+cuing+and+affective+judgments+of+objects%3A+I+like+what+you+look+at.+Psychonomic+bulletin+%26+review+13%2C+6+%282006%29%2C+1061%2D%2D1066."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00004" class="&#xA;                references__item&#xA;            "><span class="references__note">Beebe, S. Effects of eye contact, posture and vocal inflection upon credibility and comprehension.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Beebe%2C+S.+Effects+of+eye+contact%2C+posture+and+vocal+inflection+upon+credibility+and+comprehension."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00005" class="&#xA;                references__item&#xA;            "><span class="references__note">Burgoon, J., Coker, D., and Coker, R. Communicative effects of gaze behavior. Human Communication Research 12, 4 (1986), 495--524.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Burgoon%2C+J.%2C+Coker%2C+D.%2C+and+Coker%2C+R.+Communicative+effects+of+gaze+behavior.+Human+Communication+Research+12%2C+4+%281986%29%2C+495%2D%2D524."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/servlet/linkout?suffix=e_1_3_2_1_5_1&amp;dbid=16&amp;doi=10.1145%2F2207676.2207777&amp;key=10.1111%2Fj.1468-2958.1986.tb00089.x" target="_blank"><span class="visibility-hidden">Cross Ref</span><img class="simple-tooltip__block--b" data-title="Cross Ref" alt="Cross Ref" src="/templates/jsp/_ux3/_acm/images/crossref_icon.svg"></img></a></span></span></li><li id="ref-00006" class="&#xA;                references__item&#xA;            "><span class="references__note">Cafaro, A., Gaito, R., and Vilhjálmsson, H. Animating idle gaze in public places. In Intelligent Virtual Agents, Springer (2009), 250--256.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Cafaro%2C+A.%2C+Gaito%2C+R.%2C+and+Vilhj%C3%A1lmsson%2C+H.+Animating+idle+gaze+in+public+places.+In+Intelligent+Virtual+Agents%2C+Springer+%282009%29%2C+250%2D%2D256.+10.1007%2F978-3-642-04380-2_28+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="https://dl.acm.org/doi/10.1007/978-3-642-04380-2_28" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00007" class="&#xA;                references__item&#xA;            "><span class="references__note">Cassell, J., Bickmore, T., Billinghurst, M., Campbell, L., Chang, K., Vilhjálmsson, H., and Yan, H. Embodiment in conversational interfaces: Rea. In Proceedings of the SIGCHI conference on Human factors in computing systems: the CHI is the limit, ACM (1999), 520--527.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Cassell%2C+J.%2C+Bickmore%2C+T.%2C+Billinghurst%2C+M.%2C+Campbell%2C+L.%2C+Chang%2C+K.%2C+Vilhj%C3%A1lmsson%2C+H.%2C+and+Yan%2C+H.+Embodiment+in+conversational+interfaces%3A+Rea.+In+Proceedings+of+the+SIGCHI+conference+on+Human+factors+in+computing+systems%3A+the+CHI+is+the+limit%2C+ACM+%281999%29%2C+520%2D%2D527.+10.1145%2F302979.303150+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="https://dl.acm.org/doi/10.1145/302979.303150" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00008" class="&#xA;                references__item&#xA;            "><span class="references__note">Cassell, J., Torres, O., and Prevost, S. Turn taking vs. discourse structure: How best to model multimodal conversation. Machine conversations (1999), 143--154.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Cassell%2C+J.%2C+Torres%2C+O.%2C+and+Prevost%2C+S.+Turn+taking+vs.+discourse+structure%3A+How+best+to+model+multimodal+conversation.+Machine+conversations+%281999%29%2C+143%2D%2D154."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00009" class="&#xA;                references__item&#xA;            "><span class="references__note">Deng, Z., Lewis, J., and Neumann, U. Automated eye motion using texture synthesis. IEEE Computer Graphics and Applications (2005), 24--30.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Deng%2C+Z.%2C+Lewis%2C+J.%2C+and+Neumann%2C+U.+Automated+eye+motion+using+texture+synthesis.+IEEE+Computer+Graphics+and+Applications+%282005%29%2C+24%2D%2D30.+10.1109%2FMCG.2005.35+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="https://dl.acm.org/doi/10.1109/MCG.2005.35" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00010" class="&#xA;                references__item&#xA;            "><span class="references__note">Fox, J., and Bailenson, J. Virtual virgins and vamps: The effects of exposure to female characters sexualized appearance and gaze in an immersive virtual environment. Sex roles 61, 3 (2009), 147--157.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Fox%2C+J.%2C+and+Bailenson%2C+J.+Virtual+virgins+and+vamps%3A+The+effects+of+exposure+to+female+characters+sexualized+appearance+and+gaze+in+an+immersive+virtual+environment.+Sex+roles+61%2C+3+%282009%29%2C+147%2D%2D157."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00011" class="&#xA;                references__item&#xA;            "><span class="references__note">Freedman, E., and Sparks, D. Activity of cells in the deeper layers of the superior colliculus of the rhesus monkey: evidence for a gaze displacement command. Journal of neurophysiology 78, 3 (1997), 1669.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Freedman%2C+E.%2C+and+Sparks%2C+D.+Activity+of+cells+in+the+deeper+layers+of+the+superior+colliculus+of+the+rhesus+monkey%3A+evidence+for+a+gaze+displacement+command.+Journal+of+neurophysiology+78%2C+3+%281997%29%2C+1669."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00012" class="&#xA;                references__item&#xA;            "><span class="references__note">Frischen, A., Bayliss, A., and Tipper, S. Gaze cueing of attention: Visual attention, social cognition, and individual differences. Psychological bulletin 133, 4 (2007), 694.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Frischen%2C+A.%2C+Bayliss%2C+A.%2C+and+Tipper%2C+S.+Gaze+cueing+of+attention%3A+Visual+attention%2C+social+cognition%2C+and+individual+differences.+Psychological+bulletin+133%2C+4+%282007%29%2C+694."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00013" class="&#xA;                references__item&#xA;            "><span class="references__note">Fuller, J. Head movement propensity. Experimental Brain Research 92, 1 (1992), 152--164.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Fuller%2C+J.+Head+movement+propensity.+Experimental+Brain+Research+92%2C+1+%281992%29%2C+152%2D%2D164."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/servlet/linkout?suffix=e_1_3_2_1_13_1&amp;dbid=16&amp;doi=10.1145%2F2207676.2207777&amp;key=10.1007%2FBF00230391" target="_blank"><span class="visibility-hidden">Cross Ref</span><img class="simple-tooltip__block--b" data-title="Cross Ref" alt="Cross Ref" src="/templates/jsp/_ux3/_acm/images/crossref_icon.svg"></img></a></span></span></li><li id="ref-00014" class="&#xA;                references__item&#xA;            "><span class="references__note">Fullwood, C., and Doherty-Sneddon, G. Effect of gazing at the camera during a video link on recall. Applied Ergonomics 37, 2 (2006), 167--175.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Fullwood%2C+C.%2C+and+Doherty-Sneddon%2C+G.+Effect+of+gazing+at+the+camera+during+a+video+link+on+recall.+Applied+Ergonomics+37%2C+2+%282006%29%2C+167%2D%2D175."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/servlet/linkout?suffix=e_1_3_2_1_14_1&amp;dbid=16&amp;doi=10.1145%2F2207676.2207777&amp;key=10.1016%2Fj.apergo.2005.05.003" target="_blank"><span class="visibility-hidden">Cross Ref</span><img class="simple-tooltip__block--b" data-title="Cross Ref" alt="Cross Ref" src="/templates/jsp/_ux3/_acm/images/crossref_icon.svg"></img></a></span></span></li><li id="ref-00015" class="&#xA;                references__item&#xA;            "><span class="references__note">Garau, M., Slater, M., Bee, S., and Sasse, M. The impact of eye gaze on communication using humanoid avatars. In Proceedings of the SIGCHI conference on Human factors in computing systems, ACM (2001), 309--316.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Garau%2C+M.%2C+Slater%2C+M.%2C+Bee%2C+S.%2C+and+Sasse%2C+M.+The+impact+of+eye+gaze+on+communication+using+humanoid+avatars.+In+Proceedings+of+the+SIGCHI+conference+on+Human+factors+in+computing+systems%2C+ACM+%282001%29%2C+309%2D%2D316.+10.1145%2F365024.365121+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="https://dl.acm.org/doi/10.1145/365024.365121" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00016" class="&#xA;                references__item&#xA;            "><span class="references__note">Goldberg, G., Kiesler, C., and Collins, B. Visual behavior and face-to-face distance during interaction. Sociometry (1969), 43--53.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Goldberg%2C+G.%2C+Kiesler%2C+C.%2C+and+Collins%2C+B.+Visual+behavior+and+face-to-face+distance+during+interaction.+Sociometry+%281969%29%2C+43%2D%2D53."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00017" class="&#xA;                references__item&#xA;            "><span class="references__note">Goldring, J., Dorris, M., Corneil, B., Ballantyne, P., and Munoz, D. Combined eye-head gaze shifts to visual and auditory targets in humans. Experimental brain research 111, 1 (1996), 68--78.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Goldring%2C+J.%2C+Dorris%2C+M.%2C+Corneil%2C+B.%2C+Ballantyne%2C+P.%2C+and+Munoz%2C+D.+Combined+eye-head+gaze+shifts+to+visual+and+auditory+targets+in+humans.+Experimental+brain+research+111%2C+1+%281996%29%2C+68%2D%2D78."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00018" class="&#xA;                references__item&#xA;            "><span class="references__note">Goossens, H., and Opstal, A. Human eye-head coordination in two dimensions under different sensorimotor conditions. Experimental Brain Research 114, 3 (1997), 542--560.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Goossens%2C+H.%2C+and+Opstal%2C+A.+Human+eye-head+coordination+in+two+dimensions+under+different+sensorimotor+conditions.+Experimental+Brain+Research+114%2C+3+%281997%29%2C+542%2D%2D560."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/servlet/linkout?suffix=e_1_3_2_1_18_1&amp;dbid=16&amp;doi=10.1145%2F2207676.2207777&amp;key=10.1007%2FPL00005663" target="_blank"><span class="visibility-hidden">Cross Ref</span><img class="simple-tooltip__block--b" data-title="Cross Ref" alt="Cross Ref" src="/templates/jsp/_ux3/_acm/images/crossref_icon.svg"></img></a></span></span></li><li id="ref-00019" class="&#xA;                references__item&#xA;            "><span class="references__note">Griffin, Z. Gaze durations during speech reflect word selection and phonological encoding. Cognition 82, 1 (2001), B1-B14.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Griffin%2C+Z.+Gaze+durations+during+speech+reflect+word+selection+and+phonological+encoding.+Cognition+82%2C+1+%282001%29%2C+B1-B14."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/servlet/linkout?suffix=e_1_3_2_1_19_1&amp;dbid=16&amp;doi=10.1145%2F2207676.2207777&amp;key=10.1016%2FS0010-0277%2801%2900138-X" target="_blank"><span class="visibility-hidden">Cross Ref</span><img class="simple-tooltip__block--b" data-title="Cross Ref" alt="Cross Ref" src="/templates/jsp/_ux3/_acm/images/crossref_icon.svg"></img></a></span></span></li><li id="ref-00020" class="&#xA;                references__item&#xA;            "><span class="references__note">Guitton, D., and Volle, M. Gaze control in humans: eye-head coordination during orienting movements to targets within and beyond the oculomotor range. Journal of neurophysiology 58, 3 (1987), 427.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Guitton%2C+D.%2C+and+Volle%2C+M.+Gaze+control+in+humans%3A+eye-head+coordination+during+orienting+movements+to+targets+within+and+beyond+the+oculomotor+range.+Journal+of+neurophysiology+58%2C+3+%281987%29%2C+427."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00021" class="&#xA;                references__item&#xA;            "><span class="references__note">Harris, M., and Rosenthal, R. No more teachers dirty looks: Effects of teacher nonverbal behavior on student outcomes. Applications of nonverbal communication (2005), 157--192.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Harris%2C+M.%2C+and+Rosenthal%2C+R.+No+more+teachers+dirty+looks%3A+Effects+of+teacher+nonverbal+behavior+on+student+outcomes.+Applications+of+nonverbal+communication+%282005%29%2C+157%2D%2D192."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00022" class="&#xA;                references__item&#xA;            "><span class="references__note">Heylen, D., Van Es, I., Van Dijk, E., NI-JHOLT, A., van Kuppevelt, J., Dybkjaer, L., and Bernsen, N. Experimenting with the gaze of a conversational agent, 2005.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Heylen%2C+D.%2C+Van+Es%2C+I.%2C+Van+Dijk%2C+E.%2C+NI-JHOLT%2C+A.%2C+van+Kuppevelt%2C+J.%2C+Dybkjaer%2C+L.%2C+and+Bernsen%2C+N.+Experimenting+with+the+gaze+of+a+conversational+agent%2C+2005."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00023" class="&#xA;                references__item&#xA;            "><span class="references__note">Hietanen, J. Does your gaze direction and head orientation shift my visual attention? Neuroreport 10, 16 (1999), 3443.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Hietanen%2C+J.+Does+your+gaze+direction+and+head+orientation+shift+my+visual+attention%3F+Neuroreport+10%2C+16+%281999%29%2C+3443."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/servlet/linkout?suffix=e_1_3_2_1_23_1&amp;dbid=16&amp;doi=10.1145%2F2207676.2207777&amp;key=10.1097%2F00001756-199911080-00033" target="_blank"><span class="visibility-hidden">Cross Ref</span><img class="simple-tooltip__block--b" data-title="Cross Ref" alt="Cross Ref" src="/templates/jsp/_ux3/_acm/images/crossref_icon.svg"></img></a></span></span></li><li id="ref-00024" class="&#xA;                references__item&#xA;            "><span class="references__note">Ipeirotis, P. Demographics of Mechanical Turk. Tech. Rep. CeDER-10-01, 2010. Accessed on 10-Mar-2010 at http://hdl.handle.net/2451/29585.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Ipeirotis%2C+P.+Demographics+of+Mechanical+Turk.+Tech.+Rep.+CeDER-10-01%2C+2010.+Accessed+on+10-Mar-2010+at+http%3A%2F%2Fhdl.handle.net%2F2451%2F29585."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00025" class="&#xA;                references__item&#xA;            "><span class="references__note">Itti, L., Dhavale, N., and Pighin, F. Photorealistic attention-based gaze animation. In 2006 IEEE International Conference on Multimedia and Expo, IEEE (2006), 521--524.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Itti%2C+L.%2C+Dhavale%2C+N.%2C+and+Pighin%2C+F.+Photorealistic+attention-based+gaze+animation.+In+2006+IEEE+International+Conference+on+Multimedia+and+Expo%2C+IEEE+%282006%29%2C+521%2D%2D524."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/servlet/linkout?suffix=e_1_3_2_1_25_1&amp;dbid=16&amp;doi=10.1145%2F2207676.2207777&amp;key=10.1109%2FICME.2006.262440" target="_blank"><span class="visibility-hidden">Cross Ref</span><img class="simple-tooltip__block--b" data-title="Cross Ref" alt="Cross Ref" src="/templates/jsp/_ux3/_acm/images/crossref_icon.svg"></img></a></span></span></li><li id="ref-00026" class="&#xA;                references__item&#xA;            "><span class="references__note">Kelley, D., and Gorham, J. Effects of immediacy on recall of information. Communication Education (1988).<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Kelley%2C+D.%2C+and+Gorham%2C+J.+Effects+of+immediacy+on+recall+of+information.+Communication+Education+%281988%29."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00027" class="&#xA;                references__item&#xA;            "><span class="references__note">Kim, K., Brent Gillespie, R., and Martin, B. Head movement control in visually guided tasks: Postural goal and optimality. Computers in Biology and Medicine 37, 7 (2007), 1009--1019.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Kim%2C+K.%2C+Brent+Gillespie%2C+R.%2C+and+Martin%2C+B.+Head+movement+control+in+visually+guided+tasks%3A+Postural+goal+and+optimality.+Computers+in+Biology+and+Medicine+37%2C+7+%282007%29%2C+1009%2D%2D1019.+10.1016%2Fj.compbiomed.2006.08.019+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="https://dl.acm.org/doi/10.1016/j.compbiomed.2006.08.019" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00028" class="&#xA;                references__item&#xA;            "><span class="references__note">Kittur, A., Chi, E., and Suh, B. Crowdsourcing user studies with Mechanical Turk. In Proceeding of the twenty-sixth annual SIGCHI conference on Human factors in computing systems, ACM (2008), 453--456.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Kittur%2C+A.%2C+Chi%2C+E.%2C+and+Suh%2C+B.+Crowdsourcing+user+studies+with+Mechanical+Turk.+In+Proceeding+of+the+twenty-sixth+annual+SIGCHI+conference+on+Human+factors+in+computing+systems%2C+ACM+%282008%29%2C+453%2D%2D456.+10.1145%2F1357054.1357127+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="https://dl.acm.org/doi/10.1145/1357054.1357127" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00029" class="&#xA;                references__item&#xA;            "><span class="references__note">Lance, B., and Marsella, S. The expressive gaze model: Using gaze to express emotion. Computer Graphics and Applications, IEEE 30, 4 (2010), 62--73.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Lance%2C+B.%2C+and+Marsella%2C+S.+The+expressive+gaze+model%3A+Using+gaze+to+express+emotion.+Computer+Graphics+and+Applications%2C+IEEE+30%2C+4+%282010%29%2C+62%2D%2D73.+10.1109%2FMCG.2010.43+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="https://dl.acm.org/doi/10.1109/MCG.2010.43" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00030" class="&#xA;                references__item&#xA;            "><span class="references__note">Langton, S., and Bruce, V. Reflexive visual orienting in response to the social attention of others. Visual Cognition (1999).<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Langton%2C+S.%2C+and+Bruce%2C+V.+Reflexive+visual+orienting+in+response+to+the+social+attention+of+others.+Visual+Cognition+%281999%29."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00031" class="&#xA;                references__item&#xA;            "><span class="references__note">Lee, J., Marsella, S., Traum, D., Gratch, J., and Lance, B. The rickel gaze model: A window on the mind of a virtual human. In Intelligent Virtual Agents, Springer (2007), 296--303.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Lee%2C+J.%2C+Marsella%2C+S.%2C+Traum%2C+D.%2C+Gratch%2C+J.%2C+and+Lance%2C+B.+The+rickel+gaze+model%3A+A+window+on+the+mind+of+a+virtual+human.+In+Intelligent+Virtual+Agents%2C+Springer+%282007%29%2C+296%2D%2D303.+10.1007%2F978-3-540-74997-4_27+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="https://dl.acm.org/doi/10.1007/978-3-540-74997-4_27" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00032" class="&#xA;                references__item&#xA;            "><span class="references__note">Lee, S., Badler, J., and Badler, N. Eyes alive. In ACM Transactions on Graphics (TOG), vol. 21, ACM (2002), 637--644.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Lee%2C+S.%2C+Badler%2C+J.%2C+and+Badler%2C+N.+Eyes+alive.+In+ACM+Transactions+on+Graphics+%28TOG%29%2C+vol.+21%2C+ACM+%282002%29%2C+637%2D%2D644.+10.1145%2F566654.566629+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="https://dl.acm.org/doi/10.1145/566654.566629" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00033" class="&#xA;                references__item&#xA;            "><span class="references__note">Lester, J., Towns, S., Callaway, C., Voerman, J., and FitzGerald, P. Deictic and emotive communication in animated pedagogical agents. Embodied conversational agents (2000), 123--154. <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Lester%2C+J.%2C+Towns%2C+S.%2C+Callaway%2C+C.%2C+Voerman%2C+J.%2C+and+FitzGerald%2C+P.+Deictic+and+emotive+communication+in+animated+pedagogical+agents.+Embodied+conversational+agents+%282000%29%2C+123%2D%2D154.+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="https://dl.acm.org/doi/10.5555/371552.371560" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00034" class="&#xA;                references__item&#xA;            "><span class="references__note">Liu, C., Kay, D., and Chai, J. Awareness of partners eye gaze in situated referential grounding: An empirical study. 2nd Workshop on Eye Gaze in Intelligent Human Machine Interaction (2011).<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Liu%2C+C.%2C+Kay%2C+D.%2C+and+Chai%2C+J.+Awareness+of+partners+eye+gaze+in+situated+referential+grounding%3A+An+empirical+study.+2nd+Workshop+on+Eye+Gaze+in+Intelligent+Human+Machine+Interaction+%282011%29."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00035" class="&#xA;                references__item&#xA;            "><span class="references__note">Ma, X., Le, B., and Deng, Z. Perceptual analysis of talking avatar head movements: A quantitative perspective. CHI'11 (2011).  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Ma%2C+X.%2C+Le%2C+B.%2C+and+Deng%2C+Z.+Perceptual+analysis+of+talking+avatar+head+movements%3A+A+quantitative+perspective.+CHI%2711+%282011%29.+10.1145%2F1978942.1979337+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="https://dl.acm.org/doi/10.1145/1978942.1979337" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00036" class="&#xA;                references__item&#xA;            "><span class="references__note">Mason, M., Tatkow, E., and Macrae, C. The look of love: Gaze shifts and person perception. Psychological Science (2005), 236--239.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Mason%2C+M.%2C+Tatkow%2C+E.%2C+and+Macrae%2C+C.+The+look+of+love%3A+Gaze+shifts+and+person+perception.+Psychological+Science+%282005%29%2C+236%2D%2D239."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00037" class="&#xA;                references__item&#xA;            "><span class="references__note">Mehrabian, A. Immediacy: An indicator of attitudes in linguistic communication. Journal of Personality 34, 1 (1966), 26--34.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Mehrabian%2C+A.+Immediacy%3A+An+indicator+of+attitudes+in+linguistic+communication.+Journal+of+Personality+34%2C+1+%281966%29%2C+26%2D%2D34."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/servlet/linkout?suffix=e_1_3_2_1_37_1&amp;dbid=16&amp;doi=10.1145%2F2207676.2207777&amp;key=10.1111%2Fj.1467-6494.1966.tb01696.x" target="_blank"><span class="visibility-hidden">Cross Ref</span><img class="simple-tooltip__block--b" data-title="Cross Ref" alt="Cross Ref" src="/templates/jsp/_ux3/_acm/images/crossref_icon.svg"></img></a></span></span></li><li id="ref-00038" class="&#xA;                references__item&#xA;            "><span class="references__note">Meyer, A., Sleiderink, A., and Levelt, W. Viewing and naming objects: Eye movements during noun phrase production. Cognition 66, 2 (1998), B25-B33.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Meyer%2C+A.%2C+Sleiderink%2C+A.%2C+and+Levelt%2C+W.+Viewing+and+naming+objects%3A+Eye+movements+during+noun+phrase+production.+Cognition+66%2C+2+%281998%29%2C+B25-B33."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/servlet/linkout?suffix=e_1_3_2_1_38_1&amp;dbid=16&amp;doi=10.1145%2F2207676.2207777&amp;key=10.1016%2FS0010-0277%2898%2900009-2" target="_blank"><span class="visibility-hidden">Cross Ref</span><img class="simple-tooltip__block--b" data-title="Cross Ref" alt="Cross Ref" src="/templates/jsp/_ux3/_acm/images/crossref_icon.svg"></img></a></span></span></li><li id="ref-00039" class="&#xA;                references__item&#xA;            "><span class="references__note">Mutlu, B., Forlizzi, J., and Hodgins, J. A storytelling robot: Modeling and evaluation of human-like gaze behavior. In Humanoid Robots, 2006 6th IEEE-RAS International Conference on, IEEE (2006), 518--523.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Mutlu%2C+B.%2C+Forlizzi%2C+J.%2C+and+Hodgins%2C+J.+A+storytelling+robot%3A+Modeling+and+evaluation+of+human-like+gaze+behavior.+In+Humanoid+Robots%2C+2006+6th+IEEE-RAS+International+Conference+on%2C+IEEE+%282006%29%2C+518%2D%2D523."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/servlet/linkout?suffix=e_1_3_2_1_39_1&amp;dbid=16&amp;doi=10.1145%2F2207676.2207777&amp;key=10.1109%2FICHR.2006.321322" target="_blank"><span class="visibility-hidden">Cross Ref</span><img class="simple-tooltip__block--b" data-title="Cross Ref" alt="Cross Ref" src="/templates/jsp/_ux3/_acm/images/crossref_icon.svg"></img></a></span></span></li><li id="ref-00040" class="&#xA;                references__item&#xA;            "><span class="references__note">Nijholt, A., Heylen, D., and Vertegaal, R. Inhabited interfaces: Attentive conversational agents that help. In Proceedings 3rd international Conference on Disability, Virtual Reality and Associated Technologies-CDVRAT2000, Alghero, Sardinia (2000).<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Nijholt%2C+A.%2C+Heylen%2C+D.%2C+and+Vertegaal%2C+R.+Inhabited+interfaces%3A+Attentive+conversational+agents+that+help.+In+Proceedings+3rd+international+Conference+on+Disability%2C+Virtual+Reality+and+Associated+Technologies-CDVRAT2000%2C+Alghero%2C+Sardinia+%282000%29."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00041" class="&#xA;                references__item&#xA;            "><span class="references__note">Otteson, J., and Otteson, C. Effect of teacher's gaze on children's story recall. Perceptual and Motor Skills (1980).<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Otteson%2C+J.%2C+and+Otteson%2C+C.+Effect+of+teacher%27s+gaze+on+children%27s+story+recall.+Perceptual+and+Motor+Skills+%281980%29."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00042" class="&#xA;                references__item&#xA;            "><span class="references__note">Parke, F., and Waters, K. Computer facial animation. AK Peters Ltd, 2008. <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Parke%2C+F.%2C+and+Waters%2C+K.+Computer+facial+animation.+AK+Peters+Ltd%2C+2008.+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="https://dl.acm.org/doi/10.5555/1496380" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00043" class="&#xA;                references__item&#xA;            "><span class="references__note">Pelachaud, C., and Bilvi, M. Modelling gaze behavior for conversational agents. In Intelligent Virtual Agents, Springer (2003), 93--100.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Pelachaud%2C+C.%2C+and+Bilvi%2C+M.+Modelling+gaze+behavior+for+conversational+agents.+In+Intelligent+Virtual+Agents%2C+Springer+%282003%29%2C+93%2D%2D100."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/servlet/linkout?suffix=e_1_3_2_1_43_1&amp;dbid=16&amp;doi=10.1145%2F2207676.2207777&amp;key=10.1007%2F978-3-540-39396-2_16" target="_blank"><span class="visibility-hidden">Cross Ref</span><img class="simple-tooltip__block--b" data-title="Cross Ref" alt="Cross Ref" src="/templates/jsp/_ux3/_acm/images/crossref_icon.svg"></img></a></span></span></li><li id="ref-00044" class="&#xA;                references__item&#xA;            "><span class="references__note">Pelz, J., Hayhoe, M., and Loeber, R. The coordination of eye, head, and hand movements in a natural task. Experimental Brain Research 139, 3 (2001), 266--277.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Pelz%2C+J.%2C+Hayhoe%2C+M.%2C+and+Loeber%2C+R.+The+coordination+of+eye%2C+head%2C+and+hand+movements+in+a+natural+task.+Experimental+Brain+Research+139%2C+3+%282001%29%2C+266%2D%2D277."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/servlet/linkout?suffix=e_1_3_2_1_44_1&amp;dbid=16&amp;doi=10.1145%2F2207676.2207777&amp;key=10.1007%2Fs002210100745" target="_blank"><span class="visibility-hidden">Cross Ref</span><img class="simple-tooltip__block--b" data-title="Cross Ref" alt="Cross Ref" src="/templates/jsp/_ux3/_acm/images/crossref_icon.svg"></img></a></span></span></li><li id="ref-00045" class="&#xA;                references__item&#xA;            "><span class="references__note">Peters, C. Animating gaze shifts for virtual characters based on head movement propensity. In 2010 Second International Conference on Games and Virtual Worlds for Serious Applications, IEEE (2010), 11--18.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Peters%2C+C.+Animating+gaze+shifts+for+virtual+characters+based+on+head+movement+propensity.+In+2010+Second+International+Conference+on+Games+and+Virtual+Worlds+for+Serious+Applications%2C+IEEE+%282010%29%2C+11%2D%2D18.+10.1109%2FVS-GAMES.2010.15+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="https://dl.acm.org/doi/10.1109/VS-GAMES.2010.15" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00046" class="&#xA;                references__item&#xA;            "><span class="references__note">Rickel, J., and Johnson, W. Task-oriented collaboration with embodied agents in virtual worlds. Embodied conversational agents (2000), 95--122. <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Rickel%2C+J.%2C+and+Johnson%2C+W.+Task-oriented+collaboration+with+embodied+agents+in+virtual+worlds.+Embodied+conversational+agents+%282000%29%2C+95%2D%2D122.+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="https://dl.acm.org/doi/10.5555/371552.371559" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00047" class="&#xA;                references__item&#xA;            "><span class="references__note">Sherwood, J. Facilitative effects of gaze upon learning. Perceptual and Motor Skills (1987).<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Sherwood%2C+J.+Facilitative+effects+of+gaze+upon+learning.+Perceptual+and+Motor+Skills+%281987%29."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00048" class="&#xA;                references__item&#xA;            "><span class="references__note">Steptoe, W., and Steed, A. High-fidelity avatar eye-representation. In Virtual Reality Conference, 2008. VR'08. IEEE, IEEE (2008), 111--114.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Steptoe%2C+W.%2C+and+Steed%2C+A.+High-fidelity+avatar+eye-representation.+In+Virtual+Reality+Conference%2C+2008.+VR%2708.+IEEE%2C+IEEE+%282008%29%2C+111%2D%2D114."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/servlet/linkout?suffix=e_1_3_2_1_48_1&amp;dbid=16&amp;doi=10.1145%2F2207676.2207777&amp;key=10.1109%2FVR.2008.4480759" target="_blank"><span class="visibility-hidden">Cross Ref</span><img class="simple-tooltip__block--b" data-title="Cross Ref" alt="Cross Ref" src="/templates/jsp/_ux3/_acm/images/crossref_icon.svg"></img></a></span></span></li><li id="ref-00049" class="&#xA;                references__item&#xA;            "><span class="references__note">Tartaro, A., and Cassell, J. Authorable virtual peers for autism spectrum disorders. In Proceedings of the Combined workshop on Language-Enabled Educational Technology and Development and Evaluation for Robust Spoken Dialogue Systems at the 17th European Conference on Artificial Intellegence, Citeseer (2006).<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Tartaro%2C+A.%2C+and+Cassell%2C+J.+Authorable+virtual+peers+for+autism+spectrum+disorders.+In+Proceedings+of+the+Combined+workshop+on+Language-Enabled+Educational+Technology+and+Development+and+Evaluation+for+Robust+Spoken+Dialogue+Systems+at+the+17th+European+Conference+on+Artificial+Intellegence%2C+Citeseer+%282006%29."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span></span></li><li id="ref-00050" class="&#xA;                references__item&#xA;            "><span class="references__note">Vertegaal, R. The gaze groupware system: mediating joint attention in multiparty communication and collaboration. In Proceedings of the SIGCHI conference on Human factors in computing systems: the CHI is the limit, ACM (1999), 294--301.  <span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Vertegaal%2C+R.+The+gaze+groupware+system%3A+mediating+joint+attention+in+multiparty+communication+and+collaboration.+In+Proceedings+of+the+SIGCHI+conference+on+Human+factors+in+computing+systems%3A+the+CHI+is+the+limit%2C+ACM+%281999%29%2C+294%2D%2D301.+10.1145%2F302979.303065+"target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="https://dl.acm.org/doi/10.1145/302979.303065" target="_blank"><span class="visibility-hidden">Digital Library</span><img class="simple-tooltip__block--b" data-title="Digital Library" alt="Digital Library" src="/templates/jsp/_ux3/_acm/images/DL_icon.svg"></img></a></span></span></li><li id="ref-00051" class="&#xA;                references__item&#xA;            "><span class="references__note">Zangemeister, W., and Stark, L. Types of gaze movement: variable interactions of eye and head movements. Experimental Neurology 77, 3 (1982), 563--577.<span class="references__suffix"><a class="google-scholar" href="http://scholar.google.com/scholar?hl=en&q=Zangemeister%2C+W.%2C+and+Stark%2C+L.+Types+of+gaze+movement%3A+variable+interactions+of+eye+and+head+movements.+Experimental+Neurology+77%2C+3+%281982%29%2C+563%2D%2D577."target="_blank"><span class="visibility-hidden">Google Scholar</span><img src="/specs/products/acm/images/googleScholar.svg" class="simple-tooltip__block--b" alt="Google Scholar"/></a></span><span class="references__suffix"><a href="/servlet/linkout?suffix=e_1_3_2_1_51_1&amp;dbid=16&amp;doi=10.1145%2F2207676.2207777&amp;key=10.1016%2F0014-4886%2882%2990228-X" target="_blank"><span class="visibility-hidden">Cross Ref</span><img class="simple-tooltip__block--b" data-title="Cross Ref" alt="Cross Ref" src="/templates/jsp/_ux3/_acm/images/crossref_icon.svg"></img></a></span></span></li></ol></div>
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3TagWidget" data-widget-id="2a75f978-170a-4843-8722-e878a1b77fbc" class="citation article__section article__index-terms">
+        
+
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="graphQueryWidget" data-widget-id="4ca2ed65-717e-4e67-bbb5-6578b8c6acac" class="colored-block__title">
+        
+
+
+
+        
+        <h2 id="sec-terms" class="section__title left-bordered-title">Index Terms</h2>
+
+        </div>
+    
+
+<ol class="rlist organizational-chart"><li><h6>Designing effective gaze mechanisms for virtual agents</h6><ol class="rlist level-1  ch-1"><li><div data-background="#F5F5F5" style="background-color:#F5F5F5;box-shadow:none"><p><a href="/topic/ccs2012/10003120?ContentGroupKey=10.1145%2F2207676&amp;expand=all">Human-centered computing</a></p></div><ol class="rlist level-2 ch-1 hasNodes"><li><div data-background="#F5F5F5" style="background-color:#F5F5F5;box-shadow:none"><p><a href="/topic/ccs2012/10003120.10003121?ContentGroupKey=10.1145%2F2207676&amp;expand=all">Human computer interaction (HCI)</a></p></div><ol class="rlist level-3 ch-0"></ol></li></ol></li></ol></li></ol>
+
+        </div>
+    
+
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="graphQueryWidget" data-widget-id="91639479-279a-46e3-b7c7-f902a3fd7945" class="toc__section accordion-tabbed__tab">
+        
+
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3RelatedDigitalObject" data-widget-id="98838540-5c38-436f-9b98-0e292765fbe4" class="accordion-tabbed__content">
+        
+
+
+
+        
+        
+
+        </div>
+    
+
+
+        </div>
+    
+
+
+
+
+        
+        <div class="article__section article__comments">
+
+
+
+        
+        <div class="colored-block__title"> <h2 id="sec-comments" class="section__title left-bordered-title">Comments</h2> </div>
+
+
+
+
+        
+        <div id="disqus_thread"></div><a href="https://dl.acm.org/doi/10.1145/2207676.2207777#disqus_thread" class="disqus-count hidden"></a><script>var disqus_config = function () {
+    this.page.url = window.location.href;
+    this.page.identifier = '10.1145/2207676.2207777';
+    this.page.remote_auth_s3 = '';
+    this.page.api_key = 'MmWj4FlWmXk20FJsmWMXbTJoZT7TVzTsc9Rw0yrJp3L1ZNXZuvmxF3F5rFIF8RqQ';
+};
+(function () {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://acm-prod.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();</script><noscript>Please enable JavaScript to view the<a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><script id="dsq-count-scr" src="//acm-prod.disqus.com/count.js" async=""></script>
+</div>
+</div><div class="pill-content"><div id="pill-access"><div class="pill-access__content">
+
+
+
+        
+        <div class="pill-access__content"><div class="section__separator"><h3 class="left-bordered-title">Login options</h3><div class="section__content"><p class="info--text">Check if you have access through your login credentials or your institution to get full access on this article.</p><a href="/action/showLogin?redirectUri=/doi/10.1145/2207676.2207777" title="Sign in" class="btn big btn--inverse">Sign in</a></div></div><div class="section__separator"><h3 class="left-bordered-title">Full Access</h3><div class="section__content"><a href="/action/publisherEcommerceHelper?doi=10.1145/2207676.2207777&amp;redirectUri=https://dl.acm.org/doi/10.1145/2207676.2207777" title="Get this Publication" class="btn blue big">Get this Publication</a></div></div></div>
+</div></div><div id="pill-information"><div class="tab tab--flex"><ul role="tablist" class="rlist tab__nav"><li role="presentation" class="active"><a id="pill-information__contentcon" href="#pill-information__content" aria-controls="pill-information__content" role="tab" data-toggle="tab" title="Information" aria-selected="true" data-simple-tab-id="" tabindex="0" class="active">Information</a></li><li role="presentation"><a id="pill-authors__contentcon" href="#pill-authors__content" aria-controls="pill-authors__content" role="tab" data-toggle="tab" title="Authors" aria-selected="false" data-simple-tab-id="" tabindex="-1">Contributors</a></li></ul><ul class="rlist tab__content"><li id="pill-information__content" aria-labelledby="pill-information__contentcon" role="tabpanel" aria-hidden="false" tabindex="0" class="tab__pane active"><div class="pill-information__content"><div class="section__separator"><h3 class="left-bordered-title">Published in</h3><div class="section__content cover-image-proceeding">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3CoverImage" data-widget-id="7b8bd09e-8112-4266-b136-2f71ab2b109c" class="left-side-image">
+        
+
+
+
+        
+        <div class="cover-image"><div class="cover-image__image"><img src="/specs/products/acm/releasedAssets/images/Default_image_lazy.svg" data-src="/cms/attachment/94073802-88f2-43f5-b029-2fe91d5a9880/2207676.cover.jpg" alt="ACM Conferences cover image" class="lazy"/></div><div class="cover-image__details"><div class="book-meta">CHI '12: Proceedings of the SIGCHI Conference on Human Factors in Computing Systems</div><div class="cover-date">May 2012</div><div class="cover-pages">3276  pages</div><div class="cover-image__details-extra"><div class="flex-container"><span class="bold">ISBN:</span><span class="space">9781450310154</span></div><div class="flex-container"><span class="bold">DOI:</span><span class="space">10.1145/2207676</span></div><div class="flex-container"><div>
+
+
+<ul class="rlist--inline loa truncate-list" title="list of authors" data-lines="2">
+   <li class="label"><b>General Chair: </b></li>
+   <li><a href="/profile/81100049091" title="Joseph A. Konstan"><img class="author-picture" src="/do/10.1145/contrib-81100049091/rel-imgonly/konstan-award-photo.jpg" alt="Joseph A. Konstan profile image"/><span>Joseph A. Konstan</span></a><span class="loa_author_inst hidden">
+         <p data-doi="10.1145/contrib-81100049091">University of Minnesota</p></span><span>, </span></li>
+   <li class="label"><b>Program Chairs: </b></li>
+   <li><a href="/profile/81502760764" title="Ed H. Chi"><img class="author-picture" src="/pb-assets/icons/DOs/default-profile-1543932446943.svg" alt="Ed H Chi profile image"/><span>Ed H. Chi</span></a><span class="loa_author_inst hidden">
+         <p data-doi="10.1145/contrib-81502760764">Google</p></span><span>, </span></li>
+   <li><a href="/profile/99659476681" title="Kristina Höök"><img class="author-picture" src="/pb-assets/icons/DOs/default-profile-1543932446943.svg" alt="Kristina  H&#x00f6;&#x00f6;k profile image"/><span>Kristina Höök</span></a><span class="loa_author_inst hidden">
+         <p data-doi="10.1145/contrib-99659476681">Mobile Life at KTH</p></span></li>
+</ul>
+
+
+
+
+
+</div></div></div><div class="pb-dropzone" data-pb-dropzone="metadataDisplayExtra" title="metadataDisplayExtra"></div></div></div>
+
+        </div>
+    
+<p class="copyrights small">Copyright © 2012 ACM</p></div></div><div class="section__separator proceedingInfo-sponsors hidden"><h3 class="left-bordered-title">Sponsors</h3><ul class="proceedingInfo-sponsors__list"></ul></div><div class="section__separator proceedingInfo-inCoop hidden"><h3 class="left-bordered-title">In-Cooperation</h3><ul class="proceedingInfo-inCoop__list"></ul></div><div class="section__separator"><h3 class="left-bordered-title">Publisher</h3><div class="section__content publisher"><div class="inlineBlock"></div><div class="inlineBlock"><p class="publisher__name">Association for Computing Machinery</p><p class="publisher__address">New York, NY, United States</p></div></div></div>
+
+
+
+        
+        <div class="section__separator"><h3 class="left-bordered-title">Publication History</h3><div class="section__content"><ul class="rlist"><li>Published: 5 May 2012</li></ul></div></div>
+
+
+
+
+        
+        <!-- rightslink drop zone-->
+
+
+
+        
+        <div class="section__separator"><h3 class="left-bordered-title"> Permissions</h3><div class="section__content"><p class="info--text">Request permissions about this article.</p><a href="/servlet/linkout?type=rightslinkBasic&amp;url=ContentIdType%3Ddoi%26isbn%3D9781450310154%26contentID%3D10.1145%252F2207676.2207777%26bookTitle%3DProceedings%2Bof%2Bthe%2BSIGCHI%2BConference%2Bon%2BHuman%2BFactors%2Bin%2BComputing%2BSystems" rel="noopener" target="_blank" class="btn big stretched blue">Request Permissions</a></div></div>
+
+
+
+<div class="section__separator"><h3 class="left-bordered-title">Author Tags</h3><div class="section__content"><div class="tags-widget"><div class="tags-widget__content"><ul class="rlist--inline"><li><a href="/keyword/gaze?expand=all" title="gaze" class="badge-type">gaze</a></li><li><a href="/keyword/nonverbal behavior?expand=all" title="nonverbal behavior" class="badge-type">nonverbal behavior</a></li><li><a href="/keyword/affiliation?expand=all" title="affiliation" class="badge-type">affiliation</a></li><li><a href="/keyword/learning?expand=all" title="learning" class="badge-type">learning</a></li><li><a href="/keyword/virtual agents?expand=all" title="virtual agents" class="badge-type">virtual agents</a></li></ul></div></div></div></div><div class="section__separator"><h3 class="left-bordered-title">Qualifiers</h3><ul class="qualifiers__list"><li class="capitalized qualifiers__list__item">research-article</li></ul></div><div class="section__separator proceedingInfo-conference hidden"><h3 class="left-bordered-title">Conference</h3></div>
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3AcceptanceRatesWidget" data-widget-id="daac1568-1d03-438e-a4c9-c9df280908b7" class="section__separator">
+        
+
+
+
+        
+        <div class="acceptance-rates__section"><h2 id="acceptance-rates" aria-expanded="true" class="left-bordered-title">Acceptance Rates</h2><div class="accordion-tabbed__content"><div class="acceptance-rates__heading"><h6>CHI '12 
+Paper Acceptance Rate<span> 370 </span>of<span> 1,577 </span>submissions,<span> 23%</span></h6><h6>Overall Acceptance Rate<span> 7,181 </span>of<span> 30,669 </span>submissions,<span> 23%</span></h6></div><div class="more-link more-link--without-border"><a href="/doi/proceedings/10.1145/2207676#acceptance-rates" title="More">More<i aria-hidden="true" class="icon-Arrow-Stroke"></i></a></div></div></div>
+
+        </div>
+    
+
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3UpcomingConferencesWidget" data-widget-id="452ce022-9919-435e-ab40-1386965a30bd" class="section__separator">
+        
+
+
+
+        
+        
+
+        </div>
+    
+<div class="section__separator funding-sources hidden"><h3 class="left-bordered-title">Funding Sources</h3><ul class="funding-list"></ul></div></div></li><li id="pill-authors__content" aria-labelledby="pill-authors__contentcon" role="tabpanel" aria-hidden="true" class="tab__pane"><div class="pill-authors__content"><div class="section__separator"><div class="pill-authors-list"><div class="expandable-accordion"><div class="pill-normalized-authors">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3BibliometricsWidget" data-widget-id="b8ab2a42-427c-48b4-a4b0-de7e4ca80aa8" class="contrib-metrics-bibliometrics">
+        
+
+
+
+        
+        <div class="contrib-metrics-wrapper accordion-tabbed__tab">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3HTMLWidget" data-widget-id="fef8712e-21ff-4a15-97d6-535afe5b5fbb" class="clearfix">
+        
+
+
+
+        
+        <h2 class="left-bordered-title pull-left">Contributor Metrics</h2><a class="pull-right expand-all" href="/" aria-expanded="false">Expand All </a>
+
+        </div>
+    
+<div data-sectionname="Authors" data-numberOfLiToShwo="4"><div class="contrib-metrics-bibliometrics"><div class="accordion authors-accordion"><ul class="accordion-tabbed rlist loa clearfix"><li class="accordion-tabbed__tab accordion__closed grid-item"><div class="accordion-tabbed__control"><a href="javascript:void(0)" aria-controls="adItem-0" aria-expanded="false" aria-haspopup="true" id="adItem-0_Ctrl" class="accordion-tabbed__arrow"></a>
+    <input class="contrib-id" type="hidden" value="10.1145/contrib-81481650937"/>
+    <div class="auth-image">
+        
+            <a href="/profile/81481650937">
+                <img src="/do/10.1145/contrib-81481650937/pill-img-name-aff/Headshot1.jpg" alt='Sean Andrist profile image' title='Sean Andrist profile image'>
+            </a>    
+        
+    </div>
+    <div class="auth-info" style="word-break: break-word; width: 70%;">
+        <span class="auth-name">
+            <a href="/profile/81481650937" title='Sean Andrist'>Sean Andrist</a>
+        </span>
+        <span class="info--text auth-institution">
+             Microsoft Research 
+        </span>
+    </div>
+</div><div aria-labelledby="adItem-0_Ctrl" style="display: none;" id="adItem-0" class="accordion-tabbed__content"><ul class="rlist auth-metrics metrics__list separated-block--dashed--top"><li><span class="metric-name">Publication Years</span><span class="metric-value">2010 - 2020</span></li><li><span class="metric-name">Publication counts</span><span class="metric-value">21</span></li><li><span class="metric-name">Available for Download</span><span class="metric-value">18</span></li><li><span class="metric-name">Citation count</span><span class="metric-value">270</span></li><li><span class="metric-name">Downloads (cumulative)</span><span class="metric-value">6,057</span></li><li><span class="metric-name">Downloads (6 weeks)</span><span class="metric-value">187</span></li><li><span class="metric-name">Downloads (12 months)</span><span class="metric-value">1,485</span></li><li><span class="metric-name">Average Citation per Article</span><span class="metric-value">13</span></li><li><span class="metric-name">Average Downloads per Article</span><span class="metric-value">337</span></li></ul><div class="view-profile separated-block--dashed--top"><a href="/profile/81481650937" title="View Full Profile" class="btn transparent stretched">View Full Profile<i aria-hidden="true" class="icon-export"></i></a></div></div></li><li class="accordion-tabbed__tab accordion__closed grid-item"><div class="accordion-tabbed__control"><a href="javascript:void(0)" aria-controls="adItem-1" aria-expanded="false" aria-haspopup="true" id="adItem-1_Ctrl" class="accordion-tabbed__arrow"></a>
+    <input class="contrib-id" type="hidden" value="10.1145/contrib-81384600775"/>
+    <div class="auth-image">
+        
+            <a href="/profile/81384600775">
+                <img src="/pb-assets/icons/DOs/default-profile-1543932446943.svg" alt='Tomislav  Pej&#x0161;a profile image' title='Tomislav  Pej&#x0161;a profile image'>
+            </a>    
+        
+    </div>
+    <div class="auth-info" style="word-break: break-word; width: 70%;">
+        <span class="auth-name">
+            <a href="/profile/81384600775" title='Tomislav  Pej&#x0161;a'>Tomislav  Pej&#x0161;a</a>
+        </span>
+        <span class="info--text auth-institution">
+             University of Wisconsin-Madison 
+        </span>
+    </div>
+</div><div aria-labelledby="adItem-1_Ctrl" style="display: none;" id="adItem-1" class="accordion-tabbed__content"><ul class="rlist auth-metrics metrics__list separated-block--dashed--top"><li><span class="metric-name">Publication Years</span><span class="metric-value">2008 - 2016</span></li><li><span class="metric-name">Publication counts</span><span class="metric-value">11</span></li><li><span class="metric-name">Available for Download</span><span class="metric-value">8</span></li><li><span class="metric-name">Citation count</span><span class="metric-value">134</span></li><li><span class="metric-name">Downloads (cumulative)</span><span class="metric-value">2,983</span></li><li><span class="metric-name">Downloads (6 weeks)</span><span class="metric-value">92</span></li><li><span class="metric-name">Downloads (12 months)</span><span class="metric-value">643</span></li><li><span class="metric-name">Average Citation per Article</span><span class="metric-value">12</span></li><li><span class="metric-name">Average Downloads per Article</span><span class="metric-value">373</span></li></ul><div class="view-profile separated-block--dashed--top"><a href="/profile/81384600775" title="View Full Profile" class="btn transparent stretched">View Full Profile<i aria-hidden="true" class="icon-export"></i></a></div></div></li><li class="accordion-tabbed__tab accordion__closed grid-item"><div class="accordion-tabbed__control"><a href="javascript:void(0)" aria-controls="adItem-2" aria-expanded="false" aria-haspopup="true" id="adItem-2_Ctrl" class="accordion-tabbed__arrow"></a>
+    <input class="contrib-id" type="hidden" value="10.1145/contrib-81310500023"/>
+    <div class="auth-image">
+        
+            <a href="/profile/81310500023">
+                <img src="/do/10.1145/contrib-81310500023/pill-img-name-aff/Mutlu.jpg" alt='Bilge Mutlu profile image' title='Bilge Mutlu profile image'>
+            </a>    
+        
+    </div>
+    <div class="auth-info" style="word-break: break-word; width: 70%;">
+        <span class="auth-name">
+            <a href="/profile/81310500023" title='Bilge Mutlu'>Bilge Mutlu</a>
+        </span>
+        <span class="info--text auth-institution">
+             University of Wisconsin-Madison 
+        </span>
+    </div>
+</div><div aria-labelledby="adItem-2_Ctrl" style="display: none;" id="adItem-2" class="accordion-tabbed__content"><ul class="rlist auth-metrics metrics__list separated-block--dashed--top"><li><span class="metric-name">Publication Years</span><span class="metric-value">2005 - 2020</span></li><li><span class="metric-name">Publication counts</span><span class="metric-value">79</span></li><li><span class="metric-name">Available for Download</span><span class="metric-value">69</span></li><li><span class="metric-name">Citation count</span><span class="metric-value">1,980</span></li><li><span class="metric-name">Downloads (cumulative)</span><span class="metric-value">44,631</span></li><li><span class="metric-name">Downloads (6 weeks)</span><span class="metric-value">1,293</span></li><li><span class="metric-name">Downloads (12 months)</span><span class="metric-value">9,671</span></li><li><span class="metric-name">Average Citation per Article</span><span class="metric-value">25</span></li><li><span class="metric-name">Average Downloads per Article</span><span class="metric-value">647</span></li></ul><div class="view-profile separated-block--dashed--top"><a href="/profile/81310500023" title="View Full Profile" class="btn transparent stretched">View Full Profile<i aria-hidden="true" class="icon-export"></i></a></div></div></li><li class="accordion-tabbed__tab accordion__closed grid-item"><div class="accordion-tabbed__control"><a href="javascript:void(0)" aria-controls="adItem-3" aria-expanded="false" aria-haspopup="true" id="adItem-3_Ctrl" class="accordion-tabbed__arrow"></a>
+    <input class="contrib-id" type="hidden" value="10.1145/contrib-81100342764"/>
+    <div class="auth-image">
+        
+            <a href="/profile/81100342764">
+                <img src="/pb-assets/icons/DOs/default-profile-1543932446943.svg" alt='Michael L. Gleicher profile image' title='Michael L. Gleicher profile image'>
+            </a>    
+        
+    </div>
+    <div class="auth-info" style="word-break: break-word; width: 70%;">
+        <span class="auth-name">
+            <a href="/profile/81100342764" title='Michael L. Gleicher'>Michael L. Gleicher</a>
+        </span>
+        <span class="info--text auth-institution">
+             University of Wisconsin-Madison 
+        </span>
+    </div>
+</div><div aria-labelledby="adItem-3_Ctrl" style="display: none;" id="adItem-3" class="accordion-tabbed__content"><ul class="rlist auth-metrics metrics__list separated-block--dashed--top"><li><span class="metric-name">Publication Years</span><span class="metric-value">1988 - 2020</span></li><li><span class="metric-name">Publication counts</span><span class="metric-value">116</span></li><li><span class="metric-name">Available for Download</span><span class="metric-value">79</span></li><li><span class="metric-name">Citation count</span><span class="metric-value">5,091</span></li><li><span class="metric-name">Downloads (cumulative)</span><span class="metric-value">63,297</span></li><li><span class="metric-name">Downloads (6 weeks)</span><span class="metric-value">717</span></li><li><span class="metric-name">Downloads (12 months)</span><span class="metric-value">4,676</span></li><li><span class="metric-name">Average Citation per Article</span><span class="metric-value">44</span></li><li><span class="metric-name">Average Downloads per Article</span><span class="metric-value">801</span></li></ul><div class="view-profile separated-block--dashed--top"><a href="/profile/81100342764" title="View Full Profile" class="btn transparent stretched">View Full Profile<i aria-hidden="true" class="icon-export"></i></a></div></div></li></ul></div></div></div>
+
+
+
+</div>
+
+        </div>
+    
+</div><div aria-hidden="true" class="pill-all-authors authors-accordion disable-truncate hidden"> <div class="border-bottom clearfix"> <div id="sb-1"> <ul data-lines="2" ariaa-label="authors" data-position="beforeLast" class="rlist--inline loa truncate-list"> <li class="label"><b>Authors: </b></li> <li class="loa__item"><a id="arnd_7058159843478732_Ctrl" href="javascript:void(0);" aria-controls="arnd_7058159843478732" aria-haspopup="true" class="author-name" title="Sean Andrist"><span class="loa__author-info"> <div class="author-data"><span class="loa__author-name"><span><img class="author-picture" src="/do/10.1145/contrib-81481650937/rel-imgonly/headshot1.jpg" alt="Sean Andrist profile image"/>Sean Andrist</span></span></div><span class="loa_author_inst"> <p data-pill-inst="arnd_7058159843478732" data-doi="10.1145/contrib-81481650937">University of Wisconsin-Madison, Madison, Wisconsin, United States</p></span></span></a><div id="arnd_7058159843478732" aria-labelledby="arnd_7058159843478732_Ctrl" class="author-info"> <div class="author-info__header" data-pill="d331766e152"></div> <div class="author-info__body"> <p data-pill-inst="d331766e152" data-doi="10.1145/contrib-81481650937">University of Wisconsin-Madison, Madison, Wisconsin, United States</p><a href="/profile/81481650937" class="btn blue stretched">View Profile</a> </div> </div><span>, </span></li> <li class="loa__item"><a id="arnd_7058159843732776_Ctrl" href="javascript:void(0);" aria-controls="arnd_7058159843732776" aria-haspopup="true" class="author-name" title="Tomislav Pejsa"><span class="loa__author-info"> <div class="author-data"><span class="loa__author-name"><span><img class="author-picture" src="/pb-assets/icons/DOs/default-profile-1543932446943.svg" alt="Tomislav Pej&#x0161;a profile image"/>Tomislav Pejsa</span></span></div><span class="loa_author_inst"> <p data-pill-inst="arnd_7058159843732776" data-doi="10.1145/contrib-81384600775">University of Wisconsin-Madison, Madison, Wisconsin, United States</p></span></span></a><div id="arnd_7058159843732776" aria-labelledby="arnd_7058159843732776_Ctrl" class="author-info"> <div class="author-info__header" data-pill="d331766e173"></div> <div class="author-info__body"> <p data-pill-inst="d331766e173" data-doi="10.1145/contrib-81384600775">University of Wisconsin-Madison, Madison, Wisconsin, United States</p><a href="/profile/81384600775" class="btn blue stretched">View Profile</a> </div> </div><span>, </span></li> <li class="loa__item"><a id="arnd_7058159843902896_Ctrl" href="javascript:void(0);" aria-controls="arnd_7058159843902896" aria-haspopup="true" class="author-name" title="Bilge Mutlu"><span class="loa__author-info"> <div class="author-data"><span class="loa__author-name"><span><img class="author-picture" src="/do/10.1145/contrib-81310500023/rel-imgonly/mutlu.jpg" alt="Bilge Mutlu profile image"/>Bilge Mutlu</span></span></div><span class="loa_author_inst"> <p data-pill-inst="arnd_7058159843902896" data-doi="10.1145/contrib-81310500023">University of Wisconsin-Madison, Madison, Wisconsin, United States</p></span></span></a><div id="arnd_7058159843902896" aria-labelledby="arnd_7058159843902896_Ctrl" class="author-info"> <div class="author-info__header" data-pill="d331766e194"></div> <div class="author-info__body"> <p data-pill-inst="d331766e194" data-doi="10.1145/contrib-81310500023">University of Wisconsin-Madison, Madison, Wisconsin, United States</p><a href="/profile/81310500023" class="btn blue stretched">View Profile</a> </div> </div><span>, </span></li> <li class="loa__item"><a id="arnd_7058159844145421_Ctrl" href="javascript:void(0);" aria-controls="arnd_7058159844145421" aria-haspopup="true" class="author-name" title="Michael Gleicher"><span class="loa__author-info"> <div class="author-data"><span class="loa__author-name"><span><img class="author-picture" src="/pb-assets/icons/DOs/default-profile-1543932446943.svg" alt="Michael L. Gleicher profile image"/>Michael Gleicher</span></span></div><span class="loa_author_inst"> <p data-pill-inst="arnd_7058159844145421" data-doi="10.1145/contrib-81100342764">University of Wisconsin - Madison, Madison, Madison, Wisconsin, United States</p></span></span></a><div id="arnd_7058159844145421" aria-labelledby="arnd_7058159844145421_Ctrl" class="author-info"> <div class="author-info__header" data-pill="d331766e215"></div> <div class="author-info__body"> <p data-pill-inst="d331766e215" data-doi="10.1145/contrib-81100342764">University of Wisconsin - Madison, Madison, Madison, Wisconsin, United States</p><a href="/profile/81100342764" class="btn blue stretched">View Profile</a> </div> </div> </li> <li><a href="#pill-authors__contentcon" data-slide-target="#pill-information" data-full-screen="false" data-ctrl-res="screen-xlg" data-tab="pill-authors__content" data-label="<i class='icon-Icon_Information'&gt;</i&gt; Information &amp; Authors" class="loa__link w-slide__btn tab-link slide-active">Authors Info &amp; Affiliations </a></li> </ul> </div> </div> </div></div></div></div><div class="section__separator"><h3 class="left-bordered-title">Other Metrics</h3><div class="section__content badges"><a href="#pill-bibliometrics__contentcon" data-slide-target="#pill-metric" data-tab="pill-bibliometrics__content" data-ctrl-res="screen-xlg" data-full-screen="false" data-label="&lt;i class=&quot;icon-metric &quot;&gt;&lt;/i&gt;Bibliometrics &amp; Citations" class="btn big stretched btn--inverse w-slide__btn tab-link">View Article Metrics</a></div></div></div></li></ul></div></div><div id="pill-metric"><div class="tab tab--flex"><ul role="tablist" class="rlist tab__nav"><li role="presentation" class="active"><a id="pill-bibliometrics__contentcon" href="#pill-bibliometrics__content" aria-controls="pill-bibliometrics__content" role="tab" data-toggle="tab" title="Bibliometrics" aria-selected="true" data-simple-tab-id="" tabindex="0" class="active">Bibliometrics</a></li><li role="presentation"><a id="pill-citations__contentcon" href="#pill-citations__content" data-ajaxurl="/action/ajaxShowCitedBy?widgetId=f69d88a8-b404-4aae-83a9-9acea4426d78&amp;ajax=true&amp;doi=10.1145%2F2207676.2207777&amp;pbContext=%3Btopic%3Atopic%3Aconference-collections%26gt%3Bchi%3Bissue%3Aissue%3Adoi%5C%3A10.1145%2F2207676%3Bpage%3Astring%3AArticle%2FChapter+View%3BsubPage%3Astring%3AAbstract%3Bwgroup%3Astring%3AACM+Publication+Websites%3BgroupTopic%3Atopic%3Aacm-pubtype%26gt%3Bproceeding%3Barticle%3Aarticle%3Adoi%5C%3A10.1145%2F2207676.2207777%3Bcsubtype%3Astring%3AConference+Proceedings%3Bwebsite%3Awebsite%3Adl-site%3Bctype%3Astring%3ABook+Content%3Bjournal%3Ajournal%3Aacmconferences%3BpageGroup%3Astring%3APublication+Pages" data-component="pubAjaxContent" data-ajaxtarget="#pill-citations__content .citedBy" aria-controls="pill-citations__content" role="tab" data-toggle="tab" title="Citations" aria-selected="false" data-simple-tab-id="" tabindex="-1" class="loadAjax loadLazyAjax">Citations<span class="citation-count count-bubble">31</span></a></li></ul><ul class="rlist tab__content"><li id="pill-bibliometrics__content" aria-labelledby="pill-bibliometrics__contentcon" role="tabpanel" aria-hidden="false" tabindex="0" class="tab__pane active"><div class="pill-bibliometrics__content"><div class="section__separator"><h3 class="left-bordered-title">Article Metrics</h3><div class="section__content"><ul class="rlist--inline article-metrics"><li><div class="article-metric citation"><div class="metric-value"><span>31</span></div>Total Citations</div><a href="#pill-citations__contentcon" data-tab="pill-citations__content" data-slide-target="#pill-metric" data-full-screen="false" data-ctrl-res="screen-xlg" class="primary-blue-color w-slide__btn tab-link slide-active">View Citations</a></li><li><div class="article-metric download"><div class="metric-value"><span>875</span></div>Total Downloads</div></li></ul><ul class="rlist metrics__list"><li><span class="metric-name">Downloads (Last 12 months)</span><span class="metric-value">103</span></li><li><span class="metric-name">Downloads (Last 6 weeks)</span><span class="metric-value">25</span></li></ul></div></div><div class="section__separator"><h3 class="left-bordered-title">Other Metrics</h3><div class="section__content"><a href="#pill-authors__contentcon" data-slide-target="#pill-information" data-ctrl-res="screen-xlg" data-tab="pill-authors__content" data-full-screen="false" data-label="&lt;i class=&quot;icon-Icon_Information &quot;&gt;&lt;/i&gt;Information &amp; Authors" class="btn big stretched btn--inverse w-slide__btn tab-link">View Author Metrics</a></div></div></div></li><li id="pill-citations__content" aria-labelledby="pill-citations__contentcon" role="tabpanel" aria-hidden="true" class="tab__pane"><div class="pill-citations__content"><div class="section__separator"><h3 class="left-bordered-title">Cited By</h3><ol class="rlist references__list citedBy"></ol></div></div></li></ul></div></div><div id="pill-formats"><div class="pill-formats__content"><div class="section__separator"><h3 class="left-bordered-title">PDF Format</h3><div class="section__content"><p class="info--text">View or Download as a PDF file.</p><a href="/doi/pdf/10.1145/2207676.2207777" title="View or Download as a PDF file" class="btn big stretched red"><i aria-hidden="true" class="icon-pdf-file"></i>PDF</a></div></div><div class="section__separator"><h3 class="left-bordered-title">eReader</h3><div class="section__content"><p class="info--text">View online with eReader.</p><a href="/doi/epdf/10.1145/2207676.2207777" title="View online with eReader" class="btn big stretched blue no-margin-top"><i aria-hidden="true" class="icon-eReader"></i>eReader</a></div></div><div class="section__separator de-format hidden"><h3 class="left-bordered-title">Digital Edition</h3><div class="section__content"><p class="info--text">View this article in digital edition.</p><a href="#" title="View Digital Edition" class="btn big stretched blue"><i aria-hidden="true" class="icon-open-book"></i>View Digital Edition</a></div></div></div></div><div id="pill-references"><div class="pill-references__content"></div></div><div id="pill-media"><div class="tab tab--flex"><ul role="tablist" class="rlist tab__nav"><li role="presentation" class="active"><a id="pill-fig__contentcon" href="#pill-fig__content" aria-controls="pill-fig__content" role="tab" data-toggle="tab" title="Figures" aria-selected="true" data-simple-tab-id="" tabindex="0" class="active">Figures</a></li><li role="presentation"><a id="pill-media__contentcon" href="#pill-media__content" aria-controls="pill-media__content" role="tab" data-toggle="tab" title="Other" aria-selected="false" data-simple-tab-id="" tabindex="-1">Other</a></li></ul><div class="pill-figures__content"><ul class="rlist tab__content"><li id="pill-fig__content" aria-labelledby="pill-fig__contentcon" role="tabpanel" aria-hidden="false" tabindex="0" class="tab__pane active"></li><li id="pill-media__content" aria-labelledby="pill-media__contentcon" role="tabpanel" aria-hidden="true" class="tab__pane"><ul class="rlist pill-media__content"></ul></li></ul></div></div></div><div id="pill-tables"><div class="pill-tables__content"></div></div><div id="pill-share"><div class="pill-share__content"><div class="section__separator"><h3 class="left-bordered-title">Share this Publication link</h3><div class="section__content copy__text-wrapper"><fieldset><p id="shareable-link__text" class="copy__text">https://dl.acm.org/doi/10.1145/2207676.2207777</p><button type="submit" class="btn big btn--inverse copy__btn"><i aria-hidden="true" class="icon-pages"></i>Copy Link</button></fieldset></div></div><div class="section__separator"><h3 class="left-bordered-title">Share on Social Media</h3><div class="section__content"><div class="visible-service-name">
+
+
+
+        
+        <!-- Go to www.addthis.com/dashboard to customize your tools --><script type="text/javascript" async="async" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-4faab26f2cff13a7"></script><div class="share__block share__inline-links"><div class="pb-dropzone" data-pb-dropzone="shareBlock" title="shareBlock"></div><span class="sr-only">Share on</span><div class="rlist--inline addthis addthis_toolbox addthis_default_style addthis_32x32_style"><a role="link" class="addthis_button_twitter"></a><a role="link" class="addthis_button_linkedin"></a><a role="link" class="addthis_button_reddit"></a><a role="link" class="addthis_button_facebook"></a><a role="link" class="addthis_button_email"></a><div class="pb-dropzone" data-pb-dropzone="share-additional-links" title="share-additional-links"></div></div></div>
+</div></div></div></div></div></div></div><div class="col-sm-2 pill-section"><div data-stop-on=".more-issue__section" class="pill-icons"><ul class="rlist pill-list"><li title="Information &amp; Authors"><a href="javascript:void(0);" data-slide-target="#pill-information" data-ctrl-res="screen-xlg" data-full-screen="false" title="Information and Authors" data-label="&lt;i class=&quot;icon-Icon_Information&quot;&gt;&lt;/i&gt;Information &amp; Authors" class="w-slide__btn pill-information"><i aria-hidden="true" class="icon-Icon_Information"></i></a></li><li title="Bibliometrics &amp; Citations"><a href="javascript:void(0);" data-slide-target="#pill-metric" data-ctrl-res="screen-xlg" data-full-screen="false" data-label="&lt;i class=&quot;icon-metric &quot;&gt;&lt;/i&gt;Bibliometrics &amp; Citations" title="Bibliometrics and Citations" class="w-slide__btn pill-metric"><i aria-hidden="true" class="icon-metric"></i></a></li><li title="View Options"><a href="javascript:void(0);" data-slide-target="#pill-formats" data-ctrl-res="screen-xlg" data-full-screen="false" title="View Options" data-label="&lt;i class=&quot;icon-views&quot;&gt;&lt;/i&gt;View Options" class="w-slide__btn pill-formats"><i aria-hidden="true" class="icon-views"></i></a></li><li title="References"><a href="javascript:void(0);" data-slide-target="#pill-references" data-ctrl-res="screen-xlg" data-full-screen="false" title="References" data-label="&lt;i class=&quot;icon-Icon_Links-References&quot;&gt;&lt;/i&gt;References" class="w-slide__btn pill-references"><i aria-hidden="true" class="icon-Icon_Links-References"></i><span class="refNum count-bubble">0<span class="sr-only">References</span></span></a></li><li title="Media"><a href="javascript:void(0);" data-slide-target="#pill-media" data-ctrl-res="screen-xlg" data-full-screen="false" title="Media" data-label="&lt;i class=&quot;icon-Icon_Images&quot;&gt;&lt;/i&gt;Media" data-ajaxtarget="#pill-fig__content" data-component="pubAjaxContent" data-action="onResponse" data-ajaxurl="/action/ajaxShowFigures?widgetId=f69d88a8-b404-4aae-83a9-9acea4426d78&amp;ajax=true&amp;doi=10.1145%2F2207676.2207777&amp;pbContext=%3Btopic%3Atopic%3Aconference-collections%26gt%3Bchi%3Bissue%3Aissue%3Adoi%5C%3A10.1145%2F2207676%3Bpage%3Astring%3AArticle%2FChapter+View%3BsubPage%3Astring%3AAbstract%3Bwgroup%3Astring%3AACM+Publication+Websites%3BgroupTopic%3Atopic%3Aacm-pubtype%26gt%3Bproceeding%3Barticle%3Aarticle%3Adoi%5C%3A10.1145%2F2207676.2207777%3Bcsubtype%3Astring%3AConference+Proceedings%3Bwebsite%3Awebsite%3Adl-site%3Bctype%3Astring%3ABook+Content%3Bjournal%3Ajournal%3Aacmconferences%3BpageGroup%3Astring%3APublication+Pages" class="w-slide__btn loadAjax-auto pill-media"><i aria-hidden="true" class="icon-Icon_Images"></i></a></li><li title="Tables"><a href="javascript:void(0);" data-slide-target="#pill-tables" data-ctrl-res="screen-xlg" title="Tables" data-full-screen="false" data-label="&lt;i class=&quot;icon-table&quot;&gt;&lt;/i&gt;Tables" data-ajaxtarget=".pill-tables__content" data-component="pubAjaxContent" data-action="onResponse" data-ajaxurl="/action/ajaxShowTables?widgetId=f69d88a8-b404-4aae-83a9-9acea4426d78&amp;ajax=true&amp;doi=10.1145%2F2207676.2207777&amp;pbContext=%3Btopic%3Atopic%3Aconference-collections%26gt%3Bchi%3Bissue%3Aissue%3Adoi%5C%3A10.1145%2F2207676%3Bpage%3Astring%3AArticle%2FChapter+View%3BsubPage%3Astring%3AAbstract%3Bwgroup%3Astring%3AACM+Publication+Websites%3BgroupTopic%3Atopic%3Aacm-pubtype%26gt%3Bproceeding%3Barticle%3Aarticle%3Adoi%5C%3A10.1145%2F2207676.2207777%3Bcsubtype%3Astring%3AConference+Proceedings%3Bwebsite%3Awebsite%3Adl-site%3Bctype%3Astring%3ABook+Content%3Bjournal%3Ajournal%3Aacmconferences%3BpageGroup%3Astring%3APublication+Pages" class="w-slide__btn loadAjax-auto pill-tables"><i aria-hidden="true" class="icon-table"></i></a></li><li title="Share"><a href="javascript:void(0);" data-slide-target="#pill-share" data-ctrl-res="screen-xlg" data-full-screen="false" title="Share" data-label="&lt;i class=&quot;icon-Icon_Share&quot;&gt;&lt;/i&gt;Share" class="w-slide__btn pill-share"><i aria-hidden="true" class="icon-Icon_Share"></i></a></li></ul></div></div></div></article><div id="figure-viewer" data-ux3-wrapper="figure-viewer" data-ux3-transformed-by="figureInit" data-ux3-role="parent" role="dialog" class="figure-viewer"><div class="figure-viewer__reg__top clearfix"><div class="figure-viewer__top__right"><button class="figure-viewer__label__zoom icon-zoom-out zoom-out hidden"><span class="sr-only">Zoom out</span></button><a title="Open Caption" href="#" class="figure-viewer__ctrl figure-viewer__ctrl__caption"><i aria-hidden="true" class="icon-Icon_Information"></i></a><a href="#" data-ux3-role="controller" role="button" title="close" class="figure-viewer__ctrl figure-viewer__ctrl__close"><i aria-hidden="true" class="icon-cancel-bold"><span class="sr-only">Close Figure Viewer</span></i></a></div><h4 class="figure-viewer__top__center"></h4><div class="figure-viewer__top__left"><a href="#" role="button" title="Browse All" class="figure-viewer__ctrl__browse"><i aria-hidden="true" class="icon-grid-3"><span class="sr-only">Browse All</span></i></a><a href="#" role="button" title="Return" class="figure-viewer__ctrl__return is-hidden"><i aria-hidden="true" class="icon-cancel-bold"><span class="sr-only">Return</span></i></a></div></div><div class="figure-viewer__reg__center"><div class="figure-viewer__cent__left"><div class="figure-viewer__hold__fig"><div class="holder"></div></div><div class="figure-viewer__hold__list"><h3 class="figure-viewer__browse-title"></h3><div class="flex-grid"></div></div></div><div class="figure-viewer__cent__right"><div class="figure-viewer__caption-header"><h3 class="figure-viewer__caption-label">Caption</h3><a title="Close Caption" href="#" class="pull-right figure-viewer__close-caption figure-viewer__ctrl__caption"><i aria-hidden="true" class="icon-cancel-bold"></i></a></div><div class="figure-viewer__caption-wrapper"><div class="figure-viewer__title"><span class="figure-viewer__title__text"></span></div><div class="figure-viewer__hold__figcap"></div></div></div></div></div>
+
+        </div>
+    
+
+
+
+
+        
+        <div class="separated-block--dashed align-center"><a href="/doi/proceedings/10.1145/2207676" style="text-transform: capitalize;" class="btn btn--inverse big">View Table of Contents</a></div>
+
+
+
+
+        
+        <div class="ux-modal-container"><div id="exportCitation" class="modal"><div class="modal__dialog"><div class="modal__header"><button type="button" data-dismiss="modal" class="close"><i aria-hidden="true" class="icon-close_thin"></i></button><h2>Export Citation</h2></div><div class="modal__body"><div class="csl-wrapper copy__text-wrapper"><form action="/action/exportCiteProcCitation" method="post" target="_blank"><input type="hidden" name="content" value=""/><input type="hidden" name="dois" value=""/><input type="hidden" name="format" value=""/><fieldset class="input-group"><label for="citation-format" class="visibility-hidden">Select Citation format</label><select id="citation-format" data-csl-doi="10.1145/2207676.2207777"><option value="bibtex" data-format="bibTex">BibTeX</option><option value="endNote" data-format="endNote">EndNote</option><option value="acm" data-format="text">ACM Ref</option></select><span class="select-arrow"><i class="icon-bottom-arrow"></i></span></fieldset><pre class="copy__text csl-response"></pre><div id="export-warning"></div><div class="pull-right"><ul class="rlist--inline separator"><li><a href="javascript:void(0)" role="menuitem" title="Download citation" class="download__btn disabled"><label class="visibility-hidden">Download citation</label><i aria-hidden="true" class="icon-Icon_Download"></i></a></li><li><a href="javascript:void(0)" role="menuitem" title="Copy citation" class="copy__btn disabled"><label class="visibility-hidden">Copy citation</label><i aria-hidden="true" class="icon-pages"></i><input type="hidden" id="doisLimitNumber" value="-1"/></a></li></ul></div></form></div></div></div></div></div>
+</main>
+
+
+
+
+        
+        <footer class="footer">
+
+
+
+        
+        <div class="back-to-top clearfix">
+    <i class="icon-arrow_u_p"></i>
+</div>
+
+
+
+
+        
+        <div class="footer-top">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="ux3-layout-widget" data-widget-id="81a18a14-d709-41fd-9bb6-25a7fc1e13df" class="container">
+        
+
+
+
+        
+        <div class="row sitemap">
+
+
+
+        
+        <div class="col-sm-2 col-xs-6 sitemap__column">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3HTMLWidget" data-widget-id="5b00ef28-f63b-4518-bd06-da82035f86ca" class="sitemap__data">
+        
+
+
+
+        
+        <h6>Categories</h6>
+<ul class="rlist">
+    <li><a href="/journals">Journals</a></li>
+    <li><a href="/magazines">Magazines</a></li>
+    <li><a href="/acmbooks">Books</a></li>
+    <li><a href="/proceedings">Proceedings</a></li>
+    <li><a href="/sigs">SIGs</a></li>
+    <li><a href="/conferences">Conferences</a></li>
+    <li><a href="/collections">Collections</a></li>
+    <li><a href="/people">People</a></li>
+</ul>
+
+        </div>
+    
+</div><div class="col-sm-4 col-xs-6 sitemap__column">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3HTMLWidget" data-widget-id="731f98d3-e996-490d-a071-e9b966b32e2d" class="sitemap__data">
+        
+
+
+
+        
+        <h6>About</h6>
+<ul class="rlist">
+    <li><a href="/about">About ACM Digital Library</a></li>
+    <li><a href="/about/access">Subscription Information</a></li>
+    <li><a href="https://www.acm.org/publications/authors/information-for-authors">Author Guidelines</a></li>
+    <li><a href="/about/access">Using ACM Digital Library</a></li>
+    <li><a href="/about/content#sec2">All Holdings within the ACM Digital Library</a></li>
+    <li><a href="/ccs">ACM Computing Classification System</a></li>
+</ul>
+
+        </div>
+    
+</div><div class="col-sm-3 col-xs-6 sitemap__column">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3HTMLWidget" data-widget-id="d4ed040d-22e8-481c-a7ef-0cac141f5246" class="sitemap__data">
+        
+
+
+
+        
+        <h6>Join</h6>
+<ul class="rlist">
+    <li><a href="https://www.acm.org/membership/join">Join ACM</a></li>
+    <li><a href="https://www.acm.org/special-interest-groups/join">Join SIGs</a></li>
+    <li><a href="https://www.acm.org/publications/subscribe">Subscribe to Publications</a></li>
+    <li><a href="https://libraries.acm.org/">Institutions and Libraries</a></li>
+</ul>
+
+        </div>
+    
+</div><div class="col-sm-3 col-xs-6 sitemap__column">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="UX3HTMLWidget" data-widget-id="4a649bf1-cf3f-472c-b764-dc3ab0cf4310" class="sitemap__data">
+        
+
+
+
+        
+        <h6>Connect</h6>
+<ul class="rlist social-media__connect">
+    <li><a href="/cdn-cgi/l/email-protection#46222a6b3223272b062e376827252b68293421" title="icon-mail"><i class="icon-Icon_mail" aria-hidden="true"></i><span>Contact</span></a></li>
+    <li><a href="https://www.facebook.com/AssociationForComputingMachinery/" title="icon-facebook"><i class="icon-facebook" aria-hidden="true"></i><span>Facebook</span></a></li>
+    <li><a href="https://twitter.com/acmdl" title="icon-twitter"><i class="icon-twitter" aria-hidden="true"></i><span>Twitter</span></a></li>
+    <li><a href="https://www.linkedin.com/company/association-for-computing-machinery/" title="icon-linkedin"><i class="icon-linkedin" aria-hidden="true"></i><span>Linkedin</span></a></li>
+    <!--li><a href="#" title="icon-Rss"><i class="icon-Rss" aria-hidden="true"></i><span>RSS</span></a></li-->
+</ul>
+
+        </div>
+    
+</div>
+</div>
+
+        </div>
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="ux3-layout-widget" data-widget-id="6e6da9b7-371e-4ea0-827e-8de5915b8cd5" class="footer-bottom text-onDark">
+        
+
+
+
+        
+        <div class="container"><div class="row"><div class="col-md-8 col-sm-6 footer__copyright-wrapper">
+
+
+
+        
+        <div class="copyright">The ACM Digital Library is published by the Association for Computing Machinery. Copyright © 2020 ACM, Inc.</div>
+<ul class="rlist--inline">
+    <li><a href="https://libraries.acm.org/digital-library/policies#anchor3">Terms of Usage</a></li>
+    <li><a href="https://www.acm.org/about-acm/privacy-policy">Privacy Policy</a></li>
+    <li><a href="https://www.acm.org/code-of-ethics">Code of Ethics</a></li>
+</ul>
+</div><div class="col-md-4 col-sm-6 footer__logos-wrapper">
+
+
+
+        
+        <div class="logos">
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="ux3-general-image" data-widget-id="42d543b3-ff9d-4f92-bf03-6d1fa00da8c6" class="footer__logo1">
+        
+
+
+
+        
+        <a href="/" title="ACM Digital Library Logo"><img id="" alt="ACM Digital Library Logo" src="/pb-assets/images/logo1-1545045194317.png"/></a>
+
+        </div>
+    
+
+
+
+
+
+
+
+
+
+
+        <div data-widget-def="ux3-general-image" data-widget-id="5a0bc5df-cd95-408f-8ae5-8b1f40746519" class="footer__logo2">
+        
+
+
+
+        
+        <a href="https://www.acm.org" title="ACM Logo"><img id="" alt="ACM Logo" src="/pb-assets/images/logo2-1545045488167.png"/></a>
+
+        </div>
+    
+</div>
+</div></div></div>
+
+        </div>
+    
+
+
+
+
+        
+        <!-- Mopinion Pastea.se  start --><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">(function(){var id="7zt4vp6rxi2bbpxuy9yzabob4fy2enwmumr";var js=document.createElement("script");var pbBtn=document.querySelector('.admin-bar-disclosure');if(!window.PB){js.setAttribute("src","//deploy.mopinion.com/js/pastease.js");document.getElementsByTagName("head")[0].appendChild(js);var t=setInterval(function(){try{new Pastease.load(id);clearInterval(t)}catch(e){}},50)}})();
+    </script><!-- Mopinion Pastea.se end -->
+</footer>
+
+
+
+
+        
+        <script type="text/javascript">
+(function(h,o,t,j,a,r){
+    h.hj=h.hj||function()
+    
+    {(h.hj.q=h.hj.q||[]).push(arguments)}
+    ;
+    h._hjSettings={hjid:1290436,hjsv:6};
+    a=o.getElementsByTagName('head')[0];
+    r=o.createElement('script');r.async=1;
+    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+    a.appendChild(r);
+})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+
+
+
+        
+        <script type="text/javascript">
+    (function (w, d) {
+    var b = d.getElementsByTagName('body')[0];
+    var s = d.createElement("script");
+    var v = !("IntersectionObserver" in w) ? "8.17.0" : "10.19.0";
+    s.async = true; // This includes the script as async. See the "recipes" section for more information about async loading of LazyLoad.
+    s.src = "https://cdn.jsdelivr.net/npm/vanilla-lazyload@" + v + "/dist/lazyload.min.js";
+    w.lazyLoadOptions = {elements_selector: ".lazy", "class_loaded": "image-lazy-loaded"};
+    b.appendChild(s);
+}(window, document));
+</script>
+
+
+
+
+        
+        
+
+
+
+
+        
+        <div class="cookiePolicy-popup"><div class="cookiePolicy-popup__header"><i aria-hidden="true" class="icon-cookie"></i><h5 class="cookiePolicy-popup__title">About Cookies On This Site</h5></div><div class="cookiePolicy-popup__body clearfix"><p><p>We use cookies to ensure that we give you the best experience on our website.</p>
+<p><a href="https://www.acm.org/privacy-policy" class="blue link">Learn more</a></p></p><a href="#" class="btn blue cookiePolicy-popup__close pull-right">Got it!</a></div></div>
+
+
+
+
+        
+        
+
+
+
+        
+    
+
+        </div>
+    </div>
+
+
+
+
+    <script>if (typeof define !== 'undefined' && define.amd)
+    define.amd = false</script><script src="/products/acm/releasedAssets/js/main.bundle-9ac1359d6b0cbbd98171.js"></script><script>(function (w, d) {
+    var b = d.getElementsByTagName('body')[0];
+    var s = d.createElement("script");
+    var v = !("IntersectionObserver" in w) ? "8.17.0" : "10.19.0";
+    s.async = true; // This includes the script as async. See the "recipes" section for more information about async loading of LazyLoad.
+    s.src = "https://cdn.jsdelivr.net/npm/vanilla-lazyload@" + v + "/dist/lazyload.min.js";
+    w.lazyLoadOptions = {elements_selector: ".lazy", "class_loaded": "image-lazy-loaded"};
+    b.appendChild(s);
+}(window, document));</script>
+
+
+<script type="text/javascript" src="/wro/j3i3~product.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

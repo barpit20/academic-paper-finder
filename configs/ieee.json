@@ -1,0 +1,50 @@
+{
+    "name": "ieee",
+    "urls": {
+        "list": {
+            "_url": "http://localhost:8000/ieee",
+            "url": "https://ieeexplore.ieee.org/rest/search",
+            "method": "POST",
+            "send-json": true,
+            "expect-json": true,
+            "per-page": 100,
+            "start-page": 1,
+            "params": {
+                "page": "pageNumber",
+                "per-page": "rowsPerPage"
+            }
+        },
+        "paper": {
+            "_url": "http://localhost:8000/ieee/{identifier}",
+            "url": "https://ieeexplore.ieee.org/document/{identifier}",
+            "expect-json": true
+        },
+        "pdf": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber={identifier}"
+    },
+    "sleep_between_requests": 0.1,
+    "preprocessing": {
+        "paper": [
+            {
+                "type": "embedded_json",
+                "regex": "global\\.document\\.metadata=([\\s\\S]+?);\\s{3}"
+            }
+        ]
+    },
+    "json": {
+        "list": {
+            "identifiers": "records.*.articleNumber",
+            "total_number_of_results": "totalRecords"
+        },
+        "paper": {
+            "authors": "authors.*.name",
+            "keywords": "keywords.*.kwd",
+            "title": "title",
+            "abstract": "abstract",
+            "publication_date": "publicationDate",
+            "published_in": "publicationTitle",
+            "citations": "metrics.citationCountPaper",
+            "isbn": "isbn.*.value",
+            "doi": "doi"
+        }
+    }
+}

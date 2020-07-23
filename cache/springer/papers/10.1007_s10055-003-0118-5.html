@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="The implementation and evaluation of a virtual haptic back"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="A virtual haptic back (VHB) model has been developed by a cross-disciplinary team of researchers at Ohio University. Haptics give the human the sense of touch and force from virtual computer..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/7/2.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="The implementation and evaluation of a virtual haptic back"/>
+
+    <meta name="dc.source" content="Virtual Reality 2004 7:2"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2004-02-05"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2004 Springer-Verlag London Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="A virtual haptic back (VHB) model has been developed by a cross-disciplinary team of researchers at Ohio University. Haptics give the human the sense of touch and force from virtual computer models. The objective is to create a tool for medical and related education whereby students can train in the difficult art of palpation using virtual reality before approaching human subjects. Palpation is the art of medical diagnosis through the sense of touch. Haptic anatomy could be a key area in the future of medical school training; our goal is to add science to the art of palpation to improve osteopathic, physical therapy and massage therapy training for students and practitioners. Modelling of the VHB took place in two steps. First, Cartesian back data was collected via the Metrecom Skeletal Analysis System (SAS) digitiser. The back of a prone human subject was digitised, giving an array of three-dimensional points. Several methods were considered to smooth out the back data. Spline fitting with matched first and second derivates was the chosen method. Once an acceptable graphical model was created, haptic feedback was added using the PHANToM haptic interface, allowing the human user to explore and feel the virtual back. Experienced and novice palpators formally evaluated the VHB to give us feedback for improvements. In addition, four Doctors of Osteopathy informally interacted with our model and gave verbal feedback. Our experts all suggested modelling underlying muscles and skeletal structure in addition to the skin layer for more realism. Once this is accomplished we will further program somatic dysfunction of various types in the VHB for students to diagnose. This article contributes to the state of the art in virtual haptic anatomy. While other research groups are working in this area, our work is the first specifically aimed towards osteopathic medicine, physical therapy, and massage therapy students and practitioners."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2004-02-05"/>
+
+    <meta name="prism.volume" content="7"/>
+
+    <meta name="prism.number" content="2"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="94"/>
+
+    <meta name="prism.endingPage" content="102"/>
+
+    <meta name="prism.copyright" content="2004 Springer-Verlag London Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-003-0118-5"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-003-0118-5"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-003-0118-5.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-003-0118-5"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="The implementation and evaluation of a virtual haptic back"/>
+
+    <meta name="citation_volume" content="7"/>
+
+    <meta name="citation_issue" content="2"/>
+
+    <meta name="citation_publication_date" content="2004/04"/>
+
+    <meta name="citation_online_date" content="2004/02/05"/>
+
+    <meta name="citation_firstpage" content="94"/>
+
+    <meta name="citation_lastpage" content="102"/>
+
+    <meta name="citation_article_type" content="Original Article"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-003-0118-5"/>
+
+    <meta name="DOI" content="10.1007/s10055-003-0118-5"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-003-0118-5"/>
+
+    <meta name="description" content="A virtual haptic back (VHB) model has been developed by a cross-disciplinary team of researchers at Ohio University. Haptics give the human the sense of to"/>
+
+    <meta name="dc.creator" content="Kerry L. Holland"/>
+
+    <meta name="dc.creator" content="Robert L. Williams"/>
+
+    <meta name="dc.creator" content="Robert R. Conatser"/>
+
+    <meta name="dc.creator" content="John N. Howell"/>
+
+    <meta name="dc.creator" content="Dennis L. Cade"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comp Graph; citation_author=null Brooks; citation_volume=24; citation_publication_date=1990; citation_pages=177; citation_id=CR1"/>
+
+    <meta name="citation_reference" content="citation_journal_title=IEEE Trans Biomed Engin; citation_author=null Burdea; citation_volume=46; citation_publication_date=1999; citation_pages=1253; citation_doi=10.1109/10.790503; citation_id=CR2"/>
+
+    <meta name="citation_reference" content="Cai Y, Wang S and Sato M (1997) Human-scale direct motion instruction system device for education systems. IEICE Trans Info Sys E80-D(2):212&#8211;217"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Proceedings of the IEEE; citation_author=null Delingette; citation_volume=86; citation_publication_date=1998; citation_pages=512; citation_doi=10.1109/5.662876; citation_id=CR4"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Haptic virtual environments for blind; citation_author=null Jansson; citation_volume=people; citation_publication_date=1999; citation_pages=exploratory; citation_id=CR5"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Comp Graph; citation_author=null Langrana; citation_volume=21; citation_publication_date=1997; citation_pages=451; citation_doi=10.1016/S0097-8493(97)00021-6; citation_id=CR6"/>
+
+    <meta name="citation_reference" content="Heinrichs WL, Srivastava S, Brown J, Latombe J-C, Montgomery K, Temkin B and Dev P (2000) A steroscopic palpable and deformable model: Lucy 2.5. In: Proceedings of the Third Visible Human Conference, Bethesda, MD, 5&#8211;6 October 2000"/>
+
+    <meta name="citation_reference" content="Mikropoulos TA, Nikolou E (1996) A virtual hand with tactile feedback for virtual learning environments. In: Proceedings of the World Conference on Educational Multimedia and Hypermedia, Boston, MA, 17&#8211;22 June 1996"/>
+
+    <meta name="citation_reference" content="citation_journal_title=International Journal of Virtual Reality; citation_author=null North; citation_volume=2; citation_publication_date=1996; citation_pages=17; citation_id=CR9"/>
+
+    <meta name="citation_reference" content="SenseAble Technologies (1997) Ghost SDK Programmer&#8217;s Guide Version 3.0, SenseAble Technologies Inc., Woburn, MA"/>
+
+    <meta name="citation_reference" content="Shaffer D, Meglan D, Ferrell M and Dawson S (1999) Virtual rounds: simulation-based education in procedural medicine. In: Proceedings of the 1999 SPIE Battlefield Biomedical Technologies Conference, Orlando, FL 3712:99&#8211;108"/>
+
+    <meta name="citation_reference" content="Stredney D, Wiet GJ, Yagel R, Sessanna D, Kurzion Y, Fontana M, Shareef N, Levin M, Martin K and Okamura A (1998) A comparative analysis of integrating visual representations with haptic displays. In: Proceedings of MMVR6, San Diego, CA, January 1998"/>
+
+    <meta name="citation_reference" content="Williams II RL, Chen M-Y and Seaton JM (2001) Haptics-augmented high school physics tutorials. International Journal of Virtual Reality 5(1)"/>
+
+    <meta name="citation_author" content="Kerry L. Holland"/>
+
+    <meta name="citation_author_institution" content="Department of Mechanical Engineering, Ohio University, Athens, USA"/>
+
+    <meta name="citation_author" content="Robert L. Williams"/>
+
+    <meta name="citation_author_email" content="williar4@ohio.edu"/>
+
+    <meta name="citation_author_institution" content="Department of Mechanical Engineering, Ohio University, Athens, USA"/>
+
+    <meta name="citation_author" content="Robert R. Conatser"/>
+
+    <meta name="citation_author_institution" content="Department of Biomedical Sciences, Ohio University, Athens, USA"/>
+
+    <meta name="citation_author" content="John N. Howell"/>
+
+    <meta name="citation_author_institution" content="Department of Biomedical Sciences, Ohio University, Athens, USA"/>
+
+    <meta name="citation_author" content="Dennis L. Cade"/>
+
+    <meta name="citation_author_institution" content="Department of Physical Therapy, Ohio University, Athens, USA"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-003-0118-5&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2004/04/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-003-0118-5"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="The implementation and evaluation of a virtual haptic back"/>
+        <meta property="og:description" content="A virtual haptic back (VHB) model has been developed by a cross-disciplinary team of researchers at Ohio University. Haptics give the human the sense of touch and force from virtual computer models. The objective is to create a tool for medical and related education whereby students can train in the difficult art of palpation using virtual reality before approaching human subjects. Palpation is the art of medical diagnosis through the sense of touch. Haptic anatomy could be a key area in the future of medical school training; our goal is to add science to the art of palpation to improve osteopathic, physical therapy and massage therapy training for students and practitioners. Modelling of the VHB took place in two steps. First, Cartesian back data was collected via the Metrecom Skeletal Analysis System (SAS) digitiser. The back of a prone human subject was digitised, giving an array of three-dimensional points. Several methods were considered to smooth out the back data. Spline fitting with matched first and second derivates was the chosen method. Once an acceptable graphical model was created, haptic feedback was added using the PHANToM haptic interface, allowing the human user to explore and feel the virtual back. Experienced and novice palpators formally evaluated the VHB to give us feedback for improvements. In addition, four Doctors of Osteopathy informally interacted with our model and gave verbal feedback. Our experts all suggested modelling underlying muscles and skeletal structure in addition to the skin layer for more realism. Once this is accomplished we will further program somatic dysfunction of various types in the VHB for students to diagnose. This article contributes to the state of the art in virtual haptic anatomy. While other research groups are working in this area, our work is the first specifically aimed towards osteopathic medicine, physical therapy, and massage therapy students and practitioners."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>The implementation and evaluation of a virtual haptic back | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-003-0118-5","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"Haptics, Haptic interface, Haptics-augmented training, Virtual haptic anatomy, Virtual haptic back","kwrd":["Haptics","Haptic_interface","Haptics-augmented_training","Virtual_haptic_anatomy","Virtual_haptic_back"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-003-0118-5","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-003-0118-5","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=118;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-003-0118-5">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            The implementation and evaluation of a virtual haptic back
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-003-0118-5.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-003-0118-5.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">Original Article</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2004-02-05" itemprop="datePublished">05 February 2004</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">The implementation and evaluation of a virtual haptic back</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Kerry_L_-Holland" data-author-popup="auth-Kerry_L_-Holland">Kerry L. Holland</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Ohio University" /><meta itemprop="address" content="grid.20627.31, 0000000106687841, Department of Mechanical Engineering, Ohio University, Athens, OH 45701-2979, USA" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Robert_L_-Williams" data-author-popup="auth-Robert_L_-Williams" data-corresp-id="c1">Robert L. Williams II<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Ohio University" /><meta itemprop="address" content="grid.20627.31, 0000000106687841, Department of Mechanical Engineering, Ohio University, Athens, OH 45701-2979, USA" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Robert_R_-Conatser" data-author-popup="auth-Robert_R_-Conatser">Robert R. Conatser Jr.</a></span><sup class="u-js-hide"><a href="#Aff2">2</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Ohio University" /><meta itemprop="address" content="grid.20627.31, 0000000106687841, Department of Biomedical Sciences, Ohio University, Athens, OH, USA" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-John_N_-Howell" data-author-popup="auth-John_N_-Howell">John N. Howell</a></span><sup class="u-js-hide"><a href="#Aff2">2</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Ohio University" /><meta itemprop="address" content="grid.20627.31, 0000000106687841, Department of Biomedical Sciences, Ohio University, Athens, OH, USA" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Dennis_L_-Cade" data-author-popup="auth-Dennis_L_-Cade">Dennis L. Cade</a></span><sup class="u-js-hide"><a href="#Aff3">3</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Ohio University" /><meta itemprop="address" content="grid.20627.31, 0000000106687841, Department of Physical Therapy, Ohio University, Athens, OH, USA" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 7</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">94</span>–<span itemprop="pageEnd">102</span>(<span data-test="article-publication-year">2004</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">106 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">6 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                    
+                        <li class="c-article-metrics-bar__item">
+                            <p class="c-article-metrics-bar__count">0 <span class="c-article-metrics-bar__label">Altmetric</span></p>
+                        </li>
+                    
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-003-0118-5/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>A virtual haptic back (VHB) model has been developed by a cross-disciplinary team of researchers at Ohio University. Haptics give the human the sense of touch and force from virtual computer models. The objective is to create a tool for medical and related education whereby students can train in the difficult art of palpation using virtual reality before approaching human subjects. Palpation is the art of medical diagnosis through the sense of touch. Haptic anatomy could be a key area in the future of medical school training; our goal is to add science to the art of palpation to improve osteopathic, physical therapy and massage therapy training for students and practitioners. Modelling of the VHB took place in two steps. First, Cartesian back data was collected via the Metrecom Skeletal Analysis System (SAS) digitiser. The back of a prone human subject was digitised, giving an array of three-dimensional points. Several methods were considered to smooth out the back data. Spline fitting with matched first and second derivates was the chosen method. Once an acceptable graphical model was created, haptic feedback was added using the PHANToM haptic interface, allowing the human user to explore and feel the virtual back. Experienced and novice palpators formally evaluated the VHB to give us feedback for improvements. In addition, four Doctors of Osteopathy informally interacted with our model and gave verbal feedback. Our experts all suggested modelling underlying muscles and skeletal structure in addition to the skin layer for more realism. Once this is accomplished we will further program somatic dysfunction of various types in the VHB for students to diagnose. This article contributes to the state of the art in virtual haptic anatomy. While other research groups are working in this area, our work is the first specifically aimed towards osteopathic medicine, physical therapy, and massage therapy students and practitioners.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec2"><div class="c-article-section" id="Sec2-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec2">Introduction</h2><div class="c-article-section__content" id="Sec2-content"><p>Haptics, the science of touch, is being applied in virtual reality environments to increase realism. An example of this is virtual reality computer games that use a force-reflecting joystick.</p><p>Haptics has been applied recently to education, most notably in medical education. In the Stanford Visible Female project (Heinrichs, et al. [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 7" title="Heinrichs WL, Srivastava S, Brown J, Latombe J-C, Montgomery K, Temkin B and Dev P (2000) A steroscopic palpable and deformable model: Lucy 2.5. In: Proceedings of the Third Visible Human Conference, Bethesda, MD, 5–6 October 2000" href="/article/10.1007/s10055-003-0118-5#ref-CR7" id="ref-link-section-d53763e377">7</a>], a 3D stereoscopic visualisation of the female pelvis has been developed from numerous slices of 2D pelvis data. Further, haptic feedback was enabled via the PHANToM haptic interface, allowing the user to interact with and feel the virtual model. No haptic implementation details are given in the paper. The Interventional Cardiology Training Simulator [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 13" title="Williams II RL, Chen M-Y and Seaton JM (2001) Haptics-augmented high school physics tutorials. International Journal of Virtual Reality 5(1)" href="/article/10.1007/s10055-003-0118-5#ref-CR13" id="ref-link-section-d53763e380">13</a>] links technical simulation with specific medical education content. A virtual reality-based simulator prototype for the diagnosis of prostate cancer has been developed using the PHANToM haptic interface [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2" title="Burdea G, Patounakis G and Popescu V (1999) Virtual reality-based training for the diagnosis of prostate cancer. IEEE Trans Biomed Engin 46(10):1253–60" href="/article/10.1007/s10055-003-0118-5#ref-CR2" id="ref-link-section-d53763e383">2</a>]. An earlier tumor palpation VR simulation was developed by Langrana [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 6" title="Langrana N (1997) Human performance using virtual reality tumor palpation simulation. Comp Graph 21(4):451–458" href="/article/10.1007/s10055-003-0118-5#ref-CR6" id="ref-link-section-d53763e386">6</a>]. The Immersion Corporation (<a href="http://www.immersion.com">http://www.immersion.com</a>) has developed haptic interfaces for injection training and sinus surgery simulation. Delingette [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 4" title="Delingette H (1998) Toward realistic soft-tissue modeling in medical simulation. Proceedings of the IEEE 86(3):512–523" href="/article/10.1007/s10055-003-0118-5#ref-CR4" id="ref-link-section-d53763e397">4</a>] is working on realism in modelling human tissue for medical purposes. The GROPE Project [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1" title="Brooks Jr FP, Ming OY, Batter JJ and Kilpatrick PJ (1990) Project GROPE: haptic displays for scientific visualization. Comp Graph 24(4):177–185" href="/article/10.1007/s10055-003-0118-5#ref-CR1" id="ref-link-section-d53763e400">1</a>] has developed over 30 years a 6D haptic/VR simulation of molecular docking. The SPIDAR haptic interface has been adapted to serve as “the next generation education system” [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 3" title="Cai Y, Wang S and Sato M (1997) Human-scale direct motion instruction system device for education systems. IEICE Trans Info Sys E80-D(2):212–217" href="/article/10.1007/s10055-003-0118-5#ref-CR3" id="ref-link-section-d53763e403">3</a>], although the authors do not elaborate on the type of education intended.</p><p>A group at the University of Ioannina in Greece is involved with virtual learning environments including a power glove with tactile feedback to “build a theoretical model for virtual learning environments, expanding constructivism and combining it with experiential learning” [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 8" title="Mikropoulos TA, Nikolou E (1996) A virtual hand with tactile feedback for virtual learning environments. In: Proceedings of the World Conference on Educational Multimedia and Hypermedia, Boston, MA, 17–22 June 1996" href="/article/10.1007/s10055-003-0118-5#ref-CR8" id="ref-link-section-d53763e409">8</a>]. A research group at the Ohio Supercomputing Center has applied haptics in virtual environments to improve tractor safety by training young rural drivers [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 13" title="Williams II RL, Chen M-Y and Seaton JM (2001) Haptics-augmented high school physics tutorials. International Journal of Virtual Reality 5(1)" href="/article/10.1007/s10055-003-0118-5#ref-CR13" id="ref-link-section-d53763e412">13</a>]; their results show haptics increases training effectiveness. Haptics has been applied to make virtual environments accessible to blind persons [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 5" title="Jansson G, Petrie H, Colwell C, Kornbrot D, Fänger J, König H, Billberger K, Hardwick A and Furner S (1999) Haptic virtual environments for blind people: exploratory experiments with two devices. International Journal of Virtual Reality, 4(1)10–20" href="/article/10.1007/s10055-003-0118-5#ref-CR5" id="ref-link-section-d53763e415">5</a>]. Affordable haptic interfaces have been implemented to augment the teaching and learning of high school physics [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 13" title="Williams II RL, Chen M-Y and Seaton JM (2001) Haptics-augmented high school physics tutorials. International Journal of Virtual Reality 5(1)" href="/article/10.1007/s10055-003-0118-5#ref-CR13" id="ref-link-section-d53763e418">13</a>]. Also, the effectiveness of virtual reality (without haptics) has been demonstrated in the learning process [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 9" title="North SM (1996) Effectiveness of virtual reality in the motivational processes of learners. International Journal of Virtual Reality 2(1):17–21" href="/article/10.1007/s10055-003-0118-5#ref-CR9" id="ref-link-section-d53763e421">9</a>].</p><p>The virtual haptic back (VHB) is an interdisciplinary project among three Ohio University colleges: Engineering, Osteopathic Medicine, and Health and Human Services. The purpose of the VHB is to develop a realistic haptic/graphical model of the human back that can be used for palpation in medical training. Palpation is the art of medical diagnosis through the sense of touch. Our goal is to add a component of science to the art of palpatory diagnosis. Current target applications are the diagnoses of both somatic dysfunction and movement dysfunction; we are interested in general haptic anatomy in future work.</p><p>This article presents the graphical and haptic aspects of implementing the VHB, followed by VHB evaluation by experienced and novice palpators. The major contribution of this work is as an initial step towards the big goal of creating virtual haptic anatomy for osteopathic medicine, physical therapy, and massage therapy students and practitioners.</p></div></div></section><section aria-labelledby="Sec3"><div class="c-article-section" id="Sec3-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec3">Back modelling</h2><div class="c-article-section__content" id="Sec3-content"><p>This section presents the graphical modelling of a subject human back via measurements by the Metrecom Skeletal Analysis System (SAS), followed by our method to smooth this data for use in the VHB graphics.</p><h3 class="c-article__sub-heading" id="Sec4">The Metrecom SAS</h3><p>The purpose of VHB is to train medical students in the art of palpation. With this in mind, the VHB team set out to match the model to reality as closely as possible. The back of a volunteer subject was measured using a Metrecom SAS made by Faro Technologies, Inc. (see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0118-5#Fig1">1</a>). </p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1.</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-003-0118-5/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0118-5/MediaObjects/s10055-003-0118-5fhb1.jpg?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0118-5/MediaObjects/s10055-003-0118-5fhb1.jpg" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p> Metrecom SAS</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-003-0118-5/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>The Metrecom SAS is a mounted electrogoniometer digitiser that reads and stores 3D position data. The electrogoniometer is a user-powered, six degree-of-freedom arm. A potentiometer is located at each pivot point. As the user moves the arm, the resistance in each potentiometer varies, resulting in a certain voltage. The computer reads these voltages, determines the corresponding joint angles and outputs a Cartesian point. The first Metrecom arm freedom is a 1-dof waist rotation about its base. The remaining arm consists of a 1-dof shoulder joint, a 1-dof elbow joint and a 3-dof wrist joint. The position sampling is time-dependent, acquiring 15 points per second.</p><p>The Metrecom SAS was developed as a measurement tool for both spinal curvature and flexibility, and joint range of motion. For our purposes, the Metrecom SAS serves solely as a 3D digitiser for a static human back. A flow diagram for the Metrecom SAS operation is pictured in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0118-5#Fig2">2</a>. The human user moves the SAS pointer over the prone subject’s back, in nine horizontal strips. A computer reads the six joint angles θ<sub>1</sub>-θ<sub>6</sub>
+and calculates the corresponding X, Y, Z locations. </p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2.</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-003-0118-5/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0118-5/MediaObjects/s10055-003-0118-5flb2.gif?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0118-5/MediaObjects/s10055-003-0118-5flb2.gif" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p> Metrecom SAS flow diagram</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-003-0118-5/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h3 class="c-article__sub-heading" id="Sec5">Smoothing</h3><p>The raw data consisted of an<i>
+x</i>,<i> y</i> and<i>
+z</i> array for the surface back points recorded. The time dependency of the recording resulted in an awkward spacing of the data points: they appeared to be randomly spaced as opposed to having a grid-like orientation. To remedy this, the software SigmaPlot (SPSS Science, Chicago, IL) was used to align the<i> x</i>,<i> y</i>
+and<i> z</i> arrays in a grid. Each of the nine horizontal strips of data was divided into 100 Cartesian points, resulting in 900 total data points. The data was stored as a text file and copied to Visual C++ for use in the first version of VHB. It was then copied into a Matlab program for easier manipulation. A Matlab rendering of the original data is shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0118-5#Fig3">3</a>. </p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3.</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-003-0118-5/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0118-5/MediaObjects/s10055-003-0118-5fhb3.jpg?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0118-5/MediaObjects/s10055-003-0118-5fhb3.jpg" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p> A Matlab rendering of raw data VHB</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-003-0118-5/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>The first VHB left much, graphically and haptically, to be desired. This attempt was modelled using Ghost SDK’s TriPolyMesh command (SenseAble Technologies, 1997). This allows the programmer to create a triangular mesh from the 3D data. As seen in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0118-5#Fig4">4</a>, the rendering was smooth along the<i> x</i>-axis (i.e., horizontally), but not smooth along the<i> y</i>-axis (vertically). A mathematical interpretation of the data was desired, for interpolation purposes, and as a more compact and less discrete way to describe the back. As previously stated, there were nine horizontal rows of data with 100 points each (see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0118-5#Fig5">5</a>). The points are located across the width of the back, starting just below the neck (T2 vertebra) and ending in the lower lumbar region (L2 vertebra). </p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4.</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-003-0118-5/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0118-5/MediaObjects/s10055-003-0118-5fhb4.jpg?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0118-5/MediaObjects/s10055-003-0118-5fhb4.jpg" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p> A C++ view of raw data VHB</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-003-0118-5/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5.</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-003-0118-5/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0118-5/MediaObjects/s10055-003-0118-5flb5.gif?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0118-5/MediaObjects/s10055-003-0118-5flb5.gif" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p> Original data locations</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-003-0118-5/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>Since the data is smooth in the<i>
+x</i> direction (left-to-right on the back), emphasis lies on smoothing the<i> y</i> direction (up and down the back). We determined 100 individual curve fits in the<i>
+y</i> direction for smoothing purposes since each horizontal row of data contained 100 points each.</p><p>Originally, an eighth order polynomial was applied to fit the nine data points (100 times). The curve is smooth and satisfies all data points, but dips in the upper back region, as can be seen in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0118-5#Fig6">6</a>. The data points in Figs. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0118-5#Fig6">6</a>, <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0118-5#Fig7">7</a> and <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0118-5#Fig8">8</a> correspond to the<i> y</i> direction up and down the back; the left-most point is measured at the L2 vertebra and the right-most point is measured at the T2 vertebra. </p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-6"><figure><figcaption><b id="Fig6" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 6.</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-003-0118-5/figures/6" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0118-5/MediaObjects/s10055-003-0118-5flb6.gif?as=webp"></source><img aria-describedby="figure-6-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0118-5/MediaObjects/s10055-003-0118-5flb6.gif" alt="figure6" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-6-desc"><p> Eighth order curve fit</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-003-0118-5/figures/6" data-track-dest="link:Figure6 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-7"><figure><figcaption><b id="Fig7" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 7.</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-003-0118-5/figures/7" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0118-5/MediaObjects/s10055-003-0118-5flb7.gif?as=webp"></source><img aria-describedby="figure-7-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0118-5/MediaObjects/s10055-003-0118-5flb7.gif" alt="figure7" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-7-desc"><p> Three separate curve fits</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-003-0118-5/figures/7" data-track-dest="link:Figure7 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-8"><figure><figcaption><b id="Fig8" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 8.</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-003-0118-5/figures/8" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0118-5/MediaObjects/s10055-003-0118-5flb8.gif?as=webp"></source><img aria-describedby="figure-8-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0118-5/MediaObjects/s10055-003-0118-5flb8.gif" alt="figure8" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-8-desc"><p> Matching first and second derivatives</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-003-0118-5/figures/8" data-track-dest="link:Figure8 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>To fix the dip problem of Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0118-5#Fig6">6</a>, three separate curve fits were generated to fit the back. The middle curve was a quartic polynomial to fit point three through point seven of the original eighth order curve. The first and third curves used the first three and last three data points, respectively, to generate quadratic curves. The endpoints of the middle section are reused in order to connect each curve with its predecessor. The results of this method are shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0118-5#Fig7">7</a>.</p><p>In Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0118-5#Fig7">7</a> it is clear that the three separate curve fits result in a visible discontinuity (the lower back discontinuity is not as visible). Therefore, we chose to match the three polynomials at their junction points not only in position but also matching their first and second derivatives across the two junction points. With the additional derivative matching constraints, the first and third polynomials must be of third order, and the middle polynomial is increased to sixth order. This will not only smooth the back in the<i>
+y</i> direction and include all the original data points, but it will create a smooth transition between the three different curves (see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0118-5#Fig8">8</a>). Eqs. <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ1">1</a>, <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ2">2</a> and <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ3">3</a> represent the three curves plotted in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0118-5#Fig8">8</a>: </p><div id="Equ1" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ z_{A} {\left( y \right)} = a_{1} + b_{1} y + c_{1} y^{2} + d_{1} y^{3} $$ </span></div><div class="c-article-equation__number">
+                    (1)
+                </div></div>
+                           <div id="Equ2" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ z_{B} {\left( y \right)} = a_{2} + b_{2} y + c_{2} y^{2} + d_{2} y^{3} + e_{2} y^{4} + f_{2} y^{5} + g_{2} y^{6} $$ </span></div><div class="c-article-equation__number">
+                    (2)
+                </div></div>
+                           <div id="Equ3" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ z_{C} {\left( y \right)} = a_{3} + b_{3} y + c_{3} y^{2} + d_{3} y^{3} $$</span></div><div class="c-article-equation__number">
+                    (3)
+                </div></div><p>where <i>z</i>
+                           <sub>
+                    <i>A</i>
+                  </sub>(<i>y</i>), <i>z</i>
+                           <sub>
+                    <i>B</i>
+                  </sub>(<i>y</i>), and<i>z</i>
+                           <sub>
+                    <i>C</i>
+                  </sub>(<i>y</i>) are the three polynomials,<i>a</i>
+                           <sub>1–3</sub>,<i>b</i>
+                           <sub>1–3</sub>,<i>b</i>
+                           <sub>1–3</sub>,<i>d</i>
+                           <sub>1–3</sub>,<i>e</i>
+                           <sub>2</sub>,<i>f</i>
+                           <sub>2</sub> and<i>g</i>
+                           <sub>2</sub> are the unknowns, and<i>y</i> is the independent variable. Eqs. <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ1">1</a> and <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ3">3</a> are third order, and <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ2">2</a> is sixth order, chosen to match the number of polynomial constants with the number of given constraints. Four constants from Eq. <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ1">1</a>, seven constants from Eq. <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ2">2</a> and four constants from Eq. <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ3">3</a> match the fifteen constraints, discussed next.Each of the position data points must lie on the curve: three for the first curve, five for the second curve and three for the third curve. To fix the discontinuity seen in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0118-5#Fig7">7</a>, we force both the first derivatives and second derivatives to match for different polynomials meeting at the two junctions. The constraints are listed below with<i>y</i>
+                           <sub>1–9</sub> and<i>z</i>
+                           <sub>1–9</sub> representing the data points and<i>a</i>
+                           <sub>1–3</sub>,<i>b</i>
+                           <sub>1–3</sub>,<i>c</i>
+                           <sub>1–3</sub>,<i>d</i>
+                           <sub>1–3</sub>,<i>e</i>
+                           <sub>2</sub>,<i>f</i>
+                           <sub>2</sub> and<i>g</i>
+                           <sub>2</sub> are the constants to be determined for each of the three polynomials. Eqs. <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ4">4</a>, <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ5">5</a>, <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ6">6</a>, <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ7">7</a>, <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ8">8</a>, <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ9">9</a>, <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ10">10</a>, <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ11">11</a>, <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ12">12</a>, <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ13">13</a> and <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ14">14</a>
+are position constraints, Eqs. <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ15">15</a> and <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ16">16</a> match the first derivatives, and Eqs. <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ17">17</a> and <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ18">18</a> match the second derivatives.</p><div id="Equ4" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ z_{1} = a_{1} + b_{1} y_{1} + c_{1} y_{1} ^{2} + d_{1} y_{1} ^{3} $$ </span></div><div class="c-article-equation__number">
+                    (4)
+                </div></div>
+                           <div id="Equ5" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ z_{2} = a_{1} + b_{1} y_{2} + c_{1} y_{2} ^{2} + d_{1} y_{2} ^{3} $$ </span></div><div class="c-article-equation__number">
+                    (5)
+                </div></div>
+                           <div id="Equ6" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ z_{3} = a_{1} + b_{1} y_{3} + c_{1} y_{3} ^{2} + d_{1} y_{3} ^{3} $$ </span></div><div class="c-article-equation__number">
+                    (6)
+                </div></div>
+                           <div id="Equ7" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ z_{3} = a_{2} + b_{2} y_{3} + c_{2} y_{3} ^{2} + d_{2} y_{3} ^{3} + e_{2} y_{3} ^{4} + f_{2} y_{3} ^{5} + g_{2} y_{3} ^{6} $$ </span></div><div class="c-article-equation__number">
+                    (7)
+                </div></div>
+                           <div id="Equ8" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ z_{4} = a_{2} + b_{2} y_{4} + c_{2} y_{4} ^{2} + d_{2} y_{4} ^{3} + e_{2} y_{4} ^{4} + f_{2} y_{4} ^{5} + g_{2} y_{4} ^{6} $$ </span></div><div class="c-article-equation__number">
+                    (8)
+                </div></div>
+                           <div id="Equ9" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ z_{5} = a_{2} + b_{2} y_{5} + c_{2} y_{5} ^{2} + d_{2} y_{5} ^{3} + e_{2} y_{5} ^{4} + f_{2} y_{5} ^{5} + g_{2} y_{5} ^{6} $$ </span></div><div class="c-article-equation__number">
+                    (9)
+                </div></div>
+                           <div id="Equ10" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ z_{6} = a_{2} + b_{2} y_{6} + c_{2} y_{6} ^{2} + d_{2} y_{6} ^{3} + e_{2} y_{6} ^{4} + f_{2} y_{6} ^{5} + g_{2} y_{6} ^{6} $$ </span></div><div class="c-article-equation__number">
+                    (10)
+                </div></div>
+                           <div id="Equ11" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ z_{7} = a_{2} + b_{2} y_{7} + c_{2} y_{7} ^{2} + d_{2} y_{7} ^{3} + e_{2} y_{7} ^{4} + f_{2} y_{7} ^{5} + g_{2} y_{7} ^{6} $$ </span></div><div class="c-article-equation__number">
+                    (11)
+                </div></div>
+                           <div id="Equ12" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ z_{7} = a_{3} + b_{3} y_{7} + c_{3} y_{7} ^{2} + d_{3} y_{7} ^{3} $$ </span></div><div class="c-article-equation__number">
+                    (12)
+                </div></div>
+                           <div id="Equ13" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ z_{8} = a_{3} + b_{3} y_{8} + c_{3} y_{8} ^{2} + d_{3} y_{8} ^{3} $$ </span></div><div class="c-article-equation__number">
+                    (13)
+                </div></div>
+                           <div id="Equ14" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ z_{9} = a_{3} + b_{3} y_{9} + c_{3} y_{9} ^{2} + d_{3} y_{9} ^{3} $$ </span></div><div class="c-article-equation__number">
+                    (14)
+                </div></div>
+                           <div id="Equ15" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ b_{1} + 2c_{1} y_{3} + 3d_{1} y_{3} ^{2} = b_{2} + 2c_{2} y_{3} + 3d_{2} y_{3} ^{2} + 4e_{2} y_{3} ^{3} + 5f_{2} y_{3} ^{4} + 6g_{2} y_{3} ^{5} $$ </span></div><div class="c-article-equation__number">
+                    (15)
+                </div></div>
+                           <div id="Equ16" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ b_{3} + 2c_{3} y_{7} + 3d_{3} y_{7} ^{2} = b_{2} + 2c_{2} y_{7} + 3d_{2} y_{7} ^{2} + 4e_{2} y_{7} ^{3} + 5f_{2} y_{7} ^{4} + 6g_{2} y_{7} ^{5} $$ </span></div><div class="c-article-equation__number">
+                    (16)
+                </div></div>
+                           <div id="Equ17" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ 2c_{1} + 6d_{1} y_{3} = 2c_{2} + 6d_{2} y_{3} + 12e_{2} y_{3} ^{2} + 20f_{2} y_{3} ^{3} + 30g_{2} y_{3} ^{4} $$ </span></div><div class="c-article-equation__number">
+                    (17)
+                </div></div>
+                           <div id="Equ18" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ 2c_{3} + 6d_{3} y_{7} = 2c_{2} + 6d_{2} y_{7} + 12e_{2} y_{7} ^{2} + 20f_{2} y_{7} ^{3} + 30g_{2} y_{7} ^{4} $$ </span></div><div class="c-article-equation__number">
+                    (18)
+                </div></div>
+                        <p>Eqs. <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ4">4</a>, <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ5">5</a>, <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ6">6</a>, <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ7">7</a>, <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ8">8</a>, <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ9">9</a>, <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ10">10</a>, <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ11">11</a>, <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ12">12</a>, <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ13">13</a>, <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ14">14</a>, <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ15">15</a>, <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ16">16</a>, <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ17">17</a> and <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ18">18</a>
+were written in matrix/vector form (Eq. <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ19">19</a>) and the unknown polynomial coefficients (<i>a</i>
+                           <sub>1–3</sub>,<i> b</i>
+                           <sub>1–3</sub>,<i>
+c</i>
+                           <sub>1–3</sub>,<i>
+d</i>
+                           <sub>1–3</sub>,<i>
+e</i>
+                           <sub>2</sub>,<i>
+f</i>
+                           <sub>2</sub>, and<i>
+g</i>
+                           <sub>2</sub>) were solved from this set of 15 linear equations in 15 unknowns.</p><div id="Equ19" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ {\left[ {\begin{array}{*{20}c} {1} &amp; {{y_{1} }} &amp; {{y_{1} ^{2} }} &amp; {{y_{1} ^{3} }} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} \\ {1} &amp; {{y_{2} }} &amp; {{y_{2} ^{2} }} &amp; {{y_{2} ^{3} }} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} \\ {1} &amp; {{y_{3} }} &amp; {{y_{3} ^{2} }} &amp; {{y_{3} ^{3} }} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} \\ {0} &amp; {0} &amp; {0} &amp; {0} &amp; {1} &amp; {{y_{3} }} &amp; {{y_{3} ^{2} }} &amp; {{y_{3} ^{3} }} &amp; {{y_{3} ^{4} }} &amp; {{y_{3} ^{5} }} &amp; {{y_{3} ^{6} }} &amp; {0} &amp; {0} &amp; {0} &amp; {0} \\ {0} &amp; {0} &amp; {0} &amp; {0} &amp; {1} &amp; {{y_{4} }} &amp; {{y_{4} ^{2} }} &amp; {{y_{4} ^{3} }} &amp; {{y_{4} ^{4} }} &amp; {{y_{4} ^{5} }} &amp; {{y_{4} ^{6} }} &amp; {0} &amp; {0} &amp; {0} &amp; {0} \\ {0} &amp; {0} &amp; {0} &amp; {0} &amp; {1} &amp; {{y_{5} }} &amp; {{y_{5} ^{2} }} &amp; {{y_{5} ^{3} }} &amp; {{y_{5} ^{4} }} &amp; {{y_{5} ^{5} }} &amp; {{y_{5} ^{6} }} &amp; {0} &amp; {0} &amp; {0} &amp; {0} \\ {0} &amp; {0} &amp; {0} &amp; {0} &amp; {1} &amp; {{y_{6} }} &amp; {{y_{6} ^{2} }} &amp; {{y_{6} ^{3} }} &amp; {{y_{6} ^{4} }} &amp; {{y_{6} ^{5} }} &amp; {{y_{6} ^{6} }} &amp; {0} &amp; {0} &amp; {0} &amp; {0} \\ {0} &amp; {0} &amp; {0} &amp; {0} &amp; {1} &amp; {{y_{7} }} &amp; {{y_{7} ^{2} }} &amp; {{y_{7} ^{3} }} &amp; {{y_{7} ^{4} }} &amp; {{y_{7} ^{5} }} &amp; {{y_{7} ^{6} }} &amp; {0} &amp; {0} &amp; {0} &amp; {0} \\ {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {1} &amp; {{y_{7} }} &amp; {{y_{7} ^{2} }} &amp; {{y_{7} ^{3} }} \\ {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {1} &amp; {{y_{8} }} &amp; {{y_{8} ^{2} }} &amp; {{y_{8} ^{3} }} \\ {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {1} &amp; {{y_{9} }} &amp; {{y_{9} ^{2} }} &amp; {{y_{9} ^{3} }} \\ {0} &amp; {{ - 1}} &amp; {{ - 2y_{3} }} &amp; {{ - 3y_{3} ^{2} }} &amp; {0} &amp; {1} &amp; {{2y_{3} }} &amp; {{3y_{3} ^{2} }} &amp; {{4y_{3} ^{3} }} &amp; {{5y_{3} ^{4} }} &amp; {{6y_{3} ^{5} }} &amp; {0} &amp; {0} &amp; {0} &amp; {0} \\ {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {1} &amp; {{2y_{7} }} &amp; {{3y_{7} ^{2} }} &amp; {{4y_{7} ^{3} }} &amp; {{5y_{7} ^{4} }} &amp; {{6y_{7} ^{5} }} &amp; {0} &amp; {{ - 1}} &amp; {{ - 2y_{7} }} &amp; {{ - 3y_{7} ^{2} }} \\ {0} &amp; {0} &amp; {{ - 2}} &amp; {{ - 6y_{3} }} &amp; {0} &amp; {0} &amp; {2} &amp; {{6y_{3} }} &amp; {{12y_{3} ^{2} }} &amp; {{20y_{3} ^{3} }} &amp; {{30y_{3} ^{4} }} &amp; {0} &amp; {0} &amp; {0} &amp; {0} \\ {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {0} &amp; {2} &amp; {{6y_{7} }} &amp; {{12y_{7} ^{2} }} &amp; {{20y_{7} ^{3} }} &amp; {{30y_{7} ^{4} }} &amp; {0} &amp; {0} &amp; {{ - 2}} &amp; {{ - 6y_{y} }} \\ \end{array} } \right]}{\left\{ {\begin{array}{*{20}c} {{a_{1} }} \\ {{b_{1} }} \\ {{c_{1} }} \\ {{d_{1} }} \\ {{a_{2} }} \\ {{b_{2} }} \\ {{c_{2} }} \\ {{d_{2} }} \\ {{e_{2} }} \\ {{f_{2} }} \\ {{g_{2} }} \\ {{a_{3} }} \\ {{b_{3} }} \\ {{c_{3} }} \\ {{d_{3} }} \\ \end{array} } \right\}} = {\left\{ {\begin{array}{*{20}c} {{z_{1} }} \\ {{z_{2} }} \\ {{z_{3} }} \\ {{z_{3} }} \\ {{z_{4} }} \\ {{z_{5} }} \\ {{z_{6} }} \\ {{z_{7} }} \\ {{z_{7} }} \\ {{z_{8} }} \\ {{z_{9} }} \\ {0} \\ {0} \\ {0} \\ {0} \\ \end{array} } \right\}} $$ </span></div><div class="c-article-equation__number">
+                    (19)
+                </div></div>
+                        <p>Eq. <a data-track="click" data-track-label="link" data-track-action="equation anchor" href="/article/10.1007/s10055-003-0118-5#Equ19">19</a> was solved for each of the 100 strips of data to obtain the individual curves for the 100 vertical sections of the back. The final Matlab rendering is Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0118-5#Fig9">9</a>.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-9"><figure><figcaption><b id="Fig9" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 9.</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-003-0118-5/figures/9" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0118-5/MediaObjects/s10055-003-0118-5fhb9.jpg?as=webp"></source><img aria-describedby="figure-9-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0118-5/MediaObjects/s10055-003-0118-5fhb9.jpg" alt="figure9" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-9-desc"><p> Matlab rendering of final data</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-003-0118-5/figures/9" data-track-dest="link:Figure9 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>The rendering in Visual C++ is shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0118-5#Fig10">10</a>. The discontinuous data due to unsteady measurement along the sides of the back has been eliminated between Figs. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0118-5#Fig9">9</a> and <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0118-5#Fig10">10</a>. </p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-10"><figure><figcaption><b id="Fig10" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 10.</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-003-0118-5/figures/10" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0118-5/MediaObjects/s10055-003-0118-5fhb10.jpg?as=webp"></source><img aria-describedby="figure-10-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0118-5/MediaObjects/s10055-003-0118-5fhb10.jpg" alt="figure10" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-10-desc"><p> A C++ rendering of final data VHB</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-003-0118-5/figures/10" data-track-dest="link:Figure10 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>At this point a discussion on errors in our back model is warranted. Firstly, in the lab it is impossible to measure the human back so quickly such that the subject can survive on one breath of air. That is, the natural breathing of the human subject caused some error in our raw data measurements. We don’t know how to quantify this error, but one can imagine the worst error case simply by breathing and registering the maximum displacement of the human back and chest. This error will be different for different subjects. Secondly, additional errors can be introduced by our data smoothing techniques presented above, accomplished to improve the graphics and haptics qualities of our model. Since we force the original data points to be met, we believe this source of error is bounded by the more significant case of the breathing error. In any case, the (unknown) errors introduced do not pose a problem in our project since our aim is not to model a specific human back with high accuracy but rather to model a reasonable, generic human back for training purposes.</p></div></div></section><section aria-labelledby="Sec6"><div class="c-article-section" id="Sec6-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec6">VHB implementation</h2><div class="c-article-section__content" id="Sec6-content"><p>This section presents an implementation of the VHB in virtual reality using the PHANToM haptic interface and graphics and haptics programming.</p><h3 class="c-article__sub-heading" id="Sec7">3.1 PHANToM haptic interface</h3><p>The PHANToM haptic interface (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0118-5#Fig11">11</a>) developed by SenseAble Technologies, Inc. operates like the Metrecom SAS but does more than yield Cartesian points. It uses the calculated position information to determine what forces to relay back to the user via its three motors. A flow diagram for the PHANToM is pictured in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0118-5#Fig12">12</a>. The human finger moves the PHANToM to desired X, Y, Z Cartesian locations (sensed internally via joint encoders<i> θ</i>
+                           <sub>1</sub>,<i>θ</i>
+                           <sub>2</sub>,<i>θ</i>
+                           <sub>3</sub>); this Cartesian input is sent to a virtual computer model. The haptic/graphical software determines what Cartesian force vector<i> F</i>
+                           <sub>
+                    <i>X</i>
+                  </sub>,<i>F</i>
+                           <sub>
+                    <i>Y</i>
+                  </sub>,<i>F</i>
+                           <sub>
+                    <i>Z</i>
+                  </sub> the human should feel and the PHANToM generates this force at the human finger (accomplished internally via joint torques<i> τ</i>
+                           <sub>1</sub>,<i>τ</i>
+                           <sub>2</sub>,<i>τ</i>
+                           <sub>3</sub>). </p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-11"><figure><figcaption><b id="Fig11" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 11.</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-003-0118-5/figures/11" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0118-5/MediaObjects/s10055-003-0118-5fhb11.jpg?as=webp"></source><img aria-describedby="figure-11-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0118-5/MediaObjects/s10055-003-0118-5fhb11.jpg" alt="figure11" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-11-desc"><p> The PHANToM haptic interface</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-003-0118-5/figures/11" data-track-dest="link:Figure11 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-12"><figure><figcaption><b id="Fig12" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 12.</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-003-0118-5/figures/12" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0118-5/MediaObjects/s10055-003-0118-5flb12.gif?as=webp"></source><img aria-describedby="figure-12-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-003-0118-5/MediaObjects/s10055-003-0118-5flb12.gif" alt="figure12" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-12-desc"><p> The PHANToM flow diagram</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-003-0118-5/figures/12" data-track-dest="link:Figure12 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h3 class="c-article__sub-heading" id="Sec8">Graphics and haptics programming</h3><p>The first step in modelling the VHB using Ghost SDK (the software used to program the PHANToM, developed by SenseAble Technologies Inc., 1997), is to define what is included in the haptic scene. The Ghost SDK uses OpenGL for 3D graphics. A pointer to the root of the desired scene graph is defined, and the haptic simulation is performed by a servo loop operating at a rate of 1 kHz. The servo loop performs the following functions: 1) update the PHANToM node position in the scene graph, 2) update the dynamic state of all dynamic objects, 3) detect collisions between PHANToM nodes and geometric nodes in the scene graph, and 4) send resultant forces back to the PHANToM.</p><p>The VHB makes use of GHOST SDK’s gstTriPolyMesh command to define the back. The VHB position data is defined as three arrays (<i>x</i>,<i> y</i> and<i> z</i>) in a header file. The inputs to gstTriPolyMesh are: 1) the number of total data points, 2) the position data, 3) the number of triangles in the mesh, and 4) the three points of each triangle in the mesh. The VHB workspace is contained using Ghost’s gstBoundaryCube function, which confines the user’s movement to a box shaped volume.</p><p>The haptic feedback is based on linear springs, normal to the surface of each triangle in the mesh. The spring constant is the same over the entire back, set for a reasonable feel. Part of our future work plans are to measure and implement a more realistic, nonlinear human tissue model (as in [<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 4" title="Delingette H (1998) Toward realistic soft-tissue modeling in medical simulation. Proceedings of the IEEE 86(3):512–523" href="/article/10.1007/s10055-003-0118-5#ref-CR4" id="ref-link-section-d53763e1410">4</a>]), including subcutaneous soft tissues and skeletal elements. These additional layers will be implemented in the VHB using force thresholds with the PHANToM.</p></div></div></section><section aria-labelledby="Sec9"><div class="c-article-section" id="Sec9-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec9">VHB evaluation results</h2><div class="c-article-section__content" id="Sec9-content"><p>This section presents the results of our preliminary VHB evaluation study to measure project results and give us a basis for future improvements.</p><p>A significant improvement between the raw VHB and the smoothed VHB is both visible and palpable. The most significant improvement is in the vertical direction. In the C++ rendering of the raw data, the nine horizontal sample strips were visible and palpable (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0118-5#Fig4">4</a>). The smoothing method of choice (curve fitting with matched derivatives vertically down the back) resulted in interpolated data. Since each strip of interpolated data was independent of the strip beside it, variance in the<i> z</i>-direction occurred at certain widthwise sections of the back. These vertical strips are visible in the final C++ rendering of the back (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-003-0118-5#Fig10">10</a>).</p><p>The evaluators were asked to rate both raw and smoothed versions of the VHB in the following categories: colour, shading, graphic and haptic smoothness, graphic and haptic contour, stiffness, friction, and real-time interaction. They were asked to evaluate the VHB in each category on a scale of one (very unrealistic) to ten (very realistic). All of these performance measures were subjective, based on evaluator opinions; we have no method to objectively measure results in any of these categories.</p><p>Six experienced palpators and twenty novice palpators evaluated the VHB. All experienced palpators came from the the Ohio University School of Physical Therapy. They were second year graduate students who had acquired standard palpations skills through practice and schooling. Any person inexperienced in the art of palpation was considered a novice. All novices for this experiment were students from the Ohio University College of Engineering. This study was not intended for statistical significance, rather as an initial evaluation to give us areas for future improvement of our model. We wished to have more subjects, but six experienced palpators was all we could arrange in the project time frame.</p><p>Evaluation sheets were given along with a brief explanation of the VHB project. Brief PHANToM training was provided. Evaluators were given two evaluation sheets and instructed how to complete them, one for the raw VHB and one for the final VHB. General comments were strongly encouraged. Finally, the user was presented with both models, raw VHB first. Average results for both groups on both versions of the VHB are in Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-003-0118-5#Tab1">1</a>; Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-003-0118-5#Tab2">2</a>
+gives the associated standard deviations.</p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-1"><figure><figcaption class="c-article-table__figcaption"><b id="Tab1" data-test="table-caption">Table 1.  Raw and final VHB averages</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-003-0118-5/tables/1"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-2"><figure><figcaption class="c-article-table__figcaption"><b id="Tab2" data-test="table-caption">Table 2.  Raw and final VHB standard deviations</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-003-0118-5/tables/2"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>On average, experienced palpators rated raw VHB graphics 15.7% higher than novices. However, experienced palpators rated raw VHB haptics 8.4% lower than novices, due to their palpation expertise. High standard deviations resulted, varying from 1.25 to 3.02 on a scale of 10. This could be due to a lack of experience using the PHANToM. None of the six experienced palpators had used the PHANToM before. Although they were briefly instructed, a few subjects commented that the device was hard to adapt to. This is not uncommon: past non-VHB demonstrations have resulted in similar comments.</p><p>In all categories (graphic and haptic), both groups rated the smoothed VHB as improved (with the exception of real-time interaction for the experienced palpators). Relatively speaking, the novice group rated the second version of VHB much more improved than did the experienced palpators. The percent differences in the averages for each category rated by both groups are shown in Table <a data-track="click" data-track-label="link" data-track-action="table anchor" href="/article/10.1007/s10055-003-0118-5#Tab3">3</a>. </p><div class="c-article-table" data-test="inline-table" data-container-section="table" id="table-3"><figure><figcaption class="c-article-table__figcaption"><b id="Tab3" data-test="table-caption">Table 3.  Percent improvements from raw to final VHB</b></figcaption><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="table-link" data-track="click" data-track-action="view table" data-track-label="button" rel="nofollow" href="/article/10.1007/s10055-003-0118-5/tables/3"><span>Full size table</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     <p>Both positive and negative feedback was given in the comments. Experienced palpators were more likely to make a comment, and were more detailed. As seen from the abovementioned tables, virtually all marks improved for the final, smoothed VHB. The fundamental theme in most comments was that the back must be modelled considering the underlying muscle and bone structure to help the VHB feel like an actual human back.</p><p>Now, the fact that the final, smoothed VHB is preferable to the raw version is not surprising. In fact, we would not consider using the raw VHB in the future just based on the modelling team’s opinions and experience with the models. Again, the evaluation study was not intended to be statistically significant, but it was simply intended to improve our model in future work. The comments from evaluators, especially from our experienced subjects and doctors (see below) were the most valuable results from our evaluation study.</p><p>More sophisticated and long-term suggestions were offered by practicing osteopathic doctors with tactile specialties (four Doctors of Osteopathy (DOs) independently tested the raw and final VHB models, though they did not fill in a formal evaluation). The DOs also suggested programming haptic tissue and skeleton beneath the skin. Since the digitising of a skeleton is not trivial, two of the DOs independently suggested programming different sized spheres to represent the spinous and transverse processes of the human spine. This eliminates the programming of parts of the skeleton that the palpator cannot ordinarily feel. This type of haptic modelling would enable the programming of different types of somatic dysfunction. Another suggestion to aid in palpation training was to turn off the graphical clues for different types of dysfunction, thus testing the student’s ability to diagnose by feel.</p></div></div></section><section aria-labelledby="Sec10"><div class="c-article-section" id="Sec10-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec10">Conclusions</h2><div class="c-article-section__content" id="Sec10-content"><p>This article has presented implementation and evaluation of the VHB by an interdisciplinary team of researchers and educators at Ohio University. We are involved in virtual haptic anatomy, specifically for the purpose of providing a tool for students in medical and related fields to better train themselves in the art of palpatory diagnosis. Since the human sense of touch is generally less-developed than vision and hearing, we wish to add a component of science to the art of palpatory diagnosis, both in learning and practice.</p><p>The first-cut VHB has been implemented in virtual reality using a PHANToM haptic interface. The back model was measured, the position data was smoothed and haptic feedback was added. We have concluded initial VHB evaluation by experienced and novice palpators.</p><p>Based on the VHB project evaluation, we will next add muscle and skeletal structure layers for the trainee to feel under the existing skin layer. This will require the development of a more advanced haptics model. We will then program various types of somatic dysfunction for students in various palpatory disciplines to practice their diagnoses. This next phase will conclude with an evaluation to ensure that project results meet the needs of students, professors, doctors and other practitioners.</p><p>Some other research groups are involved in virtual haptic anatomy. The major contribution of this article is our focus on osteopathic medicine, physical therapy, and massage therapy students and practitioners. No previous research group has taken this focus to date, according to our literature search.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content=". Brooks, " /><meta itemprop="datePublished" content="1990" /><meta itemprop="headline" content="Brooks Jr FP, Ming OY, Batter JJ and Kilpatrick PJ (1990) Project GROPE: haptic displays for scientific visual" /><span class="c-article-references__counter">1.</span><p class="c-article-references__text" id="ref-CR1">Brooks Jr FP, Ming OY, Batter JJ and Kilpatrick PJ (1990) Project GROPE: haptic displays for scientific visualization. Comp Graph 24(4):177–185</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 1 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=&amp;journal=Comp%20Graph&amp;volume=24&amp;publication_year=1990&amp;author=Brooks%2C">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content=". Burdea, " /><meta itemprop="datePublished" content="1999" /><meta itemprop="headline" content="Burdea G, Patounakis G and Popescu V (1999) Virtual reality-based training for the diagnosis of prostate cance" /><span class="c-article-references__counter">2.</span><p class="c-article-references__text" id="ref-CR2">Burdea G, Patounakis G and Popescu V (1999) Virtual reality-based training for the diagnosis of prostate cancer. IEEE Trans Biomed Engin 46(10):1253–60</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2F10.790503" aria-label="View reference 2">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 2 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=&amp;journal=IEEE%20Trans%20Biomed%20Engin&amp;volume=46&amp;publication_year=1999&amp;author=Burdea%2C">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Cai Y, Wang S and Sato M (1997) Human-scale direct motion instruction system device for education systems. IEI" /><span class="c-article-references__counter">3.</span><p class="c-article-references__text" id="ref-CR3">Cai Y, Wang S and Sato M (1997) Human-scale direct motion instruction system device for education systems. IEICE Trans Info Sys E80-D(2):212–217</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content=". Delingette, " /><meta itemprop="datePublished" content="1998" /><meta itemprop="headline" content="Delingette H (1998) Toward realistic soft-tissue modeling in medical simulation. Proceedings of the IEEE 86(3)" /><span class="c-article-references__counter">4.</span><p class="c-article-references__text" id="ref-CR4">Delingette H (1998) Toward realistic soft-tissue modeling in medical simulation. Proceedings of the IEEE 86(3):512–523</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1109%2F5.662876" aria-label="View reference 4">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 4 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=&amp;journal=Proceedings%20of%20the%20IEEE&amp;volume=86&amp;publication_year=1998&amp;author=Delingette%2C">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content=". Jansson, " /><meta itemprop="datePublished" content="1999" /><meta itemprop="headline" content="Jansson G, Petrie H, Colwell C, Kornbrot D, Fänger J, König H, Billberger K, Hardwick A and Furner S (1999) Ha" /><span class="c-article-references__counter">5.</span><p class="c-article-references__text" id="ref-CR5">Jansson G, Petrie H, Colwell C, Kornbrot D, Fänger J, König H, Billberger K, Hardwick A and Furner S (1999) Haptic virtual environments for blind people: exploratory experiments with two devices. International Journal of Virtual Reality, 4(1)10–20</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 5 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=&amp;journal=Haptic%20virtual%20environments%20for%20blind&amp;volume=people&amp;publication_year=1999&amp;author=Jansson%2C">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content=". Langrana, " /><meta itemprop="datePublished" content="1997" /><meta itemprop="headline" content="Langrana N (1997) Human performance using virtual reality tumor palpation simulation. Comp Graph 21(4):451–458" /><span class="c-article-references__counter">6.</span><p class="c-article-references__text" id="ref-CR6">Langrana N (1997) Human performance using virtual reality tumor palpation simulation. Comp Graph 21(4):451–458</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1016%2FS0097-8493%2897%2900021-6" aria-label="View reference 6">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 6 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=&amp;journal=Comp%20Graph&amp;volume=21&amp;publication_year=1997&amp;author=Langrana%2C">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Heinrichs WL, Srivastava S, Brown J, Latombe J-C, Montgomery K, Temkin B and Dev P (2000) A steroscopic palpab" /><span class="c-article-references__counter">7.</span><p class="c-article-references__text" id="ref-CR7">Heinrichs WL, Srivastava S, Brown J, Latombe J-C, Montgomery K, Temkin B and Dev P (2000) A steroscopic palpable and deformable model: Lucy 2.5. In: Proceedings of the Third Visible Human Conference, Bethesda, MD, 5–6 October 2000</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Mikropoulos TA, Nikolou E (1996) A virtual hand with tactile feedback for virtual learning environments. In: P" /><span class="c-article-references__counter">8.</span><p class="c-article-references__text" id="ref-CR8">Mikropoulos TA, Nikolou E (1996) A virtual hand with tactile feedback for virtual learning environments. In: Proceedings of the World Conference on Educational Multimedia and Hypermedia, Boston, MA, 17–22 June 1996</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content=". North, " /><meta itemprop="datePublished" content="1996" /><meta itemprop="headline" content="North SM (1996) Effectiveness of virtual reality in the motivational processes of learners. International Jour" /><span class="c-article-references__counter">9.</span><p class="c-article-references__text" id="ref-CR9">North SM (1996) Effectiveness of virtual reality in the motivational processes of learners. International Journal of Virtual Reality 2(1):17–21</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 9 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=&amp;journal=International%20Journal%20of%20Virtual%20Reality&amp;volume=2&amp;publication_year=1996&amp;author=North%2C">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="SenseAble Technologies (1997) Ghost SDK Programmer’s Guide Version 3.0, SenseAble Technologies Inc., Woburn, M" /><span class="c-article-references__counter">10.</span><p class="c-article-references__text" id="ref-CR10">SenseAble Technologies (1997) Ghost SDK Programmer’s Guide Version 3.0, SenseAble Technologies Inc., Woburn, MA</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Shaffer D, Meglan D, Ferrell M and Dawson S (1999) Virtual rounds: simulation-based education in procedural me" /><span class="c-article-references__counter">11.</span><p class="c-article-references__text" id="ref-CR11">Shaffer D, Meglan D, Ferrell M and Dawson S (1999) Virtual rounds: simulation-based education in procedural medicine. In: Proceedings of the 1999 SPIE Battlefield Biomedical Technologies Conference, Orlando, FL 3712:99–108</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Stredney D, Wiet GJ, Yagel R, Sessanna D, Kurzion Y, Fontana M, Shareef N, Levin M, Martin K and Okamura A (19" /><span class="c-article-references__counter">12.</span><p class="c-article-references__text" id="ref-CR12">Stredney D, Wiet GJ, Yagel R, Sessanna D, Kurzion Y, Fontana M, Shareef N, Levin M, Martin K and Okamura A (1998) A comparative analysis of integrating visual representations with haptic displays. In: Proceedings of MMVR6, San Diego, CA, January 1998</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Williams II RL, Chen M-Y and Seaton JM (2001) Haptics-augmented high school physics tutorials. International J" /><span class="c-article-references__counter">13.</span><p class="c-article-references__text" id="ref-CR13">Williams II RL, Chen M-Y and Seaton JM (2001) Haptics-augmented high school physics tutorials. International Journal of Virtual Reality 5(1)</p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-003-0118-5-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><div class="c-article-section__content" id="Ack1-content"></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">Department of Mechanical Engineering, Ohio University, Athens, OH 45701-2979, USA</p><p class="c-article-author-affiliation__authors-list">Kerry L. Holland &amp; Robert L. Williams II</p></li><li id="Aff2"><p class="c-article-author-affiliation__address">Department of Biomedical Sciences, Ohio University, Athens, OH, USA</p><p class="c-article-author-affiliation__authors-list">Robert R. Conatser Jr. &amp; John N. Howell</p></li><li id="Aff3"><p class="c-article-author-affiliation__address">Department of Physical Therapy, Ohio University, Athens, OH, USA</p><p class="c-article-author-affiliation__authors-list">Dennis L. Cade</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Kerry_L_-Holland"><span class="c-article-authors-search__title u-h3 js-search-name">Kerry L. Holland</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Kerry L.+Holland&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Kerry L.+Holland" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Kerry L.+Holland%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Robert_L_-Williams"><span class="c-article-authors-search__title u-h3 js-search-name">Robert L. Williams II</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Robert L.+Williams&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Robert L.+Williams" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Robert L.+Williams%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Robert_R_-Conatser"><span class="c-article-authors-search__title u-h3 js-search-name">Robert R. Conatser Jr.</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Robert R.+Conatser&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Robert R.+Conatser" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Robert R.+Conatser%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-John_N_-Howell"><span class="c-article-authors-search__title u-h3 js-search-name">John N. Howell</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;John N.+Howell&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=John N.+Howell" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22John N.+Howell%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Dennis_L_-Cade"><span class="c-article-authors-search__title u-h3 js-search-name">Dennis L. Cade</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Dennis L.+Cade&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Dennis L.+Cade" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Dennis L.+Cade%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-003-0118-5/email/correspondent/c1/new">Robert L. Williams II</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=The%20implementation%20and%20evaluation%20of%20a%20virtual%20haptic%20back&amp;author=Kerry%20L.%20Holland%20et%20al&amp;contentID=10.1007%2Fs10055-003-0118-5&amp;publication=1359-4338&amp;publicationDate=2004-02-05&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Holland, K.L., Williams, R.L., Conatser, R.R. <i>et al.</i> The implementation and evaluation of a virtual haptic back.
+                    <i>Virtual Reality</i> <b>7, </b>94–102 (2004). https://doi.org/10.1007/s10055-003-0118-5</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-003-0118-5.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2001-07-04">04 July 2001</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2003-10-27">27 October 2003</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2004-02-05">05 February 2004</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2004-04">April 2004</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-003-0118-5" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-003-0118-5</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">Haptics</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Haptic interface</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Haptics-augmented training</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Virtual haptic anatomy</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Virtual haptic back</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-003-0118-5.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=118;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+

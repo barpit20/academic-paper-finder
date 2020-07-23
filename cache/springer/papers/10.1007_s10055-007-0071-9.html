@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="access" content="Yes">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+
+    <meta name="twitter:title" content="3D facial model exaggeration builder for small or large sized model ma"/>
+
+    <meta name="twitter:site" content="@SpringerLink"/>
+
+    <meta name="twitter:description" content="An action figure is a small human-shaped object used as a toy for children or artistic collection. In the past, the creation of action figures required intense manual effort. An initial trial to..."/>
+
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/10055/11/4.jpg"/>
+
+    <meta name="twitter:image:alt" content="Content cover image"/>
+
+    <meta name="journal_id" content="10055"/>
+
+    <meta name="dc.title" content="3D facial model exaggeration builder for small or large sized model manufacturing"/>
+
+    <meta name="dc.source" content="Virtual Reality 2007 11:4"/>
+
+    <meta name="dc.format" content="text/html"/>
+
+    <meta name="dc.publisher" content="Springer"/>
+
+    <meta name="dc.date" content="2007-06-01"/>
+
+    <meta name="dc.type" content="OriginalPaper"/>
+
+    <meta name="dc.language" content="En"/>
+
+    <meta name="dc.copyright" content="2007 Springer-Verlag London Limited"/>
+
+    <meta name="dc.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="dc.description" content="An action figure is a small human-shaped object used as a toy for children or artistic collection. In the past, the creation of action figures required intense manual effort. An initial trial to automate the process using recent scanning technology failed to yield figures with market appeal because the resulting action figures did not have sufficiently life-like shapes and expressions. The limiting factor which was not considered during this trial is the loss of individual characteristics resulting from either an increase or reduction in scale. We provide novel techniques for creating an exaggerated human face that retains all of the skin detail in the 3D scanned model, which will allow more characteristic figures to be easily created at any scale, thereby saving money and time during manufacturing. While traditional 3D printing applications utilize rigid models acquired using computer-aided design, our method demonstrates that deformable models (such as a human face) obtained from scanners are also suitable."/>
+
+    <meta name="prism.issn" content="1434-9957"/>
+
+    <meta name="prism.publicationName" content="Virtual Reality"/>
+
+    <meta name="prism.publicationDate" content="2007-06-01"/>
+
+    <meta name="prism.volume" content="11"/>
+
+    <meta name="prism.number" content="4"/>
+
+    <meta name="prism.section" content="OriginalPaper"/>
+
+    <meta name="prism.startingPage" content="229"/>
+
+    <meta name="prism.endingPage" content="239"/>
+
+    <meta name="prism.copyright" content="2007 Springer-Verlag London Limited"/>
+
+    <meta name="prism.rightsAgent" content="journalpermissions@springernature.com"/>
+
+    <meta name="prism.url" content="https://link.springer.com/article/10.1007/s10055-007-0071-9"/>
+
+    <meta name="prism.doi" content="doi:10.1007/s10055-007-0071-9"/>
+
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007/s10055-007-0071-9.pdf"/>
+
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s10055-007-0071-9"/>
+
+    <meta name="citation_journal_title" content="Virtual Reality"/>
+
+    <meta name="citation_journal_abbrev" content="Virtual Reality"/>
+
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+
+    <meta name="citation_issn" content="1434-9957"/>
+
+    <meta name="citation_title" content="3D facial model exaggeration builder for small or large sized model manufacturing"/>
+
+    <meta name="citation_volume" content="11"/>
+
+    <meta name="citation_issue" content="4"/>
+
+    <meta name="citation_publication_date" content="2007/10"/>
+
+    <meta name="citation_online_date" content="2007/06/01"/>
+
+    <meta name="citation_firstpage" content="229"/>
+
+    <meta name="citation_lastpage" content="239"/>
+
+    <meta name="citation_article_type" content="Original Article"/>
+
+    <meta name="citation_language" content="en"/>
+
+    <meta name="dc.identifier" content="doi:10.1007/s10055-007-0071-9"/>
+
+    <meta name="DOI" content="10.1007/s10055-007-0071-9"/>
+
+    <meta name="citation_doi" content="10.1007/s10055-007-0071-9"/>
+
+    <meta name="description" content="An action figure is a small human-shaped object used as a toy for children or artistic collection. In the past, the creation of action figures required int"/>
+
+    <meta name="dc.creator" content="Won-Sook Lee"/>
+
+    <meta name="dc.creator" content="Andrew Soon"/>
+
+    <meta name="dc.creator" content="Lijia Zhu"/>
+
+    <meta name="dc.subject" content="Computer Graphics"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Artificial Intelligence"/>
+
+    <meta name="dc.subject" content="Image Processing and Computer Vision"/>
+
+    <meta name="dc.subject" content="User Interfaces and Human Computer Interaction"/>
+
+    <meta name="citation_reference" content="citation_journal_title=ACM Trans Graph; citation_title=The space of human body shapes: reconstruction and parameterization from range scans; citation_author=B Allen, B Curless, Z Popovic; citation_volume=22; citation_issue=3; citation_publication_date=2003; citation_pages=587-594; citation_doi=10.1145/882262.882311; citation_id=CR1"/>
+
+    <meta name="citation_reference" content="Blanz V, Vetter T (1999) A morphable model for the synthesis of 3D faces. In: Proceedings of the 26th annual conference on computer graphics and interactive techniques international conference on computer graphics and interactive techniques. ACM Press/Addison-Wesley, New York, pp 187&#8211;194"/>
+
+    <meta name="citation_reference" content="Borshukov G, Lewis JP (2003) Realistic human face rendering for &#8220;The Matrix Reloaded&#8221;. In: Proceedings of the SIGGRAPH 2003 Conference on sketches and applications: in conjunction with the 30th annual conference on computer graphics and interactive techniques (San Diego, California, 27&#8211;31 July 2003). SIGGRAPH &#8216;03. ACM Press, New York, pp 1&#8211;1"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Leonardo; citation_title=The caricature generator; citation_author=SE Brennan; citation_volume=18; citation_publication_date=1985; citation_pages=170-178; citation_doi=10.2307/1578048; citation_id=CR4"/>
+
+    <meta name="citation_reference" content="Bui TD, Poel M, Heylen D, Nijholt A (2003) Automatic face morphing for transferring facial animation. In: Proceedings of the sixth IASTED international conference on computers, graphics and imaging, Honolulu, 13 August 2003, pp 19&#8211;23"/>
+
+    <meta name="citation_reference" content="Chiang PY, Liao WH, Li TY (2005) Automatic caricature generation by analyzing facial features. In: Proceedings of the Asian conference on computer vision, Korea"/>
+
+    <meta name="citation_reference" content="Cook RL (1984) Shade trees. In: Christiansen H (ed). Proceedings of the 11th annual conference on computer graphics and interactive techniques SIGGRAPH &#8216;84. ACM Press, New York, pp 223&#8211;231"/>
+
+    <meta name="citation_reference" content="Fujiwara T, Koshimizu H, Fujimura K, Fujita G, Noguchi Y, Ishikawa N (2001) 3D modeling system of human face and full 3D facial caricaturing. In: Proceedings of the seventh international conference on virtual systems and multimedia, pp 625&#8211;633"/>
+
+    <meta name="citation_reference" content="Godin G, Rioux M, Beraldin JA, Levoy M, Cournoyer L, Blais F (2001) An assessment of laser range measurement on marble surfaces. In: Proceedings of the fifth conference on optical 3D measurement techniques, Vienna, 1&#8211;4 October 2001"/>
+
+    <meta name="citation_reference" content="Goto T, Lee WS, Magnenat-Thalmann N (2002) Facial feature extraction for quick 3D face modeling. Signal processing: image communication, vol 17, issue 3, Elsevier, pp 243&#8211;259. ISSN: 0923&#8211;5965"/>
+
+    <meta name="citation_reference" content="Guenter B, Grimm C, Wood D, Malvar H, Pighin F (1998) Making faces. In: Proceedings of the 25th annual conference on computer graphics and interactive techniques SIGGRAPH &#8216;98. ACM Press, New York, pp 55&#8211;66"/>
+
+    <meta name="citation_reference" content="Guskov I, Vidim&#269;e K, Sweldens W, Schr&#246;der P (2000) Normal meshes. In: Proceedings of the 27th annual conference on computer graphics and interactive techniques international conference on computer graphics and interactive techniques. ACM Press/Addison-Wesley Publishing Co., New York, pp 95&#8211;102"/>
+
+    <meta name="citation_reference" content="Hilton A, Starck J, Collins G (2002) From 3D shape capture to animated models. In: Proceedings of the first international symposium on 3D data processing, visualization and transmission Padova, Italy, 19&#8211;21 June 2002, pp 246&#8211;255"/>
+
+    <meta name="citation_reference" content="Hoppe H (1996) Progressive meshes. In: Proceedings of the SIGGRAPH 1996"/>
+
+    <meta name="citation_reference" content="Kobbelt L, Campagna S, Vorsatz J, Seidel HP (1998) Interactive multi-resolution modeling on arbitrary meshes. In: Proceedings of the SIGGRAPH 1998, pp 106&#8211;114"/>
+
+    <meta name="citation_reference" content="Lasseter J (1987) Principles of traditional animation applied to 3D computer animation. In: Stone MC (ed). Proceedings of the 14th annual conference on computer graphics and interactive techniques SIGGRAPH &#8216;87. ACM Press, New York, pp 35&#8211;44"/>
+
+    <meta name="citation_reference" content="citation_journal_title=J image vis comput; citation_title=Fast head modeling for animation; citation_author=WS Lee, N Magnenat-Thalmann; citation_volume=18; citation_issue=4; citation_publication_date=2000; citation_pages=355-364; citation_doi=10.1016/S0262-8856(99)00057-8; citation_id=CR17"/>
+
+    <meta name="citation_reference" content="Lee YC, Terzopoulos D, Waters K (1995) Realistic face modeling for animation. In: Proceedings of the SIGGRAPH 1995, pp 55&#8211;62"/>
+
+    <meta name="citation_reference" content="Levoy M, Pulli K, Curless B, Rusinkiewicz S, Koller D, Pereira L, Ginzton M, Anderson S, Davis J, Ginsberg J, Shade J, Fulk D (2000) The digital michelangelo project: 3D scanning of large statues. In: Proceedings of the 27th annual conference on computer graphics and interactive techniques international conference on computer graphics and interactive techniques. ACM Press/Addison-Wesley, New York, pp 131&#8211;144"/>
+
+    <meta name="citation_reference" content="Liang L, Chen H, Xu Y, Shum H (2002) Example-based caricature generation with exaggeration. In: Proceedings of the tenth pacific conference on computer graphics and applications Beijing, China, 9&#8211;11 October 2002, pp 386&#8211;393"/>
+
+    <meta name="citation_reference" content="Loop C (1987) Smooth subdivision surfaces based on triangles. Master&#8217;s thesis, University of Utah, Department of Mathematics"/>
+
+    <meta name="citation_reference" content="Min K, Metaxas DN, Jung MR (2006) Active contours with level-set for extracting feature curves from triangular meshes. In: Proceedings of the computer graphics international, pp 185&#8211;196"/>
+
+    <meta name="citation_reference" content="Na K, Jung MR (2004) Hierarchical retargetting of fine facial motions. Computer graphics forum In: Proceedings of the eurographics&#8217;2004"/>
+
+    <meta name="citation_reference" content="Noh J, Fidaleo D, Neumann U (2000) Animated deformations with radial basis functions. In: Proceedings of the ACM symposium on virtual reality software and technology, Seoul, 22&#8211;25 October, 2000 VRST &#8216;00. ACM Press, New York, pp 166&#8211;174"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Perception; citation_title=Three-dimensional caricatures of human heads: distinctiveness and the perception of facial age; citation_author=AJ O&#8217;Toole, T Vetter, H Volz, EM Salter; citation_volume=26; citation_publication_date=1997; citation_pages=719-732; citation_doi=10.1068/p260719; citation_id=CR25"/>
+
+    <meta name="citation_reference" content="Rosenblum R (2006) Ron Mueck, Thames and Hudson. ISBN-10: 0500976600"/>
+
+    <meta name="citation_reference" content="Soon A, Lee WS (2006) Shape-based detail-preserving exaggeration of extremely accurate 3D faces. Accepted for publication in visual comput"/>
+
+    <meta name="citation_reference" content="citation_journal_title=Visual Comput Int J Comput Graph; citation_title=Layered animation of captured data; citation_author=W Sun, A Hilton, R Smith, J Illingworth; citation_volume=17; citation_issue=8; citation_publication_date=2001; citation_pages=457-474; citation_id=CR28"/>
+
+    <meta name="citation_reference" content="Taylor J, Beraldin JA, Godin G, Cournoyer L, Rioux M, Domey J (2002) NRC 3D imaging technology for museums and heritage. In: Proceedings of the first international workshop on 3D virtual heritage, Geneva, pp 70&#8211;75"/>
+
+    <meta name="citation_reference" content="Zhang Y, Sim T, Tan CL (2004) Adaptation-based individualized face modeling for animation using displacement map. In: Proceedings of computer graphics international, Crete, pp 518&#8211;521"/>
+
+    <meta name="citation_author" content="Won-Sook Lee"/>
+
+    <meta name="citation_author_email" content="wslee@uottawa.ca"/>
+
+    <meta name="citation_author_institution" content="SITE, Unviersity of Ottawa, Ottawa, Canada"/>
+
+    <meta name="citation_author" content="Andrew Soon"/>
+
+    <meta name="citation_author_institution" content="SITE, Unviersity of Ottawa, Ottawa, Canada"/>
+
+    <meta name="citation_author" content="Lijia Zhu"/>
+
+    <meta name="citation_author_institution" content="SITE, Unviersity of Ottawa, Ottawa, Canada"/>
+
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s10055-007-0071-9&amp;api_key="/>
+
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="citation_cover_date" content="2007/10/01"/>
+
+
+    
+        <meta property="og:url" content="https://link.springer.com/article/10.1007/s10055-007-0071-9"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:site_name" content="Virtual Reality"/>
+        <meta property="og:title" content="3D facial model exaggeration builder for small or large sized model manufacturing"/>
+        <meta property="og:description" content="An action figure is a small human-shaped object used as a toy for children or artistic collection. In the past, the creation of action figures required intense manual effort. An initial trial to automate the process using recent scanning technology failed to yield figures with market appeal because the resulting action figures did not have sufficiently life-like shapes and expressions. The limiting factor which was not considered during this trial is the loss of individual characteristics resulting from either an increase or reduction in scale. We provide novel techniques for creating an exaggerated human face that retains all of the skin detail in the 3D scanned model, which will allow more characteristic figures to be easily created at any scale, thereby saving money and time during manufacturing. While traditional 3D printing applications utilize rigid models acquired using computer-aided design, our method demonstrates that deformable models (such as a human face) obtained from scanners are also suitable."/>
+        <meta property="og:image" content="https://media.springernature.com/w110/springer-static/cover/journal/10055.jpg"/>
+    
+
+    <title>3D facial model exaggeration builder for small or large sized model manufacturing | SpringerLink</title>
+
+    <link rel="shortcut icon" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16 32x32 48x48" href=/oscar-static/images/favicons/springerlink/favicon-eb9f5576a3.ico />
+<link rel="icon" sizes="16x16" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-16x16-8bd8c1c945.png />
+<link rel="icon" sizes="32x32" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-32x32-61a52d80ab.png />
+<link rel="icon" sizes="48x48" type="image/png" href=/oscar-static/images/favicons/springerlink/favicon-48x48-0ec46b6b10.png />
+<link rel="apple-touch-icon" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+<link rel="apple-touch-icon" sizes="72x72" href=/oscar-static/images/favicons/springerlink/ic_launcher_hdpi-f77cda7f65.png />
+<link rel="apple-touch-icon" sizes="76x76" href=/oscar-static/images/favicons/springerlink/app-icon-ipad-c3fd26520d.png />
+<link rel="apple-touch-icon" sizes="114x114" href=/oscar-static/images/favicons/springerlink/app-icon-114x114-3d7d4cf9f3.png />
+<link rel="apple-touch-icon" sizes="120x120" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@2x-67b35150b3.png />
+<link rel="apple-touch-icon" sizes="144x144" href=/oscar-static/images/favicons/springerlink/ic_launcher_xxhdpi-986442de7b.png />
+<link rel="apple-touch-icon" sizes="152x152" href=/oscar-static/images/favicons/springerlink/app-icon-ipad@2x-677ba24d04.png />
+<link rel="apple-touch-icon" sizes="180x180" href=/oscar-static/images/favicons/springerlink/app-icon-iphone@3x-f259d46347.png />
+
+
+    
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <link rel="stylesheet" href=/oscar-static/app-springerlink/css/core-article-b0cd12fb00.css media="screen">
+    <link rel="stylesheet" id="js-mustard" href=/oscar-static/app-springerlink/css/enhanced-article-6aad73fdd0.css media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+    
+
+    
+    <script type="text/javascript">
+        window.dataLayer = [{"Country":"DK","doi":"10.1007-s10055-007-0071-9","Journal Title":"Virtual Reality","Journal Id":10055,"Keywords":"3D graphics, Virtual faces, 3D skin, Mesh parameterization, Exaggeration","kwrd":["3D_graphics","Virtual_faces","3D_skin","Mesh_parameterization","Exaggeration"],"Labs":"Y","ksg":"Krux.segments","kuid":"Krux.uid","Has Body":"Y","Features":["doNotAutoAssociate"],"Open Access":"N","hasAccess":"Y","bypassPaywall":"N","user":{"license":{"businessPartnerID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"businessPartnerIDString":"1600006921|2000421697|3000092219|3000209025|3000236495"}},"Access Type":"subscription","Bpids":"1600006921, 2000421697, 3000092219, 3000209025, 3000236495","Bpnames":"Copenhagen University Library Royal Danish Library Copenhagen, DEFF Consortium Danish National Library Authority, Det Kongelige Bibliotek The Royal Library, DEFF Danish Agency for Culture, 1236 DEFF LNCS","BPID":["1600006921","2000421697","3000092219","3000209025","3000236495"],"VG Wort Identifier":"pw-vgzm.415900-10.1007-s10055-007-0071-9","Full HTML":"Y","Subject Codes":["SCI","SCI22013","SCI21000","SCI22021","SCI18067"],"pmc":["I","I22013","I21000","I22021","I18067"],"session":{"authentication":{"loginStatus":"N"},"attributes":{"edition":"academic"}},"content":{"serial":{"eissn":"1434-9957","pissn":"1359-4338"},"type":"Article","category":{"pmc":{"primarySubject":"Computer Science","primarySubjectCode":"I","secondarySubjects":{"1":"Computer Graphics","2":"Artificial Intelligence","3":"Artificial Intelligence","4":"Image Processing and Computer Vision","5":"User Interfaces and Human Computer Interaction"},"secondarySubjectCodes":{"1":"I22013","2":"I21000","3":"I21000","4":"I22021","5":"I18067"}},"sucode":"SC6"},"attributes":{"deliveryPlatform":"oscar"}},"Event Category":"Article","GA Key":"UA-26408784-1","DOI":"10.1007/s10055-007-0071-9","Page":"article","page":{"attributes":{"environment":"live"}}}];
+        var event = new CustomEvent('dataLayerCreated');
+        document.dispatchEvent(event);
+    </script>
+
+
+    
+
+
+<script src="/oscar-static/js/jquery-220afd743d.js" id="jquery"></script>
+
+<script>
+    function OptanonWrapper() {
+        dataLayer.push({
+            'event' : 'onetrustActive'
+        });
+    }
+</script>
+
+
+    <script data-test="onetrust-link" type="text/javascript" src="https://cdn.cookielaw.org/consent/6b2ec9cd-5ace-4387-96d2-963e596401c6.js" charset="UTF-8"></script>
+
+
+
+
+
+    
+    
+        <!-- Google Tag Manager -->
+        <script data-test="gtm-head">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WCF9Z9');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+
+
+    <script class="js-entry">
+    (function(w, d) {
+        window.config = window.config || {};
+        window.config.mustardcut = false;
+
+        var ctmLinkEl = d.getElementById('js-mustard');
+
+        if (ctmLinkEl && w.matchMedia && w.matchMedia(ctmLinkEl.media).matches) {
+            window.config.mustardcut = true;
+
+            
+            
+            
+                window.Component = {};
+            
+
+            var currentScript = d.currentScript || d.head.querySelector('script.js-entry');
+
+            
+            function catchNoModuleSupport() {
+                var scriptEl = d.createElement('script');
+                return (!('noModule' in scriptEl) && 'onbeforeload' in scriptEl)
+            }
+
+            var headScripts = [
+                { 'src' : '/oscar-static/js/polyfill-es5-bundle-ab77bcf8ba.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es5-bundle-6b407673fa.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/airbrake-es6-bundle-e7bd4589ff.js', 'async': false, 'module': true}
+            ];
+
+            var bodyScripts = [
+                { 'src' : '/oscar-static/js/app-es5-bundle-867d07d044.js', 'async': false, 'module': false},
+                { 'src' : '/oscar-static/js/app-es6-bundle-8ebcb7376d.js', 'async': false, 'module': true}
+                
+                
+                    , { 'src' : '/oscar-static/js/global-article-es5-bundle-12442a199c.js', 'async': false, 'module': false},
+                    { 'src' : '/oscar-static/js/global-article-es6-bundle-7ae1776912.js', 'async': false, 'module': true}
+                
+            ];
+
+            function createScript(script) {
+                var scriptEl = d.createElement('script');
+                scriptEl.src = script.src;
+                scriptEl.async = script.async;
+                if (script.module === true) {
+                    scriptEl.type = "module";
+                    if (catchNoModuleSupport()) {
+                        scriptEl.src = '';
+                    }
+                } else if (script.module === false) {
+                    scriptEl.setAttribute('nomodule', true)
+                }
+                if (script.charset) {
+                    scriptEl.setAttribute('charset', script.charset);
+                }
+
+                return scriptEl;
+            }
+
+            for (var i=0; i<headScripts.length; ++i) {
+                var scriptEl = createScript(headScripts[i]);
+                currentScript.parentNode.insertBefore(scriptEl, currentScript.nextSibling);
+            }
+
+            d.addEventListener('DOMContentLoaded', function() {
+                for (var i=0; i<bodyScripts.length; ++i) {
+                    var scriptEl = createScript(bodyScripts[i]);
+                    d.body.appendChild(scriptEl);
+                }
+            });
+
+            // Webfont repeat view
+            var config = w.config;
+            if (config && config.publisherBrand && sessionStorage.fontsLoaded === 'true') {
+                d.documentElement.className += ' webfonts-loaded';
+            }
+        }
+    })(window, document);
+</script>
+
+</head>
+<body class="shared-article-renderer">
+    
+    
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript data-test="gtm-body">
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+
+
+    <div class="u-vh-full">
+        
+    <aside class="c-ad c-ad--728x90" data-test="springer-doubleclick-ad">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-LB1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="728x90" data-gpt-targeting="pos=LB1;articleid=71;"></div>
+        </div>
+    </aside>
+
+<div class="u-position-relative">
+    <header class="c-header u-mb-24" data-test="publisher-header">
+        <div class="c-header__container">
+            <div class="c-header__brand">
+                
+    <a id="logo" class="u-display-block" href="/" title="Go to homepage" data-test="springerlink-logo">
+        <picture>
+            <source type="image/svg+xml" srcset=/oscar-static/images/springerlink/svg/springerlink-253e23a83d.svg>
+            <img src=/oscar-static/images/springerlink/png/springerlink-1db8a5b8b1.png alt="SpringerLink" width="148" height="30" data-test="header-academic">
+        </picture>
+        
+        
+    </a>
+
+
+            </div>
+            <div class="c-header__navigation">
+                
+    
+        <button type="button"
+                class="c-header__link u-button-reset u-mr-24"
+                data-expander
+                data-expander-target="#popup-search"
+                data-expander-autofocus="firstTabbable"
+                data-test="header-search-button">
+            <span class="u-display-flex u-align-items-center">
+                Search
+                <svg class="c-icon u-ml-8" width="22" height="22" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <nav>
+            <ul class="c-header__menu">
+                
+                <li class="c-header__item">
+                    <a data-test="login-link" class="c-header__link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10055-007-0071-9">Log in</a>
+                </li>
+                
+
+                
+            </ul>
+        </nav>
+    
+
+    
+
+
+
+            </div>
+        </div>
+    </header>
+
+    
+        <div id="popup-search" class="c-popup-search u-mb-16 js-header-search u-js-hide">
+            <div class="c-popup-search__content">
+                <div class="u-container">
+                    <div class="c-popup-search__container" data-test="springerlink-popup-search">
+                        <div class="app-search">
+    <form role="search" method="GET" action="/search" >
+        <label for="search" class="app-search__label">Search SpringerLink</label>
+        <div class="app-search__content">
+            <input id="search" class="app-search__input" data-search-input autocomplete="off" role="textbox" name="query" type="text" value="">
+            <button class="app-search__button" type="submit">
+                <span class="u-visually-hidden">Search</span>
+                <svg class="c-icon" width="14" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="#global-icon-search"></use>
+                </svg>
+            </button>
+            
+                <input type="hidden" name="searchType" value="publisherSearch">
+            
+            
+        </div>
+    </form>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        
+
+    <div class="u-container u-mt-32 u-mb-32 u-clearfix" id="main-content" data-component="article-container">
+        <main class="c-article-main-column u-float-left js-main-column" data-track-component="article body">
+            
+                
+                <div class="c-context-bar u-hide" data-component="context-bar" aria-hidden="true">
+                    <div class="c-context-bar__container u-container">
+                        <div class="c-context-bar__title">
+                            3D facial model exaggeration builder for small or large sized model manufacturing
+                        </div>
+                        
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-007-0071-9.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                    </div>
+                </div>
+            
+            
+            
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-007-0071-9.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+            <article itemscope itemtype="http://schema.org/ScholarlyArticle" lang="en">
+                <div class="c-article-header">
+                    <header>
+                        <ul class="c-article-identifiers" data-test="article-identifier">
+                            
+    
+        <li class="c-article-identifiers__item" data-test="article-category">Original Article</li>
+    
+    
+    
+
+                            <li class="c-article-identifiers__item"><a href="#article-info" data-track="click" data-track-action="publication date" data-track-label="link">Published: <time datetime="2007-06-01" itemprop="datePublished">01 June 2007</time></a></li>
+                        </ul>
+
+                        
+                        <h1 class="c-article-title" data-test="article-title" data-article-title="" itemprop="name headline">3D facial model exaggeration builder for small or large sized model manufacturing</h1>
+                        <ul class="c-author-list js-etal-collapsed" data-etal="25" data-etal-small="3" data-test="authors-list" data-component-authors-activator="authors-list"><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Won_Sook-Lee" data-author-popup="auth-Won_Sook-Lee" data-corresp-id="c1">Won-Sook Lee<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-email"></use></svg></a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Unviersity of Ottawa" /><meta itemprop="address" content="SITE, Unviersity of Ottawa, 800 King Edward Avenue, Ottawa, ON, Canada" /></span></sup>, </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Andrew-Soon" data-author-popup="auth-Andrew-Soon">Andrew Soon</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Unviersity of Ottawa" /><meta itemprop="address" content="SITE, Unviersity of Ottawa, 800 King Edward Avenue, Ottawa, ON, Canada" /></span></sup> &amp; </li><li class="c-author-list__item" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span itemprop="name"><a data-test="author-name" data-track="click" data-track-action="open author" data-track-label="link" href="#auth-Lijia-Zhu" data-author-popup="auth-Lijia-Zhu">Lijia Zhu</a></span><sup class="u-js-hide"><a href="#Aff1">1</a><span itemprop="affiliation" itemscope="itemscope" itemtype="http://schema.org/Organization" class="u-visually-hidden"><meta itemprop="name" content="Unviersity of Ottawa" /><meta itemprop="address" content="SITE, Unviersity of Ottawa, 800 King Edward Avenue, Ottawa, ON, Canada" /></span></sup> </li></ul>
+                        <p class="c-article-info-details" data-container-section="info">
+                            
+    <a data-test="journal-link" href="/journal/10055"><i data-test="journal-title">Virtual Reality</i></a>
+
+                            <b data-test="journal-volume"><span class="u-visually-hidden">volume</span> 11</b>, <span class="u-visually-hidden">pages</span><span itemprop="pageStart">229</span>–<span itemprop="pageEnd">239</span>(<span data-test="article-publication-year">2007</span>)<a href="#citeas" class="c-article-info-details__cite-as u-hide-print" data-track="click" data-track-action="cite this article" data-track-label="link">Cite this article</a>
+                        </p>
+                        
+    
+
+                        <div data-test="article-metrics">
+                            <div id="altmetric-container">
+    
+        <div class="c-article-metrics-bar__wrapper u-clear-both">
+            <ul class="c-article-metrics-bar u-list-reset">
+                
+                    <li class=" c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">169 <span class="c-article-metrics-bar__label">Accesses</span></p>
+                    </li>
+                
+                
+                    <li class="c-article-metrics-bar__item">
+                        <p class="c-article-metrics-bar__count">1 <span class="c-article-metrics-bar__label">Citations</span></p>
+                    </li>
+                
+                
+                <li class="c-article-metrics-bar__item">
+                    <p class="c-article-metrics-bar__details"><a href="/article/10.1007%2Fs10055-007-0071-9/metrics" data-track="click" data-track-action="view metrics" data-track-label="link" rel="nofollow">Metrics <span class="u-visually-hidden">details</span></a></p>
+                </li>
+            </ul>
+        </div>
+    
+</div>
+
+                        </div>
+                        
+                        
+                        
+                    </header>
+                </div>
+
+                <div data-article-body="true" data-track-component="article body" class="c-article-body">
+                    <section aria-labelledby="Abs1" lang="en"><div class="c-article-section" id="Abs1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Abs1">Abstract</h2><div class="c-article-section__content" id="Abs1-content"><p>An action figure is a small human-shaped object used as a toy for children or artistic collection. In the past, the creation of action figures required intense manual effort. An initial trial to automate the process using recent scanning technology failed to yield figures with market appeal because the resulting action figures did not have sufficiently life-like shapes and expressions. The limiting factor which was not considered during this trial is the loss of individual characteristics resulting from either an increase or reduction in scale. We provide novel techniques for creating an exaggerated human face that retains all of the skin detail in the 3D scanned model, which will allow more characteristic figures to be easily created at any scale, thereby saving money and time during manufacturing. While traditional 3D printing applications utilize rigid models acquired using computer-aided design, our method demonstrates that deformable models (such as a human face) obtained from scanners are also suitable.</p></div></div></section>
+                    
+    
+
+
+                    
+
+                    
+
+                    
+                        
+                            <section aria-labelledby="Sec1"><div class="c-article-section" id="Sec1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec1">Introduction</h2><div class="c-article-section__content" id="Sec1-content"><h3 class="c-article__sub-heading" id="Sec2">Motivation</h3><p>Action figures represent an area of potential growth and evolution in toy manufacturing. Currently, to obtain realistic facial expressions on action figures, toy manufacturers have to cast the figures in clay, sculpt the desired expressions and then construct a mould to mass-manufacture the figures. This is a lengthy and costly manual process. Commercial partners would like to automate the process of creating action figures with life-like shape by using ultra high-definition scanners. However, an initial trial to automate the process using 3D scanners and rapid prototype technologies proved not to be useful because the resulting action figures do not preserve the original life-like aesthetics when produced at a different scale. Animation principles widely used in the computer-generated film industry can be applied here. One of the important principals of animation is “exaggeration,” which simulates pseudo-realistic shape and expressions when used in the right amount, thereby increasing the figure’s appeal to a discerning consumer.</p><p>The same techniques also apply to large sized manufacturing, for instance, art material for enlarged parts of the face (three times life-size) or oversized sculptures of celebrities and historical people. One of very realistic artistic work showing people at a very large scale is by Ron Mueck Rosenblum (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Rosenblum R (2006) Ron Mueck, Thames and Hudson. ISBN-10: 0500976600" href="/article/10.1007/s10055-007-0071-9#ref-CR26" id="ref-link-section-d71825e306">2006</a>), the artist sculptor. The exact reproduction of the up-scaled sculptures is not appealing. It is more desirable to have a deeper and stronger touch on the facial skull as well as stronger skin detail. In this case, it is critical to use high-quality scanned faces which show the skin detail.</p><p>Summarizing the issues raised above, the problem is described as follows:</p><blockquote class="c-blockquote"><div class="c-blockquote__body">
+                    <p>
+                      <i>Find a methodology which allows a 3D scanned face to be exaggerated at a user-determined degree while retaining the details of skin obtained from the original scan.</i>
+                    </p>
+                  </div></blockquote><p>We present novel techniques for creating a human figure (face area) that allows us to easily exaggerate facial features, thus making the face more attractive and more life-like when reproduced in very small or very large scale.</p><h3 class="c-article__sub-heading" id="Sec3">Related research</h3><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec4">Range data acquisition</h4><p>A laser scanner is an example of a non-contact active 3D scanner. Active scanners emit radiation to digitize an object. In this case, light from a laser emitter is directed at the subject and the reflected light is used to determine the point of contact. Time-of-flight range scanners determine the point of impact between the laser beam and the object by measuring the time elapsed before the light reflected off the object is detected. Triangulation scanners use knowledge of the distance between the laser emitter and a camera (used to detect the laser dot on the subject), the orientation of the emitter and the orientation of the camera (determined by analyzing the location of the laser dot in the camera’s field of view) to fully describe a triangle which, in turn, identifies the location of the laser beam’s point of impact. Laser scanners produce point clouds which can be used to create polygonal models.</p><p>Cyberware’s laser scanning products are widely used to collect range data. Some of their 3D colour digitizers can acquire scans very quickly but at the cost of resolution (Lee et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1995" title="Lee YC, Terzopoulos D, Waters K (1995) Realistic face modeling for animation. In: Proceedings of the SIGGRAPH 1995, pp 55–62" href="/article/10.1007/s10055-007-0071-9#ref-CR18" id="ref-link-section-d71825e335">1995</a>; Guenter et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1998" title="Guenter B, Grimm C, Wood D, Malvar H, Pighin F (1998) Making faces. In: Proceedings of the 25th annual conference on computer graphics and interactive techniques SIGGRAPH ‘98. ACM Press, New York, pp 55–66" href="/article/10.1007/s10055-007-0071-9#ref-CR11" id="ref-link-section-d71825e338">1998</a>; Blanz and Vetter <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Blanz V, Vetter T (1999) A morphable model for the synthesis of 3D faces. In: Proceedings of the 26th annual conference on computer graphics and interactive techniques international conference on computer graphics and interactive techniques. ACM Press/Addison-Wesley, New York, pp 187–194" href="/article/10.1007/s10055-007-0071-9#ref-CR2" id="ref-link-section-d71825e341">1999</a>). A more elaborate and sophisticated laser scanning setup is described in Taylor et al. (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Taylor J, Beraldin JA, Godin G, Cournoyer L, Rioux M, Domey J (2002) NRC 3D imaging technology for museums and heritage. In: Proceedings of the first international workshop on 3D virtual heritage, Geneva, pp 70–75" href="/article/10.1007/s10055-007-0071-9#ref-CR29" id="ref-link-section-d71825e344">2002</a>). This scanning technology captures surface detail at lateral and depth resolutions of 50 and 10 μm, respectively. It has been used to digitize patches on several of Michelangelo’s sculptures (Levoy et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Levoy M, Pulli K, Curless B, Rusinkiewicz S, Koller D, Pereira L, Ginzton M, Anderson S, Davis J, Ginsberg J, Shade J, Fulk D (2000) The digital michelangelo project: 3D scanning of large statues. In: Proceedings of the 27th annual conference on computer graphics and interactive techniques international conference on computer graphics and interactive techniques. ACM Press/Addison-Wesley, New York, pp 131–144" href="/article/10.1007/s10055-007-0071-9#ref-CR19" id="ref-link-section-d71825e347">2000</a>; Godin et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Godin G, Rioux M, Beraldin JA, Levoy M, Cournoyer L, Blais F (2001) An assessment of laser range measurement on marble surfaces. In: Proceedings of the fifth conference on optical 3D measurement techniques, Vienna, 1–4 October 2001" href="/article/10.1007/s10055-007-0071-9#ref-CR9" id="ref-link-section-d71825e351">2001</a>) and to produce realistic models of actors’ faces for the movie “The Matrix Reloaded” (Borshukov and Lewis <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Borshukov G, Lewis JP (2003) Realistic human face rendering for “The Matrix Reloaded”. In: Proceedings of the SIGGRAPH 2003 Conference on sketches and applications: in conjunction with the 30th annual conference on computer graphics and interactive techniques (San Diego, California, 27–31 July 2003). SIGGRAPH ‘03. ACM Press, New York, pp 1–1" href="/article/10.1007/s10055-007-0071-9#ref-CR3" id="ref-link-section-d71825e354">2003</a>). Scanning time is quite long, but the results are unparalleled.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec5">Exaggeration</h4><p>Shape morphing, for example for movie special effects, has been one of popular topics in Computer Graphics and face exaggeration is a subset of it. We focus on the face exaggeration in this section. Face exaggeration is one of the key animation principles (Lasseter <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1987" title="Lasseter J (1987) Principles of traditional animation applied to 3D computer animation. In: Stone MC (ed). Proceedings of the 14th annual conference on computer graphics and interactive techniques SIGGRAPH ‘87. ACM Press, New York, pp 35–44" href="/article/10.1007/s10055-007-0071-9#ref-CR16" id="ref-link-section-d71825e365">1987</a>), making output more attractive and distinctive by exaggerating the shape, color, emotion, or actions of a character. Many studies have been conducted into the use of exaggeration in digital works. However, many of these earlier studies (Brennan <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1985" title="Brennan SE (1985) The caricature generator. Leonardo 18:170–178" href="/article/10.1007/s10055-007-0071-9#ref-CR4" id="ref-link-section-d71825e368">1985</a>; Chiang et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2005" title="Chiang PY, Liao WH, Li TY (2005) Automatic caricature generation by analyzing facial features. In: Proceedings of the Asian conference on computer vision, Korea" href="/article/10.1007/s10055-007-0071-9#ref-CR6" id="ref-link-section-d71825e371">2005</a>; Liang et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Liang L, Chen H, Xu Y, Shum H (2002) Example-based caricature generation with exaggeration. In: Proceedings of the tenth pacific conference on computer graphics and applications Beijing, China, 9–11 October 2002, pp 386–393" href="/article/10.1007/s10055-007-0071-9#ref-CR20" id="ref-link-section-d71825e374">2002</a>), were conducted in the context of 2D images while others (Fujiwara et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Fujiwara T, Koshimizu H, Fujimura K, Fujita G, Noguchi Y, Ishikawa N (2001) 3D modeling system of human face and full 3D facial caricaturing. In: Proceedings of the seventh international conference on virtual systems and multimedia, pp 625–633" href="/article/10.1007/s10055-007-0071-9#ref-CR8" id="ref-link-section-d71825e377">2001</a>; O’Toole et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1997" title="O’Toole AJ, Vetter T, Volz H, Salter EM (1997) Three-dimensional caricatures of human heads: distinctiveness and the perception of facial age. Perception 26:719–732" href="/article/10.1007/s10055-007-0071-9#ref-CR25" id="ref-link-section-d71825e381">1997</a>; Blanz and Vetter <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1999" title="Blanz V, Vetter T (1999) A morphable model for the synthesis of 3D faces. In: Proceedings of the 26th annual conference on computer graphics and interactive techniques international conference on computer graphics and interactive techniques. ACM Press/Addison-Wesley, New York, pp 187–194" href="/article/10.1007/s10055-007-0071-9#ref-CR2" id="ref-link-section-d71825e384">1999</a>) dealt with 3D morphable (consistently parameterized or homogenously structured) faces with about 70 K vertices. However, the 3D studies did not cover models bearing delicate skin detail that need to be treated carefully. Such detail can be easily destroyed, for instance, by merging them with others’ skin detail. Most 3D facial-caricaturing algorithms are usually applied on a morphable model to produce a more pronounced skull by exaggerating the distinctive information.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec6">Dense data manipulation and structure embedding</h4><p>A common approach to avoid the computational expense, inefficiency inherent in manipulating a very dense data set is to first perform the desired changes on a low polygon approximation of the original model and then use detail recovery. Displacement mapping (Cook <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1984" title="Cook RL (1984) Shade trees. In: Christiansen H (ed). Proceedings of the 11th annual conference on computer graphics and interactive techniques SIGGRAPH ‘84. ACM Press, New York, pp 223–231" href="/article/10.1007/s10055-007-0071-9#ref-CR7" id="ref-link-section-d71825e395">1984</a>) is a well-known technique to achieve higher resolution renderings or models. Others (Borshukov and Lewis <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Borshukov G, Lewis JP (2003) Realistic human face rendering for “The Matrix Reloaded”. In: Proceedings of the SIGGRAPH 2003 Conference on sketches and applications: in conjunction with the 30th annual conference on computer graphics and interactive techniques (San Diego, California, 27–31 July 2003). SIGGRAPH ‘03. ACM Press, New York, pp 1–1" href="/article/10.1007/s10055-007-0071-9#ref-CR3" id="ref-link-section-d71825e398">2003</a>; Hilton et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Hilton A, Starck J, Collins G (2002) From 3D shape capture to animated models. In: Proceedings of the first international symposium on 3D data processing, visualization and transmission Padova, Italy, 19–21 June 2002, pp 246–255" href="/article/10.1007/s10055-007-0071-9#ref-CR13" id="ref-link-section-d71825e401">2002</a>; Sun et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2001" title="Sun W, Hilton A, Smith R, Illingworth J (2001) Layered animation of captured data. Visual Comput Int J Comput Graph 17(8):457–474" href="/article/10.1007/s10055-007-0071-9#ref-CR28" id="ref-link-section-d71825e404">2001</a>; Zhang et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Zhang Y, Sim T, Tan CL (2004) Adaptation-based individualized face modeling for animation using displacement map. In: Proceedings of computer graphics international, Crete, pp 518–521" href="/article/10.1007/s10055-007-0071-9#ref-CR30" id="ref-link-section-d71825e407">2004</a>) have also demonstrated that the low polygon models used in this practice can be constructed in many different ways. However, certain methodologies (Borshukov and Lewis <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Borshukov G, Lewis JP (2003) Realistic human face rendering for “The Matrix Reloaded”. In: Proceedings of the SIGGRAPH 2003 Conference on sketches and applications: in conjunction with the 30th annual conference on computer graphics and interactive techniques (San Diego, California, 27–31 July 2003). SIGGRAPH ‘03. ACM Press, New York, pp 1–1" href="/article/10.1007/s10055-007-0071-9#ref-CR3" id="ref-link-section-d71825e411">2003</a>) that rely on low resolution models containing arbitrary structures (i.e. connectivity between vertices) have some significant drawbacks. Without performing any further work on these models, it is not possible to ensure that the locations of landmarks such as the eyes and nose for every subject share the same indexation (consistent parameterization of models); consequently, automatic exaggeration of features by using a homogenous (morphable) structure is also not possible. Mesh adaptation (or mesh refinement), in simple terms refers to increasing the accuracy of shape and positions of an initial mesh to accurately capture facial features (Lee et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1995" title="Lee YC, Terzopoulos D, Waters K (1995) Realistic face modeling for animation. In: Proceedings of the SIGGRAPH 1995, pp 55–62" href="/article/10.1007/s10055-007-0071-9#ref-CR18" id="ref-link-section-d71825e414">1995</a>; Lee and Magnenat-Thalmann <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Lee WS, Magnenat-Thalmann N (2000) Fast head modeling for animation. J image vis comput 18(4):355–364" href="/article/10.1007/s10055-007-0071-9#ref-CR17" id="ref-link-section-d71825e417">2000</a>). This can provide a useful base for the above-mentioned applications. Mesh adaptation on a scanned model makes use of a generic model that governs the structure of every face at any resolution, as well as identified feature information. We adapt a generic mesh to the scanned surface, and then use subdivision techniques to increase the resolution (Na and Jung <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2004" title="Na K, Jung MR (2004) Hierarchical retargetting of fine facial motions. Computer graphics forum In: Proceedings of the eurographics’2004" href="/article/10.1007/s10055-007-0071-9#ref-CR23" id="ref-link-section-d71825e420">2004</a>; Guskov et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Guskov I, Vidimče K, Sweldens W, Schröder P (2000) Normal meshes. In: Proceedings of the 27th annual conference on computer graphics and interactive techniques international conference on computer graphics and interactive techniques. ACM Press/Addison-Wesley Publishing Co., New York, pp 95–102" href="/article/10.1007/s10055-007-0071-9#ref-CR12" id="ref-link-section-d71825e423">2000</a>; Hoppe <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1996" title="Hoppe H (1996) Progressive meshes. In: Proceedings of the SIGGRAPH 1996" href="/article/10.1007/s10055-007-0071-9#ref-CR14" id="ref-link-section-d71825e426">1996</a>; Kobbelt et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1998" title="Kobbelt L, Campagna S, Vorsatz J, Seidel HP (1998) Interactive multi-resolution modeling on arbitrary meshes. In: Proceedings of the SIGGRAPH 1998, pp 106–114" href="/article/10.1007/s10055-007-0071-9#ref-CR15" id="ref-link-section-d71825e430">1998</a>). It is then adapted and refined on the scanned surface once more.</p><h3 class="c-article__sub-heading" id="Sec7">Overview of the methodology</h3><p>Our main idea is to transfer a human face model from the real world to the virtual world using a digital scanning process. We use the most accurate scanning equipment to acquire a scanned model with 3D skin detail, which shows the skin structure on the face. We then apply our methodology to efficiently modify the very high resolution models. The principal strategy is to first decompose the model into sub-parts (global shape and detail) and then manipulate a sub-part to achieve the desired effect. Finally, the recomposition of sub-parts yields the modified 3D mesh. A conventional 3D printer then transfers the 3D virtual model to an object in 3D world, which can be used for manufacturing.The overall flow is shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0071-9#Fig1">1</a>.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-1"><figure><figcaption><b id="Fig1" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 1</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/1" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig1_HTML.gif?as=webp"></source><img aria-describedby="figure-1-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig1_HTML.gif" alt="figure1" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-1-desc"><p>Overall flow for the enhanced face model manufacturing</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/1" data-track-dest="link:Figure1 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>The rest of the paper is structured as follows: Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-007-0071-9#Sec2">2</a> is devoted the preparation of scanned model in order to capture a human face subject into 3D mesh. Section <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-007-0071-9#Sec3">3</a> explains how to restructure the scanned model for our purpose and Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-007-0071-9#Sec4">4</a> illustrates the enhancement techniques such as various exaggeration methodologies either emphasizing the global facial shape characteristics or emphasizing skin characteristics. Finally Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-007-0071-9#Sec5">5</a> shows the manufactured result using a rapid-prototype device.</p></div></div></section><section aria-labelledby="Sec8"><div class="c-article-section" id="Sec8-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec8">Preparation of scanned model</h2><div class="c-article-section__content" id="Sec8-content"><h3 class="c-article__sub-heading" id="Sec9">Plastering and scanning</h3><p>The process employed to scan our subjects’ faces cannot be completed quickly because the scanning resolution needs to be sufficiently high to capture skin information at a very fine level. It is impossible to directly scan each subject’s face for two reasons: (1) his or her presence would be required for the duration of the scanning process which can last between one and three days depending on the scanning resolution, and (2) perturbations to the surface of the face resulting from respiration produce scanning errors.Our scanning process begins with the construction of a plaster cast mould of the subject’s face.</p><p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0071-9#Fig2">2</a> shows some photographs taken during the plastering process. The subject’s eyes and mouth remain closed during plastering, but breathing holes are necessary.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-2"><figure><figcaption><b id="Fig2" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 2</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/2" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig2_HTML.jpg?as=webp"></source><img aria-describedby="figure-2-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig2_HTML.jpg" alt="figure2" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-2-desc"><p>Construction of the negative (<i>dark</i>) and positive (<i>light</i>) moulds of a face on the right image</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/2" data-track-dest="link:Figure2 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>First, a silicone-based substance is applied to the subject’s face (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0071-9#Fig2">2</a> left) to construct the negative mould. The negative mould captures an incredible level of skin detail and texture. Warts, wrinkles, skin texture, scars and so on are transferred intact to the final scanned model. Once the silicone hardens, liquid plaster is applied on top of it (Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0071-9#Fig2">2</a> center) to construct the positive mould. After the positive mould sets, it is removed and the negative mask is peeled off the subject’s face. Positive and negative mould creation combined take roughly one hour to complete. To avoid accidental removal of hair when peeling off the negative mould, another substance is applied on the subject’s eyebrows and eyelashes prior to the first step. This causes small “lumps” to appear in the final scanned model which can be removed by manual editing.</p><p>The negative mould is placed in the positive mould and then scanned. The scanning is acquired at an XY scan resolution of 100 μm using the auto-synchronized laser scanner from XYZ RGB Inc., which is based on technology developed in the Visual Information Technology group of the Canadian National Research Council. This laser scanner has an accuracy (3 Sigma) of ±0.025 mm (±0.001′′), and <i>X</i>, <i>Y</i>, and <i>Z</i>-axis resolutions of 0.1 mm (0.004′′), 0.002 mm (0.00008′′), and 0.003 mm (0.0001′′), respectively, as determined using a DEA Scirocco coordinate measuring machine. All post-processing, including alignment, merging, editing and polygon reduction, is accomplished using Innovmetric’s Polyworks software.</p><h3 class="c-article__sub-heading" id="Sec10">3D model database</h3><p>We have collected four very detailed scanned faces; each with a different resolution as shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0071-9#Fig3">3</a>. Each individual is presented with closed eyes and mouth and also does not include the head.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-3"><figure><figcaption><b id="Fig3" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 3</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/3" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig3_HTML.gif?as=webp"></source><img aria-describedby="figure-3-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig3_HTML.gif" alt="figure3" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-3-desc"><p>Scanned data of different resolutions</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/3" data-track-dest="link:Figure3 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>Magnified views of Person A’s 3D scanned model are shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0071-9#Fig4">4</a> where the 3D skin structure is visible. Conventional scanners that produce fewer than 100 K vertices from a human face can not provide such 3D information about skin.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-4"><figure><figcaption><b id="Fig4" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 4</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/4" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig4_HTML.jpg?as=webp"></source><img aria-describedby="figure-4-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig4_HTML.jpg" alt="figure4" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-4-desc"><p>Close-up look of person A in <b>a</b> the lower right face area; <b>b</b> the left cheek</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/4" data-track-dest="link:Figure4 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        </div></div></section><section aria-labelledby="Sec11"><div class="c-article-section" id="Sec11-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec11">Modeling of multi-resolution shapes and detail</h2><div class="c-article-section__content" id="Sec11-content"><p>This section describes how the 3D digital face is decomposed into multi-resolution shapes and the offset between the scanned mesh and the shape mesh is saved as 3D skin.</p><h3 class="c-article__sub-heading" id="Sec12">Feature-based model for consistent parameterization</h3><p>We semi-automatically established 3D feature point correspondence between the generic model and the scanned model in order to deform the generic model using radial basis function networks (Bui et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Bui TD, Poel M, Heylen D, Nijholt A (2003) Automatic face morphing for transferring facial animation. In: Proceedings of the sixth IASTED international conference on computers, graphics and imaging, Honolulu, 13 August 2003, pp 19–23" href="/article/10.1007/s10055-007-0071-9#ref-CR5" id="ref-link-section-d71825e617">2003</a>; Noh et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Noh J, Fidaleo D, Neumann U (2000) Animated deformations with radial basis functions. In: Proceedings of the ACM symposium on virtual reality software and technology, Seoul, 22–25 October, 2000 VRST ‘00. ACM Press, New York, pp 166–174" href="/article/10.1007/s10055-007-0071-9#ref-CR24" id="ref-link-section-d71825e620">2000</a>). The basic idea is that we tranform the given 3D-mesh (generic model) using a set of pre-defined feature points (characteristic points such as end points of lips, etc.) obtained from the indivisual scanned face, which results in deformation of the generic model.</p><p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0071-9#Fig5">5</a> illustrates an example of feature localization on the scanned data. The 114 feature points on the front view can be separated into two categories: major and minor. Forty four major points are manually located at key feature points, while the remaining 70 minor points in between these major ones are automatically created by similarity transformation. In this case, we use affine mapping with pre-defined curves connecting several feature points as a set as shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0071-9#Fig5">5</a>b. The time usually spent to locate the points is a few minutes and it depends on a user. The feature points are very similar to MPEG FDP points to capture the characteristics of various ethics group’s facial shapes. The side view feature locations are calculated automatically by finding the depth on the scanned model input. More details can be found in our previous work (Lee and Magnenat-Thalmann <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2000" title="Lee WS, Magnenat-Thalmann N (2000) Fast head modeling for animation. J image vis comput 18(4):355–364" href="/article/10.1007/s10055-007-0071-9#ref-CR17" id="ref-link-section-d71825e632">2000</a>; Soon and Lee <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Soon A, Lee WS (2006) Shape-based detail-preserving exaggeration of extremely accurate 3D faces. Accepted for publication in visual comput" href="/article/10.1007/s10055-007-0071-9#ref-CR27" id="ref-link-section-d71825e635">2006</a>). The feature points can be placed automatically either by checking the 3D mesh convexity and concaveness (Min et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Min K, Metaxas DN, Jung MR (2006) Active contours with level-set for extracting feature curves from triangular meshes. In: Proceedings of the computer graphics international, pp 185–196" href="/article/10.1007/s10055-007-0071-9#ref-CR22" id="ref-link-section-d71825e638">2006</a>) or by checking features on projected image of the mesh if a texture mapping is present (Goto et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2002" title="Goto T, Lee WS, Magnenat-Thalmann N (2002) Facial feature extraction for quick 3D face modeling. Signal processing: image communication, vol 17, issue 3, Elsevier, pp 243–259. ISSN: 0923–5965" href="/article/10.1007/s10055-007-0071-9#ref-CR10" id="ref-link-section-d71825e642">2002</a>).</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-5"><figure><figcaption><b id="Fig5" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 5</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/5" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig5_HTML.jpg?as=webp"></source><img aria-describedby="figure-5-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig5_HTML.jpg" alt="figure5" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-5-desc"><p>
+                                       <b>a</b> Generic model (1,485 triangles). <b>b</b> Detected facial features on the front view of the head. <b>c</b> Feature-based model (1,485 triangles)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/5" data-track-dest="link:Figure5 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h3 class="c-article__sub-heading" id="Sec13">Multi-resolution modelling using subdivision and refinement</h3><p>The aim of multi-resolution model reconstruction is to represent the scanned surface using a template geometry (the same number of points, the same triangulation and the same facial feature information for each point on the surface). Thus, every model of a particular resolution (e.g., every medium resolution model) shares a common structure. This type of structural homogeneity results from using the same generic model to produce multi-resolution models for every person’s scanned face.</p><p>After obtaining coarse shape approximation using feature point information, we build multi-resolution models that yield the multi-resolution detail construction which is basically the difference between different resolution models. We then decompose the scanned model into a multi-resolution shape as well as its detail. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0071-9#Fig6">6</a> shows the decomposition where a feature-based model, obtained in the previous section, increases in resolution to the low resolution model (5,940 triangles), the medium resolution model (55,232 triangles), the high resolution model (883,712 triangles), all the way up to the original scanned models.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-6"><figure><figcaption><b id="Fig6" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 6</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/6" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig6_HTML.gif?as=webp"></source><img aria-describedby="figure-6-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig6_HTML.gif" alt="figure6" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-6-desc"><p>Model decomposition into shapes and detail. <i>D</i>
+                                       <sub>A–B</sub> means difference (or detail) between resolutions A and B. We call <i>D</i>
+                                       <sub>O–A</sub> as full-recovery detail on resolution A. A <i>rectangle</i> indicates that every face shares the same structure while an <i>ellipse</i> indicates that each face has its own structure</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/6" data-track-dest="link:Figure6 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>To increase the resolution, we use Loop’s subdivision scheme (Loop <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 1987" title="Loop C (1987) Smooth subdivision surfaces based on triangles. Master’s thesis, University of Utah, Department of Mathematics" href="/article/10.1007/s10055-007-0071-9#ref-CR21" id="ref-link-section-d71825e725">1987</a>) once on the feature-based model to increase the number of triangles, resulting in 5,940 triangles. We then use refinement to project each point of the base model (subdivided feature-based model referred to as the preliminary low resolution model shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0071-9#Fig7">7</a>b onto the surface of the scanned face and modify the 3D coordinates of the base model. We use cylindrical projection to find the 3D coordinates for the refinement. Several other methods such as error minimization using smoothness and surface error (Allen et al. <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2003" title="Allen B, Curless B, Popovic Z (2003) The space of human body shapes: reconstruction and parameterization from range scans. ACM Trans Graph 22(3):587–594" href="/article/10.1007/s10055-007-0071-9#ref-CR1" id="ref-link-section-d71825e731">2003</a>) are more general and widely used for different classes of objects, but these methods usually require long iteration times. On the other hand, cylindrical projection is effective for objects that are similar to a cylinder, and it requires very little execution time.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-7"><figure><figcaption><b id="Fig7" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 7</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/7" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig7_HTML.jpg?as=webp"></source><img aria-describedby="figure-7-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig7_HTML.jpg" alt="figure7" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-7-desc"><p>
+                                       <b>a</b> Feature-based model. <b>b</b> Subdivision used on feature-based model. <b>c</b> Low-resolution after refinement on the subdivided model</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/7" data-track-dest="link:Figure7 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <p>A medium resolution model consisting of 55 K triangles is obtained by applying subdivision twice to the low resolution model and a high resolution model composed of 900 K triangles is constructed either: (1) by subdividing the low resolution model four times or (2) by subdividing the medium resolution model twice. They yield very similar shapes, but the detail (which will be discussed in Sect. <a data-track="click" data-track-label="link" data-track-action="section anchor" href="/article/10.1007/s10055-007-0071-9#Sec14">3.3</a>) have slightly different values. The number of surface points are thus increased and we use cylindrical projection to increase the accuracy of the subdivided model in each case. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0071-9#Fig8">8</a> illustrates the multi-resolution shapes derived for Person A.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-8"><figure><figcaption><b id="Fig8" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 8</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/8" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig8_HTML.jpg?as=webp"></source><img aria-describedby="figure-8-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig8_HTML.jpg" alt="figure8" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-8-desc"><p>Multi-resolution models derived for Person A: <b>a</b> low resolution; <b>b</b> medium resolution; <b>c</b> high resolution</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/8" data-track-dest="link:Figure8 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                        <h3 class="c-article__sub-heading" id="Sec14">Modeling of offsets as skin detail</h3><p>We use the term ‘detail’ in two contexts: (1) to add detail to a smooth surface via model refinement, and (2) to reconstruct the geometry of the original scanned model using ray casting with vertex normal vectors. The detail in case (1) is homogeneously structured while the detail in case (2) is not. We differentiate between the two by referring to case (1) as skin detail and case (2) as 3D skin.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec15">Skin detail</h4><p>Skin detail is loosely described as the “difference” between two multi-resolution shape models and is more rigorously defined as the scalar displacement field that results from performing shape refinement by cylindrical projection. This definition is possible because the preliminary and refined models (see Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0071-9#Fig7">7</a>) are structurally identical. Skin detail is written as <i>D</i>
+                              <sub>A–B</sub> in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0071-9#Fig6">6</a>.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec16">3D skin</h4><p>3D skin is a specialized detail representation that allows the scanned model to be reconstructed from any multi-resolution shape model. Roughly speaking, 3D skin can be understood as “original scanned model<b>—</b>a shape model” while skin detail as “high-resolution model–low-resolution model”. By adding 3D skin on the shape model, the reconstruction is structurally identical to the original scanned model; hence, when 3D skin is added to the shape, the result is an exact recreation of the scanned model while the result of adding skin detail to shape is an approximation of the scanned model.</p><p>3D skin is the result of using vertex-to-surface mapping to parameterize the scanned model vertices onto a shape model. Each vertex achieves a set of four mapping parameters (<i>I</i>, <i>u</i>, <i>v</i>, <i>d</i>) if it is successfully mapped. <i>I</i> is the index of a triangle in the shape model, <i>u</i> and <i>v</i> are the 2D barycentric coordinates of the point in the triangle to which the scanned vertex is mapped, and <i>d</i> is the signed displacement along the interpolated vertex normal at the point specified by <i>u</i> and <i>v</i>. This mapping technique is described in further detail in Soon and Lee (<a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Soon A, Lee WS (2006) Shape-based detail-preserving exaggeration of extremely accurate 3D faces. Accepted for publication in visual comput" href="/article/10.1007/s10055-007-0071-9#ref-CR27" id="ref-link-section-d71825e869">2006</a>).</p></div></div></section><section aria-labelledby="Sec17"><div class="c-article-section" id="Sec17-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec17">Enhancement of models</h2><div class="c-article-section__content" id="Sec17-content"><p>Here, we discuss two kinds of facial exaggeration. One is shape exaggeration for a specific resolution, e.g., low or medium. The second application is detail exaggeration for a specific resolution, e.g., H–L detail.</p><h3 class="c-article__sub-heading" id="Sec18">Multi-resolution shape exaggeration</h3><p>Our previous work (Soon and Lee <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Soon A, Lee WS (2006) Shape-based detail-preserving exaggeration of extremely accurate 3D faces. Accepted for publication in visual comput" href="/article/10.1007/s10055-007-0071-9#ref-CR27" id="ref-link-section-d71825e888">2006</a>) focused on producing exaggerated versions of extremely high resolution scanned faces where low resolution shape is exaggerated and high resolution skin detail is applied thereafter to create high resolution models. This work has been extended into multi-resolution shape exaggeration. Our approach decouples the scanned models’ shape and detail information so that exaggeration can be performed on only the shape in any given resolution.</p><p>The basic idea for the shape exaggeration is to obtain a center face (an average model of given models) and perform vector-based scaling for difference between the center and a subject model at a given resolution. The details are then added to obtain a desired resolution, either the original scanned resolution or to a specific resolution. We show an example of the original scanned resolution recovery.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec19">Multi-resolution center faces</h4><p>The exaggeration scheme automatically determines which features are accentuated. Multi-resolution center faces must first be constructed from a group of multi-resolution models by doing a point-by-point average of each vertex in the models as shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0071-9#Fig9">9</a>. Multi-resolution centre faces are shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0071-9#Fig10">10</a>.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-9"><figure><figcaption><b id="Fig9" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 9</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/9" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig9_HTML.gif?as=webp"></source><img aria-describedby="figure-9-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig9_HTML.gif" alt="figure9" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-9-desc"><p>Example of medium-resolution center face model constructed from two scanned models</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/9" data-track-dest="link:Figure9 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                              <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-10"><figure><figcaption><b id="Fig10" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 10</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/10" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig10_HTML.gif?as=webp"></source><img aria-describedby="figure-10-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig10_HTML.gif" alt="figure10" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-10-desc"><p>Examples of low-, medium- and high-resolution centre faces</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/10" data-track-dest="link:Figure10 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec20">Low resolution shape exaggeration</h4><p>Since the scanned models can contain as many as several million triangles, this task would be very computationally expensive to complete at the original scanned resolution. We constructed low resolution models from a generic model to do this and then recovered the original scanned model detail after exaggerating the models. This methodology allowed us to do the necessary exaggeration work quickly and efficiently since the low resolution models that captured the shape information contained only roughly 6 K triangles.</p><p>With the low resolution center face and all the low resolution models sharing a common structure, feature vectors can be defined for each vertex in a given low resolution model, where the vector originates from a point of the center face and terminates at the same indexed point in the subject model. Exaggeration can then be accomplished by scaling each feature vector by a constant factor.</p><p>Each feature vector 
+<span class="mathjax-tex">\( \ifmmode\expandafter\vec\else\expandafter\vec\fi{v}_{i} \)</span> defined as </p><div id="Equ1" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ \ifmmode\expandafter\vec\else\expandafter\vec\fi{v}_{i} = v^{{{\text{person}}}}_{i} - v^{{{\text{center}}}}_{i} , $$</span></div><div class="c-article-equation__number">
+                    (1)
+                </div></div><p>where <i>ν</i>
+                              <span class="c-stack">
+                      <sup>person</sup><sub>
+                        <i>i</i>
+                      </sub>
+                      
+                    </span> is point <i>i</i> in the model person and <i>ν</i>
+                              <span class="c-stack">
+                      <sup>center</sup><sub>
+                        <i>i</i>
+                      </sub>
+                      
+                    </span> is point <i>i</i> in the center face, is scaled by a constant exaggeration factor ef to derive the point <i>ν</i>
+                              <span class="c-stack">
+                      <sup>exaggeratedPerson</sup><sub>
+                        <i>i</i>
+                      </sub>
+                      
+                    </span> in the exaggerated model, namely </p><div id="Equ2" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ v^{{{\text{exaggeratedPerson}}}}_{i} = v^{{{\text{center}}}}_{i} + (1 + {\text{ef}})\ifmmode\expandafter\vec\else\expandafter\vec\fi{v}_{i} . $$</span></div><div class="c-article-equation__number">
+                    (2)
+                </div></div>
+                           <p>Then, </p><div id="Equ3" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ M^{{{\text{exaggeratedPerson}}}}_{{}} = {\left\{ {v^{{{\text{exaggeratedPerson}}}}_{i} ;i = 1,...,N} \right\}}, $$</span></div><div class="c-article-equation__number">
+                    (3)
+                </div></div><p>which can be written as</p>
+                    <div id="Equa" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ M^{{{\text{exaggeratedPerson}}}}_{{}} = M^{{{\text{person}}}} + {\text{ef}}{\left( {M^{{{\text{person}}}} - M^{{{\text{center}}}} } \right)} $$</span></div></div>
+                  <p>Here, we use a low-resolution model to perform exaggeration, <span class="mathjax-tex">\( M^{{{\text{exaggeratedPerson}}}}_{{}} = M^{{{\text{exaggeratedPerson}}}}_{{\text{L}}} ; \)</span> thus, to recover the original scanned resolution, we need to recover the detail. </p><div id="Equb" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ M^{{{\text{exaggeratedPerson}}}}_{{{\text{LO}}}} = M^{{{\text{exaggeratedPerson}}}}_{{\text{L}}} + D_{{{{\rm O}\text{--}{\rm L}}}} $$</span></div></div><p>where the notation + is loosely written. <i>D</i>
+                              <sub>O–L</sub> contains at most <i>N</i>
+                              <sub>O</sub> (number of vertices on the original scanned model) sets of mapping parameters (<i>I</i>, <i>u</i>, <i>v</i>, <i>d</i>)—at most one for each vertex on the original scanned model. Therefore, each vertex on the scanned model is constructed using the mapping parameters on the base model (here, it is an exaggerated low-resolution model). One thing to note is that the direction of the normal of the base model triangle is updated to reflect the curvature change that result from exaggeration. Each set of mapping parameters (<i>I</i>, <i>u</i>, <i>v</i>, <i>d</i>) obtained using ray-casting is applied to the new normal vector of the base model. More detail are found in (Soon and Lee <a data-track="click" data-track-action="reference anchor" data-track-label="link" data-test="citation-ref" aria-label="Reference 2006" title="Soon A, Lee WS (2006) Shape-based detail-preserving exaggeration of extremely accurate 3D faces. Accepted for publication in visual comput" href="/article/10.1007/s10055-007-0071-9#ref-CR27" id="ref-link-section-d71825e1132">2006</a>). Some of our results are shown in Figs. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0071-9#Fig11">11</a> and <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0071-9#Fig12">12</a>.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-11"><figure><figcaption><b id="Fig11" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 11</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/11" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig11_HTML.jpg?as=webp"></source><img aria-describedby="figure-11-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig11_HTML.jpg" alt="figure11" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-11-desc"><p>Low resolution shape exaggeration: <b>a</b> original model; <b>b</b> detail-recovered exaggerated model generated using exaggeration factors of 75%</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/11" data-track-dest="link:Figure11 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                              <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-12"><figure><figcaption><b id="Fig12" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 12</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/12" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig12_HTML.jpg?as=webp"></source><img aria-describedby="figure-12-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig12_HTML.jpg" alt="figure12" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-12-desc"><p>Low resolution shape exaggeration. <b>a</b>, <b>d</b> Original scanned model; detail-recovered exaggerated models generated using exaggeration factors of (<b>b</b>), (<b>e</b>) 60%; (<b>c</b>), (<b>f</b>) 120%</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/12" data-track-dest="link:Figure12 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0071-9#Fig11">11</a> shows the comparison between Person B and his 75% low-resolution shape exaggerated version by setting ef to be 0.7.</p><p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0071-9#Fig12">12</a> presents the results of exaggerating a 1,000,000 triangle model of Person A at 60% and 120%. It means the full-recovery details are also calculated as the difference between the low resolution and 1,000,000 triangle models. Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0071-9#Fig13">13</a> shows other models before and after 75% exaggeration.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-13"><figure><figcaption><b id="Fig13" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 13</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/13" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig13_HTML.jpg?as=webp"></source><img aria-describedby="figure-13-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig13_HTML.jpg" alt="figure13" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-13-desc"><p>Other examples of low resolution shape exaggeration. <i>Upper row</i>: before exaggeration. <i>Lower row</i>: after exaggeration</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/13" data-track-dest="link:Figure13 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec21">Medium and high resolution shape exaggeration</h4><p>The vector-based exaggeration approach used in low resolution shape exaggeration can also be applied to the medium resolution models to accomplish medium resolution shape exaggeration. Here, exaggeration affects not only the shape but also some of the skin detail as the shape itself contains skin detail.</p><p>For medium resolution shape exaggeration, we follow the same process described in the previous section except the medium resolution model is used instead of the low-resolution model, and to recover the detail of the original scanned model, we use </p><div id="Equc" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ M^{{{\text{exaggeratedPerson}}}}_{{{\text{MO}}}} = M^{{{\text{exaggeratedPerson}}}}_{{\text{M}}} + D_{\rm{O\text{--}M}} . $$</span></div></div>
+                           <p>The high resolution shape exaggeration follows the same principle.</p><p>Figure <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0071-9#Fig14">14</a> shows an example of medium-shape exaggeration, where skin detail is also exaggerated as medium resolution shape contains a certain-degree of skin detail.</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-14"><figure><figcaption><b id="Fig14" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 14</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/14" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig14_HTML.jpg?as=webp"></source><img aria-describedby="figure-14-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig14_HTML.jpg" alt="figure14" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-14-desc"><p>Medium resolution shape exaggeration. Original scanned model (<i>left</i>); 100% exaggerated model (<i>right</i>)</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/14" data-track-dest="link:Figure14 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <h3 class="c-article__sub-heading" id="Sec22">Multi-resolution detail exaggeration</h3><p>The aim of detail exaggeration is to only alter the skin-level detail of a model without modifying the global shape. Therefore we demonstrate here an example with a low-resolution shape with high-resolution detail (<i>D</i>
+                           <sub>H–L</sub>), but the medium resolution follows the same process.</p><p>We start with low-resolution shape and add exaggerated <i>D</i>
+                           <sub>H–L</sub> detail to obtain high resolution face.</p><h4 class="c-article__sub-heading c-article__sub-heading--small c-article__sub-heading--light" id="Sec23">Multi-resolution center detail</h4><p>The idea of the detail exaggeration is very similar to the shape exaggeration and the only difference is that the subject for exaggeration is detail. First, we calculate the centre detail for high–low detail, <i>D</i>
+                              <sub>H–L</sub> for input models. Technically speaking, detail is an aggregation of vectors for each vertex in a model. It is probably more cumbersome to repeatedly speak of detail as a set of vectors, so we speak of detail as a single vector here. As detail (<i>D</i>
+                              <sub>H–L</sub>) is a vector, we decompose it as a unit-detail vector (<i>UD</i>
+                              <sub>H–L</sub>) and magnitude (||<i>D</i>
+                              <sub>H–L</sub>||). The reason we decompose the vector in this manner is to use the unit-detail vector of the person with base shape (here we use low-resolution shape) and manipulate the magnitude for exaggeration. We have <span class="mathjax-tex">\( D_{\rm {H\text{--}L}} = {\left\| {D_{\rm{H\text{--}L}}} \right\|}UD_{\rm{ H\text{--} L}} \)</span> where unit-detail vector is defined as </p><div id="Equd" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">$$ UD_{{{{\rm H}\text{--}{\rm L}}}} = \frac{{D_{{{{\rm H}\text{--}{\rm L}}}} }} {{{\left\| {D_{{{{\rm H}\text{--}{\rm L}}}} } \right\|}}}. $$</span></div></div>
+                           <p>Unlike the individual person’s detail, the center detail, <i>D</i>
+                              <span class="c-stack">
+                      <sup>center</sup><sub>H–L</sub>
+                      
+                    </span> is considered as a scalar calculated by </p><div id="Eque" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">
+$$ D^{{{\text{center}}}}_{{{{\rm H}\text{--}{\rm L}}}} = \frac{1} {K}{\sum\limits_{{\text{k = 1}}}^{\text{K}} {{\left\| {D^{{\text{k}}}_{{{{\rm H}\text{--}{\rm L}}}} } \right\|}} } $$</span></div></div><p>where <i>D</i>
+                              <span class="c-stack">
+                      <sup>center</sup><sub>H–L</sub>
+                      
+                    </span> is the center detail (scalar) value and <i>D</i>
+                              <span class="c-stack">
+                      <sup><i>k</i></sup><sub>H–L</sub>
+                      
+                    </span> is the detail for person <i>k</i>, where <i>k</i> is the number of scanned models used.</p><p>The high–low detail exaggeration calculation is as follows: </p><div id="Equf" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">
+$$ S^{{{\text{exaggeratedPerson}}}}_{{{{\rm H}\text{--}{\rm L}}}} = D^{{{\text{person}}}}_{{{{\rm H}\text{--}{\rm L}}}} + {\text{ef}}{\left\| {D^{{{\text{person}}}}_{{{{\rm H}\text{--}{\rm L}}}} - D^{{{\text{center}}}}_{{{{\rm H}\text{--}{\rm L}}}} } \right\|} $$</span></div></div><p>where ef is a constant exaggeration factor.</p><p>We then obtain </p><div id="Equg" class="c-article-equation"><div class="c-article-equation__content"><span class="mathjax-tex">
+$$ M^{{{\text{exaggeratedPerson}}}}_{{\text{H}}} = M^{{{\text{person}}}}_{{{\text{L(S4)}}}} + S^{{{\text{exaggeratedPerson}}}}_{{\rm{H\text{--}L}}} UD^{{{\text{person}}}}_{\rm{H\text{--}L}} $$</span></div></div><p>for high resolution shape with high–low detail exaggerated.</p><p>Figures <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0071-9#Fig15">15</a> and <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0071-9#Fig16">16</a> show some examples of <i>D</i>
+                              <sub>H–L</sub> detail exaggeration with several degrees of the exaggeration factor using the low-resolution model as the base model
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-15"><figure><figcaption><b id="Fig15" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 15</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/15" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig15_HTML.jpg?as=webp"></source><img aria-describedby="figure-15-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig15_HTML.jpg" alt="figure15" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-15-desc"><p>Detail-exaggerated high resolution models of Person A: <b>a</b> 30%; <b>b</b> 90%</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/15" data-track-dest="link:Figure15 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                              <div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-16"><figure><figcaption><b id="Fig16" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 16</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/16" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig16_HTML.jpg?as=webp"></source><img aria-describedby="figure-16-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig16_HTML.jpg" alt="figure16" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-16-desc"><p>Detail-exaggerated high resolution models of Person B: <b>a</b> 60%; <b>b</b> 120%</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/16" data-track-dest="link:Figure16 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                           <p>We applied the exaggeration for high–low detail (<i>D</i>
+                              <sub>H–L</sub>), but it is also possible to make exaggeration only for high–medium one or only for medium–low one or to apply different exaggeration factors for medium one and high one and combine them.</p><p>One thing to notice here is that we do not recover the full-recovery detail as the detail exaggeration is done only when we have a center-detail, which means that the detail of different scanned faces must share the same structure. The full detail recovery produces results at different resolutions for different scanned models while multi-resolution detail share a homogeneous structure, this makes it possible to obtain center-detail. We point out that there is no sensible or logical definition of a “center” for mapping parameters (obtained by detail recovery) for full detail recovery. Even if every scanned model has the same number of vertices, we need to: (1) ensure that the same triangle is used to recover every scanned vertex of the same index (e.g., triangle #200 in every low resolution model is used to recover vertex #97 in every scanned model); and (2) ensure that every vertex is recovered (captured), meaning that the recovered model has no holes. Therefore, we can only use up to high resolution detail as there is no guarantee for full recovery.</p></div></div></section><section aria-labelledby="Sec24"><div class="c-article-section" id="Sec24-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec24">Virtual to real through 3D printing</h2><div class="c-article-section__content" id="Sec24-content"><p>Three-dimensional printing (3D printing) is a low-end version of solid freeform fabrication. A 3D printer creates three-dimensional models through a process that slowly lays down plastic (or some other materials) in thin layers based on a computer model. 3D printing is optimized primarily for speed and low-cost, making it suitable for visualizing during the conceptual stages of engineering design when dimensional accuracy and mechanical strength of prototypes are not important.<sup><a href="#Fn1"><span class="u-visually-hidden">Footnote </span>1</a></sup>
+                     </p><p>3D printers creates physical models from computer-aided design data by using an inkjet print-head to deposit a liquid binder that solidifies layers of powder (similar in principle to a 2D desktop inkjet printer), allowing for the use of multiple print-heads to support full-color printing with dramatic increases in speed.<sup><a href="#Fn2"><span class="u-visually-hidden">Footnote </span>2</a></sup>
+                     </p><p>The size of object for printing can be chosen and the resolution is also chosen for printing.</p><p>Some examples of 3D printouts of our face model before and after exaggeration are shown in Fig. <a data-track="click" data-track-label="link" data-track-action="figure anchor" href="/article/10.1007/s10055-007-0071-9#Fig17">17</a>. Even though only two versions (one at about the size of a toy action figure and the other at about 70% of life-size) are shown, it is possible to print it at a larger scale (possibly combining in several subsections depending on the desired final dimension of prints) with higher resolution containing all the skin information on the face.
+</p><div class="c-article-section__figure js-c-reading-companion-figures-item" data-test="figure" data-container-section="figure" id="figure-17"><figure><figcaption><b id="Fig17" class="c-article-section__figure-caption" data-test="figure-caption-text">Fig. 17</b></figcaption><div class="c-article-section__figure-content"><div class="c-article-section__figure-item"><a class="c-article-section__figure-link" data-test="img-link" data-track="click" data-track-label="image" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/17" rel="nofollow"><picture><source type="image/webp" srcset="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig17_HTML.jpg?as=webp"></source><img aria-describedby="figure-17-desc" src="//media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10055-007-0071-9/MediaObjects/10055_2007_71_Fig17_HTML.jpg" alt="figure17" loading="lazy" /></picture></a></div><div class="c-article-section__figure-description" data-test="bottom-caption" id="figure-17-desc"><p>Comparision of examples of <b>a</b> scanned model; <b>b</b> 3D printing of faces before and after exaggeration in about 70% life-size; <b>c</b> 3D printing of faces before and after exaggeration in small size; The exaggerated face shows the characteristics of the person clearly even if it has a smaller size</p></div></div><div class="u-text-right u-hide-print"><a class="c-article__pill-button" data-test="article-link" data-track="click" data-track-label="button" data-track-action="view figure" href="/article/10.1007/s10055-007-0071-9/figures/17" data-track-dest="link:Figure17 Full size image" rel="nofollow"><span>Full size image</span><svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-chevron-right"></use></svg></a></div></figure></div>
+                     </div></div></section><section aria-labelledby="Sec25"><div class="c-article-section" id="Sec25-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Sec25">Conclusion</h2><div class="c-article-section__content" id="Sec25-content"><p>This paper shows how the Virtual 3D object enhancement can be used for physical manufacturing using the example of face. The human face is one of the most attractive subjects and it is very important in entertainment and art. We transfer the human face to the digital world through high level scanning and then enhance the model through our exaggeration techniques to emphasize the characteristics. The enhanced object is then transfered to the real world through 3D printing. Even though we have shown a final 3D printed object in smaller scale than life-size, the methodologies presented can be used for any scale 3D printing for manufacturing.</p><p>Our methodologies for 3D facial model enhancement through feature emphasis focus on the quality maintenance in terms of resolution. Our multi-resolution modeling decompose scanned data consisting of several million triangles into low, medium and high resolution shapes and detail. Shape or detail exaggeration is then performed as facial modeling simulation to show subtle characteristics in desired resolution either at a global level or at a local level without losing the extremely detailed surface information of the scanned data. Scanned faces are successfully transferred to the homogeneous structures in multi-resolution modeling for use in facial modeling simulation. We have shown a limited number of examples, but different degrees of exaggeration for different resolutions of shape and detail and any combination of any of them is possible as all of them share the same structure. The technologies explained in this paper can be also applied to wider applications such as the simulation of aging and rejuvenation using 3D skin.</p><p>One limitation of this approach is that we need to have at least two models to carry out automatic enhancement. In face in this case, four models were used to enhance one model. The calculation to obtain skin-details using multi-resolution models is quite demanding and can last several hours when the highest resolution is near one million points while 3D-skin is obtained using vertex-to-surface mapping and requires just a few minutes calculation. The skin-details are used for skin exaggeration while the 3D-skin is used for shape exaggeration.</p><p>The potential of this virtual manufacturing study is large and more innovative facial simulations are possible to accomplish computer-aided manufacturing as well as to make other deformable objects.</p></div></div></section>
+                        
+                    
+
+                    <section aria-labelledby="notes"><div class="c-article-section" id="notes-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="notes">Notes</h2><div class="c-article-section__content" id="notes-content"><ol class="c-article-footnote c-article-footnote--listed"><li class="c-article-footnote--listed__item" id="Fn1"><span class="c-article-footnote--listed__index">1.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://en.wikipedia.org/wiki/3D_printing">http://en.wikipedia.org/wiki/3D_printing</a>.</p></div></li><li class="c-article-footnote--listed__item" id="Fn2"><span class="c-article-footnote--listed__index">2.</span><div class="c-article-footnote--listed__content"><p>
+                              <a href="http://www.zcorp.com/whatwedo.asp">http://www.zcorp.com/whatwedo.asp</a>.</p></div></li></ol></div></div></section><section aria-labelledby="Bib1"><div class="c-article-section" id="Bib1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Bib1">References</h2><div class="c-article-section__content" id="Bib1-content"><div data-container-section="references"><ol class="c-article-references"><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="B. Allen, B. Curless, Z. Popovic, " /><meta itemprop="datePublished" content="2003" /><meta itemprop="headline" content="Allen B, Curless B, Popovic Z (2003) The space of human body shapes: reconstruction and parameterization from " /><p class="c-article-references__text" id="ref-CR1">Allen B, Curless B, Popovic Z (2003) The space of human body shapes: reconstruction and parameterization from range scans. ACM Trans Graph 22(3):587–594</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1145%2F882262.882311" aria-label="View reference 1">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 1 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=The%20space%20of%20human%20body%20shapes%3A%20reconstruction%20and%20parameterization%20from%20range%20scans&amp;journal=ACM%20Trans%20Graph&amp;volume=22&amp;issue=3&amp;pages=587-594&amp;publication_year=2003&amp;author=Allen%2CB&amp;author=Curless%2CB&amp;author=Popovic%2CZ">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Blanz V, Vetter T (1999) A morphable model for the synthesis of 3D faces. In: Proceedings of the 26th annual c" /><p class="c-article-references__text" id="ref-CR2">Blanz V, Vetter T (1999) A morphable model for the synthesis of 3D faces. In: Proceedings of the 26th annual conference on computer graphics and interactive techniques international conference on computer graphics and interactive techniques. ACM Press/Addison-Wesley, New York, pp 187–194</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Borshukov G, Lewis JP (2003) Realistic human face rendering for “The Matrix Reloaded”. In: Proceedings of the " /><p class="c-article-references__text" id="ref-CR3">Borshukov G, Lewis JP (2003) Realistic human face rendering for “The Matrix Reloaded”. In: Proceedings of the SIGGRAPH 2003 Conference on sketches and applications: in conjunction with the 30th annual conference on computer graphics and interactive techniques (San Diego, California, 27–31 July 2003). SIGGRAPH ‘03. ACM Press, New York, pp 1–1</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="SE. Brennan, " /><meta itemprop="datePublished" content="1985" /><meta itemprop="headline" content="Brennan SE (1985) The caricature generator. Leonardo 18:170–178" /><p class="c-article-references__text" id="ref-CR4">Brennan SE (1985) The caricature generator. Leonardo 18:170–178</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.2307%2F1578048" aria-label="View reference 4">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 4 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=The%20caricature%20generator&amp;journal=Leonardo&amp;volume=18&amp;pages=170-178&amp;publication_year=1985&amp;author=Brennan%2CSE">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Bui TD, Poel M, Heylen D, Nijholt A (2003) Automatic face morphing for transferring facial animation. In: Proc" /><p class="c-article-references__text" id="ref-CR5">Bui TD, Poel M, Heylen D, Nijholt A (2003) Automatic face morphing for transferring facial animation. In: Proceedings of the sixth IASTED international conference on computers, graphics and imaging, Honolulu, 13 August 2003, pp 19–23</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Chiang PY, Liao WH, Li TY (2005) Automatic caricature generation by analyzing facial features. In: Proceedings" /><p class="c-article-references__text" id="ref-CR6">Chiang PY, Liao WH, Li TY (2005) Automatic caricature generation by analyzing facial features. In: Proceedings of the Asian conference on computer vision, Korea</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Cook RL (1984) Shade trees. In: Christiansen H (ed). Proceedings of the 11th annual conference on computer gra" /><p class="c-article-references__text" id="ref-CR7">Cook RL (1984) Shade trees. In: Christiansen H (ed). Proceedings of the 11th annual conference on computer graphics and interactive techniques SIGGRAPH ‘84. ACM Press, New York, pp 223–231</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Fujiwara T, Koshimizu H, Fujimura K, Fujita G, Noguchi Y, Ishikawa N (2001) 3D modeling system of human face a" /><p class="c-article-references__text" id="ref-CR8">Fujiwara T, Koshimizu H, Fujimura K, Fujita G, Noguchi Y, Ishikawa N (2001) 3D modeling system of human face and full 3D facial caricaturing. In: Proceedings of the seventh international conference on virtual systems and multimedia, pp 625–633</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Godin G, Rioux M, Beraldin JA, Levoy M, Cournoyer L, Blais F (2001) An assessment of laser range measurement o" /><p class="c-article-references__text" id="ref-CR9">Godin G, Rioux M, Beraldin JA, Levoy M, Cournoyer L, Blais F (2001) An assessment of laser range measurement on marble surfaces. In: Proceedings of the fifth conference on optical 3D measurement techniques, Vienna, 1–4 October 2001</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Goto T, Lee WS, Magnenat-Thalmann N (2002) Facial feature extraction for quick 3D face modeling. Signal proces" /><p class="c-article-references__text" id="ref-CR10">Goto T, Lee WS, Magnenat-Thalmann N (2002) Facial feature extraction for quick 3D face modeling. Signal processing: image communication, vol 17, issue 3, Elsevier, pp 243–259. ISSN: 0923–5965</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Guenter B, Grimm C, Wood D, Malvar H, Pighin F (1998) Making faces. In: Proceedings of the 25th annual confere" /><p class="c-article-references__text" id="ref-CR11">Guenter B, Grimm C, Wood D, Malvar H, Pighin F (1998) Making faces. In: Proceedings of the 25th annual conference on computer graphics and interactive techniques SIGGRAPH ‘98. ACM Press, New York, pp 55–66</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Guskov I, Vidimče K, Sweldens W, Schröder P (2000) Normal meshes. In: Proceedings of the 27th annual conferenc" /><p class="c-article-references__text" id="ref-CR12">Guskov I, Vidimče K, Sweldens W, Schröder P (2000) Normal meshes. In: Proceedings of the 27th annual conference on computer graphics and interactive techniques international conference on computer graphics and interactive techniques. ACM Press/Addison-Wesley Publishing Co., New York, pp 95–102</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Hilton A, Starck J, Collins G (2002) From 3D shape capture to animated models. In: Proceedings of the first in" /><p class="c-article-references__text" id="ref-CR13">Hilton A, Starck J, Collins G (2002) From 3D shape capture to animated models. In: Proceedings of the first international symposium on 3D data processing, visualization and transmission Padova, Italy, 19–21 June 2002, pp 246–255</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Hoppe H (1996) Progressive meshes. In: Proceedings of the SIGGRAPH 1996" /><p class="c-article-references__text" id="ref-CR14">Hoppe H (1996) Progressive meshes. In: Proceedings of the SIGGRAPH 1996</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Kobbelt L, Campagna S, Vorsatz J, Seidel HP (1998) Interactive multi-resolution modeling on arbitrary meshes. " /><p class="c-article-references__text" id="ref-CR15">Kobbelt L, Campagna S, Vorsatz J, Seidel HP (1998) Interactive multi-resolution modeling on arbitrary meshes. In: Proceedings of the SIGGRAPH 1998, pp 106–114</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Lasseter J (1987) Principles of traditional animation applied to 3D computer animation. In: Stone MC (ed). Pro" /><p class="c-article-references__text" id="ref-CR16">Lasseter J (1987) Principles of traditional animation applied to 3D computer animation. In: Stone MC (ed). Proceedings of the 14th annual conference on computer graphics and interactive techniques SIGGRAPH ‘87. ACM Press, New York, pp 35–44</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="WS. Lee, N. Magnenat-Thalmann, " /><meta itemprop="datePublished" content="2000" /><meta itemprop="headline" content="Lee WS, Magnenat-Thalmann N (2000) Fast head modeling for animation. J image vis comput 18(4):355–364" /><p class="c-article-references__text" id="ref-CR17">Lee WS, Magnenat-Thalmann N (2000) Fast head modeling for animation. J image vis comput 18(4):355–364</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1016%2FS0262-8856%2899%2900057-8" aria-label="View reference 17">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 17 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Fast%20head%20modeling%20for%20animation&amp;journal=J%20image%20vis%20comput&amp;volume=18&amp;issue=4&amp;pages=355-364&amp;publication_year=2000&amp;author=Lee%2CWS&amp;author=Magnenat-Thalmann%2CN">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Lee YC, Terzopoulos D, Waters K (1995) Realistic face modeling for animation. In: Proceedings of the SIGGRAPH " /><p class="c-article-references__text" id="ref-CR18">Lee YC, Terzopoulos D, Waters K (1995) Realistic face modeling for animation. In: Proceedings of the SIGGRAPH 1995, pp 55–62</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Levoy M, Pulli K, Curless B, Rusinkiewicz S, Koller D, Pereira L, Ginzton M, Anderson S, Davis J, Ginsberg J, " /><p class="c-article-references__text" id="ref-CR19">Levoy M, Pulli K, Curless B, Rusinkiewicz S, Koller D, Pereira L, Ginzton M, Anderson S, Davis J, Ginsberg J, Shade J, Fulk D (2000) The digital michelangelo project: 3D scanning of large statues. In: Proceedings of the 27th annual conference on computer graphics and interactive techniques international conference on computer graphics and interactive techniques. ACM Press/Addison-Wesley, New York, pp 131–144</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Liang L, Chen H, Xu Y, Shum H (2002) Example-based caricature generation with exaggeration. In: Proceedings of" /><p class="c-article-references__text" id="ref-CR20">Liang L, Chen H, Xu Y, Shum H (2002) Example-based caricature generation with exaggeration. In: Proceedings of the tenth pacific conference on computer graphics and applications Beijing, China, 9–11 October 2002, pp 386–393</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Loop C (1987) Smooth subdivision surfaces based on triangles. Master’s thesis, University of Utah, Department " /><p class="c-article-references__text" id="ref-CR21">Loop C (1987) Smooth subdivision surfaces based on triangles. Master’s thesis, University of Utah, Department of Mathematics</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Min K, Metaxas DN, Jung MR (2006) Active contours with level-set for extracting feature curves from triangular" /><p class="c-article-references__text" id="ref-CR22">Min K, Metaxas DN, Jung MR (2006) Active contours with level-set for extracting feature curves from triangular meshes. In: Proceedings of the computer graphics international, pp 185–196</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Na K, Jung MR (2004) Hierarchical retargetting of fine facial motions. Computer graphics forum In: Proceedings" /><p class="c-article-references__text" id="ref-CR23">Na K, Jung MR (2004) Hierarchical retargetting of fine facial motions. Computer graphics forum In: Proceedings of the eurographics’2004</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Noh J, Fidaleo D, Neumann U (2000) Animated deformations with radial basis functions. In: Proceedings of the A" /><p class="c-article-references__text" id="ref-CR24">Noh J, Fidaleo D, Neumann U (2000) Animated deformations with radial basis functions. In: Proceedings of the ACM symposium on virtual reality software and technology, Seoul, 22–25 October, 2000 VRST ‘00. ACM Press, New York, pp 166–174</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="AJ. O’Toole, T. Vetter, H. Volz, EM. Salter, " /><meta itemprop="datePublished" content="1997" /><meta itemprop="headline" content="O’Toole AJ, Vetter T, Volz H, Salter EM (1997) Three-dimensional caricatures of human heads: distinctiveness a" /><p class="c-article-references__text" id="ref-CR25">O’Toole AJ, Vetter T, Volz H, Salter EM (1997) Three-dimensional caricatures of human heads: distinctiveness and the perception of facial age. Perception 26:719–732</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" href="https://doi.org/10.1068%2Fp260719" aria-label="View reference 25">Article</a> 
+    <a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 25 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Three-dimensional%20caricatures%20of%20human%20heads%3A%20distinctiveness%20and%20the%20perception%20of%20facial%20age&amp;journal=Perception&amp;volume=26&amp;pages=719-732&amp;publication_year=1997&amp;author=O%E2%80%99Toole%2CAJ&amp;author=Vetter%2CT&amp;author=Volz%2CH&amp;author=Salter%2CEM">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Rosenblum R (2006) Ron Mueck, Thames and Hudson. ISBN-10: 0500976600" /><p class="c-article-references__text" id="ref-CR26">Rosenblum R (2006) Ron Mueck, Thames and Hudson. ISBN-10: 0500976600</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Soon A, Lee WS (2006) Shape-based detail-preserving exaggeration of extremely accurate 3D faces. Accepted for " /><p class="c-article-references__text" id="ref-CR27">Soon A, Lee WS (2006) Shape-based detail-preserving exaggeration of extremely accurate 3D faces. Accepted for publication in visual comput</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="author" content="W. Sun, A. Hilton, R. Smith, J. Illingworth, " /><meta itemprop="datePublished" content="2001" /><meta itemprop="headline" content="Sun W, Hilton A, Smith R, Illingworth J (2001) Layered animation of captured data. Visual Comput Int J Comput " /><p class="c-article-references__text" id="ref-CR28">Sun W, Hilton A, Smith R, Illingworth J (2001) Layered animation of captured data. Visual Comput Int J Comput Graph 17(8):457–474</p><p class="c-article-references__links u-hide-print"><a data-track="click" data-track-action="outbound reference" data-track-label="link" aria-label="Search for reference 28 on Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;title=Layered%20animation%20of%20captured%20data&amp;journal=Visual%20Comput%20Int%20J%20Comput%20Graph&amp;volume=17&amp;issue=8&amp;pages=457-474&amp;publication_year=2001&amp;author=Sun%2CW&amp;author=Hilton%2CA&amp;author=Smith%2CR&amp;author=Illingworth%2CJ">
+                    Google Scholar</a> 
+                </p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Taylor J, Beraldin JA, Godin G, Cournoyer L, Rioux M, Domey J (2002) NRC 3D imaging technology for museums and" /><p class="c-article-references__text" id="ref-CR29">Taylor J, Beraldin JA, Godin G, Cournoyer L, Rioux M, Domey J (2002) NRC 3D imaging technology for museums and heritage. In: Proceedings of the first international workshop on 3D virtual heritage, Geneva, pp 70–75</p></li><li class="c-article-references__item js-c-reading-companion-references-item" itemprop="citation" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle"><meta itemprop="headline" content="Zhang Y, Sim T, Tan CL (2004) Adaptation-based individualized face modeling for animation using displacement m" /><p class="c-article-references__text" id="ref-CR30">Zhang Y, Sim T, Tan CL (2004) Adaptation-based individualized face modeling for animation using displacement map. In: Proceedings of computer graphics international, Crete, pp 518–521</p></li></ol><p class="c-article-references__download u-hide-print"><a data-track="click" data-track-action="download citation references" data-track-label="link" href="/article/10.1007/s10055-007-0071-9-references.ris">Download references<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p></div></div></div></section><section aria-labelledby="Ack1"><div class="c-article-section" id="Ack1-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="Ack1">Acknowledgments</h2><div class="c-article-section__content" id="Ack1-content"><p>The authors wish to acknowledge Centre for Materials and Manufacturing, Ontario, Centres of Excellence University of Ottawa, Initiation of Research and New Directions, and the Natural Sciences and Engineering Research Council of Canada for funding the research as well as XYZ RGB Inc. for scanning the faces of volunteers and preparing the 3D models.</p></div></div></section><section aria-labelledby="author-information"><div class="c-article-section" id="author-information-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="author-information">Author information</h2><div class="c-article-section__content" id="author-information-content"><h3 class="c-article__sub-heading" id="affiliations">Affiliations</h3><ol class="c-article-author-affiliation__list"><li id="Aff1"><p class="c-article-author-affiliation__address">SITE, Unviersity of Ottawa, 800 King Edward Avenue, Ottawa, ON, Canada</p><p class="c-article-author-affiliation__authors-list">Won-Sook Lee, Andrew Soon &amp; Lijia Zhu</p></li></ol><div class="js-hide u-hide-print" data-test="author-info"><span class="c-article__sub-heading">Authors</span><ol class="c-article-authors-search u-list-reset"><li id="auth-Won_Sook-Lee"><span class="c-article-authors-search__title u-h3 js-search-name">Won-Sook Lee</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Won-Sook+Lee&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Won-Sook+Lee" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Won-Sook+Lee%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Andrew-Soon"><span class="c-article-authors-search__title u-h3 js-search-name">Andrew Soon</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Andrew+Soon&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Andrew+Soon" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Andrew+Soon%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li><li id="auth-Lijia-Zhu"><span class="c-article-authors-search__title u-h3 js-search-name">Lijia Zhu</span><div class="c-article-authors-search__list"><div class="c-article-authors-search__item c-article-authors-search__list-item--left"><a href="/search?dc.creator=&#34;Lijia+Zhu&#34;" class="c-article-button" data-track="click" data-track-action="author link - publication" data-track-label="link">View author publications</a></div><div class="c-article-authors-search__item c-article-authors-search__list-item--right"><p class="search-in-title-js c-article-authors-search__text">You can also search for this author in
+                        <span class="c-article-identifiers"><a class="c-article-identifiers__item" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Lijia+Zhu" data-track="click" data-track-action="author link - pubmed" data-track-label="link">PubMed</a><span class="u-hide"> </span><a class="c-article-identifiers__item" href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22Lijia+Zhu%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en" data-track="click" data-track-action="author link - scholar" data-track-label="link">Google Scholar</a></span></p></div></div></li></ol></div><h3 class="c-article__sub-heading" id="corresponding-author">Corresponding author</h3><p id="corresponding-author-list">Correspondence to
+                <a id="corresp-c1" rel="nofollow" href="/article/10.1007/s10055-007-0071-9/email/correspondent/c1/new">Won-Sook Lee</a>.</p></div></div></section><section aria-labelledby="rightslink"><div class="c-article-section" id="rightslink-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="rightslink">Rights and permissions</h2><div class="c-article-section__content" id="rightslink-content"><p class="c-article-rights"><a data-track="click" data-track-action="view rights and permissions" data-track-label="link" href="https://s100.copyright.com/AppDispatchServlet?title=3D%20facial%20model%20exaggeration%20builder%20for%20small%20or%20large%20sized%20model%20manufacturing&amp;author=Won-Sook%20Lee%20et%20al&amp;contentID=10.1007%2Fs10055-007-0071-9&amp;publication=1359-4338&amp;publicationDate=2007-06-01&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p></div></div></section><section aria-labelledby="article-info"><div class="c-article-section" id="article-info-section"><h2 class="c-article-section__title js-section-title js-c-reading-companion-sections-item" id="article-info">About this article</h2><div class="c-article-section__content" id="article-info-content"><div class="c-bibliographic-information"><div class="c-bibliographic-information__column"><h3 class="c-article__sub-heading" id="citeas">Cite this article</h3><p class="c-bibliographic-information__citation">Lee, W., Soon, A. &amp; Zhu, L. 3D facial model exaggeration builder for small or large sized model manufacturing.
+                    <i>Virtual Reality</i> <b>11, </b>229–239 (2007). https://doi.org/10.1007/s10055-007-0071-9</p><p class="c-bibliographic-information__download-citation u-hide-print"><a data-test="citation-link" data-track="click" data-track-action="download article citation" data-track-label="link" href="/article/10.1007/s10055-007-0071-9.ris">Download citation<svg width="16" height="16" class="u-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#global-icon-download"></use></svg></a></p><ul class="c-bibliographic-information__list" data-test="publication-history"><li class="c-bibliographic-information__list-item"><p>Received<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2006-08-30">30 August 2006</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Accepted<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2007-03-22">22 March 2007</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Published<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2007-06-01">01 June 2007</time></span></p></li><li class="c-bibliographic-information__list-item"><p>Issue Date<span class="u-hide">: </span><span class="c-bibliographic-information__value"><time datetime="2007-10">October 2007</time></span></p></li><li class="c-bibliographic-information__list-item c-bibliographic-information__list-item--doi"><p><abbr title="Digital Object Identifier">DOI</abbr><span class="u-hide">: </span><span class="c-bibliographic-information__value"><a href="https://doi.org/10.1007/s10055-007-0071-9" data-track="click" data-track-action="view doi" data-track-label="link" itemprop="sameAs">https://doi.org/10.1007/s10055-007-0071-9</a></span></p></li></ul><div data-component="share-box"></div><h3 class="c-article__sub-heading">Keywords</h3><ul class="c-article-subject-list"><li class="c-article-subject-list__subject"><span itemprop="about">3D graphics</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Virtual faces</span></li><li class="c-article-subject-list__subject"><span itemprop="about">3D skin</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Mesh parameterization</span></li><li class="c-article-subject-list__subject"><span itemprop="about">Exaggeration</span></li></ul><div data-component="article-info-list"></div></div></div></div></div></section>
+                </div>
+            </article>
+        </main>
+
+        <div class="c-article-extras u-text-sm u-hide-print" id="sidebar" data-container-type="reading-companion" data-track-component="reading companion">
+            <aside>
+                <div data-test="download-article-link-wrapper">
+                    
+    
+    <div class="c-pdf-download u-clear-both">
+        <a href="https://link.springer.com/content/pdf/10.1007/s10055-007-0071-9.pdf" class="c-pdf-download__link" data-article-pdf="true" data-readcube-pdf-url="true" data-test="pdf-link" data-draft-ignore="true" data-track="click" data-track-action="download pdf" data-track-label="button">
+            
+                <span>Download PDF</span>
+                <svg width="16" height="16" class="u-icon"><use xlink:href="#global-icon-download"/></svg>
+            
+        </a>
+    </div>
+    
+
+                </div>
+
+                <div data-test="collections">
+                    
+                </div>
+
+                <div data-test="editorial-summary">
+                    
+                </div>
+
+                <div class="c-reading-companion">
+                    <div class="c-reading-companion__sticky" data-component="reading-companion-sticky" data-test="reading-companion-sticky">
+                        
+
+                        <div class="c-reading-companion__panel c-reading-companion__sections c-reading-companion__panel--active" id="tabpanel-sections">
+                            <div class="js-ad">
+    <aside class="c-ad c-ad--300x250">
+        <div class="c-ad__inner">
+            <p class="c-ad__label">Advertisement</p>
+            <div id="div-gpt-ad-MPU1" data-gpt-unitpath="/270604982/springerlink/10055/article" data-gpt-sizes="300x250" data-gpt-targeting="pos=MPU1;articleid=71;"></div>
+        </div>
+    </aside>
+</div>
+
+                        </div>
+                        <div class="c-reading-companion__panel c-reading-companion__figures c-reading-companion__panel--full-width" id="tabpanel-figures"></div>
+                        <div class="c-reading-companion__panel c-reading-companion__references c-reading-companion__panel--full-width" id="tabpanel-references"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+        
+    <footer class="app-footer" role="contentinfo">
+        <div class="app-footer__aside-wrapper u-hide-print">
+            <div class="app-footer__container">
+                <p class="app-footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                
+                    <div class="app-footer__edition" data-component="SV.EditionSwitcher">
+                        <span class="u-visually-hidden" data-role="button-dropdown__title" data-btn-text="Switch between Academic & Corporate Edition">Switch Edition</span>
+                        <ul class="app-footer-edition-list" data-role="button-dropdown__content" data-test="footer-edition-switcher-list">
+                            <li class="selected">
+                                <a data-test="footer-academic-link"
+                                   href="/siteEdition/link"
+                                   id="siteedition-academic-link">Academic Edition</a>
+                            </li>
+                            <li>
+                                <a data-test="footer-corporate-link"
+                                   href="/siteEdition/rd"
+                                   id="siteedition-corporate-link">Corporate Edition</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="app-footer__container">
+            <ul class="app-footer__nav u-hide-print">
+                <li><a href="/">Home</a></li>
+                <li><a href="/impressum">Impressum</a></li>
+                <li><a href="/termsandconditions">Legal information</a></li>
+                <li><a href="/privacystatement">Privacy statement</a></li>
+                <li><a href="https://www.springernature.com/ccpa">California Privacy Statement</a></li>
+                <li><a href="/cookiepolicy">How we use cookies</a></li>
+                
+                <li><a class="optanon-toggle-display" href="javascript:void(0);">Manage cookies/Do not sell my data</a></li>
+                
+                <li><a href="/accessibility">Accessibility</a></li>
+                <li><a id="contactus-footer-link" href="/contactus">Contact us</a></li>
+            </ul>
+            <div class="c-user-metadata">
+    
+        <p class="c-user-metadata__item">
+            <span data-test="footer-user-login-status">Not logged in</span>
+            <span data-test="footer-user-ip"> - 130.225.98.201</span>
+        </p>
+        <p class="c-user-metadata__item" data-test="footer-business-partners">
+            Copenhagen University Library Royal Danish Library Copenhagen (1600006921)  - DEFF Consortium Danish National Library Authority (2000421697)  - Det Kongelige Bibliotek The Royal Library (3000092219)  - DEFF Danish Agency for Culture (3000209025)  - 1236 DEFF LNCS (3000236495) 
+        </p>
+
+        
+    
+</div>
+
+            <a class="app-footer__parent-logo" target="_blank" rel="noopener" href="//www.springernature.com"  title="Go to Springer Nature">
+                <span class="u-visually-hidden">Springer Nature</span>
+                <svg width="125" height="12" focusable="false" aria-hidden="true">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src=/oscar-static/images/springerlink/png/springernature-60a72a849b.png
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href=/oscar-static/images/springerlink/svg/springernature-ecf01c77dd.svg>
+                    </image>
+                </svg>
+            </a>
+            <p class="app-footer__copyright">&copy; 2020 Springer Nature Switzerland AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+            
+        </div>
+        
+    <svg class="u-hide hide">
+        <symbol id="global-icon-chevron-right" viewBox="0 0 16 16">
+            <path d="M7.782 7L5.3 4.518c-.393-.392-.4-1.022-.02-1.403a1.001 1.001 0 011.417 0l4.176 4.177a1.001 1.001 0 010 1.416l-4.176 4.177a.991.991 0 01-1.4.016 1 1 0 01.003-1.42L7.782 9l1.013-.998z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-download" viewBox="0 0 16 16">
+            <path d="M2 14c0-.556.449-1 1.002-1h9.996a.999.999 0 110 2H3.002A1.006 1.006 0 012 14zM9 2v6.8l2.482-2.482c.392-.392 1.022-.4 1.403-.02a1.001 1.001 0 010 1.417l-4.177 4.177a1.001 1.001 0 01-1.416 0L3.115 7.715a.991.991 0 01-.016-1.4 1 1 0 011.42.003L7 8.8V2c0-.55.444-.996 1-.996.552 0 1 .445 1 .996z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-email" viewBox="0 0 18 18">
+            <path d="M1.995 2h14.01A2 2 0 0118 4.006v9.988A2 2 0 0116.005 16H1.995A2 2 0 010 13.994V4.006A2 2 0 011.995 2zM1 13.994A1 1 0 001.995 15h14.01A1 1 0 0017 13.994V4.006A1 1 0 0016.005 3H1.995A1 1 0 001 4.006zM9 11L2 7V5.557l7 4 7-4V7z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-institution" viewBox="0 0 18 18">
+            <path d="M14 8a1 1 0 011 1v6h1.5a.5.5 0 01.5.5v.5h.5a.5.5 0 01.5.5V18H0v-1.5a.5.5 0 01.5-.5H1v-.5a.5.5 0 01.5-.5H3V9a1 1 0 112 0v6h8V9a1 1 0 011-1zM6 8l2 1v4l-2 1zm6 0v6l-2-1V9zM9.573.401l7.036 4.925A.92.92 0 0116.081 7H1.92a.92.92 0 01-.528-1.674L8.427.401a1 1 0 011.146 0zM9 2.441L5.345 5h7.31z" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="global-icon-search" viewBox="0 0 22 22">
+            <path fill-rule="evenodd" d="M21.697 20.261a1.028 1.028 0 01.01 1.448 1.034 1.034 0 01-1.448-.01l-4.267-4.267A9.812 9.811 0 010 9.812a9.812 9.811 0 1117.43 6.182zM9.812 18.222A8.41 8.41 0 109.81 1.403a8.41 8.41 0 000 16.82z"/>
+        </symbol>
+    </svg>
+
+    </footer>
+
+
+
+    </div>
+    
+    
+</body>
+</html>
+
