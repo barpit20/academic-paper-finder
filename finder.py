@@ -382,13 +382,13 @@ class FetcherFromConfig(Fetcher):
         _list, papers = self.fetch_parse_list(start_page)
         result = { 
             'papers': [papers],
-            'total_number_of_results': self.total_number_of_results(_list)
+            'total_results': self.total_number_of_results(_list)
         }
         
-        pages_to_fetch = math.ceil(result['total_number_of_results'] / self.per_page) - 1
+        pages_to_fetch = math.ceil(result['total_results'] / self.per_page) - 1
 
         sleep_for = self.get_config('sleep_between_requests')
-        print("This will take at least %.2f hours" % ((result['total_number_of_results'] * sleep_for) / 60 / 60))
+        print("This will take at least %.2f hours" % ((result['total_results'] * sleep_for) / 60 / 60))
 
         if ((pages_to_fetch) > 0):
             print(" - fetching the rest of the pages: %d" % (pages_to_fetch))
@@ -405,6 +405,8 @@ class FetcherFromConfig(Fetcher):
             total.finish()
         
         result['papers'] = h.flatten(result['papers'])
+        result['total_filtered_results'] = len(result['papers'])
+        result['total_pages'] = pages_to_fetch + 1
         self.write_json_file(self.result_file_name(), result)
         toc = time.perf_counter()
         h.console_down()
@@ -519,48 +521,48 @@ if __name__ == "__main__":
                 'AllField': 'Title:((select* OR manipulat*) AND ("virtual" OR "VR")) OR Abstract:((select* OR manipulat*) AND ("virtual" OR "VR"))'
             }
         },
-        # Journal of Human-Computer Interaction
-        {
-            "name": "hci",
-            "config_name": "taylor_and_francis",
-            "search_parameters": {
-                'AllField': 'Title:((select* OR manipulat*) AND ("virtual" OR "VR")) OR Abstract:((select* OR manipulat*) AND ("virtual" OR "VR"))',
-                'content': 'standard',
-                'target': 'default',
-                'queryID': '60/3256804055',
-                'AfterYear': '2000',
-                'BeforeYear': '2019',
-                'SeriesKey': 'hihc20',
-            },
-        },
-        # International Journal of Human-Computer Studies
-        {
-            "name": "hcs",
-            "config_name": "sciencedirect",
-            "search_parameters": {
-                'pub': 'International Journal of Human-Computer Studies',
-                'cid': '272548',
-                'date': '2000-2019',
-                'tak': '(virtual OR VR) AND (select OR selecting OR selection OR selects OR manipulate OR manipulating OR manipulation)',
-                'articleTypes': 'FLA',
-            },
-        },
-        # TOCHI
-        {
-            "name": "tochi",
-            "config_name": "acm",
-            "search_parameters": {
-                'fillQuickSearch': 'false',
-                'ContentItemType': 'research-article',
-                'SeriesKey': 'tochi',
-                'expand': 'dl',
-                'AfterMonth': '1',
-                'AfterYear': '2000',
-                'BeforeMonth': '12',
-                'BeforeYear': '2019',
-                'AllField': 'Title:((select* OR manipulat*) AND ("virtual" OR "VR")) OR Abstract:((select* OR manipulat*) AND ("virtual" OR "VR"))'
-            }
-        },
+        # # Journal of Human-Computer Interaction
+        # {
+        #     "name": "hci",
+        #     "config_name": "taylor_and_francis",
+        #     "search_parameters": {
+        #         'AllField': 'Title:((select* OR manipulat*) AND ("virtual" OR "VR")) OR Abstract:((select* OR manipulat*) AND ("virtual" OR "VR"))',
+        #         'content': 'standard',
+        #         'target': 'default',
+        #         'queryID': '60/3256804055',
+        #         'AfterYear': '2000',
+        #         'BeforeYear': '2019',
+        #         'SeriesKey': 'hihc20',
+        #     },
+        # },
+        # # International Journal of Human-Computer Studies
+        # {
+        #     "name": "hcs",
+        #     "config_name": "sciencedirect",
+        #     "search_parameters": {
+        #         'pub': 'International Journal of Human-Computer Studies',
+        #         'cid': '272548',
+        #         'date': '2000-2019',
+        #         'tak': '(virtual OR VR) AND (select OR selecting OR selection OR selects OR manipulate OR manipulating OR manipulation)',
+        #         'articleTypes': 'FLA',
+        #     },
+        # },
+        # # TOCHI
+        # {
+        #     "name": "tochi",
+        #     "config_name": "acm",
+        #     "search_parameters": {
+        #         'fillQuickSearch': 'false',
+        #         'ContentItemType': 'research-article',
+        #         'SeriesKey': 'tochi',
+        #         'expand': 'dl',
+        #         'AfterMonth': '1',
+        #         'AfterYear': '2000',
+        #         'BeforeMonth': '12',
+        #         'BeforeYear': '2019',
+        #         'AllField': 'Title:((select* OR manipulat*) AND ("virtual" OR "VR")) OR Abstract:((select* OR manipulat*) AND ("virtual" OR "VR"))'
+        #     }
+        # },
     ]
 
     tic = time.perf_counter()
