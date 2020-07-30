@@ -10,17 +10,29 @@ import math
 import time
 import progressbar
 import sys
+import PyPDF2
 
 class Fetcher:
-    def __init__(self, sequential=True, load_from='cache',  **kwargs):
-        self.sequential = sequential
+    def __init__(self, search_parameters={}, load_from='cache', **kwargs):
         self.load_from = load_from
         self.name = kwargs.get('name', 'finder')
-        self.config_name = self.name
         self.cache_folder = kwargs.get('cache_folder', './cache')
         self.headers = kwargs.get('headers', {})
         
         self.per_page = kwargs.get('per_page', 500)
+
+        self.search_parameters = search_parameters
+        self.config_name = kwargs.get('config_name', self.name)
+        
+        config_path = "./configs/%s.json" % self.config_name
+        with open(config_path, "r") as f:
+            self.config = json.load(f)
+        
+        self.list_isJson = self.get_config('urls.list.expect-json', False)
+        self.paper_isJson = self.get_config('urls.paper.expect-json', False)
+        self.per_page = self.get_config('urls.list.per-page')
+
+        self.restrict_identifiers_to = kwargs.get('restrict_identifiers_to', [])
 
     def list_url(self, page):
         raise h.ShouldBeImplementedInSubclassError()
@@ -116,17 +128,23 @@ class Fetcher:
             json.dump(dictionary, f)
 
     def fetch_list(self, page, isJson=False):
+        sleep_for = self.get_config('sleep_between_requests')
         if (self.load_from == 'cache'):
             if(self.list_file_exists(page)): return self.from_cache(self.list_file_name(page), isJson)
             else: return self.from_url_list(page, isJson)
-        elif (self.load_from == 'url'): return self.from_url_list(page, isJson)
+        elif (self.load_from == 'url'):
+            time.sleep(sleep_for)
+            return self.from_url_list(page, isJson)
         else: raise Exception("load_from could not be found")
 
     def fetch_paper(self, identifier, isJson=False):
+        sleep_for = self.get_config('sleep_between_requests')
         if (self.load_from == 'cache'):
             if(self.paper_file_exists(identifier)): return self.from_cache(self.paper_file_name(identifier), isJson)
             else: return self.from_url_paper(identifier, isJson)
-        elif (self.load_from == 'url'): return self.from_url_paper(identifier, isJson)
+        elif (self.load_from == 'url'):
+            time.sleep(sleep_for)
+            return self.from_url_paper(identifier, isJson)
         else: raise Exception("load_from could not be found")
 
     def from_cache(self, path, isJson):
@@ -159,32 +177,6 @@ class Fetcher:
         if len(find) <= 0: return ''
         f = find[0] if not isinstance(find[0], tuple) else find[0][0]
         return h.strip_html(f).replace("\n", " ").strip()
-
-    def fetch_list_from_url(self, page):
-        raise h.ShouldBeImplementedInSubclassError()
-
-    def fetch_paper_from_url(self, identifier):
-        raise h.ShouldBeImplementedInSubclassError()
-
-    def run(self):
-        raise h.ShouldBeImplementedInSubclassError()
-
-
-class FetcherFromConfig(Fetcher):
-
-    def __init__(self, name, search_parameters={}, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.name = name
-        self.search_parameters = search_parameters
-        self.config_name = kwargs.get('config_name', self.name)
-        
-        config_path = "./configs/%s.json" % self.config_name
-        with open(config_path, "r") as f:
-            self.config = json.load(f)
-        
-        self.list_isJson = self.get_config('urls.list.expect-json', False)
-        self.paper_isJson = self.get_config('urls.paper.expect-json', False)
-        self.per_page = self.get_config('urls.list.per-page')
 
     def get_config(self, field, default=''):
         try: return h.get_dict_field(self.config, field)
@@ -346,24 +338,23 @@ class FetcherFromConfig(Fetcher):
             'doi': self.doi(_paper),
 
             'pdf_url': self.pdf_url(identifier),
-            'paper_url': self.paper_url(identifier)
+            'paper_url': self.paper_url(identifier),
+            'identifier': identifier
         }
         # print(paper)
         paper = self.postprocess_paper(paper)
         return paper
 
     def fetch_parse_papers(self, identifiers):
-        sleep_for = self.get_config('sleep_between_requests')
         sub = h.get_progressbar(len(identifiers))
         sub.start()
         papers = []
         for i, identifier in enumerate(identifiers):
-            # if i >= 2: break
+            if len(self.restrict_identifiers_to) > 0 and identifier not in self.restrict_identifiers_to: continue
             _paper = self.fetch_paper(identifier)
             paper = self.parse_paper(identifier, _paper)
             if paper is not None:
                 papers.append(paper)
-            time.sleep(sleep_for)
             sub.update(i)
         sub.finish()
         return papers
@@ -424,11 +415,68 @@ class FetcherFromConfig(Fetcher):
         else:
             df = pd.DataFrame(columns=fields)
         
-        for paper in result['papers']:
+        print(f"Exporting {self.name} - {self.config_name} paper to csv.")
+        total = h.get_progressbar(len(result['papers']), 'pdf')
+        total.start()
+        for i, paper in enumerate(result['papers']):
+            if len(self.restrict_identifiers_to) > 0 and paper['identifier'] not in self.restrict_identifiers_to: continue
             paper_dict = {k: paper[k] if not isinstance(paper[k], list) else ", ".join(paper[k]) for k in fields}
             df = df.append(paper_dict, ignore_index=True)
-
+            total.update(i)
+        total.finish()
         df.to_csv(file_path, index=False)
+
+    def download_pdfs(self, save_folder='./pdfs', save_name="identifier", override=False):
+        result = self.read_json_file(self.result_file_name())
+        if not 'papers' in result: raise Exception("Illformed %s" % self.result_file_name())
+        if len(result['papers']) <= 0: return
+
+        save_folder = f"{save_folder}/{self.name}"
+        h.ensure_path_exists(save_folder, True)
+        
+        sleep_for = self.get_config('sleep_between_requests')
+
+        print(f"Downloading {self.name} - {self.config_name} paper pdfs.")
+        total = h.get_progressbar(len(result['papers']), 'pdf')
+        total.start()
+        for i, paper in enumerate(result['papers']):
+            if len(self.restrict_identifiers_to) > 0 and paper['identifier'] not in self.restrict_identifiers_to: continue
+            url = paper['pdf_url']
+
+            if (save_name == 'identifier'):
+                file_name = h.safe_filename(f"{paper['identifier']}.pdf")
+            elif (save_name == 'infer'):
+                file_name = h.file_name_from_url(url)
+            file_name = f"{save_folder}/{file_name}"
+
+            total.update(i)
+
+            num_pages_key = 'pdf_num_pages'
+            if num_pages_key in paper and not override: continue
+
+            if not h.check_file_exists(file_name) or override:
+                r = requests.get(url)
+                content = r.content
+                with open(file_name, "wb") as f:
+                    f.write(content)
+                time.sleep(sleep_for)
+            else:
+                with open(file_name, "rb") as f:
+                    content = f.read()
+
+            try:
+                pdf_file = io.BytesIO(content)
+                pdf_reader = PyPDF2.PdfFileReader(pdf_file)
+                paper[num_pages_key] = pdf_reader.getNumPages()
+                result['papers'][i] = paper
+            except PyPDF2.utils.PdfReadError:
+                os.remove(file_name)
+                h.console_down()
+                print(f"Reading PDF failed: id {paper['identifier']}")
+            
+        total.finish()
+        self.write_json_file(self.result_file_name(), result)
+
 
 # class SinglePageFetcherFromConfig(FetcherFromConfig):
 
@@ -567,10 +615,19 @@ if __name__ == "__main__":
 
     tic = time.perf_counter()
     
+    identifier_file = './identifiers.csvs'
+    restrict = pd.read_csv(identifier_file, header=None)[0].to_list() if h.check_file_exists(identifier_file) else []
+
+    fp = "./restricted.csv"
+    # os.remove(fp)
+
     for finder in finders:
-        find = FetcherFromConfig(**finder)
-        # find.run()
-        find.export_results_to_csv(['title', 'abstract', 'doi'])
+        find = Fetcher(restrict_identifiers_to=restrict, **finder)
+        find.run()
+        # find.export_results_to_csv(['title', 'authors', 'doi', 'identifier', 'pdf_url'], file_path=fp)
+        # find.export_results_to_csv(['identifier'], file_path='./ids.csv')
+        # find.export_results_to_csv(['pdf_num_pages'], file_path='./pdf_pages.csv')
+        find.download_pdfs()
     toc = time.perf_counter()
     h.console_down()
     print(f"Finished everything in {toc - tic:0.4f} seconds\n")

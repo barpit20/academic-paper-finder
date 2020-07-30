@@ -17,8 +17,10 @@ def get_dict_field(d, field, default=None):
             raise ValueError("%s could not be found in dict", field)
         else:
             return default
+    
     if not isinstance(d, dict) and not isinstance(d, list):
         raise Exception(f"Should not try to access other than dicts and lists: {type(d)}")
+    
     i = field.find(".")
     if i > -1:
         key = field[0:i]
@@ -48,8 +50,11 @@ def strip_html(html):
 def safe_filename(filename):
     return re.sub(r'[^\.\w\d-]','_',filename)
 
-def ensure_path_exists(file_path):
-    directory = os.path.dirname(file_path)
+def ensure_path_exists(file_path, is_directory=False):
+    if is_directory:
+        directory = file_path
+    else:
+        directory = os.path.dirname(file_path)
     try:
         os.stat(directory)
     except:
@@ -84,6 +89,14 @@ def get_progressbar(maxval, obj='papers'):
         ' (', progressbar.ETA(), ') ',
     ]
     return progressbar.ProgressBar(maxval=maxval, widgets=widgets)
+
+def file_name_from_url(url, content_disposition=None, file_ext='.pdf'):
+    default = url.rsplit('/', 1)[1]
+    if not default.endswith(file_ext): default = default + file_ext
+    if not content_disposition: return default
+    fname = re.findall('filename=(.+)', content_disposition)
+    if len(fname) == 0: return default
+    return fname[0]
 
 class ShouldBeImplementedInSubclassError(Exception):
     """Exception raised for errors in the input.
