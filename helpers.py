@@ -3,6 +3,9 @@ import re
 import os
 import sys
 import progressbar
+from urllib import parse
+import io
+import json
 
 def search_for(obj, look_in, look_for):
     string = obj[look_in]
@@ -84,7 +87,8 @@ def console_down():
 def get_progressbar(maxval, obj='papers'):
     widgets=[
         f'Fetching {obj}: ', 
-        ' [', progressbar.Timer(), '] ',
+        '[', progressbar.Counter(), '/', str(maxval), '] ',
+        '[', progressbar.Timer(), '] ',
         progressbar.Bar(),
         ' (', progressbar.ETA(), ') ',
     ]
@@ -98,14 +102,65 @@ def file_name_from_url(url, content_disposition=None, file_ext='.pdf'):
     if len(fname) == 0: return default
     return fname[0]
 
-class ShouldBeImplementedInSubclassError(Exception):
-    """Exception raised for errors in the input.
 
-    Attributes:
-        expression -- input expression in which the error occurred
-        message -- explanation of the error
-    """
+def url_domain(url):
+        return parse.urlparse(url).netloc
 
-    def __init__(self):
-        self.expression = inspect.stack()[1][3]
-        self.message = "needs to be implemented in subclass"
+def url_scheme(url):
+    return parse.urlparse(url).scheme
+
+def url_path(url):
+    return parse.urlparse(url).path
+
+def url_base(url):
+    return "%s://%s" % (url_scheme(url), url_domain(url))
+
+def url_query(url):
+    return dict(parse.parse_qsl(parse.urlsplit(url).query))
+
+def url_base_with_path(url):
+    return "%s%s" % (url_base(url), url_path(url))
+
+def read_file(file_path):
+    ensure_path_exists(file_path)
+    with io.open(file_path, "r", encoding="utf-8") as f:
+        return f.read()
+
+def write_file(file_path, file_content):
+    ensure_path_exists(file_path)
+    with io.open(file_path, "w", encoding="utf-8") as f:
+        if isinstance(file_content, dict):
+            file_content = json.dumps(file_content)
+        f.write(file_content)
+
+def read_json_file(file_path):
+    with open(file_path, "r") as f:
+        return json.load(f)
+
+def write_json_file(file_path, dictionary):
+    ensure_path_exists(file_path)
+    with open(file_path, "w") as f:
+        json.dump(dictionary, f)
+
+def analyze_query(item, query):
+    should = get_dict_field(query, 'should', [])
+    _should = []
+    for s in should:
+        _should.append(analyze_query(item, s))
+    bShould = len(should) == 0 or any(_should)
+
+    must = get_dict_field(query, 'must', [])
+    _must = []
+    for s in must:
+        _must.append(analyze_query(item, s))
+    bMust = len(must) == 0 or all(_must)
+
+    match = get_dict_field(query, 'match', {})
+    if len(match) > 1: raise Exception(f"match should not be longer than 1, found {len(match)} items")
+    for key in match:
+        if key not in item: raise Exception(f"could not find {key} in desired item")
+        f = search_for(item, key, match[key])
+        # print(key, match[key], f, item[key], "\n", sep=", ")
+        return f
+
+    return bMust and bShould
