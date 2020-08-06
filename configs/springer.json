@@ -14,49 +14,6 @@
         "pdf": "https://link.springer.com/content/pdf/{identifier}.pdf"
     },
     "sleep_between_requests": 0.1,
-    "postprocessing": {
-        "paper": [
-            {
-                "type": "query",
-                "query": {
-                    "should": [
-                        { 
-                            "must": [
-                                {
-                                    "should": [
-                                        {"match": { "title": "select*" }},
-                                        {"match": { "title": "manipulat*" }}
-                                    ]
-                                },
-                                {
-                                    "should": [
-                                        {"match": { "title": "virtual" }},
-                                        {"match": { "title": "VR" }}
-                                    ]
-                                }
-                            ]
-                        },
-                        { 
-                            "must": [
-                                {
-                                    "should": [
-                                        {"match": { "abstract": "select*" }},
-                                        {"match": { "abstract": "manipulat*" }}
-                                    ]
-                                },
-                                {
-                                    "should": [
-                                        {"match": { "abstract": "virtual" }},
-                                        {"match": { "abstract": "VR" }}
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                }
-            }
-        ]
-    },
     "regex": {
         "list": {
             "identifiers": "<a class=\"title\" href=\"\/article\/([^\"]+)\">",
