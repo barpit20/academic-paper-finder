@@ -500,17 +500,18 @@ if __name__ == "__main__":
         # },
         # Virtual Reality (Journal)
         {
-            "name": "vr",
+            "name": "ijsr",
             "config_name": "springer",
             "search_parameters": {
                 'query': '((select* OR manipulat*) AND ("virtual" OR "VR"))',
-                'facet-start-year': '2000',
+                'query': 'touch* OR tactile* OR physical* OR hand* OR haptic* OR kines*',
+                'facet-start-year': '2008',
                 'date-facet-mode': 'between',
-                'facet-end-year': '2019',
+                'facet-end-year': '2009',
                 'showAll[0]': 'false',
                 'showAll[1]': 'true',
                 'search-within': 'Journal',
-                'facet-journal-id': '10055',
+                'facet-journal-id': '12369',
             },
             "postprocessing_paper": [
                 {
@@ -518,36 +519,25 @@ if __name__ == "__main__":
                     "query": {
                         "should": [
                             { 
-                                "must": [
-                                    {
-                                        "should": [
-                                            {"match": { "title": "select*" }},
-                                            {"match": { "title": "manipulat*" }}
-                                        ]
-                                    },
-                                    {
-                                        "should": [
-                                            {"match": { "title": "virtual" }},
-                                            {"match": { "title": "VR" }}
-                                        ]
-                                    }
-                                ]
+                            	"should": [
+                            		{"match": { "title": "touch*" }},
+                                    {"match": { "title": "tactile*" }},
+                                    {"match": { "title": "physical*" }},
+                                    {"match": { "title": "hand*" }},
+                                    {"match": { "title": "haptic*" }},
+                                    {"match": { "title": "kines*" }},
+
+                            	]
                             },
                             { 
-                                "must": [
-                                    {
-                                        "should": [
-                                            {"match": { "abstract": "select*" }},
-                                            {"match": { "abstract": "manipulat*" }}
-                                        ]
-                                    },
-                                    {
-                                        "should": [
-                                            {"match": { "abstract": "virtual" }},
-                                            {"match": { "abstract": "VR" }}
-                                        ]
-                                    }
-                                ]
+                            	"should": [
+                            		{"match": { "abstract": "touch*" }},
+                                    {"match": { "abstract": "tactile*" }},
+                                    {"match": { "abstract": "physical*" }},
+                                    {"match": { "abstract": "hand*" }},
+                                    {"match": { "abstract": "haptic*" }},
+                                    {"match": { "abstract": "kines*" }},
+                            	]
                             }
                         ]
                     }
